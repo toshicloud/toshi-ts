@@ -1,0 +1,73 @@
+name: publish
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    # Provenance needs GitHub's OIDC identity, so this must be GitHub-hosted.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Installs node and pnpm at the versions pinned in mise.toml.
+      - uses: jdx/mise-action@08ae2a091c038e1e05ec6f5115dc5c69d5a2a6b8 # v5.1.2
+        with:
+          version: 2026.9.14
+          install_args: "node pnpm"
+          cache: false
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # The tag is the only thing that decides the version, so they must agree.
+      - name: Check the tag matches package.json
+        run: |
+          expected="v$(node -p "require('./package.json').version")"
+          if [ "$GITHUB_REF_NAME" != "$expected" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json ($expected)."
+            exit 1
+          fi
+
+      # The publish step authenticates with this token.
+      - name: Check the npm credential
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NPM_TOKEN" ]; then
+            echo "::error::The secret NPM_TOKEN is not set. Publishing needs an npm automation token; see README.md."
+            exit 1
+          fi
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+      # Provenance is only allowed for a public repository, so the flag is conditional.
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/.npmrc
+          REPO_PRIVATE: ${{ github.event.repository.private }}
+        run: |
+          # npm reads ${NODE_AUTH_TOKEN} from the environment, so keep it literal.
+          # shellcheck disable=SC2016
+          printf '%s\n' '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > "$NPM_CONFIG_USERCONFIG"
+          flags=(--access public)
+          if [ "$REPO_PRIVATE" = "false" ]; then
+            flags+=(--provenance)
+          fi
+          npm publish "${flags[@]}"
