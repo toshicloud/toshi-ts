@@ -1,7 +1,7 @@
 /**
- * The TypeScript layer against a real `toshi serve` built from the commit in
- * pin.env. Without TOSHI_INTEGRATION_BIN the suite skips with a notice;
- * scripts/integration.sh builds the binary and sets both variables.
+ * The TypeScript layer against a real `toshi serve` from the binary that
+ * TOSHI_INTEGRATION_BIN names. Without it the suite skips with a notice; when
+ * TOSHI_INTEGRATION_EXPECT_COMMIT is set, the binary must report that commit.
  *
  * The flow copies integration/integration_test.go of toshi-go: a throwaway
  * CA, two free loopback ports, `dev github serve` as the fake GitHub API, an
@@ -52,7 +52,7 @@ const LOG_TAIL_BYTES = 8_000;
 const skipped = process.env.TOSHI_INTEGRATION_BIN === undefined;
 if (skipped) {
   process.stdout.write(
-    "skipped: TOSHI_INTEGRATION_BIN is not set (scripts/integration.sh builds it from pin.env)\n",
+    "skipped: TOSHI_INTEGRATION_BIN is not set: it names the toshi binary this suite runs against\n",
   );
 }
 

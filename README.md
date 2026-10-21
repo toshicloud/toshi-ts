@@ -149,8 +149,7 @@ in `proto/toshi/workspace/v1` of the
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit (or, once one exists, the release
-tag) the code is generated from, and the Toshi server commit the
-integration test runs against. `mise.toml` pins the versions of Node,
+tag) the code is generated from. `mise.toml` pins the versions of Node,
 pnpm, `buf` and `protoc-gen-es`.
 
 To regenerate:
@@ -175,17 +174,17 @@ version. Until a Toshi release serves the API, the package stays at
 ## Integration test
 
 `test/integration/` runs the client against a real `toshi serve` over
-HTTPS with a test CA it mints itself. `scripts/integration.sh` clones
-the server repository that `TOSHI_SERVER_REPOSITORY` names at the commit
-in `pin.env`, builds `toshi` with that commit's own Go version, and runs
-the test:
+HTTPS with a test CA it mints itself. `TOSHI_INTEGRATION_BIN` names the
+`toshi` binary it runs; when `TOSHI_INTEGRATION_EXPECT_COMMIT` is set, the
+binary must report that commit:
 
 ```sh
-TOSHI_SERVER_REPOSITORY=<repository URL> mise exec -- scripts/integration.sh
+TOSHI_INTEGRATION_BIN=/path/to/toshi mise exec -- pnpm vitest run test/integration
 ```
 
-Without `TOSHI_INTEGRATION_BIN` (which the script sets), `pnpm test`
-skips the integration test and says why.
+The Toshi server's CI runs it against each server change. Without
+`TOSHI_INTEGRATION_BIN`, `pnpm test` skips the integration test and says
+why.
 
 ## Licence
 
