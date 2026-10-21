@@ -171,6 +171,15 @@ The package's major version follows the API's: `1.x` will serve
 version. Until a Toshi release serves the API, the package stays at
 `0.x` and is generated from a pinned commit.
 
+## Publishing
+
+Releases are published to npm by the publish workflow
+(`.github/workflows/publish.yml`) through npm trusted publishing: the
+workflow authenticates with its GitHub OIDC token, and no npm token
+exists. It runs on a `vX.Y.Z` tag that matches the version in
+`package.json`. A new version is a commit on `main` that sets the version
+in `package.json`, followed by its tag.
+
 ## Integration test
 
 `test/integration/` runs the client against a real `toshi serve` over

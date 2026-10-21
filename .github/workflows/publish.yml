@@ -25,6 +25,16 @@ jobs:
           install_args: "node pnpm"
           cache: false
 
+      # Trusted publishing needs npm 11.5.1 or newer; node in mise.toml bundles npm.
+      - name: Check the npm version
+        run: |
+          version="$(npm --version)"
+          echo "npm $version"
+          if [ "$(printf '%s\n' 11.5.1 "$version" | sort -V | head -n 1)" != "11.5.1" ]; then
+            echo "::error::npm $version is older than 11.5.1, which trusted publishing needs."
+            exit 1
+          fi
+
       - name: Install
         run: pnpm install --frozen-lockfile
 
@@ -37,16 +47,6 @@ jobs:
             exit 1
           fi
 
-      # The publish step authenticates with this token.
-      - name: Check the npm credential
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          if [ -z "$NPM_TOKEN" ]; then
-            echo "::error::The secret NPM_TOKEN is not set. Publishing needs an npm automation token; see README.md."
-            exit 1
-          fi
-
       - name: Typecheck
         run: pnpm typecheck
 
@@ -56,16 +56,13 @@ jobs:
       - name: Test
         run: pnpm test
 
-      # Provenance is only allowed for a public repository, so the flag is conditional.
+      # npm authenticates with the job's OIDC token (trusted publishing), so no
+      # token is stored. Provenance is only allowed for a public repository, so
+      # the flag is conditional.
       - name: Publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/.npmrc
           REPO_PRIVATE: ${{ github.event.repository.private }}
         run: |
-          # npm reads ${NODE_AUTH_TOKEN} from the environment, so keep it literal.
-          # shellcheck disable=SC2016
-          printf '%s\n' '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > "$NPM_CONFIG_USERCONFIG"
           flags=(--access public)
           if [ "$REPO_PRIVATE" = "false" ]; then
             flags+=(--provenance)
