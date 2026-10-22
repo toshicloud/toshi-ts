@@ -49,7 +49,8 @@ async function startServer(handlers: Readonly<Record<string, StreamHandler>>): P
   server.on("error", () => {
     // A reset stream or an aborted session is the point of some tests.
   });
-  server.on("stream", (stream, headers) => {
+  // @types/node 26 types the server's stream event with the base Http2Stream.
+  server.on("stream", (stream: ServerHttp2Stream, headers) => {
     stream.on("error", () => {
       // RST_STREAM leaves an error on this side too; the client is what matters.
     });
