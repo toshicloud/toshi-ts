@@ -27,3 +27,7 @@ updates:
       npm:
         patterns:
           - "*"
+    ignore:
+      # typescript-eslint has no TypeScript 7 support yet.
+      - dependency-name: typescript
+        versions: ["7.x"]
