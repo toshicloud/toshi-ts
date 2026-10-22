@@ -38,11 +38,11 @@
   "devDependencies": {
     "@connectrpc/connect-node": "2.2.0",
     "@eslint/js": "10.0.1",
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.5",
     "@vitest/coverage-v8": "5.0.5",
     "eslint": "10.13.0",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.71.0",
+    "typescript": "7.0.2",
+    "typescript-eslint": "8.71.2",
     "vitest": "5.0.5"
   }
 }
