@@ -22,7 +22,7 @@ jobs:
       - uses: jdx/mise-action@8418fedb1110381a0d3ba51a7a415d7c1b884550 # v5.2.2
         with:
           version: 2026.9.14
-          install_args: "node pnpm"
+          install_args: "--locked node pnpm"
           cache: false
 
       - name: Install
@@ -41,6 +41,12 @@ jobs:
       - name: Pack
         run: npm pack --dry-run
 
+      - name: Committed lockfiles are up to date
+        run: |
+          mise lock
+          pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile
+          git diff --exit-code
+
   generated:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -53,7 +59,7 @@ jobs:
       - uses: jdx/mise-action@8418fedb1110381a0d3ba51a7a415d7c1b884550 # v5.2.2
         with:
           version: 2026.9.14
-          install_args: "node pnpm buf npm:@bufbuild/protoc-gen-es"
+          install_args: "--locked node pnpm buf npm:@bufbuild/protoc-gen-es"
           cache: false
 
       - name: Generated code is up to date
