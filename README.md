@@ -4,8 +4,10 @@ A TypeScript client for the Toshi Workspace API, `toshi.workspace.v1`,
 published as ES modules with type declarations.
 
 ```sh
-npm install @toshicloud/toshi-ts @connectrpc/connect @connectrpc/connect-node
+npm install @toshicloud/sdk @connectrpc/connect @connectrpc/connect-node
 ```
+
+Versions up to 0.1.2 were published as `@toshicloud/toshi-ts`.
 
 ## Using the client
 
@@ -20,7 +22,7 @@ In Node, with `@connectrpc/connect-node`:
 ```ts
 import { readFileSync } from "node:fs";
 import { createConnectTransport } from "@connectrpc/connect-node";
-import { createToshiClient } from "@toshicloud/toshi-ts";
+import { createToshiClient } from "@toshicloud/sdk";
 
 const toshi = createToshiClient({
   transport: (interceptors) =>
@@ -42,7 +44,7 @@ In a browser, with `@connectrpc/connect-web`:
 
 ```ts
 import { createConnectTransport } from "@connectrpc/connect-web";
-import { createToshiClient } from "@toshicloud/toshi-ts";
+import { createToshiClient } from "@toshicloud/sdk";
 
 const toshi = createToshiClient({
   transport: (interceptors) =>
