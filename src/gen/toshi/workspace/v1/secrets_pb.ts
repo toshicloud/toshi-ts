@@ -1076,8 +1076,9 @@ export const SecretGranteeKindSchema: GenEnum<SecretGranteeKind, SecretGranteeKi
 
 /**
  * SecretService keeps a workspace's secrets: a project's sets,
- * their write-only keys and their grants. The contract in prose:
- * docs/api/workspace-v1.md, "Secrets"; the store: docs/secrets.md.
+ * their write-only keys and their grants. Each value is sealed with
+ * AES-256-GCM under the workspace's data key before the store sees it, and
+ * every version of a key is kept until the key or its set is deleted.
  *
  * The caller's credential names the workspace, as for WorkspaceService.
  * Every request names a set by its project and either its environment or

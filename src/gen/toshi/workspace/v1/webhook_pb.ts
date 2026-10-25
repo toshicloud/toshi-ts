@@ -968,11 +968,11 @@ export const WebhookDeliveryStateSchema: GenEnum<WebhookDeliveryState, WebhookDe
 
 /**
  * WebhookService manages a workspace's webhook endpoints: the URLs its
- * events are POSTed to, signed per Standard Webhooks (docs/webhooks.md).
- * The caller's credential names the workspace, as for
- * WorkspaceService. An endpoint belongs to the workspace, not to a project
- * or environment, and is owed the events of all of them; no request names
- * either. An endpoint of another workspace is NOT_FOUND.
+ * events are POSTed to, signed per Standard Webhooks. The caller's credential
+ * names the workspace, as for WorkspaceService. An endpoint belongs to the
+ * workspace, not to a project or environment, and is owed the events of all
+ * of them; no request names either. An endpoint of another workspace is
+ * NOT_FOUND.
  *
  * Every mutating call takes a request_key, with WorkspaceService's rule: a
  * retry with the same key and the same payload returns what the first
@@ -1027,7 +1027,7 @@ export const WebhookService: GenService<{
    * enabled. A disabled endpoint is owed no new event and no try starts;
    * the events written before the disable stay owed, enabling it again
    * owes none written while it was disabled, and a try already under way
-   * finishes within its claim (docs/webhooks.md).
+   * finishes within its claim, which holds a delivery for one minute.
    *
    * @generated from rpc toshi.workspace.v1.WebhookService.UpdateWebhookEndpoint
    */
