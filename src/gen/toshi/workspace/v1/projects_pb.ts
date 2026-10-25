@@ -2,17 +2,17 @@
 // @generated from file toshi/workspace/v1/projects.proto (package toshi.workspace.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { Duration, DurationJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file toshi/workspace/v1/projects.proto.
  */
 export const file_toshi_workspace_v1_projects: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKFAQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIVChNMaXN0UHJvamVjdHNSZXF1ZXN0InoKFExpc3RQcm9qZWN0c1Jlc3BvbnNlEi0KCHByb2plY3RzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QSMwoLdG9rZW5fbGltaXQYAiABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5MaW1pdCIyCgpUb2tlbkxpbWl0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkiKgoXTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCSJQChhMaXN0UmVwb3NpdG9yaWVzUmVzcG9uc2USNAoMcmVwb3NpdG9yaWVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI5ChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiKQoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJIkgKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiVwoVU2V0QnJhbmNoUnVsZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSLQoFcnVsZXMYAiADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSJHChZTZXRCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUyygcKDlByb2plY3RTZXJ2aWNlEmEKDExpc3RQcm9qZWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1Jlc3BvbnNlElsKCkdldFByb2plY3QSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlc3BvbnNlEm0KEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlEmQKDUNyZWF0ZVByb2plY3QSKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlc3BvbnNlEmoKD0NsYWltUmVwb3NpdG9yeRIqLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlc3BvbnNlEnAKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEnAKEURlbGV0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlEmoKD0xpc3RCcmFuY2hSdWxlcxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEmcKDlNldEJyYW5jaFJ1bGVzEikudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1Jlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKFAQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIVChNMaXN0UHJvamVjdHNSZXF1ZXN0InoKFExpc3RQcm9qZWN0c1Jlc3BvbnNlEi0KCHByb2plY3RzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QSMwoLdG9rZW5fbGltaXQYAiABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5MaW1pdCIyCgpUb2tlbkxpbWl0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkiKgoXTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCSJQChhMaXN0UmVwb3NpdG9yaWVzUmVzcG9uc2USNAoMcmVwb3NpdG9yaWVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI5ChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiKQoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJIkgKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiVwoVU2V0QnJhbmNoUnVsZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSLQoFcnVsZXMYAiADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSJHChZTZXRCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUi1QIKCkVtYmVkVG9rZW4SCgoCaWQYASABKAkSDwoHcHJvamVjdBgCIAEoCRIPCgdvcmlnaW5zGAMgAygJEjIKBXN0YXRlGAQgASgOMiMudG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW5TdGF0ZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgd1c2VkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxyZWNvcmRpbmdfaWQYCCABKAkSLgoKcmV2b2tlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgKIAEoCSJqChdDcmVhdGVFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEg8KB29yaWdpbnMYAiADKAkSLQoKZXhwaXJlc19pbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJeChhDcmVhdGVFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbhINCgV0b2tlbhgCIAEoCSIpChZMaXN0RW1iZWRUb2tlbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkiTwoXTGlzdEVtYmVkVG9rZW5zUmVzcG9uc2USNAoMZW1iZWRfdG9rZW5zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4iQgoXUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIWCg5lbWJlZF90b2tlbl9pZBgCIAEoCSJPChhSZXZva2VFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbiqsAQoPRW1iZWRUb2tlblN0YXRlEiEKHUVNQkVEX1RPS0VOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYRU1CRURfVE9LRU5fU1RBVEVfQUNUSVZFEAESGgoWRU1CRURfVE9LRU5fU1RBVEVfVVNFRBACEh0KGUVNQkVEX1RPS0VOX1NUQVRFX1JFVk9LRUQQAxIdChlFTUJFRF9UT0tFTl9TVEFURV9FWFBJUkVEEAQylAoKDlByb2plY3RTZXJ2aWNlEmEKDExpc3RQcm9qZWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1Jlc3BvbnNlElsKCkdldFByb2plY3QSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlc3BvbnNlEm0KEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlEmQKDUNyZWF0ZVByb2plY3QSKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlc3BvbnNlEmoKD0NsYWltUmVwb3NpdG9yeRIqLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlc3BvbnNlEnAKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEnAKEURlbGV0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlEmoKD0xpc3RCcmFuY2hSdWxlcxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEmcKDlNldEJyYW5jaFJ1bGVzEikudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1Jlc3BvbnNlEm0KEENyZWF0ZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEmoKD0xpc3RFbWJlZFRva2VucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEm0KEFJldm9rZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
 
 /**
  * Project is one of a workspace's projects.
@@ -902,12 +902,442 @@ export const SetBranchRulesResponseSchema: GenMessage<SetBranchRulesResponse, {j
   messageDesc(file_toshi_workspace_v1_projects, 22);
 
 /**
+ * EmbedToken is one of a project's embed tokens, without the token itself.
+ *
+ * @generated from message toshi.workspace.v1.EmbedToken
+ */
+export type EmbedToken = Message<"toshi.workspace.v1.EmbedToken"> & {
+  /**
+   * Assigned by the server.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 2;
+   */
+  project: string;
+
+  /**
+   * The origins of the pages that may spend it, such as
+   * https://app.example.com.
+   *
+   * @generated from field: repeated string origins = 3;
+   */
+  origins: string[];
+
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedTokenState state = 4;
+   */
+  state: EmbedTokenState;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 5;
+   */
+  createdAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 6;
+   */
+  expiresAt?: Timestamp | undefined;
+
+  /**
+   * Unset until a page spends it.
+   *
+   * @generated from field: google.protobuf.Timestamp used_at = 7;
+   */
+  usedAt?: Timestamp | undefined;
+
+  /**
+   * The recording it was spent on; empty until then.
+   *
+   * @generated from field: string recording_id = 8;
+   */
+  recordingId: string;
+
+  /**
+   * Unset unless it was revoked.
+   *
+   * @generated from field: google.protobuf.Timestamp revoked_at = 9;
+   */
+  revokedAt?: Timestamp | undefined;
+
+  /**
+   * Who minted it: a person's sign-in or an API token, as in the audit.
+   *
+   * @generated from field: string created_by = 10;
+   */
+  createdBy: string;
+};
+
+/**
+ * EmbedToken is one of a project's embed tokens, without the token itself.
+ *
+ * @generated from message toshi.workspace.v1.EmbedToken
+ */
+export type EmbedTokenJson = {
+  /**
+   * Assigned by the server.
+   *
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 2;
+   */
+  project?: string;
+
+  /**
+   * The origins of the pages that may spend it, such as
+   * https://app.example.com.
+   *
+   * @generated from field: repeated string origins = 3;
+   */
+  origins?: string[];
+
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedTokenState state = 4;
+   */
+  state?: EmbedTokenStateJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 5;
+   */
+  createdAt?: TimestampJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 6;
+   */
+  expiresAt?: TimestampJson;
+
+  /**
+   * Unset until a page spends it.
+   *
+   * @generated from field: google.protobuf.Timestamp used_at = 7;
+   */
+  usedAt?: TimestampJson;
+
+  /**
+   * The recording it was spent on; empty until then.
+   *
+   * @generated from field: string recording_id = 8;
+   */
+  recordingId?: string;
+
+  /**
+   * Unset unless it was revoked.
+   *
+   * @generated from field: google.protobuf.Timestamp revoked_at = 9;
+   */
+  revokedAt?: TimestampJson;
+
+  /**
+   * Who minted it: a person's sign-in or an API token, as in the audit.
+   *
+   * @generated from field: string created_by = 10;
+   */
+  createdBy?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.EmbedToken.
+ * Use `create(EmbedTokenSchema)` to create a new message.
+ */
+export const EmbedTokenSchema: GenMessage<EmbedToken, {jsonType: EmbedTokenJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 23);
+
+/**
+ * @generated from message toshi.workspace.v1.CreateEmbedTokenRequest
+ */
+export type CreateEmbedTokenRequest = Message<"toshi.workspace.v1.CreateEmbedTokenRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The origins of the pages that may spend it, each a scheme and a host
+   * with an optional port: https, or http for localhost only. At least
+   * one, and more than the server's maximum is INVALID_ARGUMENT.
+   *
+   * @generated from field: repeated string origins = 2;
+   */
+  origins: string[];
+
+  /**
+   * How long the token stays valid; unset is the server's default, and
+   * more than its maximum is INVALID_ARGUMENT.
+   *
+   * @generated from field: google.protobuf.Duration expires_in = 3;
+   */
+  expiresIn?: Duration | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CreateEmbedTokenRequest
+ */
+export type CreateEmbedTokenRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The origins of the pages that may spend it, each a scheme and a host
+   * with an optional port: https, or http for localhost only. At least
+   * one, and more than the server's maximum is INVALID_ARGUMENT.
+   *
+   * @generated from field: repeated string origins = 2;
+   */
+  origins?: string[];
+
+  /**
+   * How long the token stays valid; unset is the server's default, and
+   * more than its maximum is INVALID_ARGUMENT.
+   *
+   * @generated from field: google.protobuf.Duration expires_in = 3;
+   */
+  expiresIn?: DurationJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateEmbedTokenRequest.
+ * Use `create(CreateEmbedTokenRequestSchema)` to create a new message.
+ */
+export const CreateEmbedTokenRequestSchema: GenMessage<CreateEmbedTokenRequest, {jsonType: CreateEmbedTokenRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 24);
+
+/**
+ * @generated from message toshi.workspace.v1.CreateEmbedTokenResponse
+ */
+export type CreateEmbedTokenResponse = Message<"toshi.workspace.v1.CreateEmbedTokenResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedToken embed_token = 1;
+   */
+  embedToken?: EmbedToken | undefined;
+
+  /**
+   * The token to hand to the page. It is in this answer only.
+   *
+   * @generated from field: string token = 2;
+   */
+  token: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CreateEmbedTokenResponse
+ */
+export type CreateEmbedTokenResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedToken embed_token = 1;
+   */
+  embedToken?: EmbedTokenJson;
+
+  /**
+   * The token to hand to the page. It is in this answer only.
+   *
+   * @generated from field: string token = 2;
+   */
+  token?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateEmbedTokenResponse.
+ * Use `create(CreateEmbedTokenResponseSchema)` to create a new message.
+ */
+export const CreateEmbedTokenResponseSchema: GenMessage<CreateEmbedTokenResponse, {jsonType: CreateEmbedTokenResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 25);
+
+/**
+ * @generated from message toshi.workspace.v1.ListEmbedTokensRequest
+ */
+export type ListEmbedTokensRequest = Message<"toshi.workspace.v1.ListEmbedTokensRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListEmbedTokensRequest
+ */
+export type ListEmbedTokensRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListEmbedTokensRequest.
+ * Use `create(ListEmbedTokensRequestSchema)` to create a new message.
+ */
+export const ListEmbedTokensRequestSchema: GenMessage<ListEmbedTokensRequest, {jsonType: ListEmbedTokensRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 26);
+
+/**
+ * @generated from message toshi.workspace.v1.ListEmbedTokensResponse
+ */
+export type ListEmbedTokensResponse = Message<"toshi.workspace.v1.ListEmbedTokensResponse"> & {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.EmbedToken embed_tokens = 1;
+   */
+  embedTokens: EmbedToken[];
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListEmbedTokensResponse
+ */
+export type ListEmbedTokensResponseJson = {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.EmbedToken embed_tokens = 1;
+   */
+  embedTokens?: EmbedTokenJson[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListEmbedTokensResponse.
+ * Use `create(ListEmbedTokensResponseSchema)` to create a new message.
+ */
+export const ListEmbedTokensResponseSchema: GenMessage<ListEmbedTokensResponse, {jsonType: ListEmbedTokensResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 27);
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeEmbedTokenRequest
+ */
+export type RevokeEmbedTokenRequest = Message<"toshi.workspace.v1.RevokeEmbedTokenRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * @generated from field: string embed_token_id = 2;
+   */
+  embedTokenId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeEmbedTokenRequest
+ */
+export type RevokeEmbedTokenRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: string embed_token_id = 2;
+   */
+  embedTokenId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RevokeEmbedTokenRequest.
+ * Use `create(RevokeEmbedTokenRequestSchema)` to create a new message.
+ */
+export const RevokeEmbedTokenRequestSchema: GenMessage<RevokeEmbedTokenRequest, {jsonType: RevokeEmbedTokenRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 28);
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeEmbedTokenResponse
+ */
+export type RevokeEmbedTokenResponse = Message<"toshi.workspace.v1.RevokeEmbedTokenResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedToken embed_token = 1;
+   */
+  embedToken?: EmbedToken | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeEmbedTokenResponse
+ */
+export type RevokeEmbedTokenResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.EmbedToken embed_token = 1;
+   */
+  embedToken?: EmbedTokenJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RevokeEmbedTokenResponse.
+ * Use `create(RevokeEmbedTokenResponseSchema)` to create a new message.
+ */
+export const RevokeEmbedTokenResponseSchema: GenMessage<RevokeEmbedTokenResponse, {jsonType: RevokeEmbedTokenResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 29);
+
+/**
+ * EmbedTokenState is where an embed token is in its life.
+ *
+ * @generated from enum toshi.workspace.v1.EmbedTokenState
+ */
+export enum EmbedTokenState {
+  /**
+   * @generated from enum value: EMBED_TOKEN_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Not yet spent: a page on one of its origins can spend it.
+   *
+   * @generated from enum value: EMBED_TOKEN_STATE_ACTIVE = 1;
+   */
+  ACTIVE = 1,
+
+  /**
+   * A page spent it on a recording.
+   *
+   * @generated from enum value: EMBED_TOKEN_STATE_USED = 2;
+   */
+  USED = 2,
+
+  /**
+   * @generated from enum value: EMBED_TOKEN_STATE_REVOKED = 3;
+   */
+  REVOKED = 3,
+
+  /**
+   * @generated from enum value: EMBED_TOKEN_STATE_EXPIRED = 4;
+   */
+  EXPIRED = 4,
+}
+
+/**
+ * EmbedTokenState is where an embed token is in its life.
+ *
+ * @generated from enum toshi.workspace.v1.EmbedTokenState
+ */
+export type EmbedTokenStateJson = "EMBED_TOKEN_STATE_UNSPECIFIED" | "EMBED_TOKEN_STATE_ACTIVE" | "EMBED_TOKEN_STATE_USED" | "EMBED_TOKEN_STATE_REVOKED" | "EMBED_TOKEN_STATE_EXPIRED";
+
+/**
+ * Describes the enum toshi.workspace.v1.EmbedTokenState.
+ */
+export const EmbedTokenStateSchema: GenEnum<EmbedTokenState, EmbedTokenStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_projects, 0);
+
+/**
  * ProjectService reads a workspace's projects and the repositories they
- * claim, creates a project or an environment of one, moves a
+ * claim, creates a project, creates or deletes an environment of one, moves a
  * repository's claim and sets the branch rules that choose a CI job's
- * environment. The
- * contract in prose: docs/api/workspace-v1.md, "Projects"; the model:
- * docs/projects.md.
+ * environment. A workspace holds projects, and a project holds environments.
  *
  * The caller's credential names the workspace, as for WorkspaceService.
  * Nothing of another workspace is visible.
@@ -1018,8 +1448,9 @@ export const ProjectService: GenService<{
   /**
    * ListBranchRules returns a project's branch rules in order, the
    * fallback rule last: the first that matches a CI job's run chooses the
-   * job's environment (docs/projects.md). A project the workspace does not
-   * have is NOT_FOUND. A token limited to a project reads only that
+   * job's environment. The fallback rule takes every other run and never
+   * chooses an environment of kind production. A project the workspace does
+   * not have is NOT_FOUND. A token limited to a project reads only that
    * project's rules, and a token limited to an environment is
    * PERMISSION_DENIED.
    *
@@ -1049,6 +1480,43 @@ export const ProjectService: GenService<{
     methodKind: "unary";
     input: typeof SetBranchRulesRequestSchema;
     output: typeof SetBranchRulesResponseSchema;
+  },
+  /**
+   * CreateEmbedToken mints an embed token for a project: a credential for
+   * a web page on one of the token's origins, which spends it once to
+   * fetch one of the project's ready recordings. It expires in minutes. A
+   * project the workspace does not have is NOT_FOUND. A token limited to a
+   * project mints only for that project, and a token limited to an
+   * environment is PERMISSION_DENIED.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.CreateEmbedToken
+   */
+  createEmbedToken: {
+    methodKind: "unary";
+    input: typeof CreateEmbedTokenRequestSchema;
+    output: typeof CreateEmbedTokenResponseSchema;
+  },
+  /**
+   * ListEmbedTokens returns a project's embed tokens, oldest first, without
+   * the tokens themselves.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.ListEmbedTokens
+   */
+  listEmbedTokens: {
+    methodKind: "unary";
+    input: typeof ListEmbedTokensRequestSchema;
+    output: typeof ListEmbedTokensResponseSchema;
+  },
+  /**
+   * RevokeEmbedToken refuses an embed token before it expires. A token
+   * already revoked is returned as it is.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.RevokeEmbedToken
+   */
+  revokeEmbedToken: {
+    methodKind: "unary";
+    input: typeof RevokeEmbedTokenRequestSchema;
+    output: typeof RevokeEmbedTokenResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_projects, 0);

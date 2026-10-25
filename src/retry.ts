@@ -20,7 +20,7 @@ export type RetrySetting = Readonly<RetryPolicy> | false;
 /** What one procedure's retries are: a read, a keyed write, or nothing. */
 export type RetryClass = "read" | "keyed" | "none";
 
-// One entry per procedure of the five services, verbatim from retry.go:30-87.
+// One entry per procedure of the five services, verbatim from the Go client's retry table.
 // A procedure missing from this table is treated as "none".
 const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkspaceService/CreateWorkload": "keyed",
@@ -28,9 +28,12 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkspaceService/ListWorkloads": "read",
   "/toshi.workspace.v1.WorkspaceService/PatchWorkload": "keyed",
   "/toshi.workspace.v1.WorkspaceService/DeleteWorkload": "keyed",
+  "/toshi.workspace.v1.WorkspaceService/CancelWorkload": "none",
   "/toshi.workspace.v1.WorkspaceService/WaitWorkload": "read",
   "/toshi.workspace.v1.WorkspaceService/WatchWorkloads": "none",
   "/toshi.workspace.v1.WorkspaceService/WatchOutput": "none",
+  "/toshi.workspace.v1.WorkspaceService/WatchTelemetry": "none",
+  "/toshi.workspace.v1.WorkspaceService/WatchGuestLog": "none",
   "/toshi.workspace.v1.WorkspaceService/Execute": "none",
   "/toshi.workspace.v1.WorkspaceService/CancelExecution": "keyed",
   "/toshi.workspace.v1.WorkspaceService/GetOperation": "read",
@@ -43,6 +46,9 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkspaceService/StartService": "none",
   "/toshi.workspace.v1.WorkspaceService/StopService": "none",
   "/toshi.workspace.v1.WorkspaceService/SetServiceMode": "none",
+  "/toshi.workspace.v1.WorkspaceService/WakeService": "none",
+  "/toshi.workspace.v1.WorkspaceService/HoldService": "none",
+  "/toshi.workspace.v1.WorkspaceService/ReleaseService": "none",
   "/toshi.workspace.v1.WorkspaceService/ListServiceRuns": "read",
   "/toshi.workspace.v1.SecretService/CreateSecretSet": "none",
   "/toshi.workspace.v1.SecretService/ListSecretSets": "read",
@@ -63,6 +69,9 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.ProjectService/CreateEnvironment": "none",
   "/toshi.workspace.v1.ProjectService/DeleteEnvironment": "none",
   "/toshi.workspace.v1.ProjectService/SetBranchRules": "none",
+  "/toshi.workspace.v1.ProjectService/CreateEmbedToken": "none",
+  "/toshi.workspace.v1.ProjectService/ListEmbedTokens": "read",
+  "/toshi.workspace.v1.ProjectService/RevokeEmbedToken": "none",
   "/toshi.workspace.v1.WebhookService/CreateWebhookEndpoint": "keyed",
   "/toshi.workspace.v1.WebhookService/GetWebhookEndpoint": "read",
   "/toshi.workspace.v1.WebhookService/ListWebhookEndpoints": "read",
