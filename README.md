@@ -135,8 +135,8 @@ picked up without a new client.
 The client has one field per Workspace API service: `project`, `secret`,
 `webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
-`filler` and `storageProvider`, each holding that service's generated
-client.
+`filler`, `storageProvider`, `product` and `discovery`, each holding that
+service's generated client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`,
@@ -305,6 +305,46 @@ await run.wait(); // rejects with JobExitError on a non-zero exit
 Stopping the loop stops only the output stream: the job keeps running,
 and `workload.jobs.cancel` ends it.
 
+## Products that are off
+
+A call for a product that is off for the workspace, or that turns on an
+outside product without accepting the access it asks for, rejects with a
+`ProductError`, `wait`, the watches and `execute` included.
+`isProductError(err)` tells it apart. It is still a `ConnectError` with the
+same `code`, and it has the product's ID (`product`), the `reason`
+(`ProductReason.NotInstalled`, `Disabled`, `NotEntitled`, `TurnedOff` or
+`AccessNotAccepted`), the setting that turns the product on (`feature`,
+such as `runners.enabled`), how far a product the deployment disables has
+wound down (`state`) and, for `AccessNotAccepted`, the access to accept
+(`access`).
+
+<!-- examples/product-error.ts -->
+
+```ts
+
+// Turning an outside product on installs it, and the API asks the caller to
+// accept the access it wants first.
+const enable = { id: "acme_ci", enabled: true, acceptedAccess: [] as string[] };
+try {
+  try {
+    await toshi.product.updateProduct(enable);
+  } catch (err) {
+    if (!isProductError(err) || err.reason !== ProductReason.AccessNotAccepted) {
+      throw err;
+    }
+    console.log(err.product, err.reason, err.access);
+    // Accept exactly the access the product asks for.
+    await toshi.product.updateProduct({ ...enable, acceptedAccess: err.access });
+  }
+} catch (err) {
+  if (!isProductError(err)) {
+    throw err;
+  }
+  // Off for the workspace: say which product and why.
+  console.log(err.product, err.reason, err.feature);
+}
+```
+
 ## Testing with `@toshicloud/sdk/test`
 
 `createFake()` serves the whole Workspace API in memory: no server, no port,
@@ -340,7 +380,8 @@ first, with the procedure, the request and the headers.
 [`protoc-gen-es`](https://github.com/bufbuild/protobuf-es) from the protos
 in `proto/toshi/workspace/v1` of the
 [toshi-api](https://github.com/toshicloud/toshi-api) repository, one
-`*_pb.ts` file per proto. The generated code is committed and imports
+`*_pb.ts` file per proto, and `src/gen/toshi/permission_pb.ts` from
+`proto/toshi/permission.proto`, which they import. The generated code is committed and imports
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit (or, once one exists, the release

@@ -174,6 +174,10 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.StorageProviderService/CreateStorageProvider": "none",
   "/toshi.workspace.v1.StorageProviderService/CheckStorageProvider": "none",
   "/toshi.workspace.v1.StorageProviderService/DeleteStorageProvider": "none",
+  "/toshi.workspace.v1.ProductService/ListProducts": "read",
+  "/toshi.workspace.v1.ProductService/UpdateProduct": "none",
+  "/toshi.workspace.v1.ProductService/RemoveProduct": "none",
+  "/toshi.workspace.v1.DiscoveryService/Discover": "read",
 };
 
 

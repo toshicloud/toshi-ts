@@ -7,10 +7,12 @@ import { executeCommand } from "./execute.js";
 import { ArtifactService, ArtifactUploadService } from "./gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "./gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
+import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
+import { ProductService } from "./gen/toshi/workspace/v1/products_pb.js";
 import { ProjectService } from "./gen/toshi/workspace/v1/projects_pb.js";
 import { RecordingService } from "./gen/toshi/workspace/v1/recordings_pb.js";
 import { SecretService } from "./gen/toshi/workspace/v1/secrets_pb.js";
@@ -104,7 +106,13 @@ import type {
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import { openOutputWatch } from "./output.js";
 import { paginate } from "./paginate.js";
-import { authInterceptor, keyInterceptor, retryInterceptor, scopeInterceptor } from "./interceptors.js";
+import {
+  authInterceptor,
+  keyInterceptor,
+  productInterceptor,
+  retryInterceptor,
+  scopeInterceptor,
+} from "./interceptors.js";
 import { normalizeRetry } from "./retry.js";
 import type { RetryPolicy } from "./retry.js";
 import { withDefaultUnaryTimeout } from "./timeout.js";
@@ -158,6 +166,8 @@ export interface ToshiClient {
   readonly auditEvent: Client<typeof AuditEventService>;
   readonly filler: Client<typeof FillerService>;
   readonly storageProvider: Client<typeof StorageProviderService>;
+  readonly product: Client<typeof ProductService>;
+  readonly discovery: Client<typeof DiscoveryService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -294,8 +304,9 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 }
 
 /**
- * Creates the client: one normalized retry setting, the scope, key, retry and
- * auth interceptors (scope outermost, auth innermost, so no interceptor sees
+ * Creates the client: one normalized retry setting, the product, scope, key,
+ * retry and auth interceptors (product outermost, so a product's refusal
+ * reaches the caller as a ProductError; auth innermost, so no interceptor sees
  * the Authorization header), one transport for every client and helper.
  *
  * Since 0.2.0 the workload calls are grouped by the type they name under
@@ -305,6 +316,7 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 export function createToshiClient(options: ToshiOptions): ToshiClient {
   const retry = normalizeRetry(options.retry);
   const interceptors: Interceptor[] = [
+    productInterceptor(),
     scopeInterceptor(options.project ?? "", options.environment ?? ""),
     keyInterceptor(),
     retryInterceptor(retry),
@@ -384,5 +396,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     auditEvent: createClient(AuditEventService, transport),
     filler: createClient(FillerService, transport),
     storageProvider: createClient(StorageProviderService, transport),
+    product: createClient(ProductService, transport),
+    discovery: createClient(DiscoveryService, transport),
   };
 }

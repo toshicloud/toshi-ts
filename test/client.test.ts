@@ -352,6 +352,8 @@ describe("createToshiClient", () => {
       "auditEvent",
       "filler",
       "storageProvider",
+      "product",
+      "discovery",
     ] as const;
     for (const field of fields) {
       expect(harness.client[field]).toBeDefined();

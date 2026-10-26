@@ -14,4 +14,4 @@ for tool in buf protoc-gen-es; do
   fi
 done
 
-buf generate "$TOSHI_API_REPOSITORY#commit=$TOSHI_API_REF" --path proto/toshi/workspace/v1
+buf generate "$TOSHI_API_REPOSITORY#commit=$TOSHI_API_REF" --path proto/toshi/workspace/v1 --path proto/toshi/permission.proto
