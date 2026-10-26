@@ -9,8 +9,11 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "types": ["node"],
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@toshicloud/sdk": ["./src/index.ts"]
+    }
   },
-  "include": ["src", "test", "*.config.ts", "*.config.js"],
+  "include": ["src", "test", "examples", "*.config.ts", "*.config.js"],
   "exclude": ["dist", "node_modules", "coverage"]
 }

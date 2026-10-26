@@ -19,6 +19,8 @@ generated clients alike.
 
 In Node, with `@connectrpc/connect-node`:
 
+<!-- examples/quick-start.ts -->
+
 ```ts
 import { readFileSync } from "node:fs";
 import { createConnectTransport } from "@connectrpc/connect-node";
@@ -38,15 +40,21 @@ const toshi = createToshiClient({
 });
 
 const { projects } = await toshi.project.listProjects({});
+console.log(projects.length);
 ```
 
 In a browser, with `@connectrpc/connect-web`:
+
+<!-- examples/browser.ts -->
 
 ```ts
 import { createConnectTransport } from "@connectrpc/connect-web";
 import { createToshiClient } from "@toshicloud/sdk";
 
-const toshi = createToshiClient({
+// The token the browser app already holds.
+declare const token: string;
+
+export const toshi = createToshiClient({
   transport: (interceptors) =>
     createConnectTransport({ baseUrl: "https://toshi.example.com", interceptors }),
   token,
@@ -86,9 +94,12 @@ span the three types sit on `workload` itself: `listEvents`, `watchEvents`,
 `getOperation` and `waitOperation`. `run` sits at the top of the client, as
 `toshi run` sits at the top of the CLI.
 
+<!-- examples/client-shape.ts -->
+
 ```ts
 const { jobs } = await toshi.workload.jobs.list({ pageSize: 10 });
-const job = await toshi.workload.jobs.get({ id: jobs[0].id });
+const { job } = await toshi.workload.jobs.get({ id: jobs[0].id });
+console.log(job?.id);
 ```
 
 ### Retries
@@ -130,7 +141,10 @@ from a server error.
   `WatchEventsResponse` (`event`), and the output watch yields
   `WatchOutputResponse` (`stdout`, `stderr` or `end`).
 
+<!-- examples/watch-events.ts -->
+
 ```ts
+const id = "workload-id";
 const watch = await toshi.workload.watchEvents({ workloadId: id });
 for await (const { event } of watch) {
   console.log(event?.name);
@@ -151,7 +165,10 @@ client holds at most one buffer of input. `closeStdin` ends standard input
 after a pending write, and a later `write` is refused. `wait` settles when
 the command ends.
 
+<!-- examples/execute.ts -->
+
 ```ts
+const id = "sandbox-id";
 const proc = await toshi.workload.sandboxes.execute({
   sandboxId: id,
   command: { argv: ["cat"] },
@@ -183,6 +200,8 @@ transport's or the server's error.
 job and its output, which is what `toshi run` does: `CreateJob`, then
 `WatchOutput`. It yields output chunks like an execution, and `wait()`
 resolves when the job exits 0 and rejects with `JobExitError` otherwise.
+
+<!-- examples/run-job.ts -->
 
 ```ts
 const run = await toshi.run({

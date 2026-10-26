@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@connectrpc/connect-node": "2.2.0",
+    "@connectrpc/connect-web": "2.2.0",
     "@eslint/js": "10.0.1",
     "@types/node": "26.6.5",
     "@vitest/coverage-v8": "5.0.5",
