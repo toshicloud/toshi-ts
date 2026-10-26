@@ -10,6 +10,7 @@ import type {
 import type { WorkloadService } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import type { RetrySetting } from "./retry.js";
 import { READER_TAKEN, WatchState, createReader, reconnect, streamEnded } from "./stream.js";
+import { timeoutError } from "./timeout.js";
 
 /** Starts an output watch at the request's offsets, counting the bytes it hands out (output.go:14-52). */
 export function openOutputWatch(
@@ -18,7 +19,7 @@ export function openOutputWatch(
   req: WatchOutputRequest,
   opts?: CallOptions,
 ): Promise<OutputWatch> {
-  const state = new WatchState("", opts?.signal);
+  const state = new WatchState("", opts?.signal, opts?.timeoutMs);
   const request = clone(WatchOutputRequestSchema, req);
   let stdout = req.stdoutOffset;
   let stderr = req.stderrOffset;
@@ -36,6 +37,7 @@ export function openOutputWatch(
           request.stderrOffset = stderr;
           const stream = service.watchOutput(request, { signal: state.signal });
           for await (const msg of stream) {
+            state.markOpen();
             attempt = 0;
             if (msg.message.case === "end") {
               // output.go:157-160: release the RPC before the caller sees the
@@ -58,6 +60,9 @@ export function openOutputWatch(
         } catch (err) {
           if (state.closed) {
             return;
+          }
+          if (state.timedOut) {
+            throw timeoutError(state.timeoutMs as number);
           }
           cause = err;
         }

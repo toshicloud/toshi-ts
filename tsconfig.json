@@ -12,6 +12,7 @@
     "noEmit": true,
     "paths": {
       "@toshicloud/sdk": ["./src/index.ts"],
+      "@toshicloud/sdk/node": ["./src/node/index.ts"],
       "@toshicloud/sdk/test": ["./src/test/index.ts"]
     }
   },

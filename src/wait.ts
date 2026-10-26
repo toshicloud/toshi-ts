@@ -12,6 +12,7 @@ import type {
 } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import type { Operation, WaitOperationRequest } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import { abortReason } from "./retry.js";
+import { runWithDeadline } from "./timeout.js";
 
 /** Asks again while the job is not in a state it waits for, and returns the answer when it is. */
 export function waitJob(
@@ -19,7 +20,7 @@ export function waitJob(
   req: WaitJobRequest,
   opts?: CallOptions,
 ): Promise<WaitJobResponse> {
-  return waitReached(() => service.waitJob(req, opts), opts);
+  return runWithDeadline(opts, (callOpts) => waitReached((o) => service.waitJob(req, o), callOpts));
 }
 
 /** Asks again while the sandbox is not in a state it waits for. */
@@ -28,7 +29,7 @@ export function waitSandbox(
   req: WaitSandboxRequest,
   opts?: CallOptions,
 ): Promise<WaitSandboxResponse> {
-  return waitReached(() => service.waitSandbox(req, opts), opts);
+  return runWithDeadline(opts, (callOpts) => waitReached((o) => service.waitSandbox(req, o), callOpts));
 }
 
 /** Asks again while the service is not in a state it waits for. */
@@ -37,33 +38,35 @@ export function waitService(
   req: WaitServiceRequest,
   opts?: CallOptions,
 ): Promise<WaitServiceResponse> {
-  return waitReached(() => service.waitService(req, opts), opts);
+  return runWithDeadline(opts, (callOpts) => waitReached((o) => service.waitService(req, o), callOpts));
 }
 
 /** Asks again while the operation is not done, and returns it when it is (wait.go:29-45). */
-export async function waitOperation(
+export function waitOperation(
   service: Client<typeof WorkloadService>,
   req: WaitOperationRequest,
   opts?: CallOptions,
 ): Promise<Operation> {
-  for (;;) {
-    throwIfAborted(opts);
-    const resp = await service.waitOperation(req, opts);
-    const op = resp.operation;
-    if (op !== undefined && op.done) {
-      return op;
+  return runWithDeadline(opts, async (callOpts) => {
+    for (;;) {
+      throwIfAborted(callOpts);
+      const resp = await service.waitOperation(req, callOpts);
+      const op = resp.operation;
+      if (op !== undefined && op.done) {
+        return op;
+      }
     }
-  }
+  });
 }
 
 // The three waits share one loop: each answers reached when the state arrived.
 async function waitReached<Resp extends { readonly reached: boolean }>(
-  call: () => Promise<Resp>,
+  call: (opts: CallOptions | undefined) => Promise<Resp>,
   opts: CallOptions | undefined,
 ): Promise<Resp> {
   for (;;) {
     throwIfAborted(opts);
-    const resp = await call();
+    const resp = await call(opts);
     if (resp.reached) {
       return resp;
     }

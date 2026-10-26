@@ -14,6 +14,7 @@ import { EndReason } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type { CreateJobRequest, WorkloadService } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import { openOutputWatch } from "./output.js";
 import type { RetrySetting } from "./retry.js";
+import { runWithDeadline } from "./timeout.js";
 
 /**
  * Starts a job and follows its output, as `toshi run` does: CreateJob, then
@@ -26,7 +27,7 @@ export async function runJob(
   req: CreateJobRequest,
   opts?: CallOptions,
 ): Promise<JobRun> {
-  const created = await service.createJob(req, opts);
+  const created = await runWithDeadline(opts, (callOpts) => service.createJob(req, callOpts));
   const job = created.job;
   if (job === undefined) {
     throw new Error("toshi: CreateJob answered no job");
@@ -42,7 +43,7 @@ export async function runJob(
       environment: req.environment,
       id: job.id,
     }),
-    opts,
+    opts === undefined ? undefined : { ...opts, timeoutMs: undefined },
   );
   return new LiveRun(job, watch);
 }

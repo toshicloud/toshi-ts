@@ -10,6 +10,10 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "default": "./dist/node/index.js"
+    },
     "./test": {
       "types": "./dist/test/index.d.ts",
       "default": "./dist/test/index.js"
@@ -43,11 +47,19 @@
     "generate": "scripts/generate.sh",
     "prepack": "pnpm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@bufbuild/protobuf": "^2.16.0",
-    "@connectrpc/connect": "^2.2.0"
+    "@connectrpc/connect": "^2.2.0",
+    "@connectrpc/connect-node": "^2.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@connectrpc/connect-node": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@bufbuild/protobuf": "^2.16.0",
+    "@connectrpc/connect": "^2.2.0",
     "@connectrpc/connect-node": "2.2.0",
     "@connectrpc/connect-web": "2.2.0",
     "@eslint/js": "10.0.1",
