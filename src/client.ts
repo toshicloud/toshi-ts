@@ -117,6 +117,13 @@ export interface ToshiOptions {
   /** Builds the caller's transport (connect-node or connect-web) with the client's interceptors. */
   transport: (interceptors: Interceptor[]) => Transport;
   token?: string;
+  /**
+   * Gives each request attempt its token, so a refreshed token is used without
+   * a new client; it wins over `token` and a retry asks it again. A source that
+   * throws or answers an empty token ends the call with Code.Unauthenticated,
+   * with its error as the cause, and the call is not retried.
+   */
+  tokenSource?: (signal: AbortSignal | undefined) => string | Promise<string>;
   project?: string;
   environment?: string;
   /** false turns off retries and watch reconnects. */
@@ -301,7 +308,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     scopeInterceptor(options.project ?? "", options.environment ?? ""),
     keyInterceptor(),
     retryInterceptor(retry),
-    authInterceptor(options.token ?? ""),
+    authInterceptor(options.token ?? "", options.tokenSource),
   ];
   const transport = withDefaultUnaryTimeout(options.transport(interceptors), options.defaultTimeoutMs);
 

@@ -1,5 +1,6 @@
 import { ScalarType } from "@bufbuild/protobuf";
 import type { DescField, DescMessage, Message } from "@bufbuild/protobuf";
+import { Code, ConnectError } from "@connectrpc/connect";
 import type { Interceptor } from "@connectrpc/connect";
 import {
   backoffDelay,
@@ -15,12 +16,26 @@ import type { RetrySetting } from "./retry.js";
 // objects with one property per field, keyed by localName.
 type MutableMessage = Record<string, unknown>;
 
+/** Gives one request attempt its token; the signal is the call's. */
+export type TokenSource = (signal: AbortSignal | undefined) => string | Promise<string>;
+
 /**
  * Sends `Authorization: Bearer <token>` on every call and stream, on a copy of
  * the request: it is the innermost interceptor, so none outside it sees the
  * header (intercept.go:13-31). Never Toshi-Tenant.
+ *
+ * With a source, the token is asked for on every attempt the innermost
+ * interceptor runs for, so a retry asks again (client.go:154-169).
  */
-export function authInterceptor(token: string): Interceptor {
+export function authInterceptor(token: string, source?: TokenSource): Interceptor {
+  if (source !== undefined) {
+    return (next) => async (req) => {
+      const value = await sourceToken(source, req.signal);
+      const header = new Headers(req.header);
+      header.set("Authorization", `Bearer ${value}`);
+      return next({ ...req, header });
+    };
+  }
   if (token === "") {
     return (next) => next;
   }
@@ -29,6 +44,32 @@ export function authInterceptor(token: string): Interceptor {
     header.set("Authorization", `Bearer ${token}`);
     return next({ ...req, header });
   };
+}
+
+// Asks the source for this attempt's token, trimmed; a source that throws or
+// answers empty ends the call as UNAUTHENTICATED with the source's error as the
+// cause, which is not a transport loss and so is not retried (client.go:186-201).
+async function sourceToken(source: TokenSource, signal: AbortSignal | undefined): Promise<string> {
+  let token: string;
+  try {
+    token = await source(signal);
+  } catch (err) {
+    throw new ConnectError(
+      `toshi: token source: ${message(err)}`,
+      Code.Unauthenticated,
+      undefined,
+      undefined,
+      err,
+    );
+  }
+  if (token.trim() === "") {
+    throw new ConnectError("toshi: token source: empty token", Code.Unauthenticated);
+  }
+  return token.trim();
+}
+
+function message(err: unknown): string {
+  return err instanceof Error ? err.message : String(err);
 }
 
 /** Fills an empty project and environment from the options; caller values win (intercept.go:38-129). */

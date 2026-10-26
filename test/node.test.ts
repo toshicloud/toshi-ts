@@ -1,4 +1,4 @@
-import { readFileSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { readFileSync, mkdtempSync, rmSync, utimesSync, writeFileSync } from "node:fs";
 import { createServer } from "node:http2";
 import type { Http2Server, ServerHttp2Session, ServerHttp2Stream } from "node:http2";
 import { tmpdir } from "node:os";
@@ -94,9 +94,15 @@ describe("environment defaults", () => {
     expect(authorization).toBe("Bearer env-token");
   });
 
-  it("picks the token option, then its file, then TOSHI_TOKEN, then TOSHI_TOKEN_FILE", async () => {
+  it("picks the token source, then the option, then its file, then TOSHI_TOKEN, then TOSHI_TOKEN_FILE", async () => {
     const fromFile = temporaryFile("token", "  file-token\n");
     const cases: ReadonlyArray<readonly [NodeToshiOptions, string | undefined, string | undefined, string]> = [
+      [
+        { tokenSource: () => "source-token", token: "option-token", tokenFile: fromFile },
+        "env-token",
+        fromFile,
+        "Bearer source-token",
+      ],
       [{ token: "option-token" }, "env-token", fromFile, "Bearer option-token"],
       [{ tokenFile: fromFile }, "env-token", undefined, "Bearer file-token"],
       [{}, "env-token", fromFile, "Bearer env-token"],
@@ -125,7 +131,7 @@ describe("environment defaults", () => {
     );
     process.env.TOSHI_SERVER = "http://127.0.0.1:1";
     expect(() => createToshiClient({})).toThrow(
-      "toshi: no token: use the token or tokenFile option, or set TOSHI_TOKEN or TOSHI_TOKEN_FILE",
+      "toshi: no token: use the tokenSource, token or tokenFile option, or set TOSHI_TOKEN or TOSHI_TOKEN_FILE",
     );
   });
 
@@ -163,6 +169,89 @@ describe("environment defaults", () => {
     } finally {
       await served.close();
     }
+  });
+});
+
+describe("a token file that changes", () => {
+  // A fixed time, so a rewrite is seen by its modification time alone; the
+  // second case sets the time back to prove the read is cached.
+  const start = new Date("2026-01-01T00:00:00Z");
+
+  function writeTokenFile(path: string, contents: string, modTime: Date): void {
+    writeFileSync(path, contents);
+    utimesSync(path, modTime, modTime);
+  }
+
+  function recordingClient(path: string): { client: ReturnType<typeof createToshiClient>; authorizations: string[] } {
+    const authorizations: string[] = [];
+    const client = clientWith(
+      (router) => {
+        router.service(WorkloadService, {
+          getJob(_req, ctx) {
+            authorizations.push(ctx.requestHeader.get("authorization") ?? "");
+            return {};
+          },
+        });
+      },
+      { tokenFile: path },
+    );
+    return { client, authorizations };
+  }
+
+  it("sends a token rewritten between two calls", async () => {
+    const path = temporaryFile("token", "token-1\n");
+    utimesSync(path, start, start);
+    const { client, authorizations } = recordingClient(path);
+
+    await client.workload.jobs.get({ id: "job-1" });
+    writeTokenFile(path, "token-2\n", new Date(start.getTime() + 60_000));
+    await client.workload.jobs.get({ id: "job-1" });
+
+    expect(authorizations).toEqual(["Bearer token-1", "Bearer token-2"]);
+  });
+
+  it("reads the file again only when its modification time or size changed", async () => {
+    const path = temporaryFile("token", "token-1\n");
+    utimesSync(path, start, start);
+    const { client, authorizations } = recordingClient(path);
+
+    await client.workload.jobs.get({ id: "job-1" });
+    // Same length, same modification time: the client sends what it read.
+    writeTokenFile(path, "token-9\n", start);
+    await client.workload.jobs.get({ id: "job-1" });
+
+    expect(authorizations).toEqual(["Bearer token-1", "Bearer token-1"]);
+  });
+
+  it("fails a call as Unauthenticated when the file is empty or gone", async () => {
+    const path = temporaryFile("token", "token-1\n");
+    utimesSync(path, start, start);
+    let reached = 0;
+    const client = clientWith(
+      (router) => {
+        router.service(WorkloadService, {
+          getJob() {
+            reached += 1;
+            return {};
+          },
+        });
+      },
+      { tokenFile: path, retry: { maxAttempts: 3, initialBackoffMs: 0, maxBackoffMs: 0 } },
+    );
+
+    writeTokenFile(path, "  \n", new Date(start.getTime() + 60_000));
+    const empty: unknown = await client.workload.jobs.get({ id: "job-1" }).catch((reason: unknown) => reason);
+    expect(empty).toBeInstanceOf(ConnectError);
+    expect(empty).toMatchObject({ code: Code.Unauthenticated });
+    expect((empty as ConnectError).message).toContain(`toshi: token file ${path} is empty`);
+
+    rmSync(path);
+    const gone: unknown = await client.workload.jobs.get({ id: "job-1" }).catch((reason: unknown) => reason);
+    expect(gone).toBeInstanceOf(ConnectError);
+    expect(gone).toMatchObject({ code: Code.Unauthenticated });
+    expect((gone as ConnectError).message).toContain(`toshi: read token file ${path}:`);
+
+    expect(reached).toBe(0);
   });
 });
 

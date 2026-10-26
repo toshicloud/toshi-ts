@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import type { BigIntStats } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import { versions } from "node:process";
 import { rootCertificates } from "node:tls";
 
@@ -15,7 +16,10 @@ export interface NodeToshiOptions extends Omit<ToshiOptions, "transport"> {
   transport?: (interceptors: Interceptor[]) => Transport;
   /** The control plane's base URL; defaults to TOSHI_SERVER. */
   server?: string;
-  /** A file holding the token; its contents are trimmed, and an empty file is an error. */
+  /**
+   * A file holding the token, trimmed; an empty file is an error. It is read
+   * again before a request when its modification time or size changed.
+   */
   tokenFile?: string;
   /** A PEM bundle trusted besides Node's built-in roots; defaults to TOSHI_CA_FILE. */
   caFile?: string;
@@ -30,7 +34,8 @@ export interface NodeToshiOptions extends Omit<ToshiOptions, "transport"> {
 /**
  * Creates a Node client. Without a transport of its own it builds one with
  * connect-node over HTTP/2, takes the server from `server` or TOSHI_SERVER and
- * the token from `token`, `tokenFile`, TOSHI_TOKEN or TOSHI_TOKEN_FILE.
+ * the token from `tokenSource`, `token`, `tokenFile`, TOSHI_TOKEN or
+ * TOSHI_TOKEN_FILE.
  *
  * The User-Agent is "toshi-ts/<version> (node/<node version>)", with
  * `userAgent` in front when it is set. Connect exports no version constant, so
@@ -38,7 +43,7 @@ export interface NodeToshiOptions extends Omit<ToshiOptions, "transport"> {
  */
 export function createToshiClient(options: NodeToshiOptions = {}): ToshiClient {
   const custom = options.transport;
-  const token = resolveToken(options.token, options.tokenFile, custom !== undefined);
+  const resolved = resolveToken(options, custom !== undefined);
   const agent = userAgent(options.userAgent ?? "");
   const outer = (interceptors: Interceptor[]): Interceptor[] => [
     ...(options.interceptors ?? []),
@@ -63,7 +68,12 @@ export function createToshiClient(options: NodeToshiOptions = {}): ToshiClient {
     transport = (interceptors) => transportOfCaller(outer(interceptors));
   }
 
-  return createRootClient({ ...options, transport, token });
+  return createRootClient({
+    ...options,
+    transport,
+    token: resolved.token,
+    tokenSource: resolved.tokenSource,
+  });
 }
 
 /** The User-Agent every Node request carries, with product in front when set. */
@@ -88,35 +98,89 @@ function resolveServer(given: string | undefined): string {
   return server;
 }
 
-// resolveToken picks the token by the documented precedence: the option, the
-// option's file, TOSHI_TOKEN, then TOSHI_TOKEN_FILE (client.go:154-169). With a
-// transport of the caller's it returns undefined instead of refusing.
-function resolveToken(
-  given: string | undefined,
-  tokenFile: string | undefined,
-  optional: boolean,
-): string | undefined {
-  const token = given?.trim() ?? "";
-  if (token !== "") {
-    return token;
+// The token to use: a source for the root client, or the fixed token it sends.
+interface ResolvedToken {
+  readonly token?: string;
+  readonly tokenSource?: (signal: AbortSignal | undefined) => string | Promise<string>;
+}
+
+// resolveToken picks the token by the documented precedence: the source, the
+// option, the option's file, TOSHI_TOKEN, then TOSHI_TOKEN_FILE
+// (client.go:154-169). A token file is read here, so a missing or empty one
+// fails createToshiClient; the source reads it again when it changes. With a
+// transport of the caller's and no token anywhere, it returns nothing instead
+// of refusing.
+function resolveToken(options: NodeToshiOptions, optional: boolean): ResolvedToken {
+  if (options.tokenSource !== undefined) {
+    return { tokenSource: options.tokenSource };
   }
-  if (tokenFile !== undefined && tokenFile !== "") {
-    return readTokenFile(tokenFile);
+  const token = options.token?.trim() ?? "";
+  if (token !== "") {
+    return { token };
+  }
+  if (options.tokenFile !== undefined && options.tokenFile !== "") {
+    return { tokenSource: fileTokenSource(options.tokenFile) };
   }
   const fromEnv = env("TOSHI_TOKEN")?.trim() ?? "";
   if (fromEnv !== "") {
-    return fromEnv;
+    return { token: fromEnv };
   }
   const envFile = env("TOSHI_TOKEN_FILE");
   if (envFile !== undefined) {
-    return readTokenFile(envFile);
+    return { tokenSource: fileTokenSource(envFile) };
   }
   if (optional) {
-    return undefined;
+    return {};
   }
   throw new Error(
-    "toshi: no token: use the token or tokenFile option, or set TOSHI_TOKEN or TOSHI_TOKEN_FILE",
+    "toshi: no token: use the tokenSource, token or tokenFile option, or set TOSHI_TOKEN or TOSHI_TOKEN_FILE",
   );
+}
+
+// fileTokenSource returns a source over a token file whose first read happens
+// now, so a missing or empty file still fails createToshiClient.
+function fileTokenSource(path: string): (signal: AbortSignal | undefined) => string {
+  const file = new TokenFile(path);
+  return () => file.read();
+}
+
+// TokenFile is a token file read again when its modification time or size
+// changed since the last read (client.go:203-249).
+class TokenFile {
+  readonly #path: string;
+  #token = "";
+  #modTimeNs = 0n;
+  #size = -1n;
+
+  constructor(path: string) {
+    this.#path = path;
+    this.read();
+  }
+
+  // read returns the file's token, reading the file again when it changed. It
+  // stats before reading, so a change made in between is read next time. After
+  // a failure the next call reads the file again.
+  read(): string {
+    let stats: BigIntStats;
+    try {
+      stats = statSync(this.#path, { bigint: true });
+    } catch (err) {
+      this.#size = -1n;
+      throw new Error(`toshi: read token file ${this.#path}: ${message(err)}`, { cause: err });
+    }
+    if (stats.mtimeNs === this.#modTimeNs && stats.size === this.#size) {
+      return this.#token;
+    }
+    try {
+      this.#token = readTokenFile(this.#path);
+    } catch (err) {
+      this.#size = -1n;
+      throw err;
+    }
+    this.#modTimeNs = stats.mtimeNs;
+    this.#size = stats.size;
+    return this.#token;
+  }
 }
 
 function resolveCAFile(given: string | undefined): string | undefined {
