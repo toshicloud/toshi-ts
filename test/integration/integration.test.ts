@@ -431,6 +431,65 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   );
 
   it(
+    "lists events a page at a time",
+    async () => {
+      const client = harness().client;
+      // Two fresh workloads guarantee the log holds at least two events,
+      // whichever other cases ran.
+      await createJob(client, "");
+      await createJob(client, "");
+
+      const first = await client.workload.listEvents({ pageSize: 1 });
+      expect(first.events).toHaveLength(1);
+      expect(first.cursor).not.toBe("");
+      expect(first.nextPageToken).not.toBe("");
+
+      const second = await client.workload.listEvents({
+        pageToken: first.nextPageToken,
+        pageSize: 1,
+      });
+      expect(second.events).toHaveLength(1);
+      expect(second.events[0]?.id).not.toBe(first.events[0]?.id);
+      expect(second.cursor).not.toBe(first.cursor);
+
+      const workloads = [first.events[0]?.workloadId, second.events[0]?.workloadId];
+      pass(
+        "listEvents",
+        `two pages of one, ${first.cursor} then ${second.cursor}, for ${workloads.join(", ")}`,
+      );
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "gets the operation a delete returns",
+    async () => {
+      const client = harness().client;
+      const job = await createJob(client, "");
+      const deleted = await client.workload.jobs.delete({ id: job.id });
+      const operationId = deleted.operation?.id ?? "";
+      if (operationId === "") {
+        throw new Error("DeleteJob returned no operation");
+      }
+      const done = await client.workload.waitOperation({
+        id: operationId,
+        timeout: { seconds: 5n },
+      });
+      expect(done.done).toBe(true);
+
+      const got = await client.workload.getOperation({ id: operationId });
+      expect(got.operation?.id).toBe(operationId);
+      expect(got.operation?.workloadId).toBe(job.id);
+      expect(got.operation?.done).toBe(true);
+      pass(
+        "getOperation",
+        `the delete of ${job.id} returned ${operationId}, which GetOperation answers as done`,
+      );
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
     "watches the output of a job",
     async () => {
       const watch = await harness().client.workload.jobs.watchOutput({ id: state.firstId });

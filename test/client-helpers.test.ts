@@ -15,8 +15,12 @@ import {
 import {
   EventSchema,
   ExecuteResponseSchema,
+  GetOperationResponseSchema,
   JobSchema,
+  ListEventsResponseSchema,
   type ExecuteRequest,
+  type GetOperationRequest,
+  type ListEventsRequest,
   OperationSchema,
   WaitOperationResponseSchema,
   WatchEventsResponseSchema,
@@ -87,6 +91,24 @@ describe("ToshiClient helpers", () => {
     expect(calls).toBe(2);
   });
 
+  it("gets an operation through the client and answers with its response", async () => {
+    let seen: GetOperationRequest | undefined;
+    const client = workload({
+      getOperation: (req) => {
+        seen = req;
+        return create(GetOperationResponseSchema, {
+          operation: create(OperationSchema, { id: "op-1", workloadId: "wl-1", done: true }),
+        });
+      },
+    });
+    const response = await client.workload.getOperation({ id: "op-1" });
+    expect(seen?.id).toBe("op-1");
+    expect(seen?.project).toBe("default");
+    expect(response.operation?.id).toBe("op-1");
+    expect(response.operation?.workloadId).toBe("wl-1");
+    expect(response.operation?.done).toBe(true);
+  });
+
   it("lists before watching jobs through the client", async () => {
     let watchCursor: string | undefined;
     let keepalive: boolean | undefined;
@@ -118,6 +140,29 @@ describe("ToshiClient helpers", () => {
     expect(watchCursor).toBe("list-cursor");
     expect(keepalive).toBe(true);
     await iterator.return?.();
+  });
+
+  it("lists events through the client and answers with its response", async () => {
+    let seen: ListEventsRequest | undefined;
+    const client = workload({
+      listEvents: (req) => {
+        seen = req;
+        return create(ListEventsResponseSchema, {
+          events: [create(EventSchema, { id: "ev-1", cursor: "e1" })],
+          cursor: "e1",
+          nextPageToken: "p2",
+        });
+      },
+    });
+    const response = await client.workload.listEvents({ pageToken: "p1", pageSize: 7, workloadId: "wl-1" });
+    expect(seen?.workloadId).toBe("wl-1");
+    expect(seen?.pageToken).toBe("p1");
+    expect(seen?.pageSize).toBe(7);
+    expect(seen?.project).toBe("default");
+    expect(seen?.environment).toBe("production");
+    expect(response.events.map((event) => event.id)).toEqual(["ev-1"]);
+    expect(response.cursor).toBe("e1");
+    expect(response.nextPageToken).toBe("p2");
   });
 
   it("watches events from a cursor through the client and yields the response", async () => {

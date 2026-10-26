@@ -63,7 +63,9 @@ import type {
 } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import {
   ExecuteStartSchema,
+  GetOperationRequestSchema,
   HoldServiceRequestSchema,
+  ListEventsRequestSchema,
   ListServiceRunsRequestSchema,
   ReleaseServiceRequestSchema,
   SetServiceModeRequestSchema,
@@ -75,8 +77,10 @@ import {
   WatchOutputRequestSchema,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type {
+  GetOperationResponse,
   HoldServiceResponse,
   Job,
+  ListEventsResponse,
   ListServiceRunsResponse,
   Operation,
   ReleaseServiceResponse,
@@ -137,7 +141,17 @@ export interface WorkloadClient {
     req: MessageInitShape<typeof WaitOperationRequestSchema>,
     opts?: CallOptions,
   ): Promise<Operation>;
+  /** Lists the events after a cursor, a page at a time; `watchEvents` is the live form. */
+  listEvents(
+    req: MessageInitShape<typeof ListEventsRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ListEventsResponse>;
   watchEvents(req: MessageInitShape<typeof WatchEventsRequestSchema>, opts?: CallOptions): Promise<EventWatch>;
+  /** Returns one operation: the id a long call hands back, asked for again. */
+  getOperation(
+    req: MessageInitShape<typeof GetOperationRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<GetOperationResponse>;
 }
 
 /** A job's calls: one method for each of WorkloadService's job calls. */
@@ -310,8 +324,10 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
       },
       waitOperation: (req, opts) =>
         waitOperation(workloadService, create(WaitOperationRequestSchema, req), opts),
+      listEvents: (req, opts) => workloadService.listEvents(req, opts),
       watchEvents: (req, opts) =>
         openEventWatch(workloadService, retry, create(WatchEventsRequestSchema, req), opts),
+      getOperation: (req, opts) => workloadService.getOperation(req, opts),
     },
     run: (req, opts) => runJob(workloadService, retry, create(CreateJobRequestSchema, req), opts),
   };

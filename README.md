@@ -80,9 +80,9 @@ name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`,
 `wait`, `watch`, and `cancel` on a job, `execute` on a sandbox, `start`,
 `stop`, `setMode`, `listRuns`, `wake`, `hold` and `release` on a service). The calls that
-span the three types sit on `workload` itself: `watchEvents` and
-`waitOperation`. `run` sits at the top of the client, as `toshi run`
-sits at the top of the CLI.
+span the three types sit on `workload` itself: `listEvents`, `watchEvents`,
+`getOperation` and `waitOperation`. `run` sits at the top of the client, as
+`toshi run` sits at the top of the CLI.
 
 ```ts
 const { jobs } = await toshi.workload.jobs.list({ pageSize: 10 });
@@ -107,6 +107,11 @@ from a server error.
 - `workload.jobs.wait(req)`, `workload.sandboxes.wait(req)` and
   `workload.services.wait(req)` ask again until the workload reaches the
   state; `workload.waitOperation(req)` asks until the operation is done.
+- `workload.getOperation(req)` returns one operation by id: a call that
+  takes long hands one back, and this asks for it again.
+- `workload.listEvents(req)` returns the events after a cursor, oldest
+  first, a page at a time, for a client that polls or catches up after
+  downtime; `workload.watchEvents(req)` is the live form.
 - `workload.jobs.watch(req)`, `workload.sandboxes.watch(req)`,
   `workload.services.watch(req)`, `workload.watchEvents(req)` and
   `workload.jobs.watchOutput(req)` resolve to a watch you read with
