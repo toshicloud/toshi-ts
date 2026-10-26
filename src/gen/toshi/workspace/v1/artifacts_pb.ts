@@ -14,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/artifacts.proto.
  */
 export const file_toshi_workspace_v1_artifacts: GenFile = /*@__PURE__*/
-  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvYXJ0aWZhY3RzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi9wIKCEFydGlmYWN0EgoKAmlkGAEgASgJEhIKCnByb2plY3RfaWQYAiABKAkSFgoOZW52aXJvbm1lbnRfaWQYAyABKAkSEwoLd29ya2xvYWRfaWQYBCABKAkSFAoMZXhlY3V0aW9uX2lkGAUgASgJEgwKBGtpbmQYBiABKAkSDAoEbmFtZRgHIAEoCRIUCgxjb250ZW50X3R5cGUYCCABKAkSEgoKcGFydF9jb3VudBgJIAEoAxISCgpwYXJ0X3NpemVzGAogAygDEhIKCmluZGV4X3NpemUYCyABKAMSDQoFc3RhdGUYDCABKAkSEgoKZW5jcnlwdGlvbhgNIAEoCRIuCgpjcmVhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxjb21wbGV0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDXdvcmtsb2FkX2tpbmQYECABKAkizQEKBlVwbG9hZBIMCgRwYXJ0GAEgASgJEg4KBm1ldGhvZBgCIAEoCRILCgN1cmwYAyABKAkSOAoHaGVhZGVycxgEIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5VcGxvYWQuSGVhZGVyc0VudHJ5Ei4KCmV4cGlyZXNfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqYBChRSZXNlcnZlVXBsb2FkUmVxdWVzdBIMCgRraW5kGAEgASgJEgwKBG5hbWUYAiABKAkSFAoMY29udGVudF90eXBlGAMgASgJEhIKCnBhcnRfc2l6ZXMYBCADKAMSEgoKaW5kZXhfc2l6ZRgFIAEoAxI0CglyZWNvcmRpbmcYBiABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nS2luZCLKAQoVUmVzZXJ2ZVVwbG9hZFJlc3BvbnNlEhMKC2FydGlmYWN0X2lkGAEgASgJEisKB3VwbG9hZHMYAiADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVXBsb2FkEjMKD3VwbG9hZF9kZWFkbGluZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKZW5jcnlwdGlvbhgEIAEoCRIQCghkYXRhX2tleRgFIAEoDBIUCgxndWVzdF91cGxvYWQYBiABKAgiLAoVQ29tcGxldGVVcGxvYWRSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIkgKFkNvbXBsZXRlVXBsb2FkUmVzcG9uc2USLgoIYXJ0aWZhY3QYASABKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuQXJ0aWZhY3QiogEKFExpc3RBcnRpZmFjdHNSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSFgoOZW52aXJvbm1lbnRfaWQYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSFAoMZXhlY3V0aW9uX2lkGAQgASgJEgwKBGtpbmQYBSABKAkSEQoJcGFnZV9zaXplGAYgASgFEhIKCnBhZ2VfdG9rZW4YByABKAkiYQoVTGlzdEFydGlmYWN0c1Jlc3BvbnNlEi8KCWFydGlmYWN0cxgBIAMoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5BcnRpZmFjdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKQoSR2V0QXJ0aWZhY3RSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIkUKE0dldEFydGlmYWN0UmVzcG9uc2USLgoIYXJ0aWZhY3QYASABKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuQXJ0aWZhY3QiTwoVR2V0RG93bmxvYWRVUkxSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJEgwKBHBhcnQYAiABKAkSEwoLdHRsX3NlY29uZHMYAyABKAMiewoWR2V0RG93bmxvYWRVUkxSZXNwb25zZRILCgN1cmwYASABKAkSLgoKZXhwaXJlc19hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKZW5jcnlwdGlvbhgDIAEoCRIQCghkYXRhX2tleRgEIAEoDDLmAQoVQXJ0aWZhY3RVcGxvYWRTZXJ2aWNlEmQKDVJlc2VydmVVcGxvYWQSKC50b3NoaS53b3Jrc3BhY2UudjEuUmVzZXJ2ZVVwbG9hZFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuUmVzZXJ2ZVVwbG9hZFJlc3BvbnNlEmcKDkNvbXBsZXRlVXBsb2FkEikudG9zaGkud29ya3NwYWNlLnYxLkNvbXBsZXRlVXBsb2FkUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5Db21wbGV0ZVVwbG9hZFJlc3BvbnNlMsACCg9BcnRpZmFjdFNlcnZpY2USZAoNTGlzdEFydGlmYWN0cxIoLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QXJ0aWZhY3RzUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QXJ0aWZhY3RzUmVzcG9uc2USXgoLR2V0QXJ0aWZhY3QSJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0QXJ0aWZhY3RSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkdldEFydGlmYWN0UmVzcG9uc2USZwoOR2V0RG93bmxvYWRVUkwSKS50b3NoaS53b3Jrc3BhY2UudjEuR2V0RG93bmxvYWRVUkxSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkdldERvd25sb2FkVVJMUmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_workspace_v1_recordings]);
+  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvYXJ0aWZhY3RzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi9wIKCEFydGlmYWN0EgoKAmlkGAEgASgJEhIKCnByb2plY3RfaWQYAiABKAkSFgoOZW52aXJvbm1lbnRfaWQYAyABKAkSEwoLd29ya2xvYWRfaWQYBCABKAkSFAoMZXhlY3V0aW9uX2lkGAUgASgJEgwKBGtpbmQYBiABKAkSDAoEbmFtZRgHIAEoCRIUCgxjb250ZW50X3R5cGUYCCABKAkSEgoKcGFydF9jb3VudBgJIAEoAxISCgpwYXJ0X3NpemVzGAogAygDEhIKCmluZGV4X3NpemUYCyABKAMSDQoFc3RhdGUYDCABKAkSEgoKZW5jcnlwdGlvbhgNIAEoCRIuCgpjcmVhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxjb21wbGV0ZWRfYXQYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDXdvcmtsb2FkX2tpbmQYECABKAkizQEKBlVwbG9hZBIMCgRwYXJ0GAEgASgJEg4KBm1ldGhvZBgCIAEoCRILCgN1cmwYAyABKAkSOAoHaGVhZGVycxgEIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5VcGxvYWQuSGVhZGVyc0VudHJ5Ei4KCmV4cGlyZXNfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqYBChRSZXNlcnZlVXBsb2FkUmVxdWVzdBIMCgRraW5kGAEgASgJEgwKBG5hbWUYAiABKAkSFAoMY29udGVudF90eXBlGAMgASgJEhIKCnBhcnRfc2l6ZXMYBCADKAMSEgoKaW5kZXhfc2l6ZRgFIAEoAxI0CglyZWNvcmRpbmcYBiABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nS2luZCLKAQoVUmVzZXJ2ZVVwbG9hZFJlc3BvbnNlEhMKC2FydGlmYWN0X2lkGAEgASgJEisKB3VwbG9hZHMYAiADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVXBsb2FkEjMKD3VwbG9hZF9kZWFkbGluZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKZW5jcnlwdGlvbhgEIAEoCRIQCghkYXRhX2tleRgFIAEoDBIUCgxndWVzdF91cGxvYWQYBiABKAgiLAoVQ29tcGxldGVVcGxvYWRSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIkgKFkNvbXBsZXRlVXBsb2FkUmVzcG9uc2USLgoIYXJ0aWZhY3QYASABKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuQXJ0aWZhY3QiogEKFExpc3RBcnRpZmFjdHNSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSFgoOZW52aXJvbm1lbnRfaWQYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSFAoMZXhlY3V0aW9uX2lkGAQgASgJEgwKBGtpbmQYBSABKAkSEQoJcGFnZV9zaXplGAYgASgFEhIKCnBhZ2VfdG9rZW4YByABKAkiYQoVTGlzdEFydGlmYWN0c1Jlc3BvbnNlEi8KCWFydGlmYWN0cxgBIAMoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5BcnRpZmFjdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKQoSR2V0QXJ0aWZhY3RSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIkUKE0dldEFydGlmYWN0UmVzcG9uc2USLgoIYXJ0aWZhY3QYASABKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuQXJ0aWZhY3QiVwodR2V0QXJ0aWZhY3REb3dubG9hZFVSTFJlcXVlc3QSEwoLYXJ0aWZhY3RfaWQYASABKAkSDAoEcGFydBgCIAEoCRITCgt0dGxfc2Vjb25kcxgDIAEoAyKDAQoeR2V0QXJ0aWZhY3REb3dubG9hZFVSTFJlc3BvbnNlEgsKA3VybBgBIAEoCRIuCgpleHBpcmVzX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgplbmNyeXB0aW9uGAMgASgJEhAKCGRhdGFfa2V5GAQgASgMMuYBChVBcnRpZmFjdFVwbG9hZFNlcnZpY2USZAoNUmVzZXJ2ZVVwbG9hZBIoLnRvc2hpLndvcmtzcGFjZS52MS5SZXNlcnZlVXBsb2FkUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5SZXNlcnZlVXBsb2FkUmVzcG9uc2USZwoOQ29tcGxldGVVcGxvYWQSKS50b3NoaS53b3Jrc3BhY2UudjEuQ29tcGxldGVVcGxvYWRSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkNvbXBsZXRlVXBsb2FkUmVzcG9uc2Uy2AIKD0FydGlmYWN0U2VydmljZRJkCg1MaXN0QXJ0aWZhY3RzEigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBcnRpZmFjdHNSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBcnRpZmFjdHNSZXNwb25zZRJeCgtHZXRBcnRpZmFjdBImLnRvc2hpLndvcmtzcGFjZS52MS5HZXRBcnRpZmFjdFJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuR2V0QXJ0aWZhY3RSZXNwb25zZRJ/ChZHZXRBcnRpZmFjdERvd25sb2FkVVJMEjEudG9zaGkud29ya3NwYWNlLnYxLkdldEFydGlmYWN0RG93bmxvYWRVUkxSZXF1ZXN0GjIudG9zaGkud29ya3NwYWNlLnYxLkdldEFydGlmYWN0RG93bmxvYWRVUkxSZXNwb25zZUItWitnaXRodWIuY29tL3Rvc2hpY2xvdWQvdG9zaGktYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_workspace_v1_recordings]);
 
 /**
  * Artifact is an uploaded file's record: what it is, who uploaded it, and
@@ -747,9 +747,9 @@ export const GetArtifactResponseSchema: GenMessage<GetArtifactResponse, {jsonTyp
   messageDesc(file_toshi_workspace_v1_artifacts, 9);
 
 /**
- * @generated from message toshi.workspace.v1.GetDownloadURLRequest
+ * @generated from message toshi.workspace.v1.GetArtifactDownloadURLRequest
  */
-export type GetDownloadURLRequest = Message<"toshi.workspace.v1.GetDownloadURLRequest"> & {
+export type GetArtifactDownloadURLRequest = Message<"toshi.workspace.v1.GetArtifactDownloadURLRequest"> & {
   /**
    * @generated from field: string artifact_id = 1;
    */
@@ -772,9 +772,9 @@ export type GetDownloadURLRequest = Message<"toshi.workspace.v1.GetDownloadURLRe
 };
 
 /**
- * @generated from message toshi.workspace.v1.GetDownloadURLRequest
+ * @generated from message toshi.workspace.v1.GetArtifactDownloadURLRequest
  */
-export type GetDownloadURLRequestJson = {
+export type GetArtifactDownloadURLRequestJson = {
   /**
    * @generated from field: string artifact_id = 1;
    */
@@ -797,16 +797,16 @@ export type GetDownloadURLRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.GetDownloadURLRequest.
- * Use `create(GetDownloadURLRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.GetArtifactDownloadURLRequest.
+ * Use `create(GetArtifactDownloadURLRequestSchema)` to create a new message.
  */
-export const GetDownloadURLRequestSchema: GenMessage<GetDownloadURLRequest, {jsonType: GetDownloadURLRequestJson}> = /*@__PURE__*/
+export const GetArtifactDownloadURLRequestSchema: GenMessage<GetArtifactDownloadURLRequest, {jsonType: GetArtifactDownloadURLRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_artifacts, 10);
 
 /**
- * @generated from message toshi.workspace.v1.GetDownloadURLResponse
+ * @generated from message toshi.workspace.v1.GetArtifactDownloadURLResponse
  */
-export type GetDownloadURLResponse = Message<"toshi.workspace.v1.GetDownloadURLResponse"> & {
+export type GetArtifactDownloadURLResponse = Message<"toshi.workspace.v1.GetArtifactDownloadURLResponse"> & {
   /**
    * @generated from field: string url = 1;
    */
@@ -831,9 +831,9 @@ export type GetDownloadURLResponse = Message<"toshi.workspace.v1.GetDownloadURLR
 };
 
 /**
- * @generated from message toshi.workspace.v1.GetDownloadURLResponse
+ * @generated from message toshi.workspace.v1.GetArtifactDownloadURLResponse
  */
-export type GetDownloadURLResponseJson = {
+export type GetArtifactDownloadURLResponseJson = {
   /**
    * @generated from field: string url = 1;
    */
@@ -858,10 +858,10 @@ export type GetDownloadURLResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.GetDownloadURLResponse.
- * Use `create(GetDownloadURLResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.GetArtifactDownloadURLResponse.
+ * Use `create(GetArtifactDownloadURLResponseSchema)` to create a new message.
  */
-export const GetDownloadURLResponseSchema: GenMessage<GetDownloadURLResponse, {jsonType: GetDownloadURLResponseJson}> = /*@__PURE__*/
+export const GetArtifactDownloadURLResponseSchema: GenMessage<GetArtifactDownloadURLResponse, {jsonType: GetArtifactDownloadURLResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_artifacts, 11);
 
 /**
@@ -923,6 +923,8 @@ export const ArtifactService: GenService<{
    * ListArtifacts returns the workspace's artifacts, oldest first, by
    * project, environment, workload, execution and kind.
    *
+   * A page holds 50 artifacts when page_size is zero, and 200 at most.
+   *
    * @generated from rpc toshi.workspace.v1.ArtifactService.ListArtifacts
    */
   listArtifacts: {
@@ -941,16 +943,16 @@ export const ArtifactService: GenService<{
     output: typeof GetArtifactResponseSchema;
   },
   /**
-   * GetDownloadURL returns a signed URL that expires, and the artifact's
-   * data key when it is envelope encrypted. An artifact that is not
-   * complete fails with FAILED_PRECONDITION.
+   * GetArtifactDownloadURL returns a signed URL that expires, and the
+   * artifact's data key when it is envelope encrypted. An artifact that is
+   * not complete fails with FAILED_PRECONDITION.
    *
-   * @generated from rpc toshi.workspace.v1.ArtifactService.GetDownloadURL
+   * @generated from rpc toshi.workspace.v1.ArtifactService.GetArtifactDownloadURL
    */
-  getDownloadURL: {
+  getArtifactDownloadURL: {
     methodKind: "unary";
-    input: typeof GetDownloadURLRequestSchema;
-    output: typeof GetDownloadURLResponseSchema;
+    input: typeof GetArtifactDownloadURLRequestSchema;
+    output: typeof GetArtifactDownloadURLResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_artifacts, 1);

@@ -6,10 +6,10 @@ import { describe, expect, it } from "vitest";
 import type { OutputChunk } from "../src/client.js";
 import { ExitError, StreamLostError } from "../src/errors.js";
 import { executeCommand } from "../src/execute.js";
+import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import {
   ExecuteResponseSchema,
   ExecuteStartSchema,
-  WorkspaceService,
   type ExecuteRequest,
   type ExecuteResponse,
   type ExecuteStart,
@@ -19,17 +19,17 @@ const BROWSER_MESSAGE =
   'toshi: Execute needs a Node transport over HTTP/2 (@connectrpc/connect-node with httpVersion "2"); a browser cannot open a bidirectional stream';
 
 function start(requestKey = "key-1"): ExecuteStart {
-  return create(ExecuteStartSchema, { workloadId: "wl-1", requestKey });
+  return create(ExecuteStartSchema, { sandboxId: "wl-1", requestKey });
 }
 
 /** A client whose Execute handler is the given stream. */
 function clientWith(
   execute: (requests: AsyncIterable<ExecuteRequest>) => AsyncIterable<ExecuteResponse>,
-): Client<typeof WorkspaceService> {
+): Client<typeof WorkloadService> {
   const transport = createRouterTransport((router) => {
-    router.service(WorkspaceService, { execute });
+    router.service(WorkloadService, { execute });
   });
-  return createClient(WorkspaceService, transport);
+  return createClient(WorkloadService, transport);
 }
 
 /** The start message a handler was given, failing when it was not one. */

@@ -14,11 +14,16 @@ function requireMethod(service: ServiceLike, localName: string): DescMethod {
 }
 
 const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
-  [root.WorkspaceService, "toshi.workspace.v1.WorkspaceService", 27],
+  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 41],
   [root.ProjectService, "toshi.workspace.v1.ProjectService", 12],
   [root.SecretService, "toshi.workspace.v1.SecretService", 10],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
+  [root.ChannelService, "toshi.workspace.v1.ChannelService", 13],
+  [root.RecordingService, "toshi.workspace.v1.RecordingService", 5],
+  [root.VolumeService, "toshi.workspace.v1.VolumeService", 3],
+  [root.ArtifactService, "toshi.workspace.v1.ArtifactService", 3],
+  [root.ArtifactUploadService, "toshi.workspace.v1.ArtifactUploadService", 2],
 ];
 
 describe("src/index.ts", () => {
@@ -30,12 +35,20 @@ describe("src/index.ts", () => {
   }
 
   it("marks Execute as bidirectional streaming", () => {
-    expect(requireMethod(root.WorkspaceService, "execute").methodKind).toBe("bidi_streaming");
+    expect(requireMethod(root.WorkloadService, "execute").methodKind).toBe("bidi_streaming");
   });
 
   it("marks the watch RPCs as server streaming", () => {
-    for (const localName of ["watchWorkloads", "watchOutput", "watchEvents"]) {
-      expect(requireMethod(root.WorkspaceService, localName).methodKind).toBe("server_streaming");
+    for (const localName of [
+      "watchJobs",
+      "watchSandboxes",
+      "watchServices",
+      "watchOutput",
+      "watchEvents",
+      "watchTelemetry",
+      "watchGuestLog",
+    ]) {
+      expect(requireMethod(root.WorkloadService, localName).methodKind).toBe("server_streaming");
     }
   });
 });

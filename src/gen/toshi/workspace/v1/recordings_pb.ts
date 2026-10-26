@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/recordings.proto.
  */
 export const file_toshi_workspace_v1_recordings: GenFile = /*@__PURE__*/
-  fileDesc("CiN0b3NoaS93b3Jrc3BhY2UvdjEvcmVjb3JkaW5ncy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItQDCglSZWNvcmRpbmcSCgoCaWQYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgDIAEoCRITCgt3b3JrbG9hZF9pZBgEIAEoCRIxCgVzdGF0ZRgFIAEoDjIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTdGF0ZRIOCgZyZWFzb24YBiABKAkSEwoLYXJ0aWZhY3RfaWQYByABKAkSKwoIaW50ZXJ2YWwYCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDgoGZnJhbWVzGAkgASgFEg8KB2Ryb3BwZWQYCiABKAUSEQoJdHJ1bmNhdGVkGAsgASgIEjIKBnBhdXNlcxgMIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdQYXVzZRIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoEa2luZBgPIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdLaW5kIpQBCg5SZWNvcmRpbmdQYXVzZRISCgpzZXNzaW9uX2lkGAEgASgJEg0KBWFjdG9yGAIgASgJEgsKA3ZpYRgDIAEoCRIpCgVzdGFydBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoDZW5kGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIsChVMaXN0UmVjb3JkaW5nc1JlcXVlc3QSEwoLd29ya2xvYWRfaWQYASABKAkiSwoWTGlzdFJlY29yZGluZ3NSZXNwb25zZRIxCgpyZWNvcmRpbmdzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZyJAChNHZXRSZWNvcmRpbmdSZXF1ZXN0EhQKDHJlY29yZGluZ19pZBgBIAEoCRITCgt0dGxfc2Vjb25kcxgCIAEoAyKFAQoUR2V0UmVjb3JkaW5nUmVzcG9uc2USMAoJcmVjb3JkaW5nGAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZxILCgN1cmwYAiABKAkSLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi7gIKElJlY29yZGluZ1NoYXJlTGluaxIKCgJpZBgBIAEoCRIUCgxyZWNvcmRpbmdfaWQYAiABKAkSLwoEa2luZBgDIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdLaW5kEjoKBXN0YXRlGAQgASgOMisudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NoYXJlTGlua1N0YXRlEi4KCmNyZWF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCW1heF9ieXRlcxgHIAEoAxISCgp1c2VkX2J5dGVzGAggASgDEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkieQofQ3JlYXRlUmVjb3JkaW5nU2hhcmVMaW5rUmVxdWVzdBIUCgxyZWNvcmRpbmdfaWQYASABKAkSLQoKZXhwaXJlc19pbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIRCgltYXhfYnl0ZXMYAyABKAMifwogQ3JlYXRlUmVjb3JkaW5nU2hhcmVMaW5rUmVzcG9uc2USOgoKc2hhcmVfbGluaxgBIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmsSCwoDdXJsGAIgASgJEhIKCnBsYXllcl91cmwYAyABKAkiNgoeTGlzdFJlY29yZGluZ1NoYXJlTGlua3NSZXF1ZXN0EhQKDHJlY29yZGluZ19pZBgBIAEoCSJeCh9MaXN0UmVjb3JkaW5nU2hhcmVMaW5rc1Jlc3BvbnNlEjsKC3NoYXJlX2xpbmtzGAEgAygLMiYudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NoYXJlTGluayI4Ch9SZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0EhUKDXNoYXJlX2xpbmtfaWQYASABKAkiXgogUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rUmVzcG9uc2USOgoKc2hhcmVfbGluaxgBIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmsqpgEKDlJlY29yZGluZ1N0YXRlEh8KG1JFQ09SRElOR19TVEFURV9VTlNQRUNJRklFRBAAEh0KGVJFQ09SRElOR19TVEFURV9DQVBUVVJJTkcQARIZChVSRUNPUkRJTkdfU1RBVEVfUkVBRFkQAhIfChtSRUNPUkRJTkdfU1RBVEVfVU5BVkFJTEFCTEUQAxIYChRSRUNPUkRJTkdfU1RBVEVfTE9TVBAEKn0KDVJlY29yZGluZ0tpbmQSHgoaUkVDT1JESU5HX0tJTkRfVU5TUEVDSUZJRUQQABIYChRSRUNPUkRJTkdfS0lORF9TVFJJUBABEhgKFFJFQ09SRElOR19LSU5EX1ZJREVPEAISGAoUUkVDT1JESU5HX0tJTkRfVFJBQ0UQAyriAQoXUmVjb3JkaW5nU2hhcmVMaW5rU3RhdGUSKgomUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfVU5TUEVDSUZJRUQQABIlCiFSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9BQ1RJVkUQARImCiJSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9SRVZPS0VEEAISJgoiUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfRVhQSVJFRBADEiQKIFJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX0VOREVEEAQy8wQKEFJlY29yZGluZ1NlcnZpY2USZwoOTGlzdFJlY29yZGluZ3MSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlY29yZGluZ3NSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdzUmVzcG9uc2USYQoMR2V0UmVjb3JkaW5nEicudG9zaGkud29ya3NwYWNlLnYxLkdldFJlY29yZGluZ1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuR2V0UmVjb3JkaW5nUmVzcG9uc2UShQEKGENyZWF0ZVJlY29yZGluZ1NoYXJlTGluaxIzLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1Jlc3BvbnNlEoIBChdMaXN0UmVjb3JkaW5nU2hhcmVMaW5rcxIyLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVjb3JkaW5nU2hhcmVMaW5rc1JlcXVlc3QaMy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlY29yZGluZ1NoYXJlTGlua3NSZXNwb25zZRKFAQoYUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rEjMudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rUmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
+  fileDesc("CiN0b3NoaS93b3Jrc3BhY2UvdjEvcmVjb3JkaW5ncy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItQDCglSZWNvcmRpbmcSCgoCaWQYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgDIAEoCRITCgt3b3JrbG9hZF9pZBgEIAEoCRIxCgVzdGF0ZRgFIAEoDjIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTdGF0ZRIOCgZyZWFzb24YBiABKAkSEwoLYXJ0aWZhY3RfaWQYByABKAkSKwoIaW50ZXJ2YWwYCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDgoGZnJhbWVzGAkgASgFEg8KB2Ryb3BwZWQYCiABKAUSEQoJdHJ1bmNhdGVkGAsgASgIEjIKBnBhdXNlcxgMIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdQYXVzZRIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoEa2luZBgPIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdLaW5kIpQBCg5SZWNvcmRpbmdQYXVzZRISCgpzZXNzaW9uX2lkGAEgASgJEg0KBWFjdG9yGAIgASgJEgsKA3ZpYRgDIAEoCRIpCgVzdGFydBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoDZW5kGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJTChVMaXN0UmVjb3JkaW5nc1JlcXVlc3QSEwoLd29ya2xvYWRfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiZAoWTGlzdFJlY29yZGluZ3NSZXNwb25zZRIxCgpyZWNvcmRpbmdzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiQAoTR2V0UmVjb3JkaW5nUmVxdWVzdBIUCgxyZWNvcmRpbmdfaWQYASABKAkSEwoLdHRsX3NlY29uZHMYAiABKAMihQEKFEdldFJlY29yZGluZ1Jlc3BvbnNlEjAKCXJlY29yZGluZxgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmcSCwoDdXJsGAIgASgJEi4KCmV4cGlyZXNfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIu4CChJSZWNvcmRpbmdTaGFyZUxpbmsSCgoCaWQYASABKAkSFAoMcmVjb3JkaW5nX2lkGAIgASgJEi8KBGtpbmQYAyABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nS2luZBI6CgVzdGF0ZRgEIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmtTdGF0ZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCgltYXhfYnl0ZXMYByABKAMSEgoKdXNlZF9ieXRlcxgIIAEoAxIuCgpyZXZva2VkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpjcmVhdGVkX2J5GAogASgJInkKH0NyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QSFAoMcmVjb3JkaW5nX2lkGAEgASgJEi0KCmV4cGlyZXNfaW4YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEQoJbWF4X2J5dGVzGAMgASgDIn8KIENyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1Jlc3BvbnNlEjoKCnNoYXJlX2xpbmsYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nU2hhcmVMaW5rEgsKA3VybBgCIAEoCRISCgpwbGF5ZXJfdXJsGAMgASgJIl0KHkxpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVxdWVzdBIUCgxyZWNvcmRpbmdfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkidwofTGlzdFJlY29yZGluZ1NoYXJlTGlua3NSZXNwb25zZRI7CgtzaGFyZV9saW5rcxgBIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjgKH1Jldm9rZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QSFQoNc2hhcmVfbGlua19pZBgBIAEoCSJeCiBSZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZRI6CgpzaGFyZV9saW5rGAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NoYXJlTGluayqmAQoOUmVjb3JkaW5nU3RhdGUSHwobUkVDT1JESU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASHQoZUkVDT1JESU5HX1NUQVRFX0NBUFRVUklORxABEhkKFVJFQ09SRElOR19TVEFURV9SRUFEWRACEh8KG1JFQ09SRElOR19TVEFURV9VTkFWQUlMQUJMRRADEhgKFFJFQ09SRElOR19TVEFURV9MT1NUEAQqfQoNUmVjb3JkaW5nS2luZBIeChpSRUNPUkRJTkdfS0lORF9VTlNQRUNJRklFRBAAEhgKFFJFQ09SRElOR19LSU5EX1NUUklQEAESGAoUUkVDT1JESU5HX0tJTkRfVklERU8QAhIYChRSRUNPUkRJTkdfS0lORF9UUkFDRRADKuIBChdSZWNvcmRpbmdTaGFyZUxpbmtTdGF0ZRIqCiZSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9VTlNQRUNJRklFRBAAEiUKIVJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX0FDVElWRRABEiYKIlJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX1JFVk9LRUQQAhImCiJSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9FWFBJUkVEEAMSJAogUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfRU5ERUQQBDLzBAoQUmVjb3JkaW5nU2VydmljZRJnCg5MaXN0UmVjb3JkaW5ncxIpLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVjb3JkaW5nc1JlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlY29yZGluZ3NSZXNwb25zZRJhCgxHZXRSZWNvcmRpbmcSJy50b3NoaS53b3Jrc3BhY2UudjEuR2V0UmVjb3JkaW5nUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5HZXRSZWNvcmRpbmdSZXNwb25zZRKFAQoYQ3JlYXRlUmVjb3JkaW5nU2hhcmVMaW5rEjMudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUmVjb3JkaW5nU2hhcmVMaW5rUmVzcG9uc2USggEKF0xpc3RSZWNvcmRpbmdTaGFyZUxpbmtzEjIudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVxdWVzdBozLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVjb3JkaW5nU2hhcmVMaW5rc1Jlc3BvbnNlEoUBChhSZXZva2VSZWNvcmRpbmdTaGFyZUxpbmsSMy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rUmVxdWVzdBo0LnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZUItWitnaXRodWIuY29tL3Rvc2hpY2xvdWQvdG9zaGktYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
 
 /**
  * Recording is one recording of a run attempt: its screenshot strip or
@@ -320,6 +320,20 @@ export type ListRecordingsRequest = Message<"toshi.workspace.v1.ListRecordingsRe
    * @generated from field: string workload_id = 1;
    */
   workloadId: string;
+
+  /**
+   * The most recordings in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -330,6 +344,20 @@ export type ListRecordingsRequestJson = {
    * @generated from field: string workload_id = 1;
    */
   workloadId?: string;
+
+  /**
+   * The most recordings in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -347,6 +375,13 @@ export type ListRecordingsResponse = Message<"toshi.workspace.v1.ListRecordingsR
    * @generated from field: repeated toshi.workspace.v1.Recording recordings = 1;
    */
   recordings: Recording[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -357,6 +392,13 @@ export type ListRecordingsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.Recording recordings = 1;
    */
   recordings?: RecordingJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -743,6 +785,20 @@ export type ListRecordingShareLinksRequest = Message<"toshi.workspace.v1.ListRec
    * @generated from field: string recording_id = 1;
    */
   recordingId: string;
+
+  /**
+   * The most share links in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -753,6 +809,20 @@ export type ListRecordingShareLinksRequestJson = {
    * @generated from field: string recording_id = 1;
    */
   recordingId?: string;
+
+  /**
+   * The most share links in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -770,6 +840,13 @@ export type ListRecordingShareLinksResponse = Message<"toshi.workspace.v1.ListRe
    * @generated from field: repeated toshi.workspace.v1.RecordingShareLink share_links = 1;
    */
   shareLinks: RecordingShareLink[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -780,6 +857,13 @@ export type ListRecordingShareLinksResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.RecordingShareLink share_links = 1;
    */
   shareLinks?: RecordingShareLinkJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -1015,6 +1099,8 @@ export const RecordingService: GenService<{
    * its test framework's recording, so an attempt may have several. Never
    * a URL.
    *
+   * A page holds 100 recordings when page_size is zero, and 1000 at most.
+   *
    * @generated from rpc toshi.workspace.v1.RecordingService.ListRecordings
    */
   listRecordings: {
@@ -1052,6 +1138,8 @@ export const RecordingService: GenService<{
   /**
    * ListRecordingShareLinks returns a recording's share links, oldest
    * first, without the links themselves.
+   *
+   * A page holds 100 share links when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.RecordingService.ListRecordingShareLinks
    */

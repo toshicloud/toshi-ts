@@ -37,7 +37,7 @@ const toshi = createToshiClient({
   project: "default",
 });
 
-const { projects } = await toshi.projects.listProjects({});
+const { projects } = await toshi.project.listProjects({});
 ```
 
 In a browser, with `@connectrpc/connect-web`:
@@ -70,6 +70,25 @@ server and any CA come from the caller.
   5, 200 ms and 10 s, with full jitter. `retry: false` turns off retries
   and watch reconnects.
 
+### The client's shape
+
+The client has one field per Workspace API service: `project`, `secret`,
+`webhook`, `display`, `channel`, `recording`, `volume`, `artifact` and
+`artifactUpload`, each holding that service's generated client.
+`workload` holds `WorkloadService`'s calls, grouped by the type they
+name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
+method for each call (`create`, `get`, `list`, `update`, `delete`,
+`wait`, `watch`, and `cancel` on a job, `execute` on a sandbox, `start`,
+`stop`, `setMode`, `listRuns`, `wake`, `hold` and `release` on a service). The calls that
+span the three types sit on `workload` itself: `watchEvents` and
+`waitOperation`. `run` sits at the top of the client, as `toshi run`
+sits at the top of the CLI.
+
+```ts
+const { jobs } = await toshi.workload.jobs.list({ pageSize: 10 });
+const job = await toshi.workload.jobs.get({ id: jobs[0].id });
+```
+
 ### Retries
 
 The client retries a read, and a write that carries a request key, when
@@ -85,22 +104,29 @@ from a server error.
 
 ### Waiting and watching
 
-- `waitWorkload(req)` and `waitOperation(req)` ask again until the
-  workload reaches the state or the operation is done.
-- `watchWorkloads(req)`, `watchEvents(req)` and `watchOutput(req)`
-  resolve to a watch you read with `for await`. A watch opens its stream
-  when you start reading and reconnects after a connection failure from
-  where it stopped: `cursor` for workloads and events, `offsets` (bytes,
-  as `bigint`) for output. With no cursor, `watchWorkloads` lists the
-  workloads first, and `snapshot` holds them once its promise resolves;
-  `watchEvents` yields the past events page by page before the live ones.
-  `close()` or leaving the loop ends the stream. The output watch ends at
-  the output's end.
+- `workload.jobs.wait(req)`, `workload.sandboxes.wait(req)` and
+  `workload.services.wait(req)` ask again until the workload reaches the
+  state; `workload.waitOperation(req)` asks until the operation is done.
+- `workload.jobs.watch(req)`, `workload.sandboxes.watch(req)`,
+  `workload.services.watch(req)`, `workload.watchEvents(req)` and
+  `workload.jobs.watchOutput(req)` resolve to a watch you read with
+  `for await`. A watch opens its stream when you start reading and
+  reconnects after a connection failure from where it stopped: `cursor`
+  for the typed watches and events, `offsets` (bytes, as `bigint`) for
+  output. With no cursor, a typed watch lists that type first, and
+  `snapshot` holds them once its promise resolves; `watchEvents`
+  yields the past events page by page before the live ones. `close()` or
+  leaving the loop ends the stream. The output watch ends at the output's
+  end.
+- Every watch yields the stream's responses: a job watch yields
+  `WatchJobsResponse` (`job`, `cursor`, `type`), an event watch yields
+  `WatchEventsResponse` (`event`), and the output watch yields
+  `WatchOutputResponse` (`stdout`, `stderr` or `end`).
 
 ```ts
-const watch = await toshi.watchEvents({ workloadId: id });
-for await (const event of watch) {
-  console.log(event.name);
+const watch = await toshi.workload.watchEvents({ workloadId: id });
+for await (const { event } of watch) {
+  console.log(event?.name);
 }
 // watch.cursor resumes a later watch after the last event read.
 ```
@@ -109,8 +135,8 @@ Every helper takes `{ signal }`, an `AbortSignal` that ends it.
 
 ### Running a command
 
-`execute(start)` runs a command and resolves once the server has started
-it. The process is one stream of output chunks, `{ stream: "stdout" |
+`workload.sandboxes.execute(start)` runs a command in a running sandbox
+and resolves once the server has started it. The process is one stream of output chunks, `{ stream: "stdout" |
 "stderr", data: Uint8Array }`. `write` sends standard input in frames of
 at most 64 KiB and resolves once the stream has taken the last one; await
 it before the next `write`, which is refused while one is pending, so the
@@ -119,7 +145,10 @@ after a pending write, and a later `write` is refused. `wait` settles when
 the command ends.
 
 ```ts
-const proc = await toshi.execute({ workloadId: id, command: { argv: ["cat"] } });
+const proc = await toshi.workload.sandboxes.execute({
+  sandboxId: id,
+  command: { argv: ["cat"] },
+});
 await proc.write("hello\n");
 await proc.closeStdin();
 for await (const chunk of proc) {
@@ -140,6 +169,26 @@ Execute needs a bidirectional stream: `@connectrpc/connect-node` with
 `httpVersion: "2"`. In a browser, `execute` rejects at once and makes no
 call. Over a transport without HTTP/2, the call fails with the
 transport's or the server's error.
+
+### Running a job
+
+`run(req)` creates a job with a `CreateJobRequest` and resolves to the
+job and its output, which is what `toshi run` does: `CreateJob`, then
+`WatchOutput`. It yields output chunks like an execution, and `wait()`
+resolves when the job exits 0 and rejects with `JobExitError` otherwise.
+
+```ts
+const run = await toshi.run({
+  spec: { command: { argv: ["./test.sh"] } },
+});
+for await (const chunk of run) {
+  process[chunk.stream].write(chunk.data);
+}
+await run.wait(); // rejects with JobExitError on a non-zero exit
+```
+
+Stopping the loop stops only the output stream: the job keeps running,
+and `workload.jobs.cancel` ends it.
 
 ## Generated code
 

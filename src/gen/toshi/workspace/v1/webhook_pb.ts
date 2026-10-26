@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/webhook.proto.
  */
 export const file_toshi_workspace_v1_webhook: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvd2ViaG9vay5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIvsBCg9XZWJob29rRW5kcG9pbnQSCgoCaWQYASABKAkSCwoDdXJsGAIgASgJEg4KBmV2ZW50cxgDIAMoCRIPCgdlbmFibGVkGAQgASgIEg4KBmN1cnNvchgFIAEoCRI+ChpwcmV2aW91c19zZWNyZXRfZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiwwIKD1dlYmhvb2tEZWxpdmVyeRIQCghldmVudF9pZBgBIAEoCRIOCgZjdXJzb3IYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSNwoFc3RhdGUYBCABKA4yKC50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0RlbGl2ZXJ5U3RhdGUSDQoFdHJpZXMYBSABKAUSLwoLbmV4dF90cnlfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhMKC2xhc3Rfc3RhdHVzGAcgASgFEhIKCmxhc3RfZXJyb3IYCCABKAkSKgoGZHVlX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdkb25lX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJiChxDcmVhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgsKA3VybBgBIAEoCRIOCgZldmVudHMYAiADKAkSEAoIZGlzYWJsZWQYAyABKAgSEwoLcmVxdWVzdF9rZXkYBCABKAkiZgodQ3JlYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Eg4KBnNlY3JldBgCIAEoCSInChlHZXRXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJIlMKGkdldFdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEjUKCGVuZHBvaW50GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludCIdChtMaXN0V2ViaG9va0VuZHBvaW50c1JlcXVlc3QiVgocTGlzdFdlYmhvb2tFbmRwb2ludHNSZXNwb25zZRI2CgllbmRwb2ludHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50IqcBChxVcGRhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJEjUKCGVuZHBvaW50GAIgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludBIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEwoLcmVxdWVzdF9rZXkYBCABKAkiVgodVXBkYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Ij8KHERlbGV0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiHwodRGVsZXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2UiRQoiUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0UmVxdWVzdBIKCgJpZBgBIAEoCRITCgtyZXF1ZXN0X2tleRgCIAEoCSJsCiNSb3RhdGVXZWJob29rRW5kcG9pbnRTZWNyZXRSZXNwb25zZRI1CghlbmRwb2ludBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rRW5kcG9pbnQSDgoGc2VjcmV0GAIgASgJIlYKHExpc3RXZWJob29rRGVsaXZlcmllc1JlcXVlc3QSEwoLZW5kcG9pbnRfaWQYASABKAkSDgoGY3Vyc29yGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJoCh1MaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXNwb25zZRI3CgpkZWxpdmVyaWVzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tEZWxpdmVyeRIOCgZjdXJzb3IYAiABKAkiVgoaUmVwbGF5V2ViaG9va0V2ZW50c1JlcXVlc3QSEwoLZW5kcG9pbnRfaWQYASABKAkSDgoGY3Vyc29yGAIgASgJEhMKC3JlcXVlc3Rfa2V5GAMgASgJIk0KG1JlcGxheVdlYmhvb2tFdmVudHNSZXNwb25zZRIQCghyZXBsYXllZBgBIAEoBRIOCgZjdXJzb3IYAiABKAkSDAoEbW9yZRgDIAEoCCqpAQoUV2ViaG9va0RlbGl2ZXJ5U3RhdGUSJgoiV0VCSE9PS19ERUxJVkVSWV9TVEFURV9VTlNQRUNJRklFRBAAEiIKHldFQkhPT0tfREVMSVZFUllfU1RBVEVfUEVORElORxABEiQKIFdFQkhPT0tfREVMSVZFUllfU1RBVEVfREVMSVZFUkVEEAISHwobV0VCSE9PS19ERUxJVkVSWV9TVEFURV9ERUFEEAMygQgKDldlYmhvb2tTZXJ2aWNlEnwKFUNyZWF0ZVdlYmhvb2tFbmRwb2ludBIwLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEnMKEkdldFdlYmhvb2tFbmRwb2ludBItLnRvc2hpLndvcmtzcGFjZS52MS5HZXRXZWJob29rRW5kcG9pbnRSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkdldFdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEnkKFExpc3RXZWJob29rRW5kcG9pbnRzEi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rRW5kcG9pbnRzUmVxdWVzdBowLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0VuZHBvaW50c1Jlc3BvbnNlEnwKFVVwZGF0ZVdlYmhvb2tFbmRwb2ludBIwLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEnwKFURlbGV0ZVdlYmhvb2tFbmRwb2ludBIwLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEo4BChtSb3RhdGVXZWJob29rRW5kcG9pbnRTZWNyZXQSNi50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0UmVxdWVzdBo3LnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVXZWJob29rRW5kcG9pbnRTZWNyZXRSZXNwb25zZRJ8ChVMaXN0V2ViaG9va0RlbGl2ZXJpZXMSMC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFdlYmhvb2tEZWxpdmVyaWVzUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXNwb25zZRJ2ChNSZXBsYXlXZWJob29rRXZlbnRzEi4udG9zaGkud29ya3NwYWNlLnYxLlJlcGxheVdlYmhvb2tFdmVudHNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLlJlcGxheVdlYmhvb2tFdmVudHNSZXNwb25zZUItWitnaXRodWIuY29tL3Rvc2hpY2xvdWQvdG9zaGktYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvd2ViaG9vay5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIvsBCg9XZWJob29rRW5kcG9pbnQSCgoCaWQYASABKAkSCwoDdXJsGAIgASgJEg4KBmV2ZW50cxgDIAMoCRIPCgdlbmFibGVkGAQgASgIEg4KBmN1cnNvchgFIAEoCRI+ChpwcmV2aW91c19zZWNyZXRfZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiwwIKD1dlYmhvb2tEZWxpdmVyeRIQCghldmVudF9pZBgBIAEoCRIOCgZjdXJzb3IYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSNwoFc3RhdGUYBCABKA4yKC50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0RlbGl2ZXJ5U3RhdGUSDQoFdHJpZXMYBSABKAUSLwoLbmV4dF90cnlfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhMKC2xhc3Rfc3RhdHVzGAcgASgFEhIKCmxhc3RfZXJyb3IYCCABKAkSKgoGZHVlX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdkb25lX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJiChxDcmVhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgsKA3VybBgBIAEoCRIOCgZldmVudHMYAiADKAkSEAoIZGlzYWJsZWQYAyABKAgSEwoLcmVxdWVzdF9rZXkYBCABKAkiZgodQ3JlYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Eg4KBnNlY3JldBgCIAEoCSInChlHZXRXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJIlMKGkdldFdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEjUKCGVuZHBvaW50GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludCJEChtMaXN0V2ViaG9va0VuZHBvaW50c1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkibwocTGlzdFdlYmhvb2tFbmRwb2ludHNSZXNwb25zZRI2CgllbmRwb2ludHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKnAQocVXBkYXRlV2ViaG9va0VuZHBvaW50UmVxdWVzdBIKCgJpZBgBIAEoCRI1CghlbmRwb2ludBgCIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rRW5kcG9pbnQSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhMKC3JlcXVlc3Rfa2V5GAQgASgJIlYKHVVwZGF0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEjUKCGVuZHBvaW50GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludCI/ChxEZWxldGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhMKC3JlcXVlc3Rfa2V5GAIgASgJIh8KHURlbGV0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlIkUKIlJvdGF0ZVdlYmhvb2tFbmRwb2ludFNlY3JldFJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkibAojUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Eg4KBnNlY3JldBgCIAEoCSJaChxMaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXF1ZXN0EhMKC2VuZHBvaW50X2lkGAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFInEKHUxpc3RXZWJob29rRGVsaXZlcmllc1Jlc3BvbnNlEjcKCmRlbGl2ZXJpZXMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0RlbGl2ZXJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJWChpSZXBsYXlXZWJob29rRXZlbnRzUmVxdWVzdBITCgtlbmRwb2ludF9pZBgBIAEoCRIOCgZjdXJzb3IYAiABKAkSEwoLcmVxdWVzdF9rZXkYAyABKAkiTQobUmVwbGF5V2ViaG9va0V2ZW50c1Jlc3BvbnNlEhAKCHJlcGxheWVkGAEgASgFEg4KBmN1cnNvchgCIAEoCRIMCgRtb3JlGAMgASgIKqkBChRXZWJob29rRGVsaXZlcnlTdGF0ZRImCiJXRUJIT09LX0RFTElWRVJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASIgoeV0VCSE9PS19ERUxJVkVSWV9TVEFURV9QRU5ESU5HEAESJAogV0VCSE9PS19ERUxJVkVSWV9TVEFURV9ERUxJVkVSRUQQAhIfChtXRUJIT09LX0RFTElWRVJZX1NUQVRFX0RFQUQQAzKBCAoOV2ViaG9va1NlcnZpY2USfAoVQ3JlYXRlV2ViaG9va0VuZHBvaW50EjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2UScwoSR2V0V2ViaG9va0VuZHBvaW50Ei0udG9zaGkud29ya3NwYWNlLnYxLkdldFdlYmhvb2tFbmRwb2ludFJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuR2V0V2ViaG9va0VuZHBvaW50UmVzcG9uc2USeQoUTGlzdFdlYmhvb2tFbmRwb2ludHMSLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFdlYmhvb2tFbmRwb2ludHNSZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rRW5kcG9pbnRzUmVzcG9uc2USfAoVVXBkYXRlV2ViaG9va0VuZHBvaW50EjAudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USfAoVRGVsZXRlV2ViaG9va0VuZHBvaW50EjAudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USjgEKG1JvdGF0ZVdlYmhvb2tFbmRwb2ludFNlY3JldBI2LnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVXZWJob29rRW5kcG9pbnRTZWNyZXRSZXF1ZXN0GjcudG9zaGkud29ya3NwYWNlLnYxLlJvdGF0ZVdlYmhvb2tFbmRwb2ludFNlY3JldFJlc3BvbnNlEnwKFUxpc3RXZWJob29rRGVsaXZlcmllcxIwLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rRGVsaXZlcmllc1Jlc3BvbnNlEnYKE1JlcGxheVdlYmhvb2tFdmVudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5V2ViaG9va0V2ZW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5V2ViaG9va0V2ZW50c1Jlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
 
 /**
  * @generated from message toshi.workspace.v1.WebhookEndpoint
@@ -444,12 +444,38 @@ export const GetWebhookEndpointResponseSchema: GenMessage<GetWebhookEndpointResp
  * @generated from message toshi.workspace.v1.ListWebhookEndpointsRequest
  */
 export type ListWebhookEndpointsRequest = Message<"toshi.workspace.v1.ListWebhookEndpointsRequest"> & {
+  /**
+   * The most endpoints in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
 };
 
 /**
  * @generated from message toshi.workspace.v1.ListWebhookEndpointsRequest
  */
 export type ListWebhookEndpointsRequestJson = {
+  /**
+   * The most endpoints in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -467,6 +493,13 @@ export type ListWebhookEndpointsResponse = Message<"toshi.workspace.v1.ListWebho
    * @generated from field: repeated toshi.workspace.v1.WebhookEndpoint endpoints = 1;
    */
   endpoints: WebhookEndpoint[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -477,6 +510,13 @@ export type ListWebhookEndpointsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.WebhookEndpoint endpoints = 1;
    */
   endpoints?: WebhookEndpointJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -722,11 +762,13 @@ export type ListWebhookDeliveriesRequest = Message<"toshi.workspace.v1.ListWebho
   endpointId: string;
 
   /**
-   * Deliveries of events after this cursor; empty starts at the oldest.
+   * From an earlier response's next_page_token, or a delivery's cursor:
+   * the deliveries of the events after that position. Empty starts at the
+   * oldest.
    *
-   * @generated from field: string cursor = 2;
+   * @generated from field: string page_token = 2;
    */
-  cursor: string;
+  pageToken: string;
 
   /**
    * The most deliveries in one page; zero lets the server choose.
@@ -746,11 +788,13 @@ export type ListWebhookDeliveriesRequestJson = {
   endpointId?: string;
 
   /**
-   * Deliveries of events after this cursor; empty starts at the oldest.
+   * From an earlier response's next_page_token, or a delivery's cursor:
+   * the deliveries of the events after that position. Empty starts at the
+   * oldest.
    *
-   * @generated from field: string cursor = 2;
+   * @generated from field: string page_token = 2;
    */
-  cursor?: string;
+  pageToken?: string;
 
   /**
    * The most deliveries in one page; zero lets the server choose.
@@ -777,12 +821,11 @@ export type ListWebhookDeliveriesResponse = Message<"toshi.workspace.v1.ListWebh
   deliveries: WebhookDelivery[];
 
   /**
-   * The cursor of the last delivery returned, or the cursor asked for when
-   * there were none: pass it to the next call.
+   * Empty on the last page.
    *
-   * @generated from field: string cursor = 2;
+   * @generated from field: string next_page_token = 2;
    */
-  cursor: string;
+  nextPageToken: string;
 };
 
 /**
@@ -795,12 +838,11 @@ export type ListWebhookDeliveriesResponseJson = {
   deliveries?: WebhookDeliveryJson[];
 
   /**
-   * The cursor of the last delivery returned, or the cursor asked for when
-   * there were none: pass it to the next call.
+   * Empty on the last page.
    *
-   * @generated from field: string cursor = 2;
+   * @generated from field: string next_page_token = 2;
    */
-  cursor?: string;
+  nextPageToken?: string;
 };
 
 /**
@@ -969,12 +1011,12 @@ export const WebhookDeliveryStateSchema: GenEnum<WebhookDeliveryState, WebhookDe
 /**
  * WebhookService manages a workspace's webhook endpoints: the URLs its
  * events are POSTed to, signed per Standard Webhooks. The caller's credential
- * names the workspace, as for WorkspaceService. An endpoint belongs to the
+ * names the workspace, as for WorkloadService. An endpoint belongs to the
  * workspace, not to a project or environment, and is owed the events of all
  * of them; no request names either. An endpoint of another workspace is
  * NOT_FOUND.
  *
- * Every mutating call takes a request_key, with WorkspaceService's rule: a
+ * Every mutating call takes a request_key, with WorkloadService's rule: a
  * retry with the same key and the same payload returns what the first
  * call returned and changes nothing; the same key with a different payload
  * fails with FAILED_PRECONDITION; an empty key means no retry protection.
@@ -1014,6 +1056,8 @@ export const WebhookService: GenService<{
   },
   /**
    * ListWebhookEndpoints returns the workspace's endpoints in ID order.
+   *
+   * A page holds 100 endpoints when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.WebhookService.ListWebhookEndpoints
    */
@@ -1065,6 +1109,8 @@ export const WebhookService: GenService<{
   /**
    * ListWebhookDeliveries returns an endpoint's deliveries in event order,
    * a page at a time.
+   *
+   * A page holds 50 deliveries when page_size is zero, and 500 at most.
    *
    * @generated from rpc toshi.workspace.v1.WebhookService.ListWebhookDeliveries
    */

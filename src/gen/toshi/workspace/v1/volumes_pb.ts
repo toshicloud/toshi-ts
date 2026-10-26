@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/volumes.proto.
  */
 export const file_toshi_workspace_v1_volumes: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItwBCgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCSIlChJMaXN0Vm9sdW1lc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCSJCChNMaXN0Vm9sdW1lc1Jlc3BvbnNlEisKB3ZvbHVtZXMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lIk4KE0F0dGFjaFZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkiQgoUQXR0YWNoVm9sdW1lUmVzcG9uc2USKgoGdm9sdW1lGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZSI5ChNEZXRhY2hWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJIkIKFERldGFjaFZvbHVtZVJlc3BvbnNlEioKBnZvbHVtZRgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUqhwEKClZvbHVtZU1vZGUSGwoXVk9MVU1FX01PREVfVU5TUEVDSUZJRUQQABIVChFWT0xVTUVfTU9ERV9DQUNIRRABEhQKEFZPTFVNRV9NT0RFX1NFRUQQAhIVChFWT0xVTUVfTU9ERV9TVEFURRADEhgKFFZPTFVNRV9NT0RFX0FSVElGQUNUEAQytQIKDVZvbHVtZVNlcnZpY2USXgoLTGlzdFZvbHVtZXMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFZvbHVtZXNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVzUmVzcG9uc2USYQoMQXR0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQXR0YWNoVm9sdW1lUmVzcG9uc2USYQoMRGV0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGV0YWNoVm9sdW1lUmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItwBCgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCSJMChJMaXN0Vm9sdW1lc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJbChNMaXN0Vm9sdW1lc1Jlc3BvbnNlEisKB3ZvbHVtZXMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJOChNBdHRhY2hWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEhMKC3dvcmtsb2FkX2lkGAMgASgJIkIKFEF0dGFjaFZvbHVtZVJlc3BvbnNlEioKBnZvbHVtZRgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUiOQoTRGV0YWNoVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXZvbHVtZV9pZBgCIAEoCSJCChREZXRhY2hWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lKocBCgpWb2x1bWVNb2RlEhsKF1ZPTFVNRV9NT0RFX1VOU1BFQ0lGSUVEEAASFQoRVk9MVU1FX01PREVfQ0FDSEUQARIUChBWT0xVTUVfTU9ERV9TRUVEEAISFQoRVk9MVU1FX01PREVfU1RBVEUQAxIYChRWT0xVTUVfTU9ERV9BUlRJRkFDVBAEMrUCCg1Wb2x1bWVTZXJ2aWNlEl4KC0xpc3RWb2x1bWVzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lc1Jlc3BvbnNlEmEKDEF0dGFjaFZvbHVtZRInLnRvc2hpLndvcmtzcGFjZS52MS5BdHRhY2hWb2x1bWVSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlc3BvbnNlEmEKDERldGFjaFZvbHVtZRInLnRvc2hpLndvcmtzcGFjZS52MS5EZXRhY2hWb2x1bWVSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp]);
 
 /**
  * Volume is a disk of a project.
@@ -145,6 +145,20 @@ export type ListVolumesRequest = Message<"toshi.workspace.v1.ListVolumesRequest"
    * @generated from field: string project = 1;
    */
   project: string;
+
+  /**
+   * The most volumes in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -155,6 +169,20 @@ export type ListVolumesRequestJson = {
    * @generated from field: string project = 1;
    */
   project?: string;
+
+  /**
+   * The most volumes in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -172,6 +200,13 @@ export type ListVolumesResponse = Message<"toshi.workspace.v1.ListVolumesRespons
    * @generated from field: repeated toshi.workspace.v1.Volume volumes = 1;
    */
   volumes: Volume[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -182,6 +217,13 @@ export type ListVolumesResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.Volume volumes = 1;
    */
   volumes?: VolumeJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -394,7 +436,7 @@ export const VolumeModeSchema: GenEnum<VolumeMode, VolumeModeJson> = /*@__PURE__
  * a time. A state volume is mounted by one VM at a time, whichever run of
  * its workload holds it.
  *
- * The caller's credential names the workspace, as for WorkspaceService.
+ * The caller's credential names the workspace, as for WorkloadService.
  * Every request names a project; an empty one is the default project. A
  * project the workspace does not have is NOT_FOUND, and so is a volume of
  * another project or workspace and a workload of another workspace. With a
@@ -412,6 +454,8 @@ export const VolumeService: GenService<{
   /**
    * ListVolumes returns the project's volumes that are not deleted,
    * ordered by name.
+   *
+   * A page holds 100 volumes when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.VolumeService.ListVolumes
    */

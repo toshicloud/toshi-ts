@@ -1,4 +1,4 @@
-import type { ExecutionExit } from "./gen/toshi/workspace/v1/workspace_pb.js";
+import type { ExecutionExit, OutputEnd } from "./gen/toshi/workspace/v1/workspace_pb.js";
 
 /** A command that ended non-zero, or was cancelled before it had a status (errors.go:9-26). */
 export class ExitError extends Error {
@@ -13,6 +13,31 @@ export class ExitError extends Error {
     this.executionId = executionId;
     this.exit = exit;
   }
+}
+
+/** A job `run` started that did not exit 0. */
+export class JobExitError extends Error {
+  /** The job's id. */
+  readonly jobId: string;
+  /** The job's end-of-output message. */
+  readonly end: OutputEnd;
+
+  constructor(jobId: string, end: OutputEnd) {
+    super(jobMessage(jobId, end));
+    this.name = "JobExitError";
+    this.jobId = jobId;
+    this.end = end;
+  }
+}
+
+function jobMessage(jobId: string, end: OutputEnd): string {
+  if (end.cancelled) {
+    return `toshi: job ${jobId} was cancelled`;
+  }
+  if (end.exitCode === undefined) {
+    return `toshi: job ${jobId} ended without an exit status`;
+  }
+  return `toshi: job ${jobId} exited with status ${end.exitCode}`;
 }
 
 function exitMessage(executionId: string, exit: ExecutionExit): string {

@@ -10,11 +10,11 @@ import { isStreamLoss } from "./retry.js";
 import {
   ExecuteRequestSchema,
   ExecuteStartSchema,
-  WorkspaceService,
   type ExecuteResponse,
   type ExecuteStart,
   type ExecutionExit,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
+import type { WorkloadService } from "./gen/toshi/workspace/v1/workloads_pb.js";
 
 // The largest standard-input frame Execute sends (execute.go:14-16).
 const STDIN_CHUNK = 64 << 10;
@@ -24,7 +24,7 @@ const BROWSER_MESSAGE =
 
 /** Starts a command and returns its process; the only export of this module. */
 export async function executeCommand(
-  workspace: Client<typeof WorkspaceService>,
+  service: Client<typeof WorkloadService>,
   start: MessageInitShape<typeof ExecuteStartSchema> | undefined,
   opts?: CallOptions,
 ): Promise<Process> {
@@ -65,7 +65,7 @@ export async function executeCommand(
     signal?.removeEventListener("abort", onAbort);
   };
 
-  const responses = workspace.execute(input, { signal: abort.signal });
+  const responses = service.execute(input, { signal: abort.signal });
   const responseIterator = responses[Symbol.asyncIterator]();
   // Send the start and read the answer together: the request stream only moves
   // while the call is running. The created message is the one the interceptors
