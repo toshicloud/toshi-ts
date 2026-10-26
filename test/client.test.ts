@@ -243,6 +243,91 @@ describe("createToshiClient", () => {
     expect(new Set(keys)).toEqual(new Set([keys[0]]));
   });
 
+  it("wins over the token option and is asked for each attempt of a retried call", async () => {
+    let asked = 0;
+    const sent: string[] = [];
+    const harness = clientWith((router) => {
+      router.service(WorkloadService, {
+        getJob(_req, ctx) {
+          sent.push(ctx.requestHeader.get("authorization") ?? "");
+          if (sent.length === 1) {
+            throw new ConnectError("down", Code.Unavailable);
+          }
+          return {};
+        },
+      });
+    }, {
+      token: "option-token",
+      tokenSource: () => {
+        asked += 1;
+        return Promise.resolve(`token-${asked}`);
+      },
+      retry: { maxAttempts: 2, initialBackoffMs: 0, maxBackoffMs: 0 },
+    });
+
+    await harness.client.workload.jobs.get({ id: "w" });
+
+    expect(asked).toBe(2);
+    expect(sent).toEqual(["Bearer token-1", "Bearer token-2"]);
+  });
+
+  it("ends the call as Unauthenticated with the source's error, and does not retry it", async () => {
+    const sourceError = new Error("vault sealed");
+    let asked = 0;
+    let reached = 0;
+    const harness = clientWith((router) => {
+      router.service(WorkloadService, {
+        getJob() {
+          reached += 1;
+          return {};
+        },
+      });
+    }, {
+      tokenSource: () => {
+        asked += 1;
+        throw sourceError;
+      },
+      retry: { maxAttempts: 3, initialBackoffMs: 0, maxBackoffMs: 0 },
+    });
+
+    const err: unknown = await harness.client.workload.jobs.get({ id: "w" }).catch((reason: unknown) => reason);
+
+    expect(err).toBeInstanceOf(ConnectError);
+    const connectError = err as ConnectError;
+    expect(connectError.code).toBe(Code.Unauthenticated);
+    expect(connectError.cause).toBe(sourceError);
+    expect(connectError.message).toContain("toshi: token source: vault sealed");
+    expect(asked).toBe(1);
+    expect(reached).toBe(0);
+  });
+
+  it("refuses an empty token from the source", async () => {
+    let asked = 0;
+    let reached = 0;
+    const harness = clientWith((router) => {
+      router.service(WorkloadService, {
+        getJob() {
+          reached += 1;
+          return {};
+        },
+      });
+    }, {
+      tokenSource: () => {
+        asked += 1;
+        return "  ";
+      },
+    });
+
+    const err: unknown = await harness.client.workload.jobs.get({ id: "w" }).catch((reason: unknown) => reason);
+
+    expect(err).toBeInstanceOf(ConnectError);
+    const connectError = err as ConnectError;
+    expect(connectError.code).toBe(Code.Unauthenticated);
+    expect(connectError.message).toContain("toshi: token source: empty token");
+    expect(asked).toBe(1);
+    expect(reached).toBe(0);
+  });
+
   it("gives every Workspace API service its own client", async () => {
     const harness = clientWith((router) => {
       router.service(ChannelService, { listChannels: () => ({}) });

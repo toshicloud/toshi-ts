@@ -60,6 +60,9 @@ entry reads `TOSHI_SERVER`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE` and
 
 ### Options
 
+- `tokenSource`: a function that gives each request attempt its token, so a
+  refreshed token is used without a new client; it wins over `token`. See
+  Tokens that change.
 - `token`: sent as `Authorization: Bearer <token>` on every call.
 - `project`, `environment`: fill the request's `project` and
   `environment` fields when they are empty. A value in the request wins.
@@ -80,8 +83,8 @@ fills what is missing from the environment:
 
 - `server`, else `TOSHI_SERVER`: the control plane's URL. Without either,
   the client refuses to start.
-- `token`, `tokenFile`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE`, in that order.
-  A token file is trimmed, and an empty file is an error.
+- `tokenSource`, `token`, `tokenFile`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE`, in
+  that order. A token file is trimmed, and an empty file is an error.
 - `caFile`, else `TOSHI_CA_FILE`: a PEM bundle trusted besides Node's
   built-in roots.
 - `userAgent`: put in front of the User-Agent, for example "myapp/1.2".
@@ -94,6 +97,38 @@ fills what is missing from the environment:
 Every request carries `User-Agent: toshi-ts/<version> (node/<node
 version>)`, with `userAgent` and one space in front when it is set. The
 root entry sends no User-Agent: browsers own it.
+
+### Tokens that change
+
+`tokenSource` gives the client a function it calls for the token of every
+request attempt, so a token that is refreshed, for example from a secret
+manager, is used without a new client. It wins over every other token
+option. The client asks it once per attempt, a retry included, and may
+ask it concurrently, so it must be fast: keep the token somewhere and
+refresh it outside the call. A source that throws, or that answers an
+empty token, fails the call with `UNAUTHENTICATED`, with the error as the
+cause, and the call is not retried.
+
+<!-- examples/token-source.ts -->
+
+```ts
+// A token a refresh loop replaces; the client asks for it on every call.
+let token = "first-token";
+
+export const toshi = createToshiClient({
+  project: "default",
+  tokenSource: () => token,
+});
+
+export function rotate(next: string): void {
+  token = next;
+}
+```
+
+A token file, from `tokenFile` or `TOSHI_TOKEN_FILE`, is read again
+before a request when its modification time or size has changed, so a
+rotated token, such as a Kubernetes projected service account token, is
+picked up without a new client.
 
 ### The client's shape
 
