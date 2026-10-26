@@ -11,7 +11,8 @@
     "types": ["node"],
     "noEmit": true,
     "paths": {
-      "@toshicloud/sdk": ["./src/index.ts"]
+      "@toshicloud/sdk": ["./src/index.ts"],
+      "@toshicloud/sdk/test": ["./src/test/index.ts"]
     }
   },
   "include": ["src", "test", "examples", "*.config.ts", "*.config.js"],
