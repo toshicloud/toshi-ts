@@ -84,6 +84,7 @@ import {
   WatchOutputRequestSchema,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type {
+  Event,
   GetOperationResponse,
   HoldServiceResponse,
   Job,
@@ -93,6 +94,7 @@ import type {
   ReleaseServiceResponse,
   Sandbox,
   Service,
+  ServiceRun,
   SetServiceModeResponse,
   StartServiceResponse,
   StopServiceResponse,
@@ -101,6 +103,7 @@ import type {
   WatchOutputResponse,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import { openOutputWatch } from "./output.js";
+import { paginate } from "./paginate.js";
 import { authInterceptor, keyInterceptor, retryInterceptor, scopeInterceptor } from "./interceptors.js";
 import { normalizeRetry } from "./retry.js";
 import type { RetryPolicy } from "./retry.js";
@@ -165,6 +168,8 @@ export interface WorkloadClient {
     req: MessageInitShape<typeof ListEventsRequestSchema>,
     opts?: CallOptions,
   ): Promise<ListEventsResponse>;
+  /** Yields every event listEvents lists, following the page token from one page to the next. */
+  allEvents(req: MessageInitShape<typeof ListEventsRequestSchema>, opts?: CallOptions): AsyncIterable<Event>;
   watchEvents(req: MessageInitShape<typeof WatchEventsRequestSchema>, opts?: CallOptions): Promise<EventWatch>;
   /** Returns one operation: the id a long call hands back, asked for again. */
   getOperation(
@@ -178,6 +183,8 @@ export interface JobsClient {
   create(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<CreateJobResponse>;
   get(req: MessageInitShape<typeof GetJobRequestSchema>, opts?: CallOptions): Promise<GetJobResponse>;
   list(req: MessageInitShape<typeof ListJobsRequestSchema>, opts?: CallOptions): Promise<ListJobsResponse>;
+  /** Yields every job that matches every filter that is set, following the page token from one page to the next. */
+  all(req: MessageInitShape<typeof ListJobsRequestSchema>, opts?: CallOptions): AsyncIterable<Job>;
   update(req: MessageInitShape<typeof UpdateJobRequestSchema>, opts?: CallOptions): Promise<UpdateJobResponse>;
   delete(req: MessageInitShape<typeof DeleteJobRequestSchema>, opts?: CallOptions): Promise<DeleteJobResponse>;
   cancel(req: MessageInitShape<typeof CancelJobRequestSchema>, opts?: CallOptions): Promise<CancelJobResponse>;
@@ -194,6 +201,8 @@ export interface SandboxesClient {
   ): Promise<CreateSandboxResponse>;
   get(req: MessageInitShape<typeof GetSandboxRequestSchema>, opts?: CallOptions): Promise<GetSandboxResponse>;
   list(req: MessageInitShape<typeof ListSandboxesRequestSchema>, opts?: CallOptions): Promise<ListSandboxesResponse>;
+  /** Yields every sandbox that matches every filter that is set, following the page token from one page to the next. */
+  all(req: MessageInitShape<typeof ListSandboxesRequestSchema>, opts?: CallOptions): AsyncIterable<Sandbox>;
   update(req: MessageInitShape<typeof UpdateSandboxRequestSchema>, opts?: CallOptions): Promise<UpdateSandboxResponse>;
   delete(req: MessageInitShape<typeof DeleteSandboxRequestSchema>, opts?: CallOptions): Promise<DeleteSandboxResponse>;
   wait(req: MessageInitShape<typeof WaitSandboxRequestSchema>, opts?: CallOptions): Promise<WaitSandboxResponse>;
@@ -206,6 +215,8 @@ export interface ServicesClient {
   create(req: MessageInitShape<typeof CreateServiceRequestSchema>, opts?: CallOptions): Promise<CreateServiceResponse>;
   get(req: MessageInitShape<typeof GetServiceRequestSchema>, opts?: CallOptions): Promise<GetServiceResponse>;
   list(req: MessageInitShape<typeof ListServicesRequestSchema>, opts?: CallOptions): Promise<ListServicesResponse>;
+  /** Yields every service that matches every filter that is set, following the page token from one page to the next. */
+  all(req: MessageInitShape<typeof ListServicesRequestSchema>, opts?: CallOptions): AsyncIterable<Service>;
   update(req: MessageInitShape<typeof UpdateServiceRequestSchema>, opts?: CallOptions): Promise<UpdateServiceResponse>;
   delete(req: MessageInitShape<typeof DeleteServiceRequestSchema>, opts?: CallOptions): Promise<DeleteServiceResponse>;
   wait(req: MessageInitShape<typeof WaitServiceRequestSchema>, opts?: CallOptions): Promise<WaitServiceResponse>;
@@ -217,6 +228,11 @@ export interface ServicesClient {
   wake(req: MessageInitShape<typeof WakeServiceRequestSchema>, opts?: CallOptions): Promise<WakeServiceResponse>;
   hold(req: MessageInitShape<typeof HoldServiceRequestSchema>, opts?: CallOptions): Promise<HoldServiceResponse>;
   listRuns(req: MessageInitShape<typeof ListServiceRunsRequestSchema>, opts?: CallOptions): Promise<ListServiceRunsResponse>;
+  /** Yields every run listRuns returns, the newest first, following the page token from one page to the next. */
+  allRuns(
+    req: MessageInitShape<typeof ListServiceRunsRequestSchema>,
+    opts?: CallOptions,
+  ): AsyncIterable<ServiceRun>;
 }
 
 /** A live stream of a job's changes. */
@@ -305,6 +321,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         create: (req, opts) => workloadService.createJob(req, opts),
         get: (req, opts) => workloadService.getJob(req, opts),
         list: (req, opts) => workloadService.listJobs(req, opts),
+        all: (req, opts) => paginate(req, workloadService.listJobs, (resp) => resp.jobs, opts),
         update: (req, opts) => workloadService.updateJob(req, opts),
         delete: (req, opts) => workloadService.deleteJob(req, opts),
         cancel: (req, opts) => workloadService.cancelJob(req, opts),
@@ -317,6 +334,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         create: (req, opts) => workloadService.createSandbox(req, opts),
         get: (req, opts) => workloadService.getSandbox(req, opts),
         list: (req, opts) => workloadService.listSandboxes(req, opts),
+        all: (req, opts) => paginate(req, workloadService.listSandboxes, (resp) => resp.sandboxes, opts),
         update: (req, opts) => workloadService.updateSandbox(req, opts),
         delete: (req, opts) => workloadService.deleteSandbox(req, opts),
         wait: (req, opts) => waitSandbox(workloadService, create(WaitSandboxRequestSchema, req), opts),
@@ -328,6 +346,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         create: (req, opts) => workloadService.createService(req, opts),
         get: (req, opts) => workloadService.getService(req, opts),
         list: (req, opts) => workloadService.listServices(req, opts),
+        all: (req, opts) => paginate(req, workloadService.listServices, (resp) => resp.services, opts),
         update: (req, opts) => workloadService.updateService(req, opts),
         delete: (req, opts) => workloadService.deleteService(req, opts),
         wait: (req, opts) => waitService(workloadService, create(WaitServiceRequestSchema, req), opts),
@@ -340,10 +359,12 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         wake: (req, opts) => workloadService.wakeService(req, opts),
         hold: (req, opts) => workloadService.holdService(req, opts),
         listRuns: (req, opts) => workloadService.listServiceRuns(req, opts),
+        allRuns: (req, opts) => paginate(req, workloadService.listServiceRuns, (resp) => resp.runs, opts),
       },
       waitOperation: (req, opts) =>
         waitOperation(workloadService, create(WaitOperationRequestSchema, req), opts),
       listEvents: (req, opts) => workloadService.listEvents(req, opts),
+      allEvents: (req, opts) => paginate(req, workloadService.listEvents, (resp) => resp.events, opts),
       watchEvents: (req, opts) =>
         openEventWatch(workloadService, retry, create(WatchEventsRequestSchema, req), opts),
       getOperation: (req, opts) => workloadService.getOperation(req, opts),

@@ -119,6 +119,43 @@ const { job } = await toshi.workload.jobs.get({ id: jobs[0].id });
 console.log(job?.id);
 ```
 
+### Lists
+
+`workload.jobs.all`, `workload.sandboxes.all`, `workload.services.all`,
+`workload.services.allRuns` and `workload.allEvents` take the request their
+`list` method takes and yield every item, one page after another. Each
+response's `nextPageToken` becomes the next request's `pageToken`, and a
+`pageToken` in the request resumes from that page. A service with no
+`all` method is one `paginate` call away: it takes the list call and a
+function that picks a response's items.
+
+<!-- examples/lists.ts -->
+
+```ts
+import { paginate } from "@toshicloud/sdk";
+
+import { toshi } from "./client.js";
+
+// Every job that matches the request, one page after another.
+for await (const job of toshi.workload.jobs.all({ pageSize: 10 })) {
+  console.log(job.id);
+}
+
+// A service with no all() method: paginate takes its list call and items.
+for await (const project of paginate(
+  {},
+  (req, opts) => toshi.project.listProjects(req, opts),
+  (resp) => resp.projects,
+)) {
+  console.log(project.name);
+}
+```
+
+`paginate` sends a copy of the request, so the caller's request keeps its
+fields. Every page is a call of its own, so `opts` goes to each one, and
+`timeoutMs` bounds a page and not the whole iteration. An error throws once
+and ends the iteration; leaving the loop sends no further request.
+
 ### Retries
 
 The client retries a read, and a write that carries a request key, when
