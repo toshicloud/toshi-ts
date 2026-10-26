@@ -9,12 +9,12 @@ import { createToshiClient } from "../src/client.js";
 import type { ToshiClient } from "../src/client.js";
 import { ListProjectsResponseSchema } from "../src/gen/toshi/workspace/v1/projects_pb.js";
 import {
-  WatchWorkloadsRequestSchema,
-  WatchWorkloadsResponseSchema,
-} from "../src/gen/toshi/workspace/v1/workspace_pb.js";
+  WatchJobsRequestSchema,
+  WatchJobsResponseSchema,
+} from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import { isStreamLoss } from "../src/retry.js";
 
-const watchPath = "/toshi.workspace.v1.WorkspaceService/WatchWorkloads";
+const watchPath = "/toshi.workspace.v1.WorkloadService/WatchJobs";
 const projectsPath = "/toshi.workspace.v1.ProjectService/ListProjects";
 
 // Connect envelopes: one flag byte, a uint32 BE length, then the message bytes.
@@ -94,10 +94,14 @@ async function startServer(handlers: Readonly<Record<string, StreamHandler>>): P
   };
 }
 
-function toshiClient(baseUrl: string): ToshiClient {
+function toshiClient(baseUrl: string, retry: false | { maxAttempts: number; initialBackoffMs: number; maxBackoffMs: number } = {
+  maxAttempts: 4,
+  initialBackoffMs: 5,
+  maxBackoffMs: 20,
+}): ToshiClient {
   return createToshiClient({
     transport: (interceptors) => createConnectTransport({ baseUrl, httpVersion: "2", interceptors }),
-    retry: { maxAttempts: 4, initialBackoffMs: 5, maxBackoffMs: 20 },
+    retry,
   });
 }
 
@@ -109,8 +113,8 @@ function envelope(flags: number, payload: Uint8Array): Buffer {
 }
 
 function watchMessage(cursor: string): Buffer {
-  const message = create(WatchWorkloadsResponseSchema, { cursor });
-  return envelope(messageFlag, toBinary(WatchWorkloadsResponseSchema, message));
+  const message = create(WatchJobsResponseSchema, { cursor });
+  return envelope(messageFlag, toBinary(WatchJobsResponseSchema, message));
 }
 
 function endStream(error?: { readonly code: string; readonly message: string }): Buffer {
@@ -124,7 +128,7 @@ function decodeWatchCursor(body: Buffer): string {
     throw new Error("the watch request sent no envelope");
   }
   const length = body.readUInt32BE(1);
-  return fromBinary(WatchWorkloadsRequestSchema, body.subarray(5, 5 + length)).cursor;
+  return fromBinary(WatchJobsRequestSchema, body.subarray(5, 5 + length)).cursor;
 }
 
 function respondStream(stream: ServerHttp2Stream): void {
@@ -195,7 +199,7 @@ describe("over a real HTTP/2 Connect transport", () => {
       },
     });
     const client = toshiClient(server.baseUrl);
-    const watch = await client.watchWorkloads({ cursor: "c0" });
+    const watch = await client.workload.jobs.watch({ cursor: "c0" });
     const reader = watch[Symbol.asyncIterator]();
     try {
       const first = await reader.next();
@@ -226,7 +230,7 @@ describe("over a real HTTP/2 Connect transport", () => {
       },
     });
     const client = toshiClient(server.baseUrl);
-    const watch = await client.watchWorkloads({ cursor: "c0" });
+    const watch = await client.workload.jobs.watch({ cursor: "c0" });
     const reader = watch[Symbol.asyncIterator]();
     try {
       const first = await reader.next();
@@ -258,7 +262,7 @@ describe("over a real HTTP/2 Connect transport", () => {
     });
     const client = toshiClient(server.baseUrl);
     try {
-      const response = await client.projects.listProjects({});
+      const response = await client.project.listProjects({});
       expect(calls).toBe(2);
       expect(server.requests).toHaveLength(2);
       expect(response.projects.map((project) => project.name)).toEqual(["alpha"]);
@@ -282,7 +286,7 @@ describe("over a real HTTP/2 Connect transport", () => {
     });
     const client = toshiClient(server.baseUrl);
     try {
-      const response = await client.projects.listProjects({});
+      const response = await client.project.listProjects({});
       expect(calls).toBe(2);
       expect(response.projects.map((project) => project.name)).toEqual(["alpha"]);
     } finally {
@@ -300,7 +304,7 @@ describe("over a real HTTP/2 Connect transport", () => {
     });
     const client = toshiClient(server.baseUrl);
     try {
-      await expect(client.projects.listProjects({})).rejects.toMatchObject({ code: Code.Internal });
+      await expect(client.project.listProjects({})).rejects.toMatchObject({ code: Code.Internal });
       expect(calls).toBe(1);
       expect(server.requests).toHaveLength(1);
     } finally {
@@ -315,13 +319,13 @@ describe("over a real HTTP/2 Connect transport", () => {
         request.stream.end(watchMessage("c1"));
       },
     });
-    const client = toshiClient(missing.baseUrl);
+    // Retry off: each stream would otherwise deliver c1 again and reset the count.
+    const client = toshiClient(missing.baseUrl, false);
     const seen: string[] = [];
     let thrown: unknown;
     try {
-      for await (const message of client.workspace.watchWorkloads(
-        create(WatchWorkloadsRequestSchema, { cursor: "c0" }),
-      )) {
+      const watch = await client.workload.jobs.watch(create(WatchJobsRequestSchema, { cursor: "c0" }));
+      for await (const message of watch) {
         seen.push(message.cursor);
       }
     } catch (err) {
@@ -344,7 +348,7 @@ describe("over a real HTTP/2 Connect transport", () => {
         request.stream.end(endStream({ code: "aborted", message: "stop" }));
       },
     });
-    const watch = await toshiClient(aborted.baseUrl).watchWorkloads({ cursor: "c0" });
+    const watch = await toshiClient(aborted.baseUrl).workload.jobs.watch({ cursor: "c0" });
     try {
       await expect(watch[Symbol.asyncIterator]().next()).rejects.toMatchObject({
         code: Code.Aborted,

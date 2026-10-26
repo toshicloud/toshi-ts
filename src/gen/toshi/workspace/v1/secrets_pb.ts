@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/secrets.proto.
  */
 export const file_toshi_workspace_v1_secrets: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxInEKCVNlY3JldFNldBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgZTZWNyZXQSDAoEbmFtZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgDEgwKBHNpemUYAyABKAMSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiXgoNU2VjcmV0VmVyc2lvbhIPCgd2ZXJzaW9uGAEgASgDEgwKBHNpemUYAiABKAMSLgoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAigwEKC1NlY3JldEdyYW50EjMKBGtpbmQYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJOChZDcmVhdGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIkUKF0NyZWF0ZVNlY3JldFNldFJlc3BvbnNlEioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQiKAoVTGlzdFNlY3JldFNldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkiRQoWTGlzdFNlY3JldFNldHNSZXNwb25zZRIrCgRzZXRzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldCJOChZEZWxldGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIhkKF0RlbGV0ZVNlY3JldFNldFJlc3BvbnNlImUKEFNldFNlY3JldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSDAoEbmFtZRgEIAEoCRINCgV2YWx1ZRgFIAEoDCI/ChFTZXRTZWNyZXRSZXNwb25zZRIqCgZzZWNyZXQYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0IlkKE0RlbGV0ZVNlY3JldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSDAoEbmFtZRgEIAEoCSIWChREZWxldGVTZWNyZXRSZXNwb25zZSJKChJMaXN0U2VjcmV0c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgiQgoTTGlzdFNlY3JldHNSZXNwb25zZRIrCgdzZWNyZXRzGAEgAygLMhoudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldCJfChlMaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkiUQoaTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2USMwoIdmVyc2lvbnMYASADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0VmVyc2lvbiKTAQoVR3JhbnRTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSJIChZHcmFudFNlY3JldFNldFJlc3BvbnNlEi4KBWdyYW50GAEgASgLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50IpQBChZSZXZva2VTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSIZChdSZXZva2VTZWNyZXRTZXRSZXNwb25zZSJSChpMaXN0U2VjcmV0U2V0R3JhbnRzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCCJOChtMaXN0U2VjcmV0U2V0R3JhbnRzUmVzcG9uc2USLwoGZ3JhbnRzGAEgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50KpYBChFTZWNyZXRHcmFudGVlS2luZBIjCh9TRUNSRVRfR1JBTlRFRV9LSU5EX1VOU1BFQ0lGSUVEEAASHAoYU0VDUkVUX0dSQU5URUVfS0lORF9LSU5EEAESHQoZU0VDUkVUX0dSQU5URUVfS0lORF9JTUFHRRACEh8KG1NFQ1JFVF9HUkFOVEVFX0tJTkRfU0VSVklDRRADMq8ICg1TZWNyZXRTZXJ2aWNlEmoKD0NyZWF0ZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlc3BvbnNlEmcKDkxpc3RTZWNyZXRTZXRzEikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0U2V0c1Jlc3BvbnNlEmoKD0RlbGV0ZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlc3BvbnNlElgKCVNldFNlY3JldBIkLnRvc2hpLndvcmtzcGFjZS52MS5TZXRTZWNyZXRSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLlNldFNlY3JldFJlc3BvbnNlEmEKDERlbGV0ZVNlY3JldBInLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVTZWNyZXRSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlc3BvbnNlEl4KC0xpc3RTZWNyZXRzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0c1Jlc3BvbnNlEnMKEkxpc3RTZWNyZXRWZXJzaW9ucxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRWZXJzaW9uc1Jlc3BvbnNlEmcKDkdyYW50U2VjcmV0U2V0EikudG9zaGkud29ya3NwYWNlLnYxLkdyYW50U2VjcmV0U2V0UmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNlY3JldFNldFJlc3BvbnNlEmoKD1Jldm9rZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVNlY3JldFNldFJlc3BvbnNlEnYKE0xpc3RTZWNyZXRTZXRHcmFudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxInEKCVNlY3JldFNldBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgZTZWNyZXQSDAoEbmFtZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgDEgwKBHNpemUYAyABKAMSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiXgoNU2VjcmV0VmVyc2lvbhIPCgd2ZXJzaW9uGAEgASgDEgwKBHNpemUYAiABKAMSLgoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAigwEKC1NlY3JldEdyYW50EjMKBGtpbmQYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJOChZDcmVhdGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIkUKF0NyZWF0ZVNlY3JldFNldFJlc3BvbnNlEioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQiTwoVTGlzdFNlY3JldFNldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiXgoWTGlzdFNlY3JldFNldHNSZXNwb25zZRIrCgRzZXRzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiTgoWRGVsZXRlU2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCCIZChdEZWxldGVTZWNyZXRTZXRSZXNwb25zZSJlChBQdXRTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSDQoFdmFsdWUYBSABKAwiPwoRUHV0U2VjcmV0UmVzcG9uc2USKgoGc2VjcmV0GAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldCJZChNEZWxldGVTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkiFgoURGVsZXRlU2VjcmV0UmVzcG9uc2UicQoSTGlzdFNlY3JldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJIlsKE0xpc3RTZWNyZXRzUmVzcG9uc2USKwoHc2VjcmV0cxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoYBChlMaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAkiagoaTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2USMwoIdmVyc2lvbnMYASADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0VmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkikwEKFUdyYW50U2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIzCgRraW5kGAQgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50ZWVLaW5kEg8KB2dyYW50ZWUYBSABKAkiSAoWR3JhbnRTZWNyZXRTZXRSZXNwb25zZRIuCgVncmFudBgBIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudCKUAQoWUmV2b2tlU2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIzCgRraW5kGAQgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50ZWVLaW5kEg8KB2dyYW50ZWUYBSABKAkiGQoXUmV2b2tlU2VjcmV0U2V0UmVzcG9uc2UieQoaTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2VfdG9rZW4YBSABKAkiZwobTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlEi8KBmdyYW50cxgBIAMoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqlgEKEVNlY3JldEdyYW50ZWVLaW5kEiMKH1NFQ1JFVF9HUkFOVEVFX0tJTkRfVU5TUEVDSUZJRUQQABIcChhTRUNSRVRfR1JBTlRFRV9LSU5EX0tJTkQQARIdChlTRUNSRVRfR1JBTlRFRV9LSU5EX0lNQUdFEAISHwobU0VDUkVUX0dSQU5URUVfS0lORF9TRVJWSUNFEAMyrwgKDVNlY3JldFNlcnZpY2USagoPQ3JlYXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlU2VjcmV0U2V0UmVzcG9uc2USZwoOTGlzdFNlY3JldFNldHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVzcG9uc2USagoPRGVsZXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0U2V0UmVzcG9uc2USWAoJUHV0U2VjcmV0EiQudG9zaGkud29ya3NwYWNlLnYxLlB1dFNlY3JldFJlcXVlc3QaJS50b3NoaS53b3Jrc3BhY2UudjEuUHV0U2VjcmV0UmVzcG9uc2USYQoMRGVsZXRlU2VjcmV0EicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0UmVzcG9uc2USXgoLTGlzdFNlY3JldHMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldHNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRzUmVzcG9uc2UScwoSTGlzdFNlY3JldFZlcnNpb25zEi0udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRWZXJzaW9uc1JlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2USZwoOR3JhbnRTZWNyZXRTZXQSKS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTZWNyZXRTZXRSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkdyYW50U2VjcmV0U2V0UmVzcG9uc2USagoPUmV2b2tlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlU2VjcmV0U2V0UmVzcG9uc2USdgoTTGlzdFNlY3JldFNldEdyYW50cxIuLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0U2V0R3JhbnRzUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0U2V0R3JhbnRzUmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp]);
 
 /**
  * SecretSet is a project's set: an environment's, or the shared one.
@@ -328,6 +328,20 @@ export type ListSecretSetsRequest = Message<"toshi.workspace.v1.ListSecretSetsRe
    * @generated from field: string project = 1;
    */
   project: string;
+
+  /**
+   * The most sets in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -338,6 +352,20 @@ export type ListSecretSetsRequestJson = {
    * @generated from field: string project = 1;
    */
   project?: string;
+
+  /**
+   * The most sets in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -355,6 +383,13 @@ export type ListSecretSetsResponse = Message<"toshi.workspace.v1.ListSecretSetsR
    * @generated from field: repeated toshi.workspace.v1.SecretSet sets = 1;
    */
   sets: SecretSet[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -365,6 +400,13 @@ export type ListSecretSetsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.SecretSet sets = 1;
    */
   sets?: SecretSetJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -441,9 +483,9 @@ export const DeleteSecretSetResponseSchema: GenMessage<DeleteSecretSetResponse, 
   messageDesc(file_toshi_workspace_v1_secrets, 9);
 
 /**
- * @generated from message toshi.workspace.v1.SetSecretRequest
+ * @generated from message toshi.workspace.v1.PutSecretRequest
  */
-export type SetSecretRequest = Message<"toshi.workspace.v1.SetSecretRequest"> & {
+export type PutSecretRequest = Message<"toshi.workspace.v1.PutSecretRequest"> & {
   /**
    * @generated from field: string project = 1;
    */
@@ -474,9 +516,9 @@ export type SetSecretRequest = Message<"toshi.workspace.v1.SetSecretRequest"> & 
 };
 
 /**
- * @generated from message toshi.workspace.v1.SetSecretRequest
+ * @generated from message toshi.workspace.v1.PutSecretRequest
  */
-export type SetSecretRequestJson = {
+export type PutSecretRequestJson = {
   /**
    * @generated from field: string project = 1;
    */
@@ -507,16 +549,16 @@ export type SetSecretRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.SetSecretRequest.
- * Use `create(SetSecretRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.PutSecretRequest.
+ * Use `create(PutSecretRequestSchema)` to create a new message.
  */
-export const SetSecretRequestSchema: GenMessage<SetSecretRequest, {jsonType: SetSecretRequestJson}> = /*@__PURE__*/
+export const PutSecretRequestSchema: GenMessage<PutSecretRequest, {jsonType: PutSecretRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_secrets, 10);
 
 /**
- * @generated from message toshi.workspace.v1.SetSecretResponse
+ * @generated from message toshi.workspace.v1.PutSecretResponse
  */
-export type SetSecretResponse = Message<"toshi.workspace.v1.SetSecretResponse"> & {
+export type PutSecretResponse = Message<"toshi.workspace.v1.PutSecretResponse"> & {
   /**
    * @generated from field: toshi.workspace.v1.Secret secret = 1;
    */
@@ -524,9 +566,9 @@ export type SetSecretResponse = Message<"toshi.workspace.v1.SetSecretResponse"> 
 };
 
 /**
- * @generated from message toshi.workspace.v1.SetSecretResponse
+ * @generated from message toshi.workspace.v1.PutSecretResponse
  */
-export type SetSecretResponseJson = {
+export type PutSecretResponseJson = {
   /**
    * @generated from field: toshi.workspace.v1.Secret secret = 1;
    */
@@ -534,10 +576,10 @@ export type SetSecretResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.SetSecretResponse.
- * Use `create(SetSecretResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.PutSecretResponse.
+ * Use `create(PutSecretResponseSchema)` to create a new message.
  */
-export const SetSecretResponseSchema: GenMessage<SetSecretResponse, {jsonType: SetSecretResponseJson}> = /*@__PURE__*/
+export const PutSecretResponseSchema: GenMessage<PutSecretResponse, {jsonType: PutSecretResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_secrets, 11);
 
 /**
@@ -634,6 +676,20 @@ export type ListSecretsRequest = Message<"toshi.workspace.v1.ListSecretsRequest"
    * @generated from field: bool shared = 3;
    */
   shared: boolean;
+
+  /**
+   * The most keys in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 4;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 5;
+   */
+  pageToken: string;
 };
 
 /**
@@ -654,6 +710,20 @@ export type ListSecretsRequestJson = {
    * @generated from field: bool shared = 3;
    */
   shared?: boolean;
+
+  /**
+   * The most keys in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 4;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 5;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -671,6 +741,13 @@ export type ListSecretsResponse = Message<"toshi.workspace.v1.ListSecretsRespons
    * @generated from field: repeated toshi.workspace.v1.Secret secrets = 1;
    */
   secrets: Secret[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -681,6 +758,13 @@ export type ListSecretsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.Secret secrets = 1;
    */
   secrets?: SecretJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -713,6 +797,20 @@ export type ListSecretVersionsRequest = Message<"toshi.workspace.v1.ListSecretVe
    * @generated from field: string name = 4;
    */
   name: string;
+
+  /**
+   * The most versions in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 5;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 6;
+   */
+  pageToken: string;
 };
 
 /**
@@ -738,6 +836,20 @@ export type ListSecretVersionsRequestJson = {
    * @generated from field: string name = 4;
    */
   name?: string;
+
+  /**
+   * The most versions in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 5;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 6;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -755,6 +867,13 @@ export type ListSecretVersionsResponse = Message<"toshi.workspace.v1.ListSecretV
    * @generated from field: repeated toshi.workspace.v1.SecretVersion versions = 1;
    */
   versions: SecretVersion[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -765,6 +884,13 @@ export type ListSecretVersionsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.SecretVersion versions = 1;
    */
   versions?: SecretVersionJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -972,6 +1098,20 @@ export type ListSecretSetGrantsRequest = Message<"toshi.workspace.v1.ListSecretS
    * @generated from field: bool shared = 3;
    */
   shared: boolean;
+
+  /**
+   * The most grants in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 4;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 5;
+   */
+  pageToken: string;
 };
 
 /**
@@ -992,6 +1132,20 @@ export type ListSecretSetGrantsRequestJson = {
    * @generated from field: bool shared = 3;
    */
   shared?: boolean;
+
+  /**
+   * The most grants in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 4;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 5;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -1009,6 +1163,13 @@ export type ListSecretSetGrantsResponse = Message<"toshi.workspace.v1.ListSecret
    * @generated from field: repeated toshi.workspace.v1.SecretGrant grants = 1;
    */
   grants: SecretGrant[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -1019,6 +1180,13 @@ export type ListSecretSetGrantsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.SecretGrant grants = 1;
    */
   grants?: SecretGrantJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -1080,14 +1248,14 @@ export const SecretGranteeKindSchema: GenEnum<SecretGranteeKind, SecretGranteeKi
  * AES-256-GCM under the workspace's data key before the store sees it, and
  * every version of a key is kept until the key or its set is deleted.
  *
- * The caller's credential names the workspace, as for WorkspaceService.
+ * The caller's credential names the workspace, as for WorkloadService.
  * Every request names a set by its project and either its environment or
  * shared, which is the project's shared set; a request that names both, or
  * neither, fails with INVALID_ARGUMENT. A project or environment the
  * workspace does not have is NOT_FOUND.
  *
  * No call returns a value: a key is answered with its name, version, size
- * and time. The calls take no request_key: a retried SetSecret makes one
+ * and time. The calls take no request_key: a retried PutSecret makes one
  * more version.
  *
  * @generated from service toshi.workspace.v1.SecretService
@@ -1107,6 +1275,8 @@ export const SecretService: GenService<{
   /**
    * ListSecretSets returns the project's sets, the shared set first.
    *
+   * A page holds 100 sets when page_size is zero, and 1000 at most.
+   *
    * @generated from rpc toshi.workspace.v1.SecretService.ListSecretSets
    */
   listSecretSets: {
@@ -1125,18 +1295,18 @@ export const SecretService: GenService<{
     output: typeof DeleteSecretSetResponseSchema;
   },
   /**
-   * SetSecret makes the key's next version, holding value, and returns the
+   * PutSecret makes the key's next version, holding value, and returns the
    * key without it. A name is either shared or set per environment: a
    * shared name set in an environment's set, or an environment's name set
    * in the shared set, fails with FAILED_PRECONDITION. Two environments'
    * sets may hold the same name.
    *
-   * @generated from rpc toshi.workspace.v1.SecretService.SetSecret
+   * @generated from rpc toshi.workspace.v1.SecretService.PutSecret
    */
-  setSecret: {
+  putSecret: {
     methodKind: "unary";
-    input: typeof SetSecretRequestSchema;
-    output: typeof SetSecretResponseSchema;
+    input: typeof PutSecretRequestSchema;
+    output: typeof PutSecretResponseSchema;
   },
   /**
    * DeleteSecret removes the key and every version of it.
@@ -1152,6 +1322,8 @@ export const SecretService: GenService<{
    * ListSecrets returns the set's keys by name, each with its newest
    * version.
    *
+   * A page holds 100 keys when page_size is zero, and 1000 at most.
+   *
    * @generated from rpc toshi.workspace.v1.SecretService.ListSecrets
    */
   listSecrets: {
@@ -1161,6 +1333,8 @@ export const SecretService: GenService<{
   },
   /**
    * ListSecretVersions returns the key's versions, oldest first.
+   *
+   * A page holds 100 versions when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.SecretService.ListSecretVersions
    */
@@ -1193,6 +1367,8 @@ export const SecretService: GenService<{
   },
   /**
    * ListSecretSetGrants returns the set's grants by kind and grantee.
+   *
+   * A page holds 100 grants when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.SecretService.ListSecretSetGrants
    */

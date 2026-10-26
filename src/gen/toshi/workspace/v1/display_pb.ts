@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/display.proto.
  */
 export const file_toshi_workspace_v1_display: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZGlzcGxheS5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIqAECg5EaXNwbGF5U2Vzc2lvbhIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLQoEbW9kZRgDIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5TW9kZRIWCg5hbGxvd190YWtlb3ZlchgEIAEoCBItCgppZGxlX2Nsb3NlGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjYKBXN0YXRlGAYgASgOMicudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uU3RhdGUSNAoJb3BlbmVkX2J5GAcgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlPcGVuZXISLQoJb3BlbmVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglhdHRhY2hfYnkYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2F0dGFjaGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCgljbG9zZWRfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGNsb3NlX3JlYXNvbhgMIAEoCRIRCglvcGVuZXJfaWQYDSABKAkSDgoGb3JpZ2luGA4gASgJEhcKD2F0dGFjaF90b2tlbl9pZBgPIAEoCSLZAQoZT3BlbkRpc3BsYXlTZXNzaW9uUmVxdWVzdBIQCgZqb2JfaWQYASABKAlIABIVCgt3b3JrbG9hZF9pZBgCIAEoCUgAEi0KBG1vZGUYAyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuRGlzcGxheU1vZGUSLQoKaWRsZV9jbG9zZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5hbGxvd190YWtlb3ZlchgFIAEoCBITCgtyZXF1ZXN0X2tleRgGIAEoCUIICgZ0YXJnZXQifwoaT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2USMwoHc2Vzc2lvbhgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5U2Vzc2lvbhILCgN1cmwYAiABKAkSDQoFdG9rZW4YAyABKAkSEAoIcmVwbGF5ZWQYBCABKAgiLgoYR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkiUAoZR2V0RGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uIlIKGkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglvcGVuX29ubHkYAiABKAgSEQoJcGFnZV9zaXplGAMgASgFIlMKG0xpc3REaXNwbGF5U2Vzc2lvbnNSZXNwb25zZRI0CghzZXNzaW9ucxgBIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5U2Vzc2lvbiIwChpDbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJIlIKG0Nsb3NlRGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uInYKFlNlbmREaXNwbGF5S2V5c1JlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIOCgR0ZXh0GAIgASgJSAASLwoEa2V5cxgDIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5S2V5c0gAQgcKBWlucHV0IhsKC0Rpc3BsYXlLZXlzEgwKBGtleXMYASADKAkiGQoXU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiaAoZU2VuZERpc3BsYXlQb2ludGVyUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEjcKBmV2ZW50cxgCIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5UG9pbnRlckV2ZW50IjwKE0Rpc3BsYXlQb2ludGVyRXZlbnQSCQoBeBgBIAEoBRIJCgF5GAIgASgFEg8KB2J1dHRvbnMYAyABKA0iHAoaU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiPgoaU2V0RGlzcGxheUNsaXBib2FyZFJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIMCgR0ZXh0GAIgASgJIh0KG1NldERpc3BsYXlDbGlwYm9hcmRSZXNwb25zZSIyChxUYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkieQodVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2USCwoDcG5nGAEgASgMEg0KBXdpZHRoGAIgASgFEg4KBmhlaWdodBgDIAEoBRIsCgh0YWtlbl9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqZAoLRGlzcGxheU1vZGUSHAoYRElTUExBWV9NT0RFX1VOU1BFQ0lGSUVEEAASGgoWRElTUExBWV9NT0RFX1ZJRVdfT05MWRABEhsKF0RJU1BMQVlfTU9ERV9XSVRIX0lOUFVUEAIqpQEKE0Rpc3BsYXlTZXNzaW9uU3RhdGUSJQohRElTUExBWV9TRVNTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodRElTUExBWV9TRVNTSU9OX1NUQVRFX1dBSVRJTkcQARIiCh5ESVNQTEFZX1NFU1NJT05fU1RBVEVfQVRUQUNIRUQQAhIgChxESVNQTEFZX1NFU1NJT05fU1RBVEVfQ0xPU0VEEAMqZgoNRGlzcGxheU9wZW5lchIeChpESVNQTEFZX09QRU5FUl9VTlNQRUNJRklFRBAAEhkKFURJU1BMQVlfT1BFTkVSX1BFUlNPThABEhoKFkRJU1BMQVlfT1BFTkVSX1BST0dSQU0QAjK+BwoORGlzcGxheVNlcnZpY2UScwoST3BlbkRpc3BsYXlTZXNzaW9uEi0udG9zaGkud29ya3NwYWNlLnYxLk9wZW5EaXNwbGF5U2Vzc2lvblJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2UScAoRR2V0RGlzcGxheVNlc3Npb24SLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldERpc3BsYXlTZXNzaW9uUmVzcG9uc2USdgoTTGlzdERpc3BsYXlTZXNzaW9ucxIuLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RGlzcGxheVNlc3Npb25zUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RGlzcGxheVNlc3Npb25zUmVzcG9uc2USdgoTQ2xvc2VEaXNwbGF5U2Vzc2lvbhIuLnRvc2hpLndvcmtzcGFjZS52MS5DbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5DbG9zZURpc3BsYXlTZXNzaW9uUmVzcG9uc2USagoPU2VuZERpc3BsYXlLZXlzEioudG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5S2V5c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UScwoSU2VuZERpc3BsYXlQb2ludGVyEi0udG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5UG9pbnRlclJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2USdgoTU2V0RGlzcGxheUNsaXBib2FyZBIuLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVzcG9uc2USfAoVVGFrZURpc3BsYXlTY3JlZW5zaG90EjAudG9zaGkud29ya3NwYWNlLnYxLlRha2VEaXNwbGF5U2NyZWVuc2hvdFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZGlzcGxheS5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIqAECg5EaXNwbGF5U2Vzc2lvbhIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLQoEbW9kZRgDIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5TW9kZRIWCg5hbGxvd190YWtlb3ZlchgEIAEoCBItCgppZGxlX2Nsb3NlGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjYKBXN0YXRlGAYgASgOMicudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uU3RhdGUSNAoJb3BlbmVkX2J5GAcgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlPcGVuZXISLQoJb3BlbmVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglhdHRhY2hfYnkYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2F0dGFjaGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCgljbG9zZWRfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGNsb3NlX3JlYXNvbhgMIAEoCRIRCglvcGVuZXJfaWQYDSABKAkSDgoGb3JpZ2luGA4gASgJEhcKD2F0dGFjaF90b2tlbl9pZBgPIAEoCSLZAQoZT3BlbkRpc3BsYXlTZXNzaW9uUmVxdWVzdBIQCgZqb2JfaWQYASABKAlIABIVCgt3b3JrbG9hZF9pZBgCIAEoCUgAEi0KBG1vZGUYAyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuRGlzcGxheU1vZGUSLQoKaWRsZV9jbG9zZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5hbGxvd190YWtlb3ZlchgFIAEoCBITCgtyZXF1ZXN0X2tleRgGIAEoCUIICgZ0YXJnZXQifwoaT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2USMwoHc2Vzc2lvbhgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5U2Vzc2lvbhILCgN1cmwYAiABKAkSDQoFdG9rZW4YAyABKAkSEAoIcmVwbGF5ZWQYBCABKAgiLgoYR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkiUAoZR2V0RGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uImYKGkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglvcGVuX29ubHkYAiABKAgSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkibAobTGlzdERpc3BsYXlTZXNzaW9uc1Jlc3BvbnNlEjQKCHNlc3Npb25zGAEgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIwChpDbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJIlIKG0Nsb3NlRGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uInYKFlNlbmREaXNwbGF5S2V5c1JlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIOCgR0ZXh0GAIgASgJSAASLwoEa2V5cxgDIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5S2V5c0gAQgcKBWlucHV0IhsKC0Rpc3BsYXlLZXlzEgwKBGtleXMYASADKAkiGQoXU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiaAoZU2VuZERpc3BsYXlQb2ludGVyUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEjcKBmV2ZW50cxgCIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5UG9pbnRlckV2ZW50IjwKE0Rpc3BsYXlQb2ludGVyRXZlbnQSCQoBeBgBIAEoBRIJCgF5GAIgASgFEg8KB2J1dHRvbnMYAyABKA0iHAoaU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiPgoaU2V0RGlzcGxheUNsaXBib2FyZFJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIMCgR0ZXh0GAIgASgJIh0KG1NldERpc3BsYXlDbGlwYm9hcmRSZXNwb25zZSIyChxUYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkieQodVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2USCwoDcG5nGAEgASgMEg0KBXdpZHRoGAIgASgFEg4KBmhlaWdodBgDIAEoBRIsCgh0YWtlbl9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqZAoLRGlzcGxheU1vZGUSHAoYRElTUExBWV9NT0RFX1VOU1BFQ0lGSUVEEAASGgoWRElTUExBWV9NT0RFX1ZJRVdfT05MWRABEhsKF0RJU1BMQVlfTU9ERV9XSVRIX0lOUFVUEAIqpQEKE0Rpc3BsYXlTZXNzaW9uU3RhdGUSJQohRElTUExBWV9TRVNTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodRElTUExBWV9TRVNTSU9OX1NUQVRFX1dBSVRJTkcQARIiCh5ESVNQTEFZX1NFU1NJT05fU1RBVEVfQVRUQUNIRUQQAhIgChxESVNQTEFZX1NFU1NJT05fU1RBVEVfQ0xPU0VEEAMqZgoNRGlzcGxheU9wZW5lchIeChpESVNQTEFZX09QRU5FUl9VTlNQRUNJRklFRBAAEhkKFURJU1BMQVlfT1BFTkVSX1BFUlNPThABEhoKFkRJU1BMQVlfT1BFTkVSX1BST0dSQU0QAjK+BwoORGlzcGxheVNlcnZpY2UScwoST3BlbkRpc3BsYXlTZXNzaW9uEi0udG9zaGkud29ya3NwYWNlLnYxLk9wZW5EaXNwbGF5U2Vzc2lvblJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2UScAoRR2V0RGlzcGxheVNlc3Npb24SLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldERpc3BsYXlTZXNzaW9uUmVzcG9uc2USdgoTTGlzdERpc3BsYXlTZXNzaW9ucxIuLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RGlzcGxheVNlc3Npb25zUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RGlzcGxheVNlc3Npb25zUmVzcG9uc2USdgoTQ2xvc2VEaXNwbGF5U2Vzc2lvbhIuLnRvc2hpLndvcmtzcGFjZS52MS5DbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5DbG9zZURpc3BsYXlTZXNzaW9uUmVzcG9uc2USagoPU2VuZERpc3BsYXlLZXlzEioudG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5S2V5c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UScwoSU2VuZERpc3BsYXlQb2ludGVyEi0udG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5UG9pbnRlclJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2USdgoTU2V0RGlzcGxheUNsaXBib2FyZBIuLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVzcG9uc2USfAoVVGFrZURpc3BsYXlTY3JlZW5zaG90EjAudG9zaGkud29ya3NwYWNlLnYxLlRha2VEaXNwbGF5U2NyZWVuc2hvdFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
 
 /**
  * @generated from message toshi.workspace.v1.DisplaySession
@@ -26,8 +26,8 @@ export type DisplaySession = Message<"toshi.workspace.v1.DisplaySession"> & {
   id: string;
 
   /**
-   * The job the session views: its ID as the jobs API and `toshi jobs`
-   * show it.
+   * The job the session views: its ID as the jobs API and `toshi host-job
+   * list` show it.
    *
    * @generated from field: string job_id = 2;
    */
@@ -139,8 +139,8 @@ export type DisplaySessionJson = {
   id?: string;
 
   /**
-   * The job the session views: its ID as the jobs API and `toshi jobs`
-   * show it.
+   * The job the session views: its ID as the jobs API and `toshi host-job
+   * list` show it.
    *
    * @generated from field: string job_id = 2;
    */
@@ -253,7 +253,7 @@ export const DisplaySessionSchema: GenMessage<DisplaySession, {jsonType: Display
 export type OpenDisplaySessionRequest = Message<"toshi.workspace.v1.OpenDisplaySessionRequest"> & {
   /**
    * What to view. A job runs on a host and has a screen; a workload of
-   * WorkspaceService has none yet and fails with FAILED_PRECONDITION.
+   * WorkloadService has none yet and fails with FAILED_PRECONDITION.
    *
    * @generated from oneof toshi.workspace.v1.OpenDisplaySessionRequest.target
    */
@@ -490,12 +490,18 @@ export type ListDisplaySessionsRequest = Message<"toshi.workspace.v1.ListDisplay
   openOnly: boolean;
 
   /**
-   * The most sessions returned, the newest first; zero is 50, at most
-   * 200.
+   * The most sessions in one page; zero lets the server choose.
    *
    * @generated from field: int32 page_size = 3;
    */
   pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 4;
+   */
+  pageToken: string;
 };
 
 /**
@@ -517,12 +523,18 @@ export type ListDisplaySessionsRequestJson = {
   openOnly?: boolean;
 
   /**
-   * The most sessions returned, the newest first; zero is 50, at most
-   * 200.
+   * The most sessions in one page; zero lets the server choose.
    *
    * @generated from field: int32 page_size = 3;
    */
   pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 4;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -540,6 +552,13 @@ export type ListDisplaySessionsResponse = Message<"toshi.workspace.v1.ListDispla
    * @generated from field: repeated toshi.workspace.v1.DisplaySession sessions = 1;
    */
   sessions: DisplaySession[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -550,6 +569,13 @@ export type ListDisplaySessionsResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.DisplaySession sessions = 1;
    */
   sessions?: DisplaySessionJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -1149,7 +1175,7 @@ export const DisplayOpenerSchema: GenEnum<DisplayOpener, DisplayOpenerJson> = /*
 /**
  * DisplayService opens display sessions: one viewer's live view of the
  * screen of a VM that runs one of the workspace's CI jobs. The caller's
- * credential names the workspace, as for WorkspaceService; a session or a job
+ * credential names the workspace, as for WorkloadService; a session or a job
  * of another workspace is NOT_FOUND.
  *
  * A session carries the screen as the RFB protocol (RFC 6143) over a
@@ -1175,7 +1201,7 @@ export const DisplayService: GenService<{
    * token expires before it attaches, when its job stops running on the
    * VM it was opened on, or when the workspace is suspended.
    *
-   * request_key works as WorkspaceService's, except that a retry never
+   * request_key works as WorkloadService's, except that a retry never
    * returns the token: it returns the session the first call opened, with
    * replayed set and no token, and opens nothing. Open another session for
    * a new token.
@@ -1201,6 +1227,8 @@ export const DisplayService: GenService<{
   /**
    * ListDisplaySessions returns the workspace's sessions, the newest
    * first.
+   *
+   * A page holds 50 sessions when page_size is zero, and 200 at most.
    *
    * @generated from rpc toshi.workspace.v1.DisplayService.ListDisplaySessions
    */

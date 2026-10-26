@@ -6,14 +6,14 @@ import { WatchOutputRequestSchema } from "./gen/toshi/workspace/v1/workspace_pb.
 import type {
   WatchOutputRequest,
   WatchOutputResponse,
-  WorkspaceService,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
+import type { WorkloadService } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import type { RetrySetting } from "./retry.js";
 import { READER_TAKEN, WatchState, createReader, reconnect, streamEnded } from "./stream.js";
 
 /** Starts an output watch at the request's offsets, counting the bytes it hands out (output.go:14-52). */
 export function openOutputWatch(
-  workspace: Client<typeof WorkspaceService>,
+  service: Client<typeof WorkloadService>,
   retry: RetrySetting,
   req: WatchOutputRequest,
   opts?: CallOptions,
@@ -34,7 +34,7 @@ export function openOutputWatch(
         try {
           request.stdoutOffset = stdout;
           request.stderrOffset = stderr;
-          const stream = workspace.watchOutput(request, { signal: state.signal });
+          const stream = service.watchOutput(request, { signal: state.signal });
           for await (const msg of stream) {
             attempt = 0;
             if (msg.message.case === "end") {

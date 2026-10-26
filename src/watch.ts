@@ -1,68 +1,205 @@
 import { clone, create } from "@bufbuild/protobuf";
 import type { Client } from "@connectrpc/connect";
 
-import type { CallOptions, EventWatch, WorkloadWatch } from "./client.js";
+import type { CallOptions, EventWatch, JobWatch, SandboxWatch, ServiceWatch } from "./client.js";
+import {
+  ListJobsRequestSchema,
+  ListSandboxesRequestSchema,
+  ListServicesRequestSchema,
+  WatchJobsRequestSchema,
+  WatchSandboxesRequestSchema,
+  WatchServicesRequestSchema,
+} from "./gen/toshi/workspace/v1/workloads_pb.js";
+import type {
+  ListJobsRequest,
+  ListSandboxesRequest,
+  ListServicesRequest,
+  WatchJobsRequest,
+  WatchJobsResponse,
+  WatchSandboxesRequest,
+  WatchSandboxesResponse,
+  WatchServicesRequest,
+  WatchServicesResponse,
+  WorkloadService,
+} from "./gen/toshi/workspace/v1/workloads_pb.js";
 import {
   ListEventsRequestSchema,
-  ListWorkloadsRequestSchema,
   WatchEventsRequestSchema,
-  WatchWorkloadsRequestSchema,
+  WatchEventsResponseSchema,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type {
   Event,
+  Job,
   ListEventsRequest,
-  ListWorkloadsRequest,
+  Sandbox,
+  Service,
   WatchEventsRequest,
-  WatchWorkloadsRequest,
-  WatchWorkloadsResponse,
-  Workload,
-  WorkspaceService,
+  WatchEventsResponse,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type { RetrySetting } from "./retry.js";
 import { READER_TAKEN, WatchState, createReader, reconnect, streamEnded } from "./stream.js";
 
+/** The shared shape of the three typed watches: a request, a pre-list and a stream. */
+interface WatchWire<WResp, Item> {
+  /** The watch request as handed to the server; its cursor follows the watch. */
+  readonly request: { cursor: string; keepalive: boolean };
+  /** The list the watch starts from, read to its last page. */
+  readonly list: (signal: AbortSignal) => Promise<{ items: Item[]; cursor: string }>;
+  readonly watch: (signal: AbortSignal) => AsyncIterable<WResp>;
+  readonly cursor: (message: WResp) => string;
+  /** A keepalive's position; undefined when the message is not a keepalive. */
+  readonly keepalive: (message: WResp) => { readonly cursor: string } | undefined;
+}
 
-/** Starts a workload watch; with an empty cursor it lists the workloads first (watch.go:40-84). */
-export async function openWorkloadWatch(
-  workspace: Client<typeof WorkspaceService>,
+/** The watch a caller iterates; the concrete watches below differ only in their types. */
+interface IterableWatch<WResp, Item> extends AsyncIterable<WResp> {
+  readonly cursor: string;
+  readonly snapshot: Item[] | undefined;
+  close(): void;
+}
+
+/** Starts a job watch; with an empty cursor it lists the jobs first. */
+export function openJobWatch(
+  service: Client<typeof WorkloadService>,
   retry: RetrySetting,
-  req: WatchWorkloadsRequest,
+  req: WatchJobsRequest,
   opts?: CallOptions,
-): Promise<WorkloadWatch> {
-  const state = new WatchState(req.cursor, opts?.signal);
-  let snapshot: Workload[] | undefined;
-  if (req.cursor === "") {
+): Promise<JobWatch> {
+  const request = clone(WatchJobsRequestSchema, req);
+  return openWatch<WatchJobsResponse, Job>(
+    {
+      request,
+      list: async (signal) => {
+        const list: ListJobsRequest = create(ListJobsRequestSchema, {
+          project: request.project,
+          environment: request.environment,
+        });
+        const items: Job[] = [];
+        for (;;) {
+          const page = await service.listJobs(list, { signal });
+          items.push(...page.jobs);
+          if (page.nextPageToken === "") {
+            return { items, cursor: page.cursor };
+          }
+          list.pageToken = page.nextPageToken;
+        }
+      },
+      watch: (signal) => service.watchJobs(request, { signal }),
+      cursor: (message) => message.cursor,
+      keepalive: (message) => message.keepalive,
+    },
+    retry,
+    opts,
+  );
+}
+
+/** Starts a sandbox watch; with an empty cursor it lists the sandboxes first. */
+export function openSandboxWatch(
+  service: Client<typeof WorkloadService>,
+  retry: RetrySetting,
+  req: WatchSandboxesRequest,
+  opts?: CallOptions,
+): Promise<SandboxWatch> {
+  const request = clone(WatchSandboxesRequestSchema, req);
+  return openWatch<WatchSandboxesResponse, Sandbox>(
+    {
+      request,
+      list: async (signal) => {
+        const list: ListSandboxesRequest = create(ListSandboxesRequestSchema, {
+          project: request.project,
+          environment: request.environment,
+        });
+        const items: Sandbox[] = [];
+        for (;;) {
+          const page = await service.listSandboxes(list, { signal });
+          items.push(...page.sandboxes);
+          if (page.nextPageToken === "") {
+            return { items, cursor: page.cursor };
+          }
+          list.pageToken = page.nextPageToken;
+        }
+      },
+      watch: (signal) => service.watchSandboxes(request, { signal }),
+      cursor: (message) => message.cursor,
+      keepalive: (message) => message.keepalive,
+    },
+    retry,
+    opts,
+  );
+}
+
+/** Starts a service watch; with an empty cursor it lists the services first. */
+export function openServiceWatch(
+  service: Client<typeof WorkloadService>,
+  retry: RetrySetting,
+  req: WatchServicesRequest,
+  opts?: CallOptions,
+): Promise<ServiceWatch> {
+  const request = clone(WatchServicesRequestSchema, req);
+  return openWatch<WatchServicesResponse, Service>(
+    {
+      request,
+      list: async (signal) => {
+        const list: ListServicesRequest = create(ListServicesRequestSchema, {
+          project: request.project,
+          environment: request.environment,
+        });
+        const items: Service[] = [];
+        for (;;) {
+          const page = await service.listServices(list, { signal });
+          items.push(...page.services);
+          if (page.nextPageToken === "") {
+            return { items, cursor: page.cursor };
+          }
+          list.pageToken = page.nextPageToken;
+        }
+      },
+      watch: (signal) => service.watchServices(request, { signal }),
+      cursor: (message) => message.cursor,
+      keepalive: (message) => message.keepalive,
+    },
+    retry,
+    opts,
+  );
+}
+
+async function openWatch<WResp, Item>(
+  wire: WatchWire<WResp, Item>,
+  retry: RetrySetting,
+  opts?: CallOptions,
+): Promise<IterableWatch<WResp, Item>> {
+  const state = new WatchState(wire.request.cursor, opts?.signal);
+  let snapshot: Item[] | undefined;
+  if (wire.request.cursor === "") {
     try {
-      const listed = await listWorkloads(workspace, req, state);
-      snapshot = listed.workloads;
+      const listed = await wire.list(state.signal);
+      snapshot = listed.items;
       state.cursor = listed.cursor;
     } catch (err) {
       state.close();
       throw err;
     }
   }
+  wire.request.cursor = state.cursor;
+  wire.request.keepalive = true;
 
-  const request = clone(WatchWorkloadsRequestSchema, req);
-  request.cursor = state.cursor;
-  request.keepalive = true;
-
-  let reader: AsyncIterableIterator<WatchWorkloadsResponse> | undefined;
+  let reader: AsyncIterableIterator<WResp> | undefined;
   return {
     get cursor(): string {
       return state.cursor;
     },
-    get snapshot(): Workload[] | undefined {
+    get snapshot(): Item[] | undefined {
       return snapshot;
     },
     close(): void {
       state.close();
     },
-    [Symbol.asyncIterator](): AsyncIterableIterator<WatchWorkloadsResponse> {
+    [Symbol.asyncIterator](): AsyncIterableIterator<WResp> {
       if (reader !== undefined) {
         throw new Error(READER_TAKEN);
       }
       reader = createReader(
-        () => runWorkloads(workspace, retry, request, state),
+        () => runWatch(wire, retry, state),
         () => state.close(),
       );
       return reader;
@@ -70,81 +207,11 @@ export async function openWorkloadWatch(
   };
 }
 
-/** Starts an event watch; with an empty cursor it pages ListEvents as the caller iterates (watch.go:261-283). */
-export function openEventWatch(
-  workspace: Client<typeof WorkspaceService>,
+async function* runWatch<WResp, Item>(
+  wire: WatchWire<WResp, Item>,
   retry: RetrySetting,
-  req: WatchEventsRequest,
-  opts?: CallOptions,
-): Promise<EventWatch> {
-  const state = new WatchState(req.cursor, opts?.signal);
-  const request = clone(WatchEventsRequestSchema, req);
-  request.keepalive = true;
-  const list = createListEventsRequest(req);
-  const listing = req.cursor === "";
-
-  let reader: AsyncIterableIterator<Event> | undefined;
-  const watch: EventWatch = {
-    get cursor(): string {
-      return state.cursor;
-    },
-    close(): void {
-      state.close();
-    },
-    [Symbol.asyncIterator](): AsyncIterableIterator<Event> {
-      if (reader !== undefined) {
-        throw new Error(READER_TAKEN);
-      }
-      reader = createReader(
-        () => runEvents(workspace, retry, request, list, listing, state),
-        () => state.close(),
-      );
-      return reader;
-    },
-  };
-  return Promise.resolve(watch);
-}
-
-// watch.go:65-84: every page of the list returns the event log's position.
-async function listWorkloads(
-  workspace: Client<typeof WorkspaceService>,
-  req: WatchWorkloadsRequest,
   state: WatchState,
-): Promise<{ workloads: Workload[]; cursor: string }> {
-  const list = createListWorkloadsRequest(req);
-  const workloads: Workload[] = [];
-  for (;;) {
-    const page = await workspace.listWorkloads(list, { signal: state.signal });
-    workloads.push(...page.workloads);
-    if (page.nextPageToken === "") {
-      return { workloads, cursor: page.cursor };
-    }
-    list.pageToken = page.nextPageToken;
-  }
-}
-
-function createListWorkloadsRequest(req: WatchWorkloadsRequest): ListWorkloadsRequest {
-  return create(ListWorkloadsRequestSchema, {
-    project: req.project,
-    environment: req.environment,
-    kinds: req.kinds,
-  });
-}
-
-function createListEventsRequest(req: WatchEventsRequest): ListEventsRequest {
-  return create(ListEventsRequestSchema, {
-    project: req.project,
-    environment: req.environment,
-    workloadId: req.workloadId,
-  });
-}
-
-async function* runWorkloads(
-  workspace: Client<typeof WorkspaceService>,
-  retry: RetrySetting,
-  request: WatchWorkloadsRequest,
-  state: WatchState,
-): AsyncGenerator<WatchWorkloadsResponse, void, undefined> {
+): AsyncGenerator<WResp, void, undefined> {
   let attempt = 0;
   try {
     for (;;) {
@@ -153,20 +220,21 @@ async function* runWorkloads(
       }
       let cause: unknown;
       try {
-        request.cursor = state.cursor;
-        const stream = workspace.watchWorkloads(request, { signal: state.signal });
-        for await (const msg of stream) {
+        wire.request.cursor = state.cursor;
+        for await (const message of wire.watch(state.signal)) {
           attempt = 0;
-          if (msg.keepalive !== undefined) {
-            if (msg.keepalive.cursor !== "") {
-              state.cursor = msg.keepalive.cursor;
+          const keepalive = wire.keepalive(message);
+          if (keepalive !== undefined) {
+            if (keepalive.cursor !== "") {
+              state.cursor = keepalive.cursor;
             }
             continue;
           }
-          if (msg.cursor !== "") {
-            state.cursor = msg.cursor;
+          const cursor = wire.cursor(message);
+          if (cursor !== "") {
+            state.cursor = cursor;
           }
-          yield msg;
+          yield message;
         }
         if (state.closed) {
           return;
@@ -188,21 +256,62 @@ async function* runWorkloads(
   }
 }
 
+/**
+ * Starts an event watch; with an empty cursor it pages the event log as the
+ * caller iterates. Every message it yields is the stream's response.
+ */
+export function openEventWatch(
+  service: Client<typeof WorkloadService>,
+  retry: RetrySetting,
+  req: WatchEventsRequest,
+  opts?: CallOptions,
+): Promise<EventWatch> {
+  const state = new WatchState(req.cursor, opts?.signal);
+  const request = clone(WatchEventsRequestSchema, req);
+  request.keepalive = true;
+  const list = create(ListEventsRequestSchema, {
+    project: req.project,
+    environment: req.environment,
+    workloadId: req.workloadId,
+  });
+  const listing = req.cursor === "";
+
+  let reader: AsyncIterableIterator<WatchEventsResponse> | undefined;
+  const watch: EventWatch = {
+    get cursor(): string {
+      return state.cursor;
+    },
+    close(): void {
+      state.close();
+    },
+    [Symbol.asyncIterator](): AsyncIterableIterator<WatchEventsResponse> {
+      if (reader !== undefined) {
+        throw new Error(READER_TAKEN);
+      }
+      reader = createReader(
+        () => runEvents(service, retry, request, list, listing, state),
+        () => state.close(),
+      );
+      return reader;
+    },
+  };
+  return Promise.resolve(watch);
+}
+
 async function* runEvents(
-  workspace: Client<typeof WorkspaceService>,
+  service: Client<typeof WorkloadService>,
   retry: RetrySetting,
   request: WatchEventsRequest,
   list: ListEventsRequest,
   listingAtStart: boolean,
   state: WatchState,
-): AsyncGenerator<Event, void, undefined> {
+): AsyncGenerator<WatchEventsResponse, void, undefined> {
   let attempt = 0;
   let page: Event[] = [];
   let pageIndex = 0;
   let listing = listingAtStart;
-  // watch.go:305-317: resume is the position the next stream opens at, separate
-  // from the cursor the caller sees, which only moves on events handed out and
-  // keepalives consumed.
+  // Resume is the position the next stream opens at, separate from the cursor
+  // the caller sees, which only moves on events handed out and keepalives read.
   let resume = state.cursor;
   try {
     for (;;) {
@@ -220,14 +329,14 @@ async function* runEvents(
               state.cursor = event.cursor;
               resume = event.cursor;
             }
-            yield event;
+            yield create(WatchEventsResponseSchema, { event });
             continue;
           }
-          const listed = await workspace.listEvents(list, { signal: state.signal });
+          const listed = await service.listEvents(list, { signal: state.signal });
           page = listed.events;
           pageIndex = 0;
           if (listed.cursor !== "") {
-            list.cursor = listed.cursor;
+            list.pageToken = listed.cursor;
           }
           if (page.length > 0) {
             continue;
@@ -240,10 +349,9 @@ async function* runEvents(
         }
 
         request.cursor = resume;
-        const stream = workspace.watchEvents(request, { signal: state.signal });
-        for await (const msg of stream) {
+        for await (const message of service.watchEvents(request, { signal: state.signal })) {
           attempt = 0;
-          const keepalive = msg.keepalive;
+          const keepalive = message.keepalive;
           if (keepalive !== undefined) {
             if (keepalive.cursor !== "") {
               state.cursor = keepalive.cursor;
@@ -251,7 +359,7 @@ async function* runEvents(
             }
             continue;
           }
-          const event = msg.event;
+          const event = message.event;
           if (event === undefined) {
             continue;
           }
@@ -259,7 +367,7 @@ async function* runEvents(
             state.cursor = event.cursor;
             resume = event.cursor;
           }
-          yield event;
+          yield message;
         }
         if (state.closed) {
           return;
@@ -280,4 +388,3 @@ async function* runEvents(
     throw err;
   }
 }
-

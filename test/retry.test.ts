@@ -3,11 +3,15 @@ import { Code, ConnectError, createClient, createRouterTransport } from "@connec
 import type { Interceptor, ServiceImpl, Transport } from "@connectrpc/connect";
 import { describe, expect, it } from "vitest";
 
+import { ArtifactService, ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
+import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
 import { DisplayService } from "../src/gen/toshi/workspace/v1/display_pb.js";
 import { ProjectService } from "../src/gen/toshi/workspace/v1/projects_pb.js";
+import { RecordingService } from "../src/gen/toshi/workspace/v1/recordings_pb.js";
 import { SecretService } from "../src/gen/toshi/workspace/v1/secrets_pb.js";
+import { VolumeService } from "../src/gen/toshi/workspace/v1/volumes_pb.js";
 import { WebhookService } from "../src/gen/toshi/workspace/v1/webhook_pb.js";
-import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
+import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import { retryInterceptor } from "../src/interceptors.js";
 import { backoffDelay, isTransportLoss, procedurePath, retryClassFor } from "../src/retry.js";
 import type { RetryPolicy } from "../src/retry.js";
@@ -15,11 +19,16 @@ import type { RetryPolicy } from "../src/retry.js";
 const fastPolicy: RetryPolicy = { maxAttempts: 3, initialBackoffMs: 5, maxBackoffMs: 20 };
 
 const services: readonly DescService[] = [
-  WorkspaceService,
+  WorkloadService,
   ProjectService,
   SecretService,
   WebhookService,
   DisplayService,
+  ChannelService,
+  RecordingService,
+  VolumeService,
+  ArtifactService,
+  ArtifactUploadService,
 ];
 
 function transportFor<T extends DescService>(
@@ -36,7 +45,7 @@ function transportFor<T extends DescService>(
 }
 
 describe("the retry table", () => {
-  it("names every method of the five services, 22 reads, 9 keyed and 34 none", () => {
+  it("names every method of the ten services, 42 reads, 15 keyed and 48 none", () => {
     const counts = { read: 0, keyed: 0, none: 0 };
     const paths = new Set<string>();
     for (const service of services) {
@@ -47,8 +56,8 @@ describe("the retry table", () => {
         counts[retryClassFor(path)] += 1;
       }
     }
-    expect(paths.size).toBe(65);
-    expect(counts).toEqual({ read: 22, keyed: 9, none: 34 });
+    expect(paths.size).toBe(105);
+    expect(counts).toEqual({ read: 42, keyed: 15, none: 48 });
   });
 });
 
@@ -65,17 +74,17 @@ describe("retryInterceptor", () => {
   it("retries Unavailable for a read up to maxAttempts", async () => {
     let attempts = 0;
     const transport = transportFor(
-      WorkspaceService,
+      WorkloadService,
       {
-        getWorkload() {
+        getJob() {
           attempts += 1;
           throw new ConnectError("down", Code.Unavailable);
         },
       },
       retryInterceptor(fastPolicy),
     );
-    const workspace = createClient(WorkspaceService, transport);
-    await expect(workspace.getWorkload({ id: "w" })).rejects.toMatchObject({
+    const workload = createClient(WorkloadService, transport);
+    await expect(workload.getJob({ id: "w" })).rejects.toMatchObject({
       code: Code.Unavailable,
     });
     expect(attempts).toBe(3);
@@ -84,17 +93,17 @@ describe("retryInterceptor", () => {
   it("retries Unavailable for a keyed write up to maxAttempts", async () => {
     let attempts = 0;
     const transport = transportFor(
-      WorkspaceService,
+      WorkloadService,
       {
-        createWorkload() {
+        createJob() {
           attempts += 1;
           throw new ConnectError("down", Code.Unavailable);
         },
       },
       retryInterceptor(fastPolicy),
     );
-    const workspace = createClient(WorkspaceService, transport);
-    await expect(workspace.createWorkload({})).rejects.toMatchObject({ code: Code.Unavailable });
+    const workload = createClient(WorkloadService, transport);
+    await expect(workload.createJob({})).rejects.toMatchObject({ code: Code.Unavailable });
     expect(attempts).toBe(3);
   });
 
@@ -103,7 +112,7 @@ describe("retryInterceptor", () => {
     const transport = transportFor(
       SecretService,
       {
-        setSecret() {
+        putSecret() {
           attempts += 1;
           throw new ConnectError("down", Code.Unavailable);
         },
@@ -111,24 +120,24 @@ describe("retryInterceptor", () => {
       retryInterceptor(fastPolicy),
     );
     const secrets = createClient(SecretService, transport);
-    await expect(secrets.setSecret({})).rejects.toMatchObject({ code: Code.Unavailable });
+    await expect(secrets.putSecret({})).rejects.toMatchObject({ code: Code.Unavailable });
     expect(attempts).toBe(1);
   });
 
   it("does not retry a server-sent Aborted", async () => {
     let attempts = 0;
     const transport = transportFor(
-      WorkspaceService,
+      WorkloadService,
       {
-        getWorkload() {
+        getJob() {
           attempts += 1;
           throw new ConnectError("cancelled by the server", Code.Aborted);
         },
       },
       retryInterceptor(fastPolicy),
     );
-    const workspace = createClient(WorkspaceService, transport);
-    await expect(workspace.getWorkload({ id: "w" })).rejects.toMatchObject({
+    const workload = createClient(WorkloadService, transport);
+    await expect(workload.getJob({ id: "w" })).rejects.toMatchObject({
       code: Code.Aborted,
     });
     expect(attempts).toBe(1);
@@ -138,17 +147,17 @@ describe("retryInterceptor", () => {
     for (const code of [Code.InvalidArgument, Code.ResourceExhausted]) {
       let attempts = 0;
       const transport = transportFor(
-        WorkspaceService,
+        WorkloadService,
         {
-          getWorkload() {
+          getJob() {
             attempts += 1;
             throw new ConnectError("refused", code);
           },
         },
         retryInterceptor(fastPolicy),
       );
-      const workspace = createClient(WorkspaceService, transport);
-      await expect(workspace.getWorkload({ id: "w" })).rejects.toMatchObject({ code });
+      const workload = createClient(WorkloadService, transport);
+      await expect(workload.getJob({ id: "w" })).rejects.toMatchObject({ code });
       expect(attempts).toBe(1);
     }
   });
@@ -158,9 +167,9 @@ describe("retryInterceptor", () => {
     let attempts = 0;
     const policy: RetryPolicy = { maxAttempts: 3, initialBackoffMs: 60_000, maxBackoffMs: 60_000 };
     const transport = transportFor(
-      WorkspaceService,
+      WorkloadService,
       {
-        getWorkload() {
+        getJob() {
           attempts += 1;
           // Abort as the interceptor turns to a sleep of up to a minute.
           controller.abort();
@@ -169,10 +178,10 @@ describe("retryInterceptor", () => {
       },
       retryInterceptor(policy),
     );
-    const workspace = createClient(WorkspaceService, transport);
+    const workload = createClient(WorkloadService, transport);
     const started = Date.now();
     await expect(
-      workspace.getWorkload({ id: "w" }, { signal: controller.signal }),
+      workload.getJob({ id: "w" }, { signal: controller.signal }),
     ).rejects.toBeDefined();
     expect(Date.now() - started).toBeLessThan(1_000);
     expect(attempts).toBe(1);

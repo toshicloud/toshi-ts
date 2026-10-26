@@ -4,16 +4,17 @@ import { Code, ConnectError, createClient, createRouterTransport } from "@connec
 import type { ServiceImpl } from "@connectrpc/connect";
 import { describe, expect, it } from "vitest";
 
-import { WatchOutputRequestSchema, WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
+import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
+import { WatchOutputRequestSchema } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 import { openOutputWatch } from "../src/output.js";
 
 const fastRetry = { maxAttempts: 3, initialBackoffMs: 0, maxBackoffMs: 0 };
 
-function workspaceWith(impl: Partial<ServiceImpl<typeof WorkspaceService>>) {
+function workloadWith(impl: Partial<ServiceImpl<typeof WorkloadService>>) {
   const transport = createRouterTransport((router) => {
-    router.service(WorkspaceService, impl);
+    router.service(WorkloadService, impl);
   });
-  return createClient(WorkspaceService, transport);
+  return createClient(WorkloadService, transport);
 }
 
 // A promise that never settles: the fake server keeps its stream open.
@@ -59,7 +60,7 @@ describe("output watch", () => {
     const serverAborted = new Promise<void>((resolve) => {
       resolveAborted = resolve;
     });
-    const workspace = workspaceWith({
+    const workload = workloadWith({
       watchOutput(_req, ctx) {
         ctx.signal.addEventListener(
           "abort",
@@ -76,7 +77,7 @@ describe("output watch", () => {
       },
     });
 
-    const watch = await openOutputWatch(workspace, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
+    const watch = await openOutputWatch(workload, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
     const reader = watch[Symbol.asyncIterator]();
     await reader.next();
     const end = await reader.next();
@@ -89,7 +90,7 @@ describe("output watch", () => {
   });
 
   it("counts yielded bytes as bigint from the request's starting offsets", async () => {
-    const workspace = workspaceWith({
+    const workload = workloadWith({
       watchOutput() {
         return (async function* () {
           yield { message: { case: "stdout", value: new Uint8Array([1, 2, 3]) } };
@@ -101,7 +102,7 @@ describe("output watch", () => {
     });
 
     const watch = await openOutputWatch(
-      workspace,
+      workload,
       fastRetry,
       create(WatchOutputRequestSchema, { id: "j1", stdoutOffset: 5n, stderrOffset: 7n }),
     );
@@ -120,26 +121,26 @@ describe("output watch", () => {
 
   it("ends the iteration with OUT_OF_RANGE without reconnecting", async () => {
     let calls = 0;
-    const workspace = workspaceWith({
+    const workload = workloadWith({
       watchOutput() {
         calls += 1;
         return failedStream(new ConnectError("offset past the bytes the server holds", Code.OutOfRange));
       },
     });
 
-    const watch = await openOutputWatch(workspace, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
+    const watch = await openOutputWatch(workload, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
     await expect(watch[Symbol.asyncIterator]().next()).rejects.toMatchObject({ code: Code.OutOfRange });
     expect(calls).toBe(1);
   });
 
   it("releases the caller's abort listener when the watch ends with an error", async () => {
-    const workspace = workspaceWith({
+    const workload = workloadWith({
       watchOutput() {
         return failedStream(new ConnectError("the job's output is no longer held", Code.FailedPrecondition));
       },
     });
     const controller = new AbortController();
-    const watch = await openOutputWatch(workspace, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }), {
+    const watch = await openOutputWatch(workload, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }), {
       signal: controller.signal,
     });
     expect(getEventListeners(controller.signal, "abort")).toHaveLength(1);
@@ -151,14 +152,14 @@ describe("output watch", () => {
 
   it("ends the iteration with FAILED_PRECONDITION without reconnecting", async () => {
     let calls = 0;
-    const workspace = workspaceWith({
+    const workload = workloadWith({
       watchOutput() {
         calls += 1;
         return failedStream(new ConnectError("the job's output is no longer held", Code.FailedPrecondition));
       },
     });
 
-    const watch = await openOutputWatch(workspace, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
+    const watch = await openOutputWatch(workload, fastRetry, create(WatchOutputRequestSchema, { id: "j1" }));
     await expect(watch[Symbol.asyncIterator]().next()).rejects.toMatchObject({
       code: Code.FailedPrecondition,
     });

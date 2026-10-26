@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/projects.proto.
  */
 export const file_toshi_workspace_v1_projects: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKFAQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIVChNMaXN0UHJvamVjdHNSZXF1ZXN0InoKFExpc3RQcm9qZWN0c1Jlc3BvbnNlEi0KCHByb2plY3RzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QSMwoLdG9rZW5fbGltaXQYAiABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5MaW1pdCIyCgpUb2tlbkxpbWl0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkiKgoXTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCSJQChhMaXN0UmVwb3NpdG9yaWVzUmVzcG9uc2USNAoMcmVwb3NpdG9yaWVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI5ChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiKQoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJIkgKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiVwoVU2V0QnJhbmNoUnVsZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSLQoFcnVsZXMYAiADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSJHChZTZXRCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUi1QIKCkVtYmVkVG9rZW4SCgoCaWQYASABKAkSDwoHcHJvamVjdBgCIAEoCRIPCgdvcmlnaW5zGAMgAygJEjIKBXN0YXRlGAQgASgOMiMudG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW5TdGF0ZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgd1c2VkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxyZWNvcmRpbmdfaWQYCCABKAkSLgoKcmV2b2tlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgKIAEoCSJqChdDcmVhdGVFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEg8KB29yaWdpbnMYAiADKAkSLQoKZXhwaXJlc19pbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJeChhDcmVhdGVFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbhINCgV0b2tlbhgCIAEoCSIpChZMaXN0RW1iZWRUb2tlbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkiTwoXTGlzdEVtYmVkVG9rZW5zUmVzcG9uc2USNAoMZW1iZWRfdG9rZW5zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4iQgoXUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIWCg5lbWJlZF90b2tlbl9pZBgCIAEoCSJPChhSZXZva2VFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbiqsAQoPRW1iZWRUb2tlblN0YXRlEiEKHUVNQkVEX1RPS0VOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYRU1CRURfVE9LRU5fU1RBVEVfQUNUSVZFEAESGgoWRU1CRURfVE9LRU5fU1RBVEVfVVNFRBACEh0KGUVNQkVEX1RPS0VOX1NUQVRFX1JFVk9LRUQQAxIdChlFTUJFRF9UT0tFTl9TVEFURV9FWFBJUkVEEAQylAoKDlByb2plY3RTZXJ2aWNlEmEKDExpc3RQcm9qZWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1Jlc3BvbnNlElsKCkdldFByb2plY3QSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlc3BvbnNlEm0KEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlEmQKDUNyZWF0ZVByb2plY3QSKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlc3BvbnNlEmoKD0NsYWltUmVwb3NpdG9yeRIqLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlc3BvbnNlEnAKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEnAKEURlbGV0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlEmoKD0xpc3RCcmFuY2hSdWxlcxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEmcKDlNldEJyYW5jaFJ1bGVzEikudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1Jlc3BvbnNlEm0KEENyZWF0ZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEmoKD0xpc3RFbWJlZFRva2VucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEm0KEFJldm9rZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlc3BvbnNlQi1aK2dpdGh1Yi5jb20vdG9zaGljbG91ZC90b3NoaS1hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKFAQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI5ChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiUAoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImEKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlcKFVNldEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEi0KBXJ1bGVzGAIgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiRwoWU2V0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlItUCCgpFbWJlZFRva2VuEgoKAmlkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHb3JpZ2lucxgDIAMoCRIyCgVzdGF0ZRgEIAEoDjIjLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHdXNlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMcmVjb3JkaW5nX2lkGAggASgJEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkiagoXQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIPCgdvcmlnaW5zGAIgAygJEi0KCmV4cGlyZXNfaW4YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXgoYQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEjMKC2VtYmVkX3Rva2VuGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4SDQoFdG9rZW4YAiABKAkiUAoWTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImgKF0xpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEjQKDGVtYmVkX3Rva2VucxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJCChdSZXZva2VFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhYKDmVtYmVkX3Rva2VuX2lkGAIgASgJIk8KGFJldm9rZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuKqwBCg9FbWJlZFRva2VuU3RhdGUSIQodRU1CRURfVE9LRU5fU1RBVEVfVU5TUEVDSUZJRUQQABIcChhFTUJFRF9UT0tFTl9TVEFURV9BQ1RJVkUQARIaChZFTUJFRF9UT0tFTl9TVEFURV9VU0VEEAISHQoZRU1CRURfVE9LRU5fU1RBVEVfUkVWT0tFRBADEh0KGUVNQkVEX1RPS0VOX1NUQVRFX0VYUElSRUQQBDKUCgoOUHJvamVjdFNlcnZpY2USYQoMTGlzdFByb2plY3RzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2plY3RzUmVzcG9uc2USWwoKR2V0UHJvamVjdBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVzcG9uc2USbQoQTGlzdFJlcG9zaXRvcmllcxIrLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVwb3NpdG9yaWVzUmVzcG9uc2USZAoNQ3JlYXRlUHJvamVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVzcG9uc2USagoPQ2xhaW1SZXBvc2l0b3J5EioudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ2xhaW1SZXBvc2l0b3J5UmVzcG9uc2UScAoRQ3JlYXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2UScAoRRGVsZXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVzcG9uc2USagoPTGlzdEJyYW5jaFJ1bGVzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEJyYW5jaFJ1bGVzUmVzcG9uc2USZwoOU2V0QnJhbmNoUnVsZXMSKS50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVzcG9uc2USbQoQQ3JlYXRlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVzcG9uc2USagoPTGlzdEVtYmVkVG9rZW5zEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEVtYmVkVG9rZW5zUmVzcG9uc2USbQoQUmV2b2tlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVzcG9uc2VCLVorZ2l0aHViLmNvbS90b3NoaWNsb3VkL3Rvc2hpLWFwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp]);
 
 /**
  * Project is one of a workspace's projects.
@@ -175,12 +175,38 @@ export const RepositorySchema: GenMessage<Repository, {jsonType: RepositoryJson}
  * @generated from message toshi.workspace.v1.ListProjectsRequest
  */
 export type ListProjectsRequest = Message<"toshi.workspace.v1.ListProjectsRequest"> & {
+  /**
+   * The most projects in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
 };
 
 /**
  * @generated from message toshi.workspace.v1.ListProjectsRequest
  */
 export type ListProjectsRequestJson = {
+  /**
+   * The most projects in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -207,6 +233,13 @@ export type ListProjectsResponse = Message<"toshi.workspace.v1.ListProjectsRespo
    * @generated from field: toshi.workspace.v1.TokenLimit token_limit = 2;
    */
   tokenLimit?: TokenLimit | undefined;
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 3;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -226,6 +259,13 @@ export type ListProjectsResponseJson = {
    * @generated from field: toshi.workspace.v1.TokenLimit token_limit = 2;
    */
   tokenLimit?: TokenLimitJson;
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 3;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -298,6 +338,20 @@ export type ListRepositoriesRequest = Message<"toshi.workspace.v1.ListRepositori
    * @generated from field: string project = 1;
    */
   project: string;
+
+  /**
+   * The most repositories in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -310,6 +364,20 @@ export type ListRepositoriesRequestJson = {
    * @generated from field: string project = 1;
    */
   project?: string;
+
+  /**
+   * The most repositories in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -327,6 +395,13 @@ export type ListRepositoriesResponse = Message<"toshi.workspace.v1.ListRepositor
    * @generated from field: repeated toshi.workspace.v1.Repository repositories = 1;
    */
   repositories: Repository[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -337,6 +412,13 @@ export type ListRepositoriesResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.Repository repositories = 1;
    */
   repositories?: RepositoryJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -777,6 +859,20 @@ export type ListBranchRulesRequest = Message<"toshi.workspace.v1.ListBranchRules
    * @generated from field: string project = 1;
    */
   project: string;
+
+  /**
+   * The most rules in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -789,6 +885,20 @@ export type ListBranchRulesRequestJson = {
    * @generated from field: string project = 1;
    */
   project?: string;
+
+  /**
+   * The most rules in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -806,6 +916,13 @@ export type ListBranchRulesResponse = Message<"toshi.workspace.v1.ListBranchRule
    * @generated from field: repeated toshi.workspace.v1.BranchRule rules = 1;
    */
   rules: BranchRule[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -816,6 +933,13 @@ export type ListBranchRulesResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.BranchRule rules = 1;
    */
   rules?: BranchRuleJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -1168,6 +1292,20 @@ export type ListEmbedTokensRequest = Message<"toshi.workspace.v1.ListEmbedTokens
    * @generated from field: string project = 1;
    */
   project: string;
+
+  /**
+   * The most embed tokens in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
 };
 
 /**
@@ -1180,6 +1318,20 @@ export type ListEmbedTokensRequestJson = {
    * @generated from field: string project = 1;
    */
   project?: string;
+
+  /**
+   * The most embed tokens in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken?: string;
 };
 
 /**
@@ -1197,6 +1349,13 @@ export type ListEmbedTokensResponse = Message<"toshi.workspace.v1.ListEmbedToken
    * @generated from field: repeated toshi.workspace.v1.EmbedToken embed_tokens = 1;
    */
   embedTokens: EmbedToken[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
 };
 
 /**
@@ -1207,6 +1366,13 @@ export type ListEmbedTokensResponseJson = {
    * @generated from field: repeated toshi.workspace.v1.EmbedToken embed_tokens = 1;
    */
   embedTokens?: EmbedTokenJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
 };
 
 /**
@@ -1339,7 +1505,7 @@ export const EmbedTokenStateSchema: GenEnum<EmbedTokenState, EmbedTokenStateJson
  * repository's claim and sets the branch rules that choose a CI job's
  * environment. A workspace holds projects, and a project holds environments.
  *
- * The caller's credential names the workspace, as for WorkspaceService.
+ * The caller's credential names the workspace, as for WorkloadService.
  * Nothing of another workspace is visible.
  *
  * @generated from service toshi.workspace.v1.ProjectService
@@ -1348,6 +1514,8 @@ export const ProjectService: GenService<{
   /**
    * ListProjects returns the workspace's projects by name, each with its
    * environments by name.
+   *
+   * A page holds 100 projects when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.ProjectService.ListProjects
    */
@@ -1374,6 +1542,8 @@ export const ProjectService: GenService<{
    * ListRepositories returns the repositories the workspace's projects
    * claim, by repository. A project the workspace does not have is
    * NOT_FOUND.
+   *
+   * A page holds 100 repositories when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.ProjectService.ListRepositories
    */
@@ -1454,6 +1624,8 @@ export const ProjectService: GenService<{
    * project's rules, and a token limited to an environment is
    * PERMISSION_DENIED.
    *
+   * A page holds 100 rules when page_size is zero, and 1000 at most.
+   *
    * @generated from rpc toshi.workspace.v1.ProjectService.ListBranchRules
    */
   listBranchRules: {
@@ -1499,6 +1671,8 @@ export const ProjectService: GenService<{
   /**
    * ListEmbedTokens returns a project's embed tokens, oldest first, without
    * the tokens themselves.
+   *
+   * A page holds 100 embed tokens when page_size is zero, and 1000 at most.
    *
    * @generated from rpc toshi.workspace.v1.ProjectService.ListEmbedTokens
    */

@@ -26,15 +26,9 @@ import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import { createToshiClient } from "../../src/client.js";
 import type { OutputWatch, ToshiClient } from "../../src/client.js";
 import { StreamLostError } from "../../src/errors.js";
-import {
-  EventType,
-  WorkloadKind,
-  WorkloadState,
-} from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
-import type {
-  Workload,
-  WatchWorkloadsResponse,
-} from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
+import { EventType, JobState } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
+import type { Job } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
+import type { WatchJobsResponse } from "../../src/gen/toshi/workspace/v1/workloads_pb.js";
 
 const INSTALLATION_ID = "4242";
 const ACCOUNT = "acme";
@@ -163,7 +157,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
           webhookPath,
           "--installation",
           INSTALLATION_ID,
-          "--repo",
+          "--repository",
           `${ACCOUNT}/app`,
           "--event",
           "installation",
@@ -179,9 +173,9 @@ describe.skipIf(skipped)("toshi serve integration", () => {
         await runTool(
           bin,
           [
-            "tokens",
+            "token",
             "create",
-            "--tenant",
+            "--workspace",
             INSTALLATION_ID,
             "--name",
             "sdk-integration",
@@ -192,7 +186,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
         )
       ).trim();
       if (token === "") {
-        throw new Error("tokens create printed no token");
+        throw new Error("token create printed no token");
       }
 
       running = { client: newClient(servePort, tls.caPem, token) };
@@ -226,7 +220,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   it(
     "lists the workspace's projects and environments",
     async () => {
-      const response = await harness().client.projects.listProjects({});
+      const response = await harness().client.project.listProjects({});
       const project = response.projects.find((candidate) => candidate.name === PROJECT);
       if (project === undefined) {
         throw new Error(`projects do not hold ${PROJECT}`);
@@ -241,23 +235,22 @@ describe.skipIf(skipped)("toshi serve integration", () => {
     "creates a workload with an explicit request key, idempotently",
     async () => {
       const client = harness().client;
-      const first = await createWorkload(client, "sdk-fixed-key");
-      expect(first.kind).toBe(WorkloadKind.JOB);
+      const first = await createJob(client, "sdk-fixed-key");
       expect(first.labels.suite).toBe(SUITE_LABEL);
       expect(first.id).not.toBe("");
 
-      const again = await createWorkload(client, "sdk-fixed-key");
+      const again = await createJob(client, "sdk-fixed-key");
       expect(again.id).toBe(first.id);
 
       // No key: the client's interceptor fills one, so this is a second write.
-      const second = await createWorkload(client, "");
+      const second = await createJob(client, "");
       expect(second.id).not.toBe(first.id);
       expect(second.labels.suite).toBe(SUITE_LABEL);
 
       state.firstId = first.id;
       state.secondId = second.id;
       pass(
-        "createWorkload",
+        "createJob",
         `the same request key returned ${first.id} twice, an unfilled one made ${second.id}`,
       );
     },
@@ -267,98 +260,109 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   it(
     "gets the created workload",
     async () => {
-      const response = await harness().client.workspace.getWorkload({ id: state.firstId });
-      const workload = response.workload;
-      if (workload === undefined) {
-        throw new Error("GetWorkload returned no workload");
+      const response = await harness().client.workload.jobs.get({ id: state.firstId });
+      const job = response.job;
+      if (job === undefined) {
+        throw new Error("GetJob returned no job");
       }
-      expect(workload.id).toBe(state.firstId);
-      expect(workload.labels.suite).toBe(SUITE_LABEL);
-      pass("getWorkload", `${workload.id} carries suite=${SUITE_LABEL}`);
+      expect(job.id).toBe(state.firstId);
+      expect(job.labels.suite).toBe(SUITE_LABEL);
+      pass("getJob", `${job.id} carries suite=${SUITE_LABEL}`);
     },
     CASE_TIMEOUT_MS,
   );
 
   it(
-    "pages through listWorkloads",
+    "pages through ListJobs",
     async () => {
       const client = harness().client;
       const seen: string[] = [];
       let pageToken = "";
       let pages = 0;
       do {
-        const page = await client.workspace.listWorkloads({
+        const page = await client.workload.jobs.list({
           labels: { suite: SUITE_LABEL },
           pageSize: 1,
           pageToken,
         });
-        for (const workload of page.workloads) {
-          seen.push(workload.id);
+        for (const job of page.jobs) {
+          seen.push(job.id);
         }
         pageToken = page.nextPageToken;
         pages += 1;
         if (pages > 20) {
-          throw new Error("listWorkloads kept handing out page tokens");
+          throw new Error("ListJobs kept handing out page tokens");
         }
       } while (pageToken !== "");
       expect(pages).toBeGreaterThan(1);
       expect(seen).toEqual(expect.arrayContaining([state.firstId, state.secondId]));
-      pass("listWorkloads", `${String(pages)} pages of one held ${JSON.stringify(seen)}`);
+      pass("listJobs", `${String(pages)} pages of one held ${JSON.stringify(seen)}`);
     },
     CASE_TIMEOUT_MS,
   );
 
   it(
-    "waits for the workload state the pin reaches",
+    "waits for the job state the pin reaches",
     async () => {
       const client = harness().client;
       // The pin has no host with a free slot, so the job stays QUEUED.
-      const got = await client.workspace.getWorkload({ id: state.firstId });
-      expect(got.workload?.status?.state).toBe(WorkloadState.QUEUED);
+      const got = await client.workload.jobs.get({ id: state.firstId });
+      expect(got.job?.status?.state).toBe(JobState.QUEUED);
 
       // The helper returns as soon as the state is one it waits for.
-      const reached = await client.waitWorkload({
+      const reached = await client.workload.jobs.wait({
         id: state.firstId,
-        states: [WorkloadState.QUEUED],
+        states: [JobState.QUEUED],
         timeout: { seconds: 1n },
       });
       expect(reached.reached).toBe(true);
-      expect(reached.workload?.status?.state).toBe(WorkloadState.QUEUED);
+      expect(reached.job?.status?.state).toBe(JobState.QUEUED);
 
-      // ENDED needs a runner, and this control plane has none: one call waits
-      // out its timeout and answers reached=false (toshi-go asserts the same).
+      // ENDED needs a runner, and this control plane has none: the server
+      // answers reached=false after the bound, and the helper asks again.
       const started = Date.now();
-      const ended = await client.workspace.waitWorkload({
-        id: state.firstId,
-        states: [WorkloadState.ENDED],
-        timeout: { seconds: 1n },
-      });
+      const controller = new AbortController();
+      const pending = client.workload.jobs.wait(
+        { id: state.firstId, states: [JobState.ENDED], timeout: { seconds: 1n } },
+        { signal: controller.signal },
+      );
+      await delay(1_500);
+      let settled = false;
+      void pending.then(
+        () => {
+          settled = true;
+        },
+        () => {
+          settled = true;
+        },
+      );
+      // A runner-less pin never reaches ENDED, so the wait is still asking.
+      expect(settled).toBe(false);
+      controller.abort(new Error("stop waiting"));
+      await expect(pending).rejects.toBeDefined();
       const elapsed = Date.now() - started;
-      expect(ended.reached).toBe(false);
-      expect(ended.workload?.status?.state).not.toBe(WorkloadState.ENDED);
-      expect(elapsed).toBeGreaterThanOrEqual(900);
       pass(
-        "waitWorkload",
-        `reaches QUEUED at once; ENDED is not reached at this pin (no runner), reached=false after ${String(elapsed)} ms`,
+        "waitJob",
+        `reaches QUEUED at once; ENDED is not reached at this pin (no runner), so the wait still asked after ${String(elapsed)} ms`,
       );
     },
     CASE_TIMEOUT_MS,
   );
 
   it(
-    "watches workloads and advances its cursor",
+    "watches jobs and advances its cursor",
     async () => {
       const client = harness().client;
-      const watch = await client.watchWorkloads({});
+      const watch = await client.workload.jobs.watch({});
       const snapshot = watch.snapshot ?? [];
       expect(idsOf(snapshot)).toEqual(expect.arrayContaining([state.firstId, state.secondId]));
       const before = watch.cursor;
       expect(before).not.toBe("");
 
       try {
-        await client.workspace.patchWorkload({
+        await client.workload.jobs.update({
           id: state.secondId,
-          workload: { labels: { suite: SUITE_LABEL, stage: "watch" } },
+          job: { labels: { suite: SUITE_LABEL, stage: "watch" } },
           updateMask: { paths: ["labels"] },
         });
 
@@ -367,14 +371,14 @@ describe.skipIf(skipped)("toshi serve integration", () => {
           () => {
             watch.close();
           },
-          (message: WatchWorkloadsResponse) =>
-            message.workload?.id === state.secondId && message.workload.labels.stage === "watch",
+          (message: WatchJobsResponse) =>
+            message.job?.id === state.secondId && message.job.labels.stage === "watch",
         );
         expect(seen).toBe(true);
         expect(watch.cursor).not.toBe("");
         expect(watch.cursor).not.toBe(before);
         pass(
-          "watchWorkloads",
+          "watchJobs",
           `${String(snapshot.length)} in the snapshot, then stage=watch on ${state.secondId} moved the cursor`,
         );
       } finally {
@@ -385,19 +389,19 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   );
 
   it(
-    "resumes watchEvents from the cursor listEvents exposes",
+    "resumes watchEvents from the cursor ListJobs exposes",
     async () => {
       const client = harness().client;
-      const listed = await client.workspace.listEvents({});
-      expect(listed.events.length).toBeGreaterThan(0);
+      const listed = await client.workload.jobs.list({});
+      expect(listed.jobs.length).toBeGreaterThan(0);
       const start = listed.cursor;
       expect(start).not.toBe("");
 
-      const watch = await client.watchEvents({ cursor: start });
+      const watch = await client.workload.watchEvents({ cursor: start });
       try {
-        await client.workspace.patchWorkload({
+        await client.workload.jobs.update({
           id: state.firstId,
-          workload: { labels: { suite: SUITE_LABEL, stage: "events" } },
+          job: { labels: { suite: SUITE_LABEL, stage: "events" } },
           updateMask: { paths: ["labels"] },
         });
         const seen = await untilSeen(
@@ -405,13 +409,12 @@ describe.skipIf(skipped)("toshi serve integration", () => {
           () => {
             watch.close();
           },
-          (event) => {
-            if (event.workloadId === state.firstId && event.type === EventType.WORKLOAD_CREATED) {
+          (message) => {
+            const event = message.event;
+            if (event?.workloadId === state.firstId && event.type === EventType.WORKLOAD_CREATED) {
               throw new Error("the watch started again from the oldest event");
             }
-            return (
-              event.workloadId === state.firstId && event.type === EventType.WORKLOAD_UPDATED
-            );
+            return event?.workloadId === state.firstId && event.type === EventType.WORKLOAD_UPDATED;
           },
         );
         expect(seen).toBe(true);
@@ -430,7 +433,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   it(
     "watches the output of a job",
     async () => {
-      const watch = await harness().client.watchOutput({ id: state.firstId });
+      const watch = await harness().client.workload.jobs.watchOutput({ id: state.firstId });
       const { output, failure, ended, timedOut } = await drainOutput(
         watch,
         () => {
@@ -455,14 +458,22 @@ describe.skipIf(skipped)("toshi serve integration", () => {
   );
 
   it(
-    "executes a command in the workload",
+    "executes a command in a sandbox",
     async () => {
       const client = harness().client;
       let failure: unknown;
       let output = "";
       try {
-        const execution = await client.execute({
-          workloadId: state.firstId,
+        const sandbox = await client.workload.sandboxes.create({
+          spec: { size: "toshi-linux-2x" },
+          labels: { suite: SUITE_LABEL },
+        });
+        const sandboxId = sandbox.sandbox?.id ?? "";
+        if (sandboxId === "") {
+          throw new Error("CreateSandbox returned no sandbox");
+        }
+        const execution = await client.workload.sandboxes.execute({
+          sandboxId,
           command: { argv: ["true"] },
         });
         const chunks: Uint8Array[] = [];
@@ -481,7 +492,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       if (!(failure instanceof ConnectError)) {
         throw asError(failure);
       }
-      // The pin refuses to execute in a workload that is not running, and this
+      // The pin refuses to execute in a sandbox that is not running, and this
       // control plane runs none; toshi-go asserts the same code.
       expect(failure.code).toBe(Code.FailedPrecondition);
       expect(failure).not.toBeInstanceOf(StreamLostError);
@@ -533,8 +544,8 @@ function asError(value: unknown): Error {
   return value instanceof Error ? value : new Error(String(value));
 }
 
-function idsOf(workloads: readonly Workload[]): string[] {
-  return workloads.map((workload) => workload.id);
+function idsOf(jobs: readonly Job[]): string[] {
+  return jobs.map((job) => job.id);
 }
 
 function newClient(port: number, ca: string, token: string): ToshiClient {
@@ -552,17 +563,17 @@ function newClient(port: number, ca: string, token: string): ToshiClient {
   });
 }
 
-async function createWorkload(client: ToshiClient, requestKey: string): Promise<Workload> {
-  const response = await client.workspace.createWorkload({
+async function createJob(client: ToshiClient, requestKey: string): Promise<Job> {
+  const response = await client.workload.jobs.create({
     labels: { suite: SUITE_LABEL },
-    spec: { case: "job", value: { command: { argv: ["true"] } } },
+    spec: { command: { argv: ["true"] } },
     requestKey,
   });
-  const workload = response.workload;
-  if (workload === undefined) {
-    throw new Error("CreateWorkload returned no workload");
+  const job = response.job;
+  if (job === undefined) {
+    throw new Error("CreateJob returned no job");
   }
-  return workload;
+  return job;
 }
 
 /**
@@ -718,7 +729,7 @@ async function waitTenant(
 
 async function tenantsJson(bin: string, env: Record<string, string>): Promise<string> {
   try {
-    return await runTool(bin, ["tenants", "list", "--json"], env);
+    return await runTool(bin, ["workspace", "list", "--json"], env);
   } catch {
     return "";
   }

@@ -5,19 +5,22 @@ import { describe, expect, it } from "vitest";
 
 import { createToshiClient } from "../src/client.js";
 import type { ToshiClient } from "../src/client.js";
+import { JobExitError } from "../src/errors.js";
+import {
+  ListJobsResponseSchema,
+  WaitJobResponseSchema,
+  WatchJobsResponseSchema,
+  WorkloadService,
+} from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import {
   EventSchema,
   ExecuteResponseSchema,
-  ListWorkloadsResponseSchema,
+  JobSchema,
+  type ExecuteRequest,
   OperationSchema,
   WaitOperationResponseSchema,
-  WaitWorkloadResponseSchema,
   WatchEventsResponseSchema,
   WatchOutputResponseSchema,
-  WatchWorkloadsResponseSchema,
-  WorkloadSchema,
-  WorkspaceService,
-  type ExecuteRequest,
 } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 
 // Every helper is reached through the public client here, so the client's own
@@ -49,29 +52,29 @@ function clientWith(routes: (router: ConnectRouter) => void): ToshiClient {
   });
 }
 
-function workspace(routes: Partial<ServiceImpl<typeof WorkspaceService>>): ToshiClient {
+function workload(routes: Partial<ServiceImpl<typeof WorkloadService>>): ToshiClient {
   return clientWith((router) => {
-    router.service(WorkspaceService, routes);
+    router.service(WorkloadService, routes);
   });
 }
 
 describe("ToshiClient helpers", () => {
-  it("waits for a workload through the client until it is reached", async () => {
+  it("waits for a job through the client until it is reached", async () => {
     let calls = 0;
-    const client = workspace({
-      waitWorkload: () => {
+    const client = workload({
+      waitJob: () => {
         calls += 1;
-        return create(WaitWorkloadResponseSchema, { reached: calls >= 2 });
+        return create(WaitJobResponseSchema, { reached: calls >= 2 });
       },
     });
-    const response = await client.waitWorkload({});
+    const response = await client.workload.jobs.wait({});
     expect(response.reached).toBe(true);
     expect(calls).toBe(2);
   });
 
   it("waits for an operation through the client until it is done", async () => {
     let calls = 0;
-    const client = workspace({
+    const client = workload({
       waitOperation: () => {
         calls += 1;
         return create(WaitOperationResponseSchema, {
@@ -79,34 +82,34 @@ describe("ToshiClient helpers", () => {
         });
       },
     });
-    const operation = await client.waitOperation({ id: "op-1" });
+    const operation = await client.workload.waitOperation({ id: "op-1" });
     expect(operation.done).toBe(true);
     expect(calls).toBe(2);
   });
 
-  it("lists before watching workloads through the client", async () => {
+  it("lists before watching jobs through the client", async () => {
     let watchCursor: string | undefined;
     let keepalive: boolean | undefined;
-    const client = workspace({
-      listWorkloads: () =>
-        create(ListWorkloadsResponseSchema, {
-          workloads: [create(WorkloadSchema, { id: "wl-1" })],
+    const client = workload({
+      listJobs: () =>
+        create(ListJobsResponseSchema, {
+          jobs: [create(JobSchema, { id: "wl-1" })],
           cursor: "list-cursor",
         }),
-      watchWorkloads: (req) => {
+      watchJobs: (req) => {
         watchCursor = req.cursor;
         keepalive = req.keepalive;
         return streamOf(
-          create(WatchWorkloadsResponseSchema, {
-            workload: create(WorkloadSchema, { id: "wl-1" }),
+          create(WatchJobsResponseSchema, {
+            job: create(JobSchema, { id: "wl-1" }),
             cursor: "c1",
           }),
         );
       },
     });
-    const watch = await client.watchWorkloads({});
+    const watch = await client.workload.jobs.watch({});
     // The promise resolves only after the pre-list, so the snapshot is complete.
-    expect(watch.snapshot?.map((item) => item.id)).toEqual(["wl-1"]);
+    expect(watch.snapshot?.map((job) => job.id)).toEqual(["wl-1"]);
     expect(watch.cursor).toBe("list-cursor");
     const iterator = watch[Symbol.asyncIterator]();
     const first = await iterator.next();
@@ -117,29 +120,30 @@ describe("ToshiClient helpers", () => {
     await iterator.return?.();
   });
 
-  it("watches events from a cursor through the client", async () => {
+  it("watches events from a cursor through the client and yields the response", async () => {
     let watchCursor: string | undefined;
-    const client = workspace({
+    const client = workload({
       watchEvents: (req) => {
         watchCursor = req.cursor;
         return streamOf(
           create(WatchEventsResponseSchema, {
-            event: create(EventSchema, { cursor: "e1" }),
+            event: create(EventSchema, { id: "ev-1", cursor: "e1" }),
           }),
         );
       },
     });
-    const watch = await client.watchEvents({ cursor: "start" });
+    const watch = await client.workload.watchEvents({ cursor: "start" });
     const iterator = watch[Symbol.asyncIterator]();
     const first = await iterator.next();
     expect(first.done).toBe(false);
+    expect(first.done === false && first.value.event?.id).toBe("ev-1");
     expect(watch.cursor).toBe("e1");
     expect(watchCursor).toBe("start");
     await iterator.return?.();
   });
 
   it("watches output from the request's offsets through the client", async () => {
-    const client = workspace({
+    const client = workload({
       watchOutput: () =>
         streamOf(
           create(WatchOutputResponseSchema, {
@@ -148,7 +152,7 @@ describe("ToshiClient helpers", () => {
           create(WatchOutputResponseSchema, { message: { case: "end", value: {} } }),
         ),
     });
-    const watch = await client.watchOutput({ stdoutOffset: 5n, stderrOffset: 0n });
+    const watch = await client.workload.jobs.watchOutput({ stdoutOffset: 5n, stderrOffset: 0n });
     const chunks: string[] = [];
     for await (const chunk of watch) {
       if (chunk.message.case === "stdout") {
@@ -162,7 +166,7 @@ describe("ToshiClient helpers", () => {
 
   it("fills the Execute start's scope and request key through the client", async () => {
     let seen: { project?: string; environment?: string; requestKey?: string } = {};
-    const client = workspace({
+    const client = workload({
       execute: (requests: AsyncIterable<ExecuteRequest>) => ({
         async *[Symbol.asyncIterator]() {
           for await (const request of requests) {
@@ -179,11 +183,48 @@ describe("ToshiClient helpers", () => {
         },
       }),
     });
-    const process = await client.execute({ workloadId: "wl-1" });
+    const process = await client.workload.sandboxes.execute({ sandboxId: "s-1" });
     await process.wait();
     expect(process.requestKey).toMatch(/^[0-9a-f]{32}$/);
     expect(seen.requestKey).toBe(process.requestKey);
     expect(seen.project).toBe("default");
     expect(seen.environment).toBe("production");
+  });
+
+  it("runs a job: creates it, then streams its output to its end", async () => {
+    const client = workload({
+      createJob: () => ({ job: create(JobSchema, { id: "job-1" }) }),
+      watchOutput: () =>
+        streamOf(
+          create(WatchOutputResponseSchema, {
+            message: { case: "stdout", value: new TextEncoder().encode("hi") },
+          }),
+          create(WatchOutputResponseSchema, { message: { case: "end", value: { exitCode: 0 } } }),
+        ),
+    });
+    const run = await client.run({ spec: { command: { argv: ["echo", "hi"] } } });
+    expect(run.job.id).toBe("job-1");
+    const chunks: string[] = [];
+    for await (const chunk of run) {
+      chunks.push(new TextDecoder().decode(chunk.data));
+    }
+    await run.wait();
+    expect(chunks).toEqual(["hi"]);
+  });
+
+  it("ends a run's wait with a JobExitError when the job did not exit 0", async () => {
+    const client = workload({
+      createJob: () => ({ job: create(JobSchema, { id: "job-2" }) }),
+      watchOutput: () =>
+        streamOf(
+          create(WatchOutputResponseSchema, {
+            message: { case: "stderr", value: new TextEncoder().encode("bad") },
+          }),
+          create(WatchOutputResponseSchema, { message: { case: "end", value: { exitCode: 3 } } }),
+        ),
+    });
+    const run = await client.run({ spec: { command: { argv: ["false"] } } });
+    await expect(run.wait()).rejects.toBeInstanceOf(JobExitError);
+    await expect(run.wait()).rejects.toMatchObject({ jobId: "job-2", end: { exitCode: 3 } });
   });
 });
