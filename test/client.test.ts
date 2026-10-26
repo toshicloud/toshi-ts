@@ -7,6 +7,8 @@ import type { ToshiClient, ToshiOptions } from "../src/client.js";
 import { SecretService } from "../src/gen/toshi/workspace/v1/secrets_pb.js";
 import { ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
 import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
+import { TokenService } from "../src/gen/toshi/workspace/v1/tokens_pb.js";
+import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 
 const unauthorizedHeader = "toshi-tenant";
@@ -245,6 +247,8 @@ describe("createToshiClient", () => {
     const harness = clientWith((router) => {
       router.service(ChannelService, { listChannels: () => ({}) });
       router.service(ArtifactUploadService, { completeUpload: () => ({}) });
+      router.service(WorkspaceService, { getVersion: () => ({ version: "v0.2.1" }) });
+      router.service(TokenService, { listTokens: () => ({}) });
     });
     const fields = [
       "project",
@@ -256,6 +260,13 @@ describe("createToshiClient", () => {
       "volume",
       "artifact",
       "artifactUpload",
+      "workspace",
+      "hostJob",
+      "host",
+      "token",
+      "auditEvent",
+      "filler",
+      "storageProvider",
     ] as const;
     for (const field of fields) {
       expect(harness.client[field]).toBeDefined();
@@ -263,9 +274,12 @@ describe("createToshiClient", () => {
     expect(harness.client.workload.jobs).toBeDefined();
     expect(harness.client.workload.sandboxes).toBeDefined();
     expect(harness.client.workload.services).toBeDefined();
-    // One call through a service the other cases never touch, and one through
-    // the upload service, prove each field holds that service's client.
+    // One call through a service the other cases never touch, one through the
+    // upload service and one each through the services the client gained with
+    // the member services, prove each field holds that service's client.
     await expect(harness.client.channel.listChannels({})).resolves.toBeDefined();
     await expect(harness.client.artifactUpload.completeUpload({})).resolves.toBeDefined();
+    await expect(harness.client.workspace.getVersion({})).resolves.toMatchObject({ version: "v0.2.1" });
+    await expect(harness.client.token.listTokens({})).resolves.toBeDefined();
   });
 });

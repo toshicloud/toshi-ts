@@ -73,8 +73,10 @@ server and any CA come from the caller.
 ### The client's shape
 
 The client has one field per Workspace API service: `project`, `secret`,
-`webhook`, `display`, `channel`, `recording`, `volume`, `artifact` and
-`artifactUpload`, each holding that service's generated client.
+`webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
+`artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
+`filler` and `storageProvider`, each holding that service's generated
+client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`,
