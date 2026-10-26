@@ -5,13 +5,20 @@ import type { Client, Interceptor, Transport } from "@connectrpc/connect";
 
 import { executeCommand } from "./execute.js";
 import { ArtifactService, ArtifactUploadService } from "./gen/toshi/workspace/v1/artifacts_pb.js";
+import { AuditEventService } from "./gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
+import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
+import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
+import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
 import { ProjectService } from "./gen/toshi/workspace/v1/projects_pb.js";
 import { RecordingService } from "./gen/toshi/workspace/v1/recordings_pb.js";
 import { SecretService } from "./gen/toshi/workspace/v1/secrets_pb.js";
+import { StorageProviderService } from "./gen/toshi/workspace/v1/storage_providers_pb.js";
+import { TokenService } from "./gen/toshi/workspace/v1/tokens_pb.js";
 import { VolumeService } from "./gen/toshi/workspace/v1/volumes_pb.js";
 import { WebhookService } from "./gen/toshi/workspace/v1/webhook_pb.js";
+import { WorkspaceService } from "./gen/toshi/workspace/v1/workspace_service_pb.js";
 import {
   CancelJobRequestSchema,
   CreateJobRequestSchema,
@@ -129,6 +136,13 @@ export interface ToshiClient {
   readonly artifact: Client<typeof ArtifactService>;
   readonly artifactUpload: Client<typeof ArtifactUploadService>;
   readonly workload: WorkloadClient;
+  readonly workspace: Client<typeof WorkspaceService>;
+  readonly hostJob: Client<typeof HostJobService>;
+  readonly host: Client<typeof HostService>;
+  readonly token: Client<typeof TokenService>;
+  readonly auditEvent: Client<typeof AuditEventService>;
+  readonly filler: Client<typeof FillerService>;
+  readonly storageProvider: Client<typeof StorageProviderService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -256,9 +270,9 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
  * retry interceptors (auth outermost, retry innermost), one transport for every
  * client and helper.
  *
- * Since 0.2.0 the public contract is WorkloadService, not WorkspaceService: its
- * calls are grouped by the type they name under `workload`, and the generated
- * client is not handed out whole.
+ * Since 0.2.0 the workload calls are grouped by the type they name under
+ * `workload`; every other service, WorkspaceService's included, is handed out
+ * as one client.
  */
 export function createToshiClient(options: ToshiOptions): ToshiClient {
   const retry = normalizeRetry(options.retry);
@@ -330,5 +344,12 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
       getOperation: (req, opts) => workloadService.getOperation(req, opts),
     },
     run: (req, opts) => runJob(workloadService, retry, create(CreateJobRequestSchema, req), opts),
+    workspace: createClient(WorkspaceService, transport),
+    hostJob: createClient(HostJobService, transport),
+    host: createClient(HostService, transport),
+    token: createClient(TokenService, transport),
+    auditEvent: createClient(AuditEventService, transport),
+    filler: createClient(FillerService, transport),
+    storageProvider: createClient(StorageProviderService, transport),
   };
 }

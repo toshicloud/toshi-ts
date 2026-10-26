@@ -53,12 +53,18 @@ if (skipped) {
 /** What the started control plane gives the cases. */
 interface Harness {
   readonly client: ToshiClient;
+  /**
+   * A token of the whole workspace. The member services refuse a token
+   * limited to a project or an environment, which `client`'s token is.
+   */
+  readonly workspaceClient: ToshiClient;
 }
 
 /** The two workloads the write cases share, in creation order. */
 const state = {
   firstId: "",
   secondId: "",
+  tokenIds: [] as string[],
 };
 
 let running: Harness | undefined;
@@ -189,7 +195,23 @@ describe.skipIf(skipped)("toshi serve integration", () => {
         throw new Error("token create printed no token");
       }
 
-      running = { client: newClient(servePort, tls.caPem, token) };
+      // A token of the whole workspace: the member services refuse one limited
+      // to a project or an environment, which the token above is.
+      const workspaceToken = (
+        await runTool(
+          bin,
+          ["token", "create", "--workspace", INSTALLATION_ID, "--name", "sdk-integration-workspace"],
+          operatorEnv,
+        )
+      ).trim();
+      if (workspaceToken === "") {
+        throw new Error("token create printed no workspace token");
+      }
+
+      running = {
+        client: newClient(servePort, tls.caPem, token),
+        workspaceClient: newClient(servePort, tls.caPem, workspaceToken),
+      };
     } catch (err) {
       // A failed startup leaves no harness; its logs still say why.
       failed = true;
@@ -227,6 +249,101 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       }
       expect(project.environments.map((environment) => environment.name)).toContain(ENVIRONMENT);
       pass("listProjects", `${PROJECT}/${ENVIRONMENT} is there`);
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  // The member services act in the whole workspace, so these cases use the
+  // workspace token: the project-scoped one is refused every one of them.
+  it(
+    "reads the workspace the token acts on",
+    async () => {
+      const response = await harness().workspaceClient.workspace.getWorkspace({});
+      const workspace = response.workspace;
+      if (workspace === undefined) {
+        throw new Error("GetWorkspace returned no workspace");
+      }
+      expect(workspace.id).toBe(INSTALLATION_ID);
+      expect(workspace.name).toBe(ACCOUNT);
+      pass("getWorkspace", `${workspace.name} is workspace ${workspace.id}`);
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "lists the workspace's host jobs",
+    async () => {
+      const response = await harness().workspaceClient.hostJob.listHostJobs({});
+      // The installation's jobs have no host at this pin, so it has no host jobs.
+      expect(response.hostJobs).toEqual([]);
+      pass("listHostJobs", "no host job, as no job was placed on a host");
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "lists the workspace's hosts",
+    async () => {
+      const response = await harness().workspaceClient.host.listHosts({});
+      // The installation enrolls no host; the fake GitHub API is not one.
+      expect(response.hosts).toEqual([]);
+      pass("listHosts", "no host, as the installation enrolls none");
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "lists the workspace's tokens",
+    async () => {
+      const response = await harness().workspaceClient.token.listTokens({});
+      const names = response.tokens.map((token) => token.name);
+      expect(names).toEqual(expect.arrayContaining(["sdk-integration", "sdk-integration-workspace"]));
+      state.tokenIds = response.tokens.map((token) => token.id);
+      pass("listTokens", `${String(names.length)} tokens, both suite tokens among them`);
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "reads the workspace's audit events, newest first",
+    async () => {
+      const response = await harness().workspaceClient.auditEvent.listAuditEvents({});
+      expect(response.events.length).toBeGreaterThan(0);
+      for (const event of response.events) {
+        expect(event.action).not.toBe("");
+      }
+      // Both tokens the suite made were audited, whatever their scope.
+      expect(state.tokenIds.length).toBeGreaterThanOrEqual(2);
+      const created = response.events.filter((event) => event.action === "token.created");
+      expect(created.map((event) => event.target)).toEqual(
+        expect.arrayContaining(state.tokenIds.map((id) => `token:${id}`)),
+      );
+      const ids = response.events.map((event) => Number(event.id));
+      expect(ids).toEqual([...ids].sort((left, right) => right - left));
+      pass("listAuditEvents", `${String(response.events.length)} events, the newest ${response.events[0]?.action ?? ""}`);
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "lists the workspace's fillers",
+    async () => {
+      const response = await harness().workspaceClient.filler.listFillers({});
+      expect(response.fillers).toEqual([]);
+      pass("listFillers", "no filler, as the installation configures none");
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "refuses ListStorageProviders to a token, as the API says",
+    async () => {
+      // Only a signed-in session may call StorageProviderService: a token of
+      // any scope is refused, and the client sends the call it builds anyway.
+      await expect(harness().workspaceClient.storageProvider.listStorageProviders({})).rejects.toMatchObject({
+        code: Code.PermissionDenied,
+      });
+      pass("listStorageProviders", "PERMISSION_DENIED: a token never reads the workspace's buckets");
     },
     CASE_TIMEOUT_MS,
   );
