@@ -7,6 +7,7 @@ import type { WritableIterable } from "@connectrpc/connect/protocol";
 import type { CallOptions, OutputChunk, Process } from "./client.js";
 import { ExitError, StreamLostError } from "./errors.js";
 import { isStreamLoss } from "./retry.js";
+import { startDeadline, timeoutError } from "./timeout.js";
 import {
   ExecuteRequestSchema,
   ExecuteStartSchema,
@@ -56,13 +57,24 @@ export async function executeCommand(
     }
     owner.process.cancel();
   };
+  // A timeout bounds the handshake only; the process outlives it.
+  const deadline = startDeadline(opts?.timeoutMs, opts?.signal);
+  const onDeadline = (): void => {
+    if (owner.process === undefined) {
+      abort.abort(deadline?.signal.reason);
+    }
+  };
   // A signal that is already aborted starts nothing.
   if (signal?.aborted === true) {
+    deadline?.clear();
     throw cancelledError();
   }
   signal?.addEventListener("abort", onAbort, { once: true });
+  deadline?.signal.addEventListener("abort", onDeadline, { once: true });
   const finishHandshake = (): void => {
     signal?.removeEventListener("abort", onAbort);
+    deadline?.signal.removeEventListener("abort", onDeadline);
+    deadline?.clear();
   };
 
   const responses = service.execute(input, { signal: abort.signal });
@@ -94,6 +106,9 @@ export async function executeCommand(
     // A caller's own abort is a cancellation, not a lost server stream.
     if (signal !== undefined && signal.aborted) {
       throw cancelledError();
+    }
+    if (deadline?.timedOut === true) {
+      throw timeoutError(opts?.timeoutMs as number);
     }
     throw beforeStarted(err, readRequestKey(startMessage));
   }

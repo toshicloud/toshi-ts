@@ -1,14 +1,8 @@
-import { createConnectTransport } from "@connectrpc/connect-node";
-import { createToshiClient } from "@toshicloud/sdk";
+import { createToshiClient } from "@toshicloud/sdk/node";
 
-// The client the other examples use; the quick start shows the same setup in full.
+// The client the other examples use; the quick start shows the environment defaults.
 export const toshi = createToshiClient({
-  transport: (interceptors) =>
-    createConnectTransport({
-      baseUrl: "https://toshi.example.com",
-      httpVersion: "2",
-      interceptors,
-    }),
+  server: "https://toshi.example.com",
   token: process.env.TOSHI_TOKEN,
   project: "default",
 });

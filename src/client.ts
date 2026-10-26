@@ -104,6 +104,7 @@ import { openOutputWatch } from "./output.js";
 import { authInterceptor, keyInterceptor, retryInterceptor, scopeInterceptor } from "./interceptors.js";
 import { normalizeRetry } from "./retry.js";
 import type { RetryPolicy } from "./retry.js";
+import { withDefaultUnaryTimeout } from "./timeout.js";
 import { openEventWatch, openJobWatch, openSandboxWatch, openServiceWatch } from "./watch.js";
 import { runJob } from "./run.js";
 import { waitJob, waitOperation, waitSandbox, waitService } from "./wait.js";
@@ -117,11 +118,15 @@ export interface ToshiOptions {
   environment?: string;
   /** false turns off retries and watch reconnects. */
   retry?: Partial<RetryPolicy> | false;
+  /** Bounds each unary call except the Wait calls, which their request's timeout bounds; streams ignore it. */
+  defaultTimeoutMs?: number;
 }
 
 /** Per-call options. */
 export interface CallOptions {
   signal?: AbortSignal;
+  /** Bounds the whole call, retries included; on a watch, the open. */
+  timeoutMs?: number;
 }
 
 /** One client per Workspace API service, plus the helpers that live on top of them. */
@@ -266,9 +271,9 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 }
 
 /**
- * Creates the client: one normalized retry setting, the auth, scope, key and
- * retry interceptors (auth outermost, retry innermost), one transport for every
- * client and helper.
+ * Creates the client: one normalized retry setting, the scope, key, retry and
+ * auth interceptors (scope outermost, auth innermost, so no interceptor sees
+ * the Authorization header), one transport for every client and helper.
  *
  * Since 0.2.0 the workload calls are grouped by the type they name under
  * `workload`; every other service, WorkspaceService's included, is handed out
@@ -277,12 +282,12 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 export function createToshiClient(options: ToshiOptions): ToshiClient {
   const retry = normalizeRetry(options.retry);
   const interceptors: Interceptor[] = [
-    authInterceptor(options.token ?? ""),
     scopeInterceptor(options.project ?? "", options.environment ?? ""),
     keyInterceptor(),
     retryInterceptor(retry),
+    authInterceptor(options.token ?? ""),
   ];
-  const transport = options.transport(interceptors);
+  const transport = withDefaultUnaryTimeout(options.transport(interceptors), options.defaultTimeoutMs);
 
   const workloadService = createClient(WorkloadService, transport);
   return {

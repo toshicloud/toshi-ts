@@ -38,6 +38,7 @@ import type {
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type { RetrySetting } from "./retry.js";
 import { READER_TAKEN, WatchState, createReader, reconnect, streamEnded } from "./stream.js";
+import { timeoutError } from "./timeout.js";
 
 /** The shared shape of the three typed watches: a request, a pre-list and a stream. */
 interface WatchWire<WResp, Item> {
@@ -168,7 +169,7 @@ async function openWatch<WResp, Item>(
   retry: RetrySetting,
   opts?: CallOptions,
 ): Promise<IterableWatch<WResp, Item>> {
-  const state = new WatchState(wire.request.cursor, opts?.signal);
+  const state = new WatchState(wire.request.cursor, opts?.signal, opts?.timeoutMs);
   let snapshot: Item[] | undefined;
   if (wire.request.cursor === "") {
     try {
@@ -177,6 +178,9 @@ async function openWatch<WResp, Item>(
       state.cursor = listed.cursor;
     } catch (err) {
       state.close();
+      if (state.timedOut) {
+        throw timeoutError(state.timeoutMs as number);
+      }
       throw err;
     }
   }
@@ -222,6 +226,7 @@ async function* runWatch<WResp, Item>(
       try {
         wire.request.cursor = state.cursor;
         for await (const message of wire.watch(state.signal)) {
+          state.markOpen();
           attempt = 0;
           const keepalive = wire.keepalive(message);
           if (keepalive !== undefined) {
@@ -243,6 +248,9 @@ async function* runWatch<WResp, Item>(
       } catch (err) {
         if (state.closed) {
           return;
+        }
+        if (state.timedOut) {
+          throw timeoutError(state.timeoutMs as number);
         }
         cause = err;
       }
@@ -266,7 +274,7 @@ export function openEventWatch(
   req: WatchEventsRequest,
   opts?: CallOptions,
 ): Promise<EventWatch> {
-  const state = new WatchState(req.cursor, opts?.signal);
+  const state = new WatchState(req.cursor, opts?.signal, opts?.timeoutMs);
   const request = clone(WatchEventsRequestSchema, req);
   request.keepalive = true;
   const list = create(ListEventsRequestSchema, {
@@ -329,6 +337,7 @@ async function* runEvents(
               state.cursor = event.cursor;
               resume = event.cursor;
             }
+            state.markOpen();
             yield create(WatchEventsResponseSchema, { event });
             continue;
           }
@@ -350,6 +359,7 @@ async function* runEvents(
 
         request.cursor = resume;
         for await (const message of service.watchEvents(request, { signal: state.signal })) {
+          state.markOpen();
           attempt = 0;
           const keepalive = message.keepalive;
           if (keepalive !== undefined) {
@@ -376,6 +386,9 @@ async function* runEvents(
       } catch (err) {
         if (state.closed) {
           return;
+        }
+        if (state.timedOut) {
+          throw timeoutError(state.timeoutMs as number);
         }
         cause = err;
       }

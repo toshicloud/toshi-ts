@@ -15,14 +15,19 @@ import type { RetrySetting } from "./retry.js";
 // objects with one property per field, keyed by localName.
 type MutableMessage = Record<string, unknown>;
 
-/** Sends `Authorization: Bearer <token>` on every call and stream; never Toshi-Tenant (intercept.go:13-36). */
+/**
+ * Sends `Authorization: Bearer <token>` on every call and stream, on a copy of
+ * the request: it is the innermost interceptor, so none outside it sees the
+ * header (intercept.go:13-31). Never Toshi-Tenant.
+ */
 export function authInterceptor(token: string): Interceptor {
   if (token === "") {
     return (next) => next;
   }
   return (next) => async (req) => {
-    req.header.set("Authorization", `Bearer ${token}`);
-    return next(req);
+    const header = new Headers(req.header);
+    header.set("Authorization", `Bearer ${token}`);
+    return next({ ...req, header });
   };
 }
 

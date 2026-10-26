@@ -1,5 +1,6 @@
 import { abortReason, backoffDelay, isStreamLoss, sleep } from "./retry.js";
 import type { RetrySetting } from "./retry.js";
+import { timeoutError } from "./timeout.js";
 
 /** The one-reader guard every watch shares. */
 export const READER_TAKEN = "toshi: this watch already has a reader";
@@ -65,23 +66,30 @@ export async function reconnect(
 
 // Owns the AbortController that cancels the open RPC, a pending next() and any
 // backoff sleep; close() is the local end, an abort of the caller's signal is an
-// error for the caller (watch.go:221-233, output.go:194-206).
+// error for the caller (watch.go:221-233, output.go:194-206). A timeout ends the
+// open only: the first message calls markOpen and clears it.
 export class WatchState {
   /** The caller-visible resume point; the output watch passes "" and ignores it. */
   cursor: string;
   closed = false;
   readonly signal: AbortSignal;
+  /** The open timeout, when the caller set one. */
+  readonly timeoutMs: number | undefined;
+  /** Whether the open timeout fired rather than the caller's signal. */
+  timedOut = false;
   private readonly controller = new AbortController();
   private readonly caller: AbortSignal | undefined;
+  private timer: ReturnType<typeof setTimeout> | undefined;
   private readonly onCallerAbort = (): void => {
     if (this.caller !== undefined) {
       this.controller.abort(abortReason(this.caller));
     }
   };
 
-  constructor(initialCursor: string, caller: AbortSignal | undefined) {
+  constructor(initialCursor: string, caller: AbortSignal | undefined, timeoutMs?: number) {
     this.cursor = initialCursor;
     this.caller = caller;
+    this.timeoutMs = timeoutMs;
     this.signal = this.controller.signal;
     if (caller !== undefined) {
       if (caller.aborted) {
@@ -90,6 +98,20 @@ export class WatchState {
         caller.addEventListener("abort", this.onCallerAbort, { once: true });
       }
     }
+    if (timeoutMs !== undefined && !this.controller.signal.aborted) {
+      this.timer = setTimeout(() => {
+        this.timedOut = true;
+        this.controller.abort(timeoutError(timeoutMs));
+      }, timeoutMs);
+    }
+  }
+
+  /** The first message arrived: the watch is open, and the timeout no longer applies. */
+  markOpen(): void {
+    if (this.timer !== undefined) {
+      clearTimeout(this.timer);
+      this.timer = undefined;
+    }
   }
 
   close(): void {
@@ -97,6 +119,7 @@ export class WatchState {
       return;
     }
     this.closed = true;
+    this.markOpen();
     this.caller?.removeEventListener("abort", this.onCallerAbort);
     this.controller.abort();
   }

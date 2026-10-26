@@ -4,40 +4,26 @@ A TypeScript client for the Toshi Workspace API, `toshi.workspace.v1`,
 published as ES modules with type declarations.
 
 ```sh
-npm install @toshicloud/sdk @connectrpc/connect @connectrpc/connect-node
+npm install @toshicloud/sdk @connectrpc/connect
 ```
+
+The browser entry needs a transport such as `@connectrpc/connect-web`; the
+Node entry needs `@connectrpc/connect-node`. Both are peer dependencies, so
+install the ones your application uses.
 
 Versions up to 0.1.2 were published as `@toshicloud/toshi-ts`.
 
 ## Using the client
 
-`createToshiClient` takes one set of options. The transport belongs to
-the caller: the client hands its interceptors to the `transport`
-function, and that function builds a transport with them. Every call then
-gets the same token, scope and retries: the helpers below and the
-generated clients alike.
-
-In Node, with `@connectrpc/connect-node`:
+In Node, `@toshicloud/sdk/node` builds the transport and fills the server
+and the token from the environment:
 
 <!-- examples/quick-start.ts -->
 
 ```ts
-import { readFileSync } from "node:fs";
-import { createConnectTransport } from "@connectrpc/connect-node";
-import { createToshiClient } from "@toshicloud/sdk";
+import { createToshiClient } from "@toshicloud/sdk/node";
 
-const toshi = createToshiClient({
-  transport: (interceptors) =>
-    createConnectTransport({
-      baseUrl: "https://toshi.example.com",
-      httpVersion: "2",
-      interceptors,
-      // Only for a server whose certificate a private CA signed.
-      nodeOptions: { ca: readFileSync("ca.pem") },
-    }),
-  token: process.env.TOSHI_TOKEN,
-  project: "default",
-});
+const toshi = createToshiClient({ project: "default" });
 
 const { projects } = await toshi.project.listProjects({});
 console.log(projects.length);
@@ -62,11 +48,15 @@ export const toshi = createToshiClient({
 });
 ```
 
-To add interceptors of your own, put them before the client's:
-`interceptors: [...mine, ...interceptors]`.
+Interceptors of your own go before the client's. The Node entry takes
+`interceptors`; with a transport of your own, put them first:
+`interceptors: [...mine, ...interceptors]`. Each unary call enters them
+once, with its retries inside, and they never see the Authorization
+header: the client sets it on a copy of the request below them.
 
-The package reads no environment variable and no file. The token, the
-server and any CA come from the caller.
+The browser entry reads no environment variable and no file. The Node
+entry reads `TOSHI_SERVER`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE` and
+`TOSHI_CA_FILE`; see Node options.
 
 ### Options
 
@@ -77,6 +67,33 @@ server and any CA come from the caller.
 - `retry`: `{ maxAttempts, initialBackoffMs, maxBackoffMs }`, by default
   5, 200 ms and 10 s, with full jitter. `retry: false` turns off retries
   and watch reconnects.
+- `defaultTimeoutMs`: bounds each unary call except the Wait calls,
+  which their request's timeout bounds; streams ignore it.
+
+A call may set `timeoutMs` instead: it bounds the whole call, retries
+included, and on a watch it bounds the open. It composes with `signal`.
+
+### Node options
+
+`@toshicloud/sdk/node` builds a connect-node transport over HTTP/2 and
+fills what is missing from the environment:
+
+- `server`, else `TOSHI_SERVER`: the control plane's URL. Without either,
+  the client refuses to start.
+- `token`, `tokenFile`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE`, in that order.
+  A token file is trimmed, and an empty file is an error.
+- `caFile`, else `TOSHI_CA_FILE`: a PEM bundle trusted besides Node's
+  built-in roots.
+- `userAgent`: put in front of the User-Agent, for example "myapp/1.2".
+- `interceptors`: run before the client's own, in the order given.
+- `defaultTimeoutMs`: bounds each unary call except the Wait calls,
+  which their request's timeout bounds; streams ignore it.
+- `transport`: a transport of your own; then `server` and `caFile` are not
+  required.
+
+Every request carries `User-Agent: toshi-ts/<version> (node/<node
+version>)`, with `userAgent` and one space in front when it is set. The
+root entry sends no User-Agent: browsers own it.
 
 ### The client's shape
 
