@@ -292,7 +292,8 @@ export function backoffDelay(policy: RetryPolicy, attempt: number): number {
   if (limit <= 0) {
     return 0;
   }
-  const random = globalThis.crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
+  // The jitter is not a secret, so a non-cryptographic source is enough.
+  const random = Math.random();
   return Math.floor(random * (limit + 1));
 }
 
