@@ -292,8 +292,18 @@ export function backoffDelay(policy: RetryPolicy, attempt: number): number {
   if (limit <= 0) {
     return 0;
   }
-  const random = globalThis.crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
-  return Math.floor(random * (limit + 1));
+
+  const range = limit + 1;
+  const uint32Domain = 0x1_0000_0000; // 2 ** 32
+  const maxUnbiased = Math.floor(uint32Domain / range) * range - 1;
+
+  const buf = new Uint32Array(1);
+  while (true) {
+    const value = globalThis.crypto.getRandomValues(buf)[0];
+    if (value <= maxUnbiased) {
+      return value % range;
+    }
+  }
 }
 
 /** Sleeps, rejecting at once when the signal aborts (retry.go:186-200). */
