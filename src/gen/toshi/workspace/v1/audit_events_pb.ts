@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/audit_events.proto.
  */
 export const file_toshi_workspace_v1_audit_events: GenFile = /*@__PURE__*/
-  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEisAEKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCSKqAQoWTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBIOCgZhY3Rpb24YASABKAkSKQoFc2luY2UYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXBhZ2Vfc2l6ZRgDIAEoBRINCgVhY3RvchgEIAEoCRIPCgdhY3Rpb25zGAUgAygJEg4KBnRhcmdldBgGIAEoCRISCgpwYWdlX3Rva2VuGAcgASgJImIKF0xpc3RBdWRpdEV2ZW50c1Jlc3BvbnNlEi4KBmV2ZW50cxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5BdWRpdEV2ZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKPAQoRQXVkaXRFdmVudFNlcnZpY2USegoPTGlzdEF1ZGl0RXZlbnRzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2UiDsLzGAphdWRpdC5yZWFkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi9gEKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCRISCgpwZXJtaXNzaW9uGAkgASgJEg0KBXNjb3BlGAogASgJEg8KB291dGNvbWUYCyABKAkSEAoIdG9rZW5faWQYDCABKAkiuwEKFkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QSDgoGYWN0aW9uGAEgASgJEikKBXNpbmNlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCglwYWdlX3NpemUYAyABKAUSDQoFYWN0b3IYBCABKAkSDwoHYWN0aW9ucxgFIAMoCRIOCgZ0YXJnZXQYBiABKAkSEgoKcGFnZV90b2tlbhgHIAEoCRIPCgdvdXRjb21lGAggASgJImIKF0xpc3RBdWRpdEV2ZW50c1Jlc3BvbnNlEi4KBmV2ZW50cxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5BdWRpdEV2ZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKPAQoRQXVkaXRFdmVudFNlcnZpY2USegoPTGlzdEF1ZGl0RXZlbnRzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2UiDsLzGAphdWRpdC5yZWFkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * AuditEvent is one append-only audit log entry.
@@ -71,6 +71,40 @@ export type AuditEvent = Message<"toshi.workspace.v1.AuditEvent"> & {
    * @generated from field: string request_id = 8;
    */
   requestId: string;
+
+  /**
+   * The permission the call needed, for an event a Workspace API call
+   * records; empty otherwise.
+   *
+   * @generated from field: string permission = 9;
+   */
+  permission: string;
+
+  /**
+   * Where the call acted, as "project:<id>" or
+   * "project:<id>/environment:<id>"; empty for the whole workspace and for
+   * an event no call records.
+   *
+   * @generated from field: string scope = 10;
+   */
+  scope: string;
+
+  /**
+   * "ok", or the reason the call was refused: PERMISSION_MISSING,
+   * OUTSIDE_LIMIT, or a product switch reason such as PRODUCT_DISABLED.
+   * Empty for an event no call records.
+   *
+   * @generated from field: string outcome = 11;
+   */
+  outcome: string;
+
+  /**
+   * The id of the token the call was made with (never its value); empty for
+   * a session and for an event no call records.
+   *
+   * @generated from field: string token_id = 12;
+   */
+  tokenId: string;
 };
 
 /**
@@ -129,6 +163,40 @@ export type AuditEventJson = {
    * @generated from field: string request_id = 8;
    */
   requestId?: string;
+
+  /**
+   * The permission the call needed, for an event a Workspace API call
+   * records; empty otherwise.
+   *
+   * @generated from field: string permission = 9;
+   */
+  permission?: string;
+
+  /**
+   * Where the call acted, as "project:<id>" or
+   * "project:<id>/environment:<id>"; empty for the whole workspace and for
+   * an event no call records.
+   *
+   * @generated from field: string scope = 10;
+   */
+  scope?: string;
+
+  /**
+   * "ok", or the reason the call was refused: PERMISSION_MISSING,
+   * OUTSIDE_LIMIT, or a product switch reason such as PRODUCT_DISABLED.
+   * Empty for an event no call records.
+   *
+   * @generated from field: string outcome = 11;
+   */
+  outcome?: string;
+
+  /**
+   * The id of the token the call was made with (never its value); empty for
+   * a session and for an event no call records.
+   *
+   * @generated from field: string token_id = 12;
+   */
+  tokenId?: string;
 };
 
 /**
@@ -197,6 +265,15 @@ export type ListAuditEventsRequest = Message<"toshi.workspace.v1.ListAuditEvents
    * @generated from field: string page_token = 7;
    */
   pageToken: string;
+
+  /**
+   * Only the events of calls with this outcome: "ok", or the reason a call
+   * was refused, such as PERMISSION_MISSING. Empty matches every event, a
+   * call's or not.
+   *
+   * @generated from field: string outcome = 8;
+   */
+  outcome: string;
 };
 
 /**
@@ -258,6 +335,15 @@ export type ListAuditEventsRequestJson = {
    * @generated from field: string page_token = 7;
    */
   pageToken?: string;
+
+  /**
+   * Only the events of calls with this outcome: "ok", or the reason a call
+   * was refused, such as PERMISSION_MISSING. Empty matches every event, a
+   * call's or not.
+   *
+   * @generated from field: string outcome = 8;
+   */
+  outcome?: string;
 };
 
 /**

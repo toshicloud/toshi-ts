@@ -7,6 +7,9 @@ import { ArtifactService, ArtifactUploadService } from "../src/gen/toshi/workspa
 import { AuditEventService } from "../src/gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
 import { DiscoveryService } from "../src/gen/toshi/workspace/v1/discovery_pb.js";
+import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
+import { HookService } from "../src/gen/toshi/workspace/v1/hooks_pb.js";
+import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
 import { DisplayService } from "../src/gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "../src/gen/toshi/workspace/v1/fillers_pb.js";
 import { HostJobService } from "../src/gen/toshi/workspace/v1/hostjobs_pb.js";
@@ -47,6 +50,9 @@ const services: readonly DescService[] = [
   StorageProviderService,
   ProductService,
   DiscoveryService,
+  ConnectionService,
+  HookService,
+  RoleService,
 ];
 
 function transportFor<T extends DescService>(
@@ -63,7 +69,7 @@ function transportFor<T extends DescService>(
 }
 
 describe("the retry table", () => {
-  it("names every method of the nineteen services, 67 reads, 15 keyed and 72 none", () => {
+  it("names every method of the twenty-two services, 75 reads, 19 keyed and 84 none", () => {
     const counts = { read: 0, keyed: 0, none: 0 };
     const paths = new Set<string>();
     for (const service of services) {
@@ -74,8 +80,8 @@ describe("the retry table", () => {
         counts[retryClassFor(path)] += 1;
       }
     }
-    expect(paths.size).toBe(154);
-    expect(counts).toEqual({ read: 67, keyed: 15, none: 72 });
+    expect(paths.size).toBe(178);
+    expect(counts).toEqual({ read: 75, keyed: 19, none: 84 });
   });
 });
 

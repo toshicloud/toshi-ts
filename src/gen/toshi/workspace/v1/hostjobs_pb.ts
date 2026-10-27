@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/hostjobs.proto.
  */
 export const file_toshi_workspace_v1_hostjobs: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvaG9zdGpvYnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKXAQoTTGlzdEhvc3RKb2JzUmVxdWVzdBIwCgZzdGF0ZXMYASADKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlN0YXRlEhIKCnJlcG9zaXRvcnkYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2VfdG9rZW4YBSABKAkiXwoUTGlzdEhvc3RKb2JzUmVzcG9uc2USLgoJaG9zdF9qb2JzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIh8KEUdldEhvc3RKb2JSZXF1ZXN0EgoKAmlkGAEgASgJIkMKEkdldEhvc3RKb2JSZXNwb25zZRItCghob3N0X2pvYhgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iIiIKFENhbmNlbEhvc3RKb2JSZXF1ZXN0EgoKAmlkGAEgASgJIkYKFUNhbmNlbEhvc3RKb2JSZXNwb25zZRItCghob3N0X2pvYhgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iIiYKGEdldEhvc3RKb2JGYWlsdXJlUmVxdWVzdBIKCgJpZBgBIAEoCSKpAgoZR2V0SG9zdEpvYkZhaWx1cmVSZXNwb25zZRINCgVjYXVzZRgBIAEoCRITCgtleHBsYW5hdGlvbhgCIAEoCRISCgpjb25jbHVzaW9uGAMgASgJEg8KB3ZlcmRpY3QYBCABKAkSFgoOdmVyZGljdF9yZWFzb24YBSABKAkSEgoKd2hhdF90b19kbxgGIAEoCRISCgpnaXRodWJfdXJsGAcgASgJEhUKDWRhc2hib2FyZF91cmwYCCABKAkSOgoHaGlzdG9yeRgJIAEoCzIpLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iRmFpbHVyZUhpc3RvcnkSDQoFY2FjaGUYCiABKAkSEQoJdGllcl9saW5lGAsgASgJEg4KBmpvYl9pZBgMIAEoCSIoChpHZXRIb3N0Sm9iVGVsZW1ldHJ5UmVxdWVzdBIKCgJpZBgBIAEoCSLJAQobR2V0SG9zdEpvYlRlbGVtZXRyeVJlc3BvbnNlEgwKBHNpemUYASABKAkSDQoFdmNwdXMYAiABKAUSEgoKbWVtb3J5X21pYhgDIAEoAxI8CgdzdW1tYXJ5GAQgASgLMisudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2JUZWxlbWV0cnlTdW1tYXJ5EjsKB3NhbXBsZXMYBSADKAsyKi50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlRlbGVtZXRyeVNhbXBsZSIqChxHZXRIb3N0Sm9iRGVidWdBY2Nlc3NSZXF1ZXN0EgoKAmlkGAEgASgJIoYBCh1HZXRIb3N0Sm9iRGVidWdBY2Nlc3NSZXNwb25zZRIMCgR1c2VyGAEgASgJEhMKC3ByaXZhdGVfa2V5GAIgASgMEhIKCnJlbGF5X3BhdGgYAyABKAkSLgoKZXhwaXJlc19hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiJQoXU3RvcEhvc3RKb2JEZWJ1Z1JlcXVlc3QSCgoCaWQYASABKAkiSQoYU3RvcEhvc3RKb2JEZWJ1Z1Jlc3BvbnNlEi0KCGhvc3Rfam9iGAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2IiywoKB0hvc3RKb2ISCgoCaWQYASABKAkSEgoKcmVwb3NpdG9yeRgCIAEoCRIXCg93b3JrZmxvd19qb2JfaWQYAyABKAMSDgoGcnVuX2lkGAQgASgDEhcKD2luc3RhbGxhdGlvbl9pZBgFIAEoAxIOCgZsYWJlbHMYBiADKAkSCgoCb3MYByABKAkSDAoEc2l6ZRgIIAEoCRIvCgVzdGF0ZRgJIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iU3RhdGUSDwoHaG9zdF9pZBgKIAEoCRITCgtpbnN0YW5jZV9pZBgLIAEoCRItCglxdWV1ZWRfYXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2Fzc2lnbmVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtmaW5pc2hlZF9hdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY29uY2x1c2lvbhgQIAEoCRINCgVlcnJvchgRIAEoCRITCgtzdG9wX3JlYXNvbhgSIAEoCRI1ChFzdG9wX3JlcXVlc3RlZF9hdBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLaG9sZF9yZWFzb24YFCABKAkSEAoIb3duX2hvc3QYFSABKAgSHwoXZGVidWdfcmVxdWVzdGVkX21pbnV0ZXMYFiABKAUSFQoNZGVidWdfbWludXRlcxgXIAEoBRISCgpkZWJ1Z19ub3RlGBggASgJEjQKEGRlYnVnX3N0YXJ0ZWRfYXQYGSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2RlYnVnX3VudGlsGBogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI+Cgl0ZWxlbWV0cnkYGyABKAsyKy50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlRlbGVtZXRyeVN1bW1hcnkSGgoScnVubmVyX2V4aXRfcmVhc29uGBwgASgJEhAKCG92ZXJmbG93GB0gASgIEjgKFHJ1bm5lcl9yZXF1ZXN0X3NpbmNlGB4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdvdXRjb21lGB8gASgJEhEKCWhvc3Rfa2luZBggIAEoCRIbChNwcmV2aW91c19wb29sX2ltYWdlGCEgASgJEhgKEGJpbGxhYmxlX21pbnV0ZXMYIiABKAMSEgoKZ2l0aHViX3VybBgjIAEoCRIVCg13b3JrZmxvd19uYW1lGCQgASgJEi8KBWNhY2hlGCUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2JDYWNoZRI0ChBydW5uZXJfZXhpdGVkX2F0GCYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIZChFydW5uZXJfY29uY2x1c2lvbhgnIAEoCRIMCgR0aWVyGCggASgJEhgKEG1lbW9yeV9saW1pdF9taWIYKSABKAMSEQoJdGllcl9saW5lGCogASgJEi0KBGtpbmQYKyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYktpbmQSEwoLd29ya2xvYWRfaWQYLCABKAkSDwoHcHJvamVjdBgtIAEoCRITCgtlbnZpcm9ubWVudBguIAEoCSL2AQoXSG9zdEpvYlRlbGVtZXRyeVN1bW1hcnkSEgoKb29tX2tpbGxlZBgBIAEoCBIZChFjcHVfdGhyb3R0bGVkX3BjdBgCIAEoARIXCg9wZWFrX21lbW9yeV9taWIYAyABKAMSGwoTY3B1X3V0aWxpc2F0aW9uX3BjdBgEIAEoARIPCgdzYW1wbGVzGAUgASgFEhgKEG1lbW9yeV9saW1pdF9taWIYBiABKAMSDgoGY3B1X21zGAcgASgDEhIKCm9vbV9yZWFzb24YCCABKAkSDwoHdmVyZGljdBgJIAEoCRIWCg52ZXJkaWN0X3JlYXNvbhgKIAEoCSKfAQoMSG9zdEpvYkNhY2hlEg4KBmF0dGFjaBgBIAEoCRIXCg9iYXNlX2dlbmVyYXRpb24YAiABKAMSEgoKd3JpdGVfYmFjaxgDIAEoCRITCgtza2lwX3JlYXNvbhgEIAEoCRIYChBnZW5lcmF0aW9uX2J5dGVzGAUgASgDEhUKDXdyaXRlX2JhY2tfbXMYBiABKAMSDAoEbGluZRgHIAEoCSL2AgoWSG9zdEpvYlRlbGVtZXRyeVNhbXBsZRImCgJhdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEQoJd2luZG93X21zGAIgASgFEg4KBmNwdV9tcxgDIAEoAxITCgtjcHVfd2FpdF9tcxgEIAEoAxIdChBndWVzdF9tZW1vcnlfbWliGAUgASgDSACIAQESFwoPaG9zdF9tZW1vcnlfbWliGAYgASgDEhcKD2Rpc2tfcmVhZF9ieXRlcxgHIAEoAxIYChBkaXNrX3dyaXRlX2J5dGVzGAggASgDEhkKDG5ldF9yeF9ieXRlcxgJIAEoA0gBiAEBEhkKDG5ldF90eF9ieXRlcxgKIAEoA0gCiAEBEhYKCW9vbV9raWxscxgLIAEoBUgDiAEBQhMKEV9ndWVzdF9tZW1vcnlfbWliQg8KDV9uZXRfcnhfYnl0ZXNCDwoNX25ldF90eF9ieXRlc0IMCgpfb29tX2tpbGxzIq0BChVIb3N0Sm9iRmFpbHVyZUhpc3RvcnkSDAoEZGF5cxgBIAEoBRIXCg9wYXNzZWRfb25fcmVydW4YAiABKAUSFAoMZmFpbGVkX2FnYWluGAMgASgFEgwKBHN0ZXAYBCABKAkSHAoUc3RlcF9wYXNzZWRfb25fcmVydW4YBSABKAUSGQoRc3RlcF9mYWlsZWRfYWdhaW4YBiABKAUSEAoIc2VudGVuY2UYByABKAkqsQIKDEhvc3RKb2JTdGF0ZRIeChpIT1NUX0pPQl9TVEFURV9VTlNQRUNJRklFRBAAEhkKFUhPU1RfSk9CX1NUQVRFX1FVRVVFRBABEhsKF0hPU1RfSk9CX1NUQVRFX0FTU0lHTkVEEAISGwoXSE9TVF9KT0JfU1RBVEVfU1RBUlRJTkcQAxIaChZIT1NUX0pPQl9TVEFURV9SVU5OSU5HEAQSHAoYSE9TVF9KT0JfU1RBVEVfQ09NUExFVEVEEAUSGQoVSE9TVF9KT0JfU1RBVEVfRkFJTEVEEAYSHAoYSE9TVF9KT0JfU1RBVEVfQ0FOQ0VMTEVEEAcSGwoXSE9TVF9KT0JfU1RBVEVfU1RPUFBJTkcQCBIcChhIT1NUX0pPQl9TVEFURV9ERUJVR0dJTkcQCSp5CgtIb3N0Sm9iS2luZBIdChlIT1NUX0pPQl9LSU5EX1VOU1BFQ0lGSUVEEAASFQoRSE9TVF9KT0JfS0lORF9KT0IQARIZChVIT1NUX0pPQl9LSU5EX1NBTkRCT1gQAhIZChVIT1NUX0pPQl9LSU5EX1NFUlZJQ0UQAzKFBwoOSG9zdEpvYlNlcnZpY2UScQoMTGlzdEhvc3RKb2JzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0Sm9ic1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RKb2JzUmVzcG9uc2UiDsLzGApob3N0cy5yZWFkEmsKCkdldEhvc3RKb2ISJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlJlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBJ1Cg1DYW5jZWxIb3N0Sm9iEigudG9zaGkud29ya3NwYWNlLnYxLkNhbmNlbEhvc3RKb2JSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNhbmNlbEhvc3RKb2JSZXNwb25zZSIPwvMYC2hvc3RzLndyaXRlEoABChFHZXRIb3N0Sm9iRmFpbHVyZRIsLnRvc2hpLndvcmtzcGFjZS52MS5HZXRIb3N0Sm9iRmFpbHVyZVJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYkZhaWx1cmVSZXNwb25zZSIOwvMYCmhvc3RzLnJlYWQShgEKE0dldEhvc3RKb2JUZWxlbWV0cnkSLi50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlRlbGVtZXRyeVJlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlRlbGVtZXRyeVJlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBKPAQoVR2V0SG9zdEpvYkRlYnVnQWNjZXNzEjAudG9zaGkud29ya3NwYWNlLnYxLkdldEhvc3RKb2JEZWJ1Z0FjY2Vzc1JlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYkRlYnVnQWNjZXNzUmVzcG9uc2UiEcLzGA1kZWJ1Zy5jb25uZWN0En4KEFN0b3BIb3N0Sm9iRGVidWcSKy50b3NoaS53b3Jrc3BhY2UudjEuU3RvcEhvc3RKb2JEZWJ1Z1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuU3RvcEhvc3RKb2JEZWJ1Z1Jlc3BvbnNlIg/C8xgLZGVidWcud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvaG9zdGpvYnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKXAQoTTGlzdEhvc3RKb2JzUmVxdWVzdBIwCgZzdGF0ZXMYASADKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlN0YXRlEhIKCnJlcG9zaXRvcnkYAiABKAkSEwoLd29ya2xvYWRfaWQYAyABKAkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2VfdG9rZW4YBSABKAkiXwoUTGlzdEhvc3RKb2JzUmVzcG9uc2USLgoJaG9zdF9qb2JzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIh8KEUdldEhvc3RKb2JSZXF1ZXN0EgoKAmlkGAEgASgJInkKEkdldEhvc3RKb2JSZXNwb25zZRItCghob3N0X2pvYhgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iEjQKCGF0dGVtcHRzGAIgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2JBdHRlbXB0IiIKFENhbmNlbEhvc3RKb2JSZXF1ZXN0EgoKAmlkGAEgASgJIkYKFUNhbmNlbEhvc3RKb2JSZXNwb25zZRItCghob3N0X2pvYhgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iIiYKGEdldEhvc3RKb2JGYWlsdXJlUmVxdWVzdBIKCgJpZBgBIAEoCSKpAgoZR2V0SG9zdEpvYkZhaWx1cmVSZXNwb25zZRINCgVjYXVzZRgBIAEoCRITCgtleHBsYW5hdGlvbhgCIAEoCRISCgpjb25jbHVzaW9uGAMgASgJEg8KB3ZlcmRpY3QYBCABKAkSFgoOdmVyZGljdF9yZWFzb24YBSABKAkSEgoKd2hhdF90b19kbxgGIAEoCRISCgpnaXRodWJfdXJsGAcgASgJEhUKDWRhc2hib2FyZF91cmwYCCABKAkSOgoHaGlzdG9yeRgJIAEoCzIpLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iRmFpbHVyZUhpc3RvcnkSDQoFY2FjaGUYCiABKAkSEQoJdGllcl9saW5lGAsgASgJEg4KBmpvYl9pZBgMIAEoCSIoChpHZXRIb3N0Sm9iVGVsZW1ldHJ5UmVxdWVzdBIKCgJpZBgBIAEoCSLJAQobR2V0SG9zdEpvYlRlbGVtZXRyeVJlc3BvbnNlEgwKBHNpemUYASABKAkSDQoFdmNwdXMYAiABKAUSEgoKbWVtb3J5X21pYhgDIAEoAxI8CgdzdW1tYXJ5GAQgASgLMisudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2JUZWxlbWV0cnlTdW1tYXJ5EjsKB3NhbXBsZXMYBSADKAsyKi50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlRlbGVtZXRyeVNhbXBsZSIqChxHZXRIb3N0Sm9iRGVidWdBY2Nlc3NSZXF1ZXN0EgoKAmlkGAEgASgJIoYBCh1HZXRIb3N0Sm9iRGVidWdBY2Nlc3NSZXNwb25zZRIMCgR1c2VyGAEgASgJEhMKC3ByaXZhdGVfa2V5GAIgASgMEhIKCnJlbGF5X3BhdGgYAyABKAkSLgoKZXhwaXJlc19hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiJQoXU3RvcEhvc3RKb2JEZWJ1Z1JlcXVlc3QSCgoCaWQYASABKAkiSQoYU3RvcEhvc3RKb2JEZWJ1Z1Jlc3BvbnNlEi0KCGhvc3Rfam9iGAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2IiuwsKB0hvc3RKb2ISCgoCaWQYASABKAkSEgoKcmVwb3NpdG9yeRgCIAEoCRIXCg93b3JrZmxvd19qb2JfaWQYAyABKAMSDgoGcnVuX2lkGAQgASgDEhcKD2luc3RhbGxhdGlvbl9pZBgFIAEoAxIOCgZsYWJlbHMYBiADKAkSCgoCb3MYByABKAkSDAoEc2l6ZRgIIAEoCRIvCgVzdGF0ZRgJIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0Sm9iU3RhdGUSDwoHaG9zdF9pZBgKIAEoCRITCgtpbnN0YW5jZV9pZBgLIAEoCRItCglxdWV1ZWRfYXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2Fzc2lnbmVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtmaW5pc2hlZF9hdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY29uY2x1c2lvbhgQIAEoCRINCgVlcnJvchgRIAEoCRITCgtzdG9wX3JlYXNvbhgSIAEoCRI1ChFzdG9wX3JlcXVlc3RlZF9hdBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLaG9sZF9yZWFzb24YFCABKAkSEAoIb3duX2hvc3QYFSABKAgSHwoXZGVidWdfcmVxdWVzdGVkX21pbnV0ZXMYFiABKAUSFQoNZGVidWdfbWludXRlcxgXIAEoBRISCgpkZWJ1Z19ub3RlGBggASgJEjQKEGRlYnVnX3N0YXJ0ZWRfYXQYGSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2RlYnVnX3VudGlsGBogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI+Cgl0ZWxlbWV0cnkYGyABKAsyKy50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYlRlbGVtZXRyeVN1bW1hcnkSGgoScnVubmVyX2V4aXRfcmVhc29uGBwgASgJEhAKCG92ZXJmbG93GB0gASgIEjgKFHJ1bm5lcl9yZXF1ZXN0X3NpbmNlGB4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdvdXRjb21lGB8gASgJEhEKCWhvc3Rfa2luZBggIAEoCRIbChNwcmV2aW91c19wb29sX2ltYWdlGCEgASgJEhgKEGJpbGxhYmxlX21pbnV0ZXMYIiABKAMSEgoKZ2l0aHViX3VybBgjIAEoCRIVCg13b3JrZmxvd19uYW1lGCQgASgJEi8KBWNhY2hlGCUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkhvc3RKb2JDYWNoZRI0ChBydW5uZXJfZXhpdGVkX2F0GCYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIZChFydW5uZXJfY29uY2x1c2lvbhgnIAEoCRIMCgR0aWVyGCggASgJEhgKEG1lbW9yeV9saW1pdF9taWIYKSABKAMSEQoJdGllcl9saW5lGCogASgJEi0KBGtpbmQYKyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEpvYktpbmQSEwoLd29ya2xvYWRfaWQYLCABKAkSDwoHcHJvamVjdBgtIAEoCRITCgtlbnZpcm9ubWVudBguIAEoCRIQCghwcm92aWRlchgvIAEoCRIOCgZzdGF0dXMYMCABKAkSEQoJcnVubmVyX2lkGDEgASgJEhMKC3J1bm5lcl9uYW1lGDIgASgJEg8KB2F0dGVtcHQYMyABKAUSEwoLcnVuX2F0dGVtcHQYNCABKAUitAIKDkhvc3RKb2JBdHRlbXB0Eg8KB2F0dGVtcHQYASABKAUSEQoJcnVubmVyX2lkGAIgASgJEhMKC3J1bm5lcl9uYW1lGAMgASgJEg8KB2hvc3RfaWQYBCABKAkSEwoLaW5zdGFuY2VfaWQYBSABKAkSEAoIcHJvdmlkZXIYBiABKAkSLwoLYXNzaWduZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnN0YXJ0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpjb25jbHVzaW9uGAogASgJEgsKA2VuZBgLIAEoCSL2AQoXSG9zdEpvYlRlbGVtZXRyeVN1bW1hcnkSEgoKb29tX2tpbGxlZBgBIAEoCBIZChFjcHVfdGhyb3R0bGVkX3BjdBgCIAEoARIXCg9wZWFrX21lbW9yeV9taWIYAyABKAMSGwoTY3B1X3V0aWxpc2F0aW9uX3BjdBgEIAEoARIPCgdzYW1wbGVzGAUgASgFEhgKEG1lbW9yeV9saW1pdF9taWIYBiABKAMSDgoGY3B1X21zGAcgASgDEhIKCm9vbV9yZWFzb24YCCABKAkSDwoHdmVyZGljdBgJIAEoCRIWCg52ZXJkaWN0X3JlYXNvbhgKIAEoCSKfAQoMSG9zdEpvYkNhY2hlEg4KBmF0dGFjaBgBIAEoCRIXCg9iYXNlX2dlbmVyYXRpb24YAiABKAMSEgoKd3JpdGVfYmFjaxgDIAEoCRITCgtza2lwX3JlYXNvbhgEIAEoCRIYChBnZW5lcmF0aW9uX2J5dGVzGAUgASgDEhUKDXdyaXRlX2JhY2tfbXMYBiABKAMSDAoEbGluZRgHIAEoCSL2AgoWSG9zdEpvYlRlbGVtZXRyeVNhbXBsZRImCgJhdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEQoJd2luZG93X21zGAIgASgFEg4KBmNwdV9tcxgDIAEoAxITCgtjcHVfd2FpdF9tcxgEIAEoAxIdChBndWVzdF9tZW1vcnlfbWliGAUgASgDSACIAQESFwoPaG9zdF9tZW1vcnlfbWliGAYgASgDEhcKD2Rpc2tfcmVhZF9ieXRlcxgHIAEoAxIYChBkaXNrX3dyaXRlX2J5dGVzGAggASgDEhkKDG5ldF9yeF9ieXRlcxgJIAEoA0gBiAEBEhkKDG5ldF90eF9ieXRlcxgKIAEoA0gCiAEBEhYKCW9vbV9raWxscxgLIAEoBUgDiAEBQhMKEV9ndWVzdF9tZW1vcnlfbWliQg8KDV9uZXRfcnhfYnl0ZXNCDwoNX25ldF90eF9ieXRlc0IMCgpfb29tX2tpbGxzIq0BChVIb3N0Sm9iRmFpbHVyZUhpc3RvcnkSDAoEZGF5cxgBIAEoBRIXCg9wYXNzZWRfb25fcmVydW4YAiABKAUSFAoMZmFpbGVkX2FnYWluGAMgASgFEgwKBHN0ZXAYBCABKAkSHAoUc3RlcF9wYXNzZWRfb25fcmVydW4YBSABKAUSGQoRc3RlcF9mYWlsZWRfYWdhaW4YBiABKAUSEAoIc2VudGVuY2UYByABKAkqsQIKDEhvc3RKb2JTdGF0ZRIeChpIT1NUX0pPQl9TVEFURV9VTlNQRUNJRklFRBAAEhkKFUhPU1RfSk9CX1NUQVRFX1FVRVVFRBABEhsKF0hPU1RfSk9CX1NUQVRFX0FTU0lHTkVEEAISGwoXSE9TVF9KT0JfU1RBVEVfU1RBUlRJTkcQAxIaChZIT1NUX0pPQl9TVEFURV9SVU5OSU5HEAQSHAoYSE9TVF9KT0JfU1RBVEVfQ09NUExFVEVEEAUSGQoVSE9TVF9KT0JfU1RBVEVfRkFJTEVEEAYSHAoYSE9TVF9KT0JfU1RBVEVfQ0FOQ0VMTEVEEAcSGwoXSE9TVF9KT0JfU1RBVEVfU1RPUFBJTkcQCBIcChhIT1NUX0pPQl9TVEFURV9ERUJVR0dJTkcQCSp5CgtIb3N0Sm9iS2luZBIdChlIT1NUX0pPQl9LSU5EX1VOU1BFQ0lGSUVEEAASFQoRSE9TVF9KT0JfS0lORF9KT0IQARIZChVIT1NUX0pPQl9LSU5EX1NBTkRCT1gQAhIZChVIT1NUX0pPQl9LSU5EX1NFUlZJQ0UQAzLEBwoOSG9zdEpvYlNlcnZpY2UScQoMTGlzdEhvc3RKb2JzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0Sm9ic1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RKb2JzUmVzcG9uc2UiDsLzGApob3N0cy5yZWFkEmsKCkdldEhvc3RKb2ISJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlJlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBJ1Cg1DYW5jZWxIb3N0Sm9iEigudG9zaGkud29ya3NwYWNlLnYxLkNhbmNlbEhvc3RKb2JSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNhbmNlbEhvc3RKb2JSZXNwb25zZSIPwvMYC2hvc3RzLndyaXRlEoABChFHZXRIb3N0Sm9iRmFpbHVyZRIsLnRvc2hpLndvcmtzcGFjZS52MS5HZXRIb3N0Sm9iRmFpbHVyZVJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYkZhaWx1cmVSZXNwb25zZSIOwvMYCmhvc3RzLnJlYWQShgEKE0dldEhvc3RKb2JUZWxlbWV0cnkSLi50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlRlbGVtZXRyeVJlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYlRlbGVtZXRyeVJlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBKxAQoVR2V0SG9zdEpvYkRlYnVnQWNjZXNzEjAudG9zaGkud29ya3NwYWNlLnYxLkdldEhvc3RKb2JEZWJ1Z0FjY2Vzc1JlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuR2V0SG9zdEpvYkRlYnVnQWNjZXNzUmVzcG9uc2UiM8LzGA1kZWJ1Zy5jb25uZWN00vMYHgocaG9zdF9qb2IuZGVidWdfYWNjZXNzX2lzc3VlZBKaAQoQU3RvcEhvc3RKb2JEZWJ1ZxIrLnRvc2hpLndvcmtzcGFjZS52MS5TdG9wSG9zdEpvYkRlYnVnUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5TdG9wSG9zdEpvYkRlYnVnUmVzcG9uc2UiK8LzGAtkZWJ1Zy53cml0ZdLzGBgKFmhvc3Rfam9iLmRlYnVnX3N0b3BwZWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.ListHostJobsRequest
@@ -180,6 +180,14 @@ export type GetHostJobResponse = Message<"toshi.workspace.v1.GetHostJobResponse"
    * @generated from field: toshi.workspace.v1.HostJob host_job = 1;
    */
   hostJob?: HostJob | undefined;
+
+  /**
+   * The job's attempts, oldest first: one for each assignment to a host,
+   * the current one last while the job holds it.
+   *
+   * @generated from field: repeated toshi.workspace.v1.HostJobAttempt attempts = 2;
+   */
+  attempts: HostJobAttempt[];
 };
 
 /**
@@ -190,6 +198,14 @@ export type GetHostJobResponseJson = {
    * @generated from field: toshi.workspace.v1.HostJob host_job = 1;
    */
   hostJob?: HostJobJson;
+
+  /**
+   * The job's attempts, oldest first: one for each assignment to a host,
+   * the current one last while the job holds it.
+   *
+   * @generated from field: repeated toshi.workspace.v1.HostJobAttempt attempts = 2;
+   */
+  attempts?: HostJobAttemptJson[];
 };
 
 /**
@@ -1127,6 +1143,64 @@ export type HostJob = Message<"toshi.workspace.v1.HostJob"> & {
    * @generated from field: string environment = 46;
    */
   environment: string;
+
+  /**
+   * The kind of provider that created instance_id, as the host's agent
+   * reported it with the instance: "container", "fake", "qemu" or "vz".
+   * It stays with the attempt when the host's agent later reports another
+   * kind. Empty while the job has no instance, for a job whose agent sent
+   * none or recorded before the field, and for a cloud host's job.
+   *
+   * @generated from field: string provider = 47;
+   */
+  provider: string;
+
+  /**
+   * The state in GitHub's words: "queued" while queued, assigned or
+   * starting, "in_progress" while running, debugging or stopping once its
+   * attempt started, "completed" once completed, failed or cancelled. A
+   * Workspace API job's attempt starts when its host's start of the
+   * command is admitted: until then it is queued.
+   *
+   * @generated from field: string status = 48;
+   */
+  status: string;
+
+  /**
+   * The runner that runs, or ran, the job's current attempt: for a GitHub
+   * job GitHub's runner id in decimal and the name it was registered
+   * with, for a Workspace API job its attempt's name as both. Unset until
+   * the attempt started, and for a job that ended before any did; the
+   * host it was assigned to is host_id.
+   *
+   * @generated from field: string runner_id = 49;
+   */
+  runnerId: string;
+
+  /**
+   * @generated from field: string runner_name = 50;
+   */
+  runnerName: string;
+
+  /**
+   * The current attempt once it started, counting from 1: each assignment
+   * of the job is one, and a requeue makes the next. 0 until it started,
+   * and for a job that ended before any attempt did; attempts on the get
+   * answer list every assignment.
+   *
+   * @generated from field: int32 attempt = 51;
+   */
+  attempt: number;
+
+  /**
+   * GitHub's attempt of the workflow run the job is part of, as the
+   * workflow_job webhook Toshi made the job from said: 1 for a run's first
+   * attempt, 2 for its first re-run. 0 when it was not recorded, as for a
+   * job that is not a GitHub job or one stored before the field.
+   *
+   * @generated from field: int32 run_attempt = 52;
+   */
+  runAttempt: number;
 };
 
 /**
@@ -1495,6 +1569,64 @@ export type HostJobJson = {
    * @generated from field: string environment = 46;
    */
   environment?: string;
+
+  /**
+   * The kind of provider that created instance_id, as the host's agent
+   * reported it with the instance: "container", "fake", "qemu" or "vz".
+   * It stays with the attempt when the host's agent later reports another
+   * kind. Empty while the job has no instance, for a job whose agent sent
+   * none or recorded before the field, and for a cloud host's job.
+   *
+   * @generated from field: string provider = 47;
+   */
+  provider?: string;
+
+  /**
+   * The state in GitHub's words: "queued" while queued, assigned or
+   * starting, "in_progress" while running, debugging or stopping once its
+   * attempt started, "completed" once completed, failed or cancelled. A
+   * Workspace API job's attempt starts when its host's start of the
+   * command is admitted: until then it is queued.
+   *
+   * @generated from field: string status = 48;
+   */
+  status?: string;
+
+  /**
+   * The runner that runs, or ran, the job's current attempt: for a GitHub
+   * job GitHub's runner id in decimal and the name it was registered
+   * with, for a Workspace API job its attempt's name as both. Unset until
+   * the attempt started, and for a job that ended before any did; the
+   * host it was assigned to is host_id.
+   *
+   * @generated from field: string runner_id = 49;
+   */
+  runnerId?: string;
+
+  /**
+   * @generated from field: string runner_name = 50;
+   */
+  runnerName?: string;
+
+  /**
+   * The current attempt once it started, counting from 1: each assignment
+   * of the job is one, and a requeue makes the next. 0 until it started,
+   * and for a job that ended before any attempt did; attempts on the get
+   * answer list every assignment.
+   *
+   * @generated from field: int32 attempt = 51;
+   */
+  attempt?: number;
+
+  /**
+   * GitHub's attempt of the workflow run the job is part of, as the
+   * workflow_job webhook Toshi made the job from said: 1 for a run's first
+   * attempt, 2 for its first re-run. 0 when it was not recorded, as for a
+   * job that is not a GitHub job or one stored before the field.
+   *
+   * @generated from field: int32 run_attempt = 52;
+   */
+  runAttempt?: number;
 };
 
 /**
@@ -1503,6 +1635,171 @@ export type HostJobJson = {
  */
 export const HostJobSchema: GenMessage<HostJob, {jsonType: HostJobJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_hostjobs, 14);
+
+/**
+ * HostJobAttempt is one attempt of a host job: one assignment to a host
+ * and its runner, and why it ended.
+ *
+ * @generated from message toshi.workspace.v1.HostJobAttempt
+ */
+export type HostJobAttempt = Message<"toshi.workspace.v1.HostJobAttempt"> & {
+  /**
+   * Counting from 1.
+   *
+   * @generated from field: int32 attempt = 1;
+   */
+  attempt: number;
+
+  /**
+   * As HostJob.runner_id and HostJob.runner_name; empty when no runner was
+   * named for the assignment.
+   *
+   * @generated from field: string runner_id = 2;
+   */
+  runnerId: string;
+
+  /**
+   * @generated from field: string runner_name = 3;
+   */
+  runnerName: string;
+
+  /**
+   * @generated from field: string host_id = 4;
+   */
+  hostId: string;
+
+  /**
+   * @generated from field: string instance_id = 5;
+   */
+  instanceId: string;
+
+  /**
+   * @generated from field: string provider = 6;
+   */
+  provider: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp assigned_at = 7;
+   */
+  assignedAt?: Timestamp | undefined;
+
+  /**
+   * Unset when the attempt was assigned and never started.
+   *
+   * @generated from field: google.protobuf.Timestamp started_at = 8;
+   */
+  startedAt?: Timestamp | undefined;
+
+  /**
+   * When the attempt ended; unset for the current attempt until the job
+   * finished.
+   *
+   * @generated from field: google.protobuf.Timestamp finished_at = 9;
+   */
+  finishedAt?: Timestamp | undefined;
+
+  /**
+   * The job's conclusion as GitHub or its runner reported it in the
+   * attempt, such as "success"; empty when none was.
+   *
+   * @generated from field: string conclusion = 10;
+   */
+  conclusion: string;
+
+  /**
+   * Why an attempt that was queued again ended, such as "requeued: its
+   * assignment timed out"; empty for the current attempt.
+   *
+   * @generated from field: string end = 11;
+   */
+  end: string;
+};
+
+/**
+ * HostJobAttempt is one attempt of a host job: one assignment to a host
+ * and its runner, and why it ended.
+ *
+ * @generated from message toshi.workspace.v1.HostJobAttempt
+ */
+export type HostJobAttemptJson = {
+  /**
+   * Counting from 1.
+   *
+   * @generated from field: int32 attempt = 1;
+   */
+  attempt?: number;
+
+  /**
+   * As HostJob.runner_id and HostJob.runner_name; empty when no runner was
+   * named for the assignment.
+   *
+   * @generated from field: string runner_id = 2;
+   */
+  runnerId?: string;
+
+  /**
+   * @generated from field: string runner_name = 3;
+   */
+  runnerName?: string;
+
+  /**
+   * @generated from field: string host_id = 4;
+   */
+  hostId?: string;
+
+  /**
+   * @generated from field: string instance_id = 5;
+   */
+  instanceId?: string;
+
+  /**
+   * @generated from field: string provider = 6;
+   */
+  provider?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp assigned_at = 7;
+   */
+  assignedAt?: TimestampJson;
+
+  /**
+   * Unset when the attempt was assigned and never started.
+   *
+   * @generated from field: google.protobuf.Timestamp started_at = 8;
+   */
+  startedAt?: TimestampJson;
+
+  /**
+   * When the attempt ended; unset for the current attempt until the job
+   * finished.
+   *
+   * @generated from field: google.protobuf.Timestamp finished_at = 9;
+   */
+  finishedAt?: TimestampJson;
+
+  /**
+   * The job's conclusion as GitHub or its runner reported it in the
+   * attempt, such as "success"; empty when none was.
+   *
+   * @generated from field: string conclusion = 10;
+   */
+  conclusion?: string;
+
+  /**
+   * Why an attempt that was queued again ended, such as "requeued: its
+   * assignment timed out"; empty for the current attempt.
+   *
+   * @generated from field: string end = 11;
+   */
+  end?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.HostJobAttempt.
+ * Use `create(HostJobAttemptSchema)` to create a new message.
+ */
+export const HostJobAttemptSchema: GenMessage<HostJobAttempt, {jsonType: HostJobAttemptJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_hostjobs, 15);
 
 /**
  * HostJobTelemetrySummary sums up a job VM's resource samples.
@@ -1689,7 +1986,7 @@ export type HostJobTelemetrySummaryJson = {
  * Use `create(HostJobTelemetrySummarySchema)` to create a new message.
  */
 export const HostJobTelemetrySummarySchema: GenMessage<HostJobTelemetrySummary, {jsonType: HostJobTelemetrySummaryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_hostjobs, 15);
+  messageDesc(file_toshi_workspace_v1_hostjobs, 16);
 
 /**
  * HostJobCache is what a job's cache disk did.
@@ -1820,7 +2117,7 @@ export type HostJobCacheJson = {
  * Use `create(HostJobCacheSchema)` to create a new message.
  */
 export const HostJobCacheSchema: GenMessage<HostJobCache, {jsonType: HostJobCacheJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_hostjobs, 16);
+  messageDesc(file_toshi_workspace_v1_hostjobs, 17);
 
 /**
  * HostJobTelemetrySample is the same as toshi.agent.v1.TelemetrySample: one
@@ -1953,7 +2250,7 @@ export type HostJobTelemetrySampleJson = {
  * Use `create(HostJobTelemetrySampleSchema)` to create a new message.
  */
 export const HostJobTelemetrySampleSchema: GenMessage<HostJobTelemetrySample, {jsonType: HostJobTelemetrySampleJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_hostjobs, 17);
+  messageDesc(file_toshi_workspace_v1_hostjobs, 18);
 
 /**
  * HostJobFailureHistory counts the failures of the jobs with the same
@@ -2066,7 +2363,7 @@ export type HostJobFailureHistoryJson = {
  * Use `create(HostJobFailureHistorySchema)` to create a new message.
  */
 export const HostJobFailureHistorySchema: GenMessage<HostJobFailureHistory, {jsonType: HostJobFailureHistoryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_hostjobs, 18);
+  messageDesc(file_toshi_workspace_v1_hostjobs, 19);
 
 /**
  * HostJobState is where a host job is in its life cycle.

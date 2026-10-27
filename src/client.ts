@@ -7,14 +7,17 @@ import { executeCommand } from "./execute.js";
 import { ArtifactService, ArtifactUploadService } from "./gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "./gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
+import { ConnectionService } from "./gen/toshi/workspace/v1/connections_pb.js";
 import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
+import { HookService } from "./gen/toshi/workspace/v1/hooks_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
 import { ProductService } from "./gen/toshi/workspace/v1/products_pb.js";
 import { ProjectService } from "./gen/toshi/workspace/v1/projects_pb.js";
 import { RecordingService } from "./gen/toshi/workspace/v1/recordings_pb.js";
+import { RoleService } from "./gen/toshi/workspace/v1/roles_pb.js";
 import { SecretService } from "./gen/toshi/workspace/v1/secrets_pb.js";
 import { StorageProviderService } from "./gen/toshi/workspace/v1/storage_providers_pb.js";
 import { TokenService } from "./gen/toshi/workspace/v1/tokens_pb.js";
@@ -168,6 +171,9 @@ export interface ToshiClient {
   readonly storageProvider: Client<typeof StorageProviderService>;
   readonly product: Client<typeof ProductService>;
   readonly discovery: Client<typeof DiscoveryService>;
+  readonly connection: Client<typeof ConnectionService>;
+  readonly hook: Client<typeof HookService>;
+  readonly role: Client<typeof RoleService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -398,5 +404,8 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     storageProvider: createClient(StorageProviderService, transport),
     product: createClient(ProductService, transport),
     discovery: createClient(DiscoveryService, transport),
+    connection: createClient(ConnectionService, transport),
+    hook: createClient(HookService, transport),
+    role: createClient(RoleService, transport),
   };
 }

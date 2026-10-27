@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/discovery.proto.
  */
 export const file_toshi_workspace_v1_discovery: GenFile = /*@__PURE__*/
-  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkikwEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMi6QEKEURpc2NvdmVyZWRQcm9kdWN0EgoKAmlkGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSDAoEZG9jcxgDIAEoCRIPCgdlbmFibGVkGAQgASgIEjQKCGZlYXR1cmVzGAUgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RGZWF0dXJlEi8KBXN0YXRlGAYgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRIxCgZzd2l0Y2gYByABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN3aXRjaCKWAgoOUHJvZHVjdEZlYXR1cmUSCwoDa2V5GAEgASgJEjQKBHR5cGUYAiABKA4yJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdEZlYXR1cmVUeXBlEg4KBnZhbHVlcxgDIAMoCRISCgpuYXJyb3dhYmxlGAQgASgIEjUKC2VudGl0bGVtZW50GAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRIxCgdzZXR0aW5nGAYgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRIzCgllZmZlY3RpdmUYByABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqngEKDFByb2R1Y3RTdGF0ZRIdChlQUk9EVUNUX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUFJPRFVDVF9TVEFURV9FTkFCTEVEEAESHQoZUFJPRFVDVF9TVEFURV9OT19ORVdfV09SSxACEhoKFlBST0RVQ1RfU1RBVEVfRFJBSU5JTkcQAxIZChVQUk9EVUNUX1NUQVRFX1NUT1BQRUQQBCqjAQoNUHJvZHVjdFN3aXRjaBIeChpQUk9EVUNUX1NXSVRDSF9VTlNQRUNJRklFRBAAEhUKEVBST0RVQ1RfU1dJVENIX09OEAESGwoXUFJPRFVDVF9TV0lUQ0hfRElTQUJMRUQQAhIfChtQUk9EVUNUX1NXSVRDSF9OT1RfRU5USVRMRUQQAxIdChlQUk9EVUNUX1NXSVRDSF9UVVJORURfT0ZGEAQq2QEKElByb2R1Y3RGZWF0dXJlVHlwZRIkCiBQUk9EVUNUX0ZFQVRVUkVfVFlQRV9VTlNQRUNJRklFRBAAEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0JPT0wQARIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9DT1VOVBACEh4KGlBST0RVQ1RfRkVBVFVSRV9UWVBFX1JBTkdFEAMSHQoZUFJPRFVDVF9GRUFUVVJFX1RZUEVfRU5VTRAEEh8KG1BST0RVQ1RfRkVBVFVSRV9UWVBFX1NUUklORxAFMowBChBEaXNjb3ZlcnlTZXJ2aWNlEngKCERpc2NvdmVyEiMudG9zaGkud29ya3NwYWNlLnYxLkRpc2NvdmVyUmVxdWVzdBokLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlc3BvbnNlIiHC8xgOd29ya3NwYWNlLnJlYWTK8xgLZW52aXJvbm1lbnRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_toshi_permission]);
+  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkikwEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMi8AIKEURpc2NvdmVyZWRQcm9kdWN0EgoKAmlkGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSDAoEZG9jcxgDIAEoCRIPCgdlbmFibGVkGAQgASgIEjQKCGZlYXR1cmVzGAUgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RGZWF0dXJlEi8KBXN0YXRlGAYgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRIxCgZzd2l0Y2gYByABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN3aXRjaBI4CghzdXJmYWNlcxgIIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlcmVkU3VyZmFjZXMSSwoSaW5zdGFsbGF0aW9uX3N0YXRlGAkgASgOMi8udG9zaGkud29ya3NwYWNlLnYxLkRpc2NvdmVyZWRJbnN0YWxsYXRpb25TdGF0ZSJOChJEaXNjb3ZlcmVkU3VyZmFjZXMSCwoDYXBpGAEgASgJEgsKA2NsaRgCIAEoCRIRCglkYXNoYm9hcmQYAyABKAkSCwoDc2RrGAQgASgJIqEDCg5Qcm9kdWN0RmVhdHVyZRILCgNrZXkYASABKAkSNAoEdHlwZRgCIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0RmVhdHVyZVR5cGUSDgoGdmFsdWVzGAMgAygJEhIKCm5hcnJvd2FibGUYBCABKAgSNQoLZW50aXRsZW1lbnQYBSABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgHIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSNwoNZGVmYXVsdF92YWx1ZRgIIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSCwoDbWF4GAkgASgDEhAKCHBsYW5fa2V5GAogASgJEjEKBnNvdXJjZRgLIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqzgEKG0Rpc2NvdmVyZWRJbnN0YWxsYXRpb25TdGF0ZRItCilESVNDT1ZFUkVEX0lOU1RBTExBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEigKJERJU0NPVkVSRURfSU5TVEFMTEFUSU9OX1NUQVRFX0FDVElWRRABEisKJ0RJU0NPVkVSRURfSU5TVEFMTEFUSU9OX1NUQVRFX1NVU1BFTkRFRBACEikKJURJU0NPVkVSRURfSU5TVEFMTEFUSU9OX1NUQVRFX1JFTU9WRUQQAyqeAQoMUHJvZHVjdFN0YXRlEh0KGVBST0RVQ1RfU1RBVEVfVU5TUEVDSUZJRUQQABIZChVQUk9EVUNUX1NUQVRFX0VOQUJMRUQQARIdChlQUk9EVUNUX1NUQVRFX05PX05FV19XT1JLEAISGgoWUFJPRFVDVF9TVEFURV9EUkFJTklORxADEhkKFVBST0RVQ1RfU1RBVEVfU1RPUFBFRBAEKqMBCg1Qcm9kdWN0U3dpdGNoEh4KGlBST0RVQ1RfU1dJVENIX1VOU1BFQ0lGSUVEEAASFQoRUFJPRFVDVF9TV0lUQ0hfT04QARIbChdQUk9EVUNUX1NXSVRDSF9ESVNBQkxFRBACEh8KG1BST0RVQ1RfU1dJVENIX05PVF9FTlRJVExFRBADEh0KGVBST0RVQ1RfU1dJVENIX1RVUk5FRF9PRkYQBCqeAQoNRmVhdHVyZVNvdXJjZRIeChpGRUFUVVJFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhsKF0ZFQVRVUkVfU09VUkNFX09WRVJSSURFEAESFwoTRkVBVFVSRV9TT1VSQ0VfUExBThACEhsKF0ZFQVRVUkVfU09VUkNFX1BMQU5fS0VZEAMSGgoWRkVBVFVSRV9TT1VSQ0VfREVGQVVMVBAEKtkBChJQcm9kdWN0RmVhdHVyZVR5cGUSJAogUFJPRFVDVF9GRUFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlQUk9EVUNUX0ZFQVRVUkVfVFlQRV9CT09MEAESHgoaUFJPRFVDVF9GRUFUVVJFX1RZUEVfQ09VTlQQAhIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9SQU5HRRADEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0VOVU0QBBIfChtQUk9EVUNUX0ZFQVRVUkVfVFlQRV9TVFJJTkcQBTKMAQoQRGlzY292ZXJ5U2VydmljZRJ4CghEaXNjb3ZlchIjLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlcXVlc3QaJC50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJSZXNwb25zZSIhwvMYDndvcmtzcGFjZS5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.DiscoverRequest
@@ -182,6 +182,26 @@ export type DiscoveredProduct = Message<"toshi.workspace.v1.DiscoveredProduct"> 
    * @generated from field: toshi.workspace.v1.ProductSwitch switch = 7;
    */
   switch: ProductSwitch;
+
+  /**
+   * surfaces are what the product adds to Toshi, from its catalog entry.
+   * Unset for a product the catalog has no entry for.
+   *
+   * @generated from field: toshi.workspace.v1.DiscoveredSurfaces surfaces = 8;
+   */
+  surfaces?: DiscoveredSurfaces | undefined;
+
+  /**
+   * installation_state is the state of the workspace's installation of an
+   * outside product, a removed one included; unspecified for a built-in
+   * product. Such a product declares no features; it is enabled, its state
+   * enabled and its switch ON while the installation is active, and
+   * otherwise it is not enabled, its state stopped and its switch
+   * TURNED_OFF.
+   *
+   * @generated from field: toshi.workspace.v1.DiscoveredInstallationState installation_state = 9;
+   */
+  installationState: DiscoveredInstallationState;
 };
 
 /**
@@ -241,6 +261,26 @@ export type DiscoveredProductJson = {
    * @generated from field: toshi.workspace.v1.ProductSwitch switch = 7;
    */
   switch?: ProductSwitchJson;
+
+  /**
+   * surfaces are what the product adds to Toshi, from its catalog entry.
+   * Unset for a product the catalog has no entry for.
+   *
+   * @generated from field: toshi.workspace.v1.DiscoveredSurfaces surfaces = 8;
+   */
+  surfaces?: DiscoveredSurfacesJson;
+
+  /**
+   * installation_state is the state of the workspace's installation of an
+   * outside product, a removed one included; unspecified for a built-in
+   * product. Such a product declares no features; it is enabled, its state
+   * enabled and its switch ON while the installation is active, and
+   * otherwise it is not enabled, its state stopped and its switch
+   * TURNED_OFF.
+   *
+   * @generated from field: toshi.workspace.v1.DiscoveredInstallationState installation_state = 9;
+   */
+  installationState?: DiscoveredInstallationStateJson;
 };
 
 /**
@@ -249,6 +289,93 @@ export type DiscoveredProductJson = {
  */
 export const DiscoveredProductSchema: GenMessage<DiscoveredProduct, {jsonType: DiscoveredProductJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_discovery, 2);
+
+/**
+ * DiscoveredSurfaces are what a product adds to Toshi, each empty when it
+ * adds none. It mirrors products.proto's ProductSurfaces, field for field,
+ * because discovery.proto cannot import products.proto, which imports it.
+ *
+ * @generated from message toshi.workspace.v1.DiscoveredSurfaces
+ */
+export type DiscoveredSurfaces = Message<"toshi.workspace.v1.DiscoveredSurfaces"> & {
+  /**
+   * api is the product's API endpoint: an https URL, or for a built-in
+   * product the path the control plane serves it at, such as "/runners/".
+   *
+   * @generated from field: string api = 1;
+   */
+  api: string;
+
+  /**
+   * cli is the https URL its CLI plugin is downloaded from.
+   *
+   * @generated from field: string cli = 2;
+   */
+  cli: string;
+
+  /**
+   * dashboard is the https URL of the product's own UI. A client opens it
+   * as its own page, never inside its own.
+   *
+   * @generated from field: string dashboard = 3;
+   */
+  dashboard: string;
+
+  /**
+   * sdk is the package of its SDK, such as a Go module path or an npm
+   * package name.
+   *
+   * @generated from field: string sdk = 4;
+   */
+  sdk: string;
+};
+
+/**
+ * DiscoveredSurfaces are what a product adds to Toshi, each empty when it
+ * adds none. It mirrors products.proto's ProductSurfaces, field for field,
+ * because discovery.proto cannot import products.proto, which imports it.
+ *
+ * @generated from message toshi.workspace.v1.DiscoveredSurfaces
+ */
+export type DiscoveredSurfacesJson = {
+  /**
+   * api is the product's API endpoint: an https URL, or for a built-in
+   * product the path the control plane serves it at, such as "/runners/".
+   *
+   * @generated from field: string api = 1;
+   */
+  api?: string;
+
+  /**
+   * cli is the https URL its CLI plugin is downloaded from.
+   *
+   * @generated from field: string cli = 2;
+   */
+  cli?: string;
+
+  /**
+   * dashboard is the https URL of the product's own UI. A client opens it
+   * as its own page, never inside its own.
+   *
+   * @generated from field: string dashboard = 3;
+   */
+  dashboard?: string;
+
+  /**
+   * sdk is the package of its SDK, such as a Go module path or an npm
+   * package name.
+   *
+   * @generated from field: string sdk = 4;
+   */
+  sdk?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.DiscoveredSurfaces.
+ * Use `create(DiscoveredSurfacesSchema)` to create a new message.
+ */
+export const DiscoveredSurfacesSchema: GenMessage<DiscoveredSurfaces, {jsonType: DiscoveredSurfacesJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_discovery, 3);
 
 /**
  * ProductFeature is a typed key a product declares.
@@ -286,7 +413,8 @@ export type ProductFeature = Message<"toshi.workspace.v1.ProductFeature"> & {
   /**
    * entitlement is the most the workspace may have of the feature: the
    * operator's override for the workspace, else its plan's value, else the
-   * feature's default. Unset when the config turns the product off.
+   * value of the plan key it falls back to, else the feature's default
+   * (source). Unset when the config turns the product off.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue entitlement = 5;
    */
@@ -310,6 +438,40 @@ export type ProductFeature = Message<"toshi.workspace.v1.ProductFeature"> & {
    * @generated from field: toshi.workspace.v1.FeatureValue effective = 7;
    */
   effective?: FeatureValue | undefined;
+
+  /**
+   * default_value is the feature's default in its product's manifest: the
+   * entitlement when no override, plan value or plan key gives one.
+   *
+   * @generated from field: toshi.workspace.v1.FeatureValue default_value = 8;
+   */
+  defaultValue?: FeatureValue | undefined;
+
+  /**
+   * max bounds a count, or both ends of a range: no value of the feature
+   * is higher. 0 bounds nothing.
+   *
+   * @generated from field: int64 max = 9;
+   */
+  max: bigint;
+
+  /**
+   * plan_key names the plan key a count falls back to, such as
+   * "preview_max_connections": a plan that sets the key and gives the
+   * feature no value of its own entitles the workspace to the key's value.
+   * Empty for a feature that falls back to none.
+   *
+   * @generated from field: string plan_key = 10;
+   */
+  planKey: string;
+
+  /**
+   * source says where the entitlement comes from. Unspecified when the
+   * config turns the product off.
+   *
+   * @generated from field: toshi.workspace.v1.FeatureSource source = 11;
+   */
+  source: FeatureSource;
 };
 
 /**
@@ -348,7 +510,8 @@ export type ProductFeatureJson = {
   /**
    * entitlement is the most the workspace may have of the feature: the
    * operator's override for the workspace, else its plan's value, else the
-   * feature's default. Unset when the config turns the product off.
+   * value of the plan key it falls back to, else the feature's default
+   * (source). Unset when the config turns the product off.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue entitlement = 5;
    */
@@ -372,6 +535,40 @@ export type ProductFeatureJson = {
    * @generated from field: toshi.workspace.v1.FeatureValue effective = 7;
    */
   effective?: FeatureValueJson;
+
+  /**
+   * default_value is the feature's default in its product's manifest: the
+   * entitlement when no override, plan value or plan key gives one.
+   *
+   * @generated from field: toshi.workspace.v1.FeatureValue default_value = 8;
+   */
+  defaultValue?: FeatureValueJson;
+
+  /**
+   * max bounds a count, or both ends of a range: no value of the feature
+   * is higher. 0 bounds nothing.
+   *
+   * @generated from field: int64 max = 9;
+   */
+  max?: string;
+
+  /**
+   * plan_key names the plan key a count falls back to, such as
+   * "preview_max_connections": a plan that sets the key and gives the
+   * feature no value of its own entitles the workspace to the key's value.
+   * Empty for a feature that falls back to none.
+   *
+   * @generated from field: string plan_key = 10;
+   */
+  planKey?: string;
+
+  /**
+   * source says where the entitlement comes from. Unspecified when the
+   * config turns the product off.
+   *
+   * @generated from field: toshi.workspace.v1.FeatureSource source = 11;
+   */
+  source?: FeatureSourceJson;
 };
 
 /**
@@ -379,7 +576,7 @@ export type ProductFeatureJson = {
  * Use `create(ProductFeatureSchema)` to create a new message.
  */
 export const ProductFeatureSchema: GenMessage<ProductFeature, {jsonType: ProductFeatureJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_discovery, 3);
+  messageDesc(file_toshi_workspace_v1_discovery, 4);
 
 /**
  * FeatureValue is a value of a feature, of the feature's type.
@@ -465,7 +662,7 @@ export type FeatureValueJson = {
  * Use `create(FeatureValueSchema)` to create a new message.
  */
 export const FeatureValueSchema: GenMessage<FeatureValue, {jsonType: FeatureValueJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_discovery, 4);
+  messageDesc(file_toshi_workspace_v1_discovery, 5);
 
 /**
  * FeatureRange is a range feature's value: from min to max, both included.
@@ -506,7 +703,7 @@ export type FeatureRangeJson = {
  * Use `create(FeatureRangeSchema)` to create a new message.
  */
 export const FeatureRangeSchema: GenMessage<FeatureRange, {jsonType: FeatureRangeJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_discovery, 5);
+  messageDesc(file_toshi_workspace_v1_discovery, 6);
 
 /**
  * APIVersions are the versions a client checks itself against.
@@ -557,7 +754,61 @@ export type APIVersionsJson = {
  * Use `create(APIVersionsSchema)` to create a new message.
  */
 export const APIVersionsSchema: GenMessage<APIVersions, {jsonType: APIVersionsJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_discovery, 6);
+  messageDesc(file_toshi_workspace_v1_discovery, 7);
+
+/**
+ * DiscoveredInstallationState is where a workspace's installation of an
+ * outside product stands. It mirrors products.proto's InstallationState,
+ * value for value, because discovery.proto cannot import products.proto,
+ * which imports it.
+ *
+ * @generated from enum toshi.workspace.v1.DiscoveredInstallationState
+ */
+export enum DiscoveredInstallationState {
+  /**
+   * @generated from enum value: DISCOVERED_INSTALLATION_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The product is on and its token works.
+   *
+   * @generated from enum value: DISCOVERED_INSTALLATION_STATE_ACTIVE = 1;
+   */
+  ACTIVE = 1,
+
+  /**
+   * The product is turned off: its token is refused and its webhook
+   * endpoints are paused until it is turned on again.
+   *
+   * @generated from enum value: DISCOVERED_INSTALLATION_STATE_SUSPENDED = 2;
+   */
+  SUSPENDED = 2,
+
+  /**
+   * Its token is revoked and its role deleted; turning it on installs it
+   * again.
+   *
+   * @generated from enum value: DISCOVERED_INSTALLATION_STATE_REMOVED = 3;
+   */
+  REMOVED = 3,
+}
+
+/**
+ * DiscoveredInstallationState is where a workspace's installation of an
+ * outside product stands. It mirrors products.proto's InstallationState,
+ * value for value, because discovery.proto cannot import products.proto,
+ * which imports it.
+ *
+ * @generated from enum toshi.workspace.v1.DiscoveredInstallationState
+ */
+export type DiscoveredInstallationStateJson = "DISCOVERED_INSTALLATION_STATE_UNSPECIFIED" | "DISCOVERED_INSTALLATION_STATE_ACTIVE" | "DISCOVERED_INSTALLATION_STATE_SUSPENDED" | "DISCOVERED_INSTALLATION_STATE_REMOVED";
+
+/**
+ * Describes the enum toshi.workspace.v1.DiscoveredInstallationState.
+ */
+export const DiscoveredInstallationStateSchema: GenEnum<DiscoveredInstallationState, DiscoveredInstallationStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_discovery, 0);
 
 /**
  * ProductState is where a product is in the deployment's lifecycle. A
@@ -618,7 +869,7 @@ export type ProductStateJson = "PRODUCT_STATE_UNSPECIFIED" | "PRODUCT_STATE_ENAB
  * Describes the enum toshi.workspace.v1.ProductState.
  */
 export const ProductStateSchema: GenEnum<ProductState, ProductStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_discovery, 0);
+  enumDesc(file_toshi_workspace_v1_discovery, 1);
 
 /**
  * ProductSwitch is the switch that decides whether a product is on for a
@@ -677,7 +928,67 @@ export type ProductSwitchJson = "PRODUCT_SWITCH_UNSPECIFIED" | "PRODUCT_SWITCH_O
  * Describes the enum toshi.workspace.v1.ProductSwitch.
  */
 export const ProductSwitchSchema: GenEnum<ProductSwitch, ProductSwitchJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_discovery, 1);
+  enumDesc(file_toshi_workspace_v1_discovery, 2);
+
+/**
+ * FeatureSource is where a workspace's entitlement to a feature comes from,
+ * the first that applies in this order: the operator's override, the
+ * value its plan gives the feature, the plan key the feature falls back
+ * to, and the feature's default.
+ *
+ * @generated from enum toshi.workspace.v1.FeatureSource
+ */
+export enum FeatureSource {
+  /**
+   * @generated from enum value: FEATURE_SOURCE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The operator's override for the workspace.
+   *
+   * @generated from enum value: FEATURE_SOURCE_OVERRIDE = 1;
+   */
+  OVERRIDE = 1,
+
+  /**
+   * The value the workspace's plan gives the feature.
+   *
+   * @generated from enum value: FEATURE_SOURCE_PLAN = 2;
+   */
+  PLAN = 2,
+
+  /**
+   * The value of the plan key the feature falls back to, which the
+   * workspace's plan sets.
+   *
+   * @generated from enum value: FEATURE_SOURCE_PLAN_KEY = 3;
+   */
+  PLAN_KEY = 3,
+
+  /**
+   * The feature's default in its product's manifest.
+   *
+   * @generated from enum value: FEATURE_SOURCE_DEFAULT = 4;
+   */
+  DEFAULT = 4,
+}
+
+/**
+ * FeatureSource is where a workspace's entitlement to a feature comes from,
+ * the first that applies in this order: the operator's override, the
+ * value its plan gives the feature, the plan key the feature falls back
+ * to, and the feature's default.
+ *
+ * @generated from enum toshi.workspace.v1.FeatureSource
+ */
+export type FeatureSourceJson = "FEATURE_SOURCE_UNSPECIFIED" | "FEATURE_SOURCE_OVERRIDE" | "FEATURE_SOURCE_PLAN" | "FEATURE_SOURCE_PLAN_KEY" | "FEATURE_SOURCE_DEFAULT";
+
+/**
+ * Describes the enum toshi.workspace.v1.FeatureSource.
+ */
+export const FeatureSourceSchema: GenEnum<FeatureSource, FeatureSourceJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_discovery, 3);
 
 /**
  * ProductFeatureType is the type of a feature's value.
@@ -727,7 +1038,7 @@ export type ProductFeatureTypeJson = "PRODUCT_FEATURE_TYPE_UNSPECIFIED" | "PRODU
  * Describes the enum toshi.workspace.v1.ProductFeatureType.
  */
 export const ProductFeatureTypeSchema: GenEnum<ProductFeatureType, ProductFeatureTypeJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_discovery, 2);
+  enumDesc(file_toshi_workspace_v1_discovery, 4);
 
 /**
  * DiscoveryService tells a client what this deployment serves and what the

@@ -17,6 +17,9 @@ export * from "./gen/toshi/workspace/v1/storage_providers_pb.js";
 export * from "./gen/toshi/workspace/v1/tokens_pb.js";
 export * from "./gen/toshi/workspace/v1/products_pb.js";
 export * from "./gen/toshi/workspace/v1/discovery_pb.js";
+export * from "./gen/toshi/workspace/v1/connections_pb.js";
+export * from "./gen/toshi/workspace/v1/hooks_pb.js";
+export * from "./gen/toshi/workspace/v1/roles_pb.js";
 export * from "./gen/toshi/workspace/v1/workspace_service_pb.js";
 
 export { createToshiClient } from "./client.js";

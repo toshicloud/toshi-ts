@@ -7,6 +7,9 @@ import type { ToshiClient, ToshiOptions } from "../src/client.js";
 import { SecretService } from "../src/gen/toshi/workspace/v1/secrets_pb.js";
 import { ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
 import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
+import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
+import { HookService } from "../src/gen/toshi/workspace/v1/hooks_pb.js";
+import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
 import { TokenService } from "../src/gen/toshi/workspace/v1/tokens_pb.js";
 import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
@@ -334,6 +337,9 @@ describe("createToshiClient", () => {
       router.service(ArtifactUploadService, { completeUpload: () => ({}) });
       router.service(WorkspaceService, { getVersion: () => ({ version: "v0.2.1" }) });
       router.service(TokenService, { listTokens: () => ({}) });
+      router.service(ConnectionService, { setConnectionTransform: () => ({}) });
+      router.service(HookService, { listHooks: () => ({}) });
+      router.service(RoleService, { listRoles: () => ({}) });
     });
     const fields = [
       "project",
@@ -354,6 +360,9 @@ describe("createToshiClient", () => {
       "storageProvider",
       "product",
       "discovery",
+      "connection",
+      "hook",
+      "role",
     ] as const;
     for (const field of fields) {
       expect(harness.client[field]).toBeDefined();
@@ -368,5 +377,10 @@ describe("createToshiClient", () => {
     await expect(harness.client.artifactUpload.completeUpload({})).resolves.toBeDefined();
     await expect(harness.client.workspace.getVersion({})).resolves.toMatchObject({ version: "v0.2.1" });
     await expect(harness.client.token.listTokens({})).resolves.toBeDefined();
+    await expect(
+      harness.client.connection.setConnectionTransform({ connectionId: "con-1", version: 1 }),
+    ).resolves.toBeDefined();
+    await expect(harness.client.hook.listHooks({})).resolves.toBeDefined();
+    await expect(harness.client.role.listRoles({})).resolves.toBeDefined();
   });
 });
