@@ -11,6 +11,7 @@ import {
   sleep,
 } from "./retry.js";
 import type { RetrySetting } from "./retry.js";
+import { asProductError } from "./errors.js";
 
 // A request message seen as a mutable record: protobuf-es v2 messages are plain
 // objects with one property per field, keyed by localName.
@@ -241,4 +242,32 @@ function isShared(msg: MutableMessage, desc: DescMessage): boolean {
     field.scalar === ScalarType.BOOL &&
     msg[field.localName] === true
   );
+}
+
+/**
+ * Throws a ProductError in place of a product's refusal, on a unary call and
+ * on a stream's messages. It is the outermost interceptor, so the retry and
+ * the helpers inside see the ConnectError they always did.
+ */
+export function productInterceptor(): Interceptor {
+  return (next) => async (req) => {
+    let res;
+    try {
+      res = await next(req);
+    } catch (err) {
+      throw asProductError(err);
+    }
+    if (!res.stream) {
+      return res;
+    }
+    return { ...res, message: productStream(res.message) };
+  };
+}
+
+async function* productStream<T>(messages: AsyncIterable<T>): AsyncIterable<T> {
+  try {
+    yield* messages;
+  } catch (err) {
+    throw asProductError(err);
+  }
 }

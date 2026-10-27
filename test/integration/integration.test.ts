@@ -9,7 +9,7 @@
  */
 import { execFile, spawn } from "node:child_process";
 import type { ChildProcess } from "node:child_process";
-import { generateKeyPairSync, randomBytes, sign } from "node:crypto";
+import { createHash, generateKeyPairSync, randomBytes, sign } from "node:crypto";
 import type { KeyObject } from "node:crypto";
 import { closeSync, openSync } from "node:fs";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
@@ -25,7 +25,7 @@ import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 
 import { createToshiClient } from "../../src/client.js";
 import type { OutputWatch, ToshiClient } from "../../src/client.js";
-import { StreamLostError } from "../../src/errors.js";
+import { ProductReason, StreamLostError, isProductError } from "../../src/errors.js";
 import { EventType, JobState } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
 import type { Job } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
 import type { WatchJobsResponse } from "../../src/gen/toshi/workspace/v1/workloads_pb.js";
@@ -36,6 +36,8 @@ const PROJECT = "default";
 const ENVIRONMENT = "production";
 const SUITE_LABEL = "sdk-integration";
 const CA_COMMON_NAME = "sdk integration CA";
+/** The outside product the product case installs from the suite's own catalog. */
+const PROBE_PRODUCT = "sdk_probe";
 
 const STARTUP_TIMEOUT_MS = 240_000;
 const CASE_TIMEOUT_MS = 90_000;
@@ -58,6 +60,8 @@ interface Harness {
    * limited to a project or an environment, which `client`'s token is.
    */
   readonly workspaceClient: ToshiClient;
+  /** A client of the same control plane with another token. */
+  readonly withToken: (token: string) => ToshiClient;
 }
 
 /** The two workloads the write cases share, in creation order. */
@@ -106,6 +110,8 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       const operatorPath = await writeSecretFile(dir, "operator.token");
       const localKeyPath = await writeSecretFile(dir, "secrets.key");
 
+      const catalog = await writeCatalog(bin, dir);
+
       const servePort = await freePort();
       const fakePort = await freePort();
       const configPath = await writeConfig({
@@ -118,6 +124,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
         webhookPath,
         operatorPath,
         localKeyPath,
+        catalog,
       });
 
       startChild(
@@ -211,6 +218,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       running = {
         client: newClient(servePort, tls.caPem, token),
         workspaceClient: newClient(servePort, tls.caPem, workspaceToken),
+        withToken: (other) => newClient(servePort, tls.caPem, other),
       };
     } catch (err) {
       // A failed startup leaves no harness; its logs still say why.
@@ -679,6 +687,40 @@ describe.skipIf(skipped)("toshi serve integration", () => {
     },
     CASE_TIMEOUT_MS,
   );
+  it(
+    "refuses a product's call with a ProductError",
+    async () => {
+      const { workspaceClient: wide, withToken } = harness();
+      const enable = { id: PROBE_PRODUCT, enabled: true, acceptedAccess: [] as string[] };
+      const unaccepted = await rejection(wide.product.updateProduct(enable));
+      if (!isProductError(unaccepted)) {
+        throw asError(unaccepted);
+      }
+      expect(unaccepted.product).toBe(PROBE_PRODUCT);
+      expect(unaccepted.reason).toBe(ProductReason.AccessNotAccepted);
+      expect(unaccepted.access).toEqual(["projects.read"]);
+      expect(unaccepted.code).toBe(Code.FailedPrecondition);
+
+      const installed = await wide.product.updateProduct({ ...enable, acceptedAccess: unaccepted.access });
+      const product = withToken(installed.installationToken);
+      await product.project.listProjects({});
+
+      await wide.product.updateProduct({ id: PROBE_PRODUCT, enabled: false });
+      const turnedOff = await rejection(product.project.listProjects({}));
+      if (!isProductError(turnedOff)) {
+        throw asError(turnedOff);
+      }
+      expect(turnedOff.product).toBe(PROBE_PRODUCT);
+      expect(turnedOff.reason).toBe(ProductReason.TurnedOff);
+
+      await wide.product.removeProduct({ id: PROBE_PRODUCT });
+      pass(
+        "ProductError",
+        `${unaccepted.product} ${unaccepted.reason} [${unaccepted.access.join(",")}], then ${turnedOff.product} ${turnedOff.reason} ${turnedOff.feature} on its installation's token`,
+      );
+    },
+    CASE_TIMEOUT_MS,
+  );
 });
 
 // ---------------------------------------------------------------------------
@@ -718,6 +760,16 @@ function pass(caseName: string, detail: string): void {
 /** Any caught value as something a test may throw. */
 function asError(value: unknown): Error {
   return value instanceof Error ? value : new Error(String(value));
+}
+
+/** The error promise rejects with; a promise that resolves fails the case. */
+async function rejection(promise: Promise<unknown>): Promise<unknown> {
+  try {
+    await promise;
+  } catch (err) {
+    return err;
+  }
+  throw new Error("the call succeeded; it must be refused");
 }
 
 function idsOf(jobs: readonly Job[]): string[] {
@@ -1282,6 +1334,8 @@ interface ConfigInput {
   readonly webhookPath: string;
   readonly operatorPath: string;
   readonly localKeyPath: string;
+  /** The [[catalog.sources]] table writeCatalog returns. */
+  readonly catalog: string;
 }
 
 /** Writes the control plane's configuration; the fields follow toshi-go's template. */
@@ -1310,11 +1364,53 @@ async function writeConfig(input: ConfigInput): Promise<string> {
     `base_url = "http://127.0.0.1:${String(input.fakePort)}"`,
     `private_key_file = ${tomlString(input.appKeyPath)}`,
     `webhook_secret_file = ${tomlString(input.webhookPath)}`,
-    "",
+    input.catalog,
   ].join("\n");
   const path = join(input.dir, "toshi.toml");
   await writeFile(path, config, { mode: 0o600 });
   return path;
+}
+
+/**
+ * Signs a catalog index that lists one outside product, PROBE_PRODUCT, asking
+ * for projects.read, with a new Ed25519 key, and returns the
+ * [[catalog.sources]] table that trusts it.
+ */
+async function writeCatalog(bin: string, dir: string): Promise<string> {
+  const keys = generateKeyPairSync("ed25519");
+  const keyPath = join(dir, "catalog-key.pem");
+  await writeFile(keyPath, keys.privateKey.export({ type: "pkcs8", format: "pem" }), { mode: 0o600 });
+
+  // The key's ID is its JWK thumbprint (RFC 7638).
+  const x = keys.publicKey.export({ format: "jwk" }).x ?? "";
+  const jwk = JSON.stringify({ crv: "Ed25519", kty: "OKP", x });
+  const index = {
+    format: 1,
+    key_id: createHash("sha256").update(jwk).digest("base64url"),
+    entries: [
+      {
+        id: PROBE_PRODUCT,
+        name: "SDK probe",
+        publisher: "sdk",
+        version: "1.0.0",
+        description: "An outside product the SDK's integration test installs.",
+        access: ["projects.read"],
+        runs: { where: "publisher" },
+        docs: "https://example.com/sdk-probe",
+      },
+    ],
+  };
+  const indexPath = join(dir, "catalog.json");
+  await writeFile(indexPath, JSON.stringify(index), { mode: 0o600 });
+  await runTool(bin, ["product", "catalog", "sign", indexPath, "--key", keyPath]);
+  return [
+    "[[catalog.sources]]",
+    'name = "sdk"',
+    `path = ${tomlString(indexPath)}`,
+    `keys = ["ed25519:${Buffer.from(x, "base64url").toString("base64")}"]`,
+    'publishers = ["sdk"]',
+    "",
+  ].join("\n");
 }
 
 /** A TOML literal string: no escapes, so a path keeps its backslashes. */
