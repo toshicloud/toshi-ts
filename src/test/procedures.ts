@@ -202,6 +202,8 @@ export const hookOnly: readonly DescMethod[] = [
   TokenService.method.listTokens,
   TokenService.method.createWorkspaceToken,
   TokenService.method.revokeToken,
+  TokenService.method.rollWorkspaceToken,
+  TokenService.method.updateToken,
   // StorageProviderService
   StorageProviderService.method.listStorageProviders,
   StorageProviderService.method.createStorageProvider,

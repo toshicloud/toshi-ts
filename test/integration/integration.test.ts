@@ -26,6 +26,8 @@ import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import { createToshiClient } from "../../src/client.js";
 import type { OutputWatch, ToshiClient } from "../../src/client.js";
 import { ProductReason, StreamLostError, isProductError } from "../../src/errors.js";
+import { ConnectionKind } from "../../src/gen/toshi/workspace/v1/connections_pb.js";
+import { HookType } from "../../src/gen/toshi/workspace/v1/hooks_pb.js";
 import { EventType, JobState } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
 import type { Job } from "../../src/gen/toshi/workspace/v1/workspace_pb.js";
 import type { WatchJobsResponse } from "../../src/gen/toshi/workspace/v1/workloads_pb.js";
@@ -352,6 +354,41 @@ describe.skipIf(skipped)("toshi serve integration", () => {
         code: Code.PermissionDenied,
       });
       pass("listStorageProviders", "PERMISSION_DENIED: a token never reads the workspace's buckets");
+    },
+    CASE_TIMEOUT_MS,
+  );
+
+  it(
+    "sets and clears a webhook connection's transform, and lists hooks and roles",
+    async () => {
+      const client = harness().workspaceClient;
+      const created = await client.connection.createConnection({
+        kind: ConnectionKind.WEBHOOK,
+        name: "sdk-transform",
+        project: PROJECT,
+        environment: ENVIRONMENT,
+      });
+      const id = created.connection?.id ?? "";
+      expect(id).not.toBe("");
+      // No transform version is uploaded: setting one that does not exist is
+      // refused, and clearing leaves the connection with none.
+      await expect(client.connection.setConnectionTransform({ connectionId: id, version: 99 })).rejects.toMatchObject({
+        code: Code.NotFound,
+      });
+      const cleared = await client.connection.setConnectionTransform({ connectionId: id });
+      expect(cleared.connection?.id).toBe(id);
+      expect(cleared.connection?.transformVersion).toBe(0);
+      expect(cleared.previousVersion).toBe(0);
+      const deliveries = await client.connection.listConnectionDeliveries({ connectionId: id });
+      expect(deliveries.deliveries).toEqual([]);
+      await expect(client.connection.getConnectionDelivery({ id: "missing" })).rejects.toMatchObject({
+        code: Code.NotFound,
+      });
+      const hooks = await client.hook.listHooks({ type: HookType.TRANSFORM });
+      expect(hooks.versions).toEqual([]);
+      await client.role.listRoles({});
+      await client.connection.deleteConnection({ id });
+      pass("setConnectionTransform", "NOT_FOUND for a missing version, cleared to none; no deliveries; listHooks and listRoles answer");
     },
     CASE_TIMEOUT_MS,
   );

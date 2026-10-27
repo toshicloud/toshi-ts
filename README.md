@@ -135,8 +135,8 @@ picked up without a new client.
 The client has one field per Workspace API service: `project`, `secret`,
 `webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
-`filler`, `storageProvider`, `product` and `discovery`, each holding that
-service's generated client.
+`filler`, `storageProvider`, `product`, `discovery`, `connection`, `hook`
+and `role`, each holding that service's generated client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`,

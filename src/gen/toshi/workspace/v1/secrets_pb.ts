@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/secrets.proto.
  */
 export const file_toshi_workspace_v1_secrets: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxInEKCVNlY3JldFNldBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgZTZWNyZXQSDAoEbmFtZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgDEgwKBHNpemUYAyABKAMSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiXgoNU2VjcmV0VmVyc2lvbhIPCgd2ZXJzaW9uGAEgASgDEgwKBHNpemUYAiABKAMSLgoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAigwEKC1NlY3JldEdyYW50EjMKBGtpbmQYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJOChZDcmVhdGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIkUKF0NyZWF0ZVNlY3JldFNldFJlc3BvbnNlEioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQiTwoVTGlzdFNlY3JldFNldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiXgoWTGlzdFNlY3JldFNldHNSZXNwb25zZRIrCgRzZXRzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiTgoWRGVsZXRlU2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCCIZChdEZWxldGVTZWNyZXRTZXRSZXNwb25zZSJlChBQdXRTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSDQoFdmFsdWUYBSABKAwiPwoRUHV0U2VjcmV0UmVzcG9uc2USKgoGc2VjcmV0GAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldCJZChNEZWxldGVTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkiFgoURGVsZXRlU2VjcmV0UmVzcG9uc2UicQoSTGlzdFNlY3JldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJIlsKE0xpc3RTZWNyZXRzUmVzcG9uc2USKwoHc2VjcmV0cxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoYBChlMaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAkiagoaTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2USMwoIdmVyc2lvbnMYASADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0VmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkikwEKFUdyYW50U2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIzCgRraW5kGAQgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50ZWVLaW5kEg8KB2dyYW50ZWUYBSABKAkiSAoWR3JhbnRTZWNyZXRTZXRSZXNwb25zZRIuCgVncmFudBgBIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudCKUAQoWUmV2b2tlU2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIzCgRraW5kGAQgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50ZWVLaW5kEg8KB2dyYW50ZWUYBSABKAkiGQoXUmV2b2tlU2VjcmV0U2V0UmVzcG9uc2UieQoaTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2VfdG9rZW4YBSABKAkiZwobTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlEi8KBmdyYW50cxgBIAMoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqlgEKEVNlY3JldEdyYW50ZWVLaW5kEiMKH1NFQ1JFVF9HUkFOVEVFX0tJTkRfVU5TUEVDSUZJRUQQABIcChhTRUNSRVRfR1JBTlRFRV9LSU5EX0tJTkQQARIdChlTRUNSRVRfR1JBTlRFRV9LSU5EX0lNQUdFEAISHwobU0VDUkVUX0dSQU5URUVfS0lORF9TRVJWSUNFEAMygwsKDVNlY3JldFNlcnZpY2USjAEKD0NyZWF0ZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlc3BvbnNlIiDC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudBKEAQoOTGlzdFNlY3JldFNldHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVzcG9uc2UiG8LzGAxzZWNyZXRzLnJlYWTK8xgHcHJvamVjdBKMAQoPRGVsZXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0U2V0UmVzcG9uc2UiIMLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW50EnoKCVB1dFNlY3JldBIkLnRvc2hpLndvcmtzcGFjZS52MS5QdXRTZWNyZXRSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLlB1dFNlY3JldFJlc3BvbnNlIiDC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudBKDAQoMRGVsZXRlU2VjcmV0EicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0UmVzcG9uc2UiIMLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW50En8KC0xpc3RTZWNyZXRzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0c1Jlc3BvbnNlIh/C8xgMc2VjcmV0cy5yZWFkyvMYC2Vudmlyb25tZW50EpQBChJMaXN0U2VjcmV0VmVyc2lvbnMSLS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFZlcnNpb25zUmVxdWVzdBouLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0VmVyc2lvbnNSZXNwb25zZSIfwvMYDHNlY3JldHMucmVhZMrzGAtlbnZpcm9ubWVudBKJAQoOR3JhbnRTZWNyZXRTZXQSKS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTZWNyZXRTZXRSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkdyYW50U2VjcmV0U2V0UmVzcG9uc2UiIMLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW50EowBCg9SZXZva2VTZWNyZXRTZXQSKi50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlU2VjcmV0U2V0UmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VTZWNyZXRTZXRSZXNwb25zZSIgwvMYDXNlY3JldHMud3JpdGXK8xgLZW52aXJvbm1lbnQSlwEKE0xpc3RTZWNyZXRTZXRHcmFudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlIh/C8xgMc2VjcmV0cy5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxInEKCVNlY3JldFNldBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKWAQoGU2VjcmV0EgwKBG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoAxIMCgRzaXplGAMgASgDEi4KCnVwZGF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCCJeCg1TZWNyZXRWZXJzaW9uEg8KB3ZlcnNpb24YASABKAMSDAoEc2l6ZRgCIAEoAxIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKDAQoLU2VjcmV0R3JhbnQSMwoEa2luZBgBIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudGVlS2luZBIPCgdncmFudGVlGAIgASgJEi4KCmNyZWF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk4KFkNyZWF0ZVNlY3JldFNldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgiRQoXQ3JlYXRlU2VjcmV0U2V0UmVzcG9uc2USKgoDc2V0GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldCJPChVMaXN0U2VjcmV0U2V0c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJeChZMaXN0U2VjcmV0U2V0c1Jlc3BvbnNlEisKBHNldHMYASADKAsyHS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0U2V0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJOChZEZWxldGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIhkKF0RlbGV0ZVNlY3JldFNldFJlc3BvbnNlInIKEFB1dFNlY3JldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSDAoEbmFtZRgEIAEoCRINCgV2YWx1ZRgFIAEoDBILCgNvd24YBiABKAgiPwoRUHV0U2VjcmV0UmVzcG9uc2USKgoGc2VjcmV0GAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldCJ1ChNEZWxldGVTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSCwoDb3duGAUgASgIEg0KBW93bmVyGAYgASgJIhYKFERlbGV0ZVNlY3JldFJlc3BvbnNlInEKEkxpc3RTZWNyZXRzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJbChNMaXN0U2VjcmV0c1Jlc3BvbnNlEisKB3NlY3JldHMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKiAQoZTGlzdFNlY3JldFZlcnNpb25zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIMCgRuYW1lGAQgASgJEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYgASgJEgsKA293bhgHIAEoCBINCgVvd25lchgIIAEoCSJqChpMaXN0U2VjcmV0VmVyc2lvbnNSZXNwb25zZRIzCgh2ZXJzaW9ucxgBIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRWZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKTAQoVR3JhbnRTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSJIChZHcmFudFNlY3JldFNldFJlc3BvbnNlEi4KBWdyYW50GAEgASgLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50IpQBChZSZXZva2VTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSIZChdSZXZva2VTZWNyZXRTZXRSZXNwb25zZSJ5ChpMaXN0U2VjcmV0U2V0R3JhbnRzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJnChtMaXN0U2VjcmV0U2V0R3JhbnRzUmVzcG9uc2USLwoGZ3JhbnRzGAEgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSqWAQoRU2VjcmV0R3JhbnRlZUtpbmQSIwofU0VDUkVUX0dSQU5URUVfS0lORF9VTlNQRUNJRklFRBAAEhwKGFNFQ1JFVF9HUkFOVEVFX0tJTkRfS0lORBABEh0KGVNFQ1JFVF9HUkFOVEVFX0tJTkRfSU1BR0UQAhIfChtTRUNSRVRfR1JBTlRFRV9LSU5EX1NFUlZJQ0UQAzLMCwoNU2VjcmV0U2VydmljZRKWAQoPQ3JlYXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlU2VjcmV0U2V0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRKEAQoOTGlzdFNlY3JldFNldHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVzcG9uc2UiG8LzGAxzZWNyZXRzLnJlYWTK8xgHcHJvamVjdBKWAQoPRGVsZXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0U2V0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRKQAQoJUHV0U2VjcmV0EiQudG9zaGkud29ya3NwYWNlLnYxLlB1dFNlY3JldFJlcXVlc3QaJS50b3NoaS53b3Jrc3BhY2UudjEuUHV0U2VjcmV0UmVzcG9uc2UiNsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYEgoKc2VjcmV0LnNldBIEbm9uZRKNAQoMRGVsZXRlU2VjcmV0EicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRJ/CgtMaXN0U2VjcmV0cxImLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0c1JlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldHNSZXNwb25zZSIfwvMYDHNlY3JldHMucmVhZMrzGAtlbnZpcm9ubWVudBKUAQoSTGlzdFNlY3JldFZlcnNpb25zEi0udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRWZXJzaW9uc1JlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2UiH8LzGAxzZWNyZXRzLnJlYWTK8xgLZW52aXJvbm1lbnQSkwEKDkdyYW50U2VjcmV0U2V0EikudG9zaGkud29ya3NwYWNlLnYxLkdyYW50U2VjcmV0U2V0UmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSlgEKD1Jldm9rZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSlwEKE0xpc3RTZWNyZXRTZXRHcmFudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlIh/C8xgMc2VjcmV0cy5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * SecretSet is a project's set: an environment's, or the shared one.
@@ -109,6 +109,29 @@ export type Secret = Message<"toshi.workspace.v1.Secret"> & {
    * @generated from field: google.protobuf.Timestamp updated_at = 4;
    */
   updatedAt?: Timestamp | undefined;
+
+  /**
+   * The GitHub user id of the person whose own key it is; empty for a key
+   * of the set.
+   *
+   * @generated from field: string owner = 5;
+   */
+  owner: string;
+
+  /**
+   * The key is the caller's own.
+   *
+   * @generated from field: bool mine = 6;
+   */
+  mine: boolean;
+
+  /**
+   * The key's owner holds no role in the workspace any more: no workload
+   * receives it, and it stays until it is deleted.
+   *
+   * @generated from field: bool owner_left = 7;
+   */
+  ownerLeft: boolean;
 };
 
 /**
@@ -140,6 +163,29 @@ export type SecretJson = {
    * @generated from field: google.protobuf.Timestamp updated_at = 4;
    */
   updatedAt?: TimestampJson;
+
+  /**
+   * The GitHub user id of the person whose own key it is; empty for a key
+   * of the set.
+   *
+   * @generated from field: string owner = 5;
+   */
+  owner?: string;
+
+  /**
+   * The key is the caller's own.
+   *
+   * @generated from field: bool mine = 6;
+   */
+  mine?: boolean;
+
+  /**
+   * The key's owner holds no role in the workspace any more: no workload
+   * receives it, and it stays until it is deleted.
+   *
+   * @generated from field: bool owner_left = 7;
+   */
+  ownerLeft?: boolean;
 };
 
 /**
@@ -514,6 +560,13 @@ export type PutSecretRequest = Message<"toshi.workspace.v1.PutSecretRequest"> & 
    * @generated from field: bytes value = 5;
    */
   value: Uint8Array;
+
+  /**
+   * The key is the caller's own.
+   *
+   * @generated from field: bool own = 6;
+   */
+  own: boolean;
 };
 
 /**
@@ -547,6 +600,13 @@ export type PutSecretRequestJson = {
    * @generated from field: bytes value = 5;
    */
   value?: string;
+
+  /**
+   * The key is the caller's own.
+   *
+   * @generated from field: bool own = 6;
+   */
+  own?: boolean;
 };
 
 /**
@@ -606,6 +666,20 @@ export type DeleteSecretRequest = Message<"toshi.workspace.v1.DeleteSecretReques
    * @generated from field: string name = 4;
    */
   name: string;
+
+  /**
+   * The caller's own key; not with owner.
+   *
+   * @generated from field: bool own = 5;
+   */
+  own: boolean;
+
+  /**
+   * The own key of the person with this GitHub user id; not with own.
+   *
+   * @generated from field: string owner = 6;
+   */
+  owner: string;
 };
 
 /**
@@ -631,6 +705,20 @@ export type DeleteSecretRequestJson = {
    * @generated from field: string name = 4;
    */
   name?: string;
+
+  /**
+   * The caller's own key; not with owner.
+   *
+   * @generated from field: bool own = 5;
+   */
+  own?: boolean;
+
+  /**
+   * The own key of the person with this GitHub user id; not with own.
+   *
+   * @generated from field: string owner = 6;
+   */
+  owner?: string;
 };
 
 /**
@@ -812,6 +900,20 @@ export type ListSecretVersionsRequest = Message<"toshi.workspace.v1.ListSecretVe
    * @generated from field: string page_token = 6;
    */
   pageToken: string;
+
+  /**
+   * The caller's own key; not with owner.
+   *
+   * @generated from field: bool own = 7;
+   */
+  own: boolean;
+
+  /**
+   * The own key of the person with this GitHub user id; not with own.
+   *
+   * @generated from field: string owner = 8;
+   */
+  owner: string;
 };
 
 /**
@@ -851,6 +953,20 @@ export type ListSecretVersionsRequestJson = {
    * @generated from field: string page_token = 6;
    */
   pageToken?: string;
+
+  /**
+   * The caller's own key; not with owner.
+   *
+   * @generated from field: bool own = 7;
+   */
+  own?: boolean;
+
+  /**
+   * The own key of the person with this GitHub user id; not with own.
+   *
+   * @generated from field: string owner = 8;
+   */
+  owner?: string;
 };
 
 /**
@@ -1259,6 +1375,14 @@ export const SecretGranteeKindSchema: GenEnum<SecretGranteeKind, SecretGranteeKi
  * and time. The calls take no request_key: a retried PutSecret makes one
  * more version.
  *
+ * A key can be one person's own: only the workloads that person starts
+ * receive it, beside the keys of the environment's set, while the person
+ * holds a role in the workspace. A sandbox's commands receive it only when
+ * that person runs them, and CI jobs never. A workspace token starts
+ * workloads as the person who created it. The calls on keys take own, for
+ * the caller's own key, or owner, a person's GitHub user id, for that
+ * person's.
+ *
  * @generated from service toshi.workspace.v1.SecretService
  */
 export const SecretService: GenService<{
@@ -1302,6 +1426,12 @@ export const SecretService: GenService<{
    * in the shared set, fails with FAILED_PRECONDITION. Two environments'
    * sets may hold the same name.
    *
+   * With own the key is the caller's own, set apart from the environment's
+   * set, which need not exist; a call that acts for no person fails with
+   * FAILED_PRECONDITION. A person's own names follow the same rule among
+   * themselves, and a name may not be both someone's own and not: either
+   * fails with FAILED_PRECONDITION. Two people may own the same name.
+   *
    * @generated from rpc toshi.workspace.v1.SecretService.PutSecret
    */
   putSecret: {
@@ -1310,7 +1440,8 @@ export const SecretService: GenService<{
     output: typeof PutSecretResponseSchema;
   },
   /**
-   * DeleteSecret removes the key and every version of it.
+   * DeleteSecret removes the key and every version of it: with own the
+   * caller's own key, with owner that person's.
    *
    * @generated from rpc toshi.workspace.v1.SecretService.DeleteSecret
    */
@@ -1321,7 +1452,8 @@ export const SecretService: GenService<{
   },
   /**
    * ListSecrets returns the set's keys by name, each with its newest
-   * version.
+   * version, and every person's own keys of the same place beside them,
+   * each with its owner.
    *
    * A page holds 100 keys when page_size is zero, and 1000 at most.
    *
@@ -1333,7 +1465,8 @@ export const SecretService: GenService<{
     output: typeof ListSecretsResponseSchema;
   },
   /**
-   * ListSecretVersions returns the key's versions, oldest first.
+   * ListSecretVersions returns the key's versions, oldest first: with own
+   * the caller's own key's, with owner that person's.
    *
    * A page holds 100 versions when page_size is zero, and 1000 at most.
    *

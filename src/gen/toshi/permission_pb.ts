@@ -2,16 +2,88 @@
 // @generated from file toshi/permission.proto (package toshi, syntax proto3)
 /* eslint-disable */
 
-import type { GenExtension, GenFile } from "@bufbuild/protobuf/codegenv2";
-import { extDesc, fileDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenExtension, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
+import { extDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
 import type { MethodOptions } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_descriptor } from "@bufbuild/protobuf/wkt";
+import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file toshi/permission.proto.
  */
 export const file_toshi_permission: GenFile = /*@__PURE__*/
-  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaTpACgpwZXJtaXNzaW9uEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYuI4DIAEoCVIKcGVybWlzc2lvbjo2CgVzY29wZRIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLmOAyABKAlSBXNjb3BlQh5aHGdvLnRvc2hpY2xvdWQuaW8vYXBpL3Rvc2hpcGJiBnByb3RvMw", [file_google_protobuf_descriptor]);
+  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJOkAKCnBlcm1pc3Npb24SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi4jgMgASgJUgpwZXJtaXNzaW9uOjYKBXNjb3BlEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYuY4DIAEoCVIFc2NvcGU6RAoFYXVkaXQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi6jgMgASgLMgwudG9zaGkuQXVkaXRSBWF1ZGl0Qh5aHGdvLnRvc2hpY2xvdWQuaW8vYXBpL3Rvc2hpcGJiBnByb3RvMw", [file_google_protobuf_descriptor]);
+
+/**
+ * Audit is the audit event a call records.
+ *
+ * @generated from message toshi.Audit
+ */
+export type Audit = Message<"toshi.Audit"> & {
+  /**
+   * action is "<noun>.<verb>" with the verb in the past tense. Unset, it is
+   * the method's name: CreateSandbox records "sandbox.created". The build
+   * fails a method whose verb it cannot put in the past tense, or whose name
+   * gives the action this field names. "none" records nothing, for a call
+   * no Workspace API caller makes, such as a workload's upload.
+   *
+   * @generated from field: string action = 1;
+   */
+  action: string;
+
+  /**
+   * target is what the call acts on, as "<kind>:<source>", or "none". Unset,
+   * the kind is the action's noun and the source the response's id for a
+   * call that creates (Create, Reserve, Open) and the request's id
+   * otherwise: "id" or "<kind>_id", or for a create "<kind>.id" of the
+   * response. A source is a request field path, such as "job_id" or
+   * "start.sandbox_id", a response field path after "response.", such as
+   * "response.endpoint.id", "workspace" for the call's workspace, or
+   * "project" for the project the call resolved.
+   *
+   * @generated from field: string target = 2;
+   */
+  target: string;
+};
+
+/**
+ * Audit is the audit event a call records.
+ *
+ * @generated from message toshi.Audit
+ */
+export type AuditJson = {
+  /**
+   * action is "<noun>.<verb>" with the verb in the past tense. Unset, it is
+   * the method's name: CreateSandbox records "sandbox.created". The build
+   * fails a method whose verb it cannot put in the past tense, or whose name
+   * gives the action this field names. "none" records nothing, for a call
+   * no Workspace API caller makes, such as a workload's upload.
+   *
+   * @generated from field: string action = 1;
+   */
+  action?: string;
+
+  /**
+   * target is what the call acts on, as "<kind>:<source>", or "none". Unset,
+   * the kind is the action's noun and the source the response's id for a
+   * call that creates (Create, Reserve, Open) and the request's id
+   * otherwise: "id" or "<kind>_id", or for a create "<kind>.id" of the
+   * response. A source is a request field path, such as "job_id" or
+   * "start.sandbox_id", a response field path after "response.", such as
+   * "response.endpoint.id", "workspace" for the call's workspace, or
+   * "project" for the project the call resolved.
+   *
+   * @generated from field: string target = 2;
+   */
+  target?: string;
+};
+
+/**
+ * Describes the message toshi.Audit.
+ * Use `create(AuditSchema)` to create a new message.
+ */
+export const AuditSchema: GenMessage<Audit, {jsonType: AuditJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_permission, 0);
 
 /**
  * permission names what a caller needs to make the call: an area and a
@@ -49,4 +121,17 @@ export const permission: GenExtension<MethodOptions, string> = /*@__PURE__*/
  */
 export const scope: GenExtension<MethodOptions, string> = /*@__PURE__*/
   extDesc(file_toshi_permission, 1);
+
+/**
+ * audit names the audit event a call records when its action or target
+ * is not the one its name gives. Every call that changes something
+ * records one event: on the Workspace API a call whose permission's level
+ * is not "read", on the operator API a call whose verb is not a read
+ * (Get, List, Watch, Wait, Summarise, Suggest, Export, Discover). A read
+ * whose option names an action records one too.
+ *
+ * @generated from extension: toshi.Audit audit = 51002;
+ */
+export const audit: GenExtension<MethodOptions, Audit> = /*@__PURE__*/
+  extDesc(file_toshi_permission, 2);
 

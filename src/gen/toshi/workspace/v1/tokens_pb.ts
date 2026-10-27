@@ -4,16 +4,18 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
+import type { Subject, SubjectJson } from "./roles_pb.js";
+import { file_toshi_workspace_v1_roles } from "./roles_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file toshi/workspace/v1/tokens.proto.
  */
 export const file_toshi_workspace_v1_tokens: GenFile = /*@__PURE__*/
-  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvdG9rZW5zLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEipAIKBVRva2VuEgoKAmlkGAEgASgJEisKBGtpbmQYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEg4KBnNvdXJjZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpyZXZva2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZhY3RpdmUYByABKAgSDAoEbmFtZRgIIAEoCRIPCgdwcm9qZWN0GAkgASgJEhMKC2Vudmlyb25tZW50GAogASgJImcKEUxpc3RUb2tlbnNSZXF1ZXN0EisKBGtpbmQYASABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlgKEkxpc3RUb2tlbnNSZXNwb25zZRIpCgZ0b2tlbnMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoEBChtDcmVhdGVXb3Jrc3BhY2VUb2tlblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIuCgpleHBpcmVzX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJIlcKHENyZWF0ZVdvcmtzcGFjZVRva2VuUmVzcG9uc2USKAoFdG9rZW4YASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SDQoFdmFsdWUYAiABKAkiIAoSUmV2b2tlVG9rZW5SZXF1ZXN0EgoKAmlkGAEgASgJIlkKE1Jldm9rZVRva2VuUmVzcG9uc2USKAoFdG9rZW4YASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SGAoQaG9zdHNfc2lnbmVkX291dBgCIAEoBSpcCglUb2tlbktpbmQSGgoWVE9LRU5fS0lORF9VTlNQRUNJRklFRBAAEhkKFVRPS0VOX0tJTkRfRU5ST0xMTUVOVBACEhgKFFRPS0VOX0tJTkRfV09SS1NQQUNFEAMyiQMKDFRva2VuU2VydmljZRJsCgpMaXN0VG9rZW5zEiUudG9zaGkud29ya3NwYWNlLnYxLkxpc3RUb2tlbnNSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RUb2tlbnNSZXNwb25zZSIPwvMYC3Rva2Vucy5yZWFkEpgBChRDcmVhdGVXb3Jrc3BhY2VUb2tlbhIvLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVXb3Jrc3BhY2VUb2tlblJlcXVlc3QaMC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlV29ya3NwYWNlVG9rZW5SZXNwb25zZSIdwvMYDHRva2Vucy53cml0ZcrzGAl3b3Jrc3BhY2UScAoLUmV2b2tlVG9rZW4SJi50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlVG9rZW5SZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVRva2VuUmVzcG9uc2UiEMLzGAx0b2tlbnMud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvdG9rZW5zLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi7QMKBVRva2VuEgoKAmlkGAEgASgJEisKBGtpbmQYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEg4KBnNvdXJjZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpyZXZva2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZhY3RpdmUYByABKAgSDAoEbmFtZRgIIAEoCRIPCgdwcm9qZWN0GAkgASgJEhMKC2Vudmlyb25tZW50GAogASgJEi4KCm5vdF9iZWZvcmUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKDWNsaWVudF9yYW5nZXMYDCABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2xpZW50UmFuZ2VzEi8KCmNyZWF0ZWRfYnkYDSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBItCglsYXN0X3VzZWQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIioKDENsaWVudFJhbmdlcxIKCgJpbhgBIAMoCRIOCgZub3RfaW4YAiADKAkiZwoRTGlzdFRva2Vuc1JlcXVlc3QSKwoEa2luZBgBIAEoDjIdLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbktpbmQSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiWAoSTGlzdFRva2Vuc1Jlc3BvbnNlEikKBnRva2VucxgBIAMoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki+AEKG0NyZWF0ZVdvcmtzcGFjZVRva2VuUmVxdWVzdBIMCgRuYW1lGAEgASgJEi4KCmV4cGlyZXNfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAkSLgoKbm90X2JlZm9yZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoNY2xpZW50X3JhbmdlcxgGIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5DbGllbnRSYW5nZXMSDAoEcm9sZRgHIAEoCSJXChxDcmVhdGVXb3Jrc3BhY2VUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEg0KBXZhbHVlGAIgASgJIiAKElJldm9rZVRva2VuUmVxdWVzdBIKCgJpZBgBIAEoCSJZChNSZXZva2VUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEhgKEGhvc3RzX3NpZ25lZF9vdXQYAiABKAUiJwoZUm9sbFdvcmtzcGFjZVRva2VuUmVxdWVzdBIKCgJpZBgBIAEoCSJVChpSb2xsV29ya3NwYWNlVG9rZW5SZXNwb25zZRIoCgV0b2tlbhgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhINCgV2YWx1ZRgCIAEoCSJ7ChJVcGRhdGVUb2tlblJlcXVlc3QSCgoCaWQYASABKAkSKAoFdG9rZW4YAiABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIj8KE1VwZGF0ZVRva2VuUmVzcG9uc2USKAoFdG9rZW4YASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4qXAoJVG9rZW5LaW5kEhoKFlRPS0VOX0tJTkRfVU5TUEVDSUZJRUQQABIZChVUT0tFTl9LSU5EX0VOUk9MTE1FTlQQAhIYChRUT0tFTl9LSU5EX1dPUktTUEFDRRADMqgFCgxUb2tlblNlcnZpY2USbAoKTGlzdFRva2VucxIlLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVzcG9uc2UiD8LzGAt0b2tlbnMucmVhZBKrAQoUQ3JlYXRlV29ya3NwYWNlVG9rZW4SLy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlV29ya3NwYWNlVG9rZW5SZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdvcmtzcGFjZVRva2VuUmVzcG9uc2UiMMLzGAx0b2tlbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYDwoNdG9rZW4uY3JlYXRlZBJwCgtSZXZva2VUb2tlbhImLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VUb2tlblJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlVG9rZW5SZXNwb25zZSIQwvMYDHRva2Vucy53cml0ZRKXAQoSUm9sbFdvcmtzcGFjZVRva2VuEi0udG9zaGkud29ya3NwYWNlLnYxLlJvbGxXb3Jrc3BhY2VUb2tlblJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuUm9sbFdvcmtzcGFjZVRva2VuUmVzcG9uc2UiIsLzGAx0b2tlbnMud3JpdGXS8xgOCgx0b2tlbi5yb2xsZWQScAoLVXBkYXRlVG9rZW4SJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVG9rZW5SZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVRva2VuUmVzcG9uc2UiEMLzGAx0b2tlbnMud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_roles]);
 
 /**
  * Token is one of the workspace's tokens, without its value.
@@ -89,6 +91,38 @@ export type Token = Message<"toshi.workspace.v1.Token"> & {
    * @generated from field: string environment = 10;
    */
   environment: string;
+
+  /**
+   * When an API token starts working; unset when it works from its
+   * creation.
+   *
+   * @generated from field: google.protobuf.Timestamp not_before = 11;
+   */
+  notBefore?: Timestamp | undefined;
+
+  /**
+   * The client addresses an API token is accepted from; unset when every
+   * address is.
+   *
+   * @generated from field: toshi.workspace.v1.ClientRanges client_ranges = 12;
+   */
+  clientRanges?: ClientRanges | undefined;
+
+  /**
+   * Who made the token: a person, a token, or the system for one the
+   * control plane made. Unset when that was not recorded.
+   *
+   * @generated from field: toshi.workspace.v1.Subject created_by = 13;
+   */
+  createdBy?: Subject | undefined;
+
+  /**
+   * When the token was last accepted for a call, at most a minute out of
+   * date; unset when it never was.
+   *
+   * @generated from field: google.protobuf.Timestamp last_used = 14;
+   */
+  lastUsed?: Timestamp | undefined;
 };
 
 /**
@@ -165,6 +199,38 @@ export type TokenJson = {
    * @generated from field: string environment = 10;
    */
   environment?: string;
+
+  /**
+   * When an API token starts working; unset when it works from its
+   * creation.
+   *
+   * @generated from field: google.protobuf.Timestamp not_before = 11;
+   */
+  notBefore?: TimestampJson;
+
+  /**
+   * The client addresses an API token is accepted from; unset when every
+   * address is.
+   *
+   * @generated from field: toshi.workspace.v1.ClientRanges client_ranges = 12;
+   */
+  clientRanges?: ClientRangesJson;
+
+  /**
+   * Who made the token: a person, a token, or the system for one the
+   * control plane made. Unset when that was not recorded.
+   *
+   * @generated from field: toshi.workspace.v1.Subject created_by = 13;
+   */
+  createdBy?: SubjectJson;
+
+  /**
+   * When the token was last accepted for a call, at most a minute out of
+   * date; unset when it never was.
+   *
+   * @generated from field: google.protobuf.Timestamp last_used = 14;
+   */
+  lastUsed?: TimestampJson;
 };
 
 /**
@@ -173,6 +239,69 @@ export type TokenJson = {
  */
 export const TokenSchema: GenMessage<Token, {jsonType: TokenJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_tokens, 0);
+
+/**
+ * ClientRanges are the client addresses an API token is accepted from,
+ * each an IP address or a CIDR range, such as "203.0.113.0/24" or
+ * "2001:db8::/32". A call from another address, or before the token's
+ * not_before, is refused with UNAUTHENTICATED, as an expired token's is,
+ * with a google.rpc.ErrorInfo of domain "toshi.run" and reason
+ * TOKEN_OUTSIDE_RANGES or TOKEN_OUTSIDE_WINDOW, and the refusal is
+ * recorded in the audit log.
+ *
+ * @generated from message toshi.workspace.v1.ClientRanges
+ */
+export type ClientRanges = Message<"toshi.workspace.v1.ClientRanges"> & {
+  /**
+   * The token is accepted only from an address in one of these; empty
+   * accepts every address.
+   *
+   * @generated from field: repeated string in = 1;
+   */
+  in: string[];
+
+  /**
+   * The token is refused from an address in any of these, one in in too.
+   *
+   * @generated from field: repeated string not_in = 2;
+   */
+  notIn: string[];
+};
+
+/**
+ * ClientRanges are the client addresses an API token is accepted from,
+ * each an IP address or a CIDR range, such as "203.0.113.0/24" or
+ * "2001:db8::/32". A call from another address, or before the token's
+ * not_before, is refused with UNAUTHENTICATED, as an expired token's is,
+ * with a google.rpc.ErrorInfo of domain "toshi.run" and reason
+ * TOKEN_OUTSIDE_RANGES or TOKEN_OUTSIDE_WINDOW, and the refusal is
+ * recorded in the audit log.
+ *
+ * @generated from message toshi.workspace.v1.ClientRanges
+ */
+export type ClientRangesJson = {
+  /**
+   * The token is accepted only from an address in one of these; empty
+   * accepts every address.
+   *
+   * @generated from field: repeated string in = 1;
+   */
+  in?: string[];
+
+  /**
+   * The token is refused from an address in any of these, one in in too.
+   *
+   * @generated from field: repeated string not_in = 2;
+   */
+  notIn?: string[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ClientRanges.
+ * Use `create(ClientRangesSchema)` to create a new message.
+ */
+export const ClientRangesSchema: GenMessage<ClientRanges, {jsonType: ClientRangesJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_tokens, 1);
 
 /**
  * ListTokensRequest optionally narrows the list to one kind.
@@ -235,7 +364,7 @@ export type ListTokensRequestJson = {
  * Use `create(ListTokensRequestSchema)` to create a new message.
  */
 export const ListTokensRequestSchema: GenMessage<ListTokensRequest, {jsonType: ListTokensRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 1);
+  messageDesc(file_toshi_workspace_v1_tokens, 2);
 
 /**
  * ListTokensResponse carries the tokens, oldest first.
@@ -280,7 +409,7 @@ export type ListTokensResponseJson = {
  * Use `create(ListTokensResponseSchema)` to create a new message.
  */
 export const ListTokensResponseSchema: GenMessage<ListTokensResponse, {jsonType: ListTokensResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 2);
+  messageDesc(file_toshi_workspace_v1_tokens, 3);
 
 /**
  * CreateWorkspaceTokenRequest names the token and what it may reach.
@@ -296,7 +425,7 @@ export type CreateWorkspaceTokenRequest = Message<"toshi.workspace.v1.CreateWork
   name: string;
 
   /**
-   * Unset means the token never expires.
+   * Unset means the longest lifetime allowed, 90 days by default.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 2;
    */
@@ -317,6 +446,31 @@ export type CreateWorkspaceTokenRequest = Message<"toshi.workspace.v1.CreateWork
    * @generated from field: string environment = 4;
    */
   environment: string;
+
+  /**
+   * When the token starts working; unset means at once.
+   *
+   * @generated from field: google.protobuf.Timestamp not_before = 5;
+   */
+  notBefore?: Timestamp | undefined;
+
+  /**
+   * The client addresses the token is accepted from; unset means every
+   * address.
+   *
+   * @generated from field: toshi.workspace.v1.ClientRanges client_ranges = 6;
+   */
+  clientRanges?: ClientRanges | undefined;
+
+  /**
+   * The token's role, by id: a built-in role or one of the workspace's
+   * own, which the caller must hold everything of where the token acts.
+   * Empty gives Admin to a whole-workspace token and Member to a limited
+   * one.
+   *
+   * @generated from field: string role = 7;
+   */
+  role: string;
 };
 
 /**
@@ -333,7 +487,7 @@ export type CreateWorkspaceTokenRequestJson = {
   name?: string;
 
   /**
-   * Unset means the token never expires.
+   * Unset means the longest lifetime allowed, 90 days by default.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 2;
    */
@@ -354,6 +508,31 @@ export type CreateWorkspaceTokenRequestJson = {
    * @generated from field: string environment = 4;
    */
   environment?: string;
+
+  /**
+   * When the token starts working; unset means at once.
+   *
+   * @generated from field: google.protobuf.Timestamp not_before = 5;
+   */
+  notBefore?: TimestampJson;
+
+  /**
+   * The client addresses the token is accepted from; unset means every
+   * address.
+   *
+   * @generated from field: toshi.workspace.v1.ClientRanges client_ranges = 6;
+   */
+  clientRanges?: ClientRangesJson;
+
+  /**
+   * The token's role, by id: a built-in role or one of the workspace's
+   * own, which the caller must hold everything of where the token acts.
+   * Empty gives Admin to a whole-workspace token and Member to a limited
+   * one.
+   *
+   * @generated from field: string role = 7;
+   */
+  role?: string;
 };
 
 /**
@@ -361,7 +540,7 @@ export type CreateWorkspaceTokenRequestJson = {
  * Use `create(CreateWorkspaceTokenRequestSchema)` to create a new message.
  */
 export const CreateWorkspaceTokenRequestSchema: GenMessage<CreateWorkspaceTokenRequest, {jsonType: CreateWorkspaceTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 3);
+  messageDesc(file_toshi_workspace_v1_tokens, 4);
 
 /**
  * CreateWorkspaceTokenResponse carries the new token and its value.
@@ -406,7 +585,7 @@ export type CreateWorkspaceTokenResponseJson = {
  * Use `create(CreateWorkspaceTokenResponseSchema)` to create a new message.
  */
 export const CreateWorkspaceTokenResponseSchema: GenMessage<CreateWorkspaceTokenResponse, {jsonType: CreateWorkspaceTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 4);
+  messageDesc(file_toshi_workspace_v1_tokens, 5);
 
 /**
  * RevokeTokenRequest names the token to revoke.
@@ -437,7 +616,7 @@ export type RevokeTokenRequestJson = {
  * Use `create(RevokeTokenRequestSchema)` to create a new message.
  */
 export const RevokeTokenRequestSchema: GenMessage<RevokeTokenRequest, {jsonType: RevokeTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 5);
+  messageDesc(file_toshi_workspace_v1_tokens, 6);
 
 /**
  * RevokeTokenResponse carries the revoked token.
@@ -482,7 +661,175 @@ export type RevokeTokenResponseJson = {
  * Use `create(RevokeTokenResponseSchema)` to create a new message.
  */
 export const RevokeTokenResponseSchema: GenMessage<RevokeTokenResponse, {jsonType: RevokeTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_tokens, 6);
+  messageDesc(file_toshi_workspace_v1_tokens, 7);
+
+/**
+ * RollWorkspaceTokenRequest names the token to roll.
+ *
+ * @generated from message toshi.workspace.v1.RollWorkspaceTokenRequest
+ */
+export type RollWorkspaceTokenRequest = Message<"toshi.workspace.v1.RollWorkspaceTokenRequest"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * RollWorkspaceTokenRequest names the token to roll.
+ *
+ * @generated from message toshi.workspace.v1.RollWorkspaceTokenRequest
+ */
+export type RollWorkspaceTokenRequestJson = {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RollWorkspaceTokenRequest.
+ * Use `create(RollWorkspaceTokenRequestSchema)` to create a new message.
+ */
+export const RollWorkspaceTokenRequestSchema: GenMessage<RollWorkspaceTokenRequest, {jsonType: RollWorkspaceTokenRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_tokens, 8);
+
+/**
+ * RollWorkspaceTokenResponse carries the token and its new value.
+ *
+ * @generated from message toshi.workspace.v1.RollWorkspaceTokenResponse
+ */
+export type RollWorkspaceTokenResponse = Message<"toshi.workspace.v1.RollWorkspaceTokenResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Token token = 1;
+   */
+  token?: Token | undefined;
+
+  /**
+   * The new value. It is returned only here.
+   *
+   * @generated from field: string value = 2;
+   */
+  value: string;
+};
+
+/**
+ * RollWorkspaceTokenResponse carries the token and its new value.
+ *
+ * @generated from message toshi.workspace.v1.RollWorkspaceTokenResponse
+ */
+export type RollWorkspaceTokenResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Token token = 1;
+   */
+  token?: TokenJson;
+
+  /**
+   * The new value. It is returned only here.
+   *
+   * @generated from field: string value = 2;
+   */
+  value?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RollWorkspaceTokenResponse.
+ * Use `create(RollWorkspaceTokenResponseSchema)` to create a new message.
+ */
+export const RollWorkspaceTokenResponseSchema: GenMessage<RollWorkspaceTokenResponse, {jsonType: RollWorkspaceTokenResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_tokens, 9);
+
+/**
+ * UpdateTokenRequest names an API token and the fields to change.
+ *
+ * @generated from message toshi.workspace.v1.UpdateTokenRequest
+ */
+export type UpdateTokenRequest = Message<"toshi.workspace.v1.UpdateTokenRequest"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * Carries the new values of the fields update_mask names. An unset
+   * not_before or client_ranges clears it; expires_at must be set.
+   *
+   * @generated from field: toshi.workspace.v1.Token token = 2;
+   */
+  token?: Token | undefined;
+
+  /**
+   * One or more of name, expires_at, not_before and client_ranges.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * UpdateTokenRequest names an API token and the fields to change.
+ *
+ * @generated from message toshi.workspace.v1.UpdateTokenRequest
+ */
+export type UpdateTokenRequestJson = {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * Carries the new values of the fields update_mask names. An unset
+   * not_before or client_ranges clears it; expires_at must be set.
+   *
+   * @generated from field: toshi.workspace.v1.Token token = 2;
+   */
+  token?: TokenJson;
+
+  /**
+   * One or more of name, expires_at, not_before and client_ranges.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateTokenRequest.
+ * Use `create(UpdateTokenRequestSchema)` to create a new message.
+ */
+export const UpdateTokenRequestSchema: GenMessage<UpdateTokenRequest, {jsonType: UpdateTokenRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_tokens, 10);
+
+/**
+ * UpdateTokenResponse carries the token as it now is.
+ *
+ * @generated from message toshi.workspace.v1.UpdateTokenResponse
+ */
+export type UpdateTokenResponse = Message<"toshi.workspace.v1.UpdateTokenResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Token token = 1;
+   */
+  token?: Token | undefined;
+};
+
+/**
+ * UpdateTokenResponse carries the token as it now is.
+ *
+ * @generated from message toshi.workspace.v1.UpdateTokenResponse
+ */
+export type UpdateTokenResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Token token = 1;
+   */
+  token?: TokenJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateTokenResponse.
+ * Use `create(UpdateTokenResponseSchema)` to create a new message.
+ */
+export const UpdateTokenResponseSchema: GenMessage<UpdateTokenResponse, {jsonType: UpdateTokenResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_tokens, 11);
 
 /**
  * TokenKind says what a token grants.
@@ -578,6 +925,43 @@ export const TokenService: GenService<{
     methodKind: "unary";
     input: typeof RevokeTokenRequestSchema;
     output: typeof RevokeTokenResponseSchema;
+  },
+  /**
+   * RollWorkspaceToken gives one of the workspace's tokens a new value and
+   * returns it; the old value stops working at once. The token keeps its
+   * ID, name, roles, limit, client address ranges, start, expiry and
+   * creator, so what was granted to it stays granted. An API, enrollment or
+   * installation token rolls; the new value of an installation token goes
+   * to its product's settings.
+   *
+   * Only a signed-in session may call it, as for CreateWorkspaceToken. A
+   * token someone else made needs members.write as well, and is refused
+   * without it with PERMISSION_DENIED. A token of another workspace, and an
+   * unknown ID, fail with NOT_FOUND; a revoked or expired token with
+   * FAILED_PRECONDITION.
+   *
+   * @generated from rpc toshi.workspace.v1.TokenService.RollWorkspaceToken
+   */
+  rollWorkspaceToken: {
+    methodKind: "unary";
+    input: typeof RollWorkspaceTokenRequestSchema;
+    output: typeof RollWorkspaceTokenResponseSchema;
+  },
+  /**
+   * UpdateToken changes an API token's name, expiry, start and client
+   * address ranges: the fields update_mask names. The expiry stays within
+   * the longest lifetime allowed from now. Only a signed-in session may
+   * call it, and a token someone else made needs members.write as well,
+   * as for RollWorkspaceToken. An enrollment or installation token fails
+   * with INVALID_ARGUMENT; a token of another workspace, and an unknown ID,
+   * with NOT_FOUND; a revoked token with FAILED_PRECONDITION.
+   *
+   * @generated from rpc toshi.workspace.v1.TokenService.UpdateToken
+   */
+  updateToken: {
+    methodKind: "unary";
+    input: typeof UpdateTokenRequestSchema;
+    output: typeof UpdateTokenResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_tokens, 0);
