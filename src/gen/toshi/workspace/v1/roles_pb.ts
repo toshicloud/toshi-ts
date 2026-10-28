@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Duration, DurationJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/roles.proto.
  */
 export const file_toshi_workspace_v1_roles: GenFile = /*@__PURE__*/
-  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvcm9sZXMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSJHCgRSb2xlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLcGVybWlzc2lvbnMYAyADKAkSEAoIYnVpbHRfaW4YBCABKAgiRAoHU3ViamVjdBItCgRraW5kGAEgASgOMh8udG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3RLaW5kEgoKAmlkGAIgASgJItoBCglSb2xlR3JhbnQSCgoCaWQYASABKAkSLAoHc3ViamVjdBgCIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgpjcmVhdGVkX2J5GAcgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QiOQoQTGlzdFJvbGVzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJVChFMaXN0Um9sZXNSZXNwb25zZRInCgVyb2xlcxgBIAMoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI2ChFDcmVhdGVSb2xlUmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjwKEkNyZWF0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUiQgoRVXBkYXRlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtwZXJtaXNzaW9ucxgDIAMoCSI8ChJVcGRhdGVSb2xlUmVzcG9uc2USJgoEcm9sZRgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlIh8KEURlbGV0ZVJvbGVSZXF1ZXN0EgoKAmlkGAEgASgJIlQKEkRlbGV0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUSFgoOZ3JhbnRzX2RlbGV0ZWQYAiABKAUikgEKFUxpc3RSb2xlR3JhbnRzUmVxdWVzdBIsCgdzdWJqZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJgChZMaXN0Um9sZUdyYW50c1Jlc3BvbnNlEi0KBmdyYW50cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInQKEEdyYW50Um9sZVJlcXVlc3QSLAoHc3ViamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRITCgtlbnZpcm9ubWVudBgEIAEoCSJBChFHcmFudFJvbGVSZXNwb25zZRIsCgVncmFudBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQiHwoRUmV2b2tlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkiQgoSUmV2b2tlUm9sZVJlc3BvbnNlEiwKBWdyYW50GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlJvbGVHcmFudCp1CgtTdWJqZWN0S2luZBIcChhTVUJKRUNUX0tJTkRfVU5TUEVDSUZJRUQQABIXChNTVUJKRUNUX0tJTkRfUEVSU09OEAESFgoSU1VCSkVDVF9LSU5EX1RPS0VOEAISFwoTU1VCSkVDVF9LSU5EX1NZU1RFTRADMusGCgtSb2xlU2VydmljZRJqCglMaXN0Um9sZXMSJC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVzUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Um9sZXNSZXNwb25zZSIQwvMYDG1lbWJlcnMucmVhZBJuCgpDcmVhdGVSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXNwb25zZSIRwvMYDW1lbWJlcnMud3JpdGUSbgoKVXBkYXRlUm9sZRIlLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVzcG9uc2UiEcLzGA1tZW1iZXJzLndyaXRlEm4KCkRlbGV0ZVJvbGUSJS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlc3BvbnNlIhHC8xgNbWVtYmVycy53cml0ZRKGAQoOTGlzdFJvbGVHcmFudHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVHcmFudHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSb2xlR3JhbnRzUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEocBCglHcmFudFJvbGUSJC50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRSb2xlUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFJvbGVSZXNwb25zZSItwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYCxIJcm9sZTpyb2xlEowBCgpSZXZva2VSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXNwb25zZSIvwvMYDW1lbWJlcnMud3JpdGXS8xgaEhhyb2xlOnJlc3BvbnNlLmdyYW50LnJvbGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvcm9sZXMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSJHCgRSb2xlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLcGVybWlzc2lvbnMYAyADKAkSEAoIYnVpbHRfaW4YBCABKAgiRAoHU3ViamVjdBItCgRraW5kGAEgASgOMh8udG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3RLaW5kEgoKAmlkGAIgASgJItoBCglSb2xlR3JhbnQSCgoCaWQYASABKAkSLAoHc3ViamVjdBgCIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgpjcmVhdGVkX2J5GAcgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QiOQoQTGlzdFJvbGVzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJVChFMaXN0Um9sZXNSZXNwb25zZRInCgVyb2xlcxgBIAMoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI2ChFDcmVhdGVSb2xlUmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjwKEkNyZWF0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUiQgoRVXBkYXRlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtwZXJtaXNzaW9ucxgDIAMoCSI8ChJVcGRhdGVSb2xlUmVzcG9uc2USJgoEcm9sZRgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlIh8KEURlbGV0ZVJvbGVSZXF1ZXN0EgoKAmlkGAEgASgJIlQKEkRlbGV0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUSFgoOZ3JhbnRzX2RlbGV0ZWQYAiABKAUikgEKFUxpc3RSb2xlR3JhbnRzUmVxdWVzdBIsCgdzdWJqZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJgChZMaXN0Um9sZUdyYW50c1Jlc3BvbnNlEi0KBmdyYW50cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInQKEEdyYW50Um9sZVJlcXVlc3QSLAoHc3ViamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRITCgtlbnZpcm9ubWVudBgEIAEoCSJBChFHcmFudFJvbGVSZXNwb25zZRIsCgVncmFudBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQiHwoRUmV2b2tlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkiQgoSUmV2b2tlUm9sZVJlc3BvbnNlEiwKBWdyYW50GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlJvbGVHcmFudCI7ChJMaXN0TWVtYmVyc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiWwoTTGlzdE1lbWJlcnNSZXNwb25zZRIrCgdtZW1iZXJzGAEgAygLMhoudG9zaGkud29ya3NwYWNlLnYxLk1lbWJlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkivwEKBk1lbWJlchIPCgd1c2VyX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFZW1haWwYAyABKAkSKgoDdmlhGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLk1lbWJlclZpYRIsCghhZGRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLQoIYWRkZWRfYnkYBiABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdCImChNSZW1vdmVNZW1iZXJSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkiLgoUUmVtb3ZlTWVtYmVyUmVzcG9uc2USFgoOZ3JhbnRzX3JlbW92ZWQYASABKAUiTwoXQ3JlYXRlSW52aXRhdGlvblJlcXVlc3QSDAoEbm90ZRgBIAEoCRImCgN0dGwYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXAoYQ3JlYXRlSW52aXRhdGlvblJlc3BvbnNlEjIKCmludml0YXRpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbhIMCgRjb2RlGAIgASgJIpIDCgpJbnZpdGF0aW9uEgoKAmlkGAEgASgJEgwKBG5vdGUYAiABKAkSMgoFc3RhdGUYAyABKA4yIy50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvblN0YXRlEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KCmNyZWF0ZWRfYnkYBSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthY2NlcHRlZF9ieRgHIAEoCRIvCgthY2NlcHRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKcmV2b2tlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoKcmV2b2tlZF9ieRgKIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0Ij8KFkxpc3RJbnZpdGF0aW9uc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiZwoXTGlzdEludml0YXRpb25zUmVzcG9uc2USMwoLaW52aXRhdGlvbnMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJQoXUmV2b2tlSW52aXRhdGlvblJlcXVlc3QSCgoCaWQYASABKAkiTgoYUmV2b2tlSW52aXRhdGlvblJlc3BvbnNlEjIKCmludml0YXRpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbiInChdBY2NlcHRJbnZpdGF0aW9uUmVxdWVzdBIMCgRjb2RlGAEgASgJInAKGEFjY2VwdEludml0YXRpb25SZXNwb25zZRIyCgppbnZpdGF0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb24SEQoJd29ya3NwYWNlGAIgASgJEg0KBW93bmVyGAMgASgIKnUKC1N1YmplY3RLaW5kEhwKGFNVQkpFQ1RfS0lORF9VTlNQRUNJRklFRBAAEhcKE1NVQkpFQ1RfS0lORF9QRVJTT04QARIWChJTVUJKRUNUX0tJTkRfVE9LRU4QAhIXChNTVUJKRUNUX0tJTkRfU1lTVEVNEAMqeQoJTWVtYmVyVmlhEhoKFk1FTUJFUl9WSUFfVU5TUEVDSUZJRUQQABIbChdNRU1CRVJfVklBX0dJVEhVQl9BRE1JThABEhkKFU1FTUJFUl9WSUFfSU5WSVRBVElPThACEhgKFE1FTUJFUl9WSUFfTUlHUkFUSU9OEAMqqQEKD0ludml0YXRpb25TdGF0ZRIgChxJTlZJVEFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVSU5WSVRBVElPTl9TVEFURV9PUEVOEAESHQoZSU5WSVRBVElPTl9TVEFURV9BQ0NFUFRFRBACEhwKGElOVklUQVRJT05fU1RBVEVfUkVWT0tFRBADEhwKGElOVklUQVRJT05fU1RBVEVfRVhQSVJFRBAEMokOCgtSb2xlU2VydmljZRJqCglMaXN0Um9sZXMSJC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVzUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Um9sZXNSZXNwb25zZSIQwvMYDG1lbWJlcnMucmVhZBJuCgpDcmVhdGVSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXNwb25zZSIRwvMYDW1lbWJlcnMud3JpdGUSbgoKVXBkYXRlUm9sZRIlLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVzcG9uc2UiEcLzGA1tZW1iZXJzLndyaXRlEm4KCkRlbGV0ZVJvbGUSJS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlc3BvbnNlIhHC8xgNbWVtYmVycy53cml0ZRKGAQoOTGlzdFJvbGVHcmFudHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVHcmFudHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSb2xlR3JhbnRzUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEocBCglHcmFudFJvbGUSJC50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRSb2xlUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFJvbGVSZXNwb25zZSItwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYCxIJcm9sZTpyb2xlEowBCgpSZXZva2VSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXNwb25zZSIvwvMYDW1lbWJlcnMud3JpdGXS8xgaEhhyb2xlOnJlc3BvbnNlLmdyYW50LnJvbGUSfQoLTGlzdE1lbWJlcnMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdE1lbWJlcnNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RNZW1iZXJzUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEqUBCgxSZW1vdmVNZW1iZXISJy50b3NoaS53b3Jrc3BhY2UudjEuUmVtb3ZlTWVtYmVyUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5SZW1vdmVNZW1iZXJSZXNwb25zZSJCwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYIAoObWVtYmVyLnJlbW92ZWQSDm1lbWJlcjp1c2VyX2lkEo0BChBDcmVhdGVJbnZpdGF0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUludml0YXRpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUludml0YXRpb25SZXNwb25zZSIewvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNlEokBCg9MaXN0SW52aXRhdGlvbnMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEludml0YXRpb25zUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SW52aXRhdGlvbnNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2USjQEKEFJldm9rZUludml0YXRpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlSW52aXRhdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlSW52aXRhdGlvblJlc3BvbnNlIh7C8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2USyAEKEEFjY2VwdEludml0YXRpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuQWNjZXB0SW52aXRhdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQWNjZXB0SW52aXRhdGlvblJlc3BvbnNlIlnC8xgMbWVtYmVycy5yZWFkyvMYCXdvcmtzcGFjZdLzGDgKE2ludml0YXRpb24uYWNjZXB0ZWQSIWludml0YXRpb246cmVzcG9uc2UuaW52aXRhdGlvbi5pZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Role is a named set of permissions.
@@ -871,6 +871,710 @@ export const RevokeRoleResponseSchema: GenMessage<RevokeRoleResponse, {jsonType:
   messageDesc(file_toshi_workspace_v1_roles, 16);
 
 /**
+ * @generated from message toshi.workspace.v1.ListMembersRequest
+ */
+export type ListMembersRequest = Message<"toshi.workspace.v1.ListMembersRequest"> & {
+  /**
+   * The most members in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListMembersRequest
+ */
+export type ListMembersRequestJson = {
+  /**
+   * The most members in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListMembersRequest.
+ * Use `create(ListMembersRequestSchema)` to create a new message.
+ */
+export const ListMembersRequestSchema: GenMessage<ListMembersRequest, {jsonType: ListMembersRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 17);
+
+/**
+ * @generated from message toshi.workspace.v1.ListMembersResponse
+ */
+export type ListMembersResponse = Message<"toshi.workspace.v1.ListMembersResponse"> & {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.Member members = 1;
+   */
+  members: Member[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListMembersResponse
+ */
+export type ListMembersResponseJson = {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.Member members = 1;
+   */
+  members?: MemberJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListMembersResponse.
+ * Use `create(ListMembersResponseSchema)` to create a new message.
+ */
+export const ListMembersResponseSchema: GenMessage<ListMembersResponse, {jsonType: ListMembersResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 18);
+
+/**
+ * Member is a person a session opens the workspace for.
+ *
+ * @generated from message toshi.workspace.v1.Member
+ */
+export type Member = Message<"toshi.workspace.v1.Member"> & {
+  /**
+   * The person's user id, as grants name them.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * The name and email address the person's latest sign-in reported;
+   * shown, never matched.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string email = 3;
+   */
+  email: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.MemberVia via = 4;
+   */
+  via: MemberVia;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp added_at = 5;
+   */
+  addedAt?: Timestamp | undefined;
+
+  /**
+   * Who made the person a member: the inviter for an invitation, the
+   * system for a sign-in.
+   *
+   * @generated from field: toshi.workspace.v1.Subject added_by = 6;
+   */
+  addedBy?: Subject | undefined;
+};
+
+/**
+ * Member is a person a session opens the workspace for.
+ *
+ * @generated from message toshi.workspace.v1.Member
+ */
+export type MemberJson = {
+  /**
+   * The person's user id, as grants name them.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId?: string;
+
+  /**
+   * The name and email address the person's latest sign-in reported;
+   * shown, never matched.
+   *
+   * @generated from field: string name = 2;
+   */
+  name?: string;
+
+  /**
+   * @generated from field: string email = 3;
+   */
+  email?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.MemberVia via = 4;
+   */
+  via?: MemberViaJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp added_at = 5;
+   */
+  addedAt?: TimestampJson;
+
+  /**
+   * Who made the person a member: the inviter for an invitation, the
+   * system for a sign-in.
+   *
+   * @generated from field: toshi.workspace.v1.Subject added_by = 6;
+   */
+  addedBy?: SubjectJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.Member.
+ * Use `create(MemberSchema)` to create a new message.
+ */
+export const MemberSchema: GenMessage<Member, {jsonType: MemberJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 19);
+
+/**
+ * @generated from message toshi.workspace.v1.RemoveMemberRequest
+ */
+export type RemoveMemberRequest = Message<"toshi.workspace.v1.RemoveMemberRequest"> & {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RemoveMemberRequest
+ */
+export type RemoveMemberRequestJson = {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RemoveMemberRequest.
+ * Use `create(RemoveMemberRequestSchema)` to create a new message.
+ */
+export const RemoveMemberRequestSchema: GenMessage<RemoveMemberRequest, {jsonType: RemoveMemberRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 20);
+
+/**
+ * RemoveMemberResponse says how many grants went with the membership.
+ *
+ * @generated from message toshi.workspace.v1.RemoveMemberResponse
+ */
+export type RemoveMemberResponse = Message<"toshi.workspace.v1.RemoveMemberResponse"> & {
+  /**
+   * @generated from field: int32 grants_removed = 1;
+   */
+  grantsRemoved: number;
+};
+
+/**
+ * RemoveMemberResponse says how many grants went with the membership.
+ *
+ * @generated from message toshi.workspace.v1.RemoveMemberResponse
+ */
+export type RemoveMemberResponseJson = {
+  /**
+   * @generated from field: int32 grants_removed = 1;
+   */
+  grantsRemoved?: number;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RemoveMemberResponse.
+ * Use `create(RemoveMemberResponseSchema)` to create a new message.
+ */
+export const RemoveMemberResponseSchema: GenMessage<RemoveMemberResponse, {jsonType: RemoveMemberResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 21);
+
+/**
+ * @generated from message toshi.workspace.v1.CreateInvitationRequest
+ */
+export type CreateInvitationRequest = Message<"toshi.workspace.v1.CreateInvitationRequest"> & {
+  /**
+   * Free text, such as whom the invitation is for; 200 characters at most.
+   *
+   * @generated from field: string note = 1;
+   */
+  note: string;
+
+  /**
+   * How long the code is valid: seven days when unset, 30 days at most.
+   *
+   * @generated from field: google.protobuf.Duration ttl = 2;
+   */
+  ttl?: Duration | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CreateInvitationRequest
+ */
+export type CreateInvitationRequestJson = {
+  /**
+   * Free text, such as whom the invitation is for; 200 characters at most.
+   *
+   * @generated from field: string note = 1;
+   */
+  note?: string;
+
+  /**
+   * How long the code is valid: seven days when unset, 30 days at most.
+   *
+   * @generated from field: google.protobuf.Duration ttl = 2;
+   */
+  ttl?: DurationJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateInvitationRequest.
+ * Use `create(CreateInvitationRequestSchema)` to create a new message.
+ */
+export const CreateInvitationRequestSchema: GenMessage<CreateInvitationRequest, {jsonType: CreateInvitationRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 22);
+
+/**
+ * CreateInvitationResponse carries the invitation and its code, shown
+ * once.
+ *
+ * @generated from message toshi.workspace.v1.CreateInvitationResponse
+ */
+export type CreateInvitationResponse = Message<"toshi.workspace.v1.CreateInvitationResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: Invitation | undefined;
+
+  /**
+   * The code the invitee accepts; it is not shown again.
+   *
+   * @generated from field: string code = 2;
+   */
+  code: string;
+};
+
+/**
+ * CreateInvitationResponse carries the invitation and its code, shown
+ * once.
+ *
+ * @generated from message toshi.workspace.v1.CreateInvitationResponse
+ */
+export type CreateInvitationResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: InvitationJson;
+
+  /**
+   * The code the invitee accepts; it is not shown again.
+   *
+   * @generated from field: string code = 2;
+   */
+  code?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateInvitationResponse.
+ * Use `create(CreateInvitationResponseSchema)` to create a new message.
+ */
+export const CreateInvitationResponseSchema: GenMessage<CreateInvitationResponse, {jsonType: CreateInvitationResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 23);
+
+/**
+ * Invitation is an invitation to join the workspace, never with its code.
+ *
+ * @generated from message toshi.workspace.v1.Invitation
+ */
+export type Invitation = Message<"toshi.workspace.v1.Invitation"> & {
+  /**
+   * Invitation id, such as "inv-1a2b3c4d5e6f7a8b9c0d1e2f".
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string note = 2;
+   */
+  note: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.InvitationState state = 3;
+   */
+  state: InvitationState;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 4;
+   */
+  createdAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Subject created_by = 5;
+   */
+  createdBy?: Subject | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 6;
+   */
+  expiresAt?: Timestamp | undefined;
+
+  /**
+   * The user id of the person who accepted it, and when; empty until then.
+   *
+   * @generated from field: string accepted_by = 7;
+   */
+  acceptedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp accepted_at = 8;
+   */
+  acceptedAt?: Timestamp | undefined;
+
+  /**
+   * When it was revoked, and by whom; empty unless revoked.
+   *
+   * @generated from field: google.protobuf.Timestamp revoked_at = 9;
+   */
+  revokedAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Subject revoked_by = 10;
+   */
+  revokedBy?: Subject | undefined;
+};
+
+/**
+ * Invitation is an invitation to join the workspace, never with its code.
+ *
+ * @generated from message toshi.workspace.v1.Invitation
+ */
+export type InvitationJson = {
+  /**
+   * Invitation id, such as "inv-1a2b3c4d5e6f7a8b9c0d1e2f".
+   *
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * @generated from field: string note = 2;
+   */
+  note?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.InvitationState state = 3;
+   */
+  state?: InvitationStateJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 4;
+   */
+  createdAt?: TimestampJson;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Subject created_by = 5;
+   */
+  createdBy?: SubjectJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 6;
+   */
+  expiresAt?: TimestampJson;
+
+  /**
+   * The user id of the person who accepted it, and when; empty until then.
+   *
+   * @generated from field: string accepted_by = 7;
+   */
+  acceptedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp accepted_at = 8;
+   */
+  acceptedAt?: TimestampJson;
+
+  /**
+   * When it was revoked, and by whom; empty unless revoked.
+   *
+   * @generated from field: google.protobuf.Timestamp revoked_at = 9;
+   */
+  revokedAt?: TimestampJson;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Subject revoked_by = 10;
+   */
+  revokedBy?: SubjectJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.Invitation.
+ * Use `create(InvitationSchema)` to create a new message.
+ */
+export const InvitationSchema: GenMessage<Invitation, {jsonType: InvitationJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 24);
+
+/**
+ * @generated from message toshi.workspace.v1.ListInvitationsRequest
+ */
+export type ListInvitationsRequest = Message<"toshi.workspace.v1.ListInvitationsRequest"> & {
+  /**
+   * The most invitations in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListInvitationsRequest
+ */
+export type ListInvitationsRequestJson = {
+  /**
+   * The most invitations in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 2;
+   */
+  pageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListInvitationsRequest.
+ * Use `create(ListInvitationsRequestSchema)` to create a new message.
+ */
+export const ListInvitationsRequestSchema: GenMessage<ListInvitationsRequest, {jsonType: ListInvitationsRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 25);
+
+/**
+ * @generated from message toshi.workspace.v1.ListInvitationsResponse
+ */
+export type ListInvitationsResponse = Message<"toshi.workspace.v1.ListInvitationsResponse"> & {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.Invitation invitations = 1;
+   */
+  invitations: Invitation[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListInvitationsResponse
+ */
+export type ListInvitationsResponseJson = {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.Invitation invitations = 1;
+   */
+  invitations?: InvitationJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListInvitationsResponse.
+ * Use `create(ListInvitationsResponseSchema)` to create a new message.
+ */
+export const ListInvitationsResponseSchema: GenMessage<ListInvitationsResponse, {jsonType: ListInvitationsResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 26);
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeInvitationRequest
+ */
+export type RevokeInvitationRequest = Message<"toshi.workspace.v1.RevokeInvitationRequest"> & {
+  /**
+   * The invitation's id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RevokeInvitationRequest
+ */
+export type RevokeInvitationRequestJson = {
+  /**
+   * The invitation's id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RevokeInvitationRequest.
+ * Use `create(RevokeInvitationRequestSchema)` to create a new message.
+ */
+export const RevokeInvitationRequestSchema: GenMessage<RevokeInvitationRequest, {jsonType: RevokeInvitationRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 27);
+
+/**
+ * RevokeInvitationResponse carries the revoked invitation.
+ *
+ * @generated from message toshi.workspace.v1.RevokeInvitationResponse
+ */
+export type RevokeInvitationResponse = Message<"toshi.workspace.v1.RevokeInvitationResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: Invitation | undefined;
+};
+
+/**
+ * RevokeInvitationResponse carries the revoked invitation.
+ *
+ * @generated from message toshi.workspace.v1.RevokeInvitationResponse
+ */
+export type RevokeInvitationResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: InvitationJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RevokeInvitationResponse.
+ * Use `create(RevokeInvitationResponseSchema)` to create a new message.
+ */
+export const RevokeInvitationResponseSchema: GenMessage<RevokeInvitationResponse, {jsonType: RevokeInvitationResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 28);
+
+/**
+ * @generated from message toshi.workspace.v1.AcceptInvitationRequest
+ */
+export type AcceptInvitationRequest = Message<"toshi.workspace.v1.AcceptInvitationRequest"> & {
+  /**
+   * The code CreateInvitation returned.
+   *
+   * @generated from field: string code = 1;
+   */
+  code: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.AcceptInvitationRequest
+ */
+export type AcceptInvitationRequestJson = {
+  /**
+   * The code CreateInvitation returned.
+   *
+   * @generated from field: string code = 1;
+   */
+  code?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.AcceptInvitationRequest.
+ * Use `create(AcceptInvitationRequestSchema)` to create a new message.
+ */
+export const AcceptInvitationRequestSchema: GenMessage<AcceptInvitationRequest, {jsonType: AcceptInvitationRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 29);
+
+/**
+ * @generated from message toshi.workspace.v1.AcceptInvitationResponse
+ */
+export type AcceptInvitationResponse = Message<"toshi.workspace.v1.AcceptInvitationResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: Invitation | undefined;
+
+  /**
+   * The id of the workspace the caller is now a member of.
+   *
+   * @generated from field: string workspace = 2;
+   */
+  workspace: string;
+
+  /**
+   * Whether the caller was made the workspace's owner.
+   *
+   * @generated from field: bool owner = 3;
+   */
+  owner: boolean;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.AcceptInvitationResponse
+ */
+export type AcceptInvitationResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Invitation invitation = 1;
+   */
+  invitation?: InvitationJson;
+
+  /**
+   * The id of the workspace the caller is now a member of.
+   *
+   * @generated from field: string workspace = 2;
+   */
+  workspace?: string;
+
+  /**
+   * Whether the caller was made the workspace's owner.
+   *
+   * @generated from field: bool owner = 3;
+   */
+  owner?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.AcceptInvitationResponse.
+ * Use `create(AcceptInvitationResponseSchema)` to create a new message.
+ */
+export const AcceptInvitationResponseSchema: GenMessage<AcceptInvitationResponse, {jsonType: AcceptInvitationResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 30);
+
+/**
  * SubjectKind says who a grant is given to, or who made it.
  *
  * @generated from enum toshi.workspace.v1.SubjectKind
@@ -916,6 +1620,100 @@ export type SubjectKindJson = "SUBJECT_KIND_UNSPECIFIED" | "SUBJECT_KIND_PERSON"
  */
 export const SubjectKindSchema: GenEnum<SubjectKind, SubjectKindJson> = /*@__PURE__*/
   enumDesc(file_toshi_workspace_v1_roles, 0);
+
+/**
+ * MemberVia says how a person became a member.
+ *
+ * @generated from enum toshi.workspace.v1.MemberVia
+ */
+export enum MemberVia {
+  /**
+   * @generated from enum value: MEMBER_VIA_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Signing in with GitHub as an administrator of one of the workspace's
+   * GitHub App installations.
+   *
+   * @generated from enum value: MEMBER_VIA_GITHUB_ADMIN = 1;
+   */
+  GITHUB_ADMIN = 1,
+
+  /**
+   * Accepting an invitation.
+   *
+   * @generated from enum value: MEMBER_VIA_INVITATION = 2;
+   */
+  INVITATION = 2,
+
+  /**
+   * Holding a role in the workspace when members came in.
+   *
+   * @generated from enum value: MEMBER_VIA_MIGRATION = 3;
+   */
+  MIGRATION = 3,
+}
+
+/**
+ * MemberVia says how a person became a member.
+ *
+ * @generated from enum toshi.workspace.v1.MemberVia
+ */
+export type MemberViaJson = "MEMBER_VIA_UNSPECIFIED" | "MEMBER_VIA_GITHUB_ADMIN" | "MEMBER_VIA_INVITATION" | "MEMBER_VIA_MIGRATION";
+
+/**
+ * Describes the enum toshi.workspace.v1.MemberVia.
+ */
+export const MemberViaSchema: GenEnum<MemberVia, MemberViaJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_roles, 1);
+
+/**
+ * InvitationState says whether an invitation's code still works.
+ *
+ * @generated from enum toshi.workspace.v1.InvitationState
+ */
+export enum InvitationState {
+  /**
+   * @generated from enum value: INVITATION_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Its code works until expires_at.
+   *
+   * @generated from enum value: INVITATION_STATE_OPEN = 1;
+   */
+  OPEN = 1,
+
+  /**
+   * @generated from enum value: INVITATION_STATE_ACCEPTED = 2;
+   */
+  ACCEPTED = 2,
+
+  /**
+   * @generated from enum value: INVITATION_STATE_REVOKED = 3;
+   */
+  REVOKED = 3,
+
+  /**
+   * @generated from enum value: INVITATION_STATE_EXPIRED = 4;
+   */
+  EXPIRED = 4,
+}
+
+/**
+ * InvitationState says whether an invitation's code still works.
+ *
+ * @generated from enum toshi.workspace.v1.InvitationState
+ */
+export type InvitationStateJson = "INVITATION_STATE_UNSPECIFIED" | "INVITATION_STATE_OPEN" | "INVITATION_STATE_ACCEPTED" | "INVITATION_STATE_REVOKED" | "INVITATION_STATE_EXPIRED";
+
+/**
+ * Describes the enum toshi.workspace.v1.InvitationState.
+ */
+export const InvitationStateSchema: GenEnum<InvitationState, InvitationStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_roles, 2);
 
 /**
  * RoleService manages who may do what in the workspace: its roles, each a
@@ -1038,6 +1836,93 @@ export const RoleService: GenService<{
     methodKind: "unary";
     input: typeof RevokeRoleRequestSchema;
     output: typeof RevokeRoleResponseSchema;
+  },
+  /**
+   * ListMembers returns the workspace's members, oldest first: the people
+   * a session opens the workspace for, with how and when each joined. A
+   * removed member is not listed.
+   *
+   * A page holds 100 members when page_size is zero, and 1000 at most.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.ListMembers
+   */
+  listMembers: {
+    methodKind: "unary";
+    input: typeof ListMembersRequestSchema;
+    output: typeof ListMembersResponseSchema;
+  },
+  /**
+   * RemoveMember ends a person's membership and deletes every grant they
+   * hold in the workspace, at once; their sessions lose the workspace at
+   * their next call. Removing the workspace's last member fails with
+   * FAILED_PRECONDITION and a google.rpc.ErrorInfo detail with the reason
+   * LAST_MEMBER, and removing its last person who is an owner of the whole
+   * workspace with the reason LAST_OWNER; each names the person under the
+   * key "person". A person who is not a member fails with NOT_FOUND.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.RemoveMember
+   */
+  removeMember: {
+    methodKind: "unary";
+    input: typeof RemoveMemberRequestSchema;
+    output: typeof RemoveMemberResponseSchema;
+  },
+  /**
+   * CreateInvitation makes an invitation to join the workspace and returns
+   * its code, once: the control plane keeps only its hash. It is valid for
+   * ttl, seven days when unset, and 30 days at most. The note is free text,
+   * such as whom it is for, and is never matched against anyone.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.CreateInvitation
+   */
+  createInvitation: {
+    methodKind: "unary";
+    input: typeof CreateInvitationRequestSchema;
+    output: typeof CreateInvitationResponseSchema;
+  },
+  /**
+   * ListInvitations returns the workspace's invitations, newest first,
+   * accepted, revoked and expired ones included, never their codes.
+   *
+   * A page holds 100 invitations when page_size is zero, and 1000 at most.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.ListInvitations
+   */
+  listInvitations: {
+    methodKind: "unary";
+    input: typeof ListInvitationsRequestSchema;
+    output: typeof ListInvitationsResponseSchema;
+  },
+  /**
+   * RevokeInvitation ends an open invitation, so its code no longer works.
+   * An unknown id fails with NOT_FOUND, and one that is accepted, revoked
+   * or expired with FAILED_PRECONDITION.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.RevokeInvitation
+   */
+  revokeInvitation: {
+    methodKind: "unary";
+    input: typeof RevokeInvitationRequestSchema;
+    output: typeof RevokeInvitationResponseSchema;
+  },
+  /**
+   * AcceptInvitation makes the caller a member of the workspace whose
+   * invitation has the code, and an owner of it when the workspace has no
+   * person who owns the whole of it; it grants no other role. It is a
+   * person's call: a dashboard session or a person's access token makes it,
+   * without the Toshi-Workspace header and without any role, since the
+   * caller is not yet a member; a workspace token and the operator cannot.
+   * The permission named here is not checked. An unknown code fails with
+   * NOT_FOUND, one accepted, revoked or expired with FAILED_PRECONDITION,
+   * and a caller who is already a member with ALREADY_EXISTS, leaving the
+   * invitation open.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.AcceptInvitation
+   */
+  acceptInvitation: {
+    methodKind: "unary";
+    input: typeof AcceptInvitationRequestSchema;
+    output: typeof AcceptInvitationResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_roles, 0);

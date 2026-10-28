@@ -21,6 +21,7 @@ import { RoleService } from "./gen/toshi/workspace/v1/roles_pb.js";
 import { SecretService } from "./gen/toshi/workspace/v1/secrets_pb.js";
 import { StorageProviderService } from "./gen/toshi/workspace/v1/storage_providers_pb.js";
 import { TokenService } from "./gen/toshi/workspace/v1/tokens_pb.js";
+import { TriggerService } from "./gen/toshi/workspace/v1/triggers_pb.js";
 import { VolumeService } from "./gen/toshi/workspace/v1/volumes_pb.js";
 import { WebhookService } from "./gen/toshi/workspace/v1/webhook_pb.js";
 import { WorkspaceService } from "./gen/toshi/workspace/v1/workspace_service_pb.js";
@@ -76,10 +77,14 @@ import type {
 import {
   ExecuteStartSchema,
   GetOperationRequestSchema,
+  GetServiceRevisionRequestSchema,
   HoldServiceRequestSchema,
   ListEventsRequestSchema,
+  ListServiceActivationsRequestSchema,
+  ListServiceRevisionsRequestSchema,
   ListServiceRunsRequestSchema,
   ReleaseServiceRequestSchema,
+  RollbackServiceRequestSchema,
   SetServiceModeRequestSchema,
   StartServiceRequestSchema,
   StopServiceRequestSchema,
@@ -91,12 +96,16 @@ import {
 import type {
   Event,
   GetOperationResponse,
+  GetServiceRevisionResponse,
   HoldServiceResponse,
   Job,
   ListEventsResponse,
+  ListServiceActivationsResponse,
+  ListServiceRevisionsResponse,
   ListServiceRunsResponse,
   Operation,
   ReleaseServiceResponse,
+  RollbackServiceResponse,
   Sandbox,
   Service,
   ServiceRun,
@@ -174,6 +183,7 @@ export interface ToshiClient {
   readonly connection: Client<typeof ConnectionService>;
   readonly hook: Client<typeof HookService>;
   readonly role: Client<typeof RoleService>;
+  readonly trigger: Client<typeof TriggerService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -256,6 +266,26 @@ export interface ServicesClient {
     req: MessageInitShape<typeof ListServiceRunsRequestSchema>,
     opts?: CallOptions,
   ): AsyncIterable<ServiceRun>;
+  /** Returns a service's revisions, oldest first. */
+  listRevisions(
+    req: MessageInitShape<typeof ListServiceRevisionsRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ListServiceRevisionsResponse>;
+  /** Returns one revision of a service. */
+  getRevision(
+    req: MessageInitShape<typeof GetServiceRevisionRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<GetServiceRevisionResponse>;
+  /** Selects a revision the service already has as its current one. */
+  rollback(
+    req: MessageInitShape<typeof RollbackServiceRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<RollbackServiceResponse>;
+  /** Returns a service's activations, oldest first. */
+  listActivations(
+    req: MessageInitShape<typeof ListServiceActivationsRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ListServiceActivationsResponse>;
 }
 
 /** A live stream of a job's changes. */
@@ -385,6 +415,10 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         hold: (req, opts) => workloadService.holdService(req, opts),
         listRuns: (req, opts) => workloadService.listServiceRuns(req, opts),
         allRuns: (req, opts) => paginate(req, workloadService.listServiceRuns, (resp) => resp.runs, opts),
+        listRevisions: (req, opts) => workloadService.listServiceRevisions(req, opts),
+        getRevision: (req, opts) => workloadService.getServiceRevision(req, opts),
+        rollback: (req, opts) => workloadService.rollbackService(req, opts),
+        listActivations: (req, opts) => workloadService.listServiceActivations(req, opts),
       },
       waitOperation: (req, opts) =>
         waitOperation(workloadService, create(WaitOperationRequestSchema, req), opts),
@@ -407,5 +441,6 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     connection: createClient(ConnectionService, transport),
     hook: createClient(HookService, transport),
     role: createClient(RoleService, transport),
+    trigger: createClient(TriggerService, transport),
   };
 }

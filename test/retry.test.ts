@@ -24,6 +24,7 @@ import { VolumeService } from "../src/gen/toshi/workspace/v1/volumes_pb.js";
 import { WebhookService } from "../src/gen/toshi/workspace/v1/webhook_pb.js";
 import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
+import { TriggerService } from "../src/gen/toshi/workspace/v1/triggers_pb.js";
 import { retryInterceptor } from "../src/interceptors.js";
 import { backoffDelay, isTransportLoss, procedurePath, retryClassFor } from "../src/retry.js";
 import type { RetryPolicy } from "../src/retry.js";
@@ -53,6 +54,7 @@ const services: readonly DescService[] = [
   ConnectionService,
   HookService,
   RoleService,
+  TriggerService,
 ];
 
 function transportFor<T extends DescService>(
@@ -69,7 +71,7 @@ function transportFor<T extends DescService>(
 }
 
 describe("the retry table", () => {
-  it("names every method of the twenty-two services, 75 reads, 19 keyed and 84 none", () => {
+  it("names every method of the twenty-three services, 82 reads, 24 keyed and 89 none", () => {
     const counts = { read: 0, keyed: 0, none: 0 };
     const paths = new Set<string>();
     for (const service of services) {
@@ -80,8 +82,8 @@ describe("the retry table", () => {
         counts[retryClassFor(path)] += 1;
       }
     }
-    expect(paths.size).toBe(178);
-    expect(counts).toEqual({ read: 75, keyed: 19, none: 84 });
+    expect(paths.size).toBe(195);
+    expect(counts).toEqual({ read: 82, keyed: 24, none: 89 });
   });
 });
 

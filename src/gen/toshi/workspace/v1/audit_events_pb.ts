@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/audit_events.proto.
  */
 export const file_toshi_workspace_v1_audit_events: GenFile = /*@__PURE__*/
-  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi9gEKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCRISCgpwZXJtaXNzaW9uGAkgASgJEg0KBXNjb3BlGAogASgJEg8KB291dGNvbWUYCyABKAkSEAoIdG9rZW5faWQYDCABKAkiuwEKFkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QSDgoGYWN0aW9uGAEgASgJEikKBXNpbmNlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCglwYWdlX3NpemUYAyABKAUSDQoFYWN0b3IYBCABKAkSDwoHYWN0aW9ucxgFIAMoCRIOCgZ0YXJnZXQYBiABKAkSEgoKcGFnZV90b2tlbhgHIAEoCRIPCgdvdXRjb21lGAggASgJImIKF0xpc3RBdWRpdEV2ZW50c1Jlc3BvbnNlEi4KBmV2ZW50cxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5BdWRpdEV2ZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKPAQoRQXVkaXRFdmVudFNlcnZpY2USegoPTGlzdEF1ZGl0RXZlbnRzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2UiDsLzGAphdWRpdC5yZWFkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiigIKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCRISCgpwZXJtaXNzaW9uGAkgASgJEg0KBXNjb3BlGAogASgJEg8KB291dGNvbWUYCyABKAkSEAoIdG9rZW5faWQYDCABKAkSEgoKYWN0b3JfbmFtZRgNIAEoCSK7AQoWTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBIOCgZhY3Rpb24YASABKAkSKQoFc2luY2UYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXBhZ2Vfc2l6ZRgDIAEoBRINCgVhY3RvchgEIAEoCRIPCgdhY3Rpb25zGAUgAygJEg4KBnRhcmdldBgGIAEoCRISCgpwYWdlX3Rva2VuGAcgASgJEg8KB291dGNvbWUYCCABKAkiYgoXTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2USLgoGZXZlbnRzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkF1ZGl0RXZlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMo8BChFBdWRpdEV2ZW50U2VydmljZRJ6Cg9MaXN0QXVkaXRFdmVudHMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QXVkaXRFdmVudHNSZXNwb25zZSIOwvMYCmF1ZGl0LnJlYWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * AuditEvent is one append-only audit log entry.
@@ -39,9 +39,9 @@ export type AuditEvent = Message<"toshi.workspace.v1.AuditEvent"> & {
   actorKind: string;
 
   /**
-   * The session's GitHub login; the API or product token's id (never its
-   * value); the workload as "<kind>:<id>"; or a system or webhook source
-   * name.
+   * The session's user id, which stays the same across renames and identity
+   * providers; the API or product token's id (never its value); the workload
+   * as "<kind>:<id>"; or a system or webhook source name.
    *
    * @generated from field: string actor_id = 4;
    */
@@ -105,6 +105,14 @@ export type AuditEvent = Message<"toshi.workspace.v1.AuditEvent"> & {
    * @generated from field: string token_id = 12;
    */
   tokenId: string;
+
+  /**
+   * A session actor's login or name as it was when the event was recorded;
+   * empty for the other actors, and once the workspace is purged.
+   *
+   * @generated from field: string actor_name = 13;
+   */
+  actorName: string;
 };
 
 /**
@@ -131,9 +139,9 @@ export type AuditEventJson = {
   actorKind?: string;
 
   /**
-   * The session's GitHub login; the API or product token's id (never its
-   * value); the workload as "<kind>:<id>"; or a system or webhook source
-   * name.
+   * The session's user id, which stays the same across renames and identity
+   * providers; the API or product token's id (never its value); the workload
+   * as "<kind>:<id>"; or a system or webhook source name.
    *
    * @generated from field: string actor_id = 4;
    */
@@ -197,6 +205,14 @@ export type AuditEventJson = {
    * @generated from field: string token_id = 12;
    */
   tokenId?: string;
+
+  /**
+   * A session actor's login or name as it was when the event was recorded;
+   * empty for the other actors, and once the workspace is purged.
+   *
+   * @generated from field: string actor_name = 13;
+   */
+  actorName?: string;
 };
 
 /**
