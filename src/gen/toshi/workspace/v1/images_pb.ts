@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/images.proto.
  */
 export const file_toshi_workspace_v1_images: GenFile = /*@__PURE__*/
-  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvaW1hZ2VzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiyQIKBUltYWdlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJEhUKDXJlY2lwZV9kaWdlc3QYCCABKAkSEwoLZW52aXJvbm1lbnQYCSABKAkSLgoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoGbGF0ZXN0GAwgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiKABAoMSW1hZ2VWZXJzaW9uEgoKAmlkGAEgASgJEg4KBm51bWJlchgCIAEoAxI0CgVzdGF0ZRgDIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb25TdGF0ZRIMCgRiYXNlGAQgASgJEhMKC2Jhc2VfZGlnZXN0GAUgASgJEhIKCnNpemVfYnl0ZXMYBiABKAMSFQoNcmVjaXBlX2RpZ2VzdBgHIAEoCRIUCgxidWlsZF9qb2JfaWQYCCABKAkSDwoHZmFpbHVyZRgJIAEoCRIuCgpjcmVhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghyZWFkeV9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcGVuZGluZ19zaW5jZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMZGVsZXRlX2FmdGVyGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpkZWxldGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CglwaW5uZWRfYnkYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uUGluIk0KD0ltYWdlVmVyc2lvblBpbhISCgpzZXJ2aWNlX2lkGAEgASgJEhQKDHNlcnZpY2VfbmFtZRgCIAEoCRIQCghyZXZpc2lvbhgDIAEoAyKhAQoSQ3JlYXRlSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJInIKE0NyZWF0ZUltYWdlUmVzcG9uc2USKAoFaW1hZ2UYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USMQoHdmVyc2lvbhgCIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb24iMAoPR2V0SW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCSJwChBHZXRJbWFnZVJlc3BvbnNlEigKBWltYWdlGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkltYWdlEjIKCHZlcnNpb25zGAIgAygLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiJLChFMaXN0SW1hZ2VzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlgKEkxpc3RJbWFnZXNSZXNwb25zZRIpCgZpbWFnZXMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkIKEUJ1aWxkSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZyZWNpcGUYAyABKAkiRwoSQnVpbGRJbWFnZVJlc3BvbnNlEjEKB3ZlcnNpb24YASABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uIjMKEkRlbGV0ZUltYWdlUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiFQoTRGVsZXRlSW1hZ2VSZXNwb25zZSo8CglJbWFnZUtpbmQSGgoWSU1BR0VfS0lORF9VTlNQRUNJRklFRBAAEhMKD0lNQUdFX0tJTkRfRElTSxABKuQBChFJbWFnZVZlcnNpb25TdGF0ZRIjCh9JTUFHRV9WRVJTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASIAocSU1BR0VfVkVSU0lPTl9TVEFURV9CVUlMRElORxABEh4KGklNQUdFX1ZFUlNJT05fU1RBVEVfRkFJTEVEEAISHQoZSU1BR0VfVkVSU0lPTl9TVEFURV9SRUFEWRADEigKJElNQUdFX1ZFUlNJT05fU1RBVEVfUEVORElOR19ERUxFVElPThAEEh8KG0lNQUdFX1ZFUlNJT05fU1RBVEVfREVMRVRFRBAFMqkFCgxJbWFnZVNlcnZpY2USfwoLQ3JlYXRlSW1hZ2USJi50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlSW1hZ2VSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUltYWdlUmVzcG9uc2UiH8LzGAxpbWFnZXMud3JpdGXK8xgLZW52aXJvbm1lbnQSnQEKCkJ1aWxkSW1hZ2USJS50b3NoaS53b3Jrc3BhY2UudjEuQnVpbGRJbWFnZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuQnVpbGRJbWFnZVJlc3BvbnNlIkDC8xgMaW1hZ2VzLndyaXRlyvMYB3Byb2plY3TS8xghChNpbWFnZS5idWlsZF9zdGFydGVkEgppbWFnZTpuYW1lEnEKCEdldEltYWdlEiMudG9zaGkud29ya3NwYWNlLnYxLkdldEltYWdlUmVxdWVzdBokLnRvc2hpLndvcmtzcGFjZS52MS5HZXRJbWFnZVJlc3BvbnNlIhrC8xgLaW1hZ2VzLnJlYWTK8xgHcHJvamVjdBJ3CgpMaXN0SW1hZ2VzEiUudG9zaGkud29ya3NwYWNlLnYxLkxpc3RJbWFnZXNSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RJbWFnZXNSZXNwb25zZSIawvMYC2ltYWdlcy5yZWFkyvMYB3Byb2plY3QSiwEKC0RlbGV0ZUltYWdlEiYudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUltYWdlUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVJbWFnZVJlc3BvbnNlIivC8xgMaW1hZ2VzLndyaXRlyvMYB3Byb2plY3TS8xgMEgppbWFnZTpuYW1lQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvaW1hZ2VzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiyQIKBUltYWdlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJEhUKDXJlY2lwZV9kaWdlc3QYCCABKAkSEwoLZW52aXJvbm1lbnQYCSABKAkSLgoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoGbGF0ZXN0GAwgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiKABAoMSW1hZ2VWZXJzaW9uEgoKAmlkGAEgASgJEg4KBm51bWJlchgCIAEoAxI0CgVzdGF0ZRgDIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb25TdGF0ZRIMCgRiYXNlGAQgASgJEhMKC2Jhc2VfZGlnZXN0GAUgASgJEhIKCnNpemVfYnl0ZXMYBiABKAMSFQoNcmVjaXBlX2RpZ2VzdBgHIAEoCRIUCgxidWlsZF9qb2JfaWQYCCABKAkSDwoHZmFpbHVyZRgJIAEoCRIuCgpjcmVhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghyZWFkeV9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcGVuZGluZ19zaW5jZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMZGVsZXRlX2FmdGVyGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpkZWxldGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CglwaW5uZWRfYnkYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uUGluIk0KD0ltYWdlVmVyc2lvblBpbhISCgpzZXJ2aWNlX2lkGAEgASgJEhQKDHNlcnZpY2VfbmFtZRgCIAEoCRIQCghyZXZpc2lvbhgDIAEoAyKhAQoSQ3JlYXRlSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJInIKE0NyZWF0ZUltYWdlUmVzcG9uc2USKAoFaW1hZ2UYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USMQoHdmVyc2lvbhgCIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb24iMAoPR2V0SW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCSJwChBHZXRJbWFnZVJlc3BvbnNlEigKBWltYWdlGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkltYWdlEjIKCHZlcnNpb25zGAIgAygLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiJLChFMaXN0SW1hZ2VzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlgKEkxpc3RJbWFnZXNSZXNwb25zZRIpCgZpbWFnZXMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkIKEUJ1aWxkSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZyZWNpcGUYAyABKAkiRwoSQnVpbGRJbWFnZVJlc3BvbnNlEjEKB3ZlcnNpb24YASABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uIjMKEkRlbGV0ZUltYWdlUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiFQoTRGVsZXRlSW1hZ2VSZXNwb25zZSpWCglJbWFnZUtpbmQSGgoWSU1BR0VfS0lORF9VTlNQRUNJRklFRBAAEhMKD0lNQUdFX0tJTkRfRElTSxABEhgKFElNQUdFX0tJTkRfQ09OVEFJTkVSEAIq5AEKEUltYWdlVmVyc2lvblN0YXRlEiMKH0lNQUdFX1ZFUlNJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIgChxJTUFHRV9WRVJTSU9OX1NUQVRFX0JVSUxESU5HEAESHgoaSU1BR0VfVkVSU0lPTl9TVEFURV9GQUlMRUQQAhIdChlJTUFHRV9WRVJTSU9OX1NUQVRFX1JFQURZEAMSKAokSU1BR0VfVkVSU0lPTl9TVEFURV9QRU5ESU5HX0RFTEVUSU9OEAQSHwobSU1BR0VfVkVSU0lPTl9TVEFURV9ERUxFVEVEEAUyqQUKDEltYWdlU2VydmljZRJ/CgtDcmVhdGVJbWFnZRImLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVJbWFnZVJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlSW1hZ2VSZXNwb25zZSIfwvMYDGltYWdlcy53cml0ZcrzGAtlbnZpcm9ubWVudBKdAQoKQnVpbGRJbWFnZRIlLnRvc2hpLndvcmtzcGFjZS52MS5CdWlsZEltYWdlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5CdWlsZEltYWdlUmVzcG9uc2UiQMLzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGCEKE2ltYWdlLmJ1aWxkX3N0YXJ0ZWQSCmltYWdlOm5hbWUScQoIR2V0SW1hZ2USIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0SW1hZ2VSZXF1ZXN0GiQudG9zaGkud29ya3NwYWNlLnYxLkdldEltYWdlUmVzcG9uc2UiGsLzGAtpbWFnZXMucmVhZMrzGAdwcm9qZWN0EncKCkxpc3RJbWFnZXMSJS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1JlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1Jlc3BvbnNlIhrC8xgLaW1hZ2VzLnJlYWTK8xgHcHJvamVjdBKLAQoLRGVsZXRlSW1hZ2USJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlSW1hZ2VSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUltYWdlUmVzcG9uc2UiK8LzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGAwSCmltYWdlOm5hbWVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Image is a project's own image.
@@ -474,6 +474,8 @@ export type CreateImageRequest = Message<"toshi.workspace.v1.CreateImageRequest"
   kind: ImageKind;
 
   /**
+   * A disk's base and size; empty for a container image.
+   *
    * @generated from field: string base = 5;
    */
   base: string;
@@ -486,7 +488,8 @@ export type CreateImageRequest = Message<"toshi.workspace.v1.CreateImageRequest"
   /**
    * In the format of a service's recipe, in TOML. An image uses its setup
    * hook, which is required, and its process's env and cwd for that hook;
-   * any other field fails with INVALID_ARGUMENT.
+   * any other field fails with INVALID_ARGUMENT. Empty for a container
+   * image.
    *
    * @generated from field: string recipe = 7;
    */
@@ -521,6 +524,8 @@ export type CreateImageRequestJson = {
   kind?: ImageKindJson;
 
   /**
+   * A disk's base and size; empty for a container image.
+   *
    * @generated from field: string base = 5;
    */
   base?: string;
@@ -533,7 +538,8 @@ export type CreateImageRequestJson = {
   /**
    * In the format of a service's recipe, in TOML. An image uses its setup
    * hook, which is required, and its process's env and cwd for that hook;
-   * any other field fails with INVALID_ARGUMENT.
+   * any other field fails with INVALID_ARGUMENT. Empty for a container
+   * image.
    *
    * @generated from field: string recipe = 7;
    */
@@ -913,6 +919,14 @@ export enum ImageKind {
    * @generated from enum value: IMAGE_KIND_DISK = 1;
    */
   DISK = 1,
+
+  /**
+   * A container image, pushed to the deployment's container registry at
+   * <workspace id>/<name>. It has no base, size or recipe and is not built.
+   *
+   * @generated from enum value: IMAGE_KIND_CONTAINER = 2;
+   */
+  CONTAINER = 2,
 }
 
 /**
@@ -920,7 +934,7 @@ export enum ImageKind {
  *
  * @generated from enum toshi.workspace.v1.ImageKind
  */
-export type ImageKindJson = "IMAGE_KIND_UNSPECIFIED" | "IMAGE_KIND_DISK";
+export type ImageKindJson = "IMAGE_KIND_UNSPECIFIED" | "IMAGE_KIND_DISK" | "IMAGE_KIND_CONTAINER";
 
 /**
  * Describes the enum toshi.workspace.v1.ImageKind.
@@ -1028,9 +1042,11 @@ export const ImageService: GenService<{
    * workspace has fails with ALREADY_EXISTS and the reason
    * IMAGE_NAME_TAKEN. A base that is not one of Toshi's, a size that is
    * not a Linux size, or a recipe without a setup hook or with a field an
-   * image does not use, fails with INVALID_ARGUMENT.
+   * image does not use, fails with INVALID_ARGUMENT. A container image
+   * takes a name and its kind alone; one with a base, size or recipe fails
+   * with INVALID_ARGUMENT.
    *
-   * Creating an image starts its first build, as BuildImage does; the
+   * Creating a disk image starts its first build, as BuildImage does; the
    * response's version is that build's. A workspace whose plan
    * does not include images fails with FAILED_PRECONDITION and the reason
    * PLAN_EXCLUDES_IMAGES.
@@ -1047,7 +1063,9 @@ export const ImageService: GenService<{
    * setup hook in a fresh VM of the base and saves its disk as the next
    * version. A recipe in the request is the build's, and becomes the
    * image's when the version is ready. An image with a build in progress
-   * fails with FAILED_PRECONDITION and the reason IMAGE_BUILD_IN_PROGRESS.
+   * fails with FAILED_PRECONDITION and the reason IMAGE_BUILD_IN_PROGRESS,
+   * and a container image, which is pushed rather than built, with
+   * FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.ImageService.BuildImage
    */
