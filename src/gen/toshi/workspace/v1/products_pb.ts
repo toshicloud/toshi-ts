@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/products.proto.
  */
 export const file_toshi_workspace_v1_products: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyKWAgoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkSFAoHZW5hYmxlZBgCIAEoCEgAiAEBEkgKCHNldHRpbmdzGAMgAygLMjYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0LlNldHRpbmdzRW50cnkSDQoFY2xlYXIYBCADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEoECAUQBkoECAYQB1IPYWNjZXB0ZWRfYWNjZXNzUgd2ZXJzaW9uInYKFVVwZGF0ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5nc0oECAIQA0oECAMQBFISaW5zdGFsbGF0aW9uX3Rva2VuUgd3YXJuaW5nIusBCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJSgQIAhADSgQIBRAGUgZzd2l0Y2hSDGluc3RhbGxhdGlvbiJLCg9Qcm9kdWN0U3VyZmFjZXMSCwoDYXBpGAEgASgJEgsKA2NsaRgCIAEoCRIRCglkYXNoYm9hcmQYAyABKAkSCwoDc2RrGAQgASgJItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJMoACCg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQSeAoNVXBkYXRlUHJvZHVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVzcG9uc2UiEsLzGA5zZXR0aW5ncy53cml0ZUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyKWAgoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkSFAoHZW5hYmxlZBgCIAEoCEgAiAEBEkgKCHNldHRpbmdzGAMgAygLMjYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0LlNldHRpbmdzRW50cnkSDQoFY2xlYXIYBCADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEoECAUQBkoECAYQB1IPYWNjZXB0ZWRfYWNjZXNzUgd2ZXJzaW9uInYKFVVwZGF0ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5nc0oECAIQA0oECAMQBFISaW5zdGFsbGF0aW9uX3Rva2VuUgd3YXJuaW5nIusBCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJSgQIAhADSgQIBRAGUgZzd2l0Y2hSDGluc3RhbGxhdGlvbiJFCg9Qcm9kdWN0U3VyZmFjZXMSCwoDYXBpGAEgASgJSgQIAhADSgQIAxAESgQIBBAFUgNjbGlSCWRhc2hib2FyZFIDc2RrItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJMoACCg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQSeAoNVXBkYXRlUHJvZHVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVzcG9uc2UiEsLzGA5zZXR0aW5ncy53cml0ZUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
 
 /**
  * @generated from message toshi.workspace.v1.ListProductsRequest
@@ -289,8 +289,7 @@ export const ProductSettingsSchema: GenMessage<ProductSettings, {jsonType: Produ
   messageDesc(file_toshi_workspace_v1_products, 4);
 
 /**
- * ProductSurfaces are what a product adds to Toshi, each empty when it adds
- * none.
+ * ProductSurfaces are what a product adds to Toshi, empty when it adds none.
  *
  * @generated from message toshi.workspace.v1.ProductSurfaces
  */
@@ -302,34 +301,10 @@ export type ProductSurfaces = Message<"toshi.workspace.v1.ProductSurfaces"> & {
    * @generated from field: string api = 1;
    */
   api: string;
-
-  /**
-   * cli is where its CLI plugin comes from.
-   *
-   * @generated from field: string cli = 2;
-   */
-  cli: string;
-
-  /**
-   * dashboard is the https URL of the product's own UI. A client opens it
-   * as its own page, never inside its own.
-   *
-   * @generated from field: string dashboard = 3;
-   */
-  dashboard: string;
-
-  /**
-   * sdk is the package of its SDK, such as a Go module path or an npm
-   * package name.
-   *
-   * @generated from field: string sdk = 4;
-   */
-  sdk: string;
 };
 
 /**
- * ProductSurfaces are what a product adds to Toshi, each empty when it adds
- * none.
+ * ProductSurfaces are what a product adds to Toshi, empty when it adds none.
  *
  * @generated from message toshi.workspace.v1.ProductSurfaces
  */
@@ -341,29 +316,6 @@ export type ProductSurfacesJson = {
    * @generated from field: string api = 1;
    */
   api?: string;
-
-  /**
-   * cli is where its CLI plugin comes from.
-   *
-   * @generated from field: string cli = 2;
-   */
-  cli?: string;
-
-  /**
-   * dashboard is the https URL of the product's own UI. A client opens it
-   * as its own page, never inside its own.
-   *
-   * @generated from field: string dashboard = 3;
-   */
-  dashboard?: string;
-
-  /**
-   * sdk is the package of its SDK, such as a Go module path or an npm
-   * package name.
-   *
-   * @generated from field: string sdk = 4;
-   */
-  sdk?: string;
 };
 
 /**
