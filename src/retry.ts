@@ -120,6 +120,7 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.ChannelService/DeleteChannel": "none",
   "/toshi.workspace.v1.ChannelService/ListForwards": "read",
   "/toshi.workspace.v1.ChannelService/GetLink": "read",
+  "/toshi.workspace.v1.ChannelService/ReplayChannelMessage": "none",
   "/toshi.workspace.v1.ChannelService/SendChannelMessage": "keyed",
   "/toshi.workspace.v1.ChannelService/TailChannelMessages": "none",
   "/toshi.workspace.v1.RecordingService/ListRecordings": "read",

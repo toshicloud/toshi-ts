@@ -121,7 +121,7 @@ import { paginate } from "./paginate.js";
 import {
   authInterceptor,
   keyInterceptor,
-  productInterceptor,
+  refusalInterceptor,
   retryInterceptor,
   scopeInterceptor,
 } from "./interceptors.js";
@@ -352,7 +352,7 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 export function createToshiClient(options: ToshiOptions): ToshiClient {
   const retry = normalizeRetry(options.retry);
   const interceptors: Interceptor[] = [
-    productInterceptor(),
+    refusalInterceptor(),
     scopeInterceptor(options.project ?? "", options.environment ?? ""),
     keyInterceptor(),
     retryInterceptor(retry),

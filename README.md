@@ -346,6 +346,18 @@ try {
 }
 ```
 
+## A rollback the registry refuses
+
+`workload.services.rollback` asks the revision's registry whether it still
+serves the revision's image before it selects it. A refusal rejects with a
+`RollbackImageError`; `isRollbackImageError(err)` tells it apart. It is still
+a `ConnectError` with the same `code`, and its `reason` is
+`RollbackImageReason.ImageNotServed` when the registry answered that it does
+not serve the image, or `RollbackImageReason.ImageCheckFailed` when it could
+not say. A revision's `imageCheck` carries the last answer: its `outcome`,
+the registry's `status` and `message`, and when it was asked, `checkedAt`.
+Reading a revision asks no registry.
+
 ## Testing with `@toshicloud/sdk/test`
 
 `createFake()` serves the whole Workspace API in memory: no server, no port,

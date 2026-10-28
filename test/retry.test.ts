@@ -71,7 +71,7 @@ function transportFor<T extends DescService>(
 }
 
 describe("the retry table", () => {
-  it("names every method of the twenty-three services, 82 reads, 24 keyed and 89 none", () => {
+  it("names every method of the twenty-three services, 82 reads, 24 keyed and 90 none", () => {
     const counts = { read: 0, keyed: 0, none: 0 };
     const paths = new Set<string>();
     for (const service of services) {
@@ -82,8 +82,8 @@ describe("the retry table", () => {
         counts[retryClassFor(path)] += 1;
       }
     }
-    expect(paths.size).toBe(195);
-    expect(counts).toEqual({ read: 82, keyed: 24, none: 89 });
+    expect(paths.size).toBe(196);
+    expect(counts).toEqual({ read: 82, keyed: 24, none: 90 });
   });
 });
 

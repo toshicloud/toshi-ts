@@ -25,7 +25,17 @@ export * from "./gen/toshi/workspace/v1/workspace_service_pb.js";
 
 export { createToshiClient } from "./client.js";
 export { paginate } from "./paginate.js";
-export { ExitError, JobExitError, ProductError, ProductReason, StreamLostError, isProductError } from "./errors.js";
+export {
+  ExitError,
+  JobExitError,
+  ProductError,
+  ProductReason,
+  RollbackImageError,
+  RollbackImageReason,
+  StreamLostError,
+  isProductError,
+  isRollbackImageError,
+} from "./errors.js";
 export { defaultRetryPolicy } from "./retry.js";
 export { VERSION } from "./version.js";
 export type { PageRequest, PageResponse } from "./paginate.js";
