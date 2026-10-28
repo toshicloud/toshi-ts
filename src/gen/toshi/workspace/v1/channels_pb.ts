@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/channels.proto.
  */
 export const file_toshi_workspace_v1_channels: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvY2hhbm5lbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLJBAoHQ2hhbm5lbBIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIvCgVzaGFwZRgEIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsU2hhcGUSDAoEcG9ydBgFIAEoBRIPCgdjb21tYW5kGAYgAygJEi8KBXN0YXRlGAcgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxTdGF0ZRISCgpjcmVhdGVkX2J5GAggASgJEi4KCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgplbmRfcmVhc29uGAsgASgJEhYKCWV4aXRfY29kZRgMIAEoBUgAiAEBEg0KBW93bmVyGA0gASgJEhQKDG91dHB1dF9zdGFydBgOIAEoAxITCgtvdXRwdXRfbmV4dBgPIAEoAxIUCgxpbnB1dF9jbG9zZWQYECABKAgSFwoPcmVxdWVzdHNfb2xkZXN0GBEgASgDEhcKD3JlcXVlc3RzX25ld2VzdBgSIAEoAxIxCgZwb2xpY3kYEyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeRIyCgdjbGllbnRzGBQgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxDbGllbnRCDAoKX2V4aXRfY29kZSLDAgoNQ2hhbm5lbENsaWVudBIKCgJpZBgBIAEoCRIzCgRtb2RlGAIgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxBdHRhY2hNb2RlEhMKC2F0dGFjaGVkX2J5GAMgASgJEg4KBmRldmljZRgEIAEoCRISCgpjcmVkZW50aWFsGAUgASgJEjIKDmF0dGFjaGVkX3NpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdzZWVuX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtkZXRhY2hlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMb3V0cHV0X2Fja2VkGAkgASgDEhAKCGF0dGFjaGVkGAogASgIIq8BCg1DaGFubmVsUG9saWN5Eg8KB3ZlcnNpb24YASABKAMSDgoGYXR0YWNoGAIgASgJEhgKC21heF9jbGllbnRzGAMgASgFSACIAQESDQoFaW5wdXQYBCABKAkSDAoEa2VlcBgFIAEoCRI2Cgdtb2R1bGVzGAYgASgLMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNb2R1bGVMaXN0Qg4KDF9tYXhfY2xpZW50cyJHChFDaGFubmVsTW9kdWxlTGlzdBIyCgdtb2R1bGVzGAEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNb2R1bGUifwoNQ2hhbm5lbE1vZHVsZRIMCgRraW5kGAEgASgJEi8KBW1hdGNoGAIgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNYXRjaBIOCgZyYW5nZXMYAyADKAkSDQoFbGV2ZWwYBCABKAkSEAoIYm9keV9jYXAYBSABKAMirQEKDENoYW5uZWxNYXRjaBINCgVob3N0cxgBIAMoCRINCgVwYXRocxgCIAMoCRIPCgdtZXRob2RzGAMgAygJEj4KB2hlYWRlcnMYBCADKAsyLS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1hdGNoLkhlYWRlcnNFbnRyeRouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLwBAoOQ2hhbm5lbFJlcXVlc3QSCwoDc2VxGAEgASgDEi4KCmFycml2ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBGhvc3QYAyABKAkSDgoGbWV0aG9kGAQgASgJEgwKBHBhdGgYBSABKAkSDgoGc3RhdHVzGAYgASgFEhUKDXJlcXVlc3RfYnl0ZXMYByABKAMSFgoOcmVzcG9uc2VfYnl0ZXMYCCABKAMSKwoIZHVyYXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SOAoGY2FsbGVyGAogASgLMigudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxSZXF1ZXN0Q2FsbGVyEg8KB2FkZHJlc3MYCyABKAkSEgoKcmVmdXNlZF9ieRgMIAEoCRIRCgl3ZWJzb2NrZXQYDSABKAgSDQoFbGV2ZWwYDiABKAkSDQoFcXVlcnkYDyABKAkSEQoJcXVlcnlfY3V0GBAgASgIEjoKD3JlcXVlc3RfaGVhZGVycxgRIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsSGVhZGVyEjsKEHJlc3BvbnNlX2hlYWRlcnMYEiADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEhlYWRlchI1CgxyZXF1ZXN0X2JvZHkYEyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEJvZHkSNgoNcmVzcG9uc2VfYm9keRgUIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQm9keSJIChRDaGFubmVsUmVxdWVzdENhbGxlchIMCgR1c2VyGAEgASgJEg4KBmRldmljZRgCIAEoCRISCgpzaGFyZV9saW5rGAMgASgJIj0KDUNoYW5uZWxIZWFkZXISDAoEbmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCRIPCgdyZW1vdmVkGAMgASgIIj4KC0NoYW5uZWxCb2R5EhQKDGNvbnRlbnRfdHlwZRgBIAEoCRIMCgRkYXRhGAIgASgMEgsKA2N1dBgDIAEoCCJ1CgdGb3J3YXJkEg4KBnRhcmdldBgBIAEoCRIKCgJieRgCIAEoCRIOCgZkZXZpY2UYAyABKAkSDwoHY2hhbm5lbBgEIAEoCRItCglvcGVuZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIrEBCgRMaW5rEhEKCWNvbm5lY3RlZBgBIAEoCBIpCgVzaW5jZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIY29ubmVjdHMYAyABKAUSDwoHc3RyZWFtcxgEIAEoBRISCgpsYXN0X2Vycm9yGAUgASgJEg8KB3JlcGxpY2EYBiABKAkSEAoIZm9yd2FyZHMYByABKAUSEQoJam9iX3N0YXRlGAggASgJIoYBChRDcmVhdGVDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIMCgRwb3J0GAMgASgFEg8KB2NvbW1hbmQYBCADKAkSMQoGcG9saWN5GAUgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kiRQoVQ3JlYXRlQ2hhbm5lbFJlc3BvbnNlEiwKB2NoYW5uZWwYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbCJMChNMaXN0Q2hhbm5lbHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJeChRMaXN0Q2hhbm5lbHNSZXNwb25zZRItCghjaGFubmVscxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIxChFHZXRDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCSJCChJHZXRDaGFubmVsUmVzcG9uc2USLAoHY2hhbm5lbBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsIjcKF0dldENoYW5uZWxQb2xpY3lSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJIk0KGEdldENoYW5uZWxQb2xpY3lSZXNwb25zZRIxCgZwb2xpY3kYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSJqChdTZXRDaGFubmVsUG9saWN5UmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIxCgZwb2xpY3kYAyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSJNChhTZXRDaGFubmVsUG9saWN5UmVzcG9uc2USMQoGcG9saWN5GAEgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kijQIKGkxpc3RDaGFubmVsUmVxdWVzdHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJEhEKCWFmdGVyX3NlcRgFIAEoAxIpCgVzaW5jZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoFdW50aWwYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnN0YXR1cxgIIAEoCRIMCgRob3N0GAkgASgJEg4KBm1ldGhvZBgKIAEoCRITCgtwYXRoX3ByZWZpeBgLIAEoCSKUAQobTGlzdENoYW5uZWxSZXF1ZXN0c1Jlc3BvbnNlEjQKCHJlcXVlc3RzGAEgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxSZXF1ZXN0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgpvbGRlc3Rfc2VxGAMgASgDEhIKCm5ld2VzdF9zZXEYBCABKAMiRQoYR2V0Q2hhbm5lbFJlcXVlc3RSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgsKA3NlcRgDIAEoAyJQChlHZXRDaGFubmVsUmVxdWVzdFJlc3BvbnNlEjMKB3JlcXVlc3QYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFJlcXVlc3Qi7gEKF0V4cG9ydENoYW5uZWxMb2dSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEisKA2xvZxgDIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTG9nEhEKBGZyb20YBCABKANIAIgBARIPCgJ0bxgFIAEoA0gBiAEBEikKBXNpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIpCgV1bnRpbBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBwoFX2Zyb21CBQoDX3RvIm0KGEV4cG9ydENoYW5uZWxMb2dSZXNwb25zZRIMCgRkYXRhGAEgASgMEhEKCWZpbGVfbmFtZRgCIAEoCRIUCgxjb250ZW50X3R5cGUYAyABKAkSDAoEZnJvbRgEIAEoAxIMCgRuZXh0GAUgASgDIoUBCiBDcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZkZXZpY2UYAyABKAkSMwoEbW9kZRgEIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQXR0YWNoTW9kZSLDAQohQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlblJlc3BvbnNlEgoKAmlkGAEgASgJEg0KBXRva2VuGAIgASgJEgsKA3VybBgDIAEoCRIuCgpleHBpcmVzX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCgl0cmFuc3BvcnQYBSABKAkSMwoEbW9kZRgGIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQXR0YWNoTW9kZSJMCiBSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIKCgJpZBgDIAEoCSIjCiFSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVzcG9uc2UiNAoURGVsZXRlQ2hhbm5lbFJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkiFwoVRGVsZXRlQ2hhbm5lbFJlc3BvbnNlIkwKE0xpc3RGb3J3YXJkc1JlcXVlc3QSDgoGam9iX2lkGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIl4KFExpc3RGb3J3YXJkc1Jlc3BvbnNlEi0KCGZvcndhcmRzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkZvcndhcmQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiAKDkdldExpbmtSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCSI5Cg9HZXRMaW5rUmVzcG9uc2USJgoEbGluaxgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5MaW5rKl8KDENoYW5uZWxTaGFwZRIdChlDSEFOTkVMX1NIQVBFX1VOU1BFQ0lGSUVEEAASFgoSQ0hBTk5FTF9TSEFQRV9IVFRQEAESGAoUQ0hBTk5FTF9TSEFQRV9TVFJFQU0QAiqTAQoMQ2hhbm5lbFN0YXRlEh0KGUNIQU5ORUxfU1RBVEVfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX1NUQVRFX09QRU4QARIYChRDSEFOTkVMX1NUQVRFX0VYSVRFRBACEhkKFUNIQU5ORUxfU1RBVEVfQ0xPU0lORxADEhcKE0NIQU5ORUxfU1RBVEVfRU5ERUQQBCp6ChFDaGFubmVsQXR0YWNoTW9kZRIjCh9DSEFOTkVMX0FUVEFDSF9NT0RFX1VOU1BFQ0lGSUVEEAASHQoZQ0hBTk5FTF9BVFRBQ0hfTU9ERV9JTlBVVBABEiEKHUNIQU5ORUxfQVRUQUNIX01PREVfUkVBRF9PTkxZEAIqWwoKQ2hhbm5lbExvZxIbChdDSEFOTkVMX0xPR19VTlNQRUNJRklFRBAAEhYKEkNIQU5ORUxfTE9HX09VVFBVVBABEhgKFENIQU5ORUxfTE9HX1JFUVVFU1RTEAIy4g8KDkNoYW5uZWxTZXJ2aWNlEqcBCg1DcmVhdGVDaGFubmVsEigudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxSZXNwb25zZSJBwvMYDmNoYW5uZWxzLndyaXRl0vMYKwoYaG9zdF9qb2IuY2hhbm5lbF9leHBvc2VkEg9ob3N0X2pvYjpqb2JfaWQSdAoMTGlzdENoYW5uZWxzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsc1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENoYW5uZWxzUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkEm4KCkdldENoYW5uZWwSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFJlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBKAAQoQR2V0Q2hhbm5lbFBvbGljeRIrLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUG9saWN5UmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUG9saWN5UmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkErMBChBTZXRDaGFubmVsUG9saWN5EisudG9zaGkud29ya3NwYWNlLnYxLlNldENoYW5uZWxQb2xpY3lSZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlNldENoYW5uZWxQb2xpY3lSZXNwb25zZSJEwvMYDmNoYW5uZWxzLndyaXRl0vMYLgobaG9zdF9qb2IuY2hhbm5lbF9wb2xpY3lfc2V0Eg9ob3N0X2pvYjpqb2JfaWQSiQEKE0xpc3RDaGFubmVsUmVxdWVzdHMSLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENoYW5uZWxSZXF1ZXN0c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENoYW5uZWxSZXF1ZXN0c1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBKDAQoRR2V0Q2hhbm5lbFJlcXVlc3QSLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFJlcXVlc3RSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXF1ZXN0UmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkErYBChBFeHBvcnRDaGFubmVsTG9nEisudG9zaGkud29ya3NwYWNlLnYxLkV4cG9ydENoYW5uZWxMb2dSZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkV4cG9ydENoYW5uZWxMb2dSZXNwb25zZSJFwvMYDWNoYW5uZWxzLnJlYWTS8xgwCh1ob3N0X2pvYi5jaGFubmVsX2xvZ19leHBvcnRlZBIPaG9zdF9qb2I6am9iX2lkMAES2AEKGUNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW4SNC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlblJlcXVlc3QaNS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlblJlc3BvbnNlIk7C8xgOY2hhbm5lbHMud3JpdGXS8xg4CiVob3N0X2pvYi5jaGFubmVsX2Nvbm5lY3RfdG9rZW5faXNzdWVkEg9ob3N0X2pvYjpqb2JfaWQS2QEKGVJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW4SNC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlQ2hhbm5lbENvbm5lY3RUb2tlblJlcXVlc3QaNS50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlQ2hhbm5lbENvbm5lY3RUb2tlblJlc3BvbnNlIk/C8xgOY2hhbm5lbHMud3JpdGXS8xg5CiZob3N0X2pvYi5jaGFubmVsX2Nvbm5lY3RfdG9rZW5fcmV2b2tlZBIPaG9zdF9qb2I6am9iX2lkEqcBCg1EZWxldGVDaGFubmVsEigudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNoYW5uZWxSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNoYW5uZWxSZXNwb25zZSJBwvMYDmNoYW5uZWxzLndyaXRl0vMYKwoYaG9zdF9qb2IuY2hhbm5lbF9kZWxldGVkEg9ob3N0X2pvYjpqb2JfaWQSdAoMTGlzdEZvcndhcmRzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RGb3J3YXJkc1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEZvcndhcmRzUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkEmUKB0dldExpbmsSIi50b3NoaS53b3Jrc3BhY2UudjEuR2V0TGlua1JlcXVlc3QaIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0TGlua1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvY2hhbm5lbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKgBQoHQ2hhbm5lbBIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIvCgVzaGFwZRgEIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsU2hhcGUSDAoEcG9ydBgFIAEoBRIPCgdjb21tYW5kGAYgAygJEi8KBXN0YXRlGAcgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxTdGF0ZRISCgpjcmVhdGVkX2J5GAggASgJEi4KCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgplbmRfcmVhc29uGAsgASgJEhYKCWV4aXRfY29kZRgMIAEoBUgAiAEBEg0KBW93bmVyGA0gASgJEhQKDG91dHB1dF9zdGFydBgOIAEoAxITCgtvdXRwdXRfbmV4dBgPIAEoAxIUCgxpbnB1dF9jbG9zZWQYECABKAgSFwoPcmVxdWVzdHNfb2xkZXN0GBEgASgDEhcKD3JlcXVlc3RzX25ld2VzdBgSIAEoAxIxCgZwb2xpY3kYEyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeRIyCgdjbGllbnRzGBQgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxDbGllbnQSDwoHc2VydmljZRgVIAEoCRIMCgRwYXRoGBYgASgJEjYKBmV2ZW50cxgXIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsRXZlbnRDb3VudHNCDAoKX2V4aXRfY29kZSK4AQoSQ2hhbm5lbEV2ZW50Q291bnRzEg8KB3BlbmRpbmcYASABKAMSEQoJaW5fZmxpZ2h0GAIgASgDEhEKCWRlbGl2ZXJlZBgDIAEoAxIOCgZmYWlsZWQYBCABKAMSDwoHZXhwaXJlZBgFIAEoAxI0ChBsYXN0X2RlbGl2ZXJ5X2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxsYXN0X2ZhaWx1cmUYByABKAkiMAoUQ2hhbm5lbE1lc3NhZ2VTb3VyY2USDAoEa2luZBgBIAEoCRIKCgJpZBgCIAEoCSLuAgoOQ2hhbm5lbE1lc3NhZ2USCgoCaWQYASABKAkSCwoDc2VxGAIgASgDEgwKBG5hbWUYAyABKAkSKAoEdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOAoGc291cmNlGAUgASgLMigudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNZXNzYWdlU291cmNlEgwKBGRhdGEYBiABKAwSNgoFc3RhdGUYByABKA4yJy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2VTdGF0ZRIQCghhdHRlbXB0cxgIIAEoBRIzCg9uZXh0X2F0dGVtcHRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmxhc3RfZXJyb3IYCiABKAkSMAoMZGVsaXZlcmVkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLDAgoNQ2hhbm5lbENsaWVudBIKCgJpZBgBIAEoCRIzCgRtb2RlGAIgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxBdHRhY2hNb2RlEhMKC2F0dGFjaGVkX2J5GAMgASgJEg4KBmRldmljZRgEIAEoCRISCgpjcmVkZW50aWFsGAUgASgJEjIKDmF0dGFjaGVkX3NpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdzZWVuX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtkZXRhY2hlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMb3V0cHV0X2Fja2VkGAkgASgDEhAKCGF0dGFjaGVkGAogASgIIu8BCg1DaGFubmVsUG9saWN5Eg8KB3ZlcnNpb24YASABKAMSDgoGYXR0YWNoGAIgASgJEhgKC21heF9jbGllbnRzGAMgASgFSACIAQESDQoFaW5wdXQYBCABKAkSDAoEa2VlcBgFIAEoCRI2Cgdtb2R1bGVzGAYgASgLMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNb2R1bGVMaXN0EhQKDGFja19kZWFkbGluZRgHIAEoCRIYCgtjb25jdXJyZW5jeRgIIAEoBUgBiAEBQg4KDF9tYXhfY2xpZW50c0IOCgxfY29uY3VycmVuY3kiRwoRQ2hhbm5lbE1vZHVsZUxpc3QSMgoHbW9kdWxlcxgBIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTW9kdWxlIn8KDUNoYW5uZWxNb2R1bGUSDAoEa2luZBgBIAEoCRIvCgVtYXRjaBgCIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTWF0Y2gSDgoGcmFuZ2VzGAMgAygJEg0KBWxldmVsGAQgASgJEhAKCGJvZHlfY2FwGAUgASgDIq0BCgxDaGFubmVsTWF0Y2gSDQoFaG9zdHMYASADKAkSDQoFcGF0aHMYAiADKAkSDwoHbWV0aG9kcxgDIAMoCRI+CgdoZWFkZXJzGAQgAygLMi0udG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNYXRjaC5IZWFkZXJzRW50cnkaLgoMSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi8AQKDkNoYW5uZWxSZXF1ZXN0EgsKA3NlcRgBIAEoAxIuCgphcnJpdmVkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRob3N0GAMgASgJEg4KBm1ldGhvZBgEIAEoCRIMCgRwYXRoGAUgASgJEg4KBnN0YXR1cxgGIAEoBRIVCg1yZXF1ZXN0X2J5dGVzGAcgASgDEhYKDnJlc3BvbnNlX2J5dGVzGAggASgDEisKCGR1cmF0aW9uGAkgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjgKBmNhbGxlchgKIAEoCzIoLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsUmVxdWVzdENhbGxlchIPCgdhZGRyZXNzGAsgASgJEhIKCnJlZnVzZWRfYnkYDCABKAkSEQoJd2Vic29ja2V0GA0gASgIEg0KBWxldmVsGA4gASgJEg0KBXF1ZXJ5GA8gASgJEhEKCXF1ZXJ5X2N1dBgQIAEoCBI6Cg9yZXF1ZXN0X2hlYWRlcnMYESADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEhlYWRlchI7ChByZXNwb25zZV9oZWFkZXJzGBIgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxIZWFkZXISNQoMcmVxdWVzdF9ib2R5GBMgASgLMh8udG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxCb2R5EjYKDXJlc3BvbnNlX2JvZHkYFCABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEJvZHkiSAoUQ2hhbm5lbFJlcXVlc3RDYWxsZXISDAoEdXNlchgBIAEoCRIOCgZkZXZpY2UYAiABKAkSEgoKc2hhcmVfbGluaxgDIAEoCSI9Cg1DaGFubmVsSGVhZGVyEgwKBG5hbWUYASABKAkSDQoFdmFsdWUYAiABKAkSDwoHcmVtb3ZlZBgDIAEoCCI+CgtDaGFubmVsQm9keRIUCgxjb250ZW50X3R5cGUYASABKAkSDAoEZGF0YRgCIAEoDBILCgNjdXQYAyABKAgidQoHRm9yd2FyZBIOCgZ0YXJnZXQYASABKAkSCgoCYnkYAiABKAkSDgoGZGV2aWNlGAMgASgJEg8KB2NoYW5uZWwYBCABKAkSLQoJb3BlbmVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKxAQoETGluaxIRCgljb25uZWN0ZWQYASABKAgSKQoFc2luY2UYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGNvbm5lY3RzGAMgASgFEg8KB3N0cmVhbXMYBCABKAUSEgoKbGFzdF9lcnJvchgFIAEoCRIPCgdyZXBsaWNhGAYgASgJEhAKCGZvcndhcmRzGAcgASgFEhEKCWpvYl9zdGF0ZRgIIAEoCSKGAQoUQ3JlYXRlQ2hhbm5lbFJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDAoEcG9ydBgDIAEoBRIPCgdjb21tYW5kGAQgAygJEjEKBnBvbGljeRgFIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsUG9saWN5IkUKFUNyZWF0ZUNoYW5uZWxSZXNwb25zZRIsCgdjaGFubmVsGAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWwiXQoTTGlzdENoYW5uZWxzUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDwoHc2VydmljZRgEIAEoCSJeChRMaXN0Q2hhbm5lbHNSZXNwb25zZRItCghjaGFubmVscxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJCChFHZXRDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdzZXJ2aWNlGAMgASgJIkIKEkdldENoYW5uZWxSZXNwb25zZRIsCgdjaGFubmVsGAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWwiSAoXR2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHc2VydmljZRgDIAEoCSJNChhHZXRDaGFubmVsUG9saWN5UmVzcG9uc2USMQoGcG9saWN5GAEgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kiagoXU2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSMQoGcG9saWN5GAMgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kiTQoYU2V0Q2hhbm5lbFBvbGljeVJlc3BvbnNlEjEKBnBvbGljeRgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsUG9saWN5Io0CChpMaXN0Q2hhbm5lbFJlcXVlc3RzUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRIRCglhZnRlcl9zZXEYBSABKAMSKQoFc2luY2UYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKBXVudGlsGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZzdGF0dXMYCCABKAkSDAoEaG9zdBgJIAEoCRIOCgZtZXRob2QYCiABKAkSEwoLcGF0aF9wcmVmaXgYCyABKAkilAEKG0xpc3RDaGFubmVsUmVxdWVzdHNSZXNwb25zZRI0CghyZXF1ZXN0cxgBIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsUmVxdWVzdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKb2xkZXN0X3NlcRgDIAEoAxISCgpuZXdlc3Rfc2VxGAQgASgDIkUKGEdldENoYW5uZWxSZXF1ZXN0UmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRILCgNzZXEYAyABKAMiUAoZR2V0Q2hhbm5lbFJlcXVlc3RSZXNwb25zZRIzCgdyZXF1ZXN0GAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxSZXF1ZXN0Iu4BChdFeHBvcnRDaGFubmVsTG9nUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIrCgNsb2cYAyABKA4yHi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbExvZxIRCgRmcm9tGAQgASgDSACIAQESDwoCdG8YBSABKANIAYgBARIpCgVzaW5jZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoFdW50aWwYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgcKBV9mcm9tQgUKA190byJtChhFeHBvcnRDaGFubmVsTG9nUmVzcG9uc2USDAoEZGF0YRgBIAEoDBIRCglmaWxlX25hbWUYAiABKAkSFAoMY29udGVudF90eXBlGAMgASgJEgwKBGZyb20YBCABKAMSDAoEbmV4dBgFIAEoAyKFAQogQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlblJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDgoGZGV2aWNlGAMgASgJEjMKBG1vZGUYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEF0dGFjaE1vZGUiwwEKIUNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZRIKCgJpZBgBIAEoCRINCgV0b2tlbhgCIAEoCRILCgN1cmwYAyABKAkSLgoKZXhwaXJlc19hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEQoJdHJhbnNwb3J0GAUgASgJEjMKBG1vZGUYBiABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEF0dGFjaE1vZGUiTAogUmV2b2tlQ2hhbm5lbENvbm5lY3RUb2tlblJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSCgoCaWQYAyABKAkiIwohUmV2b2tlQ2hhbm5lbENvbm5lY3RUb2tlblJlc3BvbnNlIjQKFERlbGV0ZUNoYW5uZWxSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJIhcKFURlbGV0ZUNoYW5uZWxSZXNwb25zZSJMChNMaXN0Rm9yd2FyZHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJeChRMaXN0Rm9yd2FyZHNSZXNwb25zZRItCghmb3J3YXJkcxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Gb3J3YXJkEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIgCg5HZXRMaW5rUmVxdWVzdBIOCgZqb2JfaWQYASABKAkiOQoPR2V0TGlua1Jlc3BvbnNlEiYKBGxpbmsYASABKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuTGluayJuChlTZW5kQ2hhbm5lbE1lc3NhZ2VSZXF1ZXN0Eg8KB3NlcnZpY2UYASABKAkSDwoHY2hhbm5lbBgCIAEoCRIMCgRuYW1lGAMgASgJEgwKBGRhdGEYBCABKAwSEwoLcmVxdWVzdF9rZXkYBSABKAkiQwoaU2VuZENoYW5uZWxNZXNzYWdlUmVzcG9uc2USEgoKbWVzc2FnZV9pZBgBIAEoCRIRCglkdXBsaWNhdGUYAiABKAgihwEKGlRhaWxDaGFubmVsTWVzc2FnZXNSZXF1ZXN0Eg8KB3NlcnZpY2UYASABKAkSDwoHY2hhbm5lbBgCIAEoCRI3CgZzdGF0ZXMYAyADKA4yJy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2VTdGF0ZRIOCgZjdXJzb3IYBCABKAkiZwobVGFpbENoYW5uZWxNZXNzYWdlc1Jlc3BvbnNlEjMKB21lc3NhZ2UYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2USEwoLbmV4dF9jdXJzb3IYAiABKAkqeAoMQ2hhbm5lbFNoYXBlEh0KGUNIQU5ORUxfU0hBUEVfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX1NIQVBFX0hUVFAQARIYChRDSEFOTkVMX1NIQVBFX1NUUkVBTRACEhcKE0NIQU5ORUxfU0hBUEVfRVZFTlQQAyqTAQoMQ2hhbm5lbFN0YXRlEh0KGUNIQU5ORUxfU1RBVEVfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX1NUQVRFX09QRU4QARIYChRDSEFOTkVMX1NUQVRFX0VYSVRFRBACEhkKFUNIQU5ORUxfU1RBVEVfQ0xPU0lORxADEhcKE0NIQU5ORUxfU1RBVEVfRU5ERUQQBCp6ChFDaGFubmVsQXR0YWNoTW9kZRIjCh9DSEFOTkVMX0FUVEFDSF9NT0RFX1VOU1BFQ0lGSUVEEAASHQoZQ0hBTk5FTF9BVFRBQ0hfTU9ERV9JTlBVVBABEiEKHUNIQU5ORUxfQVRUQUNIX01PREVfUkVBRF9PTkxZEAIqWwoKQ2hhbm5lbExvZxIbChdDSEFOTkVMX0xPR19VTlNQRUNJRklFRBAAEhYKEkNIQU5ORUxfTE9HX09VVFBVVBABEhgKFENIQU5ORUxfTE9HX1JFUVVFU1RTEAIq7gEKE0NoYW5uZWxNZXNzYWdlU3RhdGUSJQohQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX1BFTkRJTkcQARIjCh9DSEFOTkVMX01FU1NBR0VfU1RBVEVfSU5fRkxJR0hUEAISIwofQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX0RFTElWRVJFRBADEiAKHENIQU5ORUxfTUVTU0FHRV9TVEFURV9GQUlMRUQQBBIhCh1DSEFOTkVMX01FU1NBR0VfU1RBVEVfRVhQSVJFRBAFMoQSCg5DaGFubmVsU2VydmljZRKnAQoNQ3JlYXRlQ2hhbm5lbBIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsUmVzcG9uc2UiQcLzGA5jaGFubmVscy53cml0ZdLzGCsKGGhvc3Rfam9iLmNoYW5uZWxfZXhwb3NlZBIPaG9zdF9qb2I6am9iX2lkEnQKDExpc3RDaGFubmVscxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2hhbm5lbHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsc1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBJuCgpHZXRDaGFubmVsEiUudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSgAEKEEdldENoYW5uZWxQb2xpY3kSKy50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFBvbGljeVJlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBKzAQoQU2V0Q2hhbm5lbFBvbGljeRIrLnRvc2hpLndvcmtzcGFjZS52MS5TZXRDaGFubmVsUG9saWN5UmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5TZXRDaGFubmVsUG9saWN5UmVzcG9uc2UiRMLzGA5jaGFubmVscy53cml0ZdLzGC4KG2hvc3Rfam9iLmNoYW5uZWxfcG9saWN5X3NldBIPaG9zdF9qb2I6am9iX2lkEokBChNMaXN0Q2hhbm5lbFJlcXVlc3RzEi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsUmVxdWVzdHNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsUmVxdWVzdHNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSgwEKEUdldENoYW5uZWxSZXF1ZXN0EiwudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXF1ZXN0UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUmVxdWVzdFJlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBK2AQoQRXhwb3J0Q2hhbm5lbExvZxIrLnRvc2hpLndvcmtzcGFjZS52MS5FeHBvcnRDaGFubmVsTG9nUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5FeHBvcnRDaGFubmVsTG9nUmVzcG9uc2UiRcLzGA1jaGFubmVscy5yZWFk0vMYMAodaG9zdF9qb2IuY2hhbm5lbF9sb2dfZXhwb3J0ZWQSD2hvc3Rfam9iOmpvYl9pZDABEtgBChlDcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuEjQudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0GjUudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZSJOwvMYDmNoYW5uZWxzLndyaXRl0vMYOAolaG9zdF9qb2IuY2hhbm5lbF9jb25uZWN0X3Rva2VuX2lzc3VlZBIPaG9zdF9qb2I6am9iX2lkEtkBChlSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuEjQudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0GjUudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZSJPwvMYDmNoYW5uZWxzLndyaXRl0vMYOQomaG9zdF9qb2IuY2hhbm5lbF9jb25uZWN0X3Rva2VuX3Jldm9rZWQSD2hvc3Rfam9iOmpvYl9pZBKnAQoNRGVsZXRlQ2hhbm5lbBIoLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDaGFubmVsUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDaGFubmVsUmVzcG9uc2UiQcLzGA5jaGFubmVscy53cml0ZdLzGCsKGGhvc3Rfam9iLmNoYW5uZWxfZGVsZXRlZBIPaG9zdF9qb2I6am9iX2lkEnQKDExpc3RGb3J3YXJkcxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Rm9yd2FyZHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RGb3J3YXJkc1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBJlCgdHZXRMaW5rEiIudG9zaGkud29ya3NwYWNlLnYxLkdldExpbmtSZXF1ZXN0GiMudG9zaGkud29ya3NwYWNlLnYxLkdldExpbmtSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSkQEKElNlbmRDaGFubmVsTWVzc2FnZRItLnRvc2hpLndvcmtzcGFjZS52MS5TZW5kQ2hhbm5lbE1lc3NhZ2VSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLlNlbmRDaGFubmVsTWVzc2FnZVJlc3BvbnNlIhzC8xgOY2hhbm5lbHMud3JpdGXS8xgGCgRub25lEosBChNUYWlsQ2hhbm5lbE1lc3NhZ2VzEi4udG9zaGkud29ya3NwYWNlLnYxLlRhaWxDaGFubmVsTWVzc2FnZXNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLlRhaWxDaGFubmVsTWVzc2FnZXNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQwAUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.Channel
@@ -27,6 +27,9 @@ export type Channel = Message<"toshi.workspace.v1.Channel"> & {
   id: string;
 
   /**
+   * The job whose guest holds the channel; an event channel's is its
+   * service's live run, empty while the service has none.
+   *
    * @generated from field: string job_id = 2;
    */
   jobId: string;
@@ -42,7 +45,7 @@ export type Channel = Message<"toshi.workspace.v1.Channel"> & {
   shape: ChannelShape;
 
   /**
-   * An http channel's port in the guest.
+   * An http or event channel's port in the guest.
    *
    * @generated from field: int32 port = 5;
    */
@@ -145,6 +148,27 @@ export type Channel = Message<"toshi.workspace.v1.Channel"> & {
    * @generated from field: repeated toshi.workspace.v1.ChannelClient clients = 20;
    */
   clients: ChannelClient[];
+
+  /**
+   * An event channel's service, by its ID.
+   *
+   * @generated from field: string service = 21;
+   */
+  service: string;
+
+  /**
+   * Where an event channel posts in the guest.
+   *
+   * @generated from field: string path = 22;
+   */
+  path: string;
+
+  /**
+   * An event channel's messages counted by state.
+   *
+   * @generated from field: toshi.workspace.v1.ChannelEventCounts events = 23;
+   */
+  events?: ChannelEventCounts | undefined;
 };
 
 /**
@@ -159,6 +183,9 @@ export type ChannelJson = {
   id?: string;
 
   /**
+   * The job whose guest holds the channel; an event channel's is its
+   * service's live run, empty while the service has none.
+   *
    * @generated from field: string job_id = 2;
    */
   jobId?: string;
@@ -174,7 +201,7 @@ export type ChannelJson = {
   shape?: ChannelShapeJson;
 
   /**
-   * An http channel's port in the guest.
+   * An http or event channel's port in the guest.
    *
    * @generated from field: int32 port = 5;
    */
@@ -277,6 +304,27 @@ export type ChannelJson = {
    * @generated from field: repeated toshi.workspace.v1.ChannelClient clients = 20;
    */
   clients?: ChannelClientJson[];
+
+  /**
+   * An event channel's service, by its ID.
+   *
+   * @generated from field: string service = 21;
+   */
+  service?: string;
+
+  /**
+   * Where an event channel posts in the guest.
+   *
+   * @generated from field: string path = 22;
+   */
+  path?: string;
+
+  /**
+   * An event channel's messages counted by state.
+   *
+   * @generated from field: toshi.workspace.v1.ChannelEventCounts events = 23;
+   */
+  events?: ChannelEventCountsJson;
 };
 
 /**
@@ -285,6 +333,303 @@ export type ChannelJson = {
  */
 export const ChannelSchema: GenMessage<Channel, {jsonType: ChannelJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_channels, 0);
+
+/**
+ * ChannelEventCounts counts an event channel's messages by state.
+ *
+ * @generated from message toshi.workspace.v1.ChannelEventCounts
+ */
+export type ChannelEventCounts = Message<"toshi.workspace.v1.ChannelEventCounts"> & {
+  /**
+   * @generated from field: int64 pending = 1;
+   */
+  pending: bigint;
+
+  /**
+   * @generated from field: int64 in_flight = 2;
+   */
+  inFlight: bigint;
+
+  /**
+   * @generated from field: int64 delivered = 3;
+   */
+  delivered: bigint;
+
+  /**
+   * @generated from field: int64 failed = 4;
+   */
+  failed: bigint;
+
+  /**
+   * @generated from field: int64 expired = 5;
+   */
+  expired: bigint;
+
+  /**
+   * The last delivery's time; unset before the first.
+   *
+   * @generated from field: google.protobuf.Timestamp last_delivery_at = 6;
+   */
+  lastDeliveryAt?: Timestamp | undefined;
+
+  /**
+   * Why the last failed attempt failed; empty when none has.
+   *
+   * @generated from field: string last_failure = 7;
+   */
+  lastFailure: string;
+};
+
+/**
+ * ChannelEventCounts counts an event channel's messages by state.
+ *
+ * @generated from message toshi.workspace.v1.ChannelEventCounts
+ */
+export type ChannelEventCountsJson = {
+  /**
+   * @generated from field: int64 pending = 1;
+   */
+  pending?: string;
+
+  /**
+   * @generated from field: int64 in_flight = 2;
+   */
+  inFlight?: string;
+
+  /**
+   * @generated from field: int64 delivered = 3;
+   */
+  delivered?: string;
+
+  /**
+   * @generated from field: int64 failed = 4;
+   */
+  failed?: string;
+
+  /**
+   * @generated from field: int64 expired = 5;
+   */
+  expired?: string;
+
+  /**
+   * The last delivery's time; unset before the first.
+   *
+   * @generated from field: google.protobuf.Timestamp last_delivery_at = 6;
+   */
+  lastDeliveryAt?: TimestampJson;
+
+  /**
+   * Why the last failed attempt failed; empty when none has.
+   *
+   * @generated from field: string last_failure = 7;
+   */
+  lastFailure?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ChannelEventCounts.
+ * Use `create(ChannelEventCountsSchema)` to create a new message.
+ */
+export const ChannelEventCountsSchema: GenMessage<ChannelEventCounts, {jsonType: ChannelEventCountsJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 1);
+
+/**
+ * ChannelMessageSource is who sent a message; Toshi stamps it.
+ *
+ * @generated from message toshi.workspace.v1.ChannelMessageSource
+ */
+export type ChannelMessageSource = Message<"toshi.workspace.v1.ChannelMessageSource"> & {
+  /**
+   * principal (a person or token), workload, trigger, mail or alarm.
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind: string;
+
+  /**
+   * A principal as the audit log names an actor, or the workload's or
+   * trigger's ID.
+   *
+   * @generated from field: string id = 2;
+   */
+  id: string;
+};
+
+/**
+ * ChannelMessageSource is who sent a message; Toshi stamps it.
+ *
+ * @generated from message toshi.workspace.v1.ChannelMessageSource
+ */
+export type ChannelMessageSourceJson = {
+  /**
+   * principal (a person or token), workload, trigger, mail or alarm.
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind?: string;
+
+  /**
+   * A principal as the audit log names an actor, or the workload's or
+   * trigger's ID.
+   *
+   * @generated from field: string id = 2;
+   */
+  id?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ChannelMessageSource.
+ * Use `create(ChannelMessageSourceSchema)` to create a new message.
+ */
+export const ChannelMessageSourceSchema: GenMessage<ChannelMessageSource, {jsonType: ChannelMessageSourceJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 2);
+
+/**
+ * ChannelMessage is one message of an event channel.
+ *
+ * @generated from message toshi.workspace.v1.ChannelMessage
+ */
+export type ChannelMessage = Message<"toshi.workspace.v1.ChannelMessage"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * Its place in the channel's queue, from 1.
+   *
+   * @generated from field: int64 seq = 2;
+   */
+  seq: bigint;
+
+  /**
+   * @generated from field: string name = 3;
+   */
+  name: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp time = 4;
+   */
+  time?: Timestamp | undefined;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessageSource source = 5;
+   */
+  source?: ChannelMessageSource | undefined;
+
+  /**
+   * The message's JSON.
+   *
+   * @generated from field: bytes data = 6;
+   */
+  data: Uint8Array;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessageState state = 7;
+   */
+  state: ChannelMessageState;
+
+  /**
+   * @generated from field: int32 attempts = 8;
+   */
+  attempts: number;
+
+  /**
+   * When a pending message is next posted.
+   *
+   * @generated from field: google.protobuf.Timestamp next_attempt_at = 9;
+   */
+  nextAttemptAt?: Timestamp | undefined;
+
+  /**
+   * Why its last attempt failed; empty when none has.
+   *
+   * @generated from field: string last_error = 10;
+   */
+  lastError: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp delivered_at = 11;
+   */
+  deliveredAt?: Timestamp | undefined;
+};
+
+/**
+ * ChannelMessage is one message of an event channel.
+ *
+ * @generated from message toshi.workspace.v1.ChannelMessage
+ */
+export type ChannelMessageJson = {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * Its place in the channel's queue, from 1.
+   *
+   * @generated from field: int64 seq = 2;
+   */
+  seq?: string;
+
+  /**
+   * @generated from field: string name = 3;
+   */
+  name?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp time = 4;
+   */
+  time?: TimestampJson;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessageSource source = 5;
+   */
+  source?: ChannelMessageSourceJson;
+
+  /**
+   * The message's JSON.
+   *
+   * @generated from field: bytes data = 6;
+   */
+  data?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessageState state = 7;
+   */
+  state?: ChannelMessageStateJson;
+
+  /**
+   * @generated from field: int32 attempts = 8;
+   */
+  attempts?: number;
+
+  /**
+   * When a pending message is next posted.
+   *
+   * @generated from field: google.protobuf.Timestamp next_attempt_at = 9;
+   */
+  nextAttemptAt?: TimestampJson;
+
+  /**
+   * Why its last attempt failed; empty when none has.
+   *
+   * @generated from field: string last_error = 10;
+   */
+  lastError?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp delivered_at = 11;
+   */
+  deliveredAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ChannelMessage.
+ * Use `create(ChannelMessageSchema)` to create a new message.
+ */
+export const ChannelMessageSchema: GenMessage<ChannelMessage, {jsonType: ChannelMessageJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 3);
 
 /**
  * ChannelClient is one client of a stream channel: its last attach, who
@@ -431,7 +776,7 @@ export type ChannelClientJson = {
  * Use `create(ChannelClientSchema)` to create a new message.
  */
 export const ChannelClientSchema: GenMessage<ChannelClient, {jsonType: ChannelClientJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 1);
+  messageDesc(file_toshi_workspace_v1_channels, 4);
 
 /**
  * ChannelPolicy is a channel's policy document, with the words a recipe's
@@ -464,7 +809,8 @@ export type ChannelPolicy = Message<"toshi.workspace.v1.ChannelPolicy"> & {
   maxClients?: number | undefined;
 
   /**
-   * Who may send input to a stream channel: any, creator or none.
+   * Who may send input to a stream channel, or messages to an event
+   * channel: any, creator or none.
    *
    * @generated from field: string input = 4;
    */
@@ -472,7 +818,10 @@ export type ChannelPolicy = Message<"toshi.workspace.v1.ChannelPolicy"> & {
 
   /**
    * How much output or how many records are kept: buffer, at least the
-   * newest 8 MiB, or channel, as long as the channel's record lasts.
+   * newest 8 MiB, or channel, as long as the channel's record lasts. An
+   * event channel's is a duration, how long a message waits to be
+   * delivered before it expires: 24h unless set, and at most the
+   * workspace's plan allows.
    *
    * @generated from field: string keep = 5;
    */
@@ -480,11 +829,28 @@ export type ChannelPolicy = Message<"toshi.workspace.v1.ChannelPolicy"> & {
 
   /**
    * The ordered module list. Unset takes the shape's defaults; an empty
-   * list means no modules.
+   * list means no modules. An event channel takes none.
    *
    * @generated from field: toshi.workspace.v1.ChannelModuleList modules = 6;
    */
   modules?: ChannelModuleList | undefined;
+
+  /**
+   * How long an event channel's post may take to be answered 2xx, a
+   * duration from 1s to 10m: 30s unless set.
+   *
+   * @generated from field: string ack_deadline = 7;
+   */
+  ackDeadline: string;
+
+  /**
+   * How many of an event channel's posts may be in flight at once, from 1
+   * to 64: 1 unless set. Above 1, messages are no longer delivered in
+   * order.
+   *
+   * @generated from field: optional int32 concurrency = 8;
+   */
+  concurrency?: number | undefined;
 };
 
 /**
@@ -518,7 +884,8 @@ export type ChannelPolicyJson = {
   maxClients?: number;
 
   /**
-   * Who may send input to a stream channel: any, creator or none.
+   * Who may send input to a stream channel, or messages to an event
+   * channel: any, creator or none.
    *
    * @generated from field: string input = 4;
    */
@@ -526,7 +893,10 @@ export type ChannelPolicyJson = {
 
   /**
    * How much output or how many records are kept: buffer, at least the
-   * newest 8 MiB, or channel, as long as the channel's record lasts.
+   * newest 8 MiB, or channel, as long as the channel's record lasts. An
+   * event channel's is a duration, how long a message waits to be
+   * delivered before it expires: 24h unless set, and at most the
+   * workspace's plan allows.
    *
    * @generated from field: string keep = 5;
    */
@@ -534,11 +904,28 @@ export type ChannelPolicyJson = {
 
   /**
    * The ordered module list. Unset takes the shape's defaults; an empty
-   * list means no modules.
+   * list means no modules. An event channel takes none.
    *
    * @generated from field: toshi.workspace.v1.ChannelModuleList modules = 6;
    */
   modules?: ChannelModuleListJson;
+
+  /**
+   * How long an event channel's post may take to be answered 2xx, a
+   * duration from 1s to 10m: 30s unless set.
+   *
+   * @generated from field: string ack_deadline = 7;
+   */
+  ackDeadline?: string;
+
+  /**
+   * How many of an event channel's posts may be in flight at once, from 1
+   * to 64: 1 unless set. Above 1, messages are no longer delivered in
+   * order.
+   *
+   * @generated from field: optional int32 concurrency = 8;
+   */
+  concurrency?: number;
 };
 
 /**
@@ -546,7 +933,7 @@ export type ChannelPolicyJson = {
  * Use `create(ChannelPolicySchema)` to create a new message.
  */
 export const ChannelPolicySchema: GenMessage<ChannelPolicy, {jsonType: ChannelPolicyJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 2);
+  messageDesc(file_toshi_workspace_v1_channels, 5);
 
 /**
  * @generated from message toshi.workspace.v1.ChannelModuleList
@@ -573,7 +960,7 @@ export type ChannelModuleListJson = {
  * Use `create(ChannelModuleListSchema)` to create a new message.
  */
 export const ChannelModuleListSchema: GenMessage<ChannelModuleList, {jsonType: ChannelModuleListJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 3);
+  messageDesc(file_toshi_workspace_v1_channels, 6);
 
 /**
  * ChannelModule is one entry of a policy's module list. Each kind takes
@@ -670,7 +1057,7 @@ export type ChannelModuleJson = {
  * Use `create(ChannelModuleSchema)` to create a new message.
  */
 export const ChannelModuleSchema: GenMessage<ChannelModule, {jsonType: ChannelModuleJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 4);
+  messageDesc(file_toshi_workspace_v1_channels, 7);
 
 /**
  * ChannelMatch narrows the requests a module acts on. Every field empty
@@ -749,7 +1136,7 @@ export type ChannelMatchJson = {
  * Use `create(ChannelMatchSchema)` to create a new message.
  */
 export const ChannelMatchSchema: GenMessage<ChannelMatch, {jsonType: ChannelMatchJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 5);
+  messageDesc(file_toshi_workspace_v1_channels, 8);
 
 /**
  * ChannelRequest is one request an http channel's relay served, as its
@@ -996,7 +1383,7 @@ export type ChannelRequestJson = {
  * Use `create(ChannelRequestSchema)` to create a new message.
  */
 export const ChannelRequestSchema: GenMessage<ChannelRequest, {jsonType: ChannelRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 6);
+  messageDesc(file_toshi_workspace_v1_channels, 9);
 
 /**
  * @generated from message toshi.workspace.v1.ChannelRequestCaller
@@ -1051,7 +1438,7 @@ export type ChannelRequestCallerJson = {
  * Use `create(ChannelRequestCallerSchema)` to create a new message.
  */
 export const ChannelRequestCallerSchema: GenMessage<ChannelRequestCaller, {jsonType: ChannelRequestCallerJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 7);
+  messageDesc(file_toshi_workspace_v1_channels, 10);
 
 /**
  * ChannelHeader is one header line; a credential header keeps its name
@@ -1104,7 +1491,7 @@ export type ChannelHeaderJson = {
  * Use `create(ChannelHeaderSchema)` to create a new message.
  */
 export const ChannelHeaderSchema: GenMessage<ChannelHeader, {jsonType: ChannelHeaderJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 8);
+  messageDesc(file_toshi_workspace_v1_channels, 11);
 
 /**
  * @generated from message toshi.workspace.v1.ChannelBody
@@ -1155,7 +1542,7 @@ export type ChannelBodyJson = {
  * Use `create(ChannelBodySchema)` to create a new message.
  */
 export const ChannelBodySchema: GenMessage<ChannelBody, {jsonType: ChannelBodyJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 9);
+  messageDesc(file_toshi_workspace_v1_channels, 12);
 
 /**
  * Forward is one open Forward: what it reaches in the guest, named as the
@@ -1232,7 +1619,7 @@ export type ForwardJson = {
  * Use `create(ForwardSchema)` to create a new message.
  */
 export const ForwardSchema: GenMessage<Forward, {jsonType: ForwardJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 10);
+  messageDesc(file_toshi_workspace_v1_channels, 13);
 
 /**
  * Link is the state of a runner's Link, the connection its guest holds to
@@ -1359,7 +1746,7 @@ export type LinkJson = {
  * Use `create(LinkSchema)` to create a new message.
  */
 export const LinkSchema: GenMessage<Link, {jsonType: LinkJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 11);
+  messageDesc(file_toshi_workspace_v1_channels, 14);
 
 /**
  * @generated from message toshi.workspace.v1.CreateChannelRequest
@@ -1448,7 +1835,7 @@ export type CreateChannelRequestJson = {
  * Use `create(CreateChannelRequestSchema)` to create a new message.
  */
 export const CreateChannelRequestSchema: GenMessage<CreateChannelRequest, {jsonType: CreateChannelRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 12);
+  messageDesc(file_toshi_workspace_v1_channels, 15);
 
 /**
  * @generated from message toshi.workspace.v1.CreateChannelResponse
@@ -1475,14 +1862,15 @@ export type CreateChannelResponseJson = {
  * Use `create(CreateChannelResponseSchema)` to create a new message.
  */
 export const CreateChannelResponseSchema: GenMessage<CreateChannelResponse, {jsonType: CreateChannelResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 13);
+  messageDesc(file_toshi_workspace_v1_channels, 16);
 
 /**
  * @generated from message toshi.workspace.v1.ListChannelsRequest
  */
 export type ListChannelsRequest = Message<"toshi.workspace.v1.ListChannelsRequest"> & {
   /**
-   * Only this job's channels; empty lists every job's.
+   * Only this job's channels; empty lists every job's, and every
+   * service's event channels.
    *
    * @generated from field: string job_id = 1;
    */
@@ -1501,6 +1889,13 @@ export type ListChannelsRequest = Message<"toshi.workspace.v1.ListChannelsReques
    * @generated from field: string page_token = 3;
    */
   pageToken: string;
+
+  /**
+   * Only this service's event channels, by its ID; not with job_id.
+   *
+   * @generated from field: string service = 4;
+   */
+  service: string;
 };
 
 /**
@@ -1508,7 +1903,8 @@ export type ListChannelsRequest = Message<"toshi.workspace.v1.ListChannelsReques
  */
 export type ListChannelsRequestJson = {
   /**
-   * Only this job's channels; empty lists every job's.
+   * Only this job's channels; empty lists every job's, and every
+   * service's event channels.
    *
    * @generated from field: string job_id = 1;
    */
@@ -1527,6 +1923,13 @@ export type ListChannelsRequestJson = {
    * @generated from field: string page_token = 3;
    */
   pageToken?: string;
+
+  /**
+   * Only this service's event channels, by its ID; not with job_id.
+   *
+   * @generated from field: string service = 4;
+   */
+  service?: string;
 };
 
 /**
@@ -1534,7 +1937,7 @@ export type ListChannelsRequestJson = {
  * Use `create(ListChannelsRequestSchema)` to create a new message.
  */
 export const ListChannelsRequestSchema: GenMessage<ListChannelsRequest, {jsonType: ListChannelsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 14);
+  messageDesc(file_toshi_workspace_v1_channels, 17);
 
 /**
  * @generated from message toshi.workspace.v1.ListChannelsResponse
@@ -1575,7 +1978,7 @@ export type ListChannelsResponseJson = {
  * Use `create(ListChannelsResponseSchema)` to create a new message.
  */
 export const ListChannelsResponseSchema: GenMessage<ListChannelsResponse, {jsonType: ListChannelsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 15);
+  messageDesc(file_toshi_workspace_v1_channels, 18);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelRequest
@@ -1590,6 +1993,13 @@ export type GetChannelRequest = Message<"toshi.workspace.v1.GetChannelRequest"> 
    * @generated from field: string name = 2;
    */
   name: string;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 3;
+   */
+  service: string;
 };
 
 /**
@@ -1605,6 +2015,13 @@ export type GetChannelRequestJson = {
    * @generated from field: string name = 2;
    */
   name?: string;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 3;
+   */
+  service?: string;
 };
 
 /**
@@ -1612,7 +2029,7 @@ export type GetChannelRequestJson = {
  * Use `create(GetChannelRequestSchema)` to create a new message.
  */
 export const GetChannelRequestSchema: GenMessage<GetChannelRequest, {jsonType: GetChannelRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 16);
+  messageDesc(file_toshi_workspace_v1_channels, 19);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelResponse
@@ -1639,7 +2056,7 @@ export type GetChannelResponseJson = {
  * Use `create(GetChannelResponseSchema)` to create a new message.
  */
 export const GetChannelResponseSchema: GenMessage<GetChannelResponse, {jsonType: GetChannelResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 17);
+  messageDesc(file_toshi_workspace_v1_channels, 20);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelPolicyRequest
@@ -1654,6 +2071,13 @@ export type GetChannelPolicyRequest = Message<"toshi.workspace.v1.GetChannelPoli
    * @generated from field: string name = 2;
    */
   name: string;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 3;
+   */
+  service: string;
 };
 
 /**
@@ -1669,6 +2093,13 @@ export type GetChannelPolicyRequestJson = {
    * @generated from field: string name = 2;
    */
   name?: string;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 3;
+   */
+  service?: string;
 };
 
 /**
@@ -1676,7 +2107,7 @@ export type GetChannelPolicyRequestJson = {
  * Use `create(GetChannelPolicyRequestSchema)` to create a new message.
  */
 export const GetChannelPolicyRequestSchema: GenMessage<GetChannelPolicyRequest, {jsonType: GetChannelPolicyRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 18);
+  messageDesc(file_toshi_workspace_v1_channels, 21);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelPolicyResponse
@@ -1703,7 +2134,7 @@ export type GetChannelPolicyResponseJson = {
  * Use `create(GetChannelPolicyResponseSchema)` to create a new message.
  */
 export const GetChannelPolicyResponseSchema: GenMessage<GetChannelPolicyResponse, {jsonType: GetChannelPolicyResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 19);
+  messageDesc(file_toshi_workspace_v1_channels, 22);
 
 /**
  * @generated from message toshi.workspace.v1.SetChannelPolicyRequest
@@ -1754,7 +2185,7 @@ export type SetChannelPolicyRequestJson = {
  * Use `create(SetChannelPolicyRequestSchema)` to create a new message.
  */
 export const SetChannelPolicyRequestSchema: GenMessage<SetChannelPolicyRequest, {jsonType: SetChannelPolicyRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 20);
+  messageDesc(file_toshi_workspace_v1_channels, 23);
 
 /**
  * @generated from message toshi.workspace.v1.SetChannelPolicyResponse
@@ -1785,7 +2216,7 @@ export type SetChannelPolicyResponseJson = {
  * Use `create(SetChannelPolicyResponseSchema)` to create a new message.
  */
 export const SetChannelPolicyResponseSchema: GenMessage<SetChannelPolicyResponse, {jsonType: SetChannelPolicyResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 21);
+  messageDesc(file_toshi_workspace_v1_channels, 24);
 
 /**
  * @generated from message toshi.workspace.v1.ListChannelRequestsRequest
@@ -1948,7 +2379,7 @@ export type ListChannelRequestsRequestJson = {
  * Use `create(ListChannelRequestsRequestSchema)` to create a new message.
  */
 export const ListChannelRequestsRequestSchema: GenMessage<ListChannelRequestsRequest, {jsonType: ListChannelRequestsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 22);
+  messageDesc(file_toshi_workspace_v1_channels, 25);
 
 /**
  * @generated from message toshi.workspace.v1.ListChannelRequestsResponse
@@ -2015,7 +2446,7 @@ export type ListChannelRequestsResponseJson = {
  * Use `create(ListChannelRequestsResponseSchema)` to create a new message.
  */
 export const ListChannelRequestsResponseSchema: GenMessage<ListChannelRequestsResponse, {jsonType: ListChannelRequestsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 23);
+  messageDesc(file_toshi_workspace_v1_channels, 26);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelRequestRequest
@@ -2062,7 +2493,7 @@ export type GetChannelRequestRequestJson = {
  * Use `create(GetChannelRequestRequestSchema)` to create a new message.
  */
 export const GetChannelRequestRequestSchema: GenMessage<GetChannelRequestRequest, {jsonType: GetChannelRequestRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 24);
+  messageDesc(file_toshi_workspace_v1_channels, 27);
 
 /**
  * @generated from message toshi.workspace.v1.GetChannelRequestResponse
@@ -2089,7 +2520,7 @@ export type GetChannelRequestResponseJson = {
  * Use `create(GetChannelRequestResponseSchema)` to create a new message.
  */
 export const GetChannelRequestResponseSchema: GenMessage<GetChannelRequestResponse, {jsonType: GetChannelRequestResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 25);
+  messageDesc(file_toshi_workspace_v1_channels, 28);
 
 /**
  * @generated from message toshi.workspace.v1.ExportChannelLogRequest
@@ -2194,7 +2625,7 @@ export type ExportChannelLogRequestJson = {
  * Use `create(ExportChannelLogRequestSchema)` to create a new message.
  */
 export const ExportChannelLogRequestSchema: GenMessage<ExportChannelLogRequest, {jsonType: ExportChannelLogRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 26);
+  messageDesc(file_toshi_workspace_v1_channels, 29);
 
 /**
  * @generated from message toshi.workspace.v1.ExportChannelLogResponse
@@ -2287,7 +2718,7 @@ export type ExportChannelLogResponseJson = {
  * Use `create(ExportChannelLogResponseSchema)` to create a new message.
  */
 export const ExportChannelLogResponseSchema: GenMessage<ExportChannelLogResponse, {jsonType: ExportChannelLogResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 27);
+  messageDesc(file_toshi_workspace_v1_channels, 30);
 
 /**
  * @generated from message toshi.workspace.v1.CreateChannelConnectTokenRequest
@@ -2354,7 +2785,7 @@ export type CreateChannelConnectTokenRequestJson = {
  * Use `create(CreateChannelConnectTokenRequestSchema)` to create a new message.
  */
 export const CreateChannelConnectTokenRequestSchema: GenMessage<CreateChannelConnectTokenRequest, {jsonType: CreateChannelConnectTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 28);
+  messageDesc(file_toshi_workspace_v1_channels, 31);
 
 /**
  * @generated from message toshi.workspace.v1.CreateChannelConnectTokenResponse
@@ -2445,7 +2876,7 @@ export type CreateChannelConnectTokenResponseJson = {
  * Use `create(CreateChannelConnectTokenResponseSchema)` to create a new message.
  */
 export const CreateChannelConnectTokenResponseSchema: GenMessage<CreateChannelConnectTokenResponse, {jsonType: CreateChannelConnectTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 29);
+  messageDesc(file_toshi_workspace_v1_channels, 32);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeChannelConnectTokenRequest
@@ -2496,7 +2927,7 @@ export type RevokeChannelConnectTokenRequestJson = {
  * Use `create(RevokeChannelConnectTokenRequestSchema)` to create a new message.
  */
 export const RevokeChannelConnectTokenRequestSchema: GenMessage<RevokeChannelConnectTokenRequest, {jsonType: RevokeChannelConnectTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 30);
+  messageDesc(file_toshi_workspace_v1_channels, 33);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeChannelConnectTokenResponse
@@ -2515,7 +2946,7 @@ export type RevokeChannelConnectTokenResponseJson = {
  * Use `create(RevokeChannelConnectTokenResponseSchema)` to create a new message.
  */
 export const RevokeChannelConnectTokenResponseSchema: GenMessage<RevokeChannelConnectTokenResponse, {jsonType: RevokeChannelConnectTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 31);
+  messageDesc(file_toshi_workspace_v1_channels, 34);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteChannelRequest
@@ -2552,7 +2983,7 @@ export type DeleteChannelRequestJson = {
  * Use `create(DeleteChannelRequestSchema)` to create a new message.
  */
 export const DeleteChannelRequestSchema: GenMessage<DeleteChannelRequest, {jsonType: DeleteChannelRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 32);
+  messageDesc(file_toshi_workspace_v1_channels, 35);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteChannelResponse
@@ -2571,7 +3002,7 @@ export type DeleteChannelResponseJson = {
  * Use `create(DeleteChannelResponseSchema)` to create a new message.
  */
 export const DeleteChannelResponseSchema: GenMessage<DeleteChannelResponse, {jsonType: DeleteChannelResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 33);
+  messageDesc(file_toshi_workspace_v1_channels, 36);
 
 /**
  * @generated from message toshi.workspace.v1.ListForwardsRequest
@@ -2626,7 +3057,7 @@ export type ListForwardsRequestJson = {
  * Use `create(ListForwardsRequestSchema)` to create a new message.
  */
 export const ListForwardsRequestSchema: GenMessage<ListForwardsRequest, {jsonType: ListForwardsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 34);
+  messageDesc(file_toshi_workspace_v1_channels, 37);
 
 /**
  * @generated from message toshi.workspace.v1.ListForwardsResponse
@@ -2667,7 +3098,7 @@ export type ListForwardsResponseJson = {
  * Use `create(ListForwardsResponseSchema)` to create a new message.
  */
 export const ListForwardsResponseSchema: GenMessage<ListForwardsResponse, {jsonType: ListForwardsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 35);
+  messageDesc(file_toshi_workspace_v1_channels, 38);
 
 /**
  * @generated from message toshi.workspace.v1.GetLinkRequest
@@ -2694,7 +3125,7 @@ export type GetLinkRequestJson = {
  * Use `create(GetLinkRequestSchema)` to create a new message.
  */
 export const GetLinkRequestSchema: GenMessage<GetLinkRequest, {jsonType: GetLinkRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 36);
+  messageDesc(file_toshi_workspace_v1_channels, 39);
 
 /**
  * @generated from message toshi.workspace.v1.GetLinkResponse
@@ -2721,7 +3152,245 @@ export type GetLinkResponseJson = {
  * Use `create(GetLinkResponseSchema)` to create a new message.
  */
 export const GetLinkResponseSchema: GenMessage<GetLinkResponse, {jsonType: GetLinkResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_channels, 37);
+  messageDesc(file_toshi_workspace_v1_channels, 40);
+
+/**
+ * @generated from message toshi.workspace.v1.SendChannelMessageRequest
+ */
+export type SendChannelMessageRequest = Message<"toshi.workspace.v1.SendChannelMessageRequest"> & {
+  /**
+   * The event channel's service, by its ID, and the channel's name.
+   *
+   * @generated from field: string service = 1;
+   */
+  service: string;
+
+  /**
+   * @generated from field: string channel = 2;
+   */
+  channel: string;
+
+  /**
+   * The message's name, such as order.paid: up to 200 bytes with no space.
+   *
+   * @generated from field: string name = 3;
+   */
+  name: string;
+
+  /**
+   * The message's JSON, at most 256 KiB.
+   *
+   * @generated from field: bytes data = 4;
+   */
+  data: Uint8Array;
+
+  /**
+   * Makes the send safe to repeat: a key the channel holds returns that
+   * message.
+   *
+   * @generated from field: string request_key = 5;
+   */
+  requestKey: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SendChannelMessageRequest
+ */
+export type SendChannelMessageRequestJson = {
+  /**
+   * The event channel's service, by its ID, and the channel's name.
+   *
+   * @generated from field: string service = 1;
+   */
+  service?: string;
+
+  /**
+   * @generated from field: string channel = 2;
+   */
+  channel?: string;
+
+  /**
+   * The message's name, such as order.paid: up to 200 bytes with no space.
+   *
+   * @generated from field: string name = 3;
+   */
+  name?: string;
+
+  /**
+   * The message's JSON, at most 256 KiB.
+   *
+   * @generated from field: bytes data = 4;
+   */
+  data?: string;
+
+  /**
+   * Makes the send safe to repeat: a key the channel holds returns that
+   * message.
+   *
+   * @generated from field: string request_key = 5;
+   */
+  requestKey?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SendChannelMessageRequest.
+ * Use `create(SendChannelMessageRequestSchema)` to create a new message.
+ */
+export const SendChannelMessageRequestSchema: GenMessage<SendChannelMessageRequest, {jsonType: SendChannelMessageRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 41);
+
+/**
+ * @generated from message toshi.workspace.v1.SendChannelMessageResponse
+ */
+export type SendChannelMessageResponse = Message<"toshi.workspace.v1.SendChannelMessageResponse"> & {
+  /**
+   * @generated from field: string message_id = 1;
+   */
+  messageId: string;
+
+  /**
+   * Set when request_key named a message sent before.
+   *
+   * @generated from field: bool duplicate = 2;
+   */
+  duplicate: boolean;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SendChannelMessageResponse
+ */
+export type SendChannelMessageResponseJson = {
+  /**
+   * @generated from field: string message_id = 1;
+   */
+  messageId?: string;
+
+  /**
+   * Set when request_key named a message sent before.
+   *
+   * @generated from field: bool duplicate = 2;
+   */
+  duplicate?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SendChannelMessageResponse.
+ * Use `create(SendChannelMessageResponseSchema)` to create a new message.
+ */
+export const SendChannelMessageResponseSchema: GenMessage<SendChannelMessageResponse, {jsonType: SendChannelMessageResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 42);
+
+/**
+ * @generated from message toshi.workspace.v1.TailChannelMessagesRequest
+ */
+export type TailChannelMessagesRequest = Message<"toshi.workspace.v1.TailChannelMessagesRequest"> & {
+  /**
+   * The event channel's service, by its ID, and the channel's name.
+   *
+   * @generated from field: string service = 1;
+   */
+  service: string;
+
+  /**
+   * @generated from field: string channel = 2;
+   */
+  channel: string;
+
+  /**
+   * Only messages in these states; empty is every state.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ChannelMessageState states = 3;
+   */
+  states: ChannelMessageState[];
+
+  /**
+   * A next_cursor from an earlier response; empty starts at the first
+   * message kept.
+   *
+   * @generated from field: string cursor = 4;
+   */
+  cursor: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.TailChannelMessagesRequest
+ */
+export type TailChannelMessagesRequestJson = {
+  /**
+   * The event channel's service, by its ID, and the channel's name.
+   *
+   * @generated from field: string service = 1;
+   */
+  service?: string;
+
+  /**
+   * @generated from field: string channel = 2;
+   */
+  channel?: string;
+
+  /**
+   * Only messages in these states; empty is every state.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ChannelMessageState states = 3;
+   */
+  states?: ChannelMessageStateJson[];
+
+  /**
+   * A next_cursor from an earlier response; empty starts at the first
+   * message kept.
+   *
+   * @generated from field: string cursor = 4;
+   */
+  cursor?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.TailChannelMessagesRequest.
+ * Use `create(TailChannelMessagesRequestSchema)` to create a new message.
+ */
+export const TailChannelMessagesRequestSchema: GenMessage<TailChannelMessagesRequest, {jsonType: TailChannelMessagesRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 43);
+
+/**
+ * @generated from message toshi.workspace.v1.TailChannelMessagesResponse
+ */
+export type TailChannelMessagesResponse = Message<"toshi.workspace.v1.TailChannelMessagesResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessage message = 1;
+   */
+  message?: ChannelMessage | undefined;
+
+  /**
+   * Where a later call goes on from, after this message.
+   *
+   * @generated from field: string next_cursor = 2;
+   */
+  nextCursor: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.TailChannelMessagesResponse
+ */
+export type TailChannelMessagesResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.ChannelMessage message = 1;
+   */
+  message?: ChannelMessageJson;
+
+  /**
+   * Where a later call goes on from, after this message.
+   *
+   * @generated from field: string next_cursor = 2;
+   */
+  nextCursor?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.TailChannelMessagesResponse.
+ * Use `create(TailChannelMessagesResponseSchema)` to create a new message.
+ */
+export const TailChannelMessagesResponseSchema: GenMessage<TailChannelMessagesResponse, {jsonType: TailChannelMessagesResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_channels, 44);
 
 /**
  * ChannelShape is how a channel carries its bytes.
@@ -2747,6 +3416,14 @@ export enum ChannelShape {
    * @generated from enum value: CHANNEL_SHAPE_STREAM = 2;
    */
   STREAM = 2,
+
+  /**
+   * A service's queue of messages, posted to a port and path in its
+   * guest.
+   *
+   * @generated from enum value: CHANNEL_SHAPE_EVENT = 3;
+   */
+  EVENT = 3,
 }
 
 /**
@@ -2754,7 +3431,7 @@ export enum ChannelShape {
  *
  * @generated from enum toshi.workspace.v1.ChannelShape
  */
-export type ChannelShapeJson = "CHANNEL_SHAPE_UNSPECIFIED" | "CHANNEL_SHAPE_HTTP" | "CHANNEL_SHAPE_STREAM";
+export type ChannelShapeJson = "CHANNEL_SHAPE_UNSPECIFIED" | "CHANNEL_SHAPE_HTTP" | "CHANNEL_SHAPE_STREAM" | "CHANNEL_SHAPE_EVENT";
 
 /**
  * Describes the enum toshi.workspace.v1.ChannelShape.
@@ -2890,6 +3567,68 @@ export const ChannelLogSchema: GenEnum<ChannelLog, ChannelLogJson> = /*@__PURE__
   enumDesc(file_toshi_workspace_v1_channels, 3);
 
 /**
+ * ChannelMessageState is where an event channel's message is in its
+ * delivery.
+ *
+ * @generated from enum toshi.workspace.v1.ChannelMessageState
+ */
+export enum ChannelMessageState {
+  /**
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Waiting for its next attempt.
+   *
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_PENDING = 1;
+   */
+  PENDING = 1,
+
+  /**
+   * Posted, and not yet answered.
+   *
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_IN_FLIGHT = 2;
+   */
+  IN_FLIGHT = 2,
+
+  /**
+   * Answered 2xx.
+   *
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_DELIVERED = 3;
+   */
+  DELIVERED = 3,
+
+  /**
+   * Parked after its last attempt failed.
+   *
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_FAILED = 4;
+   */
+  FAILED = 4,
+
+  /**
+   * Its channel's keep passed before it was delivered.
+   *
+   * @generated from enum value: CHANNEL_MESSAGE_STATE_EXPIRED = 5;
+   */
+  EXPIRED = 5,
+}
+
+/**
+ * ChannelMessageState is where an event channel's message is in its
+ * delivery.
+ *
+ * @generated from enum toshi.workspace.v1.ChannelMessageState
+ */
+export type ChannelMessageStateJson = "CHANNEL_MESSAGE_STATE_UNSPECIFIED" | "CHANNEL_MESSAGE_STATE_PENDING" | "CHANNEL_MESSAGE_STATE_IN_FLIGHT" | "CHANNEL_MESSAGE_STATE_DELIVERED" | "CHANNEL_MESSAGE_STATE_FAILED" | "CHANNEL_MESSAGE_STATE_EXPIRED";
+
+/**
+ * Describes the enum toshi.workspace.v1.ChannelMessageState.
+ */
+export const ChannelMessageStateSchema: GenEnum<ChannelMessageState, ChannelMessageStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_channels, 4);
+
+/**
  * ChannelService manages the channels of the workspace's jobs, lists a
  * job's Forwards and reads its Link. A channel is a port in the job's
  * guest served as HTTP (an http channel), or a command whose input and
@@ -2897,6 +3636,12 @@ export const ChannelLogSchema: GenEnum<ChannelLog, ChannelLogJson> = /*@__PURE__
  * names the workspace, as for WorkloadService; a job of another workspace
  * is NOT_FOUND. Every call names the job by its ID as the jobs API and
  * `toshi host-job list` show it, and a channel by its name on that job.
+ *
+ * An event channel is a service's queue of messages, which Toshi posts to
+ * a port and path in the service's guest, in order and at least once: the
+ * service's recipe declares it, and it lasts while the service does,
+ * across its runs. A call names it by its service's ID and its name, in
+ * service, never by a job.
  *
  * What carries a stream is not a call: a client attaches to a stream
  * channel, and a Forward opens, on an upgrade of the control plane's
@@ -3073,6 +3818,36 @@ export const ChannelService: GenService<{
     methodKind: "unary";
     input: typeof GetLinkRequestSchema;
     output: typeof GetLinkResponseSchema;
+  },
+  /**
+   * SendChannelMessage adds a message to the end of an event channel's
+   * queue and returns its ID at once; the message waits there until it is
+   * delivered, parked failed, or kept past the channel's keep. A sleeping
+   * on-demand service is woken. A message sent again with the same
+   * request_key is not stored again: its ID is returned, with duplicate
+   * set. A caller the channel's input rule does not admit fails with
+   * PERMISSION_DENIED; a name under a segment Toshi keeps for its own
+   * events, data that is not JSON or past 256 KiB with INVALID_ARGUMENT.
+   *
+   * @generated from rpc toshi.workspace.v1.ChannelService.SendChannelMessage
+   */
+  sendChannelMessage: {
+    methodKind: "unary";
+    input: typeof SendChannelMessageRequestSchema;
+    output: typeof SendChannelMessageResponseSchema;
+  },
+  /**
+   * TailChannelMessages streams an event channel's messages after the
+   * cursor, oldest first, then each message added after them as it is
+   * added, until the caller ends the call. States narrows the stream to
+   * messages in those states when it is read.
+   *
+   * @generated from rpc toshi.workspace.v1.ChannelService.TailChannelMessages
+   */
+  tailChannelMessages: {
+    methodKind: "server_streaming";
+    input: typeof TailChannelMessagesRequestSchema;
+    output: typeof TailChannelMessagesResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_channels, 0);
