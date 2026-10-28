@@ -3965,8 +3965,8 @@ export const ChannelService: GenService<{
   /**
    * ReplayChannelMessage puts a failed, expired or delivered message of an
    * event channel back in its queue under its own ID, so its webhook-id is
-   * the same: its attempts start again from 0, and its retry window and
-   * keep from the replay. A message pending or in flight fails with
+   * the same: its attempts start again from 0, and its keep runs from the
+   * replay. A message pending or in flight fails with
    * FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.ChannelService.ReplayChannelMessage

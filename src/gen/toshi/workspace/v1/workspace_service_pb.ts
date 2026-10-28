@@ -1753,8 +1753,9 @@ export type WorkspaceSignIn = Message<"toshi.workspace.v1.WorkspaceSignIn"> & {
   provider: string;
 
   /**
-   * The provider's issuer: the identities it signs in are keyed by it. Set
-   * by Toshi.
+   * The provider's issuer: the identities it signs in are keyed by it, as
+   * their Identity.provider, and GET /auth/providers lists it as the
+   * entry's identity_provider. Set by Toshi.
    *
    * @generated from field: string issuer = 2;
    */
@@ -1787,8 +1788,9 @@ export type WorkspaceSignInJson = {
   provider?: string;
 
   /**
-   * The provider's issuer: the identities it signs in are keyed by it. Set
-   * by Toshi.
+   * The provider's issuer: the identities it signs in are keyed by it, as
+   * their Identity.provider, and GET /auth/providers lists it as the
+   * entry's identity_provider. Set by Toshi.
    *
    * @generated from field: string issuer = 2;
    */
