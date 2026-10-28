@@ -90,32 +90,31 @@ function describe(cause: unknown): string {
 }
 
 /** Why the API refused a call for a product: the reason of the refusal's ErrorInfo detail. */
-export type ProductReason =
-  | "PRODUCT_NOT_INSTALLED"
-  | "PRODUCT_DISABLED"
-  | "PRODUCT_NOT_ENTITLED"
-  | "PRODUCT_TURNED_OFF"
-  | "ACCESS_NOT_ACCEPTED";
+export type ProductReason = "PRODUCT_UNAVAILABLE";
 
 /** The reasons a call is refused for a product. */
 export const ProductReason = {
-  /** The deployment's build does not include the product; the code is Unimplemented. */
-  NotInstalled: "PRODUCT_NOT_INSTALLED",
-  /** The deployment turned the product off; the code is FailedPrecondition. */
-  Disabled: "PRODUCT_DISABLED",
-  /** The workspace's entitlements leave the product out; the code is PermissionDenied. */
-  NotEntitled: "PRODUCT_NOT_ENTITLED",
   /**
-   * The workspace's settings turn the product off, or an outside product's
-   * installation is turned off; the code is FailedPrecondition.
+   * The product is off for the workspace; the code is FailedPrecondition, and
+   * `cause` says which input turned it off.
    */
-  TurnedOff: "PRODUCT_TURNED_OFF",
-  /**
-   * Turning an outside product on installs it, and the call did not accept the
-   * access it asks for; the code is FailedPrecondition.
-   */
-  AccessNotAccepted: "ACCESS_NOT_ACCEPTED",
+  Unavailable: "PRODUCT_UNAVAILABLE",
 } as const satisfies Record<string, ProductReason>;
+
+/** The input that turned a product off: a ProductError's `cause`. */
+export type ProductCause = "build" | "operator" | "plan" | "workspace";
+
+/** The inputs that turn a product off. */
+export const ProductCause = {
+  /** The deployment's build does not include the product. */
+  Build: "build",
+  /** The deployment's config turns the product off. */
+  Operator: "operator",
+  /** The workspace's plan leaves the product out. */
+  Plan: "plan",
+  /** The workspace's settings turn the product off. */
+  Workspace: "workspace",
+} as const satisfies Record<string, ProductCause>;
 
 const productReasons: ReadonlySet<string> = new Set(Object.values(ProductReason));
 
@@ -129,6 +128,7 @@ export type RefusalReason =
   | "IMAGE_CHECK_FAILED"
   | "IMAGE_IN_USE"
   | "IMAGE_NAME_TAKEN"
+  | "IMAGE_NOT_READY"
   | "IMAGE_NOT_SERVED"
   | "LAST_IDENTITY"
   | "LAST_MEMBER"
@@ -149,6 +149,8 @@ export const RefusalReason = {
   ImageInUse: "IMAGE_IN_USE",
   /** Another live image of the workspace has the name; the code is AlreadyExists. */
   ImageNameTaken: "IMAGE_NAME_TAKEN",
+  /** A workspace image named by a job, a sandbox or a service revision has no ready version; the code is FailedPrecondition. */
+  ImageNotReady: "IMAGE_NOT_READY",
   /** The revision's registry answered that it does not serve the image digest; the code is FailedPrecondition. */
   ImageNotServed: "IMAGE_NOT_SERVED",
   /** The call would remove the caller's last identity; the code is FailedPrecondition. */
@@ -171,8 +173,7 @@ const refusalReasons: ReadonlySet<string> = new Set(Object.values(RefusalReason)
 const errorInfoDomain = "toshi.run";
 
 /**
- * The API's refusal of a call for a product: one that is off for the
- * workspace, or an outside product whose access the call did not accept.
+ * The API's refusal of a call for a product that is off for the workspace.
  * Every call the client makes throws it in place of the ConnectError, wait,
  * watch and execute included. It is a ConnectError, so `instanceof
  * ConnectError` and `code` read as before; test for it with
@@ -182,12 +183,10 @@ export class ProductError extends ConnectError {
   /** The product's ID, such as `runners`. */
   readonly product: string;
   readonly reason: ProductReason;
-  /** The setting that turns the product on, such as `runners.enabled`; empty for ACCESS_NOT_ACCEPTED. */
-  readonly feature: string;
-  /** How far a product the deployment disables has wound down: `no_new_work`, `draining` or `stopped`; empty otherwise. */
+  /** The input that turned the product off, the refusal's `cause` metadata: `build`, `operator`, `plan` or `workspace`. */
+  readonly productCause: ProductCause;
+  /** How far a product the deployment turns off has wound down: `no_new_work`, `draining` or `stopped`; empty otherwise. */
   readonly state: string;
-  /** The access an outside product asks for, for ACCESS_NOT_ACCEPTED: accept exactly this list to install it. */
-  readonly access: string[];
 
   constructor(err: ConnectError, reason: ProductReason, metadata: ReadonlyMap<string, string>) {
     super(err.rawMessage, err.code, err.metadata, undefined, err);
@@ -196,10 +195,8 @@ export class ProductError extends ConnectError {
     this.details = err.details;
     this.product = metadata.get("product") ?? "";
     this.reason = reason;
-    this.feature = metadata.get("feature") ?? "";
+    this.productCause = (metadata.get("cause") ?? "") as ProductCause;
     this.state = metadata.get("state") ?? "";
-    const access = metadata.get("access") ?? "";
-    this.access = access === "" ? [] : access.split(",");
   }
 
   // ConnectError's own check would accept any ConnectError.

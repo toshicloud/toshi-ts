@@ -1,12 +1,26 @@
 import { timestampDate, timestampFromDate } from "@bufbuild/protobuf/wkt";
 import { describe, expect, it } from "vitest";
 
-import { CatalogEntryState } from "../src/gen/toshi/workspace/v1/products_pb.js";
-import { ProductService } from "../src/gen/toshi/workspace/v1/products_pb.js";
+import { createRouterTransport } from "@connectrpc/connect";
+import type { Interceptor } from "@connectrpc/connect";
+
+import { createToshiClient } from "../src/client.js";
+import type { ToshiClient } from "../src/client.js";
+import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
 import { EventType } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 import { WebhookService } from "../src/gen/toshi/workspace/v1/webhook_pb.js";
+import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import { createFake } from "../src/test/index.js";
+
+function clientWith(routes: Parameters<typeof createRouterTransport>[0]): ToshiClient {
+  return createToshiClient({
+    project: "proj",
+    environment: "env",
+    retry: false,
+    transport: (interceptors: Interceptor[]) => createRouterTransport(routes, { transport: { interceptors } }),
+  });
+}
 
 describe("fields the API added", () => {
   it("carries a webhook endpoint's expired cursor and retention boundary", async () => {
@@ -42,32 +56,77 @@ describe("fields the API added", () => {
     expect(moved.endpoint?.cursor).toBe("100");
   });
 
-  it("carries a catalog entry's listing state, reason and successor", async () => {
+  it("carries a workspace's settings, etag and update mask", async () => {
     const fake = createFake();
-    fake.on(ProductService.method.listCatalogEntries, () =>
-      Promise.resolve({
-        entries: [
-          {
-            id: "acme_ci",
-            name: "Acme CI",
-            version: "1.2.0",
-            stale: true,
-            sourceExpiresAt: timestampFromDate(new Date("2026-11-01T00:00:00Z")),
-            state: CatalogEntryState.DEPRECATED,
-            stateReason: "superseded",
-            successor: "acme_ci@2.0.0",
+    fake.on(WorkspaceService.method.updateWorkspace, (request) => {
+      expect(request.updateMask?.paths).toEqual(["settings.sign_in"]);
+      expect(request.workspace?.etag).toBe("etag-1");
+      return Promise.resolve({
+        workspace: {
+          id: "ws-1",
+          etag: "etag-2",
+          settings: {
+            historyDays: 30,
+            signIn: request.workspace?.settings?.signIn,
           },
-        ],
-      }),
-    );
+        },
+      });
+    });
 
-    const entries = await fake.client().product.listCatalogEntries({});
-    const entry = entries.entries[0];
-    expect(entry.stale).toBe(true);
-    expect(entry.sourceExpiresAt !== undefined).toBe(true);
-    expect(entry.state).toBe(CatalogEntryState.DEPRECATED);
-    expect(entry.stateReason).toBe("superseded");
-    expect(entry.successor).toBe("acme_ci@2.0.0");
+    const updated = await fake.client().workspace.updateWorkspace({
+      workspace: { etag: "etag-1", settings: { signIn: { provider: "github" } } },
+      updateMask: { paths: ["settings.sign_in"] },
+    });
+    expect(updated.workspace?.etag).toBe("etag-2");
+    expect(updated.workspace?.settings?.historyDays).toBe(30);
+    expect(updated.workspace?.settings?.signIn?.provider).toBe("github");
+  });
+
+  it("carries a connection's delivery target and its update mask", async () => {
+    const client = clientWith((router) => {
+      router.service(ConnectionService, {
+        updateConnection(request) {
+          expect(request.updateMask?.paths).toEqual(["target"]);
+          return {
+            connection: { id: request.connection?.id, target: request.connection?.target },
+          };
+        },
+        getConnectionDelivery() {
+          return {
+            delivery: { id: "del-1" },
+            runs: [{ run: 1, outcome: "delivered", targetDeliveryId: "target-del-1" }],
+          };
+        },
+      });
+    });
+
+    const updated = await client.connection.updateConnection({
+      connection: { id: "con-1", target: { url: "https://example.com/hooks", secret: "whsec_c2VjcmV0" } },
+      updateMask: { paths: ["target"] },
+    });
+    expect(updated.connection?.target?.url).toBe("https://example.com/hooks");
+
+    const delivery = await client.connection.getConnectionDelivery({ id: "del-1" });
+    expect(delivery.runs[0].outcome).toBe("delivered");
+    expect(delivery.runs[0].targetDeliveryId).toBe("target-del-1");
+  });
+
+  it("carries a job's and a sandbox's image and image version", async () => {
+    const fake = createFake();
+    fake.on(WorkloadService.method.createJob, (request) => {
+      expect(request.spec?.image).toBe("build");
+      return Promise.resolve({ job: { spec: { image: "build", imageVersionId: "imgv-1" } } });
+    });
+    fake.on(WorkloadService.method.createSandbox, (request) => {
+      expect(request.spec?.image).toBe("dev");
+      return Promise.resolve({ sandbox: { spec: { image: "dev", imageVersionId: "imgv-2" } } });
+    });
+
+    const toshi = fake.client();
+    const job = await toshi.workload.jobs.create({ spec: { image: "build" } });
+    expect(job.job?.spec?.imageVersionId).toBe("imgv-1");
+    const sandbox = await toshi.workload.sandboxes.create({ spec: { image: "dev" } });
+    expect(sandbox.sandbox?.spec?.imageVersionId).toBe("imgv-2");
   });
 
   it("carries a trigger's reason, exit code and message", async () => {

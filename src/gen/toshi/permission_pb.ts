@@ -4,7 +4,7 @@
 
 import type { GenExtension, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { extDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
-import type { MethodOptions } from "@bufbuild/protobuf/wkt";
+import type { FieldOptions, MethodOptions } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_descriptor } from "@bufbuild/protobuf/wkt";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/permission.proto.
  */
 export const file_toshi_permission: GenFile = /*@__PURE__*/
-  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJOkAKCnBlcm1pc3Npb24SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi4jgMgASgJUgpwZXJtaXNzaW9uOjYKBXNjb3BlEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYuY4DIAEoCVIFc2NvcGU6RAoFYXVkaXQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi6jgMgASgLMgwudG9zaGkuQXVkaXRSBWF1ZGl0Qh5aHGdvLnRvc2hpY2xvdWQuaW8vYXBpL3Rvc2hpcGJiBnByb3RvMw", [file_google_protobuf_descriptor]);
+  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJOkAKCnBlcm1pc3Npb24SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi4jgMgASgJUgpwZXJtaXNzaW9uOjYKBXNjb3BlEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYuY4DIAEoCVIFc2NvcGU6RAoFYXVkaXQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi6jgMgASgLMgwudG9zaGkuQXVkaXRSBWF1ZGl0OjsKCGJ5X2ZpZWxkEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYvI4DIAEoCFIHYnlGaWVsZDpKChBmaWVsZF9wZXJtaXNzaW9uEh0uZ29vZ2xlLnByb3RvYnVmLkZpZWxkT3B0aW9ucxi7jgMgASgJUg9maWVsZFBlcm1pc3Npb25CHlocZ28udG9zaGljbG91ZC5pby9hcGkvdG9zaGlwYmIGcHJvdG8z", [file_google_protobuf_descriptor]);
 
 /**
  * Audit is the audit event a call records.
@@ -134,4 +134,29 @@ export const scope: GenExtension<MethodOptions, string> = /*@__PURE__*/
  */
 export const audit: GenExtension<MethodOptions, Audit> = /*@__PURE__*/
   extDesc(file_toshi_permission, 2);
+
+/**
+ * by_field marks an update call that needs no permission of its own: each
+ * field its mask names needs its field group's permission, the field's
+ * field_permission or, for a field without one, the method's permission.
+ * The caller needs at least one of them to make the call, and the
+ * handler checks each field the mask names before it writes; a mask that
+ * names nothing needs any one.
+ *
+ * @generated from extension: bool by_field = 51004;
+ */
+export const by_field: GenExtension<MethodOptions, boolean> = /*@__PURE__*/
+  extDesc(file_toshi_permission, 3);
+
+/**
+ * field_permission names what a caller needs to change the field through
+ * the mask of an update call marked by_field: a field group of its own,
+ * such as "billing.write" for a workspace's spending limits. A field
+ * without it needs the method's permission. The build checks the name's
+ * shape, and the permissions page lists the field groups.
+ *
+ * @generated from extension: string field_permission = 51003;
+ */
+export const field_permission: GenExtension<FieldOptions, string> = /*@__PURE__*/
+  extDesc(file_toshi_permission, 4);
 

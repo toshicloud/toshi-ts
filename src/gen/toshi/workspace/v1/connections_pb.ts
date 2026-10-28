@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Duration, DurationJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Duration, DurationJson, FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/connections.proto.
  */
 export const file_toshi_workspace_v1_connections: GenFile = /*@__PURE__*/
-  fileDesc("CiR0b3NoaS93b3Jrc3BhY2UvdjEvY29ubmVjdGlvbnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKiAgoKQ29ubmVjdGlvbhIKCgJpZBgBIAEoCRIwCgRraW5kGAIgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25LaW5kEgwKBG5hbWUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIXCg9pbnN0YWxsYXRpb25faWQYBiABKAMSLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoacHJldmlvdXNfc2VjcmV0X2V4cGlyZXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhkKEXRyYW5zZm9ybV92ZXJzaW9uGAkgASgFIj8KFkxpc3RDb25uZWN0aW9uc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiZwoXTGlzdENvbm5lY3Rpb25zUmVzcG9uc2USMwoLY29ubmVjdGlvbnMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiIgoUR2V0Q29ubmVjdGlvblJlcXVlc3QSCgoCaWQYASABKAkiSwoVR2V0Q29ubmVjdGlvblJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbiKUAQoXQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3QSMAoEa2luZBgBIAEoDjIiLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uS2luZBIMCgRuYW1lGAIgASgJEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAkSEwoLcmVxdWVzdF9rZXkYBSABKAkiXgoYQ3JlYXRlQ29ubmVjdGlvblJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIOCgZzZWNyZXQYAiABKAkiOgoXRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiGgoYRGVsZXRlQ29ubmVjdGlvblJlc3BvbnNlImwKHVJvdGF0ZUNvbm5lY3Rpb25TZWNyZXRSZXF1ZXN0EgoKAmlkGAEgASgJEioKB292ZXJsYXAYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEwoLcmVxdWVzdF9rZXkYAyABKAkiZAoeUm90YXRlQ29ubmVjdGlvblNlY3JldFJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIOCgZzZWNyZXQYAiABKAkiRwodU2V0Q29ubmVjdGlvblRyYW5zZm9ybVJlcXVlc3QSFQoNY29ubmVjdGlvbl9pZBgBIAEoCRIPCgd2ZXJzaW9uGAIgASgFIm4KHlNldENvbm5lY3Rpb25UcmFuc2Zvcm1SZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SGAoQcHJldmlvdXNfdmVyc2lvbhgCIAEoBSLuAwoSQ29ubmVjdGlvbkRlbGl2ZXJ5EgoKAmlkGAEgASgJEhUKDWNvbm5lY3Rpb25faWQYAiABKAkSEgoKd2ViaG9va19pZBgDIAEoCRI6CgVzdGF0ZRgEIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIOCgZyZWFzb24YBSABKAkSKwoHc2VudF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLcmVjZWl2ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKDHByb2Nlc3NlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIYXR0ZW1wdHMYCSABKAUSFAoMY29udGVudF90eXBlGAogASgJEhMKC2JvZHlfZGlnZXN0GAsgASgJEjMKD2JvZHlfZXhwaXJlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGQoRdHJhbnNmb3JtX3ZlcnNpb24YDSABKAUSDwoHcmVwbGF5cxgOIAEoBRITCgtyZXBsYXllZF9ieRgPIAEoCRISCgpldmVudF9uYW1lGBAgASgJIocCChVDb25uZWN0aW9uRGVsaXZlcnlSdW4SCwoDcnVuGAEgASgFEhkKEXRyYW5zZm9ybV92ZXJzaW9uGAIgASgFEhcKD3JlY2VpcHRfdmVyc2lvbhgDIAEoBRIPCgdvdXRjb21lGAQgASgJEhAKCGV2ZW50X2lkGAUgASgJEg4KBnJlYXNvbhgGIAEoCRINCgVlcnJvchgHIAEoCRIrCghkdXJhdGlvbhgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIvCgtmaW5pc2hlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFYWN0b3IYCiABKAkimwEKH0xpc3RDb25uZWN0aW9uRGVsaXZlcmllc1JlcXVlc3QSFQoNY29ubmVjdGlvbl9pZBgBIAEoCRI6CgVzdGF0ZRgCIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJ3CiBMaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXNSZXNwb25zZRI6CgpkZWxpdmVyaWVzGAEgAygLMiYudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKgocR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVxdWVzdBIKCgJpZBgBIAEoCSKSAQodR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2USOAoIZGVsaXZlcnkYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5EjcKBHJ1bnMYAiADKAsyKS50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5UnVuIkIKH1JlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiXAogUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2USOAoIZGVsaXZlcnkYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5KmoKDkNvbm5lY3Rpb25LaW5kEh8KG0NPTk5FQ1RJT05fS0lORF9VTlNQRUNJRklFRBAAEhoKFkNPTk5FQ1RJT05fS0lORF9HSVRIVUIQARIbChdDT05ORUNUSU9OX0tJTkRfV0VCSE9PSxACKuIBChdDb25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIpCiVDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASJgoiQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9SRUNFSVZFRBABEicKI0NPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfUFJPQ0VTU0VEEAISJQohQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9EUk9QUEVEEAMSJAogQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9GQUlMRUQQBDKtDAoRQ29ubmVjdGlvblNlcnZpY2USjQEKD0xpc3RDb25uZWN0aW9ucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q29ubmVjdGlvbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uc1Jlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2UShwEKDUdldENvbm5lY3Rpb24SKC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvblJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvblJlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2USkQEKEENyZWF0ZUNvbm5lY3Rpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ29ubmVjdGlvblJlc3BvbnNlIiLC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNlEpEBChBEZWxldGVDb25uZWN0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXNwb25zZSIiwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZRLCAQoWUm90YXRlQ29ubmVjdGlvblNlY3JldBIxLnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVxdWVzdBoyLnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVzcG9uc2UiQcLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgbChljb25uZWN0aW9uLnNlY3JldF9yb3RhdGVkEsEBChZTZXRDb25uZWN0aW9uVHJhbnNmb3JtEjEudG9zaGkud29ya3NwYWNlLnYxLlNldENvbm5lY3Rpb25UcmFuc2Zvcm1SZXF1ZXN0GjIudG9zaGkud29ya3NwYWNlLnYxLlNldENvbm5lY3Rpb25UcmFuc2Zvcm1SZXNwb25zZSJAwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZdLzGBoKGGNvbm5lY3Rpb24udHJhbnNmb3JtX3NldBKoAQoYTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzEjMudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uRGVsaXZlcmllc1JlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzUmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRKfAQoVR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5EjAudG9zaGkud29ya3NwYWNlLnYxLkdldENvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRL/AQoYUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5EjMudG9zaGkud29ya3NwYWNlLnYxLlJlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2UieMLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2XS8xhSCiRjb25uZWN0aW9uLmRlbGl2ZXJ5X3JlcGxheV9yZXF1ZXN0ZWQSKmNvbm5lY3Rpb246cmVzcG9uc2UuZGVsaXZlcnkuY29ubmVjdGlvbl9pZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiR0b3NoaS93b3Jrc3BhY2UvdjEvY29ubmVjdGlvbnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLWAgoKQ29ubmVjdGlvbhIKCgJpZBgBIAEoCRIwCgRraW5kGAIgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25LaW5kEgwKBG5hbWUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIXCg9pbnN0YWxsYXRpb25faWQYBiABKAMSLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoacHJldmlvdXNfc2VjcmV0X2V4cGlyZXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKBnRhcmdldBgKIAEoCzIkLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uVGFyZ2V0SgQICRAKUhF0cmFuc2Zvcm1fdmVyc2lvbiJzChBDb25uZWN0aW9uVGFyZ2V0EgsKA3VybBgBIAEoCRIOCgZzZWNyZXQYAiABKAkSEgoKdXBkYXRlZF9ieRgDIAEoCRIuCgp1cGRhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI/ChZMaXN0Q29ubmVjdGlvbnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJImcKF0xpc3RDb25uZWN0aW9uc1Jlc3BvbnNlEjMKC2Nvbm5lY3Rpb25zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiIKFEdldENvbm5lY3Rpb25SZXF1ZXN0EgoKAmlkGAEgASgJIksKFUdldENvbm5lY3Rpb25SZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24ilAEKF0NyZWF0ZUNvbm5lY3Rpb25SZXF1ZXN0EjAKBGtpbmQYASABKA4yIi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbktpbmQSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEhMKC3JlcXVlc3Rfa2V5GAUgASgJIl4KGENyZWF0ZUNvbm5lY3Rpb25SZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SDgoGc2VjcmV0GAIgASgJIjoKF0RlbGV0ZUNvbm5lY3Rpb25SZXF1ZXN0EgoKAmlkGAEgASgJEhMKC3JlcXVlc3Rfa2V5GAIgASgJIhoKGERlbGV0ZUNvbm5lY3Rpb25SZXNwb25zZSJsCh1Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVxdWVzdBIKCgJpZBgBIAEoCRIqCgdvdmVybGFwGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhMKC3JlcXVlc3Rfa2V5GAMgASgJImQKHlJvdGF0ZUNvbm5lY3Rpb25TZWNyZXRSZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SDgoGc2VjcmV0GAIgASgJIn4KF1VwZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0EjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siTgoYVXBkYXRlQ29ubmVjdGlvblJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbiLsAwoSQ29ubmVjdGlvbkRlbGl2ZXJ5EgoKAmlkGAEgASgJEhUKDWNvbm5lY3Rpb25faWQYAiABKAkSEgoKd2ViaG9va19pZBgDIAEoCRI6CgVzdGF0ZRgEIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIOCgZyZWFzb24YBSABKAkSKwoHc2VudF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLcmVjZWl2ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKDHByb2Nlc3NlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIYXR0ZW1wdHMYCSABKAUSFAoMY29udGVudF90eXBlGAogASgJEhMKC2JvZHlfZGlnZXN0GAsgASgJEjMKD2JvZHlfZXhwaXJlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDwoHcmVwbGF5cxgOIAEoBRITCgtyZXBsYXllZF9ieRgPIAEoCRISCgpldmVudF9uYW1lGBAgASgJSgQIDRAOUhF0cmFuc2Zvcm1fdmVyc2lvbiKdAgoVQ29ubmVjdGlvbkRlbGl2ZXJ5UnVuEgsKA3J1bhgBIAEoBRIPCgdvdXRjb21lGAQgASgJEhAKCGV2ZW50X2lkGAUgASgJEg0KBWVycm9yGAcgASgJEisKCGR1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi8KC2ZpbmlzaGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVhY3RvchgKIAEoCRIaChJ0YXJnZXRfZGVsaXZlcnlfaWQYCyABKAlKBAgCEANKBAgDEARKBAgGEAdSEXRyYW5zZm9ybV92ZXJzaW9uUg9yZWNlaXB0X3ZlcnNpb25SBnJlYXNvbiKbAQofTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzUmVxdWVzdBIVCg1jb25uZWN0aW9uX2lkGAEgASgJEjoKBXN0YXRlGAIgASgOMisudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeVN0YXRlEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJIncKIExpc3RDb25uZWN0aW9uRGVsaXZlcmllc1Jlc3BvbnNlEjoKCmRlbGl2ZXJpZXMYASADKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIqChxHZXRDb25uZWN0aW9uRGVsaXZlcnlSZXF1ZXN0EgoKAmlkGAEgASgJIpIBCh1HZXRDb25uZWN0aW9uRGVsaXZlcnlSZXNwb25zZRI4CghkZWxpdmVyeRgBIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnkSNwoEcnVucxgCIAMoCzIpLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnlSdW4iQgofUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVxdWVzdBIKCgJpZBgBIAEoCRITCgtyZXF1ZXN0X2tleRgCIAEoCSJcCiBSZXBsYXlDb25uZWN0aW9uRGVsaXZlcnlSZXNwb25zZRI4CghkZWxpdmVyeRgBIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnkqagoOQ29ubmVjdGlvbktpbmQSHwobQ09OTkVDVElPTl9LSU5EX1VOU1BFQ0lGSUVEEAASGgoWQ09OTkVDVElPTl9LSU5EX0dJVEhVQhABEhsKF0NPTk5FQ1RJT05fS0lORF9XRUJIT09LEAIq4gEKF0Nvbm5lY3Rpb25EZWxpdmVyeVN0YXRlEikKJUNPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfVU5TUEVDSUZJRUQQABImCiJDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX1JFQ0VJVkVEEAESJwojQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9QUk9DRVNTRUQQAhIlCiFDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX0RST1BQRUQQAxIkCiBDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX0ZBSUxFRBAEMpsMChFDb25uZWN0aW9uU2VydmljZRKNAQoPTGlzdENvbm5lY3Rpb25zEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENvbm5lY3Rpb25zUmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRKHAQoNR2V0Q29ubmVjdGlvbhIoLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDb25uZWN0aW9uUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDb25uZWN0aW9uUmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRKRAQoQQ3JlYXRlQ29ubmVjdGlvbhIrLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDb25uZWN0aW9uUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDb25uZWN0aW9uUmVzcG9uc2UiIsLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2USkQEKEERlbGV0ZUNvbm5lY3Rpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlQ29ubmVjdGlvblJlc3BvbnNlIiLC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNlEsIBChZSb3RhdGVDb25uZWN0aW9uU2VjcmV0EjEudG9zaGkud29ya3NwYWNlLnYxLlJvdGF0ZUNvbm5lY3Rpb25TZWNyZXRSZXF1ZXN0GjIudG9zaGkud29ya3NwYWNlLnYxLlJvdGF0ZUNvbm5lY3Rpb25TZWNyZXRSZXNwb25zZSJBwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZdLzGBsKGWNvbm5lY3Rpb24uc2VjcmV0X3JvdGF0ZWQSrwEKEFVwZGF0ZUNvbm5lY3Rpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlQ29ubmVjdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlQ29ubmVjdGlvblJlc3BvbnNlIkDC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYGhIYY29ubmVjdGlvbjpjb25uZWN0aW9uLmlkEqgBChhMaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXMSMy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzUmVxdWVzdBo0LnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXNSZXNwb25zZSIhwvMYEGNvbm5lY3Rpb25zLnJlYWTK8xgJd29ya3NwYWNlEp8BChVHZXRDb25uZWN0aW9uRGVsaXZlcnkSMC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDb25uZWN0aW9uRGVsaXZlcnlSZXNwb25zZSIhwvMYEGNvbm5lY3Rpb25zLnJlYWTK8xgJd29ya3NwYWNlEv8BChhSZXBsYXlDb25uZWN0aW9uRGVsaXZlcnkSMy50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVxdWVzdBo0LnRvc2hpLndvcmtzcGFjZS52MS5SZXBsYXlDb25uZWN0aW9uRGVsaXZlcnlSZXNwb25zZSJ4wvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZdLzGFIKJGNvbm5lY3Rpb24uZGVsaXZlcnlfcmVwbGF5X3JlcXVlc3RlZBIqY29ubmVjdGlvbjpyZXNwb25zZS5kZWxpdmVyeS5jb25uZWN0aW9uX2lkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Connection is one source of a workspace's events.
@@ -73,12 +73,12 @@ export type Connection = Message<"toshi.workspace.v1.Connection"> & {
   previousSecretExpiresAt?: Timestamp | undefined;
 
   /**
-   * The version of the workspace's transform hook a WEBHOOK connection runs
-   * on each delivery; zero runs none.
+   * Where a WEBHOOK connection's deliveries are posted in place of the
+   * event log; unset when they become events.
    *
-   * @generated from field: int32 transform_version = 9;
+   * @generated from field: toshi.workspace.v1.ConnectionTarget target = 10;
    */
-  transformVersion: number;
+  target?: ConnectionTarget | undefined;
 };
 
 /**
@@ -139,12 +139,12 @@ export type ConnectionJson = {
   previousSecretExpiresAt?: TimestampJson;
 
   /**
-   * The version of the workspace's transform hook a WEBHOOK connection runs
-   * on each delivery; zero runs none.
+   * Where a WEBHOOK connection's deliveries are posted in place of the
+   * event log; unset when they become events.
    *
-   * @generated from field: int32 transform_version = 9;
+   * @generated from field: toshi.workspace.v1.ConnectionTarget target = 10;
    */
-  transformVersion?: number;
+  target?: ConnectionTargetJson;
 };
 
 /**
@@ -153,6 +153,87 @@ export type ConnectionJson = {
  */
 export const ConnectionSchema: GenMessage<Connection, {jsonType: ConnectionJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_connections, 0);
+
+/**
+ * ConnectionTarget is the URL a WEBHOOK connection's deliveries are posted
+ * to: each delivery's event, as the event log would hold it, signed as
+ * Standard Webhooks does with the target's own secret, until the URL
+ * answers 2xx or the tries run out.
+ *
+ * @generated from message toshi.workspace.v1.ConnectionTarget
+ */
+export type ConnectionTarget = Message<"toshi.workspace.v1.ConnectionTarget"> & {
+  /**
+   * url is the https URL the events are posted to.
+   *
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * secret is the signing secret: "whsec_" and the base64 of 24 to 64
+   * bytes. Input only: no call returns it.
+   *
+   * @generated from field: string secret = 2;
+   */
+  secret: string;
+
+  /**
+   * updated_by is who set it last, as the audit log names them.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: Timestamp | undefined;
+};
+
+/**
+ * ConnectionTarget is the URL a WEBHOOK connection's deliveries are posted
+ * to: each delivery's event, as the event log would hold it, signed as
+ * Standard Webhooks does with the target's own secret, until the URL
+ * answers 2xx or the tries run out.
+ *
+ * @generated from message toshi.workspace.v1.ConnectionTarget
+ */
+export type ConnectionTargetJson = {
+  /**
+   * url is the https URL the events are posted to.
+   *
+   * @generated from field: string url = 1;
+   */
+  url?: string;
+
+  /**
+   * secret is the signing secret: "whsec_" and the base64 of 24 to 64
+   * bytes. Input only: no call returns it.
+   *
+   * @generated from field: string secret = 2;
+   */
+  secret?: string;
+
+  /**
+   * updated_by is who set it last, as the audit log names them.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ConnectionTarget.
+ * Use `create(ConnectionTargetSchema)` to create a new message.
+ */
+export const ConnectionTargetSchema: GenMessage<ConnectionTarget, {jsonType: ConnectionTargetJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_connections, 1);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionsRequest
@@ -197,7 +278,7 @@ export type ListConnectionsRequestJson = {
  * Use `create(ListConnectionsRequestSchema)` to create a new message.
  */
 export const ListConnectionsRequestSchema: GenMessage<ListConnectionsRequest, {jsonType: ListConnectionsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 1);
+  messageDesc(file_toshi_workspace_v1_connections, 2);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionsResponse
@@ -238,7 +319,7 @@ export type ListConnectionsResponseJson = {
  * Use `create(ListConnectionsResponseSchema)` to create a new message.
  */
 export const ListConnectionsResponseSchema: GenMessage<ListConnectionsResponse, {jsonType: ListConnectionsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 2);
+  messageDesc(file_toshi_workspace_v1_connections, 3);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionRequest
@@ -265,7 +346,7 @@ export type GetConnectionRequestJson = {
  * Use `create(GetConnectionRequestSchema)` to create a new message.
  */
 export const GetConnectionRequestSchema: GenMessage<GetConnectionRequest, {jsonType: GetConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 3);
+  messageDesc(file_toshi_workspace_v1_connections, 4);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionResponse
@@ -292,7 +373,7 @@ export type GetConnectionResponseJson = {
  * Use `create(GetConnectionResponseSchema)` to create a new message.
  */
 export const GetConnectionResponseSchema: GenMessage<GetConnectionResponse, {jsonType: GetConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 4);
+  messageDesc(file_toshi_workspace_v1_connections, 5);
 
 /**
  * @generated from message toshi.workspace.v1.CreateConnectionRequest
@@ -367,7 +448,7 @@ export type CreateConnectionRequestJson = {
  * Use `create(CreateConnectionRequestSchema)` to create a new message.
  */
 export const CreateConnectionRequestSchema: GenMessage<CreateConnectionRequest, {jsonType: CreateConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 5);
+  messageDesc(file_toshi_workspace_v1_connections, 6);
 
 /**
  * @generated from message toshi.workspace.v1.CreateConnectionResponse
@@ -410,7 +491,7 @@ export type CreateConnectionResponseJson = {
  * Use `create(CreateConnectionResponseSchema)` to create a new message.
  */
 export const CreateConnectionResponseSchema: GenMessage<CreateConnectionResponse, {jsonType: CreateConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 6);
+  messageDesc(file_toshi_workspace_v1_connections, 7);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteConnectionRequest
@@ -447,7 +528,7 @@ export type DeleteConnectionRequestJson = {
  * Use `create(DeleteConnectionRequestSchema)` to create a new message.
  */
 export const DeleteConnectionRequestSchema: GenMessage<DeleteConnectionRequest, {jsonType: DeleteConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 7);
+  messageDesc(file_toshi_workspace_v1_connections, 8);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteConnectionResponse
@@ -466,7 +547,7 @@ export type DeleteConnectionResponseJson = {
  * Use `create(DeleteConnectionResponseSchema)` to create a new message.
  */
 export const DeleteConnectionResponseSchema: GenMessage<DeleteConnectionResponse, {jsonType: DeleteConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 8);
+  messageDesc(file_toshi_workspace_v1_connections, 9);
 
 /**
  * @generated from message toshi.workspace.v1.RotateConnectionSecretRequest
@@ -519,7 +600,7 @@ export type RotateConnectionSecretRequestJson = {
  * Use `create(RotateConnectionSecretRequestSchema)` to create a new message.
  */
 export const RotateConnectionSecretRequestSchema: GenMessage<RotateConnectionSecretRequest, {jsonType: RotateConnectionSecretRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 9);
+  messageDesc(file_toshi_workspace_v1_connections, 10);
 
 /**
  * @generated from message toshi.workspace.v1.RotateConnectionSecretResponse
@@ -562,89 +643,77 @@ export type RotateConnectionSecretResponseJson = {
  * Use `create(RotateConnectionSecretResponseSchema)` to create a new message.
  */
 export const RotateConnectionSecretResponseSchema: GenMessage<RotateConnectionSecretResponse, {jsonType: RotateConnectionSecretResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 10);
-
-/**
- * @generated from message toshi.workspace.v1.SetConnectionTransformRequest
- */
-export type SetConnectionTransformRequest = Message<"toshi.workspace.v1.SetConnectionTransformRequest"> & {
-  /**
-   * @generated from field: string connection_id = 1;
-   */
-  connectionId: string;
-
-  /**
-   * The transform hook version the connection runs; zero runs none.
-   *
-   * @generated from field: int32 version = 2;
-   */
-  version: number;
-};
-
-/**
- * @generated from message toshi.workspace.v1.SetConnectionTransformRequest
- */
-export type SetConnectionTransformRequestJson = {
-  /**
-   * @generated from field: string connection_id = 1;
-   */
-  connectionId?: string;
-
-  /**
-   * The transform hook version the connection runs; zero runs none.
-   *
-   * @generated from field: int32 version = 2;
-   */
-  version?: number;
-};
-
-/**
- * Describes the message toshi.workspace.v1.SetConnectionTransformRequest.
- * Use `create(SetConnectionTransformRequestSchema)` to create a new message.
- */
-export const SetConnectionTransformRequestSchema: GenMessage<SetConnectionTransformRequest, {jsonType: SetConnectionTransformRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_connections, 11);
 
 /**
- * @generated from message toshi.workspace.v1.SetConnectionTransformResponse
+ * @generated from message toshi.workspace.v1.UpdateConnectionRequest
  */
-export type SetConnectionTransformResponse = Message<"toshi.workspace.v1.SetConnectionTransformResponse"> & {
+export type UpdateConnectionRequest = Message<"toshi.workspace.v1.UpdateConnectionRequest"> & {
   /**
+   * id names the connection; the fields update_mask names carry the new
+   * values.
+   *
    * @generated from field: toshi.workspace.v1.Connection connection = 1;
    */
   connection?: Connection | undefined;
 
   /**
-   * The version the connection ran before; zero for none.
-   *
-   * @generated from field: int32 previous_version = 2;
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
    */
-  previousVersion: number;
+  updateMask?: FieldMask | undefined;
 };
 
 /**
- * @generated from message toshi.workspace.v1.SetConnectionTransformResponse
+ * @generated from message toshi.workspace.v1.UpdateConnectionRequest
  */
-export type SetConnectionTransformResponseJson = {
+export type UpdateConnectionRequestJson = {
   /**
+   * id names the connection; the fields update_mask names carry the new
+   * values.
+   *
    * @generated from field: toshi.workspace.v1.Connection connection = 1;
    */
   connection?: ConnectionJson;
 
   /**
-   * The version the connection ran before; zero for none.
-   *
-   * @generated from field: int32 previous_version = 2;
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
    */
-  previousVersion?: number;
+  updateMask?: FieldMaskJson;
 };
 
 /**
- * Describes the message toshi.workspace.v1.SetConnectionTransformResponse.
- * Use `create(SetConnectionTransformResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.UpdateConnectionRequest.
+ * Use `create(UpdateConnectionRequestSchema)` to create a new message.
  */
-export const SetConnectionTransformResponseSchema: GenMessage<SetConnectionTransformResponse, {jsonType: SetConnectionTransformResponseJson}> = /*@__PURE__*/
+export const UpdateConnectionRequestSchema: GenMessage<UpdateConnectionRequest, {jsonType: UpdateConnectionRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_connections, 12);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateConnectionResponse
+ */
+export type UpdateConnectionResponse = Message<"toshi.workspace.v1.UpdateConnectionResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Connection connection = 1;
+   */
+  connection?: Connection | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateConnectionResponse
+ */
+export type UpdateConnectionResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Connection connection = 1;
+   */
+  connection?: ConnectionJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateConnectionResponse.
+ * Use `create(UpdateConnectionResponseSchema)` to create a new message.
+ */
+export const UpdateConnectionResponseSchema: GenMessage<UpdateConnectionResponse, {jsonType: UpdateConnectionResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_connections, 13);
 
 /**
  * ConnectionDelivery is one message a WEBHOOK connection's sender sent:
@@ -676,7 +745,7 @@ export type ConnectionDelivery = Message<"toshi.workspace.v1.ConnectionDelivery"
   state: ConnectionDeliveryState;
 
   /**
-   * Why it was dropped or failed, such as transform_error or store_error;
+   * Why it was dropped or failed, such as delivery_failed or store_error;
    * empty otherwise.
    *
    * @generated from field: string reason = 5;
@@ -732,14 +801,6 @@ export type ConnectionDelivery = Message<"toshi.workspace.v1.ConnectionDelivery"
   bodyExpiredAt?: Timestamp | undefined;
 
   /**
-   * The transform version the connection ran when the delivery arrived;
-   * zero for none.
-   *
-   * @generated from field: int32 transform_version = 13;
-   */
-  transformVersion: number;
-
-  /**
    * How many times it was replayed.
    *
    * @generated from field: int32 replays = 14;
@@ -793,7 +854,7 @@ export type ConnectionDeliveryJson = {
   state?: ConnectionDeliveryStateJson;
 
   /**
-   * Why it was dropped or failed, such as transform_error or store_error;
+   * Why it was dropped or failed, such as delivery_failed or store_error;
    * empty otherwise.
    *
    * @generated from field: string reason = 5;
@@ -849,14 +910,6 @@ export type ConnectionDeliveryJson = {
   bodyExpiredAt?: TimestampJson;
 
   /**
-   * The transform version the connection ran when the delivery arrived;
-   * zero for none.
-   *
-   * @generated from field: int32 transform_version = 13;
-   */
-  transformVersion?: number;
-
-  /**
    * How many times it was replayed.
    *
    * @generated from field: int32 replays = 14;
@@ -885,7 +938,7 @@ export type ConnectionDeliveryJson = {
  * Use `create(ConnectionDeliverySchema)` to create a new message.
  */
 export const ConnectionDeliverySchema: GenMessage<ConnectionDelivery, {jsonType: ConnectionDeliveryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 13);
+  messageDesc(file_toshi_workspace_v1_connections, 14);
 
 /**
  * ConnectionDeliveryRun is one time a worker ran a delivery to its end.
@@ -901,22 +954,7 @@ export type ConnectionDeliveryRun = Message<"toshi.workspace.v1.ConnectionDelive
   run: number;
 
   /**
-   * The transform version the run ran; zero for none.
-   *
-   * @generated from field: int32 transform_version = 2;
-   */
-  transformVersion: number;
-
-  /**
-   * The transform version the connection ran when the delivery arrived.
-   *
-   * @generated from field: int32 receipt_version = 3;
-   */
-  receiptVersion: number;
-
-  /**
-   * event, drop, transform_error, transform_timeout,
-   * transform_invalid_output, connection_deleted, body_not_json,
+   * event, delivered, delivery_failed, connection_deleted, body_not_json,
    * invalid_event, unnamed or failed.
    *
    * @generated from field: string outcome = 4;
@@ -931,14 +969,8 @@ export type ConnectionDeliveryRun = Message<"toshi.workspace.v1.ConnectionDelive
   eventId: string;
 
   /**
-   * The transform's own reason for a drop.
-   *
-   * @generated from field: string reason = 6;
-   */
-  reason: string;
-
-  /**
-   * What failed, for a transform that failed or a store that did.
+   * What failed, for a target that took the delivery on no try or a store
+   * that failed.
    *
    * @generated from field: string error = 7;
    */
@@ -960,6 +992,14 @@ export type ConnectionDeliveryRun = Message<"toshi.workspace.v1.ConnectionDelive
    * @generated from field: string actor = 10;
    */
   actor: string;
+
+  /**
+   * The outbound delivery that posted it to the connection's target, for
+   * delivered and delivery_failed.
+   *
+   * @generated from field: string target_delivery_id = 11;
+   */
+  targetDeliveryId: string;
 };
 
 /**
@@ -976,22 +1016,7 @@ export type ConnectionDeliveryRunJson = {
   run?: number;
 
   /**
-   * The transform version the run ran; zero for none.
-   *
-   * @generated from field: int32 transform_version = 2;
-   */
-  transformVersion?: number;
-
-  /**
-   * The transform version the connection ran when the delivery arrived.
-   *
-   * @generated from field: int32 receipt_version = 3;
-   */
-  receiptVersion?: number;
-
-  /**
-   * event, drop, transform_error, transform_timeout,
-   * transform_invalid_output, connection_deleted, body_not_json,
+   * event, delivered, delivery_failed, connection_deleted, body_not_json,
    * invalid_event, unnamed or failed.
    *
    * @generated from field: string outcome = 4;
@@ -1006,14 +1031,8 @@ export type ConnectionDeliveryRunJson = {
   eventId?: string;
 
   /**
-   * The transform's own reason for a drop.
-   *
-   * @generated from field: string reason = 6;
-   */
-  reason?: string;
-
-  /**
-   * What failed, for a transform that failed or a store that did.
+   * What failed, for a target that took the delivery on no try or a store
+   * that failed.
    *
    * @generated from field: string error = 7;
    */
@@ -1035,6 +1054,14 @@ export type ConnectionDeliveryRunJson = {
    * @generated from field: string actor = 10;
    */
   actor?: string;
+
+  /**
+   * The outbound delivery that posted it to the connection's target, for
+   * delivered and delivery_failed.
+   *
+   * @generated from field: string target_delivery_id = 11;
+   */
+  targetDeliveryId?: string;
 };
 
 /**
@@ -1042,7 +1069,7 @@ export type ConnectionDeliveryRunJson = {
  * Use `create(ConnectionDeliveryRunSchema)` to create a new message.
  */
 export const ConnectionDeliveryRunSchema: GenMessage<ConnectionDeliveryRun, {jsonType: ConnectionDeliveryRunJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 14);
+  messageDesc(file_toshi_workspace_v1_connections, 15);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionDeliveriesRequest
@@ -1111,7 +1138,7 @@ export type ListConnectionDeliveriesRequestJson = {
  * Use `create(ListConnectionDeliveriesRequestSchema)` to create a new message.
  */
 export const ListConnectionDeliveriesRequestSchema: GenMessage<ListConnectionDeliveriesRequest, {jsonType: ListConnectionDeliveriesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 15);
+  messageDesc(file_toshi_workspace_v1_connections, 16);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionDeliveriesResponse
@@ -1152,7 +1179,7 @@ export type ListConnectionDeliveriesResponseJson = {
  * Use `create(ListConnectionDeliveriesResponseSchema)` to create a new message.
  */
 export const ListConnectionDeliveriesResponseSchema: GenMessage<ListConnectionDeliveriesResponse, {jsonType: ListConnectionDeliveriesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 16);
+  messageDesc(file_toshi_workspace_v1_connections, 17);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionDeliveryRequest
@@ -1179,7 +1206,7 @@ export type GetConnectionDeliveryRequestJson = {
  * Use `create(GetConnectionDeliveryRequestSchema)` to create a new message.
  */
 export const GetConnectionDeliveryRequestSchema: GenMessage<GetConnectionDeliveryRequest, {jsonType: GetConnectionDeliveryRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 17);
+  messageDesc(file_toshi_workspace_v1_connections, 18);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionDeliveryResponse
@@ -1216,7 +1243,7 @@ export type GetConnectionDeliveryResponseJson = {
  * Use `create(GetConnectionDeliveryResponseSchema)` to create a new message.
  */
 export const GetConnectionDeliveryResponseSchema: GenMessage<GetConnectionDeliveryResponse, {jsonType: GetConnectionDeliveryResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 18);
+  messageDesc(file_toshi_workspace_v1_connections, 19);
 
 /**
  * @generated from message toshi.workspace.v1.ReplayConnectionDeliveryRequest
@@ -1253,7 +1280,7 @@ export type ReplayConnectionDeliveryRequestJson = {
  * Use `create(ReplayConnectionDeliveryRequestSchema)` to create a new message.
  */
 export const ReplayConnectionDeliveryRequestSchema: GenMessage<ReplayConnectionDeliveryRequest, {jsonType: ReplayConnectionDeliveryRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 19);
+  messageDesc(file_toshi_workspace_v1_connections, 20);
 
 /**
  * @generated from message toshi.workspace.v1.ReplayConnectionDeliveryResponse
@@ -1284,7 +1311,7 @@ export type ReplayConnectionDeliveryResponseJson = {
  * Use `create(ReplayConnectionDeliveryResponseSchema)` to create a new message.
  */
 export const ReplayConnectionDeliveryResponseSchema: GenMessage<ReplayConnectionDeliveryResponse, {jsonType: ReplayConnectionDeliveryResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 20);
+  messageDesc(file_toshi_workspace_v1_connections, 21);
 
 /**
  * ConnectionKind is the kind of source a connection receives events from.
@@ -1344,7 +1371,7 @@ export enum ConnectionDeliveryState {
   RECEIVED = 1,
 
   /**
-   * It became an event.
+   * It became an event, or its connection's target took it.
    *
    * @generated from enum value: CONNECTION_DELIVERY_STATE_PROCESSED = 2;
    */
@@ -1358,7 +1385,8 @@ export enum ConnectionDeliveryState {
   DROPPED = 3,
 
   /**
-   * The store failed on every try to write its event.
+   * The store failed on every try to write its event, or its connection's
+   * target took it on no try.
    *
    * @generated from enum value: CONNECTION_DELIVERY_STATE_FAILED = 4;
    */
@@ -1465,18 +1493,23 @@ export const ConnectionService: GenService<{
     output: typeof RotateConnectionSecretResponseSchema;
   },
   /**
-   * SetConnectionTransform makes version the version of the workspace's
-   * transform hook a WEBHOOK connection runs on each delivery, and zero
-   * makes it run none. A version of that type the workspace does not have is
-   * NOT_FOUND, one below zero INVALID_ARGUMENT, and a GITHUB connection
-   * FAILED_PRECONDITION, as only a WEBHOOK connection runs one.
+   * UpdateConnection sets the fields of connection.id's connection that
+   * update_mask names. The one field it sets is target, the URL a WEBHOOK
+   * connection's deliveries are posted to in place of the event log: its
+   * url and secret, both required, or an empty url to clear it. An unset
+   * update_mask names the fields connection carries, an empty one changes
+   * nothing, and "*" or a path of another field is INVALID_ARGUMENT. The
+   * secret is sealed under the workspace's data key and never returned; a
+   * deployment with no keyring refuses it with FAILED_PRECONDITION. A
+   * GITHUB connection is FAILED_PRECONDITION, and one the workspace does
+   * not have NOT_FOUND.
    *
-   * @generated from rpc toshi.workspace.v1.ConnectionService.SetConnectionTransform
+   * @generated from rpc toshi.workspace.v1.ConnectionService.UpdateConnection
    */
-  setConnectionTransform: {
+  updateConnection: {
     methodKind: "unary";
-    input: typeof SetConnectionTransformRequestSchema;
-    output: typeof SetConnectionTransformResponseSchema;
+    input: typeof UpdateConnectionRequestSchema;
+    output: typeof UpdateConnectionResponseSchema;
   },
   /**
    * ListConnectionDeliveries returns a WEBHOOK connection's deliveries: the
@@ -1496,8 +1529,8 @@ export const ConnectionService: GenService<{
   },
   /**
    * GetConnectionDelivery returns one delivery, without its body, and its
-   * runs: each time a worker made it an event, dropped it or failed it,
-   * oldest first. A delivery the workspace does not have is NOT_FOUND.
+   * runs: each time a worker made it an event, posted it to its
+   * connection's target, dropped it or failed it, oldest first. A delivery the workspace does not have is NOT_FOUND.
    *
    * @generated from rpc toshi.workspace.v1.ConnectionService.GetConnectionDelivery
    */
@@ -1509,8 +1542,8 @@ export const ConnectionService: GenService<{
   /**
    * ReplayConnectionDelivery sends a processed, dropped or failed delivery
    * through its connection again, as a new message under the same webhook
-   * id: it runs the transform the connection runs then, and its run
-   * records the caller. A delivery still received, whose receipt or body
+   * id: it goes to the connection's target then, or to the event log when
+   * it has none, and its run records the caller. A delivery still received, whose receipt or body
    * expired, or whose connection is deleted is FAILED_PRECONDITION, as is
    * one another replay counted since this call read it. A delivery the
    * workspace does not have is NOT_FOUND.

@@ -12,7 +12,6 @@ import { ConnectionService } from "./gen/toshi/workspace/v1/connections_pb.js";
 import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
-import { HookService } from "./gen/toshi/workspace/v1/hooks_pb.js";
 import { ImageService } from "./gen/toshi/workspace/v1/images_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
@@ -27,6 +26,16 @@ import { TriggerService } from "./gen/toshi/workspace/v1/triggers_pb.js";
 import { VolumeService } from "./gen/toshi/workspace/v1/volumes_pb.js";
 import { WebhookService } from "./gen/toshi/workspace/v1/webhook_pb.js";
 import { WorkspaceService } from "./gen/toshi/workspace/v1/workspace_service_pb.js";
+import {
+  CreatePreviewShareLinkRequestSchema,
+  ListPreviewShareLinksRequestSchema,
+  RevokePreviewShareLinkRequestSchema,
+} from "./gen/toshi/workspace/v1/workspace_pb.js";
+import type {
+  CreatePreviewShareLinkResponse,
+  ListPreviewShareLinksResponse,
+  RevokePreviewShareLinkResponse,
+} from "./gen/toshi/workspace/v1/workspace_pb.js";
 import {
   CancelJobRequestSchema,
   CreateJobRequestSchema,
@@ -183,7 +192,6 @@ export interface ToshiClient {
   readonly product: Client<typeof ProductService>;
   readonly discovery: Client<typeof DiscoveryService>;
   readonly connection: Client<typeof ConnectionService>;
-  readonly hook: Client<typeof HookService>;
   readonly role: Client<typeof RoleService>;
   readonly trigger: Client<typeof TriggerService>;
   readonly account: Client<typeof AccountService>;
@@ -245,6 +253,18 @@ export interface SandboxesClient {
   wait(req: MessageInitShape<typeof WaitSandboxRequestSchema>, opts?: CallOptions): Promise<WaitSandboxResponse>;
   watch(req: MessageInitShape<typeof WatchSandboxesRequestSchema>, opts?: CallOptions): Promise<SandboxWatch>;
   execute(start: MessageInitShape<typeof ExecuteStartSchema>, opts?: CallOptions): Promise<Process>;
+  createPreviewShareLink(
+    req: MessageInitShape<typeof CreatePreviewShareLinkRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<CreatePreviewShareLinkResponse>;
+  listPreviewShareLinks(
+    req: MessageInitShape<typeof ListPreviewShareLinksRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ListPreviewShareLinksResponse>;
+  revokePreviewShareLink(
+    req: MessageInitShape<typeof RevokePreviewShareLinkRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<RevokePreviewShareLinkResponse>;
 }
 
 /** A service's calls: one method for each of WorkloadService's service calls. */
@@ -400,6 +420,9 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         watch: (req, opts) =>
           openSandboxWatch(workloadService, retry, create(WatchSandboxesRequestSchema, req), opts),
         execute: (start, opts) => executeCommand(workloadService, start, opts),
+        createPreviewShareLink: (req, opts) => workloadService.createPreviewShareLink(req, opts),
+        listPreviewShareLinks: (req, opts) => workloadService.listPreviewShareLinks(req, opts),
+        revokePreviewShareLink: (req, opts) => workloadService.revokePreviewShareLink(req, opts),
       },
       services: {
         create: (req, opts) => workloadService.createService(req, opts),
@@ -443,7 +466,6 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     product: createClient(ProductService, transport),
     discovery: createClient(DiscoveryService, transport),
     connection: createClient(ConnectionService, transport),
-    hook: createClient(HookService, transport),
     role: createClient(RoleService, transport),
     trigger: createClient(TriggerService, transport),
     account: createClient(AccountService, transport),

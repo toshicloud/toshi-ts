@@ -312,41 +312,33 @@ and `workload.jobs.cancel` ends it.
 
 ## Products that are off
 
-A call for a product that is off for the workspace, or that turns on an
-outside product without accepting the access it asks for, rejects with a
+A call for a product that is off for the workspace rejects with a
 `ProductError`, `wait`, the watches and `execute` included.
 `isProductError(err)` tells it apart. It is still a `ConnectError` with the
 same `code`, and it has the product's ID (`product`), the `reason`
-(`ProductReason.NotInstalled`, `Disabled`, `NotEntitled`, `TurnedOff` or
-`AccessNotAccepted`), the setting that turns the product on (`feature`,
-such as `runners.enabled`), how far a product the deployment disables has
-wound down (`state`) and, for `AccessNotAccepted`, the access to accept
-(`access`).
+(`ProductReason.Unavailable`), the input that turned the product off
+(`productCause`: `build`, `operator`, `plan` or `workspace`) and, for a
+product the deployment turns off, how far it has wound down (`state`:
+`no_new_work`, `draining` or `stopped`).
 
 <!-- examples/product-error.ts -->
 
 ```ts
+import { isProductError } from "@toshicloud/sdk";
 
-// Turning an outside product on installs it, and the API asks the caller to
-// accept the access it wants first.
-const enable = { id: "acme_ci", enabled: true, acceptedAccess: [] as string[] };
+import { toshi } from "./client.js";
+
+// Turn a product on for the workspace.
+const enable = { id: "acme_ci", enabled: true };
 try {
-  try {
-    await toshi.product.updateProduct(enable);
-  } catch (err) {
-    if (!isProductError(err) || err.reason !== ProductReason.AccessNotAccepted) {
-      throw err;
-    }
-    console.log(err.product, err.reason, err.access);
-    // Accept exactly the access the product asks for.
-    await toshi.product.updateProduct({ ...enable, acceptedAccess: err.access });
-  }
+  await toshi.product.updateProduct(enable);
 } catch (err) {
   if (!isProductError(err)) {
     throw err;
   }
-  // Off for the workspace: say which product and why.
-  console.log(err.product, err.reason, err.feature);
+  // Off for the workspace: which product, the input that turns it off, and,
+  // for the deployment's config, how far it has wound down.
+  console.log(err.product, err.productCause, err.state);
 }
 ```
 
@@ -356,8 +348,9 @@ A refusal that is not a product's rejects with a `RefusalError`;
 `isRefusalError(err)` tells it apart. It is still a `ConnectError` with the
 same `code`, and its `reason` is one of `RefusalReason`:
 `RefusalReason.ImageInUse` when an image a workload or a revision still uses
-cannot be deleted, `RefusalReason.PlanExcludesImages` when the plan has no
-images, `RefusalReason.LastIdentity` when the caller's last identity cannot
+cannot be deleted, `RefusalReason.ImageNotReady` when a job, a sandbox or a
+service revision names a workspace image with no ready version,
+`RefusalReason.PlanExcludesImages` when the plan has no images, `RefusalReason.LastIdentity` when the caller's last identity cannot
 be unlinked, and so on for images, volumes, roles and display sessions.
 
 `workload.services.rollback` asks the revision's registry whether it still

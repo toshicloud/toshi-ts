@@ -8,7 +8,6 @@ import { AuditEventService } from "../src/gen/toshi/workspace/v1/audit_events_pb
 import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
 import { DiscoveryService } from "../src/gen/toshi/workspace/v1/discovery_pb.js";
 import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
-import { HookService } from "../src/gen/toshi/workspace/v1/hooks_pb.js";
 import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
 import { DisplayService } from "../src/gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "../src/gen/toshi/workspace/v1/fillers_pb.js";
@@ -54,7 +53,6 @@ const services: readonly DescService[] = [
   ProductService,
   DiscoveryService,
   ConnectionService,
-  HookService,
   RoleService,
   TriggerService,
   AccountService,
@@ -75,7 +73,7 @@ function transportFor<T extends DescService>(
 }
 
 describe("the retry table", () => {
-  it("names every method of the twenty-five services, 87 reads, 24 keyed and 95 none", () => {
+  it("names every method of the twenty-four services, 85 reads, 24 keyed and 91 none", () => {
     const counts = { read: 0, keyed: 0, none: 0 };
     const paths = new Set<string>();
     for (const service of services) {
@@ -86,8 +84,8 @@ describe("the retry table", () => {
         counts[retryClassFor(path)] += 1;
       }
     }
-    expect(paths.size).toBe(206);
-    expect(counts).toEqual({ read: 87, keyed: 24, none: 95 });
+    expect(paths.size).toBe(200);
+    expect(counts).toEqual({ read: 85, keyed: 24, none: 91 });
   });
 });
 

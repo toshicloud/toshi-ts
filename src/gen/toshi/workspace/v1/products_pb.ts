@@ -2,12 +2,12 @@
 // @generated from file toshi/workspace/v1/products.proto (package toshi.workspace.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
-import type { FeatureSource, FeatureSourceJson, FeatureValue, FeatureValueJson, ProductState, ProductStateJson, ProductSwitch, ProductSwitchJson } from "./discovery_pb.js";
+import type { FeatureSource, FeatureSourceJson, FeatureValue, FeatureValueJson, ProductState, ProductStateJson } from "./discovery_pb.js";
 import { file_toshi_workspace_v1_discovery } from "./discovery_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/products.proto.
  */
 export const file_toshi_workspace_v1_products: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyIbChlMaXN0Q2F0YWxvZ0VudHJpZXNSZXF1ZXN0Ik8KGkxpc3RDYXRhbG9nRW50cmllc1Jlc3BvbnNlEjEKB2VudHJpZXMYASADKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2F0YWxvZ0VudHJ5IosDCgxDYXRhbG9nRW50cnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIRCglwdWJsaXNoZXIYAyABKAkSDwoHdmVyc2lvbhgEIAEoCRIOCgZhY2Nlc3MYBSADKAkSNQoIc3VyZmFjZXMYBiABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN1cmZhY2VzEg4KBnNvdXJjZRgHIAEoCRJBChJpbnN0YWxsYXRpb25fc3RhdGUYCCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuSW5zdGFsbGF0aW9uU3RhdGUSDQoFc3RhbGUYCSABKAgSNQoRc291cmNlX2V4cGlyZXNfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKBXN0YXRlGAsgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNhdGFsb2dFbnRyeVN0YXRlEhQKDHN0YXRlX3JlYXNvbhgMIAEoCRIRCglzdWNjZXNzb3IYDSABKAkiqwIKFFVwZGF0ZVByb2R1Y3RSZXF1ZXN0EgoKAmlkGAEgASgJEhQKB2VuYWJsZWQYAiABKAhIAIgBARJICghzZXR0aW5ncxgDIAMoCzI2LnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdC5TZXR0aW5nc0VudHJ5Eg0KBWNsZWFyGAQgAygJEhcKD2FjY2VwdGVkX2FjY2VzcxgFIAMoCRIUCgd2ZXJzaW9uGAYgASgJSAGIAQEaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEIKCghfdmVyc2lvbiJ6ChVVcGRhdGVQcm9kdWN0UmVzcG9uc2USNAoHcHJvZHVjdBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U2V0dGluZ3MSGgoSaW5zdGFsbGF0aW9uX3Rva2VuGAIgASgJEg8KB3dhcm5pbmcYAyABKAkiIgoUUmVtb3ZlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkiTQoVUmVtb3ZlUHJvZHVjdFJlc3BvbnNlEjQKB3Byb2R1Y3QYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFNldHRpbmdzIrsCCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSMQoGc3dpdGNoGAIgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTd2l0Y2gSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEj0KDGluc3RhbGxhdGlvbhgFIAEoCzInLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0SW5zdGFsbGF0aW9uEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJIksKD1Byb2R1Y3RTdXJmYWNlcxILCgNhcGkYASABKAkSCwoDY2xpGAIgASgJEhEKCWRhc2hib2FyZBgDIAEoCRILCgNzZGsYBCABKAki3gMKE1Byb2R1Y3RJbnN0YWxsYXRpb24SNAoFc3RhdGUYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuSW5zdGFsbGF0aW9uU3RhdGUSDwoHdmVyc2lvbhgCIAEoCRIRCglwdWJsaXNoZXIYAyABKAkSDgoGYWNjZXNzGAQgAygJEg8KB3JvbGVfaWQYBSABKAkSEAoIdG9rZW5faWQYBiABKAkSFAoMaW5zdGFsbGVkX2J5GAcgASgJEjAKDGluc3RhbGxlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDgoGc291cmNlGAogASgJEhYKDmluZGV4X3NlcXVlbmNlGAsgASgDEhQKDGluZGV4X3NoYTI1NhgMIAEoCRIOCgZrZXlfaWQYDSABKAkSPAoNcmVsZWFzZV9zdGF0ZRgOIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DYXRhbG9nRW50cnlTdGF0ZRI2CglhcnRpZmFjdHMYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdEFydGlmYWN0ImoKD1Byb2R1Y3RBcnRpZmFjdBIMCgRraW5kGAEgASgJEgoKAm9zGAIgASgJEgwKBGFyY2gYAyABKAkSDQoFaW1hZ2UYBCABKAkSDgoGZGlnZXN0GAUgASgJEhAKCHBsYXRmb3JtGAYgASgJItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJKp0BChFDYXRhbG9nRW50cnlTdGF0ZRIjCh9DQVRBTE9HX0VOVFJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASHgoaQ0FUQUxPR19FTlRSWV9TVEFURV9MSVNURUQQARIiCh5DQVRBTE9HX0VOVFJZX1NUQVRFX0RFUFJFQ0FURUQQAhIfChtDQVRBTE9HX0VOVFJZX1NUQVRFX0JMT0NLRUQQAyqYAQoRSW5zdGFsbGF0aW9uU3RhdGUSIgoeSU5TVEFMTEFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASHQoZSU5TVEFMTEFUSU9OX1NUQVRFX0FDVElWRRABEiAKHElOU1RBTExBVElPTl9TVEFURV9TVVNQRU5ERUQQAhIeChpJTlNUQUxMQVRJT05fU1RBVEVfUkVNT1ZFRBADMpkECg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQShgEKEkxpc3RDYXRhbG9nRW50cmllcxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2F0YWxvZ0VudHJpZXNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDYXRhbG9nRW50cmllc1Jlc3BvbnNlIhHC8xgNc2V0dGluZ3MucmVhZBJ4Cg1VcGRhdGVQcm9kdWN0EigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXNwb25zZSISwvMYDnNldHRpbmdzLndyaXRlEo0BCg1SZW1vdmVQcm9kdWN0EigudG9zaGkud29ya3NwYWNlLnYxLlJlbW92ZVByb2R1Y3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlJlbW92ZVByb2R1Y3RSZXNwb25zZSInwvMYDnNldHRpbmdzLndyaXRl0vMYEQoPcHJvZHVjdC5yZW1vdmVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyKWAgoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkSFAoHZW5hYmxlZBgCIAEoCEgAiAEBEkgKCHNldHRpbmdzGAMgAygLMjYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0LlNldHRpbmdzRW50cnkSDQoFY2xlYXIYBCADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEoECAUQBkoECAYQB1IPYWNjZXB0ZWRfYWNjZXNzUgd2ZXJzaW9uInYKFVVwZGF0ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5nc0oECAIQA0oECAMQBFISaW5zdGFsbGF0aW9uX3Rva2VuUgd3YXJuaW5nIusBCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJSgQIAhADSgQIBRAGUgZzd2l0Y2hSDGluc3RhbGxhdGlvbiJLCg9Qcm9kdWN0U3VyZmFjZXMSCwoDYXBpGAEgASgJEgsKA2NsaRgCIAEoCRIRCglkYXNoYm9hcmQYAyABKAkSCwoDc2RrGAQgASgJItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJMoACCg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQSeAoNVXBkYXRlUHJvZHVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVzcG9uc2UiEsLzGA5zZXR0aW5ncy53cml0ZUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
 
 /**
  * @generated from message toshi.workspace.v1.ListProductsRequest
@@ -68,279 +68,6 @@ export const ListProductsResponseSchema: GenMessage<ListProductsResponse, {jsonT
   messageDesc(file_toshi_workspace_v1_products, 1);
 
 /**
- * @generated from message toshi.workspace.v1.ListCatalogEntriesRequest
- */
-export type ListCatalogEntriesRequest = Message<"toshi.workspace.v1.ListCatalogEntriesRequest"> & {
-};
-
-/**
- * @generated from message toshi.workspace.v1.ListCatalogEntriesRequest
- */
-export type ListCatalogEntriesRequestJson = {
-};
-
-/**
- * Describes the message toshi.workspace.v1.ListCatalogEntriesRequest.
- * Use `create(ListCatalogEntriesRequestSchema)` to create a new message.
- */
-export const ListCatalogEntriesRequestSchema: GenMessage<ListCatalogEntriesRequest, {jsonType: ListCatalogEntriesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 2);
-
-/**
- * @generated from message toshi.workspace.v1.ListCatalogEntriesResponse
- */
-export type ListCatalogEntriesResponse = Message<"toshi.workspace.v1.ListCatalogEntriesResponse"> & {
-  /**
-   * entries are the outside products the catalog sources offer, by id.
-   *
-   * @generated from field: repeated toshi.workspace.v1.CatalogEntry entries = 1;
-   */
-  entries: CatalogEntry[];
-};
-
-/**
- * @generated from message toshi.workspace.v1.ListCatalogEntriesResponse
- */
-export type ListCatalogEntriesResponseJson = {
-  /**
-   * entries are the outside products the catalog sources offer, by id.
-   *
-   * @generated from field: repeated toshi.workspace.v1.CatalogEntry entries = 1;
-   */
-  entries?: CatalogEntryJson[];
-};
-
-/**
- * Describes the message toshi.workspace.v1.ListCatalogEntriesResponse.
- * Use `create(ListCatalogEntriesResponseSchema)` to create a new message.
- */
-export const ListCatalogEntriesResponseSchema: GenMessage<ListCatalogEntriesResponse, {jsonType: ListCatalogEntriesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 3);
-
-/**
- * CatalogEntry is an outside product a catalog source offers, as its entry
- * lists it, with the state of the workspace's installation of it.
- *
- * @generated from message toshi.workspace.v1.CatalogEntry
- */
-export type CatalogEntry = Message<"toshi.workspace.v1.CatalogEntry"> & {
-  /**
-   * id names the product.
-   *
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * name is the product's name as people read it, such as "Acme Deploys".
-   *
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * publisher names who publishes it.
-   *
-   * @generated from field: string publisher = 3;
-   */
-  publisher: string;
-
-  /**
-   * version is the version the entry offers.
-   *
-   * @generated from field: string version = 4;
-   */
-  version: string;
-
-  /**
-   * access are the permissions the product asks for: the list
-   * UpdateProduct's accepted_access installs it with.
-   *
-   * @generated from field: repeated string access = 5;
-   */
-  access: string[];
-
-  /**
-   * surfaces are what the product adds to Toshi.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSurfaces surfaces = 6;
-   */
-  surfaces?: ProductSurfaces | undefined;
-
-  /**
-   * source names the catalog source that offers it, as the deployment's
-   * configuration names it.
-   *
-   * @generated from field: string source = 7;
-   */
-  source: string;
-
-  /**
-   * installation_state is the state of the workspace's installation of it;
-   * UNSPECIFIED when the workspace never installed it.
-   *
-   * @generated from field: toshi.workspace.v1.InstallationState installation_state = 8;
-   */
-  installationState: InstallationState;
-
-  /**
-   * stale is whether the source is stale: the index the deployment last
-   * accepted from it expired more than 7 days ago and it has published no
-   * fresh one. Turning the product on for the first time is
-   * FAILED_PRECONDITION until it does; installations already made keep
-   * running.
-   *
-   * @generated from field: bool stale = 9;
-   */
-  stale: boolean;
-
-  /**
-   * source_expires_at is when the index the deployment last accepted from
-   * the source expires; unset for an index with no expiry.
-   *
-   * @generated from field: google.protobuf.Timestamp source_expires_at = 10;
-   */
-  sourceExpiresAt?: Timestamp | undefined;
-
-  /**
-   * state is the effective listing state of the entry's own version;
-   * UNSPECIFIED when that version is not present. Built-in entries are LISTED.
-   *
-   * @generated from field: toshi.workspace.v1.CatalogEntryState state = 11;
-   */
-  state: CatalogEntryState;
-
-  /**
-   * state_reason explains a deprecation or block.
-   *
-   * @generated from field: string state_reason = 12;
-   */
-  stateReason: string;
-
-  /**
-   * successor names the suggested replacement, when one is given.
-   *
-   * @generated from field: string successor = 13;
-   */
-  successor: string;
-};
-
-/**
- * CatalogEntry is an outside product a catalog source offers, as its entry
- * lists it, with the state of the workspace's installation of it.
- *
- * @generated from message toshi.workspace.v1.CatalogEntry
- */
-export type CatalogEntryJson = {
-  /**
-   * id names the product.
-   *
-   * @generated from field: string id = 1;
-   */
-  id?: string;
-
-  /**
-   * name is the product's name as people read it, such as "Acme Deploys".
-   *
-   * @generated from field: string name = 2;
-   */
-  name?: string;
-
-  /**
-   * publisher names who publishes it.
-   *
-   * @generated from field: string publisher = 3;
-   */
-  publisher?: string;
-
-  /**
-   * version is the version the entry offers.
-   *
-   * @generated from field: string version = 4;
-   */
-  version?: string;
-
-  /**
-   * access are the permissions the product asks for: the list
-   * UpdateProduct's accepted_access installs it with.
-   *
-   * @generated from field: repeated string access = 5;
-   */
-  access?: string[];
-
-  /**
-   * surfaces are what the product adds to Toshi.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSurfaces surfaces = 6;
-   */
-  surfaces?: ProductSurfacesJson;
-
-  /**
-   * source names the catalog source that offers it, as the deployment's
-   * configuration names it.
-   *
-   * @generated from field: string source = 7;
-   */
-  source?: string;
-
-  /**
-   * installation_state is the state of the workspace's installation of it;
-   * UNSPECIFIED when the workspace never installed it.
-   *
-   * @generated from field: toshi.workspace.v1.InstallationState installation_state = 8;
-   */
-  installationState?: InstallationStateJson;
-
-  /**
-   * stale is whether the source is stale: the index the deployment last
-   * accepted from it expired more than 7 days ago and it has published no
-   * fresh one. Turning the product on for the first time is
-   * FAILED_PRECONDITION until it does; installations already made keep
-   * running.
-   *
-   * @generated from field: bool stale = 9;
-   */
-  stale?: boolean;
-
-  /**
-   * source_expires_at is when the index the deployment last accepted from
-   * the source expires; unset for an index with no expiry.
-   *
-   * @generated from field: google.protobuf.Timestamp source_expires_at = 10;
-   */
-  sourceExpiresAt?: TimestampJson;
-
-  /**
-   * state is the effective listing state of the entry's own version;
-   * UNSPECIFIED when that version is not present. Built-in entries are LISTED.
-   *
-   * @generated from field: toshi.workspace.v1.CatalogEntryState state = 11;
-   */
-  state?: CatalogEntryStateJson;
-
-  /**
-   * state_reason explains a deprecation or block.
-   *
-   * @generated from field: string state_reason = 12;
-   */
-  stateReason?: string;
-
-  /**
-   * successor names the suggested replacement, when one is given.
-   *
-   * @generated from field: string successor = 13;
-   */
-  successor?: string;
-};
-
-/**
- * Describes the message toshi.workspace.v1.CatalogEntry.
- * Use `create(CatalogEntrySchema)` to create a new message.
- */
-export const CatalogEntrySchema: GenMessage<CatalogEntry, {jsonType: CatalogEntryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 4);
-
-/**
  * @generated from message toshi.workspace.v1.UpdateProductRequest
  */
 export type UpdateProductRequest = Message<"toshi.workspace.v1.UpdateProductRequest"> & {
@@ -377,31 +104,6 @@ export type UpdateProductRequest = Message<"toshi.workspace.v1.UpdateProductRequ
    * @generated from field: repeated string clear = 4;
    */
   clear: string[];
-
-  /**
-   * accepted_access is the access an outside product, one a catalog source
-   * offers, asks for, as its catalog entry lists it. Turning such a product
-   * on for the first time, or again after it was removed, installs it and
-   * grants it that access, and needs the same permissions here, in any
-   * order: any other list is FAILED_PRECONDITION with an ErrorInfo of reason
-   * ACCESS_NOT_ACCEPTED whose metadata "access" lists what the entry asks
-   * for. Only a caller who holds every permission it asks for may install
-   * it, a person or a workspace token; one who lacks one is
-   * PERMISSION_DENIED naming it. Ignored when the product is built in or
-   * already installed.
-   *
-   * @generated from field: repeated string accepted_access = 5;
-   */
-  acceptedAccess: string[];
-
-  /**
-   * version installs that release of an outside product instead of the
-   * entry's own version. A deprecated release installs only when named here,
-   * with a warning. Ignored when built in or already installed.
-   *
-   * @generated from field: optional string version = 6;
-   */
-  version?: string | undefined;
 };
 
 /**
@@ -441,31 +143,6 @@ export type UpdateProductRequestJson = {
    * @generated from field: repeated string clear = 4;
    */
   clear?: string[];
-
-  /**
-   * accepted_access is the access an outside product, one a catalog source
-   * offers, asks for, as its catalog entry lists it. Turning such a product
-   * on for the first time, or again after it was removed, installs it and
-   * grants it that access, and needs the same permissions here, in any
-   * order: any other list is FAILED_PRECONDITION with an ErrorInfo of reason
-   * ACCESS_NOT_ACCEPTED whose metadata "access" lists what the entry asks
-   * for. Only a caller who holds every permission it asks for may install
-   * it, a person or a workspace token; one who lacks one is
-   * PERMISSION_DENIED naming it. Ignored when the product is built in or
-   * already installed.
-   *
-   * @generated from field: repeated string accepted_access = 5;
-   */
-  acceptedAccess?: string[];
-
-  /**
-   * version installs that release of an outside product instead of the
-   * entry's own version. A deprecated release installs only when named here,
-   * with a warning. Ignored when built in or already installed.
-   *
-   * @generated from field: optional string version = 6;
-   */
-  version?: string;
 };
 
 /**
@@ -473,7 +150,7 @@ export type UpdateProductRequestJson = {
  * Use `create(UpdateProductRequestSchema)` to create a new message.
  */
 export const UpdateProductRequestSchema: GenMessage<UpdateProductRequest, {jsonType: UpdateProductRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 5);
+  messageDesc(file_toshi_workspace_v1_products, 2);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateProductResponse
@@ -485,23 +162,6 @@ export type UpdateProductResponse = Message<"toshi.workspace.v1.UpdateProductRes
    * @generated from field: toshi.workspace.v1.ProductSettings product = 1;
    */
   product?: ProductSettings | undefined;
-
-  /**
-   * installation_token is the token an outside product's installation calls
-   * the Workspace API with, "toshi_in_" and 46 characters. Only the call
-   * that installs the product returns it.
-   *
-   * @generated from field: string installation_token = 2;
-   */
-  installationToken: string;
-
-  /**
-   * warning is set when the call installed a deprecated release: the
-   * publisher's reason and successor.
-   *
-   * @generated from field: string warning = 3;
-   */
-  warning: string;
 };
 
 /**
@@ -514,23 +174,6 @@ export type UpdateProductResponseJson = {
    * @generated from field: toshi.workspace.v1.ProductSettings product = 1;
    */
   product?: ProductSettingsJson;
-
-  /**
-   * installation_token is the token an outside product's installation calls
-   * the Workspace API with, "toshi_in_" and 46 characters. Only the call
-   * that installs the product returns it.
-   *
-   * @generated from field: string installation_token = 2;
-   */
-  installationToken?: string;
-
-  /**
-   * warning is set when the call installed a deprecated release: the
-   * publisher's reason and successor.
-   *
-   * @generated from field: string warning = 3;
-   */
-  warning?: string;
 };
 
 /**
@@ -538,69 +181,7 @@ export type UpdateProductResponseJson = {
  * Use `create(UpdateProductResponseSchema)` to create a new message.
  */
 export const UpdateProductResponseSchema: GenMessage<UpdateProductResponse, {jsonType: UpdateProductResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 6);
-
-/**
- * @generated from message toshi.workspace.v1.RemoveProductRequest
- */
-export type RemoveProductRequest = Message<"toshi.workspace.v1.RemoveProductRequest"> & {
-  /**
-   * id names the outside product.
-   *
-   * @generated from field: string id = 1;
-   */
-  id: string;
-};
-
-/**
- * @generated from message toshi.workspace.v1.RemoveProductRequest
- */
-export type RemoveProductRequestJson = {
-  /**
-   * id names the outside product.
-   *
-   * @generated from field: string id = 1;
-   */
-  id?: string;
-};
-
-/**
- * Describes the message toshi.workspace.v1.RemoveProductRequest.
- * Use `create(RemoveProductRequestSchema)` to create a new message.
- */
-export const RemoveProductRequestSchema: GenMessage<RemoveProductRequest, {jsonType: RemoveProductRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 7);
-
-/**
- * @generated from message toshi.workspace.v1.RemoveProductResponse
- */
-export type RemoveProductResponse = Message<"toshi.workspace.v1.RemoveProductResponse"> & {
-  /**
-   * product is the product as the workspace has it after the removal.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSettings product = 1;
-   */
-  product?: ProductSettings | undefined;
-};
-
-/**
- * @generated from message toshi.workspace.v1.RemoveProductResponse
- */
-export type RemoveProductResponseJson = {
-  /**
-   * product is the product as the workspace has it after the removal.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSettings product = 1;
-   */
-  product?: ProductSettingsJson;
-};
-
-/**
- * Describes the message toshi.workspace.v1.RemoveProductResponse.
- * Use `create(RemoveProductResponseSchema)` to create a new message.
- */
-export const RemoveProductResponseSchema: GenMessage<RemoveProductResponse, {jsonType: RemoveProductResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 8);
+  messageDesc(file_toshi_workspace_v1_products, 3);
 
 /**
  * ProductSettings is one product as the workspace has it.
@@ -615,14 +196,6 @@ export type ProductSettings = Message<"toshi.workspace.v1.ProductSettings"> & {
    * @generated from field: string id = 1;
    */
   id: string;
-
-  /**
-   * switch says whether the product is on for the workspace and, when it
-   * is off, which switch turned it off.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSwitch switch = 2;
-   */
-  switch: ProductSwitch;
 
   /**
    * features are the product's features, in the order the product
@@ -643,28 +216,16 @@ export type ProductSettings = Message<"toshi.workspace.v1.ProductSettings"> & {
   state: ProductState;
 
   /**
-   * installation is the workspace's installation of an outside product, a
-   * removed one included; unset for a built-in product. Such a product
-   * declares no features, and its switch is ON while the installation is
-   * active and TURNED_OFF otherwise.
-   *
-   * @generated from field: toshi.workspace.v1.ProductInstallation installation = 5;
-   */
-  installation?: ProductInstallation | undefined;
-
-  /**
-   * surfaces are what the product adds to Toshi, from its catalog entry:
-   * for a built-in product the path its API is served at, for an outside
-   * product the locations its entry lists. Unset for an outside product
-   * whose entry the catalog no longer offers.
+   * surfaces are what the product adds to Toshi: the path its API is
+   * served at.
    *
    * @generated from field: toshi.workspace.v1.ProductSurfaces surfaces = 6;
    */
   surfaces?: ProductSurfaces | undefined;
 
   /**
-   * name is the product's name as people read it, from its catalog entry,
-   * such as "Acme Deploys". Empty when the catalog has no entry for it.
+   * name is the product's name as people read it, such as "Runners", or
+   * its id when it names none.
    *
    * @generated from field: string name = 7;
    */
@@ -686,14 +247,6 @@ export type ProductSettingsJson = {
   id?: string;
 
   /**
-   * switch says whether the product is on for the workspace and, when it
-   * is off, which switch turned it off.
-   *
-   * @generated from field: toshi.workspace.v1.ProductSwitch switch = 2;
-   */
-  switch?: ProductSwitchJson;
-
-  /**
    * features are the product's features, in the order the product
    * declares them.
    *
@@ -712,28 +265,16 @@ export type ProductSettingsJson = {
   state?: ProductStateJson;
 
   /**
-   * installation is the workspace's installation of an outside product, a
-   * removed one included; unset for a built-in product. Such a product
-   * declares no features, and its switch is ON while the installation is
-   * active and TURNED_OFF otherwise.
-   *
-   * @generated from field: toshi.workspace.v1.ProductInstallation installation = 5;
-   */
-  installation?: ProductInstallationJson;
-
-  /**
-   * surfaces are what the product adds to Toshi, from its catalog entry:
-   * for a built-in product the path its API is served at, for an outside
-   * product the locations its entry lists. Unset for an outside product
-   * whose entry the catalog no longer offers.
+   * surfaces are what the product adds to Toshi: the path its API is
+   * served at.
    *
    * @generated from field: toshi.workspace.v1.ProductSurfaces surfaces = 6;
    */
   surfaces?: ProductSurfacesJson;
 
   /**
-   * name is the product's name as people read it, from its catalog entry,
-   * such as "Acme Deploys". Empty when the catalog has no entry for it.
+   * name is the product's name as people read it, such as "Runners", or
+   * its id when it names none.
    *
    * @generated from field: string name = 7;
    */
@@ -745,7 +286,7 @@ export type ProductSettingsJson = {
  * Use `create(ProductSettingsSchema)` to create a new message.
  */
 export const ProductSettingsSchema: GenMessage<ProductSettings, {jsonType: ProductSettingsJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 9);
+  messageDesc(file_toshi_workspace_v1_products, 4);
 
 /**
  * ProductSurfaces are what a product adds to Toshi, each empty when it adds
@@ -755,15 +296,15 @@ export const ProductSettingsSchema: GenMessage<ProductSettings, {jsonType: Produ
  */
 export type ProductSurfaces = Message<"toshi.workspace.v1.ProductSurfaces"> & {
   /**
-   * api is the product's API endpoint: an https URL, or for a built-in
-   * product the path the control plane serves it at, such as "/runners/".
+   * api is the path the control plane serves the product's API at, such
+   * as "/runners/".
    *
    * @generated from field: string api = 1;
    */
   api: string;
 
   /**
-   * cli is the https URL its CLI plugin is downloaded from.
+   * cli is where its CLI plugin comes from.
    *
    * @generated from field: string cli = 2;
    */
@@ -794,15 +335,15 @@ export type ProductSurfaces = Message<"toshi.workspace.v1.ProductSurfaces"> & {
  */
 export type ProductSurfacesJson = {
   /**
-   * api is the product's API endpoint: an https URL, or for a built-in
-   * product the path the control plane serves it at, such as "/runners/".
+   * api is the path the control plane serves the product's API at, such
+   * as "/runners/".
    *
    * @generated from field: string api = 1;
    */
   api?: string;
 
   /**
-   * cli is the https URL its CLI plugin is downloaded from.
+   * cli is where its CLI plugin comes from.
    *
    * @generated from field: string cli = 2;
    */
@@ -830,329 +371,7 @@ export type ProductSurfacesJson = {
  * Use `create(ProductSurfacesSchema)` to create a new message.
  */
 export const ProductSurfacesSchema: GenMessage<ProductSurfaces, {jsonType: ProductSurfacesJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 10);
-
-/**
- * ProductInstallation is a workspace's installation of an outside product.
- *
- * @generated from message toshi.workspace.v1.ProductInstallation
- */
-export type ProductInstallation = Message<"toshi.workspace.v1.ProductInstallation"> & {
-  /**
-   * @generated from field: toshi.workspace.v1.InstallationState state = 1;
-   */
-  state: InstallationState;
-
-  /**
-   * version and publisher are the catalog entry's when it was installed.
-   *
-   * @generated from field: string version = 2;
-   */
-  version: string;
-
-  /**
-   * @generated from field: string publisher = 3;
-   */
-  publisher: string;
-
-  /**
-   * access are the permissions the workspace granted it, sorted.
-   *
-   * @generated from field: repeated string access = 4;
-   */
-  access: string[];
-
-  /**
-   * role_id names the role that holds the access, "Product <id>", granted to
-   * token_id, the installation's token.
-   *
-   * @generated from field: string role_id = 5;
-   */
-  roleId: string;
-
-  /**
-   * @generated from field: string token_id = 6;
-   */
-  tokenId: string;
-
-  /**
-   * installed_by names who installed it: "person:" and their GitHub user
-   * id, or "token:" and the workspace token's id.
-   *
-   * @generated from field: string installed_by = 7;
-   */
-  installedBy: string;
-
-  /**
-   * @generated from field: google.protobuf.Timestamp installed_at = 8;
-   */
-  installedAt?: Timestamp | undefined;
-
-  /**
-   * @generated from field: google.protobuf.Timestamp updated_at = 9;
-   */
-  updatedAt?: Timestamp | undefined;
-
-  /**
-   * These fields record the trust decision made when the product was
-   * installed. They are empty for a built-in product and for an installation
-   * made before the deployment kept that decision.
-   * source names the catalog source.
-   *
-   * @generated from field: string source = 10;
-   */
-  source: string;
-
-  /**
-   * index_sequence is the accepted index's sequence, or zero for format 1.
-   *
-   * @generated from field: int64 index_sequence = 11;
-   */
-  indexSequence: bigint;
-
-  /**
-   * index_sha256 is the SHA-256 of the accepted index's bytes in hex.
-   *
-   * @generated from field: string index_sha256 = 12;
-   */
-  indexSha256: string;
-
-  /**
-   * key_id names the key that signed the accepted index.
-   *
-   * @generated from field: string key_id = 13;
-   */
-  keyId: string;
-
-  /**
-   * release_state is the release's effective listing state at installation.
-   *
-   * @generated from field: toshi.workspace.v1.CatalogEntryState release_state = 14;
-   */
-  releaseState: CatalogEntryState;
-
-  /**
-   * artifacts are the release's artifacts and their selected image manifests.
-   *
-   * @generated from field: repeated toshi.workspace.v1.ProductArtifact artifacts = 15;
-   */
-  artifacts: ProductArtifact[];
-};
-
-/**
- * ProductInstallation is a workspace's installation of an outside product.
- *
- * @generated from message toshi.workspace.v1.ProductInstallation
- */
-export type ProductInstallationJson = {
-  /**
-   * @generated from field: toshi.workspace.v1.InstallationState state = 1;
-   */
-  state?: InstallationStateJson;
-
-  /**
-   * version and publisher are the catalog entry's when it was installed.
-   *
-   * @generated from field: string version = 2;
-   */
-  version?: string;
-
-  /**
-   * @generated from field: string publisher = 3;
-   */
-  publisher?: string;
-
-  /**
-   * access are the permissions the workspace granted it, sorted.
-   *
-   * @generated from field: repeated string access = 4;
-   */
-  access?: string[];
-
-  /**
-   * role_id names the role that holds the access, "Product <id>", granted to
-   * token_id, the installation's token.
-   *
-   * @generated from field: string role_id = 5;
-   */
-  roleId?: string;
-
-  /**
-   * @generated from field: string token_id = 6;
-   */
-  tokenId?: string;
-
-  /**
-   * installed_by names who installed it: "person:" and their GitHub user
-   * id, or "token:" and the workspace token's id.
-   *
-   * @generated from field: string installed_by = 7;
-   */
-  installedBy?: string;
-
-  /**
-   * @generated from field: google.protobuf.Timestamp installed_at = 8;
-   */
-  installedAt?: TimestampJson;
-
-  /**
-   * @generated from field: google.protobuf.Timestamp updated_at = 9;
-   */
-  updatedAt?: TimestampJson;
-
-  /**
-   * These fields record the trust decision made when the product was
-   * installed. They are empty for a built-in product and for an installation
-   * made before the deployment kept that decision.
-   * source names the catalog source.
-   *
-   * @generated from field: string source = 10;
-   */
-  source?: string;
-
-  /**
-   * index_sequence is the accepted index's sequence, or zero for format 1.
-   *
-   * @generated from field: int64 index_sequence = 11;
-   */
-  indexSequence?: string;
-
-  /**
-   * index_sha256 is the SHA-256 of the accepted index's bytes in hex.
-   *
-   * @generated from field: string index_sha256 = 12;
-   */
-  indexSha256?: string;
-
-  /**
-   * key_id names the key that signed the accepted index.
-   *
-   * @generated from field: string key_id = 13;
-   */
-  keyId?: string;
-
-  /**
-   * release_state is the release's effective listing state at installation.
-   *
-   * @generated from field: toshi.workspace.v1.CatalogEntryState release_state = 14;
-   */
-  releaseState?: CatalogEntryStateJson;
-
-  /**
-   * artifacts are the release's artifacts and their selected image manifests.
-   *
-   * @generated from field: repeated toshi.workspace.v1.ProductArtifact artifacts = 15;
-   */
-  artifacts?: ProductArtifactJson[];
-};
-
-/**
- * Describes the message toshi.workspace.v1.ProductInstallation.
- * Use `create(ProductInstallationSchema)` to create a new message.
- */
-export const ProductInstallationSchema: GenMessage<ProductInstallation, {jsonType: ProductInstallationJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 11);
-
-/**
- * ProductArtifact is a release artifact recorded when a product is installed.
- *
- * @generated from message toshi.workspace.v1.ProductArtifact
- */
-export type ProductArtifact = Message<"toshi.workspace.v1.ProductArtifact"> & {
-  /**
-   * kind is "cli" or "image".
-   *
-   * @generated from field: string kind = 1;
-   */
-  kind: string;
-
-  /**
-   * os and arch identify a CLI plugin's platform.
-   *
-   * @generated from field: string os = 2;
-   */
-  os: string;
-
-  /**
-   * @generated from field: string arch = 3;
-   */
-  arch: string;
-
-  /**
-   * image is the container image repository.
-   *
-   * @generated from field: string image = 4;
-   */
-  image: string;
-
-  /**
-   * digest is the CLI plugin's SHA-256 or the image index's digest.
-   *
-   * @generated from field: string digest = 5;
-   */
-  digest: string;
-
-  /**
-   * platform is the selected image platform manifest's digest.
-   *
-   * @generated from field: string platform = 6;
-   */
-  platform: string;
-};
-
-/**
- * ProductArtifact is a release artifact recorded when a product is installed.
- *
- * @generated from message toshi.workspace.v1.ProductArtifact
- */
-export type ProductArtifactJson = {
-  /**
-   * kind is "cli" or "image".
-   *
-   * @generated from field: string kind = 1;
-   */
-  kind?: string;
-
-  /**
-   * os and arch identify a CLI plugin's platform.
-   *
-   * @generated from field: string os = 2;
-   */
-  os?: string;
-
-  /**
-   * @generated from field: string arch = 3;
-   */
-  arch?: string;
-
-  /**
-   * image is the container image repository.
-   *
-   * @generated from field: string image = 4;
-   */
-  image?: string;
-
-  /**
-   * digest is the CLI plugin's SHA-256 or the image index's digest.
-   *
-   * @generated from field: string digest = 5;
-   */
-  digest?: string;
-
-  /**
-   * platform is the selected image platform manifest's digest.
-   *
-   * @generated from field: string platform = 6;
-   */
-  platform?: string;
-};
-
-/**
- * Describes the message toshi.workspace.v1.ProductArtifact.
- * Use `create(ProductArtifactSchema)` to create a new message.
- */
-export const ProductArtifactSchema: GenMessage<ProductArtifact, {jsonType: ProductArtifactJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 12);
+  messageDesc(file_toshi_workspace_v1_products, 5);
 
 /**
  * FeatureSetting is one feature of a product as the workspace has it.
@@ -1311,95 +530,7 @@ export type FeatureSettingJson = {
  * Use `create(FeatureSettingSchema)` to create a new message.
  */
 export const FeatureSettingSchema: GenMessage<FeatureSetting, {jsonType: FeatureSettingJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 13);
-
-/**
- * CatalogEntryState is the effective listing state of an entry's version.
- *
- * @generated from enum toshi.workspace.v1.CatalogEntryState
- */
-export enum CatalogEntryState {
-  /**
-   * @generated from enum value: CATALOG_ENTRY_STATE_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * @generated from enum value: CATALOG_ENTRY_STATE_LISTED = 1;
-   */
-  LISTED = 1,
-
-  /**
-   * @generated from enum value: CATALOG_ENTRY_STATE_DEPRECATED = 2;
-   */
-  DEPRECATED = 2,
-
-  /**
-   * @generated from enum value: CATALOG_ENTRY_STATE_BLOCKED = 3;
-   */
-  BLOCKED = 3,
-}
-
-/**
- * CatalogEntryState is the effective listing state of an entry's version.
- *
- * @generated from enum toshi.workspace.v1.CatalogEntryState
- */
-export type CatalogEntryStateJson = "CATALOG_ENTRY_STATE_UNSPECIFIED" | "CATALOG_ENTRY_STATE_LISTED" | "CATALOG_ENTRY_STATE_DEPRECATED" | "CATALOG_ENTRY_STATE_BLOCKED";
-
-/**
- * Describes the enum toshi.workspace.v1.CatalogEntryState.
- */
-export const CatalogEntryStateSchema: GenEnum<CatalogEntryState, CatalogEntryStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_products, 0);
-
-/**
- * InstallationState is where an installation stands.
- *
- * @generated from enum toshi.workspace.v1.InstallationState
- */
-export enum InstallationState {
-  /**
-   * @generated from enum value: INSTALLATION_STATE_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * The product is on and its token works.
-   *
-   * @generated from enum value: INSTALLATION_STATE_ACTIVE = 1;
-   */
-  ACTIVE = 1,
-
-  /**
-   * The product is turned off: its token is refused and its webhook
-   * endpoints are paused until it is turned on again.
-   *
-   * @generated from enum value: INSTALLATION_STATE_SUSPENDED = 2;
-   */
-  SUSPENDED = 2,
-
-  /**
-   * Its token is revoked and its role deleted; turning it on installs it
-   * again.
-   *
-   * @generated from enum value: INSTALLATION_STATE_REMOVED = 3;
-   */
-  REMOVED = 3,
-}
-
-/**
- * InstallationState is where an installation stands.
- *
- * @generated from enum toshi.workspace.v1.InstallationState
- */
-export type InstallationStateJson = "INSTALLATION_STATE_UNSPECIFIED" | "INSTALLATION_STATE_ACTIVE" | "INSTALLATION_STATE_SUSPENDED" | "INSTALLATION_STATE_REMOVED";
-
-/**
- * Describes the enum toshi.workspace.v1.InstallationState.
- */
-export const InstallationStateSchema: GenEnum<InstallationState, InstallationStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_products, 1);
+  messageDesc(file_toshi_workspace_v1_products, 6);
 
 /**
  * ProductService reads and changes the workspace's settings of its
@@ -1417,10 +548,9 @@ export const InstallationStateSchema: GenEnum<InstallationState, InstallationSta
 export const ProductService: GenService<{
   /**
    * ListProducts returns the products the deployment includes, by id, each
-   * with its switch and its features: the entitlement, the workspace's
+   * with its features: the entitlement, the workspace's
    * setting if it has one, the effective value, and who changed the
-   * setting last and when; then the outside products the workspace has
-   * installed, by id, each with its installation.
+   * setting last and when.
    *
    * @generated from rpc toshi.workspace.v1.ProductService.ListProducts
    */
@@ -1430,20 +560,6 @@ export const ProductService: GenService<{
     output: typeof ListProductsResponseSchema;
   },
   /**
-   * ListCatalogEntries returns the outside products the deployment's
-   * catalog sources offer, by id, as `toshi product catalog` lists them,
-   * each with the state of the workspace's installation of it. The products
-   * the deployment includes are ListProducts'. With no catalog source the
-   * list is empty.
-   *
-   * @generated from rpc toshi.workspace.v1.ProductService.ListCatalogEntries
-   */
-  listCatalogEntries: {
-    methodKind: "unary";
-    input: typeof ListCatalogEntriesRequestSchema;
-    output: typeof ListCatalogEntriesResponseSchema;
-  },
-  /**
    * UpdateProduct changes the workspace's settings of one product in one
    * call: it turns the product on or off, and sets or clears its features.
    * The caller and the time of the call are recorded with each setting it
@@ -1451,12 +567,7 @@ export const ProductService: GenService<{
    * than the entitlement, a key the product does not declare or that the
    * workspace cannot narrow, or a value of another type than the key's is
    * INVALID_ARGUMENT naming the key, and nothing is changed. A product the
-   * deployment does not include, built in or offered by a catalog source,
-   * is NOT_FOUND.
-   *
-   * An outside product, one a catalog source offers, has no settings but
-   * enabled: turning it on installs it (accepted_access) or resumes its
-   * installation, and turning it off suspends it.
+   * deployment does not include is NOT_FOUND.
    *
    * The product's calls follow the change from the next call on.
    *
@@ -1466,21 +577,6 @@ export const ProductService: GenService<{
     methodKind: "unary";
     input: typeof UpdateProductRequestSchema;
     output: typeof UpdateProductResponseSchema;
-  },
-  /**
-   * RemoveProduct removes the workspace's installation of an outside
-   * product: it revokes the installation's token, deletes the role that
-   * held its access and stops its webhook endpoints. The data the product
-   * stored in the workspace stays. An installation already removed is
-   * answered as it is. A product never installed, or not an outside
-   * product, is NOT_FOUND.
-   *
-   * @generated from rpc toshi.workspace.v1.ProductService.RemoveProduct
-   */
-  removeProduct: {
-    methodKind: "unary";
-    input: typeof RemoveProductRequestSchema;
-    output: typeof RemoveProductResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_products, 0);

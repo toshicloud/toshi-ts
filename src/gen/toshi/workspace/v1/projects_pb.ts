@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Duration, DurationJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Duration, DurationJson, FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/projects.proto.
  */
 export const file_toshi_workspace_v1_projects: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKFAQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI5ChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiUAoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImEKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlcKFVNldEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEi0KBXJ1bGVzGAIgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiRwoWU2V0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlItUCCgpFbWJlZFRva2VuEgoKAmlkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHb3JpZ2lucxgDIAMoCRIyCgVzdGF0ZRgEIAEoDjIjLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHdXNlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMcmVjb3JkaW5nX2lkGAggASgJEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkiagoXQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIPCgdvcmlnaW5zGAIgAygJEi0KCmV4cGlyZXNfaW4YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXgoYQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEjMKC2VtYmVkX3Rva2VuGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4SDQoFdG9rZW4YAiABKAkiUAoWTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImgKF0xpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEjQKDGVtYmVkX3Rva2VucxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJCChdSZXZva2VFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhYKDmVtYmVkX3Rva2VuX2lkGAIgASgJIk8KGFJldm9rZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuKqwBCg9FbWJlZFRva2VuU3RhdGUSIQodRU1CRURfVE9LRU5fU1RBVEVfVU5TUEVDSUZJRUQQABIcChhFTUJFRF9UT0tFTl9TVEFURV9BQ1RJVkUQARIaChZFTUJFRF9UT0tFTl9TVEFURV9VU0VEEAISHQoZRU1CRURfVE9LRU5fU1RBVEVfUkVWT0tFRBADEh0KGUVNQkVEX1RPS0VOX1NUQVRFX0VYUElSRUQQBDKDDgoOUHJvamVjdFNlcnZpY2USfwoMTGlzdFByb2plY3RzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2plY3RzUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSeQoKR2V0UHJvamVjdBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSiwEKEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0Eo0BCg1DcmVhdGVQcm9qZWN0EigudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXNwb25zZSInwvMYDnByb2plY3RzLndyaXRl0vMYERIPcHJvamVjdDpwcm9qZWN0Ep4BCg9DbGFpbVJlcG9zaXRvcnkSKi50b3NoaS53b3Jrc3BhY2UudjEuQ2xhaW1SZXBvc2l0b3J5UmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSpAEKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoRRGVsZXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EogBCg9MaXN0QnJhbmNoUnVsZXMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKbAQoOU2V0QnJhbmNoUnVsZXMSKS50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChBDcmVhdGVFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXNwb25zZSI1wvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgUChJlbWJlZF90b2tlbi5pc3N1ZWQSiAEKD0xpc3RFbWJlZFRva2VucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EowBChBSZXZva2VFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXNwb25zZSIdwvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3RCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSK+AQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSNwoJYWRtaXNzaW9uGAQgASgLMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RBZG1pc3Npb24icwoQUHJvamVjdEFkbWlzc2lvbhILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0InUKFFVwZGF0ZVByb2plY3RSZXF1ZXN0EiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRQoVVXBkYXRlUHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI9ChZDbGFpbVJlcG9zaXRvcnlSZXF1ZXN0EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCSJnChdDbGFpbVJlcG9zaXRvcnlSZXNwb25zZRIyCgpyZXBvc2l0b3J5GAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkSGAoQcHJldmlvdXNfcHJvamVjdBgCIAEoCSIhChFHZXRQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJIkIKEkdldFByb2plY3RSZXNwb25zZRIsCgdwcm9qZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QiOQoYQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEa2luZBgCIAEoCSJYChlDcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjsKC2Vudmlyb25tZW50GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RFbnZpcm9ubWVudCI5ChhEZWxldGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJIhsKGURlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiQQoKQnJhbmNoUnVsZRINCgVtYXRjaBgBIAEoCRIPCgdwYXR0ZXJuGAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJIlAKFkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJhChdMaXN0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJXChVTZXRCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRItCgVydWxlcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlIkcKFlNldEJyYW5jaFJ1bGVzUmVzcG9uc2USLQoFcnVsZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSLVAgoKRW1iZWRUb2tlbhIKCgJpZBgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEg8KB29yaWdpbnMYAyADKAkSMgoFc3RhdGUYBCABKA4yIy50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlblN0YXRlEi4KCmNyZWF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB3VzZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHJlY29yZGluZ19pZBgIIAEoCRIuCgpyZXZva2VkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpjcmVhdGVkX2J5GAogASgJImoKF0NyZWF0ZUVtYmVkVG9rZW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDwoHb3JpZ2lucxgCIAMoCRItCgpleHBpcmVzX2luGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIl4KGENyZWF0ZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEg0KBXRva2VuGAIgASgJIlAKFkxpc3RFbWJlZFRva2Vuc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJoChdMaXN0RW1iZWRUb2tlbnNSZXNwb25zZRI0CgxlbWJlZF90b2tlbnMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiQgoXUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIWCg5lbWJlZF90b2tlbl9pZBgCIAEoCSJPChhSZXZva2VFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbiqsAQoPRW1iZWRUb2tlblN0YXRlEiEKHUVNQkVEX1RPS0VOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYRU1CRURfVE9LRU5fU1RBVEVfQUNUSVZFEAESGgoWRU1CRURfVE9LRU5fU1RBVEVfVVNFRBACEh0KGUVNQkVEX1RPS0VOX1NUQVRFX1JFVk9LRUQQAxIdChlFTUJFRF9UT0tFTl9TVEFURV9FWFBJUkVEEAQyng8KDlByb2plY3RTZXJ2aWNlEn8KDExpc3RQcm9qZWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EnkKCkdldFByb2plY3QSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EosBChBMaXN0UmVwb3NpdG9yaWVzEisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZXBvc2l0b3JpZXNSZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZXBvc2l0b3JpZXNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKNAQoNQ3JlYXRlUHJvamVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVzcG9uc2UiJ8LzGA5wcm9qZWN0cy53cml0ZdLzGBESD3Byb2plY3Q6cHJvamVjdBKYAQoNVXBkYXRlUHJvamVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9qZWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9qZWN0UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0Ep4BCg9DbGFpbVJlcG9zaXRvcnkSKi50b3NoaS53b3Jrc3BhY2UudjEuQ2xhaW1SZXBvc2l0b3J5UmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSpAEKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoRRGVsZXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EogBCg9MaXN0QnJhbmNoUnVsZXMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKbAQoOU2V0QnJhbmNoUnVsZXMSKS50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChBDcmVhdGVFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXNwb25zZSI1wvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgUChJlbWJlZF90b2tlbi5pc3N1ZWQSiAEKD0xpc3RFbWJlZFRva2VucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EowBChBSZXZva2VFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXNwb25zZSIdwvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3RCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Project is one of a workspace's projects.
@@ -35,6 +35,14 @@ export type Project = Message<"toshi.workspace.v1.Project"> & {
    * @generated from field: repeated toshi.workspace.v1.ProjectEnvironment environments = 3;
    */
   environments: ProjectEnvironment[];
+
+  /**
+   * admission is the project's admission webhook; unset when it has none.
+   * GetProject and UpdateProject return it; ListProjects does not.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectAdmission admission = 4;
+   */
+  admission?: ProjectAdmission | undefined;
 };
 
 /**
@@ -57,6 +65,14 @@ export type ProjectJson = {
    * @generated from field: repeated toshi.workspace.v1.ProjectEnvironment environments = 3;
    */
   environments?: ProjectEnvironmentJson[];
+
+  /**
+   * admission is the project's admission webhook; unset when it has none.
+   * GetProject and UpdateProject return it; ListProjects does not.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectAdmission admission = 4;
+   */
+  admission?: ProjectAdmissionJson;
 };
 
 /**
@@ -65,6 +81,95 @@ export type ProjectJson = {
  */
 export const ProjectSchema: GenMessage<Project, {jsonType: ProjectJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_projects, 0);
+
+/**
+ * ProjectAdmission is a project's admission webhook. At each admission
+ * point of the project, once Toshi's own checks have passed, the control
+ * plane posts the admission document to url, signed under Standard Webhooks
+ * with secret, and waits at most 2 seconds for {"allow": true} or
+ * {"allow": false, "reason": "..."}. No answer, an error, a status other
+ * than 2xx or another body is a deny. A refused workload's error is
+ * FAILED_PRECONDITION with an ErrorInfo, reason ADMISSION_DENIED, whose
+ * metadata names the module and the reason.
+ *
+ * @generated from message toshi.workspace.v1.ProjectAdmission
+ */
+export type ProjectAdmission = Message<"toshi.workspace.v1.ProjectAdmission"> & {
+  /**
+   * url is the https URL the document is posted to.
+   *
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * secret is the signing secret: "whsec_" and the base64 of 24 to 64
+   * bytes. Input only: no call returns it.
+   *
+   * @generated from field: string secret = 2;
+   */
+  secret: string;
+
+  /**
+   * updated_by is who set it last, as the audit log names them.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: Timestamp | undefined;
+};
+
+/**
+ * ProjectAdmission is a project's admission webhook. At each admission
+ * point of the project, once Toshi's own checks have passed, the control
+ * plane posts the admission document to url, signed under Standard Webhooks
+ * with secret, and waits at most 2 seconds for {"allow": true} or
+ * {"allow": false, "reason": "..."}. No answer, an error, a status other
+ * than 2xx or another body is a deny. A refused workload's error is
+ * FAILED_PRECONDITION with an ErrorInfo, reason ADMISSION_DENIED, whose
+ * metadata names the module and the reason.
+ *
+ * @generated from message toshi.workspace.v1.ProjectAdmission
+ */
+export type ProjectAdmissionJson = {
+  /**
+   * url is the https URL the document is posted to.
+   *
+   * @generated from field: string url = 1;
+   */
+  url?: string;
+
+  /**
+   * secret is the signing secret: "whsec_" and the base64 of 24 to 64
+   * bytes. Input only: no call returns it.
+   *
+   * @generated from field: string secret = 2;
+   */
+  secret?: string;
+
+  /**
+   * updated_by is who set it last, as the audit log names them.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ProjectAdmission.
+ * Use `create(ProjectAdmissionSchema)` to create a new message.
+ */
+export const ProjectAdmissionSchema: GenMessage<ProjectAdmission, {jsonType: ProjectAdmissionJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 1);
 
 /**
  * ProjectEnvironment is one of a project's environments.
@@ -109,7 +214,7 @@ export type ProjectEnvironmentJson = {
  * Use `create(ProjectEnvironmentSchema)` to create a new message.
  */
 export const ProjectEnvironmentSchema: GenMessage<ProjectEnvironment, {jsonType: ProjectEnvironmentJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 1);
+  messageDesc(file_toshi_workspace_v1_projects, 2);
 
 /**
  * Repository is a repository a project claims: a CI job of the repository
@@ -170,7 +275,7 @@ export type RepositoryJson = {
  * Use `create(RepositorySchema)` to create a new message.
  */
 export const RepositorySchema: GenMessage<Repository, {jsonType: RepositoryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 2);
+  messageDesc(file_toshi_workspace_v1_projects, 3);
 
 /**
  * @generated from message toshi.workspace.v1.ListProjectsRequest
@@ -215,7 +320,7 @@ export type ListProjectsRequestJson = {
  * Use `create(ListProjectsRequestSchema)` to create a new message.
  */
 export const ListProjectsRequestSchema: GenMessage<ListProjectsRequest, {jsonType: ListProjectsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 3);
+  messageDesc(file_toshi_workspace_v1_projects, 4);
 
 /**
  * @generated from message toshi.workspace.v1.ListProjectsResponse
@@ -274,7 +379,7 @@ export type ListProjectsResponseJson = {
  * Use `create(ListProjectsResponseSchema)` to create a new message.
  */
 export const ListProjectsResponseSchema: GenMessage<ListProjectsResponse, {jsonType: ListProjectsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 4);
+  messageDesc(file_toshi_workspace_v1_projects, 5);
 
 /**
  * TokenLimit names the project and the environment an API token is
@@ -327,7 +432,7 @@ export type TokenLimitJson = {
  * Use `create(TokenLimitSchema)` to create a new message.
  */
 export const TokenLimitSchema: GenMessage<TokenLimit, {jsonType: TokenLimitJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 5);
+  messageDesc(file_toshi_workspace_v1_projects, 6);
 
 /**
  * @generated from message toshi.workspace.v1.ListRepositoriesRequest
@@ -386,7 +491,7 @@ export type ListRepositoriesRequestJson = {
  * Use `create(ListRepositoriesRequestSchema)` to create a new message.
  */
 export const ListRepositoriesRequestSchema: GenMessage<ListRepositoriesRequest, {jsonType: ListRepositoriesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 6);
+  messageDesc(file_toshi_workspace_v1_projects, 7);
 
 /**
  * @generated from message toshi.workspace.v1.ListRepositoriesResponse
@@ -427,7 +532,7 @@ export type ListRepositoriesResponseJson = {
  * Use `create(ListRepositoriesResponseSchema)` to create a new message.
  */
 export const ListRepositoriesResponseSchema: GenMessage<ListRepositoriesResponse, {jsonType: ListRepositoriesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 7);
+  messageDesc(file_toshi_workspace_v1_projects, 8);
 
 /**
  * @generated from message toshi.workspace.v1.CreateProjectRequest
@@ -454,7 +559,7 @@ export type CreateProjectRequestJson = {
  * Use `create(CreateProjectRequestSchema)` to create a new message.
  */
 export const CreateProjectRequestSchema: GenMessage<CreateProjectRequest, {jsonType: CreateProjectRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 8);
+  messageDesc(file_toshi_workspace_v1_projects, 9);
 
 /**
  * @generated from message toshi.workspace.v1.CreateProjectResponse
@@ -481,7 +586,77 @@ export type CreateProjectResponseJson = {
  * Use `create(CreateProjectResponseSchema)` to create a new message.
  */
 export const CreateProjectResponseSchema: GenMessage<CreateProjectResponse, {jsonType: CreateProjectResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 9);
+  messageDesc(file_toshi_workspace_v1_projects, 10);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateProjectRequest
+ */
+export type UpdateProjectRequest = Message<"toshi.workspace.v1.UpdateProjectRequest"> & {
+  /**
+   * name names the project; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Project project = 1;
+   */
+  project?: Project | undefined;
+
+  /**
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateProjectRequest
+ */
+export type UpdateProjectRequestJson = {
+  /**
+   * name names the project; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Project project = 1;
+   */
+  project?: ProjectJson;
+
+  /**
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateProjectRequest.
+ * Use `create(UpdateProjectRequestSchema)` to create a new message.
+ */
+export const UpdateProjectRequestSchema: GenMessage<UpdateProjectRequest, {jsonType: UpdateProjectRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 11);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateProjectResponse
+ */
+export type UpdateProjectResponse = Message<"toshi.workspace.v1.UpdateProjectResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Project project = 1;
+   */
+  project?: Project | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateProjectResponse
+ */
+export type UpdateProjectResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Project project = 1;
+   */
+  project?: ProjectJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateProjectResponse.
+ * Use `create(UpdateProjectResponseSchema)` to create a new message.
+ */
+export const UpdateProjectResponseSchema: GenMessage<UpdateProjectResponse, {jsonType: UpdateProjectResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 12);
 
 /**
  * @generated from message toshi.workspace.v1.ClaimRepositoryRequest
@@ -526,7 +701,7 @@ export type ClaimRepositoryRequestJson = {
  * Use `create(ClaimRepositoryRequestSchema)` to create a new message.
  */
 export const ClaimRepositoryRequestSchema: GenMessage<ClaimRepositoryRequest, {jsonType: ClaimRepositoryRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 10);
+  messageDesc(file_toshi_workspace_v1_projects, 13);
 
 /**
  * @generated from message toshi.workspace.v1.ClaimRepositoryResponse
@@ -569,7 +744,7 @@ export type ClaimRepositoryResponseJson = {
  * Use `create(ClaimRepositoryResponseSchema)` to create a new message.
  */
 export const ClaimRepositoryResponseSchema: GenMessage<ClaimRepositoryResponse, {jsonType: ClaimRepositoryResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 11);
+  messageDesc(file_toshi_workspace_v1_projects, 14);
 
 /**
  * @generated from message toshi.workspace.v1.GetProjectRequest
@@ -600,7 +775,7 @@ export type GetProjectRequestJson = {
  * Use `create(GetProjectRequestSchema)` to create a new message.
  */
 export const GetProjectRequestSchema: GenMessage<GetProjectRequest, {jsonType: GetProjectRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 12);
+  messageDesc(file_toshi_workspace_v1_projects, 15);
 
 /**
  * @generated from message toshi.workspace.v1.GetProjectResponse
@@ -627,7 +802,7 @@ export type GetProjectResponseJson = {
  * Use `create(GetProjectResponseSchema)` to create a new message.
  */
 export const GetProjectResponseSchema: GenMessage<GetProjectResponse, {jsonType: GetProjectResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 13);
+  messageDesc(file_toshi_workspace_v1_projects, 16);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEnvironmentRequest
@@ -674,7 +849,7 @@ export type CreateEnvironmentRequestJson = {
  * Use `create(CreateEnvironmentRequestSchema)` to create a new message.
  */
 export const CreateEnvironmentRequestSchema: GenMessage<CreateEnvironmentRequest, {jsonType: CreateEnvironmentRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 14);
+  messageDesc(file_toshi_workspace_v1_projects, 17);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEnvironmentResponse
@@ -701,7 +876,7 @@ export type CreateEnvironmentResponseJson = {
  * Use `create(CreateEnvironmentResponseSchema)` to create a new message.
  */
 export const CreateEnvironmentResponseSchema: GenMessage<CreateEnvironmentResponse, {jsonType: CreateEnvironmentResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 15);
+  messageDesc(file_toshi_workspace_v1_projects, 18);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteEnvironmentRequest
@@ -746,7 +921,7 @@ export type DeleteEnvironmentRequestJson = {
  * Use `create(DeleteEnvironmentRequestSchema)` to create a new message.
  */
 export const DeleteEnvironmentRequestSchema: GenMessage<DeleteEnvironmentRequest, {jsonType: DeleteEnvironmentRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 16);
+  messageDesc(file_toshi_workspace_v1_projects, 19);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteEnvironmentResponse
@@ -765,7 +940,7 @@ export type DeleteEnvironmentResponseJson = {
  * Use `create(DeleteEnvironmentResponseSchema)` to create a new message.
  */
 export const DeleteEnvironmentResponseSchema: GenMessage<DeleteEnvironmentResponse, {jsonType: DeleteEnvironmentResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 17);
+  messageDesc(file_toshi_workspace_v1_projects, 20);
 
 /**
  * BranchRule is one of a project's branch rules: it chooses the
@@ -848,7 +1023,7 @@ export type BranchRuleJson = {
  * Use `create(BranchRuleSchema)` to create a new message.
  */
 export const BranchRuleSchema: GenMessage<BranchRule, {jsonType: BranchRuleJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 18);
+  messageDesc(file_toshi_workspace_v1_projects, 21);
 
 /**
  * @generated from message toshi.workspace.v1.ListBranchRulesRequest
@@ -907,7 +1082,7 @@ export type ListBranchRulesRequestJson = {
  * Use `create(ListBranchRulesRequestSchema)` to create a new message.
  */
 export const ListBranchRulesRequestSchema: GenMessage<ListBranchRulesRequest, {jsonType: ListBranchRulesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 19);
+  messageDesc(file_toshi_workspace_v1_projects, 22);
 
 /**
  * @generated from message toshi.workspace.v1.ListBranchRulesResponse
@@ -948,7 +1123,7 @@ export type ListBranchRulesResponseJson = {
  * Use `create(ListBranchRulesResponseSchema)` to create a new message.
  */
 export const ListBranchRulesResponseSchema: GenMessage<ListBranchRulesResponse, {jsonType: ListBranchRulesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 20);
+  messageDesc(file_toshi_workspace_v1_projects, 23);
 
 /**
  * @generated from message toshi.workspace.v1.SetBranchRulesRequest
@@ -993,7 +1168,7 @@ export type SetBranchRulesRequestJson = {
  * Use `create(SetBranchRulesRequestSchema)` to create a new message.
  */
 export const SetBranchRulesRequestSchema: GenMessage<SetBranchRulesRequest, {jsonType: SetBranchRulesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 21);
+  messageDesc(file_toshi_workspace_v1_projects, 24);
 
 /**
  * @generated from message toshi.workspace.v1.SetBranchRulesResponse
@@ -1024,7 +1199,7 @@ export type SetBranchRulesResponseJson = {
  * Use `create(SetBranchRulesResponseSchema)` to create a new message.
  */
 export const SetBranchRulesResponseSchema: GenMessage<SetBranchRulesResponse, {jsonType: SetBranchRulesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 22);
+  messageDesc(file_toshi_workspace_v1_projects, 25);
 
 /**
  * EmbedToken is one of a project's embed tokens, without the token itself.
@@ -1175,7 +1350,7 @@ export type EmbedTokenJson = {
  * Use `create(EmbedTokenSchema)` to create a new message.
  */
 export const EmbedTokenSchema: GenMessage<EmbedToken, {jsonType: EmbedTokenJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 23);
+  messageDesc(file_toshi_workspace_v1_projects, 26);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenRequest
@@ -1240,7 +1415,7 @@ export type CreateEmbedTokenRequestJson = {
  * Use `create(CreateEmbedTokenRequestSchema)` to create a new message.
  */
 export const CreateEmbedTokenRequestSchema: GenMessage<CreateEmbedTokenRequest, {jsonType: CreateEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 24);
+  messageDesc(file_toshi_workspace_v1_projects, 27);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenResponse
@@ -1281,7 +1456,7 @@ export type CreateEmbedTokenResponseJson = {
  * Use `create(CreateEmbedTokenResponseSchema)` to create a new message.
  */
 export const CreateEmbedTokenResponseSchema: GenMessage<CreateEmbedTokenResponse, {jsonType: CreateEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 25);
+  messageDesc(file_toshi_workspace_v1_projects, 28);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensRequest
@@ -1340,7 +1515,7 @@ export type ListEmbedTokensRequestJson = {
  * Use `create(ListEmbedTokensRequestSchema)` to create a new message.
  */
 export const ListEmbedTokensRequestSchema: GenMessage<ListEmbedTokensRequest, {jsonType: ListEmbedTokensRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 26);
+  messageDesc(file_toshi_workspace_v1_projects, 29);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensResponse
@@ -1381,7 +1556,7 @@ export type ListEmbedTokensResponseJson = {
  * Use `create(ListEmbedTokensResponseSchema)` to create a new message.
  */
 export const ListEmbedTokensResponseSchema: GenMessage<ListEmbedTokensResponse, {jsonType: ListEmbedTokensResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 27);
+  messageDesc(file_toshi_workspace_v1_projects, 30);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenRequest
@@ -1422,7 +1597,7 @@ export type RevokeEmbedTokenRequestJson = {
  * Use `create(RevokeEmbedTokenRequestSchema)` to create a new message.
  */
 export const RevokeEmbedTokenRequestSchema: GenMessage<RevokeEmbedTokenRequest, {jsonType: RevokeEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 28);
+  messageDesc(file_toshi_workspace_v1_projects, 31);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenResponse
@@ -1449,7 +1624,7 @@ export type RevokeEmbedTokenResponseJson = {
  * Use `create(RevokeEmbedTokenResponseSchema)` to create a new message.
  */
 export const RevokeEmbedTokenResponseSchema: GenMessage<RevokeEmbedTokenResponse, {jsonType: RevokeEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 29);
+  messageDesc(file_toshi_workspace_v1_projects, 32);
 
 /**
  * EmbedTokenState is where an embed token is in its life.
@@ -1565,6 +1740,24 @@ export const ProjectService: GenService<{
     methodKind: "unary";
     input: typeof CreateProjectRequestSchema;
     output: typeof CreateProjectResponseSchema;
+  },
+  /**
+   * UpdateProject sets the fields of project.name's project that
+   * update_mask names. The one field it sets is admission, the project's
+   * admission webhook: its url and secret, both required, or an empty url
+   * to remove it. An unset update_mask names the fields project carries,
+   * an empty one changes nothing, and "*" or a path of another field is
+   * INVALID_ARGUMENT. The secret is sealed under the workspace's data key
+   * and never returned; a deployment with no keyring refuses it with
+   * FAILED_PRECONDITION. A token limited to environments is
+   * PERMISSION_DENIED.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.UpdateProject
+   */
+  updateProject: {
+    methodKind: "unary";
+    input: typeof UpdateProjectRequestSchema;
+    output: typeof UpdateProjectResponseSchema;
   },
   /**
    * ClaimRepository puts a repository in a project: it claims a repository

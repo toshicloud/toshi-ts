@@ -18,7 +18,6 @@ export * from "./gen/toshi/workspace/v1/tokens_pb.js";
 export * from "./gen/toshi/workspace/v1/products_pb.js";
 export * from "./gen/toshi/workspace/v1/discovery_pb.js";
 export * from "./gen/toshi/workspace/v1/connections_pb.js";
-export * from "./gen/toshi/workspace/v1/hooks_pb.js";
 export * from "./gen/toshi/workspace/v1/roles_pb.js";
 export * from "./gen/toshi/workspace/v1/account_pb.js";
 export * from "./gen/toshi/workspace/v1/images_pb.js";

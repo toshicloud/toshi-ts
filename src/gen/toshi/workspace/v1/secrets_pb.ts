@@ -111,8 +111,8 @@ export type Secret = Message<"toshi.workspace.v1.Secret"> & {
   updatedAt?: Timestamp | undefined;
 
   /**
-   * The GitHub user id of the person whose own key it is; empty for a key
-   * of the set.
+   * The user id of the person whose own key it is; empty for a key of the
+   * set.
    *
    * @generated from field: string owner = 5;
    */
@@ -165,8 +165,8 @@ export type SecretJson = {
   updatedAt?: TimestampJson;
 
   /**
-   * The GitHub user id of the person whose own key it is; empty for a key
-   * of the set.
+   * The user id of the person whose own key it is; empty for a key of the
+   * set.
    *
    * @generated from field: string owner = 5;
    */
@@ -675,7 +675,7 @@ export type DeleteSecretRequest = Message<"toshi.workspace.v1.DeleteSecretReques
   own: boolean;
 
   /**
-   * The own key of the person with this GitHub user id; not with own.
+   * The own key of the person with this user id; not with own.
    *
    * @generated from field: string owner = 6;
    */
@@ -714,7 +714,7 @@ export type DeleteSecretRequestJson = {
   own?: boolean;
 
   /**
-   * The own key of the person with this GitHub user id; not with own.
+   * The own key of the person with this user id; not with own.
    *
    * @generated from field: string owner = 6;
    */
@@ -909,7 +909,7 @@ export type ListSecretVersionsRequest = Message<"toshi.workspace.v1.ListSecretVe
   own: boolean;
 
   /**
-   * The own key of the person with this GitHub user id; not with own.
+   * The own key of the person with this user id; not with own.
    *
    * @generated from field: string owner = 8;
    */
@@ -962,7 +962,7 @@ export type ListSecretVersionsRequestJson = {
   own?: boolean;
 
   /**
-   * The own key of the person with this GitHub user id; not with own.
+   * The own key of the person with this user id; not with own.
    *
    * @generated from field: string owner = 8;
    */
@@ -1388,8 +1388,7 @@ export const SecretGranteeKindSchema: GenEnum<SecretGranteeKind, SecretGranteeKi
  * holds a role in the workspace. A sandbox's commands receive it only when
  * that person runs them, and CI jobs never. A workspace token starts
  * workloads as the person who created it. The calls on keys take own, for
- * the caller's own key, or owner, a person's GitHub user id, for that
- * person's.
+ * the caller's own key, or owner, a person's user id, for that person's.
  *
  * @generated from service toshi.workspace.v1.SecretService
  */
