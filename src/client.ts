@@ -4,6 +4,7 @@ import { createClient } from "@connectrpc/connect";
 import type { Client, Interceptor, Transport } from "@connectrpc/connect";
 
 import { executeCommand } from "./execute.js";
+import { AccountService } from "./gen/toshi/workspace/v1/account_pb.js";
 import { ArtifactService, ArtifactUploadService } from "./gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "./gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
@@ -12,6 +13,7 @@ import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
 import { HookService } from "./gen/toshi/workspace/v1/hooks_pb.js";
+import { ImageService } from "./gen/toshi/workspace/v1/images_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
 import { ProductService } from "./gen/toshi/workspace/v1/products_pb.js";
@@ -184,6 +186,8 @@ export interface ToshiClient {
   readonly hook: Client<typeof HookService>;
   readonly role: Client<typeof RoleService>;
   readonly trigger: Client<typeof TriggerService>;
+  readonly account: Client<typeof AccountService>;
+  readonly image: Client<typeof ImageService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -442,5 +446,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     hook: createClient(HookService, transport),
     role: createClient(RoleService, transport),
     trigger: createClient(TriggerService, transport),
+    account: createClient(AccountService, transport),
+    image: createClient(ImageService, transport),
   };
 }

@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/volumes.proto.
  */
 export const file_toshi_workspace_v1_volumes: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItwBCgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCSJMChJMaXN0Vm9sdW1lc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJbChNMaXN0Vm9sdW1lc1Jlc3BvbnNlEisKB3ZvbHVtZXMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJOChNBdHRhY2hWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEhMKC3dvcmtsb2FkX2lkGAMgASgJIkIKFEF0dGFjaFZvbHVtZVJlc3BvbnNlEioKBnZvbHVtZRgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUiOQoTRGV0YWNoVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXZvbHVtZV9pZBgCIAEoCSJCChREZXRhY2hWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lKocBCgpWb2x1bWVNb2RlEhsKF1ZPTFVNRV9NT0RFX1VOU1BFQ0lGSUVEEAASFQoRVk9MVU1FX01PREVfQ0FDSEUQARIUChBWT0xVTUVfTU9ERV9TRUVEEAISFQoRVk9MVU1FX01PREVfU1RBVEUQAxIYChRWT0xVTUVfTU9ERV9BUlRJRkFDVBAEMo4DCg1Wb2x1bWVTZXJ2aWNlEnsKC0xpc3RWb2x1bWVzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSfwoMQXR0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQXR0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3QSfwoMRGV0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGV0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3RCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIq0CCgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCRIWCg5sYXRlc3RfdmVyc2lvbhgJIAEoAxI3ChNsYXRlc3RfdmVyc2lvbl90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKLAQoNVm9sdW1lVmVyc2lvbhIOCgZudW1iZXIYASABKAMSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCnNpemVfYnl0ZXMYAyABKAMSDgoGc2hhMjU2GAQgASgJEhUKDXJlc3RvcmVkX2Zyb20YBSABKAMiTAoSTGlzdFZvbHVtZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiWwoTTGlzdFZvbHVtZXNSZXNwb25zZRIrCgd2b2x1bWVzGAEgAygLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiTgoTQXR0YWNoVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXZvbHVtZV9pZBgCIAEoCRITCgt3b3JrbG9hZF9pZBgDIAEoCSJCChRBdHRhY2hWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lIjkKE0RldGFjaFZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkiQgoURGV0YWNoVm9sdW1lUmVzcG9uc2USKgoGdm9sdW1lGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZSJmChlMaXN0Vm9sdW1lVmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJImoKGkxpc3RWb2x1bWVWZXJzaW9uc1Jlc3BvbnNlEjMKCHZlcnNpb25zGAEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZVZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIksKFFJlc3RvcmVWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEg8KB3ZlcnNpb24YAyABKAMidwoVUmVzdG9yZVZvbHVtZVJlc3BvbnNlEjIKB3ZlcnNpb24YASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lVmVyc2lvbhIqCgZ2b2x1bWUYAiABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lKocBCgpWb2x1bWVNb2RlEhsKF1ZPTFVNRV9NT0RFX1VOU1BFQ0lGSUVEEAASFQoRVk9MVU1FX01PREVfQ0FDSEUQARIUChBWT0xVTUVfTU9ERV9TRUVEEAISFQoRVk9MVU1FX01PREVfU1RBVEUQAxIYChRWT0xVTUVfTU9ERV9BUlRJRkFDVBAEMrsFCg1Wb2x1bWVTZXJ2aWNlEnsKC0xpc3RWb2x1bWVzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSfwoMQXR0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQXR0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3QSfwoMRGV0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGV0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3QSkAEKEkxpc3RWb2x1bWVWZXJzaW9ucxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lVmVyc2lvbnNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVWZXJzaW9uc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSlwEKDVJlc3RvcmVWb2x1bWUSKC50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlc3BvbnNlIjHC8xgNdm9sdW1lcy53cml0ZcrzGAdwcm9qZWN00vMYEQoPdm9sdW1lLnJlc3RvcmVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Volume is a disk of a project.
@@ -71,6 +71,20 @@ export type Volume = Message<"toshi.workspace.v1.Volume"> & {
    * @generated from field: string attached_workload_id = 8;
    */
   attachedWorkloadId: string;
+
+  /**
+   * The number of its newest saved version; zero when it has none.
+   *
+   * @generated from field: int64 latest_version = 9;
+   */
+  latestVersion: bigint;
+
+  /**
+   * When its newest version was saved; unset when it has none.
+   *
+   * @generated from field: google.protobuf.Timestamp latest_version_time = 10;
+   */
+  latestVersionTime?: Timestamp | undefined;
 };
 
 /**
@@ -129,6 +143,20 @@ export type VolumeJson = {
    * @generated from field: string attached_workload_id = 8;
    */
   attachedWorkloadId?: string;
+
+  /**
+   * The number of its newest saved version; zero when it has none.
+   *
+   * @generated from field: int64 latest_version = 9;
+   */
+  latestVersion?: string;
+
+  /**
+   * When its newest version was saved; unset when it has none.
+   *
+   * @generated from field: google.protobuf.Timestamp latest_version_time = 10;
+   */
+  latestVersionTime?: TimestampJson;
 };
 
 /**
@@ -137,6 +165,95 @@ export type VolumeJson = {
  */
 export const VolumeSchema: GenMessage<Volume, {jsonType: VolumeJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_volumes, 0);
+
+/**
+ * VolumeVersion is a saved copy of a state volume's data.
+ *
+ * @generated from message toshi.workspace.v1.VolumeVersion
+ */
+export type VolumeVersion = Message<"toshi.workspace.v1.VolumeVersion"> & {
+  /**
+   * One higher than the volume's previous version; the first is 1.
+   *
+   * @generated from field: int64 number = 1;
+   */
+  number: bigint;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp create_time = 2;
+   */
+  createTime?: Timestamp | undefined;
+
+  /**
+   * The length of the saved disk image, in bytes.
+   *
+   * @generated from field: int64 size_bytes = 3;
+   */
+  sizeBytes: bigint;
+
+  /**
+   * The hex SHA-256 of the saved disk image.
+   *
+   * @generated from field: string sha256 = 4;
+   */
+  sha256: string;
+
+  /**
+   * The version RestoreVolume copied this one from; zero for one a run
+   * saved.
+   *
+   * @generated from field: int64 restored_from = 5;
+   */
+  restoredFrom: bigint;
+};
+
+/**
+ * VolumeVersion is a saved copy of a state volume's data.
+ *
+ * @generated from message toshi.workspace.v1.VolumeVersion
+ */
+export type VolumeVersionJson = {
+  /**
+   * One higher than the volume's previous version; the first is 1.
+   *
+   * @generated from field: int64 number = 1;
+   */
+  number?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp create_time = 2;
+   */
+  createTime?: TimestampJson;
+
+  /**
+   * The length of the saved disk image, in bytes.
+   *
+   * @generated from field: int64 size_bytes = 3;
+   */
+  sizeBytes?: string;
+
+  /**
+   * The hex SHA-256 of the saved disk image.
+   *
+   * @generated from field: string sha256 = 4;
+   */
+  sha256?: string;
+
+  /**
+   * The version RestoreVolume copied this one from; zero for one a run
+   * saved.
+   *
+   * @generated from field: int64 restored_from = 5;
+   */
+  restoredFrom?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.VolumeVersion.
+ * Use `create(VolumeVersionSchema)` to create a new message.
+ */
+export const VolumeVersionSchema: GenMessage<VolumeVersion, {jsonType: VolumeVersionJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 1);
 
 /**
  * @generated from message toshi.workspace.v1.ListVolumesRequest
@@ -191,7 +308,7 @@ export type ListVolumesRequestJson = {
  * Use `create(ListVolumesRequestSchema)` to create a new message.
  */
 export const ListVolumesRequestSchema: GenMessage<ListVolumesRequest, {jsonType: ListVolumesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 1);
+  messageDesc(file_toshi_workspace_v1_volumes, 2);
 
 /**
  * @generated from message toshi.workspace.v1.ListVolumesResponse
@@ -232,7 +349,7 @@ export type ListVolumesResponseJson = {
  * Use `create(ListVolumesResponseSchema)` to create a new message.
  */
 export const ListVolumesResponseSchema: GenMessage<ListVolumesResponse, {jsonType: ListVolumesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 2);
+  messageDesc(file_toshi_workspace_v1_volumes, 3);
 
 /**
  * @generated from message toshi.workspace.v1.AttachVolumeRequest
@@ -283,7 +400,7 @@ export type AttachVolumeRequestJson = {
  * Use `create(AttachVolumeRequestSchema)` to create a new message.
  */
 export const AttachVolumeRequestSchema: GenMessage<AttachVolumeRequest, {jsonType: AttachVolumeRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 3);
+  messageDesc(file_toshi_workspace_v1_volumes, 4);
 
 /**
  * @generated from message toshi.workspace.v1.AttachVolumeResponse
@@ -310,7 +427,7 @@ export type AttachVolumeResponseJson = {
  * Use `create(AttachVolumeResponseSchema)` to create a new message.
  */
 export const AttachVolumeResponseSchema: GenMessage<AttachVolumeResponse, {jsonType: AttachVolumeResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 4);
+  messageDesc(file_toshi_workspace_v1_volumes, 5);
 
 /**
  * @generated from message toshi.workspace.v1.DetachVolumeRequest
@@ -347,7 +464,7 @@ export type DetachVolumeRequestJson = {
  * Use `create(DetachVolumeRequestSchema)` to create a new message.
  */
 export const DetachVolumeRequestSchema: GenMessage<DetachVolumeRequest, {jsonType: DetachVolumeRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 5);
+  messageDesc(file_toshi_workspace_v1_volumes, 6);
 
 /**
  * @generated from message toshi.workspace.v1.DetachVolumeResponse
@@ -374,7 +491,205 @@ export type DetachVolumeResponseJson = {
  * Use `create(DetachVolumeResponseSchema)` to create a new message.
  */
 export const DetachVolumeResponseSchema: GenMessage<DetachVolumeResponse, {jsonType: DetachVolumeResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 6);
+  messageDesc(file_toshi_workspace_v1_volumes, 7);
+
+/**
+ * @generated from message toshi.workspace.v1.ListVolumeVersionsRequest
+ */
+export type ListVolumeVersionsRequest = Message<"toshi.workspace.v1.ListVolumeVersionsRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId: string;
+
+  /**
+   * The most versions in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 3;
+   */
+  pageSize: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 4;
+   */
+  pageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListVolumeVersionsRequest
+ */
+export type ListVolumeVersionsRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId?: string;
+
+  /**
+   * The most versions in one page; zero lets the server choose.
+   *
+   * @generated from field: int32 page_size = 3;
+   */
+  pageSize?: number;
+
+  /**
+   * From an earlier response's next_page_token; empty for the first page.
+   *
+   * @generated from field: string page_token = 4;
+   */
+  pageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListVolumeVersionsRequest.
+ * Use `create(ListVolumeVersionsRequestSchema)` to create a new message.
+ */
+export const ListVolumeVersionsRequestSchema: GenMessage<ListVolumeVersionsRequest, {jsonType: ListVolumeVersionsRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 8);
+
+/**
+ * @generated from message toshi.workspace.v1.ListVolumeVersionsResponse
+ */
+export type ListVolumeVersionsResponse = Message<"toshi.workspace.v1.ListVolumeVersionsResponse"> & {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.VolumeVersion versions = 1;
+   */
+  versions: VolumeVersion[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListVolumeVersionsResponse
+ */
+export type ListVolumeVersionsResponseJson = {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.VolumeVersion versions = 1;
+   */
+  versions?: VolumeVersionJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListVolumeVersionsResponse.
+ * Use `create(ListVolumeVersionsResponseSchema)` to create a new message.
+ */
+export const ListVolumeVersionsResponseSchema: GenMessage<ListVolumeVersionsResponse, {jsonType: ListVolumeVersionsResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 9);
+
+/**
+ * @generated from message toshi.workspace.v1.RestoreVolumeRequest
+ */
+export type RestoreVolumeRequest = Message<"toshi.workspace.v1.RestoreVolumeRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId: string;
+
+  /**
+   * The number of the version to copy.
+   *
+   * @generated from field: int64 version = 3;
+   */
+  version: bigint;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RestoreVolumeRequest
+ */
+export type RestoreVolumeRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId?: string;
+
+  /**
+   * The number of the version to copy.
+   *
+   * @generated from field: int64 version = 3;
+   */
+  version?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RestoreVolumeRequest.
+ * Use `create(RestoreVolumeRequestSchema)` to create a new message.
+ */
+export const RestoreVolumeRequestSchema: GenMessage<RestoreVolumeRequest, {jsonType: RestoreVolumeRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 10);
+
+/**
+ * @generated from message toshi.workspace.v1.RestoreVolumeResponse
+ */
+export type RestoreVolumeResponse = Message<"toshi.workspace.v1.RestoreVolumeResponse"> & {
+  /**
+   * The version the restore recorded.
+   *
+   * @generated from field: toshi.workspace.v1.VolumeVersion version = 1;
+   */
+  version?: VolumeVersion | undefined;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 2;
+   */
+  volume?: Volume | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.RestoreVolumeResponse
+ */
+export type RestoreVolumeResponseJson = {
+  /**
+   * The version the restore recorded.
+   *
+   * @generated from field: toshi.workspace.v1.VolumeVersion version = 1;
+   */
+  version?: VolumeVersionJson;
+
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 2;
+   */
+  volume?: VolumeJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RestoreVolumeResponse.
+ * Use `create(RestoreVolumeResponseSchema)` to create a new message.
+ */
+export const RestoreVolumeResponseSchema: GenMessage<RestoreVolumeResponse, {jsonType: RestoreVolumeResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 11);
 
 /**
  * VolumeMode is what a volume holds and how runs use it.
@@ -447,7 +762,8 @@ export const VolumeModeSchema: GenEnum<VolumeMode, VolumeModeJson> = /*@__PURE__
  *
  * The calls take no request_key: attaching a volume to the workload it is
  * attached to, while no run holds it, and detaching a detached volume
- * return it as it is.
+ * return it as it is. RestoreVolume sent twice records two versions, each
+ * a copy of the one it names.
  *
  * @generated from service toshi.workspace.v1.VolumeService
  */
@@ -498,6 +814,37 @@ export const VolumeService: GenService<{
     methodKind: "unary";
     input: typeof DetachVolumeRequestSchema;
     output: typeof DetachVolumeResponseSchema;
+  },
+  /**
+   * ListVolumeVersions returns a state volume's saved versions, newest
+   * first. A run that releases the volume saves its data as the next
+   * version when the workspace has object storage. The volume keeps its
+   * newest five versions and the one a run holding it started from; the
+   * others expire and are not listed.
+   *
+   * A page holds 100 versions when page_size is zero, and 1000 at most.
+   *
+   * @generated from rpc toshi.workspace.v1.VolumeService.ListVolumeVersions
+   */
+  listVolumeVersions: {
+    methodKind: "unary";
+    input: typeof ListVolumeVersionsRequestSchema;
+    output: typeof ListVolumeVersionsResponseSchema;
+  },
+  /**
+   * RestoreVolume copies one of a state volume's versions as its next
+   * version, so the next run that mounts the volume starts from that data.
+   * The new version names the version it was copied from. A volume a run
+   * holds fails with FAILED_PRECONDITION, as do a volume that is not a
+   * state volume and an expired version. A version the volume does not
+   * have is NOT_FOUND.
+   *
+   * @generated from rpc toshi.workspace.v1.VolumeService.RestoreVolume
+   */
+  restoreVolume: {
+    methodKind: "unary";
+    input: typeof RestoreVolumeRequestSchema;
+    output: typeof RestoreVolumeResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_volumes, 0);

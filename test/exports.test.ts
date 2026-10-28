@@ -21,7 +21,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
   [root.ChannelService, "toshi.workspace.v1.ChannelService", 16],
   [root.RecordingService, "toshi.workspace.v1.RecordingService", 5],
-  [root.VolumeService, "toshi.workspace.v1.VolumeService", 3],
+  [root.VolumeService, "toshi.workspace.v1.VolumeService", 5],
   [root.ArtifactService, "toshi.workspace.v1.ArtifactService", 3],
   [root.ArtifactUploadService, "toshi.workspace.v1.ArtifactUploadService", 2],
   [root.WorkspaceService, "toshi.workspace.v1.WorkspaceService", 17],
@@ -37,6 +37,8 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.HookService, "toshi.workspace.v1.HookService", 5],
   [root.RoleService, "toshi.workspace.v1.RoleService", 13],
   [root.TriggerService, "toshi.workspace.v1.TriggerService", 5],
+  [root.AccountService, "toshi.workspace.v1.AccountService", 3],
+  [root.ImageService, "toshi.workspace.v1.ImageService", 5],
 ];
 
 describe("src/index.ts", () => {

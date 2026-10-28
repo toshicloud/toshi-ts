@@ -1,5 +1,6 @@
 import type { DescMethod, DescService } from "@bufbuild/protobuf";
 
+import { AccountService } from "../gen/toshi/workspace/v1/account_pb.js";
 import { ArtifactService, ArtifactUploadService } from "../gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "../gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "../gen/toshi/workspace/v1/channels_pb.js";
@@ -7,6 +8,8 @@ import { DisplayService } from "../gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "../gen/toshi/workspace/v1/fillers_pb.js";
 import { HostJobService } from "../gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "../gen/toshi/workspace/v1/hosts_pb.js";
+import { ImageService } from "../gen/toshi/workspace/v1/images_pb.js";
+import { ProductService } from "../gen/toshi/workspace/v1/products_pb.js";
 import { ProjectService } from "../gen/toshi/workspace/v1/projects_pb.js";
 import { RecordingService } from "../gen/toshi/workspace/v1/recordings_pb.js";
 import { SecretService } from "../gen/toshi/workspace/v1/secrets_pb.js";
@@ -39,6 +42,9 @@ export const apiServices: readonly DescService[] = [
   TokenService,
   StorageProviderService,
   WorkspaceService,
+  AccountService,
+  ImageService,
+  ProductService,
 ];
 
 /** The path a client calls a method by, for example `/toshi.workspace.v1.WorkloadService/CreateJob`. */
@@ -71,6 +77,21 @@ export function isApiMethod(method: DescMethod): boolean {
  * neither, so a new method is a decision and not a surprise at a caller.
  */
 export const hookOnly: readonly DescMethod[] = [
+  // AccountService
+  AccountService.method.getAccount,
+  AccountService.method.listIdentities,
+  AccountService.method.unlinkIdentity,
+  // ImageService
+  ImageService.method.createImage,
+  ImageService.method.buildImage,
+  ImageService.method.getImage,
+  ImageService.method.listImages,
+  ImageService.method.deleteImage,
+  // ProductService
+  ProductService.method.listProducts,
+  ProductService.method.listCatalogEntries,
+  ProductService.method.updateProduct,
+  ProductService.method.removeProduct,
   // WorkloadService
   WorkloadService.method.updateJob,
   WorkloadService.method.deleteJob,
@@ -173,6 +194,8 @@ export const hookOnly: readonly DescMethod[] = [
   VolumeService.method.listVolumes,
   VolumeService.method.attachVolume,
   VolumeService.method.detachVolume,
+  VolumeService.method.listVolumeVersions,
+  VolumeService.method.restoreVolume,
   // ArtifactService
   ArtifactService.method.listArtifacts,
   ArtifactService.method.getArtifact,

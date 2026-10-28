@@ -136,7 +136,8 @@ The client has one field per Workspace API service: `project`, `secret`,
 `webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
 `filler`, `storageProvider`, `product`, `discovery`, `connection`, `hook`,
-`role` and `trigger`, each holding that service's generated client.
+`role`, `trigger`, `account` and `image`, each holding that service's
+generated client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`,
@@ -212,6 +213,9 @@ from a server error.
   state; `workload.waitOperation(req)` asks until the operation is done.
 - `workload.getOperation(req)` returns one operation by id: a call that
   takes long hands one back, and this asks for it again.
+- An event's payload says what happened: a trigger's `TriggerResult` names
+  the key's `reason` and its workload, and with `process_exited` or
+  `setup_failed` it carries the sandbox's `exitCode` and `message`.
 - `workload.listEvents(req)` returns the events after a cursor, oldest
   first, a page at a time, for a client that polls or catches up after
   downtime; `workload.watchEvents(req)` is the live form.
@@ -346,16 +350,22 @@ try {
 }
 ```
 
-## A rollback the registry refuses
+## Refusals with a reason
+
+A refusal that is not a product's rejects with a `RefusalError`;
+`isRefusalError(err)` tells it apart. It is still a `ConnectError` with the
+same `code`, and its `reason` is one of `RefusalReason`:
+`RefusalReason.ImageInUse` when an image a workload or a revision still uses
+cannot be deleted, `RefusalReason.PlanExcludesImages` when the plan has no
+images, `RefusalReason.LastIdentity` when the caller's last identity cannot
+be unlinked, and so on for images, volumes, roles and display sessions.
 
 `workload.services.rollback` asks the revision's registry whether it still
-serves the revision's image before it selects it. A refusal rejects with a
-`RollbackImageError`; `isRollbackImageError(err)` tells it apart. It is still
-a `ConnectError` with the same `code`, and its `reason` is
-`RollbackImageReason.ImageNotServed` when the registry answered that it does
-not serve the image, or `RollbackImageReason.ImageCheckFailed` when it could
-not say. A revision's `imageCheck` carries the last answer: its `outcome`,
-the registry's `status` and `message`, and when it was asked, `checkedAt`.
+serves the revision's image before it selects it, and refuses with
+`RefusalReason.ImageNotServed` when the registry answered that it does not
+serve the image, or `RefusalReason.ImageCheckFailed` when it could not say.
+A revision's `imageCheck` carries the last answer: its `outcome`, the
+registry's `status` and `message`, and when it was asked, `checkedAt`.
 Reading a revision asks no registry.
 
 ## Testing with `@toshicloud/sdk/test`

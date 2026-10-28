@@ -1510,9 +1510,10 @@ export const ConnectionService: GenService<{
    * ReplayConnectionDelivery sends a processed, dropped or failed delivery
    * through its connection again, as a new message under the same webhook
    * id: it runs the transform the connection runs then, and its run
-   * records the caller. A delivery still received, whose body expired, or
-   * whose connection is deleted is FAILED_PRECONDITION, as is one another
-   * replay counted since this call read it.
+   * records the caller. A delivery still received, whose receipt or body
+   * expired, or whose connection is deleted is FAILED_PRECONDITION, as is
+   * one another replay counted since this call read it. A delivery the
+   * workspace does not have is NOT_FOUND.
    *
    * request_key is required: a retry with the same key and the same
    * request returns what the first call returned and replays nothing.
