@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/products.proto.
  */
 export const file_toshi_workspace_v1_products: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyIbChlMaXN0Q2F0YWxvZ0VudHJpZXNSZXF1ZXN0Ik8KGkxpc3RDYXRhbG9nRW50cmllc1Jlc3BvbnNlEjEKB2VudHJpZXMYASADKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2F0YWxvZ0VudHJ5IqwCCgxDYXRhbG9nRW50cnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIRCglwdWJsaXNoZXIYAyABKAkSDwoHdmVyc2lvbhgEIAEoCRIOCgZhY2Nlc3MYBSADKAkSNQoIc3VyZmFjZXMYBiABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN1cmZhY2VzEg4KBnNvdXJjZRgHIAEoCRJBChJpbnN0YWxsYXRpb25fc3RhdGUYCCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuSW5zdGFsbGF0aW9uU3RhdGUSDQoFc3RhbGUYCSABKAgSNQoRc291cmNlX2V4cGlyZXNfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIokCChRVcGRhdGVQcm9kdWN0UmVxdWVzdBIKCgJpZBgBIAEoCRIUCgdlbmFibGVkGAIgASgISACIAQESSAoIc2V0dGluZ3MYAyADKAsyNi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvZHVjdFJlcXVlc3QuU2V0dGluZ3NFbnRyeRINCgVjbGVhchgEIAMoCRIXCg9hY2NlcHRlZF9hY2Nlc3MYBSADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZCJpChVVcGRhdGVQcm9kdWN0UmVzcG9uc2USNAoHcHJvZHVjdBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U2V0dGluZ3MSGgoSaW5zdGFsbGF0aW9uX3Rva2VuGAIgASgJIiIKFFJlbW92ZVByb2R1Y3RSZXF1ZXN0EgoKAmlkGAEgASgJIk0KFVJlbW92ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyK7AgoPUHJvZHVjdFNldHRpbmdzEgoKAmlkGAEgASgJEjEKBnN3aXRjaBgCIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U3dpdGNoEjQKCGZlYXR1cmVzGAMgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVTZXR0aW5nEi8KBXN0YXRlGAQgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRI9CgxpbnN0YWxsYXRpb24YBSABKAsyJy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdEluc3RhbGxhdGlvbhI1CghzdXJmYWNlcxgGIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U3VyZmFjZXMSDAoEbmFtZRgHIAEoCSJLCg9Qcm9kdWN0U3VyZmFjZXMSCwoDYXBpGAEgASgJEgsKA2NsaRgCIAEoCRIRCglkYXNoYm9hcmQYAyABKAkSCwoDc2RrGAQgASgJIpoCChNQcm9kdWN0SW5zdGFsbGF0aW9uEjQKBXN0YXRlGAEgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkluc3RhbGxhdGlvblN0YXRlEg8KB3ZlcnNpb24YAiABKAkSEQoJcHVibGlzaGVyGAMgASgJEg4KBmFjY2VzcxgEIAMoCRIPCgdyb2xlX2lkGAUgASgJEhAKCHRva2VuX2lkGAYgASgJEhQKDGluc3RhbGxlZF9ieRgHIAEoCRIwCgxpbnN0YWxsZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJKpgBChFJbnN0YWxsYXRpb25TdGF0ZRIiCh5JTlNUQUxMQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIdChlJTlNUQUxMQVRJT05fU1RBVEVfQUNUSVZFEAESIAocSU5TVEFMTEFUSU9OX1NUQVRFX1NVU1BFTkRFRBACEh4KGklOU1RBTExBVElPTl9TVEFURV9SRU1PVkVEEAMymQQKDlByb2R1Y3RTZXJ2aWNlEnQKDExpc3RQcm9kdWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9kdWN0c1Jlc3BvbnNlIhHC8xgNc2V0dGluZ3MucmVhZBKGAQoSTGlzdENhdGFsb2dFbnRyaWVzEi0udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDYXRhbG9nRW50cmllc1JlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENhdGFsb2dFbnRyaWVzUmVzcG9uc2UiEcLzGA1zZXR0aW5ncy5yZWFkEngKDVVwZGF0ZVByb2R1Y3QSKC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvZHVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvZHVjdFJlc3BvbnNlIhLC8xgOc2V0dGluZ3Mud3JpdGUSjQEKDVJlbW92ZVByb2R1Y3QSKC50b3NoaS53b3Jrc3BhY2UudjEuUmVtb3ZlUHJvZHVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuUmVtb3ZlUHJvZHVjdFJlc3BvbnNlIifC8xgOc2V0dGluZ3Mud3JpdGXS8xgRCg9wcm9kdWN0LnJlbW92ZWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyIbChlMaXN0Q2F0YWxvZ0VudHJpZXNSZXF1ZXN0Ik8KGkxpc3RDYXRhbG9nRW50cmllc1Jlc3BvbnNlEjEKB2VudHJpZXMYASADKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2F0YWxvZ0VudHJ5IosDCgxDYXRhbG9nRW50cnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIRCglwdWJsaXNoZXIYAyABKAkSDwoHdmVyc2lvbhgEIAEoCRIOCgZhY2Nlc3MYBSADKAkSNQoIc3VyZmFjZXMYBiABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN1cmZhY2VzEg4KBnNvdXJjZRgHIAEoCRJBChJpbnN0YWxsYXRpb25fc3RhdGUYCCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuSW5zdGFsbGF0aW9uU3RhdGUSDQoFc3RhbGUYCSABKAgSNQoRc291cmNlX2V4cGlyZXNfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKBXN0YXRlGAsgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNhdGFsb2dFbnRyeVN0YXRlEhQKDHN0YXRlX3JlYXNvbhgMIAEoCRIRCglzdWNjZXNzb3IYDSABKAkiqwIKFFVwZGF0ZVByb2R1Y3RSZXF1ZXN0EgoKAmlkGAEgASgJEhQKB2VuYWJsZWQYAiABKAhIAIgBARJICghzZXR0aW5ncxgDIAMoCzI2LnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdC5TZXR0aW5nc0VudHJ5Eg0KBWNsZWFyGAQgAygJEhcKD2FjY2VwdGVkX2FjY2VzcxgFIAMoCRIUCgd2ZXJzaW9uGAYgASgJSAGIAQEaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEIKCghfdmVyc2lvbiJ6ChVVcGRhdGVQcm9kdWN0UmVzcG9uc2USNAoHcHJvZHVjdBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U2V0dGluZ3MSGgoSaW5zdGFsbGF0aW9uX3Rva2VuGAIgASgJEg8KB3dhcm5pbmcYAyABKAkiIgoUUmVtb3ZlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkiTQoVUmVtb3ZlUHJvZHVjdFJlc3BvbnNlEjQKB3Byb2R1Y3QYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFNldHRpbmdzIrsCCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSMQoGc3dpdGNoGAIgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTd2l0Y2gSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEj0KDGluc3RhbGxhdGlvbhgFIAEoCzInLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0SW5zdGFsbGF0aW9uEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJIksKD1Byb2R1Y3RTdXJmYWNlcxILCgNhcGkYASABKAkSCwoDY2xpGAIgASgJEhEKCWRhc2hib2FyZBgDIAEoCRILCgNzZGsYBCABKAki3gMKE1Byb2R1Y3RJbnN0YWxsYXRpb24SNAoFc3RhdGUYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuSW5zdGFsbGF0aW9uU3RhdGUSDwoHdmVyc2lvbhgCIAEoCRIRCglwdWJsaXNoZXIYAyABKAkSDgoGYWNjZXNzGAQgAygJEg8KB3JvbGVfaWQYBSABKAkSEAoIdG9rZW5faWQYBiABKAkSFAoMaW5zdGFsbGVkX2J5GAcgASgJEjAKDGluc3RhbGxlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDgoGc291cmNlGAogASgJEhYKDmluZGV4X3NlcXVlbmNlGAsgASgDEhQKDGluZGV4X3NoYTI1NhgMIAEoCRIOCgZrZXlfaWQYDSABKAkSPAoNcmVsZWFzZV9zdGF0ZRgOIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DYXRhbG9nRW50cnlTdGF0ZRI2CglhcnRpZmFjdHMYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdEFydGlmYWN0ImoKD1Byb2R1Y3RBcnRpZmFjdBIMCgRraW5kGAEgASgJEgoKAm9zGAIgASgJEgwKBGFyY2gYAyABKAkSDQoFaW1hZ2UYBCABKAkSDgoGZGlnZXN0GAUgASgJEhAKCHBsYXRmb3JtGAYgASgJItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJKp0BChFDYXRhbG9nRW50cnlTdGF0ZRIjCh9DQVRBTE9HX0VOVFJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASHgoaQ0FUQUxPR19FTlRSWV9TVEFURV9MSVNURUQQARIiCh5DQVRBTE9HX0VOVFJZX1NUQVRFX0RFUFJFQ0FURUQQAhIfChtDQVRBTE9HX0VOVFJZX1NUQVRFX0JMT0NLRUQQAyqYAQoRSW5zdGFsbGF0aW9uU3RhdGUSIgoeSU5TVEFMTEFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASHQoZSU5TVEFMTEFUSU9OX1NUQVRFX0FDVElWRRABEiAKHElOU1RBTExBVElPTl9TVEFURV9TVVNQRU5ERUQQAhIeChpJTlNUQUxMQVRJT05fU1RBVEVfUkVNT1ZFRBADMpkECg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQShgEKEkxpc3RDYXRhbG9nRW50cmllcxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2F0YWxvZ0VudHJpZXNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDYXRhbG9nRW50cmllc1Jlc3BvbnNlIhHC8xgNc2V0dGluZ3MucmVhZBJ4Cg1VcGRhdGVQcm9kdWN0EigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXNwb25zZSISwvMYDnNldHRpbmdzLndyaXRlEo0BCg1SZW1vdmVQcm9kdWN0EigudG9zaGkud29ya3NwYWNlLnYxLlJlbW92ZVByb2R1Y3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlJlbW92ZVByb2R1Y3RSZXNwb25zZSInwvMYDnNldHRpbmdzLndyaXRl0vMYEQoPcHJvZHVjdC5yZW1vdmVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
 
 /**
  * @generated from message toshi.workspace.v1.ListProductsRequest
@@ -201,6 +201,28 @@ export type CatalogEntry = Message<"toshi.workspace.v1.CatalogEntry"> & {
    * @generated from field: google.protobuf.Timestamp source_expires_at = 10;
    */
   sourceExpiresAt?: Timestamp | undefined;
+
+  /**
+   * state is the effective listing state of the entry's own version;
+   * UNSPECIFIED when that version is not present. Built-in entries are LISTED.
+   *
+   * @generated from field: toshi.workspace.v1.CatalogEntryState state = 11;
+   */
+  state: CatalogEntryState;
+
+  /**
+   * state_reason explains a deprecation or block.
+   *
+   * @generated from field: string state_reason = 12;
+   */
+  stateReason: string;
+
+  /**
+   * successor names the suggested replacement, when one is given.
+   *
+   * @generated from field: string successor = 13;
+   */
+  successor: string;
 };
 
 /**
@@ -287,6 +309,28 @@ export type CatalogEntryJson = {
    * @generated from field: google.protobuf.Timestamp source_expires_at = 10;
    */
   sourceExpiresAt?: TimestampJson;
+
+  /**
+   * state is the effective listing state of the entry's own version;
+   * UNSPECIFIED when that version is not present. Built-in entries are LISTED.
+   *
+   * @generated from field: toshi.workspace.v1.CatalogEntryState state = 11;
+   */
+  state?: CatalogEntryStateJson;
+
+  /**
+   * state_reason explains a deprecation or block.
+   *
+   * @generated from field: string state_reason = 12;
+   */
+  stateReason?: string;
+
+  /**
+   * successor names the suggested replacement, when one is given.
+   *
+   * @generated from field: string successor = 13;
+   */
+  successor?: string;
 };
 
 /**
@@ -349,6 +393,15 @@ export type UpdateProductRequest = Message<"toshi.workspace.v1.UpdateProductRequ
    * @generated from field: repeated string accepted_access = 5;
    */
   acceptedAccess: string[];
+
+  /**
+   * version installs that release of an outside product instead of the
+   * entry's own version. A deprecated release installs only when named here,
+   * with a warning. Ignored when built in or already installed.
+   *
+   * @generated from field: optional string version = 6;
+   */
+  version?: string | undefined;
 };
 
 /**
@@ -404,6 +457,15 @@ export type UpdateProductRequestJson = {
    * @generated from field: repeated string accepted_access = 5;
    */
   acceptedAccess?: string[];
+
+  /**
+   * version installs that release of an outside product instead of the
+   * entry's own version. A deprecated release installs only when named here,
+   * with a warning. Ignored when built in or already installed.
+   *
+   * @generated from field: optional string version = 6;
+   */
+  version?: string;
 };
 
 /**
@@ -432,6 +494,14 @@ export type UpdateProductResponse = Message<"toshi.workspace.v1.UpdateProductRes
    * @generated from field: string installation_token = 2;
    */
   installationToken: string;
+
+  /**
+   * warning is set when the call installed a deprecated release: the
+   * publisher's reason and successor.
+   *
+   * @generated from field: string warning = 3;
+   */
+  warning: string;
 };
 
 /**
@@ -453,6 +523,14 @@ export type UpdateProductResponseJson = {
    * @generated from field: string installation_token = 2;
    */
   installationToken?: string;
+
+  /**
+   * warning is set when the call installed a deprecated release: the
+   * publisher's reason and successor.
+   *
+   * @generated from field: string warning = 3;
+   */
+  warning?: string;
 };
 
 /**
@@ -814,6 +892,51 @@ export type ProductInstallation = Message<"toshi.workspace.v1.ProductInstallatio
    * @generated from field: google.protobuf.Timestamp updated_at = 9;
    */
   updatedAt?: Timestamp | undefined;
+
+  /**
+   * These fields record the trust decision made when the product was
+   * installed. They are empty for a built-in product and for an installation
+   * made before the deployment kept that decision.
+   * source names the catalog source.
+   *
+   * @generated from field: string source = 10;
+   */
+  source: string;
+
+  /**
+   * index_sequence is the accepted index's sequence, or zero for format 1.
+   *
+   * @generated from field: int64 index_sequence = 11;
+   */
+  indexSequence: bigint;
+
+  /**
+   * index_sha256 is the SHA-256 of the accepted index's bytes in hex.
+   *
+   * @generated from field: string index_sha256 = 12;
+   */
+  indexSha256: string;
+
+  /**
+   * key_id names the key that signed the accepted index.
+   *
+   * @generated from field: string key_id = 13;
+   */
+  keyId: string;
+
+  /**
+   * release_state is the release's effective listing state at installation.
+   *
+   * @generated from field: toshi.workspace.v1.CatalogEntryState release_state = 14;
+   */
+  releaseState: CatalogEntryState;
+
+  /**
+   * artifacts are the release's artifacts and their selected image manifests.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ProductArtifact artifacts = 15;
+   */
+  artifacts: ProductArtifact[];
 };
 
 /**
@@ -876,6 +999,51 @@ export type ProductInstallationJson = {
    * @generated from field: google.protobuf.Timestamp updated_at = 9;
    */
   updatedAt?: TimestampJson;
+
+  /**
+   * These fields record the trust decision made when the product was
+   * installed. They are empty for a built-in product and for an installation
+   * made before the deployment kept that decision.
+   * source names the catalog source.
+   *
+   * @generated from field: string source = 10;
+   */
+  source?: string;
+
+  /**
+   * index_sequence is the accepted index's sequence, or zero for format 1.
+   *
+   * @generated from field: int64 index_sequence = 11;
+   */
+  indexSequence?: string;
+
+  /**
+   * index_sha256 is the SHA-256 of the accepted index's bytes in hex.
+   *
+   * @generated from field: string index_sha256 = 12;
+   */
+  indexSha256?: string;
+
+  /**
+   * key_id names the key that signed the accepted index.
+   *
+   * @generated from field: string key_id = 13;
+   */
+  keyId?: string;
+
+  /**
+   * release_state is the release's effective listing state at installation.
+   *
+   * @generated from field: toshi.workspace.v1.CatalogEntryState release_state = 14;
+   */
+  releaseState?: CatalogEntryStateJson;
+
+  /**
+   * artifacts are the release's artifacts and their selected image manifests.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ProductArtifact artifacts = 15;
+   */
+  artifacts?: ProductArtifactJson[];
 };
 
 /**
@@ -884,6 +1052,107 @@ export type ProductInstallationJson = {
  */
 export const ProductInstallationSchema: GenMessage<ProductInstallation, {jsonType: ProductInstallationJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_products, 11);
+
+/**
+ * ProductArtifact is a release artifact recorded when a product is installed.
+ *
+ * @generated from message toshi.workspace.v1.ProductArtifact
+ */
+export type ProductArtifact = Message<"toshi.workspace.v1.ProductArtifact"> & {
+  /**
+   * kind is "cli" or "image".
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind: string;
+
+  /**
+   * os and arch identify a CLI plugin's platform.
+   *
+   * @generated from field: string os = 2;
+   */
+  os: string;
+
+  /**
+   * @generated from field: string arch = 3;
+   */
+  arch: string;
+
+  /**
+   * image is the container image repository.
+   *
+   * @generated from field: string image = 4;
+   */
+  image: string;
+
+  /**
+   * digest is the CLI plugin's SHA-256 or the image index's digest.
+   *
+   * @generated from field: string digest = 5;
+   */
+  digest: string;
+
+  /**
+   * platform is the selected image platform manifest's digest.
+   *
+   * @generated from field: string platform = 6;
+   */
+  platform: string;
+};
+
+/**
+ * ProductArtifact is a release artifact recorded when a product is installed.
+ *
+ * @generated from message toshi.workspace.v1.ProductArtifact
+ */
+export type ProductArtifactJson = {
+  /**
+   * kind is "cli" or "image".
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind?: string;
+
+  /**
+   * os and arch identify a CLI plugin's platform.
+   *
+   * @generated from field: string os = 2;
+   */
+  os?: string;
+
+  /**
+   * @generated from field: string arch = 3;
+   */
+  arch?: string;
+
+  /**
+   * image is the container image repository.
+   *
+   * @generated from field: string image = 4;
+   */
+  image?: string;
+
+  /**
+   * digest is the CLI plugin's SHA-256 or the image index's digest.
+   *
+   * @generated from field: string digest = 5;
+   */
+  digest?: string;
+
+  /**
+   * platform is the selected image platform manifest's digest.
+   *
+   * @generated from field: string platform = 6;
+   */
+  platform?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ProductArtifact.
+ * Use `create(ProductArtifactSchema)` to create a new message.
+ */
+export const ProductArtifactSchema: GenMessage<ProductArtifact, {jsonType: ProductArtifactJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_products, 12);
 
 /**
  * FeatureSetting is one feature of a product as the workspace has it.
@@ -1042,7 +1311,47 @@ export type FeatureSettingJson = {
  * Use `create(FeatureSettingSchema)` to create a new message.
  */
 export const FeatureSettingSchema: GenMessage<FeatureSetting, {jsonType: FeatureSettingJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_products, 12);
+  messageDesc(file_toshi_workspace_v1_products, 13);
+
+/**
+ * CatalogEntryState is the effective listing state of an entry's version.
+ *
+ * @generated from enum toshi.workspace.v1.CatalogEntryState
+ */
+export enum CatalogEntryState {
+  /**
+   * @generated from enum value: CATALOG_ENTRY_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: CATALOG_ENTRY_STATE_LISTED = 1;
+   */
+  LISTED = 1,
+
+  /**
+   * @generated from enum value: CATALOG_ENTRY_STATE_DEPRECATED = 2;
+   */
+  DEPRECATED = 2,
+
+  /**
+   * @generated from enum value: CATALOG_ENTRY_STATE_BLOCKED = 3;
+   */
+  BLOCKED = 3,
+}
+
+/**
+ * CatalogEntryState is the effective listing state of an entry's version.
+ *
+ * @generated from enum toshi.workspace.v1.CatalogEntryState
+ */
+export type CatalogEntryStateJson = "CATALOG_ENTRY_STATE_UNSPECIFIED" | "CATALOG_ENTRY_STATE_LISTED" | "CATALOG_ENTRY_STATE_DEPRECATED" | "CATALOG_ENTRY_STATE_BLOCKED";
+
+/**
+ * Describes the enum toshi.workspace.v1.CatalogEntryState.
+ */
+export const CatalogEntryStateSchema: GenEnum<CatalogEntryState, CatalogEntryStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_products, 0);
 
 /**
  * InstallationState is where an installation stands.
@@ -1090,7 +1399,7 @@ export type InstallationStateJson = "INSTALLATION_STATE_UNSPECIFIED" | "INSTALLA
  * Describes the enum toshi.workspace.v1.InstallationState.
  */
 export const InstallationStateSchema: GenEnum<InstallationState, InstallationStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_products, 0);
+  enumDesc(file_toshi_workspace_v1_products, 1);
 
 /**
  * ProductService reads and changes the workspace's settings of its

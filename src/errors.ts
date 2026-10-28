@@ -119,18 +119,53 @@ export const ProductReason = {
 
 const productReasons: ReadonlySet<string> = new Set(Object.values(ProductReason));
 
-/** Why a rollback's image check refused it: the reason of the refusal's ErrorInfo detail. */
-export type RollbackImageReason = "IMAGE_NOT_SERVED" | "IMAGE_CHECK_FAILED";
+/**
+ * Why the API refused a call and named the reason: the reason of the
+ * refusal's ErrorInfo detail, for a refusal that is not a product's.
+ */
+export type RefusalReason =
+  | "DISPLAY_INPUT_NOT_ENABLED"
+  | "IMAGE_BUILD_IN_PROGRESS"
+  | "IMAGE_CHECK_FAILED"
+  | "IMAGE_IN_USE"
+  | "IMAGE_NAME_TAKEN"
+  | "IMAGE_NOT_SERVED"
+  | "LAST_IDENTITY"
+  | "LAST_MEMBER"
+  | "LAST_OWNER"
+  | "PERMISSION_MISSING"
+  | "PLAN_EXCLUDES_IMAGES"
+  | "TOSHI_LICENSED_WINDOWS";
 
-/** The reasons RollbackService's image check refuses a rollback. */
-export const RollbackImageReason = {
+/** The reasons the API names on a refusal that is not a product's. */
+export const RefusalReason = {
+  /** The Windows VM takes no display input; the code is FailedPrecondition. */
+  DisplayInputNotEnabled: "DISPLAY_INPUT_NOT_ENABLED",
+  /** The image already has a build running; the code is FailedPrecondition. */
+  ImageBuildInProgress: "IMAGE_BUILD_IN_PROGRESS",
+  /** The registry of the revision's image could not say whether it serves the digest; the code is FailedPrecondition. */
+  ImageCheckFailed: "IMAGE_CHECK_FAILED",
+  /** A workload or a service revision still uses the image; the code is FailedPrecondition. */
+  ImageInUse: "IMAGE_IN_USE",
+  /** Another live image of the workspace has the name; the code is AlreadyExists. */
+  ImageNameTaken: "IMAGE_NAME_TAKEN",
   /** The revision's registry answered that it does not serve the image digest; the code is FailedPrecondition. */
   ImageNotServed: "IMAGE_NOT_SERVED",
-  /** The registry could not be reached, refused the login or failed; the code is FailedPrecondition. */
-  ImageCheckFailed: "IMAGE_CHECK_FAILED",
-} as const satisfies Record<string, RollbackImageReason>;
+  /** The call would remove the caller's last identity; the code is FailedPrecondition. */
+  LastIdentity: "LAST_IDENTITY",
+  /** The call would remove the workspace's last member; the code is FailedPrecondition. */
+  LastMember: "LAST_MEMBER",
+  /** The call would leave the workspace without an owner; the code is FailedPrecondition. */
+  LastOwner: "LAST_OWNER",
+  /** A role change names a permission the caller does not hold where the role applies; the code is PermissionDenied. */
+  PermissionMissing: "PERMISSION_MISSING",
+  /** The workspace's plan does not include images; the code is FailedPrecondition. */
+  PlanExcludesImages: "PLAN_EXCLUDES_IMAGES",
+  /** A Windows job Toshi licenses opens no display session; the code is FailedPrecondition. */
+  ToshiLicensedWindows: "TOSHI_LICENSED_WINDOWS",
+} as const satisfies Record<string, RefusalReason>;
 
-const rollbackImageReasons: ReadonlySet<string> = new Set(Object.values(RollbackImageReason));
+const refusalReasons: ReadonlySet<string> = new Set(Object.values(RefusalReason));
 
 // The ErrorInfo domain of the API's refusals.
 const errorInfoDomain = "toshi.run";
@@ -179,15 +214,17 @@ export function isProductError(err: unknown): err is ProductError {
 }
 
 /**
- * RollbackService's refusal by the check of the revision's image: the
- * registry does not serve it, or could not say. It is a ConnectError, so
- * `instanceof ConnectError` and `code` read as before; test for it with
- * {@link isRollbackImageError}.
+ * The API's refusal that names a reason: an image still in use, a plan
+ * without images, a last identity, a rollback whose revision's image is gone,
+ * and the rest of {@link RefusalReason}. Every call the client makes throws
+ * it in place of the ConnectError. It is a ConnectError, so `instanceof
+ * ConnectError` and `code` read as before; test for it with
+ * {@link isRefusalError}.
  */
-export class RollbackImageError extends ConnectError {
-  readonly reason: RollbackImageReason;
+export class RefusalError extends ConnectError {
+  readonly reason: RefusalReason;
 
-  constructor(err: ConnectError, reason: RollbackImageReason) {
+  constructor(err: ConnectError, reason: RefusalReason) {
     super(err.rawMessage, err.code, err.metadata, undefined, err);
     // ConnectError's instanceof accepts a subclass only by this name.
     this.name = "ConnectError";
@@ -197,13 +234,13 @@ export class RollbackImageError extends ConnectError {
 
   // ConnectError's own check would accept any ConnectError.
   static override [Symbol.hasInstance](v: unknown): boolean {
-    return Function.prototype[Symbol.hasInstance].call(RollbackImageError, v);
+    return Function.prototype[Symbol.hasInstance].call(RefusalError, v);
   }
 }
 
-/** Reports whether err is a rollback's refusal by its image check. */
-export function isRollbackImageError(err: unknown): err is RollbackImageError {
-  return err instanceof RollbackImageError;
+/** Reports whether err is a refusal that names a reason this module knows. */
+export function isRefusalError(err: unknown): err is RefusalError {
+  return err instanceof RefusalError;
 }
 
 /** err as a ProductError when it is a product's refusal, and err unchanged otherwise. */
@@ -224,9 +261,9 @@ export function asProductError(err: unknown): unknown {
   return err;
 }
 
-/** err as a RollbackImageError when it is a rollback's refusal by its image check, and err unchanged otherwise. */
-export function asRollbackImageError(err: unknown): unknown {
-  if (!(err instanceof ConnectError) || err instanceof RollbackImageError) {
+/** err as a RefusalError when it is a refusal that names a reason this module knows, and err unchanged otherwise. */
+export function asRefusalError(err: unknown): unknown {
+  if (!(err instanceof ConnectError) || err instanceof RefusalError) {
     return err;
   }
   for (const detail of err.details) {
@@ -234,17 +271,17 @@ export function asRollbackImageError(err: unknown): unknown {
       continue;
     }
     const info = decodeErrorInfo(detail.value);
-    if (info === undefined || info.domain !== errorInfoDomain || !rollbackImageReasons.has(info.reason)) {
+    if (info === undefined || info.domain !== errorInfoDomain || !refusalReasons.has(info.reason)) {
       continue;
     }
-    return new RollbackImageError(err, info.reason as RollbackImageReason);
+    return new RefusalError(err, info.reason as RefusalReason);
   }
   return err;
 }
 
 /** err as one of this module's typed errors when the API's ErrorInfo detail names a reason it knows, and err unchanged otherwise. */
 export function asTypedError(err: unknown): unknown {
-  return asRollbackImageError(asProductError(err));
+  return asRefusalError(asProductError(err));
 }
 
 interface ErrorInfo {

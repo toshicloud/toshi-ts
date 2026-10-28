@@ -24,6 +24,9 @@ export type RetryClass = "read" | "keyed" | "none";
 // what exists carries a request key and is retried; a call with no key is
 // retried only when it reads; a stream is never retried here.
 const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
+  "/toshi.workspace.v1.AccountService/GetAccount": "read",
+  "/toshi.workspace.v1.AccountService/ListIdentities": "read",
+  "/toshi.workspace.v1.AccountService/UnlinkIdentity": "none",
   "/toshi.workspace.v1.WorkloadService/CreateJob": "keyed",
   "/toshi.workspace.v1.WorkloadService/GetJob": "read",
   "/toshi.workspace.v1.WorkloadService/ListJobs": "read",
@@ -131,6 +134,8 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.VolumeService/ListVolumes": "read",
   "/toshi.workspace.v1.VolumeService/AttachVolume": "none",
   "/toshi.workspace.v1.VolumeService/DetachVolume": "none",
+  "/toshi.workspace.v1.VolumeService/ListVolumeVersions": "read",
+  "/toshi.workspace.v1.VolumeService/RestoreVolume": "none",
   "/toshi.workspace.v1.ArtifactService/ListArtifacts": "read",
   "/toshi.workspace.v1.ArtifactService/GetArtifact": "read",
   "/toshi.workspace.v1.ArtifactService/GetArtifactDownloadURL": "read",
@@ -202,6 +207,11 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.HookService/ListHooks": "read",
   "/toshi.workspace.v1.HookService/DeleteHookVersion": "none",
   "/toshi.workspace.v1.HookService/TestHook": "none",
+  "/toshi.workspace.v1.ImageService/BuildImage": "none",
+  "/toshi.workspace.v1.ImageService/CreateImage": "none",
+  "/toshi.workspace.v1.ImageService/DeleteImage": "none",
+  "/toshi.workspace.v1.ImageService/GetImage": "read",
+  "/toshi.workspace.v1.ImageService/ListImages": "read",
   "/toshi.workspace.v1.RoleService/ListRoles": "read",
   "/toshi.workspace.v1.RoleService/CreateRole": "none",
   "/toshi.workspace.v1.RoleService/UpdateRole": "none",

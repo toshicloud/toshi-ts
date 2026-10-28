@@ -1197,7 +1197,12 @@ export const DisplayService: GenService<{
    * OpenDisplaySession opens a session on a running job and returns its
    * URL and token. A job that is not running, or one beyond the plan's
    * viewers, or a second session with input on a job, fails with
-   * FAILED_PRECONDITION. A session ends when it is closed, when no bytes
+   * FAILED_PRECONDITION. A session with input on a Windows VM whose host's
+   * pool does not set display_input fails with FAILED_PRECONDITION and the
+   * reason DISPLAY_INPUT_NOT_ENABLED. A job on Windows that Toshi licenses
+   * (a cloud pool, or a pool with licence = "toshi") opens no session of
+   * either mode: FAILED_PRECONDITION with the reason TOSHI_LICENSED_WINDOWS.
+   * A session ends when it is closed, when no bytes
    * of the screen's protocol go either way for its idle close, when its
    * token expires before it attaches, when its job stops running on the
    * VM it was opened on, or when the workspace is suspended.
@@ -1251,7 +1256,8 @@ export const DisplayService: GenService<{
   },
   /**
    * SendDisplayKeys presses and releases keys on the screen. A view-only
-   * session refuses it with FAILED_PRECONDITION.
+   * session refuses it with FAILED_PRECONDITION, with the reason
+   * DISPLAY_INPUT_NOT_ENABLED on a Windows VM that takes no input.
    *
    * @generated from rpc toshi.workspace.v1.DisplayService.SendDisplayKeys
    */
@@ -1262,7 +1268,9 @@ export const DisplayService: GenService<{
   },
   /**
    * SendDisplayPointer moves the pointer and presses or releases its
-   * buttons. A view-only session refuses it with FAILED_PRECONDITION.
+   * buttons. A view-only session refuses it with FAILED_PRECONDITION, with
+   * the reason DISPLAY_INPUT_NOT_ENABLED on a Windows VM that takes no
+   * input.
    *
    * @generated from rpc toshi.workspace.v1.DisplayService.SendDisplayPointer
    */
