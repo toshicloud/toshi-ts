@@ -162,6 +162,7 @@ export const hookOnly: readonly DescMethod[] = [
   ChannelService.method.getLink,
   ChannelService.method.sendChannelMessage,
   ChannelService.method.tailChannelMessages,
+  ChannelService.method.replayChannelMessage,
   // RecordingService
   RecordingService.method.listRecordings,
   RecordingService.method.getRecording,

@@ -19,7 +19,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.SecretService, "toshi.workspace.v1.SecretService", 10],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
-  [root.ChannelService, "toshi.workspace.v1.ChannelService", 15],
+  [root.ChannelService, "toshi.workspace.v1.ChannelService", 16],
   [root.RecordingService, "toshi.workspace.v1.RecordingService", 5],
   [root.VolumeService, "toshi.workspace.v1.VolumeService", 3],
   [root.ArtifactService, "toshi.workspace.v1.ArtifactService", 3],

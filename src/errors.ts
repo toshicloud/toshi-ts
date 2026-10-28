@@ -119,8 +119,21 @@ export const ProductReason = {
 
 const productReasons: ReadonlySet<string> = new Set(Object.values(ProductReason));
 
-// The ErrorInfo domain of a product's refusal.
-const productErrorDomain = "toshi.run";
+/** Why a rollback's image check refused it: the reason of the refusal's ErrorInfo detail. */
+export type RollbackImageReason = "IMAGE_NOT_SERVED" | "IMAGE_CHECK_FAILED";
+
+/** The reasons RollbackService's image check refuses a rollback. */
+export const RollbackImageReason = {
+  /** The revision's registry answered that it does not serve the image digest; the code is FailedPrecondition. */
+  ImageNotServed: "IMAGE_NOT_SERVED",
+  /** The registry could not be reached, refused the login or failed; the code is FailedPrecondition. */
+  ImageCheckFailed: "IMAGE_CHECK_FAILED",
+} as const satisfies Record<string, RollbackImageReason>;
+
+const rollbackImageReasons: ReadonlySet<string> = new Set(Object.values(RollbackImageReason));
+
+// The ErrorInfo domain of the API's refusals.
+const errorInfoDomain = "toshi.run";
 
 /**
  * The API's refusal of a call for a product: one that is off for the
@@ -165,6 +178,34 @@ export function isProductError(err: unknown): err is ProductError {
   return err instanceof ProductError;
 }
 
+/**
+ * RollbackService's refusal by the check of the revision's image: the
+ * registry does not serve it, or could not say. It is a ConnectError, so
+ * `instanceof ConnectError` and `code` read as before; test for it with
+ * {@link isRollbackImageError}.
+ */
+export class RollbackImageError extends ConnectError {
+  readonly reason: RollbackImageReason;
+
+  constructor(err: ConnectError, reason: RollbackImageReason) {
+    super(err.rawMessage, err.code, err.metadata, undefined, err);
+    // ConnectError's instanceof accepts a subclass only by this name.
+    this.name = "ConnectError";
+    this.details = err.details;
+    this.reason = reason;
+  }
+
+  // ConnectError's own check would accept any ConnectError.
+  static override [Symbol.hasInstance](v: unknown): boolean {
+    return Function.prototype[Symbol.hasInstance].call(RollbackImageError, v);
+  }
+}
+
+/** Reports whether err is a rollback's refusal by its image check. */
+export function isRollbackImageError(err: unknown): err is RollbackImageError {
+  return err instanceof RollbackImageError;
+}
+
 /** err as a ProductError when it is a product's refusal, and err unchanged otherwise. */
 export function asProductError(err: unknown): unknown {
   if (!(err instanceof ConnectError) || err instanceof ProductError) {
@@ -175,12 +216,35 @@ export function asProductError(err: unknown): unknown {
       continue;
     }
     const info = decodeErrorInfo(detail.value);
-    if (info === undefined || info.domain !== productErrorDomain || !productReasons.has(info.reason)) {
+    if (info === undefined || info.domain !== errorInfoDomain || !productReasons.has(info.reason)) {
       continue;
     }
     return new ProductError(err, info.reason as ProductReason, info.metadata);
   }
   return err;
+}
+
+/** err as a RollbackImageError when it is a rollback's refusal by its image check, and err unchanged otherwise. */
+export function asRollbackImageError(err: unknown): unknown {
+  if (!(err instanceof ConnectError) || err instanceof RollbackImageError) {
+    return err;
+  }
+  for (const detail of err.details) {
+    if (!("type" in detail) || detail.type !== "google.rpc.ErrorInfo") {
+      continue;
+    }
+    const info = decodeErrorInfo(detail.value);
+    if (info === undefined || info.domain !== errorInfoDomain || !rollbackImageReasons.has(info.reason)) {
+      continue;
+    }
+    return new RollbackImageError(err, info.reason as RollbackImageReason);
+  }
+  return err;
+}
+
+/** err as one of this module's typed errors when the API's ErrorInfo detail names a reason it knows, and err unchanged otherwise. */
+export function asTypedError(err: unknown): unknown {
+  return asRollbackImageError(asProductError(err));
 }
 
 interface ErrorInfo {
