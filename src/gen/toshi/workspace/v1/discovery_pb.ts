@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/discovery.proto.
  */
 export const file_toshi_workspace_v1_discovery: GenFile = /*@__PURE__*/
-  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkikwEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMiqwIKEURpc2NvdmVyZWRQcm9kdWN0EgoKAmlkGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSDAoEZG9jcxgDIAEoCRIPCgdlbmFibGVkGAQgASgIEjQKCGZlYXR1cmVzGAUgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RGZWF0dXJlEi8KBXN0YXRlGAYgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRI4CghzdXJmYWNlcxgIIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlcmVkU3VyZmFjZXMSEQoJYXZhaWxhYmxlGAogASgISgQIBxAISgQICRAKUgZzd2l0Y2hSEmluc3RhbGxhdGlvbl9zdGF0ZSJOChJEaXNjb3ZlcmVkU3VyZmFjZXMSCwoDYXBpGAEgASgJEgsKA2NsaRgCIAEoCRIRCglkYXNoYm9hcmQYAyABKAkSCwoDc2RrGAQgASgJIqEDCg5Qcm9kdWN0RmVhdHVyZRILCgNrZXkYASABKAkSNAoEdHlwZRgCIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0RmVhdHVyZVR5cGUSDgoGdmFsdWVzGAMgAygJEhIKCm5hcnJvd2FibGUYBCABKAgSNQoLZW50aXRsZW1lbnQYBSABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgHIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSNwoNZGVmYXVsdF92YWx1ZRgIIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSCwoDbWF4GAkgASgDEhAKCHBsYW5fa2V5GAogASgJEjEKBnNvdXJjZRgLIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqngEKDFByb2R1Y3RTdGF0ZRIdChlQUk9EVUNUX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUFJPRFVDVF9TVEFURV9FTkFCTEVEEAESHQoZUFJPRFVDVF9TVEFURV9OT19ORVdfV09SSxACEhoKFlBST0RVQ1RfU1RBVEVfRFJBSU5JTkcQAxIZChVQUk9EVUNUX1NUQVRFX1NUT1BQRUQQBCqeAQoNRmVhdHVyZVNvdXJjZRIeChpGRUFUVVJFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhsKF0ZFQVRVUkVfU09VUkNFX09WRVJSSURFEAESFwoTRkVBVFVSRV9TT1VSQ0VfUExBThACEhsKF0ZFQVRVUkVfU09VUkNFX1BMQU5fS0VZEAMSGgoWRkVBVFVSRV9TT1VSQ0VfREVGQVVMVBAEKtkBChJQcm9kdWN0RmVhdHVyZVR5cGUSJAogUFJPRFVDVF9GRUFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlQUk9EVUNUX0ZFQVRVUkVfVFlQRV9CT09MEAESHgoaUFJPRFVDVF9GRUFUVVJFX1RZUEVfQ09VTlQQAhIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9SQU5HRRADEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0VOVU0QBBIfChtQUk9EVUNUX0ZFQVRVUkVfVFlQRV9TVFJJTkcQBTKMAQoQRGlzY292ZXJ5U2VydmljZRJ4CghEaXNjb3ZlchIjLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlcXVlc3QaJC50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJSZXNwb25zZSIhwvMYDndvcmtzcGFjZS5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_toshi_permission]);
+  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkikwEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMiqwIKEURpc2NvdmVyZWRQcm9kdWN0EgoKAmlkGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSDAoEZG9jcxgDIAEoCRIPCgdlbmFibGVkGAQgASgIEjQKCGZlYXR1cmVzGAUgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RGZWF0dXJlEi8KBXN0YXRlGAYgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRI4CghzdXJmYWNlcxgIIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlcmVkU3VyZmFjZXMSEQoJYXZhaWxhYmxlGAogASgISgQIBxAISgQICRAKUgZzd2l0Y2hSEmluc3RhbGxhdGlvbl9zdGF0ZSJIChJEaXNjb3ZlcmVkU3VyZmFjZXMSCwoDYXBpGAEgASgJSgQIAhADSgQIAxAESgQIBBAFUgNjbGlSCWRhc2hib2FyZFIDc2RrIqEDCg5Qcm9kdWN0RmVhdHVyZRILCgNrZXkYASABKAkSNAoEdHlwZRgCIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0RmVhdHVyZVR5cGUSDgoGdmFsdWVzGAMgAygJEhIKCm5hcnJvd2FibGUYBCABKAgSNQoLZW50aXRsZW1lbnQYBSABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgHIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSNwoNZGVmYXVsdF92YWx1ZRgIIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSCwoDbWF4GAkgASgDEhAKCHBsYW5fa2V5GAogASgJEjEKBnNvdXJjZRgLIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqngEKDFByb2R1Y3RTdGF0ZRIdChlQUk9EVUNUX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUFJPRFVDVF9TVEFURV9FTkFCTEVEEAESHQoZUFJPRFVDVF9TVEFURV9OT19ORVdfV09SSxACEhoKFlBST0RVQ1RfU1RBVEVfRFJBSU5JTkcQAxIZChVQUk9EVUNUX1NUQVRFX1NUT1BQRUQQBCqeAQoNRmVhdHVyZVNvdXJjZRIeChpGRUFUVVJFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhsKF0ZFQVRVUkVfU09VUkNFX09WRVJSSURFEAESFwoTRkVBVFVSRV9TT1VSQ0VfUExBThACEhsKF0ZFQVRVUkVfU09VUkNFX1BMQU5fS0VZEAMSGgoWRkVBVFVSRV9TT1VSQ0VfREVGQVVMVBAEKtkBChJQcm9kdWN0RmVhdHVyZVR5cGUSJAogUFJPRFVDVF9GRUFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlQUk9EVUNUX0ZFQVRVUkVfVFlQRV9CT09MEAESHgoaUFJPRFVDVF9GRUFUVVJFX1RZUEVfQ09VTlQQAhIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9SQU5HRRADEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0VOVU0QBBIfChtQUk9EVUNUX0ZFQVRVUkVfVFlQRV9TVFJJTkcQBTKMAQoQRGlzY292ZXJ5U2VydmljZRJ4CghEaXNjb3ZlchIjLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlcXVlc3QaJC50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJSZXNwb25zZSIhwvMYDndvcmtzcGFjZS5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.DiscoverRequest
@@ -273,8 +273,8 @@ export const DiscoveredProductSchema: GenMessage<DiscoveredProduct, {jsonType: D
   messageDesc(file_toshi_workspace_v1_discovery, 2);
 
 /**
- * DiscoveredSurfaces are what a product adds to Toshi, each empty when it
- * adds none. It mirrors products.proto's ProductSurfaces, field for field,
+ * DiscoveredSurfaces are what a product adds to Toshi, empty when it adds
+ * none. It mirrors products.proto's ProductSurfaces, field for field,
  * because discovery.proto cannot import products.proto, which imports it.
  *
  * @generated from message toshi.workspace.v1.DiscoveredSurfaces
@@ -287,34 +287,11 @@ export type DiscoveredSurfaces = Message<"toshi.workspace.v1.DiscoveredSurfaces"
    * @generated from field: string api = 1;
    */
   api: string;
-
-  /**
-   * cli is where its CLI plugin comes from.
-   *
-   * @generated from field: string cli = 2;
-   */
-  cli: string;
-
-  /**
-   * dashboard is the https URL of the product's own UI. A client opens it
-   * as its own page, never inside its own.
-   *
-   * @generated from field: string dashboard = 3;
-   */
-  dashboard: string;
-
-  /**
-   * sdk is the package of its SDK, such as a Go module path or an npm
-   * package name.
-   *
-   * @generated from field: string sdk = 4;
-   */
-  sdk: string;
 };
 
 /**
- * DiscoveredSurfaces are what a product adds to Toshi, each empty when it
- * adds none. It mirrors products.proto's ProductSurfaces, field for field,
+ * DiscoveredSurfaces are what a product adds to Toshi, empty when it adds
+ * none. It mirrors products.proto's ProductSurfaces, field for field,
  * because discovery.proto cannot import products.proto, which imports it.
  *
  * @generated from message toshi.workspace.v1.DiscoveredSurfaces
@@ -327,29 +304,6 @@ export type DiscoveredSurfacesJson = {
    * @generated from field: string api = 1;
    */
   api?: string;
-
-  /**
-   * cli is where its CLI plugin comes from.
-   *
-   * @generated from field: string cli = 2;
-   */
-  cli?: string;
-
-  /**
-   * dashboard is the https URL of the product's own UI. A client opens it
-   * as its own page, never inside its own.
-   *
-   * @generated from field: string dashboard = 3;
-   */
-  dashboard?: string;
-
-  /**
-   * sdk is the package of its SDK, such as a Go module path or an npm
-   * package name.
-   *
-   * @generated from field: string sdk = 4;
-   */
-  sdk?: string;
 };
 
 /**
