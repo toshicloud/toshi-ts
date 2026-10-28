@@ -930,9 +930,8 @@ export const TokenService: GenService<{
    * RollWorkspaceToken gives one of the workspace's tokens a new value and
    * returns it; the old value stops working at once. The token keeps its
    * ID, name, roles, limit, client address ranges, start, expiry and
-   * creator, so what was granted to it stays granted. An API, enrollment or
-   * installation token rolls; the new value of an installation token goes
-   * to its product's settings.
+   * creator, so what was granted to it stays granted. An API or enrollment
+   * token rolls.
    *
    * Only a signed-in session may call it, as for CreateWorkspaceToken. A
    * token someone else made needs members.write as well, and is refused
@@ -952,8 +951,8 @@ export const TokenService: GenService<{
    * address ranges: the fields update_mask names. The expiry stays within
    * the longest lifetime allowed from now. Only a signed-in session may
    * call it, and a token someone else made needs members.write as well,
-   * as for RollWorkspaceToken. An enrollment or installation token fails
-   * with INVALID_ARGUMENT; a token of another workspace, and an unknown ID,
+   * as for RollWorkspaceToken. An enrollment token fails with
+   * INVALID_ARGUMENT; a token of another workspace, and an unknown ID,
    * with NOT_FOUND; a revoked token with FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.TokenService.UpdateToken

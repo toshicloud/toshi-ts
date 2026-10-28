@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/audit_events.proto.
  */
 export const file_toshi_workspace_v1_audit_events: GenFile = /*@__PURE__*/
-  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiigIKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCRISCgpwZXJtaXNzaW9uGAkgASgJEg0KBXNjb3BlGAogASgJEg8KB291dGNvbWUYCyABKAkSEAoIdG9rZW5faWQYDCABKAkSEgoKYWN0b3JfbmFtZRgNIAEoCSK7AQoWTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBIOCgZhY3Rpb24YASABKAkSKQoFc2luY2UYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXBhZ2Vfc2l6ZRgDIAEoBRINCgVhY3RvchgEIAEoCRIPCgdhY3Rpb25zGAUgAygJEg4KBnRhcmdldBgGIAEoCRISCgpwYWdlX3Rva2VuGAcgASgJEg8KB291dGNvbWUYCCABKAkiYgoXTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2USLgoGZXZlbnRzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkF1ZGl0RXZlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMo8BChFBdWRpdEV2ZW50U2VydmljZRJ6Cg9MaXN0QXVkaXRFdmVudHMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QXVkaXRFdmVudHNSZXNwb25zZSIOwvMYCmF1ZGl0LnJlYWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiV0b3NoaS93b3Jrc3BhY2UvdjEvYXVkaXRfZXZlbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiigIKCkF1ZGl0RXZlbnQSCgoCaWQYASABKAMSJgoCYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmFjdG9yX2tpbmQYAyABKAkSEAoIYWN0b3JfaWQYBCABKAkSDgoGYWN0aW9uGAUgASgJEg4KBnRhcmdldBgGIAEoCRIUCgxkZXRhaWxzX2pzb24YByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCRISCgpwZXJtaXNzaW9uGAkgASgJEg0KBXNjb3BlGAogASgJEg8KB291dGNvbWUYCyABKAkSEAoIdG9rZW5faWQYDCABKAkSEgoKYWN0b3JfbmFtZRgNIAEoCSK7AQoWTGlzdEF1ZGl0RXZlbnRzUmVxdWVzdBIOCgZhY3Rpb24YASABKAkSKQoFc2luY2UYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXBhZ2Vfc2l6ZRgDIAEoBRINCgVhY3RvchgEIAEoCRIPCgdhY3Rpb25zGAUgAygJEg4KBnRhcmdldBgGIAEoCRISCgpwYWdlX3Rva2VuGAcgASgJEg8KB291dGNvbWUYCCABKAkiYgoXTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2USLgoGZXZlbnRzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkF1ZGl0RXZlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoABChhFeHBvcnRBdWRpdEV2ZW50c1JlcXVlc3QSKQoFc2luY2UYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKBXVudGlsGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZjdXJzb3IYAyABKAkiOQoZRXhwb3J0QXVkaXRFdmVudHNSZXNwb25zZRIMCgRkYXRhGAEgASgMEg4KBmN1cnNvchgCIAEoCTLEAgoRQXVkaXRFdmVudFNlcnZpY2USegoPTGlzdEF1ZGl0RXZlbnRzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RBdWRpdEV2ZW50c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEF1ZGl0RXZlbnRzUmVzcG9uc2UiDsLzGAphdWRpdC5yZWFkErIBChFFeHBvcnRBdWRpdEV2ZW50cxIsLnRvc2hpLndvcmtzcGFjZS52MS5FeHBvcnRBdWRpdEV2ZW50c1JlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuRXhwb3J0QXVkaXRFdmVudHNSZXNwb25zZSI+wvMYCmF1ZGl0LnJlYWTS8xgsChVhdWRpdF9ldmVudHMuZXhwb3J0ZWQSE3dvcmtzcGFjZTp3b3Jrc3BhY2UwAUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * AuditEvent is one append-only audit log entry.
@@ -91,7 +91,7 @@ export type AuditEvent = Message<"toshi.workspace.v1.AuditEvent"> & {
 
   /**
    * "ok", or the reason the call was refused: PERMISSION_MISSING,
-   * OUTSIDE_LIMIT, or a product switch reason such as PRODUCT_DISABLED.
+   * OUTSIDE_LIMIT or PRODUCT_UNAVAILABLE.
    * Empty for an event no call records.
    *
    * @generated from field: string outcome = 11;
@@ -191,7 +191,7 @@ export type AuditEventJson = {
 
   /**
    * "ok", or the reason the call was refused: PERMISSION_MISSING,
-   * OUTSIDE_LIMIT, or a product switch reason such as PRODUCT_DISABLED.
+   * OUTSIDE_LIMIT or PRODUCT_UNAVAILABLE.
    * Empty for an event no call records.
    *
    * @generated from field: string outcome = 11;
@@ -415,6 +415,90 @@ export const ListAuditEventsResponseSchema: GenMessage<ListAuditEventsResponse, 
   messageDesc(file_toshi_workspace_v1_audit_events, 2);
 
 /**
+ * @generated from message toshi.workspace.v1.ExportAuditEventsRequest
+ */
+export type ExportAuditEventsRequest = Message<"toshi.workspace.v1.ExportAuditEventsRequest"> & {
+  /**
+   * @generated from field: google.protobuf.Timestamp since = 1;
+   */
+  since?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp until = 2;
+   */
+  until?: Timestamp | undefined;
+
+  /**
+   * @generated from field: string cursor = 3;
+   */
+  cursor: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ExportAuditEventsRequest
+ */
+export type ExportAuditEventsRequestJson = {
+  /**
+   * @generated from field: google.protobuf.Timestamp since = 1;
+   */
+  since?: TimestampJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp until = 2;
+   */
+  until?: TimestampJson;
+
+  /**
+   * @generated from field: string cursor = 3;
+   */
+  cursor?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ExportAuditEventsRequest.
+ * Use `create(ExportAuditEventsRequestSchema)` to create a new message.
+ */
+export const ExportAuditEventsRequestSchema: GenMessage<ExportAuditEventsRequest, {jsonType: ExportAuditEventsRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_audit_events, 3);
+
+/**
+ * @generated from message toshi.workspace.v1.ExportAuditEventsResponse
+ */
+export type ExportAuditEventsResponse = Message<"toshi.workspace.v1.ExportAuditEventsResponse"> & {
+  /**
+   * @generated from field: bytes data = 1;
+   */
+  data: Uint8Array;
+
+  /**
+   * @generated from field: string cursor = 2;
+   */
+  cursor: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ExportAuditEventsResponse
+ */
+export type ExportAuditEventsResponseJson = {
+  /**
+   * @generated from field: bytes data = 1;
+   */
+  data?: string;
+
+  /**
+   * @generated from field: string cursor = 2;
+   */
+  cursor?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ExportAuditEventsResponse.
+ * Use `create(ExportAuditEventsResponseSchema)` to create a new message.
+ */
+export const ExportAuditEventsResponseSchema: GenMessage<ExportAuditEventsResponse, {jsonType: ExportAuditEventsResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_audit_events, 4);
+
+/**
  * AuditEventService reads the workspace's audit log: what its members, its
  * tokens, the operator and the control plane did in it.
  *
@@ -439,6 +523,27 @@ export const AuditEventService: GenService<{
     methodKind: "unary";
     input: typeof ListAuditEventsRequestSchema;
     output: typeof ListAuditEventsResponseSchema;
+  },
+  /**
+   * ExportAuditEvents streams the audit log as JSON lines, oldest first,
+   * without a row cap. The first line is {"header":{"since":...,"until":...,
+   * "retention_boundary":...|null,"crossed":true|false}}, followed by one
+   * AuditEvent per line. The plan must include audit export or the call fails
+   * with PERMISSION_DENIED.
+   *
+   * Since is required; until defaults to now. Since must be before until,
+   * else INVALID_ARGUMENT. A cursor from a previous response resumes after
+   * its last row, sending the header again. A malformed cursor or one from
+   * another range fails with INVALID_ARGUMENT; a resume cursor at or behind
+   * the retention boundary fails with OUT_OF_RANGE. When resuming without an
+   * until, the cursor keeps the original range's until.
+   *
+   * @generated from rpc toshi.workspace.v1.AuditEventService.ExportAuditEvents
+   */
+  exportAuditEvents: {
+    methodKind: "server_streaming";
+    input: typeof ExportAuditEventsRequestSchema;
+    output: typeof ExportAuditEventsResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_audit_events, 0);

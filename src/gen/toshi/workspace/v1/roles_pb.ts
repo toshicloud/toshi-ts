@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/roles.proto.
  */
 export const file_toshi_workspace_v1_roles: GenFile = /*@__PURE__*/
-  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvcm9sZXMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSJHCgRSb2xlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLcGVybWlzc2lvbnMYAyADKAkSEAoIYnVpbHRfaW4YBCABKAgiRAoHU3ViamVjdBItCgRraW5kGAEgASgOMh8udG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3RLaW5kEgoKAmlkGAIgASgJItoBCglSb2xlR3JhbnQSCgoCaWQYASABKAkSLAoHc3ViamVjdBgCIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgpjcmVhdGVkX2J5GAcgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QiOQoQTGlzdFJvbGVzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJVChFMaXN0Um9sZXNSZXNwb25zZRInCgVyb2xlcxgBIAMoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI2ChFDcmVhdGVSb2xlUmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjwKEkNyZWF0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUiQgoRVXBkYXRlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtwZXJtaXNzaW9ucxgDIAMoCSI8ChJVcGRhdGVSb2xlUmVzcG9uc2USJgoEcm9sZRgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlIh8KEURlbGV0ZVJvbGVSZXF1ZXN0EgoKAmlkGAEgASgJIlQKEkRlbGV0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUSFgoOZ3JhbnRzX2RlbGV0ZWQYAiABKAUikgEKFUxpc3RSb2xlR3JhbnRzUmVxdWVzdBIsCgdzdWJqZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJgChZMaXN0Um9sZUdyYW50c1Jlc3BvbnNlEi0KBmdyYW50cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInQKEEdyYW50Um9sZVJlcXVlc3QSLAoHc3ViamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRITCgtlbnZpcm9ubWVudBgEIAEoCSJBChFHcmFudFJvbGVSZXNwb25zZRIsCgVncmFudBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQiHwoRUmV2b2tlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkiQgoSUmV2b2tlUm9sZVJlc3BvbnNlEiwKBWdyYW50GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlJvbGVHcmFudCI7ChJMaXN0TWVtYmVyc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiWwoTTGlzdE1lbWJlcnNSZXNwb25zZRIrCgdtZW1iZXJzGAEgAygLMhoudG9zaGkud29ya3NwYWNlLnYxLk1lbWJlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkivwEKBk1lbWJlchIPCgd1c2VyX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFZW1haWwYAyABKAkSKgoDdmlhGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLk1lbWJlclZpYRIsCghhZGRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLQoIYWRkZWRfYnkYBiABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdCImChNSZW1vdmVNZW1iZXJSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkiLgoUUmVtb3ZlTWVtYmVyUmVzcG9uc2USFgoOZ3JhbnRzX3JlbW92ZWQYASABKAUiTwoXQ3JlYXRlSW52aXRhdGlvblJlcXVlc3QSDAoEbm90ZRgBIAEoCRImCgN0dGwYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXAoYQ3JlYXRlSW52aXRhdGlvblJlc3BvbnNlEjIKCmludml0YXRpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbhIMCgRjb2RlGAIgASgJIpIDCgpJbnZpdGF0aW9uEgoKAmlkGAEgASgJEgwKBG5vdGUYAiABKAkSMgoFc3RhdGUYAyABKA4yIy50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvblN0YXRlEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KCmNyZWF0ZWRfYnkYBSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthY2NlcHRlZF9ieRgHIAEoCRIvCgthY2NlcHRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKcmV2b2tlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoKcmV2b2tlZF9ieRgKIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0Ij8KFkxpc3RJbnZpdGF0aW9uc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiZwoXTGlzdEludml0YXRpb25zUmVzcG9uc2USMwoLaW52aXRhdGlvbnMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJQoXUmV2b2tlSW52aXRhdGlvblJlcXVlc3QSCgoCaWQYASABKAkiTgoYUmV2b2tlSW52aXRhdGlvblJlc3BvbnNlEjIKCmludml0YXRpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSW52aXRhdGlvbiInChdBY2NlcHRJbnZpdGF0aW9uUmVxdWVzdBIMCgRjb2RlGAEgASgJInAKGEFjY2VwdEludml0YXRpb25SZXNwb25zZRIyCgppbnZpdGF0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb24SEQoJd29ya3NwYWNlGAIgASgJEg0KBW93bmVyGAMgASgIKnUKC1N1YmplY3RLaW5kEhwKGFNVQkpFQ1RfS0lORF9VTlNQRUNJRklFRBAAEhcKE1NVQkpFQ1RfS0lORF9QRVJTT04QARIWChJTVUJKRUNUX0tJTkRfVE9LRU4QAhIXChNTVUJKRUNUX0tJTkRfU1lTVEVNEAMqeQoJTWVtYmVyVmlhEhoKFk1FTUJFUl9WSUFfVU5TUEVDSUZJRUQQABIbChdNRU1CRVJfVklBX0dJVEhVQl9BRE1JThABEhkKFU1FTUJFUl9WSUFfSU5WSVRBVElPThACEhgKFE1FTUJFUl9WSUFfTUlHUkFUSU9OEAMqqQEKD0ludml0YXRpb25TdGF0ZRIgChxJTlZJVEFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVSU5WSVRBVElPTl9TVEFURV9PUEVOEAESHQoZSU5WSVRBVElPTl9TVEFURV9BQ0NFUFRFRBACEhwKGElOVklUQVRJT05fU1RBVEVfUkVWT0tFRBADEhwKGElOVklUQVRJT05fU1RBVEVfRVhQSVJFRBAEMokOCgtSb2xlU2VydmljZRJqCglMaXN0Um9sZXMSJC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVzUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Um9sZXNSZXNwb25zZSIQwvMYDG1lbWJlcnMucmVhZBJuCgpDcmVhdGVSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJvbGVSZXNwb25zZSIRwvMYDW1lbWJlcnMud3JpdGUSbgoKVXBkYXRlUm9sZRIlLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVSb2xlUmVzcG9uc2UiEcLzGA1tZW1iZXJzLndyaXRlEm4KCkRlbGV0ZVJvbGUSJS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlUm9sZVJlc3BvbnNlIhHC8xgNbWVtYmVycy53cml0ZRKGAQoOTGlzdFJvbGVHcmFudHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVHcmFudHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSb2xlR3JhbnRzUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEocBCglHcmFudFJvbGUSJC50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRSb2xlUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFJvbGVSZXNwb25zZSItwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYCxIJcm9sZTpyb2xlEowBCgpSZXZva2VSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJvbGVSZXNwb25zZSIvwvMYDW1lbWJlcnMud3JpdGXS8xgaEhhyb2xlOnJlc3BvbnNlLmdyYW50LnJvbGUSfQoLTGlzdE1lbWJlcnMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdE1lbWJlcnNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RNZW1iZXJzUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEqUBCgxSZW1vdmVNZW1iZXISJy50b3NoaS53b3Jrc3BhY2UudjEuUmVtb3ZlTWVtYmVyUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5SZW1vdmVNZW1iZXJSZXNwb25zZSJCwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYIAoObWVtYmVyLnJlbW92ZWQSDm1lbWJlcjp1c2VyX2lkEo0BChBDcmVhdGVJbnZpdGF0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUludml0YXRpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUludml0YXRpb25SZXNwb25zZSIewvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNlEokBCg9MaXN0SW52aXRhdGlvbnMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEludml0YXRpb25zUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SW52aXRhdGlvbnNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2USjQEKEFJldm9rZUludml0YXRpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlSW52aXRhdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlSW52aXRhdGlvblJlc3BvbnNlIh7C8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2USyAEKEEFjY2VwdEludml0YXRpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuQWNjZXB0SW52aXRhdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQWNjZXB0SW52aXRhdGlvblJlc3BvbnNlIlnC8xgMbWVtYmVycy5yZWFkyvMYCXdvcmtzcGFjZdLzGDgKE2ludml0YXRpb24uYWNjZXB0ZWQSIWludml0YXRpb246cmVzcG9uc2UuaW52aXRhdGlvbi5pZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvcm9sZXMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSJHCgRSb2xlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLcGVybWlzc2lvbnMYAyADKAkSEAoIYnVpbHRfaW4YBCABKAgiRAoHU3ViamVjdBItCgRraW5kGAEgASgOMh8udG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3RLaW5kEgoKAmlkGAIgASgJItoBCglSb2xlR3JhbnQSCgoCaWQYASABKAkSLAoHc3ViamVjdBgCIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIuCgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgpjcmVhdGVkX2J5GAcgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QiOQoQTGlzdFJvbGVzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJVChFMaXN0Um9sZXNSZXNwb25zZRInCgVyb2xlcxgBIAMoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI2ChFDcmVhdGVSb2xlUmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjwKEkNyZWF0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUiQgoRVXBkYXRlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtwZXJtaXNzaW9ucxgDIAMoCSI8ChJVcGRhdGVSb2xlUmVzcG9uc2USJgoEcm9sZRgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlIh8KEURlbGV0ZVJvbGVSZXF1ZXN0EgoKAmlkGAEgASgJIlQKEkRlbGV0ZVJvbGVSZXNwb25zZRImCgRyb2xlGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLlJvbGUSFgoOZ3JhbnRzX2RlbGV0ZWQYAiABKAUikgEKFUxpc3RSb2xlR3JhbnRzUmVxdWVzdBIsCgdzdWJqZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJgChZMaXN0Um9sZUdyYW50c1Jlc3BvbnNlEi0KBmdyYW50cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInQKEEdyYW50Um9sZVJlcXVlc3QSLAoHc3ViamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5TdWJqZWN0EgwKBHJvbGUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRITCgtlbnZpcm9ubWVudBgEIAEoCSJBChFHcmFudFJvbGVSZXNwb25zZRIsCgVncmFudBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Sb2xlR3JhbnQiHwoRUmV2b2tlUm9sZVJlcXVlc3QSCgoCaWQYASABKAkiQgoSUmV2b2tlUm9sZVJlc3BvbnNlEiwKBWdyYW50GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlJvbGVHcmFudCJrChJMaXN0TWVtYmVyc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkSLgoFc3RhdGUYAyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuTWVtYmVyU3RhdGUiWwoTTGlzdE1lbWJlcnNSZXNwb25zZRIrCgdtZW1iZXJzGAEgAygLMhoudG9zaGkud29ya3NwYWNlLnYxLk1lbWJlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkioQIKBk1lbWJlchIPCgd1c2VyX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFZW1haWwYAyABKAkSKgoDdmlhGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLk1lbWJlclZpYRIsCghhZGRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLQoIYWRkZWRfYnkYBiABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBIuCgVzdGF0ZRgHIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5NZW1iZXJTdGF0ZRIwCgxyZXF1ZXN0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIiYKE1JlbW92ZU1lbWJlclJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCSInChRBcHByb3ZlTWVtYmVyUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJIlIKFUFwcHJvdmVNZW1iZXJSZXNwb25zZRIqCgZtZW1iZXIYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuTWVtYmVyEg0KBW93bmVyGAIgASgIIicKFERlY2xpbmVNZW1iZXJSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkiFwoVRGVjbGluZU1lbWJlclJlc3BvbnNlIi4KFFJlbW92ZU1lbWJlclJlc3BvbnNlEhYKDmdyYW50c19yZW1vdmVkGAEgASgFIk8KF0NyZWF0ZUludml0YXRpb25SZXF1ZXN0EgwKBG5vdGUYASABKAkSJgoDdHRsGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIlwKGENyZWF0ZUludml0YXRpb25SZXNwb25zZRIyCgppbnZpdGF0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb24SDAoEY29kZRgCIAEoCSKSAwoKSW52aXRhdGlvbhIKCgJpZBgBIAEoCRIMCgRub3RlGAIgASgJEjIKBXN0YXRlGAMgASgOMiMudG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb25TdGF0ZRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgpjcmVhdGVkX2J5GAUgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlN1YmplY3QSLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLYWNjZXB0ZWRfYnkYByABKAkSLwoLYWNjZXB0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KCnJldm9rZWRfYnkYCiABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdCI/ChZMaXN0SW52aXRhdGlvbnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJImcKF0xpc3RJbnZpdGF0aW9uc1Jlc3BvbnNlEjMKC2ludml0YXRpb25zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiUKF1Jldm9rZUludml0YXRpb25SZXF1ZXN0EgoKAmlkGAEgASgJIk4KGFJldm9rZUludml0YXRpb25SZXNwb25zZRIyCgppbnZpdGF0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkludml0YXRpb24iJwoXQWNjZXB0SW52aXRhdGlvblJlcXVlc3QSDAoEY29kZRgBIAEoCSJwChhBY2NlcHRJbnZpdGF0aW9uUmVzcG9uc2USMgoKaW52aXRhdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5JbnZpdGF0aW9uEhEKCXdvcmtzcGFjZRgCIAEoCRINCgVvd25lchgDIAEoCCp1CgtTdWJqZWN0S2luZBIcChhTVUJKRUNUX0tJTkRfVU5TUEVDSUZJRUQQABIXChNTVUJKRUNUX0tJTkRfUEVSU09OEAESFgoSU1VCSkVDVF9LSU5EX1RPS0VOEAISFwoTU1VCSkVDVF9LSU5EX1NZU1RFTRADKpcBCglNZW1iZXJWaWESGgoWTUVNQkVSX1ZJQV9VTlNQRUNJRklFRBAAEhsKF01FTUJFUl9WSUFfR0lUSFVCX0FETUlOEAESGQoVTUVNQkVSX1ZJQV9JTlZJVEFUSU9OEAISGAoUTUVNQkVSX1ZJQV9NSUdSQVRJT04QAxIcChhNRU1CRVJfVklBX0dJVEhVQl9NRU1CRVIQBCpeCgtNZW1iZXJTdGF0ZRIcChhNRU1CRVJfU1RBVEVfVU5TUEVDSUZJRUQQABIXChNNRU1CRVJfU1RBVEVfQUNUSVZFEAESGAoUTUVNQkVSX1NUQVRFX1BFTkRJTkcQAiqpAQoPSW52aXRhdGlvblN0YXRlEiAKHElOVklUQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIZChVJTlZJVEFUSU9OX1NUQVRFX09QRU4QARIdChlJTlZJVEFUSU9OX1NUQVRFX0FDQ0VQVEVEEAISHAoYSU5WSVRBVElPTl9TVEFURV9SRVZPS0VEEAMSHAoYSU5WSVRBVElPTl9TVEFURV9FWFBJUkVEEAQy4RAKC1JvbGVTZXJ2aWNlEmoKCUxpc3RSb2xlcxIkLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Um9sZXNSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSb2xlc1Jlc3BvbnNlIhDC8xgMbWVtYmVycy5yZWFkEm4KCkNyZWF0ZVJvbGUSJS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUm9sZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUm9sZVJlc3BvbnNlIhHC8xgNbWVtYmVycy53cml0ZRJuCgpVcGRhdGVSb2xlEiUudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVJvbGVSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVJvbGVSZXNwb25zZSIRwvMYDW1lbWJlcnMud3JpdGUSbgoKRGVsZXRlUm9sZRIlLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVSb2xlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVSb2xlUmVzcG9uc2UiEcLzGA1tZW1iZXJzLndyaXRlEoYBCg5MaXN0Um9sZUdyYW50cxIpLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Um9sZUdyYW50c1JlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJvbGVHcmFudHNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2UShwEKCUdyYW50Um9sZRIkLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFJvbGVSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLkdyYW50Um9sZVJlc3BvbnNlIi3C8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgLEglyb2xlOnJvbGUSjAEKClJldm9rZVJvbGUSJS50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlUm9sZVJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlUm9sZVJlc3BvbnNlIi/C8xgNbWVtYmVycy53cml0ZdLzGBoSGHJvbGU6cmVzcG9uc2UuZ3JhbnQucm9sZRJ9CgtMaXN0TWVtYmVycxImLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0TWVtYmVyc1JlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdE1lbWJlcnNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2USpQEKDFJlbW92ZU1lbWJlchInLnRvc2hpLndvcmtzcGFjZS52MS5SZW1vdmVNZW1iZXJSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLlJlbW92ZU1lbWJlclJlc3BvbnNlIkLC8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2XS8xggCg5tZW1iZXIucmVtb3ZlZBIObWVtYmVyOnVzZXJfaWQSqQEKDUFwcHJvdmVNZW1iZXISKC50b3NoaS53b3Jrc3BhY2UudjEuQXBwcm92ZU1lbWJlclJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQXBwcm92ZU1lbWJlclJlc3BvbnNlIkPC8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2XS8xghCg9tZW1iZXIuYXBwcm92ZWQSDm1lbWJlcjp1c2VyX2lkEqkBCg1EZWNsaW5lTWVtYmVyEigudG9zaGkud29ya3NwYWNlLnYxLkRlY2xpbmVNZW1iZXJSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkRlY2xpbmVNZW1iZXJSZXNwb25zZSJDwvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNl0vMYIQoPbWVtYmVyLmRlY2xpbmVkEg5tZW1iZXI6dXNlcl9pZBKNAQoQQ3JlYXRlSW52aXRhdGlvbhIrLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVJbnZpdGF0aW9uUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVJbnZpdGF0aW9uUmVzcG9uc2UiHsLzGA1tZW1iZXJzLndyaXRlyvMYCXdvcmtzcGFjZRKJAQoPTGlzdEludml0YXRpb25zEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RJbnZpdGF0aW9uc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEludml0YXRpb25zUmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEo0BChBSZXZva2VJbnZpdGF0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUludml0YXRpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUludml0YXRpb25SZXNwb25zZSIewvMYDW1lbWJlcnMud3JpdGXK8xgJd29ya3NwYWNlEsgBChBBY2NlcHRJbnZpdGF0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkFjY2VwdEludml0YXRpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkFjY2VwdEludml0YXRpb25SZXNwb25zZSJZwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2XS8xg4ChNpbnZpdGF0aW9uLmFjY2VwdGVkEiFpbnZpdGF0aW9uOnJlc3BvbnNlLmludml0YXRpb24uaWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Role is a named set of permissions.
@@ -104,9 +104,11 @@ export type Subject = Message<"toshi.workspace.v1.Subject"> & {
   kind: SubjectKind;
 
   /**
-   * The GitHub user id of a person, in decimal, such as "583231", which a
-   * change of login keeps; the token id of a token, such as
-   * "tok-1a2b3c4d5e6f"; empty for the system.
+   * The Toshi user id of a person, such as "usr-0f1e2d3c4b5a69788796a5b4",
+   * which a change of login or identity provider keeps; it is opaque, and
+   * a person who signed in before user accounts came has their GitHub user
+   * id as theirs. The token id of a token, such as "tok-1a2b3c4d5e6f";
+   * empty for the system.
    *
    * @generated from field: string id = 2;
    */
@@ -125,9 +127,11 @@ export type SubjectJson = {
   kind?: SubjectKindJson;
 
   /**
-   * The GitHub user id of a person, in decimal, such as "583231", which a
-   * change of login keeps; the token id of a token, such as
-   * "tok-1a2b3c4d5e6f"; empty for the system.
+   * The Toshi user id of a person, such as "usr-0f1e2d3c4b5a69788796a5b4",
+   * which a change of login or identity provider keeps; it is opaque, and
+   * a person who signed in before user accounts came has their GitHub user
+   * id as theirs. The token id of a token, such as "tok-1a2b3c4d5e6f";
+   * empty for the system.
    *
    * @generated from field: string id = 2;
    */
@@ -887,6 +891,14 @@ export type ListMembersRequest = Message<"toshi.workspace.v1.ListMembersRequest"
    * @generated from field: string page_token = 2;
    */
   pageToken: string;
+
+  /**
+   * MEMBER_STATE_PENDING lists the people waiting for approval; unset or
+   * MEMBER_STATE_ACTIVE lists the members.
+   *
+   * @generated from field: toshi.workspace.v1.MemberState state = 3;
+   */
+  state: MemberState;
 };
 
 /**
@@ -906,6 +918,14 @@ export type ListMembersRequestJson = {
    * @generated from field: string page_token = 2;
    */
   pageToken?: string;
+
+  /**
+   * MEMBER_STATE_PENDING lists the people waiting for approval; unset or
+   * MEMBER_STATE_ACTIVE lists the members.
+   *
+   * @generated from field: toshi.workspace.v1.MemberState state = 3;
+   */
+  state?: MemberStateJson;
 };
 
 /**
@@ -994,11 +1014,23 @@ export type Member = Message<"toshi.workspace.v1.Member"> & {
 
   /**
    * Who made the person a member: the inviter for an invitation, the
-   * system for a sign-in.
+   * system for a sign-in, the approver for an approved request.
    *
    * @generated from field: toshi.workspace.v1.Subject added_by = 6;
    */
   addedBy?: Subject | undefined;
+
+  /**
+   * @generated from field: toshi.workspace.v1.MemberState state = 7;
+   */
+  state: MemberState;
+
+  /**
+   * When a person waiting for approval asked to join; unset for a member.
+   *
+   * @generated from field: google.protobuf.Timestamp requested_at = 8;
+   */
+  requestedAt?: Timestamp | undefined;
 };
 
 /**
@@ -1039,11 +1071,23 @@ export type MemberJson = {
 
   /**
    * Who made the person a member: the inviter for an invitation, the
-   * system for a sign-in.
+   * system for a sign-in, the approver for an approved request.
    *
    * @generated from field: toshi.workspace.v1.Subject added_by = 6;
    */
   addedBy?: SubjectJson;
+
+  /**
+   * @generated from field: toshi.workspace.v1.MemberState state = 7;
+   */
+  state?: MemberStateJson;
+
+  /**
+   * When a person waiting for approval asked to join; unset for a member.
+   *
+   * @generated from field: google.protobuf.Timestamp requested_at = 8;
+   */
+  requestedAt?: TimestampJson;
 };
 
 /**
@@ -1085,6 +1129,130 @@ export const RemoveMemberRequestSchema: GenMessage<RemoveMemberRequest, {jsonTyp
   messageDesc(file_toshi_workspace_v1_roles, 20);
 
 /**
+ * @generated from message toshi.workspace.v1.ApproveMemberRequest
+ */
+export type ApproveMemberRequest = Message<"toshi.workspace.v1.ApproveMemberRequest"> & {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ApproveMemberRequest
+ */
+export type ApproveMemberRequestJson = {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ApproveMemberRequest.
+ * Use `create(ApproveMemberRequestSchema)` to create a new message.
+ */
+export const ApproveMemberRequestSchema: GenMessage<ApproveMemberRequest, {jsonType: ApproveMemberRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 21);
+
+/**
+ * ApproveMemberResponse carries the new member and whether they became an
+ * owner.
+ *
+ * @generated from message toshi.workspace.v1.ApproveMemberResponse
+ */
+export type ApproveMemberResponse = Message<"toshi.workspace.v1.ApproveMemberResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Member member = 1;
+   */
+  member?: Member | undefined;
+
+  /**
+   * @generated from field: bool owner = 2;
+   */
+  owner: boolean;
+};
+
+/**
+ * ApproveMemberResponse carries the new member and whether they became an
+ * owner.
+ *
+ * @generated from message toshi.workspace.v1.ApproveMemberResponse
+ */
+export type ApproveMemberResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Member member = 1;
+   */
+  member?: MemberJson;
+
+  /**
+   * @generated from field: bool owner = 2;
+   */
+  owner?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ApproveMemberResponse.
+ * Use `create(ApproveMemberResponseSchema)` to create a new message.
+ */
+export const ApproveMemberResponseSchema: GenMessage<ApproveMemberResponse, {jsonType: ApproveMemberResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 22);
+
+/**
+ * @generated from message toshi.workspace.v1.DeclineMemberRequest
+ */
+export type DeclineMemberRequest = Message<"toshi.workspace.v1.DeclineMemberRequest"> & {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.DeclineMemberRequest
+ */
+export type DeclineMemberRequestJson = {
+  /**
+   * The person's user id.
+   *
+   * @generated from field: string user_id = 1;
+   */
+  userId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.DeclineMemberRequest.
+ * Use `create(DeclineMemberRequestSchema)` to create a new message.
+ */
+export const DeclineMemberRequestSchema: GenMessage<DeclineMemberRequest, {jsonType: DeclineMemberRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 23);
+
+/**
+ * @generated from message toshi.workspace.v1.DeclineMemberResponse
+ */
+export type DeclineMemberResponse = Message<"toshi.workspace.v1.DeclineMemberResponse"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.DeclineMemberResponse
+ */
+export type DeclineMemberResponseJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.DeclineMemberResponse.
+ * Use `create(DeclineMemberResponseSchema)` to create a new message.
+ */
+export const DeclineMemberResponseSchema: GenMessage<DeclineMemberResponse, {jsonType: DeclineMemberResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_roles, 24);
+
+/**
  * RemoveMemberResponse says how many grants went with the membership.
  *
  * @generated from message toshi.workspace.v1.RemoveMemberResponse
@@ -1113,7 +1281,7 @@ export type RemoveMemberResponseJson = {
  * Use `create(RemoveMemberResponseSchema)` to create a new message.
  */
 export const RemoveMemberResponseSchema: GenMessage<RemoveMemberResponse, {jsonType: RemoveMemberResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 21);
+  messageDesc(file_toshi_workspace_v1_roles, 25);
 
 /**
  * @generated from message toshi.workspace.v1.CreateInvitationRequest
@@ -1158,7 +1326,7 @@ export type CreateInvitationRequestJson = {
  * Use `create(CreateInvitationRequestSchema)` to create a new message.
  */
 export const CreateInvitationRequestSchema: GenMessage<CreateInvitationRequest, {jsonType: CreateInvitationRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 22);
+  messageDesc(file_toshi_workspace_v1_roles, 26);
 
 /**
  * CreateInvitationResponse carries the invitation and its code, shown
@@ -1205,7 +1373,7 @@ export type CreateInvitationResponseJson = {
  * Use `create(CreateInvitationResponseSchema)` to create a new message.
  */
 export const CreateInvitationResponseSchema: GenMessage<CreateInvitationResponse, {jsonType: CreateInvitationResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 23);
+  messageDesc(file_toshi_workspace_v1_roles, 27);
 
 /**
  * Invitation is an invitation to join the workspace, never with its code.
@@ -1338,7 +1506,7 @@ export type InvitationJson = {
  * Use `create(InvitationSchema)` to create a new message.
  */
 export const InvitationSchema: GenMessage<Invitation, {jsonType: InvitationJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 24);
+  messageDesc(file_toshi_workspace_v1_roles, 28);
 
 /**
  * @generated from message toshi.workspace.v1.ListInvitationsRequest
@@ -1383,7 +1551,7 @@ export type ListInvitationsRequestJson = {
  * Use `create(ListInvitationsRequestSchema)` to create a new message.
  */
 export const ListInvitationsRequestSchema: GenMessage<ListInvitationsRequest, {jsonType: ListInvitationsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 25);
+  messageDesc(file_toshi_workspace_v1_roles, 29);
 
 /**
  * @generated from message toshi.workspace.v1.ListInvitationsResponse
@@ -1424,7 +1592,7 @@ export type ListInvitationsResponseJson = {
  * Use `create(ListInvitationsResponseSchema)` to create a new message.
  */
 export const ListInvitationsResponseSchema: GenMessage<ListInvitationsResponse, {jsonType: ListInvitationsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 26);
+  messageDesc(file_toshi_workspace_v1_roles, 30);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeInvitationRequest
@@ -1455,7 +1623,7 @@ export type RevokeInvitationRequestJson = {
  * Use `create(RevokeInvitationRequestSchema)` to create a new message.
  */
 export const RevokeInvitationRequestSchema: GenMessage<RevokeInvitationRequest, {jsonType: RevokeInvitationRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 27);
+  messageDesc(file_toshi_workspace_v1_roles, 31);
 
 /**
  * RevokeInvitationResponse carries the revoked invitation.
@@ -1486,7 +1654,7 @@ export type RevokeInvitationResponseJson = {
  * Use `create(RevokeInvitationResponseSchema)` to create a new message.
  */
 export const RevokeInvitationResponseSchema: GenMessage<RevokeInvitationResponse, {jsonType: RevokeInvitationResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 28);
+  messageDesc(file_toshi_workspace_v1_roles, 32);
 
 /**
  * @generated from message toshi.workspace.v1.AcceptInvitationRequest
@@ -1517,7 +1685,7 @@ export type AcceptInvitationRequestJson = {
  * Use `create(AcceptInvitationRequestSchema)` to create a new message.
  */
 export const AcceptInvitationRequestSchema: GenMessage<AcceptInvitationRequest, {jsonType: AcceptInvitationRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 29);
+  messageDesc(file_toshi_workspace_v1_roles, 33);
 
 /**
  * @generated from message toshi.workspace.v1.AcceptInvitationResponse
@@ -1572,7 +1740,7 @@ export type AcceptInvitationResponseJson = {
  * Use `create(AcceptInvitationResponseSchema)` to create a new message.
  */
 export const AcceptInvitationResponseSchema: GenMessage<AcceptInvitationResponse, {jsonType: AcceptInvitationResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_roles, 30);
+  messageDesc(file_toshi_workspace_v1_roles, 34);
 
 /**
  * SubjectKind says who a grant is given to, or who made it.
@@ -1586,7 +1754,7 @@ export enum SubjectKind {
   UNSPECIFIED = 0,
 
   /**
-   * A person, by GitHub user id.
+   * A person, by Toshi user id.
    *
    * @generated from enum value: SUBJECT_KIND_PERSON = 1;
    */
@@ -1653,6 +1821,15 @@ export enum MemberVia {
    * @generated from enum value: MEMBER_VIA_MIGRATION = 3;
    */
   MIGRATION = 3,
+
+  /**
+   * Signing in with GitHub as a member of the organisation of one of the
+   * workspace's GitHub App installations, when the workspace lets such
+   * members join.
+   *
+   * @generated from enum value: MEMBER_VIA_GITHUB_MEMBER = 4;
+   */
+  GITHUB_MEMBER = 4,
 }
 
 /**
@@ -1660,13 +1837,50 @@ export enum MemberVia {
  *
  * @generated from enum toshi.workspace.v1.MemberVia
  */
-export type MemberViaJson = "MEMBER_VIA_UNSPECIFIED" | "MEMBER_VIA_GITHUB_ADMIN" | "MEMBER_VIA_INVITATION" | "MEMBER_VIA_MIGRATION";
+export type MemberViaJson = "MEMBER_VIA_UNSPECIFIED" | "MEMBER_VIA_GITHUB_ADMIN" | "MEMBER_VIA_INVITATION" | "MEMBER_VIA_MIGRATION" | "MEMBER_VIA_GITHUB_MEMBER";
 
 /**
  * Describes the enum toshi.workspace.v1.MemberVia.
  */
 export const MemberViaSchema: GenEnum<MemberVia, MemberViaJson> = /*@__PURE__*/
   enumDesc(file_toshi_workspace_v1_roles, 1);
+
+/**
+ * MemberState says whether a person is a member or waiting to be one.
+ *
+ * @generated from enum toshi.workspace.v1.MemberState
+ */
+export enum MemberState {
+  /**
+   * @generated from enum value: MEMBER_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: MEMBER_STATE_ACTIVE = 1;
+   */
+  ACTIVE = 1,
+
+  /**
+   * Waiting for a workspace admin to approve them.
+   *
+   * @generated from enum value: MEMBER_STATE_PENDING = 2;
+   */
+  PENDING = 2,
+}
+
+/**
+ * MemberState says whether a person is a member or waiting to be one.
+ *
+ * @generated from enum toshi.workspace.v1.MemberState
+ */
+export type MemberStateJson = "MEMBER_STATE_UNSPECIFIED" | "MEMBER_STATE_ACTIVE" | "MEMBER_STATE_PENDING";
+
+/**
+ * Describes the enum toshi.workspace.v1.MemberState.
+ */
+export const MemberStateSchema: GenEnum<MemberState, MemberStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_roles, 2);
 
 /**
  * InvitationState says whether an invitation's code still works.
@@ -1713,7 +1927,7 @@ export type InvitationStateJson = "INVITATION_STATE_UNSPECIFIED" | "INVITATION_S
  * Describes the enum toshi.workspace.v1.InvitationState.
  */
 export const InvitationStateSchema: GenEnum<InvitationState, InvitationStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_roles, 2);
+  enumDesc(file_toshi_workspace_v1_roles, 3);
 
 /**
  * RoleService manages who may do what in the workspace: its roles, each a
@@ -1723,7 +1937,8 @@ export const InvitationStateSchema: GenEnum<InvitationState, InvitationStateJson
  * no deny rules.
  *
  * Four roles are built in: owner (every permission), admin (every
- * permission but billing.write and workspace.delete), member (reads and
+ * permission but billing.write, workspace.delete and workspace.signin),
+ * member (reads and
  * writes of every product and of projects, secrets and tokens, and reads of
  * the rest) and viewer (every read). They cannot be changed. A workspace
  * adds its own from the permissions docs/api/permissions.md lists.
@@ -1840,7 +2055,9 @@ export const RoleService: GenService<{
   /**
    * ListMembers returns the workspace's members, oldest first: the people
    * a session opens the workspace for, with how and when each joined. A
-   * removed member is not listed.
+   * removed member is not listed. With state MEMBER_STATE_PENDING it
+   * returns instead the people waiting for a workspace admin's approval to
+   * join, oldest request first.
    *
    * A page holds 100 members when page_size is zero, and 1000 at most.
    *
@@ -1866,6 +2083,31 @@ export const RoleService: GenService<{
     methodKind: "unary";
     input: typeof RemoveMemberRequestSchema;
     output: typeof RemoveMemberResponseSchema;
+  },
+  /**
+   * ApproveMember makes a person waiting for approval a member, as an
+   * accepted invitation does: it grants no role, and makes them an owner
+   * only when the workspace has no person who owns the whole of it. A
+   * person who is not waiting fails with NOT_FOUND.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.ApproveMember
+   */
+  approveMember: {
+    methodKind: "unary";
+    input: typeof ApproveMemberRequestSchema;
+    output: typeof ApproveMemberResponseSchema;
+  },
+  /**
+   * DeclineMember turns down a person waiting for approval. They may ask
+   * again by signing in a day after the decline at the earliest. A person
+   * who is not waiting fails with NOT_FOUND.
+   *
+   * @generated from rpc toshi.workspace.v1.RoleService.DeclineMember
+   */
+  declineMember: {
+    methodKind: "unary";
+    input: typeof DeclineMemberRequestSchema;
+    output: typeof DeclineMemberResponseSchema;
   },
   /**
    * CreateInvitation makes an invitation to join the workspace and returns

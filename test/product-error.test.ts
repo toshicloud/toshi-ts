@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 
 import { createToshiClient } from "../src/client.js";
 import type { ToshiClient } from "../src/client.js";
-import { ProductError, ProductReason, isProductError } from "../src/errors.js";
+import { ProductCause, ProductError, ProductReason, isProductError } from "../src/errors.js";
 import type { ExecuteRequest, ExecuteResponse } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 import { ProjectService } from "../src/gen/toshi/workspace/v1/projects_pb.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
@@ -29,10 +29,9 @@ function refusal(code: Code, domain: string, reason: string, metadata: Record<st
 }
 
 function turnedOff(): ConnectError {
-  return refusal(Code.FailedPrecondition, "toshi.run", "PRODUCT_TURNED_OFF", {
+  return refusal(Code.FailedPrecondition, "toshi.run", "PRODUCT_UNAVAILABLE", {
     product: "acme_ci",
-    feature: "acme_ci.enabled",
-    switch: "workspace",
+    cause: "workspace",
   });
 }
 
@@ -74,62 +73,43 @@ describe("ProductError", () => {
   const cases: ReadonlyArray<{
     name: string;
     code: Code;
-    reason: string;
     metadata: Record<string, string>;
-    want: Pick<ProductError, "product" | "reason" | "feature" | "state" | "access">;
+    want: Pick<ProductError, "product" | "reason" | "productCause" | "state">;
   }> = [
     {
-      name: "not installed",
-      code: Code.Unimplemented,
-      reason: "PRODUCT_NOT_INSTALLED",
-      metadata: { product: "runners", feature: "runners.enabled", switch: "build" },
-      want: { product: "runners", reason: ProductReason.NotInstalled, feature: "runners.enabled", state: "", access: [] },
+      name: "build",
+      code: Code.FailedPrecondition,
+      metadata: { product: "runners", cause: "build" },
+      want: { product: "runners", reason: ProductReason.Unavailable, productCause: ProductCause.Build, state: "" },
     },
     {
-      name: "disabled while draining",
+      name: "operator while draining",
       code: Code.FailedPrecondition,
-      reason: "PRODUCT_DISABLED",
-      metadata: { product: "runners", feature: "runners.enabled", switch: "deployment", state: "draining" },
+      metadata: { product: "runners", cause: "operator", state: "draining" },
       want: {
         product: "runners",
-        reason: ProductReason.Disabled,
-        feature: "runners.enabled",
+        reason: ProductReason.Unavailable,
+        productCause: ProductCause.Operator,
         state: "draining",
-        access: [],
       },
     },
     {
-      name: "not entitled",
-      code: Code.PermissionDenied,
-      reason: "PRODUCT_NOT_ENTITLED",
-      metadata: { product: "runners", feature: "runners.enabled", switch: "entitlement" },
-      want: { product: "runners", reason: ProductReason.NotEntitled, feature: "runners.enabled", state: "", access: [] },
+      name: "plan",
+      code: Code.FailedPrecondition,
+      metadata: { product: "images", cause: "plan" },
+      want: { product: "images", reason: ProductReason.Unavailable, productCause: ProductCause.Plan, state: "" },
     },
     {
-      name: "turned off",
+      name: "workspace",
       code: Code.FailedPrecondition,
-      reason: "PRODUCT_TURNED_OFF",
-      metadata: { product: "acme_ci", feature: "acme_ci.enabled", switch: "workspace" },
-      want: { product: "acme_ci", reason: ProductReason.TurnedOff, feature: "acme_ci.enabled", state: "", access: [] },
-    },
-    {
-      name: "access not accepted",
-      code: Code.FailedPrecondition,
-      reason: "ACCESS_NOT_ACCEPTED",
-      metadata: { product: "acme_ci", access: "projects.read,secrets.read" },
-      want: {
-        product: "acme_ci",
-        reason: ProductReason.AccessNotAccepted,
-        feature: "",
-        state: "",
-        access: ["projects.read", "secrets.read"],
-      },
+      metadata: { product: "acme_ci", cause: "workspace" },
+      want: { product: "acme_ci", reason: ProductReason.Unavailable, productCause: ProductCause.Workspace, state: "" },
     },
   ];
 
   for (const tc of cases) {
     it(`reads ${tc.name}`, async () => {
-      const client = listProjectsRefusing(refusal(tc.code, "toshi.run", tc.reason, tc.metadata));
+      const client = listProjectsRefusing(refusal(tc.code, "toshi.run", "PRODUCT_UNAVAILABLE", tc.metadata));
       const err = await caught(client.project.listProjects({}));
       if (!isProductError(err)) {
         throw new Error(`not a ProductError: ${String(err)}`);
@@ -137,9 +117,8 @@ describe("ProductError", () => {
       expect({
         product: err.product,
         reason: err.reason,
-        feature: err.feature,
+        productCause: err.productCause,
         state: err.state,
-        access: err.access,
       }).toEqual(tc.want);
       expect(err).toBeInstanceOf(ConnectError);
       expect(err.code).toBe(tc.code);
@@ -151,7 +130,7 @@ describe("ProductError", () => {
   it("leaves other errors as they are", async () => {
     for (const err of [
       new ConnectError("refused", Code.FailedPrecondition),
-      refusal(Code.FailedPrecondition, "example.com", "PRODUCT_TURNED_OFF", { product: "x" }),
+      refusal(Code.FailedPrecondition, "example.com", "PRODUCT_UNAVAILABLE", { product: "x", cause: "build" }),
       refusal(Code.FailedPrecondition, "toshi.run", "QUOTA_EXCEEDED", { product: "x" }),
     ]) {
       const got = await caught(listProjectsRefusing(err).project.listProjects({}));
@@ -194,7 +173,7 @@ describe("ProductError", () => {
         }
       })(),
     );
-    expect(isProductError(watchErr) && watchErr.reason).toBe(ProductReason.TurnedOff);
+    expect(isProductError(watchErr) && watchErr.reason).toBe(ProductReason.Unavailable);
 
     const executeErr = await caught(client.workload.sandboxes.execute({ sandboxId: "sb-1" }));
     expect(isProductError(executeErr) && executeErr.product).toBe("acme_ci");

@@ -95,7 +95,10 @@ export const AccountSchema: GenMessage<Account, {jsonType: AccountJson}> = /*@__
  */
 export type Identity = Message<"toshi.workspace.v1.Identity"> & {
   /**
-   * "github", or the OpenID Connect issuer URL.
+   * "github", "local" for the control plane's local admin, or the OpenID
+   * Connect issuer URL. GET /auth/providers lists it as each sign-in
+   * provider entry's identity_provider, which joins an identity to the
+   * entries that sign it in, and WorkspaceSignIn.issuer is the same value.
    *
    * @generated from field: string provider = 1;
    */
@@ -133,7 +136,10 @@ export type Identity = Message<"toshi.workspace.v1.Identity"> & {
  */
 export type IdentityJson = {
   /**
-   * "github", or the OpenID Connect issuer URL.
+   * "github", "local" for the control plane's local admin, or the OpenID
+   * Connect issuer URL. GET /auth/providers lists it as each sign-in
+   * provider entry's identity_provider, which joins an identity to the
+   * entries that sign it in, and WorkspaceSignIn.issuer is the same value.
    *
    * @generated from field: string provider = 1;
    */

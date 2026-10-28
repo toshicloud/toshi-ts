@@ -89,15 +89,14 @@ export const hookOnly: readonly DescMethod[] = [
   ImageService.method.deleteImage,
   // ProductService
   ProductService.method.listProducts,
-  ProductService.method.listCatalogEntries,
   ProductService.method.updateProduct,
-  ProductService.method.removeProduct,
   // WorkloadService
   WorkloadService.method.updateJob,
   WorkloadService.method.deleteJob,
   WorkloadService.method.updateSandbox,
   WorkloadService.method.deleteSandbox,
   WorkloadService.method.cancelExecution,
+  WorkloadService.method.exportEvents,
   WorkloadService.method.watchTelemetry,
   WorkloadService.method.watchGuestLog,
   WorkloadService.method.createPreviewShareLink,
@@ -138,6 +137,7 @@ export const hookOnly: readonly DescMethod[] = [
   SecretService.method.listSecretSetGrants,
   // ProjectService
   ProjectService.method.listProjects,
+  ProjectService.method.updateProject,
   ProjectService.method.getProject,
   ProjectService.method.listRepositories,
   ProjectService.method.createProject,
@@ -205,6 +205,7 @@ export const hookOnly: readonly DescMethod[] = [
   ArtifactUploadService.method.completeUpload,
   // AuditEventService
   AuditEventService.method.listAuditEvents,
+  AuditEventService.method.exportAuditEvents,
   // FillerService
   FillerService.method.listFillers,
   FillerService.method.putFiller,
@@ -241,14 +242,10 @@ export const hookOnly: readonly DescMethod[] = [
   StorageProviderService.method.deleteStorageProvider,
   // WorkspaceService
   WorkspaceService.method.getWorkspace,
+  WorkspaceService.method.updateWorkspace,
   WorkspaceService.method.listWorkspaces,
   WorkspaceService.method.getWorkspaceBilling,
   WorkspaceService.method.getWorkspaceStatement,
-  WorkspaceService.method.setWorkspaceOwnHostsOnly,
-  WorkspaceService.method.setWorkspaceAllowOverflow,
-  WorkspaceService.method.setWorkspaceAllowCacheWarm,
-  WorkspaceService.method.setWorkspaceCancelRunOnVmDeath,
-  WorkspaceService.method.setWorkspaceSpendLimits,
   WorkspaceService.method.listEgressIPs,
   WorkspaceService.method.getUsage,
   WorkspaceService.method.getQueueTimes,
