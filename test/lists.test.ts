@@ -5,7 +5,9 @@ import {
   EventSchema,
   JobSchema,
   ListEventsResponseSchema,
+  ListPreviewShareLinksResponseSchema,
   ListServiceRunsResponseSchema,
+  PreviewShareLinkSchema,
   SandboxSchema,
   ServiceRunSchema,
   ServiceSchema,
@@ -84,5 +86,23 @@ describe("all", () => {
     );
     const events = await collect(fake.client().workload.allEvents({}));
     expect(events.map((event) => event.id)).toEqual(["event-1"]);
+  });
+
+  it("follows the page token of a sandbox's share links", async () => {
+    const fake = createFake();
+    const asked: string[] = [];
+    fake.on(WorkloadService.method.listPreviewShareLinks, (request) => {
+      asked.push(request.pageToken);
+      const second = request.pageToken !== "";
+      return Promise.resolve(
+        create(ListPreviewShareLinksResponseSchema, {
+          shareLinks: [create(PreviewShareLinkSchema, { id: second ? "link-2" : "link-1" })],
+          nextPageToken: second ? "" : "page-2",
+        }),
+      );
+    });
+    const links = await collect(fake.client().workload.sandboxes.allPreviewShareLinks({ sandboxId: "sandbox-1" }));
+    expect(links.map((link) => link.id)).toEqual(["link-1", "link-2"]);
+    expect(asked).toEqual(["", "page-2"]);
   });
 });

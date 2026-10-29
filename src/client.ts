@@ -115,6 +115,7 @@ import type {
   ListServiceRevisionsResponse,
   ListServiceRunsResponse,
   Operation,
+  PreviewShareLink,
   ReleaseServiceResponse,
   RollbackServiceResponse,
   Sandbox,
@@ -261,6 +262,11 @@ export interface SandboxesClient {
     req: MessageInitShape<typeof ListPreviewShareLinksRequestSchema>,
     opts?: CallOptions,
   ): Promise<ListPreviewShareLinksResponse>;
+  /** Yields every share link that matches every filter that is set, following the page token from one page to the next. */
+  allPreviewShareLinks(
+    req: MessageInitShape<typeof ListPreviewShareLinksRequestSchema>,
+    opts?: CallOptions,
+  ): AsyncIterable<PreviewShareLink>;
   revokePreviewShareLink(
     req: MessageInitShape<typeof RevokePreviewShareLinkRequestSchema>,
     opts?: CallOptions,
@@ -422,6 +428,8 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         execute: (start, opts) => executeCommand(workloadService, start, opts),
         createPreviewShareLink: (req, opts) => workloadService.createPreviewShareLink(req, opts),
         listPreviewShareLinks: (req, opts) => workloadService.listPreviewShareLinks(req, opts),
+        allPreviewShareLinks: (req, opts) =>
+          paginate(req, workloadService.listPreviewShareLinks, (resp) => resp.shareLinks, opts),
         revokePreviewShareLink: (req, opts) => workloadService.revokePreviewShareLink(req, opts),
       },
       services: {
