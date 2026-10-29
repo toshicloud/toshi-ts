@@ -68,8 +68,9 @@ entry reads `TOSHI_SERVER`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE` and
   `environment` fields when they are empty. A value in the request wins.
   `environment` is left empty on a request with `shared: true`.
 - `retry`: `{ maxAttempts, initialBackoffMs, maxBackoffMs }`, by default
-  5, 200 ms and 10 s, with full jitter. `retry: false` turns off retries
-  and watch reconnects.
+  5, 200 ms and 10 s, with full jitter. Reads, and the calls whose request
+  takes a `request_key`, are retried; a stream and every other call is not.
+  `retry: false` turns off retries and watch reconnects.
 - `defaultTimeoutMs`: bounds each unary call except the Wait calls,
   which their request's timeout bounds; streams ignore it.
 
