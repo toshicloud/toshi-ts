@@ -78,7 +78,8 @@ export type DiscoverResponse = Message<"toshi.workspace.v1.DiscoverResponse"> & 
   /**
    * permissions are the caller's, sorted: what its roles in the workspace
    * give it at the request's project and environment. Each is
-   * "<area>.<level>", as docs/api/permissions.md lists them, or a
+   * "<area>.<level>", as this API's methods name them in their
+   * toshi.permission option, or a
    * product's own, "<product id>.<level>".
    *
    * @generated from field: repeated string permissions = 2;
@@ -129,7 +130,8 @@ export type DiscoverResponseJson = {
   /**
    * permissions are the caller's, sorted: what its roles in the workspace
    * give it at the request's project and environment. Each is
-   * "<area>.<level>", as docs/api/permissions.md lists them, or a
+   * "<area>.<level>", as this API's methods name them in their
+   * toshi.permission option, or a
    * product's own, "<product id>.<level>".
    *
    * @generated from field: repeated string permissions = 2;

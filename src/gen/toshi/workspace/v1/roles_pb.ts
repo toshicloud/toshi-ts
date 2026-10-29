@@ -35,8 +35,8 @@ export type Role = Message<"toshi.workspace.v1.Role"> & {
   name: string;
 
   /**
-   * The permissions the role gives, sorted, as docs/api/permissions.md
-   * names them.
+   * The permissions the role gives, sorted, as this API's methods or a
+   * product's calls name them.
    *
    * @generated from field: repeated string permissions = 3;
    */
@@ -70,8 +70,8 @@ export type RoleJson = {
   name?: string;
 
   /**
-   * The permissions the role gives, sorted, as docs/api/permissions.md
-   * names them.
+   * The permissions the role gives, sorted, as this API's methods or a
+   * product's calls name them.
    *
    * @generated from field: repeated string permissions = 3;
    */
@@ -354,7 +354,8 @@ export type CreateRoleRequest = Message<"toshi.workspace.v1.CreateRoleRequest"> 
   name: string;
 
   /**
-   * At least one permission, as docs/api/permissions.md names it.
+   * At least one permission, as this API's methods or a product's calls
+   * name it.
    *
    * @generated from field: repeated string permissions = 2;
    */
@@ -373,7 +374,8 @@ export type CreateRoleRequestJson = {
   name?: string;
 
   /**
-   * At least one permission, as docs/api/permissions.md names it.
+   * At least one permission, as this API's methods or a product's calls
+   * name it.
    *
    * @generated from field: repeated string permissions = 2;
    */
@@ -1942,8 +1944,9 @@ export const InvitationStateSchema: GenEnum<InvitationState, InvitationStateJson
  * writes of every product and of projects, secrets and tokens, and reads of
  * the rest), agent (every read, and sandboxes.write, channels.write,
  * artifacts.write and volumes.write) and viewer (every read). They cannot
- * be changed. A workspace
- * adds its own from the permissions docs/api/permissions.md lists.
+ * be changed. A workspace adds its own from the permissions this API's
+ * methods name in their toshi.permission option and those a product's
+ * calls name.
  *
  * Nobody makes, changes, deletes, gives or revokes a role with a
  * permission they do not hold where the role applies: such a call is
@@ -1977,7 +1980,8 @@ export const RoleService: GenService<{
    * CreateRole adds a role of the workspace's own. A name that a role of
    * the workspace has fails with ALREADY_EXISTS; a built-in role's name,
    * compared without regard to case, an empty name, no permissions, or a
-   * permission docs/api/permissions.md does not list, with
+   * permission that neither a method of this API nor a product's calls
+   * name, with
    * INVALID_ARGUMENT.
    *
    * @generated from rpc toshi.workspace.v1.RoleService.CreateRole

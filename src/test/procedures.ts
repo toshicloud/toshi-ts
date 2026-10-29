@@ -208,6 +208,7 @@ export const hookOnly: readonly DescMethod[] = [
   RecordingService.method.revokeRecordingShareLink,
   // VolumeService
   VolumeService.method.listVolumes,
+  VolumeService.method.getVolume,
   VolumeService.method.attachVolume,
   VolumeService.method.detachVolume,
   VolumeService.method.listVolumeVersions,
@@ -279,6 +280,9 @@ export const hookOnly: readonly DescMethod[] = [
   WorkspaceService.method.createCheckoutSession,
   WorkspaceService.method.createBillingPortalSession,
   WorkspaceService.method.getVersion,
+  WorkspaceService.method.listSeats,
+  WorkspaceService.method.assignSeat,
+  WorkspaceService.method.removeSeat,
   // DomainService
   DomainService.method.createDomain,
   DomainService.method.getDomain,
