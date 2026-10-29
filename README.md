@@ -137,14 +137,15 @@ The client has one field per Workspace API service: `project`, `secret`,
 `webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
 `filler`, `grant`, `storageProvider`, `product`, `discovery`, `connection`,
-`role`, `trigger`, `account` and `image`, each holding that service's
+`role`, `trigger`, `account`, `image` and `domain`, each holding that service's
 generated client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
-method for each call (`create`, `get`, `list`, `update`, `delete`,
-`wait`, `watch`, and `cancel` on a job, `execute` on a sandbox, `start`,
-`stop`, `setMode`, `listRuns`, `wake`, `hold`, `release`, `listRevisions`,
-`getRevision`, `rollback` and `listActivations` on a service). The calls that
+method for each call (`create`, `get`, `list`, `update`, `delete`, `wait`,
+`watch`, and `cancel` on a job, `execute`, `start` and `stop` on a sandbox,
+`start`, `stop`, `setMode`, `listRuns`, `wake`, `hold`, `release`,
+`listRevisions`, `getRevision`, `rollback` and `listActivations` on a
+service). The calls that
 span the three types sit on `workload` itself: `listEvents`, `watchEvents`,
 `getOperation` and `waitOperation`. `run` sits at the top of the client, as
 `toshi run` sits at the top of the CLI.

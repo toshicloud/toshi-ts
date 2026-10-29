@@ -14,7 +14,7 @@ function requireMethod(service: ServiceLike, localName: string): DescMethod {
 }
 
 const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
-  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 51],
+  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 53],
   [root.ProjectService, "toshi.workspace.v1.ProjectService", 17],
   [root.SecretService, "toshi.workspace.v1.SecretService", 10],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
@@ -39,6 +39,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.TriggerService, "toshi.workspace.v1.TriggerService", 5],
   [root.AccountService, "toshi.workspace.v1.AccountService", 3],
   [root.ImageService, "toshi.workspace.v1.ImageService", 6],
+  [root.DomainService, "toshi.workspace.v1.DomainService", 6],
 ];
 
 describe("src/index.ts", () => {
