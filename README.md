@@ -158,7 +158,8 @@ console.log(job?.id);
 
 ### Lists
 
-`workload.jobs.all`, `workload.sandboxes.all`, `workload.services.all`,
+`workload.jobs.all`, `workload.sandboxes.all`,
+`workload.sandboxes.allPreviewShareLinks`, `workload.services.all`,
 `workload.services.allRuns` and `workload.allEvents` take the request their
 `list` method takes and yield every item, one page after another. Each
 response's `nextPageToken` becomes the next request's `pageToken`, and a
