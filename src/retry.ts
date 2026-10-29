@@ -66,6 +66,8 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkloadService/ListSandboxes": "read",
   "/toshi.workspace.v1.WorkloadService/UpdateSandbox": "keyed",
   "/toshi.workspace.v1.WorkloadService/DeleteSandbox": "keyed",
+  "/toshi.workspace.v1.WorkloadService/StopSandbox": "keyed",
+  "/toshi.workspace.v1.WorkloadService/StartSandbox": "keyed",
   "/toshi.workspace.v1.WorkloadService/WaitSandbox": "read",
   "/toshi.workspace.v1.WorkloadService/WatchSandboxes": "none",
   "/toshi.workspace.v1.WorkloadService/CreateService": "keyed",
@@ -258,6 +260,12 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.TriggerService/ListTriggers": "read",
   "/toshi.workspace.v1.TriggerService/UpdateTrigger": "keyed",
   "/toshi.workspace.v1.TriggerService/DeleteTrigger": "keyed",
+  "/toshi.workspace.v1.DomainService/CreateDomain": "none",
+  "/toshi.workspace.v1.DomainService/GetDomain": "read",
+  "/toshi.workspace.v1.DomainService/ListDomains": "read",
+  "/toshi.workspace.v1.DomainService/VerifyDomain": "keyed",
+  "/toshi.workspace.v1.DomainService/IssueDomain": "keyed",
+  "/toshi.workspace.v1.DomainService/DeleteDomain": "none",
 };
 
 

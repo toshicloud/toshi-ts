@@ -5,6 +5,7 @@ import { ArtifactService, ArtifactUploadService } from "../gen/toshi/workspace/v
 import { AuditEventService } from "../gen/toshi/workspace/v1/audit_events_pb.js";
 import { ChannelService } from "../gen/toshi/workspace/v1/channels_pb.js";
 import { DisplayService } from "../gen/toshi/workspace/v1/display_pb.js";
+import { DomainService } from "../gen/toshi/workspace/v1/domains_pb.js";
 import { FillerService } from "../gen/toshi/workspace/v1/fillers_pb.js";
 import { GrantService } from "../gen/toshi/workspace/v1/grants_pb.js";
 import { HostJobService } from "../gen/toshi/workspace/v1/hostjobs_pb.js";
@@ -47,6 +48,7 @@ export const apiServices: readonly DescService[] = [
   AccountService,
   ImageService,
   ProductService,
+  DomainService,
 ];
 
 /** The path a client calls a method by, for example `/toshi.workspace.v1.WorkloadService/CreateJob`. */
@@ -98,6 +100,8 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.deleteJob,
   WorkloadService.method.updateSandbox,
   WorkloadService.method.deleteSandbox,
+  WorkloadService.method.stopSandbox,
+  WorkloadService.method.startSandbox,
   WorkloadService.method.cancelExecution,
   WorkloadService.method.exportEvents,
   WorkloadService.method.watchTelemetry,
@@ -275,4 +279,11 @@ export const hookOnly: readonly DescMethod[] = [
   WorkspaceService.method.createCheckoutSession,
   WorkspaceService.method.createBillingPortalSession,
   WorkspaceService.method.getVersion,
+  // DomainService
+  DomainService.method.createDomain,
+  DomainService.method.getDomain,
+  DomainService.method.listDomains,
+  DomainService.method.verifyDomain,
+  DomainService.method.issueDomain,
+  DomainService.method.deleteDomain,
 ];

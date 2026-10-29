@@ -11,6 +11,7 @@ import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
 import { ConnectionService } from "./gen/toshi/workspace/v1/connections_pb.js";
 import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
+import { DomainService } from "./gen/toshi/workspace/v1/domains_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
 import { GrantService } from "./gen/toshi/workspace/v1/grants_pb.js";
 import { ImageService } from "./gen/toshi/workspace/v1/images_pb.js";
@@ -31,11 +32,15 @@ import {
   CreatePreviewShareLinkRequestSchema,
   ListPreviewShareLinksRequestSchema,
   RevokePreviewShareLinkRequestSchema,
+  StartSandboxRequestSchema,
+  StopSandboxRequestSchema,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type {
   CreatePreviewShareLinkResponse,
   ListPreviewShareLinksResponse,
   RevokePreviewShareLinkResponse,
+  StartSandboxResponse,
+  StopSandboxResponse,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import {
   CancelJobRequestSchema,
@@ -199,6 +204,7 @@ export interface ToshiClient {
   readonly trigger: Client<typeof TriggerService>;
   readonly account: Client<typeof AccountService>;
   readonly image: Client<typeof ImageService>;
+  readonly domain: Client<typeof DomainService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -253,6 +259,8 @@ export interface SandboxesClient {
   all(req: MessageInitShape<typeof ListSandboxesRequestSchema>, opts?: CallOptions): AsyncIterable<Sandbox>;
   update(req: MessageInitShape<typeof UpdateSandboxRequestSchema>, opts?: CallOptions): Promise<UpdateSandboxResponse>;
   delete(req: MessageInitShape<typeof DeleteSandboxRequestSchema>, opts?: CallOptions): Promise<DeleteSandboxResponse>;
+  stop(req: MessageInitShape<typeof StopSandboxRequestSchema>, opts?: CallOptions): Promise<StopSandboxResponse>;
+  start(req: MessageInitShape<typeof StartSandboxRequestSchema>, opts?: CallOptions): Promise<StartSandboxResponse>;
   wait(req: MessageInitShape<typeof WaitSandboxRequestSchema>, opts?: CallOptions): Promise<WaitSandboxResponse>;
   watch(req: MessageInitShape<typeof WatchSandboxesRequestSchema>, opts?: CallOptions): Promise<SandboxWatch>;
   execute(start: MessageInitShape<typeof ExecuteStartSchema>, opts?: CallOptions): Promise<Process>;
@@ -424,6 +432,8 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         all: (req, opts) => paginate(req, workloadService.listSandboxes, (resp) => resp.sandboxes, opts),
         update: (req, opts) => workloadService.updateSandbox(req, opts),
         delete: (req, opts) => workloadService.deleteSandbox(req, opts),
+        stop: (req, opts) => workloadService.stopSandbox(req, opts),
+        start: (req, opts) => workloadService.startSandbox(req, opts),
         wait: (req, opts) => waitSandbox(workloadService, create(WaitSandboxRequestSchema, req), opts),
         watch: (req, opts) =>
           openSandboxWatch(workloadService, retry, create(WatchSandboxesRequestSchema, req), opts),
@@ -481,5 +491,6 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     trigger: createClient(TriggerService, transport),
     account: createClient(AccountService, transport),
     image: createClient(ImageService, transport),
+    domain: createClient(DomainService, transport),
   };
 }
