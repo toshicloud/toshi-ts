@@ -3,11 +3,12 @@ import type { DescField, DescMessage, Message } from "@bufbuild/protobuf";
 import { Code, ConnectError } from "@connectrpc/connect";
 import type { Interceptor } from "@connectrpc/connect";
 import {
-  backoffDelay,
   isTransportLoss,
   newRequestKey,
   procedurePath,
   retryClassFor,
+  retryDelayMs,
+  serverWaitMs,
   sleep,
 } from "./retry.js";
 import type { RetrySetting } from "./retry.js";
@@ -107,7 +108,11 @@ export function keyInterceptor(): Interceptor {
   };
 }
 
-/** Retries a unary read or keyed write after a transport loss, with full jitter (retry.go:98-186). */
+/**
+ * Retries a unary read or keyed write after a transport loss, with full jitter
+ * (retry.go:98-186), or after a refusal that names how long to wait
+ * (serverWaitMs), waiting at least that long.
+ */
 export function retryInterceptor(retry: RetrySetting): Interceptor {
   if (retry === false) {
     return (next) => next;
@@ -123,10 +128,11 @@ export function retryInterceptor(retry: RetrySetting): Interceptor {
       try {
         return await next(req);
       } catch (err) {
-        if (attempt + 1 >= policy.maxAttempts || !isTransportLoss(err)) {
+        const waitMs = serverWaitMs(err);
+        if (attempt + 1 >= policy.maxAttempts || (!isTransportLoss(err) && waitMs === undefined)) {
           throw err;
         }
-        await sleep(backoffDelay(policy, attempt), req.signal);
+        await sleep(retryDelayMs(policy, attempt, waitMs), req.signal);
       }
     }
   };
