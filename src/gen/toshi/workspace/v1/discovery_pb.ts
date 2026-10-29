@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/discovery.proto.
  */
 export const file_toshi_workspace_v1_discovery: GenFile = /*@__PURE__*/
-  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkikwEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMiqwIKEURpc2NvdmVyZWRQcm9kdWN0EgoKAmlkGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSDAoEZG9jcxgDIAEoCRIPCgdlbmFibGVkGAQgASgIEjQKCGZlYXR1cmVzGAUgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RGZWF0dXJlEi8KBXN0YXRlGAYgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGF0ZRI4CghzdXJmYWNlcxgIIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlcmVkU3VyZmFjZXMSEQoJYXZhaWxhYmxlGAogASgISgQIBxAISgQICRAKUgZzd2l0Y2hSEmluc3RhbGxhdGlvbl9zdGF0ZSJIChJEaXNjb3ZlcmVkU3VyZmFjZXMSCwoDYXBpGAEgASgJSgQIAhADSgQIAxAESgQIBBAFUgNjbGlSCWRhc2hib2FyZFIDc2RrIqEDCg5Qcm9kdWN0RmVhdHVyZRILCgNrZXkYASABKAkSNAoEdHlwZRgCIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0RmVhdHVyZVR5cGUSDgoGdmFsdWVzGAMgAygJEhIKCm5hcnJvd2FibGUYBCABKAgSNQoLZW50aXRsZW1lbnQYBSABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgHIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSNwoNZGVmYXVsdF92YWx1ZRgIIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSCwoDbWF4GAkgASgDEhAKCHBsYW5fa2V5GAogASgJEjEKBnNvdXJjZRgLIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqngEKDFByb2R1Y3RTdGF0ZRIdChlQUk9EVUNUX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUFJPRFVDVF9TVEFURV9FTkFCTEVEEAESHQoZUFJPRFVDVF9TVEFURV9OT19ORVdfV09SSxACEhoKFlBST0RVQ1RfU1RBVEVfRFJBSU5JTkcQAxIZChVQUk9EVUNUX1NUQVRFX1NUT1BQRUQQBCqeAQoNRmVhdHVyZVNvdXJjZRIeChpGRUFUVVJFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhsKF0ZFQVRVUkVfU09VUkNFX09WRVJSSURFEAESFwoTRkVBVFVSRV9TT1VSQ0VfUExBThACEhsKF0ZFQVRVUkVfU09VUkNFX1BMQU5fS0VZEAMSGgoWRkVBVFVSRV9TT1VSQ0VfREVGQVVMVBAEKtkBChJQcm9kdWN0RmVhdHVyZVR5cGUSJAogUFJPRFVDVF9GRUFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlQUk9EVUNUX0ZFQVRVUkVfVFlQRV9CT09MEAESHgoaUFJPRFVDVF9GRUFUVVJFX1RZUEVfQ09VTlQQAhIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9SQU5HRRADEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0VOVU0QBBIfChtQUk9EVUNUX0ZFQVRVUkVfVFlQRV9TVFJJTkcQBTKMAQoQRGlzY292ZXJ5U2VydmljZRJ4CghEaXNjb3ZlchIjLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlcXVlc3QaJC50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJSZXNwb25zZSIhwvMYDndvcmtzcGFjZS5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_toshi_permission]);
+  fileDesc("CiJ0b3NoaS93b3Jrc3BhY2UvdjEvZGlzY292ZXJ5LnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiNwoPRGlzY292ZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkivAEKEERpc2NvdmVyUmVzcG9uc2USNwoIcHJvZHVjdHMYASADKAsyJS50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJlZFByb2R1Y3QSEwoLcGVybWlzc2lvbnMYAiADKAkSMQoIdmVyc2lvbnMYAyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQVBJVmVyc2lvbnMSGAoQcmVnaXN0cnlfYWRkcmVzcxgEIAEoCRINCgVjYWxscxgFIAMoCSL9AgoRRGlzY292ZXJlZFByb2R1Y3QSCgoCaWQYASABKAkSDwoHdmVyc2lvbhgCIAEoCRIMCgRkb2NzGAMgASgJEg8KB2VuYWJsZWQYBCABKAgSNAoIZmVhdHVyZXMYBSADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdEZlYXR1cmUSLwoFc3RhdGUYBiABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjgKCHN1cmZhY2VzGAggASgLMiYudG9zaGkud29ya3NwYWNlLnYxLkRpc2NvdmVyZWRTdXJmYWNlcxIRCglhdmFpbGFibGUYCiABKAgSNwoJc3RhYmlsaXR5GAsgASgOMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdGFiaWxpdHkSFwoPcmVtb3ZhbF92ZXJzaW9uGAwgASgJSgQIBxAISgQICRAKUgZzd2l0Y2hSEmluc3RhbGxhdGlvbl9zdGF0ZSJIChJEaXNjb3ZlcmVkU3VyZmFjZXMSCwoDYXBpGAEgASgJSgQIAhADSgQIAxAESgQIBBAFUgNjbGlSCWRhc2hib2FyZFIDc2RrIqEDCg5Qcm9kdWN0RmVhdHVyZRILCgNrZXkYASABKAkSNAoEdHlwZRgCIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0RmVhdHVyZVR5cGUSDgoGdmFsdWVzGAMgAygJEhIKCm5hcnJvd2FibGUYBCABKAgSNQoLZW50aXRsZW1lbnQYBSABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgHIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSNwoNZGVmYXVsdF92YWx1ZRgIIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSCwoDbWF4GAkgASgDEhAKCHBsYW5fa2V5GAogASgJEjEKBnNvdXJjZRgLIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlInsKDEZlYXR1cmVWYWx1ZRIOCgRib29sGAEgASgISAASDwoFY291bnQYAiABKANIABIxCgVyYW5nZRgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlUmFuZ2VIABIOCgR0ZXh0GAQgASgJSABCBwoFdmFsdWUiKAoMRmVhdHVyZVJhbmdlEgsKA21pbhgBIAEoAxILCgNtYXgYAiABKAMiMQoLQVBJVmVyc2lvbnMSCwoDYXBpGAEgASgJEhUKDWNvbnRyb2xfcGxhbmUYAiABKAkqngEKDFByb2R1Y3RTdGF0ZRIdChlQUk9EVUNUX1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUFJPRFVDVF9TVEFURV9FTkFCTEVEEAESHQoZUFJPRFVDVF9TVEFURV9OT19ORVdfV09SSxACEhoKFlBST0RVQ1RfU1RBVEVfRFJBSU5JTkcQAxIZChVQUk9EVUNUX1NUQVRFX1NUT1BQRUQQBCquAQoQUHJvZHVjdFN0YWJpbGl0eRIhCh1QUk9EVUNUX1NUQUJJTElUWV9VTlNQRUNJRklFRBAAEhsKF1BST0RVQ1RfU1RBQklMSVRZX0FMUEhBEAESGgoWUFJPRFVDVF9TVEFCSUxJVFlfQkVUQRACEhwKGFBST0RVQ1RfU1RBQklMSVRZX1NUQUJMRRADEiAKHFBST0RVQ1RfU1RBQklMSVRZX0RFUFJFQ0FURUQQBCqeAQoNRmVhdHVyZVNvdXJjZRIeChpGRUFUVVJFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhsKF0ZFQVRVUkVfU09VUkNFX09WRVJSSURFEAESFwoTRkVBVFVSRV9TT1VSQ0VfUExBThACEhsKF0ZFQVRVUkVfU09VUkNFX1BMQU5fS0VZEAMSGgoWRkVBVFVSRV9TT1VSQ0VfREVGQVVMVBAEKtkBChJQcm9kdWN0RmVhdHVyZVR5cGUSJAogUFJPRFVDVF9GRUFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlQUk9EVUNUX0ZFQVRVUkVfVFlQRV9CT09MEAESHgoaUFJPRFVDVF9GRUFUVVJFX1RZUEVfQ09VTlQQAhIeChpQUk9EVUNUX0ZFQVRVUkVfVFlQRV9SQU5HRRADEh0KGVBST0RVQ1RfRkVBVFVSRV9UWVBFX0VOVU0QBBIfChtQUk9EVUNUX0ZFQVRVUkVfVFlQRV9TVFJJTkcQBTKMAQoQRGlzY292ZXJ5U2VydmljZRJ4CghEaXNjb3ZlchIjLnRvc2hpLndvcmtzcGFjZS52MS5EaXNjb3ZlclJlcXVlc3QaJC50b3NoaS53b3Jrc3BhY2UudjEuRGlzY292ZXJSZXNwb25zZSIhwvMYDndvcmtzcGFjZS5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.DiscoverRequest
@@ -89,6 +89,30 @@ export type DiscoverResponse = Message<"toshi.workspace.v1.DiscoverResponse"> & 
    * @generated from field: toshi.workspace.v1.APIVersions versions = 3;
    */
   versions?: APIVersions | undefined;
+
+  /**
+   * registry_address is the deployment's container registry as a client
+   * writes it in an image reference and logs in to it, such as
+   * "registry.example.com": a host name, with a port when it is not 443.
+   * Empty when the deployment runs no container registry.
+   *
+   * @generated from field: string registry_address = 4;
+   */
+  registryAddress: string;
+
+  /**
+   * calls are the Workspace API procedures the caller may make at the
+   * request's project and environment, sorted, such as
+   * "/toshi.workspace.v1.WorkloadService/CreateJob": those its credential
+   * takes whose permission its roles give it where the call acts, by the
+   * rule that admits a call. A call in a project or an environment is
+   * listed when the caller may make it at the request's project and
+   * environment, or with none named, anywhere. The workspace's state is
+   * not looked at: a suspended workspace lists writes it refuses.
+   *
+   * @generated from field: repeated string calls = 5;
+   */
+  calls: string[];
 };
 
 /**
@@ -116,6 +140,30 @@ export type DiscoverResponseJson = {
    * @generated from field: toshi.workspace.v1.APIVersions versions = 3;
    */
   versions?: APIVersionsJson;
+
+  /**
+   * registry_address is the deployment's container registry as a client
+   * writes it in an image reference and logs in to it, such as
+   * "registry.example.com": a host name, with a port when it is not 443.
+   * Empty when the deployment runs no container registry.
+   *
+   * @generated from field: string registry_address = 4;
+   */
+  registryAddress?: string;
+
+  /**
+   * calls are the Workspace API procedures the caller may make at the
+   * request's project and environment, sorted, such as
+   * "/toshi.workspace.v1.WorkloadService/CreateJob": those its credential
+   * takes whose permission its roles give it where the call acts, by the
+   * rule that admits a call. A call in a project or an environment is
+   * listed when the caller may make it at the request's project and
+   * environment, or with none named, anywhere. The workspace's state is
+   * not looked at: a suspended workspace lists writes it refuses.
+   *
+   * @generated from field: repeated string calls = 5;
+   */
+  calls?: string[];
 };
 
 /**
@@ -193,6 +241,21 @@ export type DiscoveredProduct = Message<"toshi.workspace.v1.DiscoveredProduct"> 
    * @generated from field: bool available = 10;
    */
   available: boolean;
+
+  /**
+   * stability is how mature the product is in this build.
+   *
+   * @generated from field: toshi.workspace.v1.ProductStability stability = 11;
+   */
+  stability: ProductStability;
+
+  /**
+   * removal_version is the version a deprecated product is removed in;
+   * empty for the other stabilities.
+   *
+   * @generated from field: string removal_version = 12;
+   */
+  removalVersion: string;
 };
 
 /**
@@ -263,6 +326,21 @@ export type DiscoveredProductJson = {
    * @generated from field: bool available = 10;
    */
   available?: boolean;
+
+  /**
+   * stability is how mature the product is in this build.
+   *
+   * @generated from field: toshi.workspace.v1.ProductStability stability = 11;
+   */
+  stability?: ProductStabilityJson;
+
+  /**
+   * removal_version is the version a deprecated product is removed in;
+   * empty for the other stabilities.
+   *
+   * @generated from field: string removal_version = 12;
+   */
+  removalVersion?: string;
 };
 
 /**
@@ -754,6 +832,64 @@ export const ProductStateSchema: GenEnum<ProductState, ProductStateJson> = /*@__
   enumDesc(file_toshi_workspace_v1_discovery, 0);
 
 /**
+ * ProductStability is how mature a product is. A deployment's
+ * products.min_stability turns off a product below it, as the operator's
+ * switch does.
+ *
+ * @generated from enum toshi.workspace.v1.ProductStability
+ */
+export enum ProductStability {
+  /**
+   * @generated from enum value: PRODUCT_STABILITY_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * May change or go away in any release.
+   *
+   * @generated from enum value: PRODUCT_STABILITY_ALPHA = 1;
+   */
+  ALPHA = 1,
+
+  /**
+   * Complete; its configuration and API may still change between minor
+   * releases, with notice.
+   *
+   * @generated from enum value: PRODUCT_STABILITY_BETA = 2;
+   */
+  BETA = 2,
+
+  /**
+   * Changes only compatibly within a major version.
+   *
+   * @generated from enum value: PRODUCT_STABILITY_STABLE = 3;
+   */
+  STABLE = 3,
+
+  /**
+   * Works as it did until its removal version.
+   *
+   * @generated from enum value: PRODUCT_STABILITY_DEPRECATED = 4;
+   */
+  DEPRECATED = 4,
+}
+
+/**
+ * ProductStability is how mature a product is. A deployment's
+ * products.min_stability turns off a product below it, as the operator's
+ * switch does.
+ *
+ * @generated from enum toshi.workspace.v1.ProductStability
+ */
+export type ProductStabilityJson = "PRODUCT_STABILITY_UNSPECIFIED" | "PRODUCT_STABILITY_ALPHA" | "PRODUCT_STABILITY_BETA" | "PRODUCT_STABILITY_STABLE" | "PRODUCT_STABILITY_DEPRECATED";
+
+/**
+ * Describes the enum toshi.workspace.v1.ProductStability.
+ */
+export const ProductStabilitySchema: GenEnum<ProductStability, ProductStabilityJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_discovery, 1);
+
+/**
  * FeatureSource is where a workspace's entitlement to a feature comes from,
  * the first that applies in this order: the operator's override, the
  * value its plan gives the feature, the plan key the feature falls back
@@ -811,7 +947,7 @@ export type FeatureSourceJson = "FEATURE_SOURCE_UNSPECIFIED" | "FEATURE_SOURCE_O
  * Describes the enum toshi.workspace.v1.FeatureSource.
  */
 export const FeatureSourceSchema: GenEnum<FeatureSource, FeatureSourceJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_discovery, 1);
+  enumDesc(file_toshi_workspace_v1_discovery, 2);
 
 /**
  * ProductFeatureType is the type of a feature's value.
@@ -861,7 +997,7 @@ export type ProductFeatureTypeJson = "PRODUCT_FEATURE_TYPE_UNSPECIFIED" | "PRODU
  * Describes the enum toshi.workspace.v1.ProductFeatureType.
  */
 export const ProductFeatureTypeSchema: GenEnum<ProductFeatureType, ProductFeatureTypeJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_discovery, 2);
+  enumDesc(file_toshi_workspace_v1_discovery, 3);
 
 /**
  * DiscoveryService tells a client what this deployment serves and what the

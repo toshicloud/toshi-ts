@@ -14,8 +14,8 @@ function requireMethod(service: ServiceLike, localName: string): DescMethod {
 }
 
 const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
-  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 46],
-  [root.ProjectService, "toshi.workspace.v1.ProjectService", 13],
+  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 51],
+  [root.ProjectService, "toshi.workspace.v1.ProjectService", 17],
   [root.SecretService, "toshi.workspace.v1.SecretService", 10],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
@@ -30,6 +30,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.TokenService, "toshi.workspace.v1.TokenService", 5],
   [root.AuditEventService, "toshi.workspace.v1.AuditEventService", 2],
   [root.FillerService, "toshi.workspace.v1.FillerService", 5],
+  [root.GrantService, "toshi.workspace.v1.GrantService", 8],
   [root.StorageProviderService, "toshi.workspace.v1.StorageProviderService", 4],
   [root.ProductService, "toshi.workspace.v1.ProductService", 2],
   [root.DiscoveryService, "toshi.workspace.v1.DiscoveryService", 1],
@@ -37,7 +38,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.RoleService, "toshi.workspace.v1.RoleService", 15],
   [root.TriggerService, "toshi.workspace.v1.TriggerService", 5],
   [root.AccountService, "toshi.workspace.v1.AccountService", 3],
-  [root.ImageService, "toshi.workspace.v1.ImageService", 5],
+  [root.ImageService, "toshi.workspace.v1.ImageService", 6],
 ];
 
 describe("src/index.ts", () => {

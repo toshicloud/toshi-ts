@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/images.proto.
  */
 export const file_toshi_workspace_v1_images: GenFile = /*@__PURE__*/
-  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvaW1hZ2VzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEiyQIKBUltYWdlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJEhUKDXJlY2lwZV9kaWdlc3QYCCABKAkSEwoLZW52aXJvbm1lbnQYCSABKAkSLgoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoGbGF0ZXN0GAwgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiKABAoMSW1hZ2VWZXJzaW9uEgoKAmlkGAEgASgJEg4KBm51bWJlchgCIAEoAxI0CgVzdGF0ZRgDIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb25TdGF0ZRIMCgRiYXNlGAQgASgJEhMKC2Jhc2VfZGlnZXN0GAUgASgJEhIKCnNpemVfYnl0ZXMYBiABKAMSFQoNcmVjaXBlX2RpZ2VzdBgHIAEoCRIUCgxidWlsZF9qb2JfaWQYCCABKAkSDwoHZmFpbHVyZRgJIAEoCRIuCgpjcmVhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghyZWFkeV9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcGVuZGluZ19zaW5jZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMZGVsZXRlX2FmdGVyGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpkZWxldGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CglwaW5uZWRfYnkYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uUGluIk0KD0ltYWdlVmVyc2lvblBpbhISCgpzZXJ2aWNlX2lkGAEgASgJEhQKDHNlcnZpY2VfbmFtZRgCIAEoCRIQCghyZXZpc2lvbhgDIAEoAyKhAQoSQ3JlYXRlSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJInIKE0NyZWF0ZUltYWdlUmVzcG9uc2USKAoFaW1hZ2UYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USMQoHdmVyc2lvbhgCIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb24iMAoPR2V0SW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCSJwChBHZXRJbWFnZVJlc3BvbnNlEigKBWltYWdlGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkltYWdlEjIKCHZlcnNpb25zGAIgAygLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiJLChFMaXN0SW1hZ2VzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlgKEkxpc3RJbWFnZXNSZXNwb25zZRIpCgZpbWFnZXMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkIKEUJ1aWxkSW1hZ2VSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZyZWNpcGUYAyABKAkiRwoSQnVpbGRJbWFnZVJlc3BvbnNlEjEKB3ZlcnNpb24YASABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uIjMKEkRlbGV0ZUltYWdlUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiFQoTRGVsZXRlSW1hZ2VSZXNwb25zZSpWCglJbWFnZUtpbmQSGgoWSU1BR0VfS0lORF9VTlNQRUNJRklFRBAAEhMKD0lNQUdFX0tJTkRfRElTSxABEhgKFElNQUdFX0tJTkRfQ09OVEFJTkVSEAIq5AEKEUltYWdlVmVyc2lvblN0YXRlEiMKH0lNQUdFX1ZFUlNJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIgChxJTUFHRV9WRVJTSU9OX1NUQVRFX0JVSUxESU5HEAESHgoaSU1BR0VfVkVSU0lPTl9TVEFURV9GQUlMRUQQAhIdChlJTUFHRV9WRVJTSU9OX1NUQVRFX1JFQURZEAMSKAokSU1BR0VfVkVSU0lPTl9TVEFURV9QRU5ESU5HX0RFTEVUSU9OEAQSHwobSU1BR0VfVkVSU0lPTl9TVEFURV9ERUxFVEVEEAUyqQUKDEltYWdlU2VydmljZRJ/CgtDcmVhdGVJbWFnZRImLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVJbWFnZVJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlSW1hZ2VSZXNwb25zZSIfwvMYDGltYWdlcy53cml0ZcrzGAtlbnZpcm9ubWVudBKdAQoKQnVpbGRJbWFnZRIlLnRvc2hpLndvcmtzcGFjZS52MS5CdWlsZEltYWdlUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5CdWlsZEltYWdlUmVzcG9uc2UiQMLzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGCEKE2ltYWdlLmJ1aWxkX3N0YXJ0ZWQSCmltYWdlOm5hbWUScQoIR2V0SW1hZ2USIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0SW1hZ2VSZXF1ZXN0GiQudG9zaGkud29ya3NwYWNlLnYxLkdldEltYWdlUmVzcG9uc2UiGsLzGAtpbWFnZXMucmVhZMrzGAdwcm9qZWN0EncKCkxpc3RJbWFnZXMSJS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1JlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1Jlc3BvbnNlIhrC8xgLaW1hZ2VzLnJlYWTK8xgHcHJvamVjdBKLAQoLRGVsZXRlSW1hZ2USJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlSW1hZ2VSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUltYWdlUmVzcG9uc2UiK8LzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGAwSCmltYWdlOm5hbWVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvaW1hZ2VzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi3wMKBUltYWdlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRIrCgRraW5kGAQgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkltYWdlS2luZBIMCgRiYXNlGAUgASgJEgwKBHNpemUYBiABKAkSDgoGcmVjaXBlGAcgASgJEhUKDXJlY2lwZV9kaWdlc3QYCCABKAkSEwoLZW52aXJvbm1lbnQYCSABKAkSLgoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoGbGF0ZXN0GAwgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbhIOCgZzb3VyY2UYDSABKAkSMQoHYnVpbGRlchgOIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZUJ1aWxkZXISEAoIcmVnaXN0cnkYDyABKAkSFwoPcmVnaXN0cnlfc2VjcmV0GBAgASgJEhcKD3JlYnVpbGRfb25fcHVzaBgRIAEoCBINCgVhZ2VudBgSIAEoCCL1BQoMSW1hZ2VWZXJzaW9uEgoKAmlkGAEgASgJEg4KBm51bWJlchgCIAEoAxI0CgVzdGF0ZRgDIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb25TdGF0ZRIMCgRiYXNlGAQgASgJEhMKC2Jhc2VfZGlnZXN0GAUgASgJEhIKCnNpemVfYnl0ZXMYBiABKAMSFQoNcmVjaXBlX2RpZ2VzdBgHIAEoCRIUCgxidWlsZF9qb2JfaWQYCCABKAkSDwoHZmFpbHVyZRgJIAEoCRIuCgpjcmVhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghyZWFkeV9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcGVuZGluZ19zaW5jZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMZGVsZXRlX2FmdGVyGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpkZWxldGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CglwaW5uZWRfYnkYDyADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uUGluEg4KBmRpZ2VzdBgQIAEoCRIyCglwdXNoZWRfYnkYESABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VQdXNoZXISFQoNc291cmNlX2NvbW1pdBgSIAEoCRIxCgdidWlsZGVyGBMgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlQnVpbGRlchIXCg9idWlsZGVyX3ZlcnNpb24YFCABKAkSHwoXYnVpbGRlcl9mcm9udGVuZF9kaWdlc3QYFSABKAkSDwoHdHJ1c3RlZBgWIAEoCBILCgN0YWcYFyABKAkSDQoFYWdlbnQYGCABKAgiTQoPSW1hZ2VWZXJzaW9uUGluEhIKCnNlcnZpY2VfaWQYASABKAkSFAoMc2VydmljZV9uYW1lGAIgASgJEhAKCHJldmlzaW9uGAMgASgDIqgCChJDcmVhdGVJbWFnZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIMCgRuYW1lGAMgASgJEisKBGtpbmQYBCABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VLaW5kEgwKBGJhc2UYBSABKAkSDAoEc2l6ZRgGIAEoCRIOCgZyZWNpcGUYByABKAkSDgoGc291cmNlGAggASgJEjEKB2J1aWxkZXIYCSABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VCdWlsZGVyEhAKCHJlZ2lzdHJ5GAogASgJEhcKD3JlZ2lzdHJ5X3NlY3JldBgLIAEoCRIXCg9yZWJ1aWxkX29uX3B1c2gYDCABKAgicgoTQ3JlYXRlSW1hZ2VSZXNwb25zZRIoCgVpbWFnZRgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZRIxCgd2ZXJzaW9uGAIgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkltYWdlVmVyc2lvbiIwCg9HZXRJbWFnZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJInAKEEdldEltYWdlUmVzcG9uc2USKAoFaW1hZ2UYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2USMgoIdmVyc2lvbnMYAiADKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuSW1hZ2VWZXJzaW9uIksKEUxpc3RJbWFnZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiWAoSTGlzdEltYWdlc1Jlc3BvbnNlEikKBmltYWdlcxgBIAMoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWgoRQnVpbGRJbWFnZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBnJlY2lwZRgDIAEoCRIWCg51cGRhdGVfYnVpbGRlchgEIAEoCCJHChJCdWlsZEltYWdlUmVzcG9uc2USMQoHdmVyc2lvbhgBIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5JbWFnZVZlcnNpb24igAEKElVwZGF0ZUltYWdlUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEigKBWltYWdlGAIgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkltYWdlEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayI/ChNVcGRhdGVJbWFnZVJlc3BvbnNlEigKBWltYWdlGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkltYWdlIjMKEkRlbGV0ZUltYWdlUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiFQoTRGVsZXRlSW1hZ2VSZXNwb25zZSpWCglJbWFnZUtpbmQSGgoWSU1BR0VfS0lORF9VTlNQRUNJRklFRBAAEhMKD0lNQUdFX0tJTkRfRElTSxABEhgKFElNQUdFX0tJTkRfQ09OVEFJTkVSEAIqfwoMSW1hZ2VCdWlsZGVyEh0KGUlNQUdFX0JVSUxERVJfVU5TUEVDSUZJRUQQABIWChJJTUFHRV9CVUlMREVSX0FVVE8QARIcChhJTUFHRV9CVUlMREVSX0RPQ0tFUkZJTEUQAhIaChZJTUFHRV9CVUlMREVSX1JBSUxQQUNLEAMqWgoLSW1hZ2VQdXNoZXISHAoYSU1BR0VfUFVTSEVSX1VOU1BFQ0lGSUVEEAASFgoSSU1BR0VfUFVTSEVSX0JVSUxEEAESFQoRSU1BR0VfUFVTSEVSX0hBTkQQAirkAQoRSW1hZ2VWZXJzaW9uU3RhdGUSIwofSU1BR0VfVkVSU0lPTl9TVEFURV9VTlNQRUNJRklFRBAAEiAKHElNQUdFX1ZFUlNJT05fU1RBVEVfQlVJTERJTkcQARIeChpJTUFHRV9WRVJTSU9OX1NUQVRFX0ZBSUxFRBACEh0KGUlNQUdFX1ZFUlNJT05fU1RBVEVfUkVBRFkQAxIoCiRJTUFHRV9WRVJTSU9OX1NUQVRFX1BFTkRJTkdfREVMRVRJT04QBBIfChtJTUFHRV9WRVJTSU9OX1NUQVRFX0RFTEVURUQQBTLDBgoMSW1hZ2VTZXJ2aWNlEn8KC0NyZWF0ZUltYWdlEiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUltYWdlUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVJbWFnZVJlc3BvbnNlIh/C8xgMaW1hZ2VzLndyaXRlyvMYC2Vudmlyb25tZW50EqMBCgpCdWlsZEltYWdlEiUudG9zaGkud29ya3NwYWNlLnYxLkJ1aWxkSW1hZ2VSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkJ1aWxkSW1hZ2VSZXNwb25zZSJGwvMYDGltYWdlcy53cml0ZcrzGAdwcm9qZWN00vMYIQoTaW1hZ2UuYnVpbGRfc3RhcnRlZBIKaW1hZ2U6bmFtZerzGAIgARKRAQoLVXBkYXRlSW1hZ2USJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlSW1hZ2VSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUltYWdlUmVzcG9uc2UiMcLzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGBISEGltYWdlOmltYWdlLm5hbWUScQoIR2V0SW1hZ2USIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0SW1hZ2VSZXF1ZXN0GiQudG9zaGkud29ya3NwYWNlLnYxLkdldEltYWdlUmVzcG9uc2UiGsLzGAtpbWFnZXMucmVhZMrzGAdwcm9qZWN0EncKCkxpc3RJbWFnZXMSJS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1JlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEltYWdlc1Jlc3BvbnNlIhrC8xgLaW1hZ2VzLnJlYWTK8xgHcHJvamVjdBKLAQoLRGVsZXRlSW1hZ2USJi50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlSW1hZ2VSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUltYWdlUmVzcG9uc2UiK8LzGAxpbWFnZXMud3JpdGXK8xgHcHJvamVjdNLzGAwSCmltYWdlOm5hbWVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Image is a project's own image.
@@ -51,7 +51,8 @@ export type Image = Message<"toshi.workspace.v1.Image"> & {
   base: string;
 
   /**
-   * The size its builds run at.
+   * The size its builds run at; empty for a container image that is
+   * pushed.
    *
    * @generated from field: string size = 6;
    */
@@ -73,7 +74,9 @@ export type Image = Message<"toshi.workspace.v1.Image"> & {
   recipeDigest: string;
 
   /**
-   * The environment whose secret sets its builds receive.
+   * The environment whose secret sets its builds receive. For a container
+   * image built from a repository, the one its first build took: each
+   * build takes the one the branch rules choose then.
    *
    * @generated from field: string environment = 9;
    */
@@ -95,6 +98,54 @@ export type Image = Message<"toshi.workspace.v1.Image"> & {
    * @generated from field: toshi.workspace.v1.ImageVersion latest = 12;
    */
   latest?: ImageVersion | undefined;
+
+  /**
+   * The repository a container image is built from, as owner/name, and
+   * the builder its builds use; empty and unspecified for one that is
+   * pushed.
+   *
+   * @generated from field: string source = 13;
+   */
+  source: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 14;
+   */
+  builder: ImageBuilder;
+
+  /**
+   * The reference a container image built from a repository pushes to in
+   * the workspace's own registry, and the key of the build secret that
+   * holds that registry's Docker config.json; both empty when its builds
+   * push to the deployment's registry.
+   *
+   * @generated from field: string registry = 15;
+   */
+  registry: string;
+
+  /**
+   * @generated from field: string registry_secret = 16;
+   */
+  registrySecret: string;
+
+  /**
+   * A container image built from a repository is built again on each push
+   * to its source's default branch: at most one build per push, while one
+   * runs the newest push waits and replaces an older one that waited, and
+   * a push to another branch, a fork's or one that deletes the branch
+   * builds nothing. Off unless set.
+   *
+   * @generated from field: bool rebuild_on_push = 17;
+   */
+  rebuildOnPush: boolean;
+
+  /**
+   * Whether recipe declares an [agent] table: a job, sandbox or service
+   * that runs the image is an agent. Set by Toshi from the recipe.
+   *
+   * @generated from field: bool agent = 18;
+   */
+  agent: boolean;
 };
 
 /**
@@ -133,7 +184,8 @@ export type ImageJson = {
   base?: string;
 
   /**
-   * The size its builds run at.
+   * The size its builds run at; empty for a container image that is
+   * pushed.
    *
    * @generated from field: string size = 6;
    */
@@ -155,7 +207,9 @@ export type ImageJson = {
   recipeDigest?: string;
 
   /**
-   * The environment whose secret sets its builds receive.
+   * The environment whose secret sets its builds receive. For a container
+   * image built from a repository, the one its first build took: each
+   * build takes the one the branch rules choose then.
    *
    * @generated from field: string environment = 9;
    */
@@ -177,6 +231,54 @@ export type ImageJson = {
    * @generated from field: toshi.workspace.v1.ImageVersion latest = 12;
    */
   latest?: ImageVersionJson;
+
+  /**
+   * The repository a container image is built from, as owner/name, and
+   * the builder its builds use; empty and unspecified for one that is
+   * pushed.
+   *
+   * @generated from field: string source = 13;
+   */
+  source?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 14;
+   */
+  builder?: ImageBuilderJson;
+
+  /**
+   * The reference a container image built from a repository pushes to in
+   * the workspace's own registry, and the key of the build secret that
+   * holds that registry's Docker config.json; both empty when its builds
+   * push to the deployment's registry.
+   *
+   * @generated from field: string registry = 15;
+   */
+  registry?: string;
+
+  /**
+   * @generated from field: string registry_secret = 16;
+   */
+  registrySecret?: string;
+
+  /**
+   * A container image built from a repository is built again on each push
+   * to its source's default branch: at most one build per push, while one
+   * runs the newest push waits and replaces an older one that waited, and
+   * a push to another branch, a fork's or one that deletes the branch
+   * builds nothing. Off unless set.
+   *
+   * @generated from field: bool rebuild_on_push = 17;
+   */
+  rebuildOnPush?: boolean;
+
+  /**
+   * Whether recipe declares an [agent] table: a job, sandbox or service
+   * that runs the image is an agent. Set by Toshi from the recipe.
+   *
+   * @generated from field: bool agent = 18;
+   */
+  agent?: boolean;
 };
 
 /**
@@ -187,7 +289,7 @@ export const ImageSchema: GenMessage<Image, {jsonType: ImageJson}> = /*@__PURE__
   messageDesc(file_toshi_workspace_v1_images, 0);
 
 /**
- * ImageVersion is one build of an image.
+ * ImageVersion is one build of an image, or one push of a container image.
  *
  * @generated from message toshi.workspace.v1.ImageVersion
  */
@@ -198,8 +300,9 @@ export type ImageVersion = Message<"toshi.workspace.v1.ImageVersion"> & {
   id: string;
 
   /**
-   * Counts from 1 in the order the image's builds started, failed ones
-   * included.
+   * Counts from 1 in the order the image's versions were recorded: a
+   * build's when it started, failed ones included, and a push's when Toshi
+   * found it.
    *
    * @generated from field: int64 number = 2;
    */
@@ -285,10 +388,71 @@ export type ImageVersion = Message<"toshi.workspace.v1.ImageVersion"> & {
    * @generated from field: repeated toshi.workspace.v1.ImageVersionPin pinned_by = 15;
    */
   pinnedBy: ImageVersionPin[];
+
+  /**
+   * A container version's manifest digest, sha256:<hex>, once ready, and
+   * what pushed it.
+   *
+   * @generated from field: string digest = 16;
+   */
+  digest: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImagePusher pushed_by = 17;
+   */
+  pushedBy: ImagePusher;
+
+  /**
+   * A container version's build: the commit it built, the builder that
+   * built it (never AUTO), and for Railpack its version and the digest of
+   * its BuildKit frontend.
+   *
+   * @generated from field: string source_commit = 18;
+   */
+  sourceCommit: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 19;
+   */
+  builder: ImageBuilder;
+
+  /**
+   * @generated from field: string builder_version = 20;
+   */
+  builderVersion: string;
+
+  /**
+   * @generated from field: string builder_frontend_digest = 21;
+   */
+  builderFrontendDigest: string;
+
+  /**
+   * Whether the build's commit is the source repository's own rather than
+   * a fork's. An untrusted build receives no build secrets.
+   *
+   * @generated from field: bool trusted = 22;
+   */
+  trusted: boolean;
+
+  /**
+   * The tag a container version pushed by hand was found under; empty for
+   * a build's version. A later push of the same tag is a new version.
+   *
+   * @generated from field: string tag = 23;
+   */
+  tag: string;
+
+  /**
+   * Whether the recipe this version was built from declares an [agent]
+   * table. Set by Toshi from that recipe.
+   *
+   * @generated from field: bool agent = 24;
+   */
+  agent: boolean;
 };
 
 /**
- * ImageVersion is one build of an image.
+ * ImageVersion is one build of an image, or one push of a container image.
  *
  * @generated from message toshi.workspace.v1.ImageVersion
  */
@@ -299,8 +463,9 @@ export type ImageVersionJson = {
   id?: string;
 
   /**
-   * Counts from 1 in the order the image's builds started, failed ones
-   * included.
+   * Counts from 1 in the order the image's versions were recorded: a
+   * build's when it started, failed ones included, and a push's when Toshi
+   * found it.
    *
    * @generated from field: int64 number = 2;
    */
@@ -386,6 +551,67 @@ export type ImageVersionJson = {
    * @generated from field: repeated toshi.workspace.v1.ImageVersionPin pinned_by = 15;
    */
   pinnedBy?: ImageVersionPinJson[];
+
+  /**
+   * A container version's manifest digest, sha256:<hex>, once ready, and
+   * what pushed it.
+   *
+   * @generated from field: string digest = 16;
+   */
+  digest?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImagePusher pushed_by = 17;
+   */
+  pushedBy?: ImagePusherJson;
+
+  /**
+   * A container version's build: the commit it built, the builder that
+   * built it (never AUTO), and for Railpack its version and the digest of
+   * its BuildKit frontend.
+   *
+   * @generated from field: string source_commit = 18;
+   */
+  sourceCommit?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 19;
+   */
+  builder?: ImageBuilderJson;
+
+  /**
+   * @generated from field: string builder_version = 20;
+   */
+  builderVersion?: string;
+
+  /**
+   * @generated from field: string builder_frontend_digest = 21;
+   */
+  builderFrontendDigest?: string;
+
+  /**
+   * Whether the build's commit is the source repository's own rather than
+   * a fork's. An untrusted build receives no build secrets.
+   *
+   * @generated from field: bool trusted = 22;
+   */
+  trusted?: boolean;
+
+  /**
+   * The tag a container version pushed by hand was found under; empty for
+   * a build's version. A later push of the same tag is a new version.
+   *
+   * @generated from field: string tag = 23;
+   */
+  tag?: string;
+
+  /**
+   * Whether the recipe this version was built from declares an [agent]
+   * table. Set by Toshi from that recipe.
+   *
+   * @generated from field: bool agent = 24;
+   */
+  agent?: boolean;
 };
 
 /**
@@ -457,7 +683,8 @@ export type CreateImageRequest = Message<"toshi.workspace.v1.CreateImageRequest"
 
   /**
    * The environment whose secret sets the image's builds receive; empty is
-   * the project's default environment.
+   * the project's default environment. Empty for a container image built
+   * from a repository.
    *
    * @generated from field: string environment = 2;
    */
@@ -474,7 +701,8 @@ export type CreateImageRequest = Message<"toshi.workspace.v1.CreateImageRequest"
   kind: ImageKind;
 
   /**
-   * A disk's base and size; empty for a container image.
+   * A disk's base, empty for a container image; the size a disk's or a
+   * container image built from a repository's builds run at.
    *
    * @generated from field: string base = 5;
    */
@@ -494,6 +722,42 @@ export type CreateImageRequest = Message<"toshi.workspace.v1.CreateImageRequest"
    * @generated from field: string recipe = 7;
    */
   recipe: string;
+
+  /**
+   * The repository a container image is built from, as owner/name; empty
+   * for one that is pushed. The builder defaults to AUTO.
+   *
+   * @generated from field: string source = 8;
+   */
+  source: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 9;
+   */
+  builder: ImageBuilder;
+
+  /**
+   * A reference in the workspace's own registry for the builds to push to,
+   * such as ghcr.io/acme/web, and the key of a build secret granted to the
+   * image's builds that holds its Docker config.json; both empty to push
+   * to the deployment's registry.
+   *
+   * @generated from field: string registry = 10;
+   */
+  registry: string;
+
+  /**
+   * @generated from field: string registry_secret = 11;
+   */
+  registrySecret: string;
+
+  /**
+   * Builds the image again on each push to its source's default branch,
+   * as Image.rebuild_on_push says; only for one built from a repository.
+   *
+   * @generated from field: bool rebuild_on_push = 12;
+   */
+  rebuildOnPush: boolean;
 };
 
 /**
@@ -507,7 +771,8 @@ export type CreateImageRequestJson = {
 
   /**
    * The environment whose secret sets the image's builds receive; empty is
-   * the project's default environment.
+   * the project's default environment. Empty for a container image built
+   * from a repository.
    *
    * @generated from field: string environment = 2;
    */
@@ -524,7 +789,8 @@ export type CreateImageRequestJson = {
   kind?: ImageKindJson;
 
   /**
-   * A disk's base and size; empty for a container image.
+   * A disk's base, empty for a container image; the size a disk's or a
+   * container image built from a repository's builds run at.
    *
    * @generated from field: string base = 5;
    */
@@ -544,6 +810,42 @@ export type CreateImageRequestJson = {
    * @generated from field: string recipe = 7;
    */
   recipe?: string;
+
+  /**
+   * The repository a container image is built from, as owner/name; empty
+   * for one that is pushed. The builder defaults to AUTO.
+   *
+   * @generated from field: string source = 8;
+   */
+  source?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.ImageBuilder builder = 9;
+   */
+  builder?: ImageBuilderJson;
+
+  /**
+   * A reference in the workspace's own registry for the builds to push to,
+   * such as ghcr.io/acme/web, and the key of a build secret granted to the
+   * image's builds that holds its Docker config.json; both empty to push
+   * to the deployment's registry.
+   *
+   * @generated from field: string registry = 10;
+   */
+  registry?: string;
+
+  /**
+   * @generated from field: string registry_secret = 11;
+   */
+  registrySecret?: string;
+
+  /**
+   * Builds the image again on each push to its source's default branch,
+   * as Image.rebuild_on_push says; only for one built from a repository.
+   *
+   * @generated from field: bool rebuild_on_push = 12;
+   */
+  rebuildOnPush?: boolean;
 };
 
 /**
@@ -783,11 +1085,20 @@ export type BuildImageRequest = Message<"toshi.workspace.v1.BuildImageRequest"> 
   name: string;
 
   /**
-   * Empty: the image's recipe.
+   * Empty: the image's recipe. Empty for a container image.
    *
    * @generated from field: string recipe = 3;
    */
   recipe: string;
+
+  /**
+   * A container image's Railpack builds use the Railpack version its
+   * newest ready version was built with; true builds with the one Toshi's
+   * build image holds. Unset for a disk image.
+   *
+   * @generated from field: bool update_builder = 4;
+   */
+  updateBuilder: boolean;
 };
 
 /**
@@ -805,11 +1116,20 @@ export type BuildImageRequestJson = {
   name?: string;
 
   /**
-   * Empty: the image's recipe.
+   * Empty: the image's recipe. Empty for a container image.
    *
    * @generated from field: string recipe = 3;
    */
   recipe?: string;
+
+  /**
+   * A container image's Railpack builds use the Railpack version its
+   * newest ready version was built with; true builds with the one Toshi's
+   * build image holds. Unset for a disk image.
+   *
+   * @generated from field: bool update_builder = 4;
+   */
+  updateBuilder?: boolean;
 };
 
 /**
@@ -847,6 +1167,86 @@ export const BuildImageResponseSchema: GenMessage<BuildImageResponse, {jsonType:
   messageDesc(file_toshi_workspace_v1_images, 10);
 
 /**
+ * @generated from message toshi.workspace.v1.UpdateImageRequest
+ */
+export type UpdateImageRequest = Message<"toshi.workspace.v1.UpdateImageRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * name names the image; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Image image = 2;
+   */
+  image?: Image | undefined;
+
+  /**
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateImageRequest
+ */
+export type UpdateImageRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * name names the image; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Image image = 2;
+   */
+  image?: ImageJson;
+
+  /**
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateImageRequest.
+ * Use `create(UpdateImageRequestSchema)` to create a new message.
+ */
+export const UpdateImageRequestSchema: GenMessage<UpdateImageRequest, {jsonType: UpdateImageRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_images, 11);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateImageResponse
+ */
+export type UpdateImageResponse = Message<"toshi.workspace.v1.UpdateImageResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Image image = 1;
+   */
+  image?: Image | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateImageResponse
+ */
+export type UpdateImageResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Image image = 1;
+   */
+  image?: ImageJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateImageResponse.
+ * Use `create(UpdateImageResponseSchema)` to create a new message.
+ */
+export const UpdateImageResponseSchema: GenMessage<UpdateImageResponse, {jsonType: UpdateImageResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_images, 12);
+
+/**
  * @generated from message toshi.workspace.v1.DeleteImageRequest
  */
 export type DeleteImageRequest = Message<"toshi.workspace.v1.DeleteImageRequest"> & {
@@ -881,7 +1281,7 @@ export type DeleteImageRequestJson = {
  * Use `create(DeleteImageRequestSchema)` to create a new message.
  */
 export const DeleteImageRequestSchema: GenMessage<DeleteImageRequest, {jsonType: DeleteImageRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_images, 11);
+  messageDesc(file_toshi_workspace_v1_images, 13);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteImageResponse
@@ -900,7 +1300,7 @@ export type DeleteImageResponseJson = {
  * Use `create(DeleteImageResponseSchema)` to create a new message.
  */
 export const DeleteImageResponseSchema: GenMessage<DeleteImageResponse, {jsonType: DeleteImageResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_images, 12);
+  messageDesc(file_toshi_workspace_v1_images, 14);
 
 /**
  * ImageKind is what an image is.
@@ -921,8 +1321,9 @@ export enum ImageKind {
   DISK = 1,
 
   /**
-   * A container image, pushed to the deployment's container registry at
-   * <workspace id>/<name>. It has no base, size or recipe and is not built.
+   * A container image, in the deployment's container registry at
+   * <workspace id>/<name>. It has no base or recipe. One with a source is
+   * built from that repository; one without is pushed and not built.
    *
    * @generated from enum value: IMAGE_KIND_CONTAINER = 2;
    */
@@ -941,6 +1342,93 @@ export type ImageKindJson = "IMAGE_KIND_UNSPECIFIED" | "IMAGE_KIND_DISK" | "IMAG
  */
 export const ImageKindSchema: GenEnum<ImageKind, ImageKindJson> = /*@__PURE__*/
   enumDesc(file_toshi_workspace_v1_images, 0);
+
+/**
+ * ImageBuilder is what builds a container image from its source.
+ *
+ * @generated from enum toshi.workspace.v1.ImageBuilder
+ */
+export enum ImageBuilder {
+  /**
+   * @generated from enum value: IMAGE_BUILDER_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The repository's Dockerfile when its root has one, Railpack
+   * otherwise. A version records the one that built it.
+   *
+   * @generated from enum value: IMAGE_BUILDER_AUTO = 1;
+   */
+  AUTO = 1,
+
+  /**
+   * The Dockerfile at the repository's root.
+   *
+   * @generated from enum value: IMAGE_BUILDER_DOCKERFILE = 2;
+   */
+  DOCKERFILE = 2,
+
+  /**
+   * Railpack, which builds from the repository's source alone.
+   *
+   * @generated from enum value: IMAGE_BUILDER_RAILPACK = 3;
+   */
+  RAILPACK = 3,
+}
+
+/**
+ * ImageBuilder is what builds a container image from its source.
+ *
+ * @generated from enum toshi.workspace.v1.ImageBuilder
+ */
+export type ImageBuilderJson = "IMAGE_BUILDER_UNSPECIFIED" | "IMAGE_BUILDER_AUTO" | "IMAGE_BUILDER_DOCKERFILE" | "IMAGE_BUILDER_RAILPACK";
+
+/**
+ * Describes the enum toshi.workspace.v1.ImageBuilder.
+ */
+export const ImageBuilderSchema: GenEnum<ImageBuilder, ImageBuilderJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_images, 1);
+
+/**
+ * ImagePusher is what pushed a container image's version.
+ *
+ * @generated from enum toshi.workspace.v1.ImagePusher
+ */
+export enum ImagePusher {
+  /**
+   * @generated from enum value: IMAGE_PUSHER_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * A build of the image.
+   *
+   * @generated from enum value: IMAGE_PUSHER_BUILD = 1;
+   */
+  BUILD = 1,
+
+  /**
+   * A push to the deployment's registry by a person or a pipeline, found
+   * there by Toshi within about a minute.
+   *
+   * @generated from enum value: IMAGE_PUSHER_HAND = 2;
+   */
+  HAND = 2,
+}
+
+/**
+ * ImagePusher is what pushed a container image's version.
+ *
+ * @generated from enum toshi.workspace.v1.ImagePusher
+ */
+export type ImagePusherJson = "IMAGE_PUSHER_UNSPECIFIED" | "IMAGE_PUSHER_BUILD" | "IMAGE_PUSHER_HAND";
+
+/**
+ * Describes the enum toshi.workspace.v1.ImagePusher.
+ */
+export const ImagePusherSchema: GenEnum<ImagePusher, ImagePusherJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_images, 2);
 
 /**
  * ImageVersionState is where a version is in its life.
@@ -1002,7 +1490,7 @@ export type ImageVersionStateJson = "IMAGE_VERSION_STATE_UNSPECIFIED" | "IMAGE_V
  * Describes the enum toshi.workspace.v1.ImageVersionState.
  */
 export const ImageVersionStateSchema: GenEnum<ImageVersionState, ImageVersionStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_images, 1);
+  enumDesc(file_toshi_workspace_v1_images, 3);
 
 /**
  * ImageService keeps a project's own images. A disk image is built on one
@@ -1043,11 +1531,20 @@ export const ImageService: GenService<{
    * IMAGE_NAME_TAKEN. A base that is not one of Toshi's, a size that is
    * not a Linux size, or a recipe without a setup hook or with a field an
    * image does not use, fails with INVALID_ARGUMENT. A container image
-   * takes a name and its kind alone; one with a base, size or recipe fails
-   * with INVALID_ARGUMENT.
+   * that is pushed takes a name and its kind alone; one with a base, size
+   * or recipe fails with INVALID_ARGUMENT.
    *
-   * Creating a disk image starts its first build, as BuildImage does; the
-   * response's version is that build's. A workspace whose plan
+   * A container image built from a repository takes its source, a Linux
+   * size and, optionally, a builder and a registry to push to; one with a
+   * base, a recipe or an environment fails with INVALID_ARGUMENT, as its
+   * builds take the environment the project's branch rules choose for the
+   * source's default branch. A source the project does not claim, or that
+   * none of the workspace's GitHub connections reaches, fails with
+   * FAILED_PRECONDITION.
+   *
+   * Creating a disk image, or a container image built from a repository,
+   * starts its first build, as BuildImage does; the response's version is
+   * that build's. A workspace whose plan
    * does not include images fails with FAILED_PRECONDITION and the reason
    * PLAN_EXCLUDES_IMAGES.
    *
@@ -1059,13 +1556,15 @@ export const ImageService: GenService<{
     output: typeof CreateImageResponseSchema;
   },
   /**
-   * BuildImage starts a build of the image: a job that runs the recipe's
-   * setup hook in a fresh VM of the base and saves its disk as the next
-   * version. A recipe in the request is the build's, and becomes the
-   * image's when the version is ready. An image with a build in progress
-   * fails with FAILED_PRECONDITION and the reason IMAGE_BUILD_IN_PROGRESS,
-   * and a container image, which is pushed rather than built, with
-   * FAILED_PRECONDITION.
+   * BuildImage starts a build of the image. A disk image's build is a job
+   * that runs the recipe's setup hook in a fresh VM of the base and saves
+   * its disk as the next version; a recipe in the request is the build's,
+   * and becomes the image's when the version is ready. A container image's
+   * build is a job that builds the tip of its source's default branch in a
+   * fresh VM and pushes it; the version is ready with the pushed digest.
+   * An image with a build in progress fails with FAILED_PRECONDITION and
+   * the reason IMAGE_BUILD_IN_PROGRESS, and a container image that is
+   * pushed rather than built, with FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.ImageService.BuildImage
    */
@@ -1073,6 +1572,24 @@ export const ImageService: GenService<{
     methodKind: "unary";
     input: typeof BuildImageRequestSchema;
     output: typeof BuildImageResponseSchema;
+  },
+  /**
+   * UpdateImage sets the fields of the image that update_mask names; the
+   * request's image names it by its name. The one field it sets is
+   * rebuild_on_push, of a container image built from a repository: an
+   * unset update_mask sets it to the image's value, an empty one changes
+   * nothing, and "*" or a path of another field is INVALID_ARGUMENT. A
+   * disk image or a container image that is pushed is FAILED_PRECONDITION.
+   * Turning rebuild_on_push on needs what BuildImage needs of the image:
+   * a source its project claims, and a call that reaches the environment
+   * the branch rules choose for the source's default branch.
+   *
+   * @generated from rpc toshi.workspace.v1.ImageService.UpdateImage
+   */
+  updateImage: {
+    methodKind: "unary";
+    input: typeof UpdateImageRequestSchema;
+    output: typeof UpdateImageResponseSchema;
   },
   /**
    * GetImage returns the image with its versions, newest first.

@@ -12,6 +12,7 @@ import { ConnectionService } from "./gen/toshi/workspace/v1/connections_pb.js";
 import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "./gen/toshi/workspace/v1/fillers_pb.js";
+import { GrantService } from "./gen/toshi/workspace/v1/grants_pb.js";
 import { ImageService } from "./gen/toshi/workspace/v1/images_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
@@ -189,6 +190,7 @@ export interface ToshiClient {
   readonly token: Client<typeof TokenService>;
   readonly auditEvent: Client<typeof AuditEventService>;
   readonly filler: Client<typeof FillerService>;
+  readonly grant: Client<typeof GrantService>;
   readonly storageProvider: Client<typeof StorageProviderService>;
   readonly product: Client<typeof ProductService>;
   readonly discovery: Client<typeof DiscoveryService>;
@@ -470,6 +472,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     token: createClient(TokenService, transport),
     auditEvent: createClient(AuditEventService, transport),
     filler: createClient(FillerService, transport),
+    grant: createClient(GrantService, transport),
     storageProvider: createClient(StorageProviderService, transport),
     product: createClient(ProductService, transport),
     discovery: createClient(DiscoveryService, transport),

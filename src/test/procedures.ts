@@ -6,6 +6,7 @@ import { AuditEventService } from "../gen/toshi/workspace/v1/audit_events_pb.js"
 import { ChannelService } from "../gen/toshi/workspace/v1/channels_pb.js";
 import { DisplayService } from "../gen/toshi/workspace/v1/display_pb.js";
 import { FillerService } from "../gen/toshi/workspace/v1/fillers_pb.js";
+import { GrantService } from "../gen/toshi/workspace/v1/grants_pb.js";
 import { HostJobService } from "../gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "../gen/toshi/workspace/v1/hosts_pb.js";
 import { ImageService } from "../gen/toshi/workspace/v1/images_pb.js";
@@ -37,6 +38,7 @@ export const apiServices: readonly DescService[] = [
   ArtifactUploadService,
   AuditEventService,
   FillerService,
+  GrantService,
   HostJobService,
   HostService,
   TokenService,
@@ -87,6 +89,7 @@ export const hookOnly: readonly DescMethod[] = [
   ImageService.method.getImage,
   ImageService.method.listImages,
   ImageService.method.deleteImage,
+  ImageService.method.updateImage,
   // ProductService
   ProductService.method.listProducts,
   ProductService.method.updateProduct,
@@ -102,6 +105,11 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.createPreviewShareLink,
   WorkloadService.method.listPreviewShareLinks,
   WorkloadService.method.revokePreviewShareLink,
+  WorkloadService.method.createServiceShareLink,
+  WorkloadService.method.listServiceShareLinks,
+  WorkloadService.method.revokeServiceShareLink,
+  WorkloadService.method.executeCommand,
+  WorkloadService.method.answerPrompt,
   WorkloadService.method.createService,
   WorkloadService.method.getService,
   WorkloadService.method.listServices,
@@ -149,6 +157,10 @@ export const hookOnly: readonly DescMethod[] = [
   ProjectService.method.createEmbedToken,
   ProjectService.method.listEmbedTokens,
   ProjectService.method.revokeEmbedToken,
+  ProjectService.method.getProjectNetwork,
+  ProjectService.method.setProjectNetwork,
+  ProjectService.method.getEnvironmentNetwork,
+  ProjectService.method.setEnvironmentNetwork,
   // WebhookService
   WebhookService.method.createWebhookEndpoint,
   WebhookService.method.getWebhookEndpoint,
@@ -212,6 +224,15 @@ export const hookOnly: readonly DescMethod[] = [
   FillerService.method.deleteFiller,
   FillerService.method.setFillerEnabled,
   FillerService.method.listFillerRuns,
+  // GrantService
+  GrantService.method.createGrant,
+  GrantService.method.getGrant,
+  GrantService.method.listGrants,
+  GrantService.method.acceptGrant,
+  GrantService.method.declineGrant,
+  GrantService.method.updateGrant,
+  GrantService.method.revokeGrant,
+  GrantService.method.leaveGrant,
   // HostJobService
   HostJobService.method.listHostJobs,
   HostJobService.method.getHostJob,
