@@ -1,4 +1,5 @@
-import type { DescService } from "@bufbuild/protobuf";
+import { getOption } from "@bufbuild/protobuf";
+import type { DescMethod, DescService } from "@bufbuild/protobuf";
 import { Code, ConnectError, createClient, createRouterTransport } from "@connectrpc/connect";
 import type { Interceptor, ServiceImpl, Transport } from "@connectrpc/connect";
 import { describe, expect, it } from "vitest";
@@ -28,8 +29,9 @@ import { TriggerService } from "../src/gen/toshi/workspace/v1/triggers_pb.js";
 import { AccountService } from "../src/gen/toshi/workspace/v1/account_pb.js";
 import { ImageService } from "../src/gen/toshi/workspace/v1/images_pb.js";
 import { retryInterceptor } from "../src/interceptors.js";
+import { permission } from "../src/gen/toshi/permission_pb.js";
 import { backoffDelay, isTransportLoss, procedurePath, retryClassFor } from "../src/retry.js";
-import type { RetryPolicy } from "../src/retry.js";
+import type { RetryClass, RetryPolicy } from "../src/retry.js";
 
 const fastPolicy: RetryPolicy = { maxAttempts: 3, initialBackoffMs: 5, maxBackoffMs: 20 };
 
@@ -74,20 +76,55 @@ function transportFor<T extends DescService>(
   );
 }
 
+/**
+ * The API's rule: a stream is not retried, a request with a request_key is
+ * keyed, and a call whose permission's level is read is a read.
+ */
+function derivedRetryClass(method: DescMethod): RetryClass {
+  if (method.methodKind !== "unary") {
+    return "none";
+  }
+  if (method.input.fields.some((field) => field.name === "request_key")) {
+    return "keyed";
+  }
+  return getOption(method, permission).endsWith(".read") ? "read" : "none";
+}
+
+/**
+ * The entries that depart from the rule, each because a retry would answer
+ * with an error after the first try worked; src/retry.ts says why on the entry.
+ */
+const retryExceptions: Readonly<Record<string, RetryClass>> = {
+  "/toshi.workspace.v1.DisplayService/OpenDisplaySession": "none",
+  "/toshi.workspace.v1.AccountService/UnlinkIdentity": "none",
+  "/toshi.workspace.v1.RoleService/AcceptInvitation": "none",
+};
+
 describe("the retry table", () => {
-  it("names every method of the twenty-five services, 90 reads, 24 keyed and 104 none", () => {
-    const counts = { read: 0, keyed: 0, none: 0 };
+  it("gives every method of the twenty-five services the class the API's rule gives it", () => {
     const paths = new Set<string>();
     for (const service of services) {
       for (const method of service.methods) {
         const path = procedurePath(service, method);
         expect(paths.has(path), `${path} is listed twice`).toBe(false);
         paths.add(path);
-        counts[retryClassFor(path)] += 1;
+        const expected = retryExceptions[path] ?? derivedRetryClass(method);
+        expect(retryClassFor(path), `${path} follows the API's rule`).toBe(expected);
       }
     }
     expect(paths.size).toBe(218);
-    expect(counts).toEqual({ read: 90, keyed: 24, none: 104 });
+  });
+
+  it("names an exception only for a method the API has", () => {
+    const paths = new Set<string>();
+    for (const service of services) {
+      for (const method of service.methods) {
+        paths.add(procedurePath(service, method));
+      }
+    }
+    for (const path of Object.keys(retryExceptions)) {
+      expect(paths.has(path), `${path} is no longer a method`).toBe(true);
+    }
   });
 });
 

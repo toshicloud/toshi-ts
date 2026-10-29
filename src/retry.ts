@@ -20,12 +20,20 @@ export type RetrySetting = Readonly<RetryPolicy> | false;
 /** What one procedure's retries are: a read, a keyed write, or nothing. */
 export type RetryClass = "read" | "keyed" | "none";
 
-// One entry per procedure of the Workspace API's services. A call that changes
-// what exists carries a request key and is retried; a call with no key is
-// retried only when it reads; a stream is never retried here.
+// One entry per procedure of the Workspace API's services. A stream is never
+// retried here; a call whose request takes a request_key is retried with that
+// key, so the server answers a retry with the first result; a read, a call
+// whose permission's level is read, is retried too; every other call is not.
+// test/retry.test.ts derives each class from the generated descriptors and
+// fails when a regeneration moves a procedure, so an entry follows the API and
+// not a list someone remembered to update. An entry whose class needs saying
+// more about has it above the entry.
 const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.AccountService/GetAccount": "read",
   "/toshi.workspace.v1.AccountService/ListIdentities": "read",
+  // A repeat answers NOT_FOUND ("an identity the caller does not have fails
+  // with NOT_FOUND"), so a retry would report failure for a call that worked;
+  // its permission's level is read although it changes state.
   "/toshi.workspace.v1.AccountService/UnlinkIdentity": "none",
   "/toshi.workspace.v1.WorkloadService/CreateJob": "keyed",
   "/toshi.workspace.v1.WorkloadService/GetJob": "read",
@@ -67,12 +75,12 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkloadService/DeleteService": "keyed",
   "/toshi.workspace.v1.WorkloadService/WaitService": "read",
   "/toshi.workspace.v1.WorkloadService/WatchServices": "none",
-  "/toshi.workspace.v1.WorkloadService/StartService": "none",
-  "/toshi.workspace.v1.WorkloadService/StopService": "none",
-  "/toshi.workspace.v1.WorkloadService/SetServiceMode": "none",
-  "/toshi.workspace.v1.WorkloadService/WakeService": "none",
-  "/toshi.workspace.v1.WorkloadService/HoldService": "none",
-  "/toshi.workspace.v1.WorkloadService/ReleaseService": "none",
+  "/toshi.workspace.v1.WorkloadService/StartService": "keyed",
+  "/toshi.workspace.v1.WorkloadService/StopService": "keyed",
+  "/toshi.workspace.v1.WorkloadService/SetServiceMode": "keyed",
+  "/toshi.workspace.v1.WorkloadService/WakeService": "keyed",
+  "/toshi.workspace.v1.WorkloadService/HoldService": "keyed",
+  "/toshi.workspace.v1.WorkloadService/ReleaseService": "keyed",
   "/toshi.workspace.v1.WorkloadService/ListServiceRevisions": "read",
   "/toshi.workspace.v1.WorkloadService/GetServiceRevision": "read",
   "/toshi.workspace.v1.WorkloadService/RollbackService": "keyed",
@@ -113,6 +121,9 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WebhookService/RotateWebhookEndpointSecret": "keyed",
   "/toshi.workspace.v1.WebhookService/ListWebhookDeliveries": "read",
   "/toshi.workspace.v1.WebhookService/ReplayWebhookEvents": "keyed",
+  // A retry returns the session the first call opened, with replayed set and
+  // no token, and opens nothing, so it cannot give the caller a session it can
+  // use.
   "/toshi.workspace.v1.DisplayService/OpenDisplaySession": "none",
   "/toshi.workspace.v1.DisplayService/GetDisplaySession": "read",
   "/toshi.workspace.v1.DisplayService/ListDisplaySessions": "read",
@@ -170,7 +181,9 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.HostJobService/CancelHostJob": "none",
   "/toshi.workspace.v1.HostJobService/GetHostJobFailure": "read",
   "/toshi.workspace.v1.HostJobService/GetHostJobTelemetry": "read",
-  "/toshi.workspace.v1.HostJobService/GetHostJobDebugAccess": "read",
+  // Not a read: it hands out a debug key and a suspended workspace is refused
+  // it; the request carries no request_key, so it is never retried.
+  "/toshi.workspace.v1.HostJobService/GetHostJobDebugAccess": "none",
   "/toshi.workspace.v1.HostJobService/StopHostJobDebug": "none",
   "/toshi.workspace.v1.HostService/ListHosts": "read",
   "/toshi.workspace.v1.HostService/ListHostStorage": "read",
@@ -234,6 +247,9 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.RoleService/CreateInvitation": "none",
   "/toshi.workspace.v1.RoleService/ListInvitations": "read",
   "/toshi.workspace.v1.RoleService/RevokeInvitation": "none",
+  // A repeat answers ALREADY_EXISTS ("a caller who is already a member fails
+  // with ALREADY_EXISTS"), so a retry would report failure for a call that
+  // worked; its permission's level is read although it changes state.
   "/toshi.workspace.v1.RoleService/AcceptInvitation": "none",
   "/toshi.workspace.v1.RoleService/ApproveMember": "none",
   "/toshi.workspace.v1.RoleService/DeclineMember": "none",
