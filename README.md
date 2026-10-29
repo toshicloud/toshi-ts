@@ -4,7 +4,7 @@ A TypeScript client for the Toshi Workspace API, `toshi.workspace.v1`,
 published as ES modules with type declarations.
 
 ```sh
-npm install @toshicloud/sdk @connectrpc/connect
+npm install @toshicloud/sdk @bufbuild/protobuf @connectrpc/connect
 ```
 
 The browser entry needs a transport such as `@connectrpc/connect-web`; the
@@ -204,10 +204,18 @@ connection reset or destroyed stream that `@connectrpc/connect-node`
 reports, or a stream the server refused before reading it
 (`REFUSED_STREAM`). A write that takes a request key gets a random one when the
 request has none, so the server applies a retried write once. Other
-writes are never retried. An error the server sends, including
-`Aborted`, `InvalidArgument` and `ResourceExhausted`, reaches the caller
-unchanged. So does any connection failure the client cannot tell apart
-from a server error.
+writes are never retried.
+
+A `ResourceExhausted` refusal that names how long to wait, as the API's
+rate limit does, is retried the same way. The wait comes from its
+`google.rpc.RetryInfo` detail, else from its `Retry-After` header. So is an
+HTTP 429 with a `Retry-After`, which reaches the client as `Unavailable`.
+The client waits the longer of that wait and the backoff, never more than
+`maxBackoffMs`, and stops when the call's signal aborts. A
+`ResourceExhausted` that names no wait, such as a plan's limit, reaches the
+caller unchanged, as do every other error the server sends, including
+`Aborted` and `InvalidArgument`, and any connection failure the client
+cannot tell apart from a server error.
 
 ### Waiting and watching
 

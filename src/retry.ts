@@ -1,4 +1,5 @@
 import { Code, ConnectError } from "@connectrpc/connect";
+import { BinaryReader, WireType } from "@bufbuild/protobuf/wire";
 
 /** How often and how long a call is retried; maxAttempts counts the first try. */
 export interface RetryPolicy {
@@ -387,6 +388,93 @@ export function backoffDelay(policy: RetryPolicy, attempt: number): number {
   // The jitter is not a secret, so a non-cryptographic source is enough.
   const random = Math.random();
   return Math.floor(random * (limit + 1));
+}
+
+/**
+ * How long the server asked the client to wait before a retry, in
+ * milliseconds, or undefined when it named no wait. A RESOURCE_EXHAUSTED
+ * refusal names the wait in a google.rpc.RetryInfo detail and in its
+ * Retry-After header, the detail winning when both are there; the API's rate
+ * limit sends both, with the same whole seconds. Such a refusal is retried
+ * only when it names a wait: one without, such as a plan's limit, does not
+ * pass on a retry. An HTTP 429 without a Connect error body reaches the
+ * client as Code.Unavailable with the message "HTTP 429" and the response's
+ * headers (connect 2.2.0 protocol-connect/validate-response.js:33), and names
+ * the wait in its Retry-After. Every other error names none.
+ */
+export function serverWaitMs(err: unknown): number | undefined {
+  if (!(err instanceof ConnectError)) {
+    return undefined;
+  }
+  if (err.code === Code.ResourceExhausted) {
+    for (const detail of err.details) {
+      if (!("type" in detail) || detail.type !== "google.rpc.RetryInfo") {
+        continue;
+      }
+      const ms = decodeRetryInfoMs(detail.value);
+      if (ms !== undefined) {
+        return ms;
+      }
+    }
+    return parseRetryAfterMs(err.metadata.get("Retry-After"));
+  }
+  if (err.code === Code.Unavailable && err.rawMessage === "HTTP 429") {
+    return parseRetryAfterMs(err.metadata.get("Retry-After"));
+  }
+  return undefined;
+}
+
+/**
+ * The delay before retry attempt + 1: the backoff's, or the server's wait when
+ * that is longer, never more than maxBackoffMs.
+ */
+export function retryDelayMs(policy: RetryPolicy, attempt: number, waitMs: number | undefined): number {
+  return Math.min(Math.max(backoffDelay(policy, attempt), waitMs ?? 0), policy.maxBackoffMs);
+}
+
+/** A Retry-After of whole seconds, the form the API sends; a date or anything else names no wait. */
+function parseRetryAfterMs(value: string | null): number | undefined {
+  if (value === null || !/^\s*\d+\s*$/.test(value)) {
+    return undefined;
+  }
+  const ms = Number(value.trim()) * 1000;
+  return Number.isSafeInteger(ms) ? ms : undefined;
+}
+
+/**
+ * Reads google.rpc.RetryInfo's retry_delay (1), a google.protobuf.Duration of
+ * seconds (1) and nanos (2), as milliseconds, reading the wire format itself
+ * as errors.ts does for ErrorInfo.
+ */
+function decodeRetryInfoMs(bytes: Uint8Array): number | undefined {
+  try {
+    const reader = new BinaryReader(bytes);
+    while (reader.pos < reader.len) {
+      const [field, wireType] = reader.tag();
+      if (field !== 1 || wireType !== WireType.LengthDelimited) {
+        reader.skip(wireType);
+        continue;
+      }
+      const duration = new BinaryReader(reader.bytes());
+      let seconds = 0;
+      let nanos = 0;
+      while (duration.pos < duration.len) {
+        const [part, partType] = duration.tag();
+        if (part === 1 && partType === WireType.Varint) {
+          seconds = Number(duration.int64());
+        } else if (part === 2 && partType === WireType.Varint) {
+          nanos = duration.int32();
+        } else {
+          duration.skip(partType);
+        }
+      }
+      const ms = seconds * 1000 + Math.ceil(nanos / 1e6);
+      return seconds >= 0 && nanos >= 0 && Number.isSafeInteger(ms) ? ms : undefined;
+    }
+  } catch {
+    return undefined;
+  }
+  return undefined;
 }
 
 /** Sleeps, rejecting at once when the signal aborts (retry.go:186-200). */
