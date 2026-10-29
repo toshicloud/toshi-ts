@@ -211,7 +211,9 @@ from a server error.
 
 - `workload.jobs.wait(req)`, `workload.sandboxes.wait(req)` and
   `workload.services.wait(req)` ask again until the workload reaches the
-  state; `workload.waitOperation(req)` asks until the operation is done.
+  state; `workload.waitOperation(req)` asks until the operation is done. A
+  call starts at least a second, and at most 1.2 seconds, after the start of
+  the one before, and a signal ends a pause with its own error.
 - `workload.getOperation(req)` returns one operation by id: a call that
   takes long hands one back, and this asks for it again.
 - An event's payload says what happened: a trigger's `TriggerResult` names

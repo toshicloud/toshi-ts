@@ -1,7 +1,7 @@
 import { create } from "@bufbuild/protobuf";
 import { createRouterTransport } from "@connectrpc/connect";
 import type { ConnectRouter, Interceptor, ServiceImpl } from "@connectrpc/connect";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { createToshiClient } from "../src/client.js";
 import type { ToshiClient } from "../src/client.js";
@@ -62,8 +62,13 @@ function workload(routes: Partial<ServiceImpl<typeof WorkloadService>>): ToshiCl
   });
 }
 
+afterEach(() => {
+  vi.useRealTimers();
+});
+
 describe("ToshiClient helpers", () => {
   it("waits for a job through the client until it is reached", async () => {
+    vi.useFakeTimers();
     let calls = 0;
     const client = workload({
       waitJob: () => {
@@ -71,12 +76,15 @@ describe("ToshiClient helpers", () => {
         return create(WaitJobResponseSchema, { reached: calls >= 2 });
       },
     });
-    const response = await client.workload.jobs.wait({});
+    const pending = client.workload.jobs.wait({});
+    await vi.runAllTimersAsync();
+    const response = await pending;
     expect(response.reached).toBe(true);
     expect(calls).toBe(2);
   });
 
   it("waits for an operation through the client until it is done", async () => {
+    vi.useFakeTimers();
     let calls = 0;
     const client = workload({
       waitOperation: () => {
@@ -86,7 +94,9 @@ describe("ToshiClient helpers", () => {
         });
       },
     });
-    const operation = await client.workload.waitOperation({ id: "op-1" });
+    const pending = client.workload.waitOperation({ id: "op-1" });
+    await vi.runAllTimersAsync();
+    const operation = await pending;
     expect(operation.done).toBe(true);
     expect(calls).toBe(2);
   });
