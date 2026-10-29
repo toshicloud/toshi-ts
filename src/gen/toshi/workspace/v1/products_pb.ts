@@ -7,7 +7,7 @@ import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2
 import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
-import type { FeatureSource, FeatureSourceJson, FeatureValue, FeatureValueJson, ProductState, ProductStateJson } from "./discovery_pb.js";
+import type { FeatureSource, FeatureSourceJson, FeatureValue, FeatureValueJson, ProductStability, ProductStabilityJson, ProductState, ProductStateJson } from "./discovery_pb.js";
 import { file_toshi_workspace_v1_discovery } from "./discovery_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/products.proto.
  */
 export const file_toshi_workspace_v1_products: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyKWAgoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkSFAoHZW5hYmxlZBgCIAEoCEgAiAEBEkgKCHNldHRpbmdzGAMgAygLMjYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0LlNldHRpbmdzRW50cnkSDQoFY2xlYXIYBCADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEoECAUQBkoECAYQB1IPYWNjZXB0ZWRfYWNjZXNzUgd2ZXJzaW9uInYKFVVwZGF0ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5nc0oECAIQA0oECAMQBFISaW5zdGFsbGF0aW9uX3Rva2VuUgd3YXJuaW5nIusBCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJSgQIAhADSgQIBRAGUgZzd2l0Y2hSDGluc3RhbGxhdGlvbiJFCg9Qcm9kdWN0U3VyZmFjZXMSCwoDYXBpGAEgASgJSgQIAhADSgQIAxAESgQIBBAFUgNjbGlSCWRhc2hib2FyZFIDc2RrItkCCg5GZWF0dXJlU2V0dGluZxILCgNrZXkYASABKAkSEgoKbmFycm93YWJsZRgCIAEoCBI1CgtlbnRpdGxlbWVudBgDIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMQoHc2V0dGluZxgEIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSMwoJZWZmZWN0aXZlGAUgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkZlYXR1cmVWYWx1ZRISCgpjaGFuZ2VkX2J5GAYgASgJEi4KCmNoYW5nZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKBnNvdXJjZRgIIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlU291cmNlEhAKCHBsYW5fa2V5GAkgASgJMoACCg5Qcm9kdWN0U2VydmljZRJ0CgxMaXN0UHJvZHVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvZHVjdHNSZXNwb25zZSIRwvMYDXNldHRpbmdzLnJlYWQSeAoNVXBkYXRlUHJvZHVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9kdWN0UmVzcG9uc2UiEsLzGA5zZXR0aW5ncy53cml0ZUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvZHVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSIVChNMaXN0UHJvZHVjdHNSZXF1ZXN0Ik0KFExpc3RQcm9kdWN0c1Jlc3BvbnNlEjUKCHByb2R1Y3RzGAEgAygLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5ncyKWAgoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSCgoCaWQYASABKAkSFAoHZW5hYmxlZBgCIAEoCEgAiAEBEkgKCHNldHRpbmdzGAMgAygLMjYudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2R1Y3RSZXF1ZXN0LlNldHRpbmdzRW50cnkSDQoFY2xlYXIYBCADKAkaUQoNU2V0dGluZ3NFbnRyeRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlOgI4AUIKCghfZW5hYmxlZEoECAUQBkoECAYQB1IPYWNjZXB0ZWRfYWNjZXNzUgd2ZXJzaW9uInYKFVVwZGF0ZVByb2R1Y3RSZXNwb25zZRI0Cgdwcm9kdWN0GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTZXR0aW5nc0oECAIQA0oECAMQBFISaW5zdGFsbGF0aW9uX3Rva2VuUgd3YXJuaW5nIr0CCg9Qcm9kdWN0U2V0dGluZ3MSCgoCaWQYASABKAkSNAoIZmVhdHVyZXMYAyADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNldHRpbmcSLwoFc3RhdGUYBCABKA4yIC50b3NoaS53b3Jrc3BhY2UudjEuUHJvZHVjdFN0YXRlEjUKCHN1cmZhY2VzGAYgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLlByb2R1Y3RTdXJmYWNlcxIMCgRuYW1lGAcgASgJEjcKCXN0YWJpbGl0eRgIIAEoDjIkLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9kdWN0U3RhYmlsaXR5EhcKD3JlbW92YWxfdmVyc2lvbhgJIAEoCUoECAIQA0oECAUQBlIGc3dpdGNoUgxpbnN0YWxsYXRpb24iRQoPUHJvZHVjdFN1cmZhY2VzEgsKA2FwaRgBIAEoCUoECAIQA0oECAMQBEoECAQQBVIDY2xpUglkYXNoYm9hcmRSA3NkayLZAgoORmVhdHVyZVNldHRpbmcSCwoDa2V5GAEgASgJEhIKCm5hcnJvd2FibGUYAiABKAgSNQoLZW50aXRsZW1lbnQYAyABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjEKB3NldHRpbmcYBCABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVZhbHVlEjMKCWVmZmVjdGl2ZRgFIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5GZWF0dXJlVmFsdWUSEgoKY2hhbmdlZF9ieRgGIAEoCRIuCgpjaGFuZ2VkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCgZzb3VyY2UYCCABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuRmVhdHVyZVNvdXJjZRIQCghwbGFuX2tleRgJIAEoCTKAAgoOUHJvZHVjdFNlcnZpY2USdAoMTGlzdFByb2R1Y3RzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9kdWN0c1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2R1Y3RzUmVzcG9uc2UiEcLzGA1zZXR0aW5ncy5yZWFkEngKDVVwZGF0ZVByb2R1Y3QSKC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvZHVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvZHVjdFJlc3BvbnNlIhLC8xgOc2V0dGluZ3Mud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_discovery]);
 
 /**
  * @generated from message toshi.workspace.v1.ListProductsRequest
@@ -230,6 +230,21 @@ export type ProductSettings = Message<"toshi.workspace.v1.ProductSettings"> & {
    * @generated from field: string name = 7;
    */
   name: string;
+
+  /**
+   * stability is how mature the product is in this build.
+   *
+   * @generated from field: toshi.workspace.v1.ProductStability stability = 8;
+   */
+  stability: ProductStability;
+
+  /**
+   * removal_version is the version a deprecated product is removed in;
+   * empty for the other stabilities.
+   *
+   * @generated from field: string removal_version = 9;
+   */
+  removalVersion: string;
 };
 
 /**
@@ -279,6 +294,21 @@ export type ProductSettingsJson = {
    * @generated from field: string name = 7;
    */
   name?: string;
+
+  /**
+   * stability is how mature the product is in this build.
+   *
+   * @generated from field: toshi.workspace.v1.ProductStability stability = 8;
+   */
+  stability?: ProductStabilityJson;
+
+  /**
+   * removal_version is the version a deprecated product is removed in;
+   * empty for the other stabilities.
+   *
+   * @generated from field: string removal_version = 9;
+   */
+  removalVersion?: string;
 };
 
 /**

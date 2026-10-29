@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/projects.proto.
  */
 export const file_toshi_workspace_v1_projects: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSK+AQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSNwoJYWRtaXNzaW9uGAQgASgLMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RBZG1pc3Npb24icwoQUHJvamVjdEFkbWlzc2lvbhILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0InUKFFVwZGF0ZVByb2plY3RSZXF1ZXN0EiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRQoVVXBkYXRlUHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI9ChZDbGFpbVJlcG9zaXRvcnlSZXF1ZXN0EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCSJnChdDbGFpbVJlcG9zaXRvcnlSZXNwb25zZRIyCgpyZXBvc2l0b3J5GAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkSGAoQcHJldmlvdXNfcHJvamVjdBgCIAEoCSIhChFHZXRQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJIkIKEkdldFByb2plY3RSZXNwb25zZRIsCgdwcm9qZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QiOQoYQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEa2luZBgCIAEoCSJYChlDcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjsKC2Vudmlyb25tZW50GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RFbnZpcm9ubWVudCI5ChhEZWxldGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJIhsKGURlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiQQoKQnJhbmNoUnVsZRINCgVtYXRjaBgBIAEoCRIPCgdwYXR0ZXJuGAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJIlAKFkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJhChdMaXN0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJXChVTZXRCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRItCgVydWxlcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlIkcKFlNldEJyYW5jaFJ1bGVzUmVzcG9uc2USLQoFcnVsZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSLVAgoKRW1iZWRUb2tlbhIKCgJpZBgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEg8KB29yaWdpbnMYAyADKAkSMgoFc3RhdGUYBCABKA4yIy50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlblN0YXRlEi4KCmNyZWF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB3VzZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHJlY29yZGluZ19pZBgIIAEoCRIuCgpyZXZva2VkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpjcmVhdGVkX2J5GAogASgJImoKF0NyZWF0ZUVtYmVkVG9rZW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDwoHb3JpZ2lucxgCIAMoCRItCgpleHBpcmVzX2luGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIl4KGENyZWF0ZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEg0KBXRva2VuGAIgASgJIlAKFkxpc3RFbWJlZFRva2Vuc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJoChdMaXN0RW1iZWRUb2tlbnNSZXNwb25zZRI0CgxlbWJlZF90b2tlbnMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiQgoXUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIWCg5lbWJlZF90b2tlbl9pZBgCIAEoCSJPChhSZXZva2VFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbiqsAQoPRW1iZWRUb2tlblN0YXRlEiEKHUVNQkVEX1RPS0VOX1NUQVRFX1VOU1BFQ0lGSUVEEAASHAoYRU1CRURfVE9LRU5fU1RBVEVfQUNUSVZFEAESGgoWRU1CRURfVE9LRU5fU1RBVEVfVVNFRBACEh0KGUVNQkVEX1RPS0VOX1NUQVRFX1JFVk9LRUQQAxIdChlFTUJFRF9UT0tFTl9TVEFURV9FWFBJUkVEEAQyng8KDlByb2plY3RTZXJ2aWNlEn8KDExpc3RQcm9qZWN0cxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EnkKCkdldFByb2plY3QSJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdFJlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EosBChBMaXN0UmVwb3NpdG9yaWVzEisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZXBvc2l0b3JpZXNSZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZXBvc2l0b3JpZXNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKNAQoNQ3JlYXRlUHJvamVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVQcm9qZWN0UmVzcG9uc2UiJ8LzGA5wcm9qZWN0cy53cml0ZdLzGBESD3Byb2plY3Q6cHJvamVjdBKYAQoNVXBkYXRlUHJvamVjdBIoLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9qZWN0UmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVQcm9qZWN0UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0Ep4BCg9DbGFpbVJlcG9zaXRvcnkSKi50b3NoaS53b3Jrc3BhY2UudjEuQ2xhaW1SZXBvc2l0b3J5UmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSpAEKEUNyZWF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoRRGVsZXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EogBCg9MaXN0QnJhbmNoUnVsZXMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKbAQoOU2V0QnJhbmNoUnVsZXMSKS50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChBDcmVhdGVFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVtYmVkVG9rZW5SZXNwb25zZSI1wvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgUChJlbWJlZF90b2tlbi5pc3N1ZWQSiAEKD0xpc3RFbWJlZFRva2VucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EowBChBSZXZva2VFbWJlZFRva2VuEisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUVtYmVkVG9rZW5SZXNwb25zZSIdwvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3RCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSK+AQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSNwoJYWRtaXNzaW9uGAQgASgLMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RBZG1pc3Npb24icwoQUHJvamVjdEFkbWlzc2lvbhILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0InUKFFVwZGF0ZVByb2plY3RSZXF1ZXN0EiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRQoVVXBkYXRlUHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI9ChZDbGFpbVJlcG9zaXRvcnlSZXF1ZXN0EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCSJnChdDbGFpbVJlcG9zaXRvcnlSZXNwb25zZRIyCgpyZXBvc2l0b3J5GAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkSGAoQcHJldmlvdXNfcHJvamVjdBgCIAEoCSIhChFHZXRQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJIkIKEkdldFByb2plY3RSZXNwb25zZRIsCgdwcm9qZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QiOQoYQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEa2luZBgCIAEoCSJYChlDcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjsKC2Vudmlyb25tZW50GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RFbnZpcm9ubWVudCI5ChhEZWxldGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJIhsKGURlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiQQoKQnJhbmNoUnVsZRINCgVtYXRjaBgBIAEoCRIPCgdwYXR0ZXJuGAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJIlAKFkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJhChdMaXN0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJXChVTZXRCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRItCgVydWxlcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlIkcKFlNldEJyYW5jaFJ1bGVzUmVzcG9uc2USLQoFcnVsZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSJXCg1OZXR3b3JrUG9saWN5EhYKDmRlZmF1bHRfYWN0aW9uGAEgASgJEi4KBmVncmVzcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FZ3Jlc3NSdWxlIlIKCkVncmVzc1J1bGUSDgoGYWN0aW9uGAEgASgJEhMKC2Rlc3RpbmF0aW9uGAIgASgJEg0KBXBvcnRzGAMgASgJEhAKCHByb3RvY29sGAQgASgJIisKGEdldFByb2plY3ROZXR3b3JrUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJIpMBChlHZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeRISCgp1cGRhdGVkX2J5GAIgASgJEi4KCnVwZGF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIl8KGFNldFByb2plY3ROZXR3b3JrUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEjIKB25ldHdvcmsYAiABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeSJPChlTZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeSJEChxHZXRFbnZpcm9ubWVudE5ldHdvcmtSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkilwEKHUdldEVudmlyb25tZW50TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeRISCgp1cGRhdGVkX2J5GAIgASgJEi4KCnVwZGF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIngKHFNldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIyCgduZXR3b3JrGAMgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLk5ldHdvcmtQb2xpY3kiUwodU2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2USMgoHbmV0d29yaxgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5ItUCCgpFbWJlZFRva2VuEgoKAmlkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHb3JpZ2lucxgDIAMoCRIyCgVzdGF0ZRgEIAEoDjIjLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHdXNlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMcmVjb3JkaW5nX2lkGAggASgJEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkiagoXQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIPCgdvcmlnaW5zGAIgAygJEi0KCmV4cGlyZXNfaW4YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXgoYQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEjMKC2VtYmVkX3Rva2VuGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4SDQoFdG9rZW4YAiABKAkiUAoWTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImgKF0xpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEjQKDGVtYmVkX3Rva2VucxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJCChdSZXZva2VFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhYKDmVtYmVkX3Rva2VuX2lkGAIgASgJIk8KGFJldm9rZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuKqwBCg9FbWJlZFRva2VuU3RhdGUSIQodRU1CRURfVE9LRU5fU1RBVEVfVU5TUEVDSUZJRUQQABIcChhFTUJFRF9UT0tFTl9TVEFURV9BQ1RJVkUQARIaChZFTUJFRF9UT0tFTl9TVEFURV9VU0VEEAISHQoZRU1CRURfVE9LRU5fU1RBVEVfUkVWT0tFRBADEh0KGUVNQkVEX1RPS0VOX1NUQVRFX0VYUElSRUQQBDKuFAoOUHJvamVjdFNlcnZpY2USfwoMTGlzdFByb2plY3RzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2plY3RzUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSeQoKR2V0UHJvamVjdBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSiwEKEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0Eo0BCg1DcmVhdGVQcm9qZWN0EigudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXNwb25zZSInwvMYDnByb2plY3RzLndyaXRl0vMYERIPcHJvamVjdDpwcm9qZWN0EpgBCg1VcGRhdGVQcm9qZWN0EigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2plY3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2plY3RSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSngEKD0NsYWltUmVwb3NpdG9yeRIqLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoRQ3JlYXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChFEZWxldGVFbnZpcm9ubWVudBIsLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSiAEKD0xpc3RCcmFuY2hSdWxlcxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EpsBCg5TZXRCcmFuY2hSdWxlcxIpLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1JlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSjgEKEUdldFByb2plY3ROZXR3b3JrEiwudG9zaGkud29ya3NwYWNlLnYxLkdldFByb2plY3ROZXR3b3JrUmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EqQBChFTZXRQcm9qZWN0TmV0d29yaxIsLnRvc2hpLndvcmtzcGFjZS52MS5TZXRQcm9qZWN0TmV0d29ya1JlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuU2V0UHJvamVjdE5ldHdvcmtSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSngEKFUdldEVudmlyb25tZW50TmV0d29yaxIwLnRvc2hpLndvcmtzcGFjZS52MS5HZXRFbnZpcm9ubWVudE5ldHdvcmtSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkdldEVudmlyb25tZW50TmV0d29ya1Jlc3BvbnNlIiDC8xgNcHJvamVjdHMucmVhZMrzGAtlbnZpcm9ubWVudBK0AQoVU2V0RW52aXJvbm1lbnROZXR3b3JrEjAudG9zaGkud29ya3NwYWNlLnYxLlNldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuU2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2UiNsLzGA5wcm9qZWN0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoQQ3JlYXRlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVzcG9uc2UiNcLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYFAoSZW1iZWRfdG9rZW4uaXNzdWVkEogBCg9MaXN0RW1iZWRUb2tlbnMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKMAQoQUmV2b2tlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVzcG9uc2UiHcLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN0QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Project is one of a workspace's projects.
@@ -1202,6 +1202,488 @@ export const SetBranchRulesResponseSchema: GenMessage<SetBranchRulesResponse, {j
   messageDesc(file_toshi_workspace_v1_projects, 25);
 
 /**
+ * NetworkPolicy is where a project's or an environment's workloads may
+ * connect outbound. The first rule that matches a destination decides;
+ * one no rule matches gets default_action.
+ *
+ * @generated from message toshi.workspace.v1.NetworkPolicy
+ */
+export type NetworkPolicy = Message<"toshi.workspace.v1.NetworkPolicy"> & {
+  /**
+   * "allow" or "deny".
+   *
+   * @generated from field: string default_action = 1;
+   */
+  defaultAction: string;
+
+  /**
+   * At most 100 rules, read in order.
+   *
+   * @generated from field: repeated toshi.workspace.v1.EgressRule egress = 2;
+   */
+  egress: EgressRule[];
+};
+
+/**
+ * NetworkPolicy is where a project's or an environment's workloads may
+ * connect outbound. The first rule that matches a destination decides;
+ * one no rule matches gets default_action.
+ *
+ * @generated from message toshi.workspace.v1.NetworkPolicy
+ */
+export type NetworkPolicyJson = {
+  /**
+   * "allow" or "deny".
+   *
+   * @generated from field: string default_action = 1;
+   */
+  defaultAction?: string;
+
+  /**
+   * At most 100 rules, read in order.
+   *
+   * @generated from field: repeated toshi.workspace.v1.EgressRule egress = 2;
+   */
+  egress?: EgressRuleJson[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.NetworkPolicy.
+ * Use `create(NetworkPolicySchema)` to create a new message.
+ */
+export const NetworkPolicySchema: GenMessage<NetworkPolicy, {jsonType: NetworkPolicyJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 26);
+
+/**
+ * EgressRule allows or denies outbound connections to one destination.
+ *
+ * @generated from message toshi.workspace.v1.EgressRule
+ */
+export type EgressRule = Message<"toshi.workspace.v1.EgressRule"> & {
+  /**
+   * "allow" or "deny".
+   *
+   * @generated from field: string action = 1;
+   */
+  action: string;
+
+  /**
+   * An IPv4 or IPv6 address, a CIDR prefix, or a DNS name such as
+   * "api.example.com". A name is resolved by the host that runs the
+   * workload, so it matches the addresses the name had when last
+   * resolved; it does not check a TLS server name. Stored in canonical
+   * form: a prefix masked, a name in lower case.
+   *
+   * @generated from field: string destination = 2;
+   */
+  destination: string;
+
+  /**
+   * A port such as "443", a range such as "8000-8100", or empty for every
+   * port.
+   *
+   * @generated from field: string ports = 3;
+   */
+  ports: string;
+
+  /**
+   * "tcp", "udp", or empty for both; empty with no ports covers every
+   * protocol, ICMP included.
+   *
+   * @generated from field: string protocol = 4;
+   */
+  protocol: string;
+};
+
+/**
+ * EgressRule allows or denies outbound connections to one destination.
+ *
+ * @generated from message toshi.workspace.v1.EgressRule
+ */
+export type EgressRuleJson = {
+  /**
+   * "allow" or "deny".
+   *
+   * @generated from field: string action = 1;
+   */
+  action?: string;
+
+  /**
+   * An IPv4 or IPv6 address, a CIDR prefix, or a DNS name such as
+   * "api.example.com". A name is resolved by the host that runs the
+   * workload, so it matches the addresses the name had when last
+   * resolved; it does not check a TLS server name. Stored in canonical
+   * form: a prefix masked, a name in lower case.
+   *
+   * @generated from field: string destination = 2;
+   */
+  destination?: string;
+
+  /**
+   * A port such as "443", a range such as "8000-8100", or empty for every
+   * port.
+   *
+   * @generated from field: string ports = 3;
+   */
+  ports?: string;
+
+  /**
+   * "tcp", "udp", or empty for both; empty with no ports covers every
+   * protocol, ICMP included.
+   *
+   * @generated from field: string protocol = 4;
+   */
+  protocol?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.EgressRule.
+ * Use `create(EgressRuleSchema)` to create a new message.
+ */
+export const EgressRuleSchema: GenMessage<EgressRule, {jsonType: EgressRuleJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 27);
+
+/**
+ * @generated from message toshi.workspace.v1.GetProjectNetworkRequest
+ */
+export type GetProjectNetworkRequest = Message<"toshi.workspace.v1.GetProjectNetworkRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetProjectNetworkRequest
+ */
+export type GetProjectNetworkRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetProjectNetworkRequest.
+ * Use `create(GetProjectNetworkRequestSchema)` to create a new message.
+ */
+export const GetProjectNetworkRequestSchema: GenMessage<GetProjectNetworkRequest, {jsonType: GetProjectNetworkRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 28);
+
+/**
+ * @generated from message toshi.workspace.v1.GetProjectNetworkResponse
+ */
+export type GetProjectNetworkResponse = Message<"toshi.workspace.v1.GetProjectNetworkResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicy | undefined;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 2;
+   */
+  updatedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 3;
+   */
+  updatedAt?: Timestamp | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetProjectNetworkResponse
+ */
+export type GetProjectNetworkResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicyJson;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 2;
+   */
+  updatedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 3;
+   */
+  updatedAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetProjectNetworkResponse.
+ * Use `create(GetProjectNetworkResponseSchema)` to create a new message.
+ */
+export const GetProjectNetworkResponseSchema: GenMessage<GetProjectNetworkResponse, {jsonType: GetProjectNetworkResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 29);
+
+/**
+ * @generated from message toshi.workspace.v1.SetProjectNetworkRequest
+ */
+export type SetProjectNetworkRequest = Message<"toshi.workspace.v1.SetProjectNetworkRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 2;
+   */
+  network?: NetworkPolicy | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetProjectNetworkRequest
+ */
+export type SetProjectNetworkRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 2;
+   */
+  network?: NetworkPolicyJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetProjectNetworkRequest.
+ * Use `create(SetProjectNetworkRequestSchema)` to create a new message.
+ */
+export const SetProjectNetworkRequestSchema: GenMessage<SetProjectNetworkRequest, {jsonType: SetProjectNetworkRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 30);
+
+/**
+ * @generated from message toshi.workspace.v1.SetProjectNetworkResponse
+ */
+export type SetProjectNetworkResponse = Message<"toshi.workspace.v1.SetProjectNetworkResponse"> & {
+  /**
+   * The policy as stored.
+   *
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicy | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetProjectNetworkResponse
+ */
+export type SetProjectNetworkResponseJson = {
+  /**
+   * The policy as stored.
+   *
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicyJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetProjectNetworkResponse.
+ * Use `create(SetProjectNetworkResponseSchema)` to create a new message.
+ */
+export const SetProjectNetworkResponseSchema: GenMessage<SetProjectNetworkResponse, {jsonType: SetProjectNetworkResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 31);
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentNetworkRequest
+ */
+export type GetEnvironmentNetworkRequest = Message<"toshi.workspace.v1.GetEnvironmentNetworkRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentNetworkRequest
+ */
+export type GetEnvironmentNetworkRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetEnvironmentNetworkRequest.
+ * Use `create(GetEnvironmentNetworkRequestSchema)` to create a new message.
+ */
+export const GetEnvironmentNetworkRequestSchema: GenMessage<GetEnvironmentNetworkRequest, {jsonType: GetEnvironmentNetworkRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 32);
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentNetworkResponse
+ */
+export type GetEnvironmentNetworkResponse = Message<"toshi.workspace.v1.GetEnvironmentNetworkResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicy | undefined;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 2;
+   */
+  updatedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 3;
+   */
+  updatedAt?: Timestamp | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentNetworkResponse
+ */
+export type GetEnvironmentNetworkResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicyJson;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 2;
+   */
+  updatedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 3;
+   */
+  updatedAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetEnvironmentNetworkResponse.
+ * Use `create(GetEnvironmentNetworkResponseSchema)` to create a new message.
+ */
+export const GetEnvironmentNetworkResponseSchema: GenMessage<GetEnvironmentNetworkResponse, {jsonType: GetEnvironmentNetworkResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 33);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentNetworkRequest
+ */
+export type SetEnvironmentNetworkRequest = Message<"toshi.workspace.v1.SetEnvironmentNetworkRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 3;
+   */
+  network?: NetworkPolicy | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentNetworkRequest
+ */
+export type SetEnvironmentNetworkRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 3;
+   */
+  network?: NetworkPolicyJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentNetworkRequest.
+ * Use `create(SetEnvironmentNetworkRequestSchema)` to create a new message.
+ */
+export const SetEnvironmentNetworkRequestSchema: GenMessage<SetEnvironmentNetworkRequest, {jsonType: SetEnvironmentNetworkRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 34);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentNetworkResponse
+ */
+export type SetEnvironmentNetworkResponse = Message<"toshi.workspace.v1.SetEnvironmentNetworkResponse"> & {
+  /**
+   * The policy as stored.
+   *
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicy | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentNetworkResponse
+ */
+export type SetEnvironmentNetworkResponseJson = {
+  /**
+   * The policy as stored.
+   *
+   * @generated from field: toshi.workspace.v1.NetworkPolicy network = 1;
+   */
+  network?: NetworkPolicyJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentNetworkResponse.
+ * Use `create(SetEnvironmentNetworkResponseSchema)` to create a new message.
+ */
+export const SetEnvironmentNetworkResponseSchema: GenMessage<SetEnvironmentNetworkResponse, {jsonType: SetEnvironmentNetworkResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 35);
+
+/**
  * EmbedToken is one of a project's embed tokens, without the token itself.
  *
  * @generated from message toshi.workspace.v1.EmbedToken
@@ -1350,7 +1832,7 @@ export type EmbedTokenJson = {
  * Use `create(EmbedTokenSchema)` to create a new message.
  */
 export const EmbedTokenSchema: GenMessage<EmbedToken, {jsonType: EmbedTokenJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 26);
+  messageDesc(file_toshi_workspace_v1_projects, 36);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenRequest
@@ -1415,7 +1897,7 @@ export type CreateEmbedTokenRequestJson = {
  * Use `create(CreateEmbedTokenRequestSchema)` to create a new message.
  */
 export const CreateEmbedTokenRequestSchema: GenMessage<CreateEmbedTokenRequest, {jsonType: CreateEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 27);
+  messageDesc(file_toshi_workspace_v1_projects, 37);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenResponse
@@ -1456,7 +1938,7 @@ export type CreateEmbedTokenResponseJson = {
  * Use `create(CreateEmbedTokenResponseSchema)` to create a new message.
  */
 export const CreateEmbedTokenResponseSchema: GenMessage<CreateEmbedTokenResponse, {jsonType: CreateEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 28);
+  messageDesc(file_toshi_workspace_v1_projects, 38);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensRequest
@@ -1515,7 +1997,7 @@ export type ListEmbedTokensRequestJson = {
  * Use `create(ListEmbedTokensRequestSchema)` to create a new message.
  */
 export const ListEmbedTokensRequestSchema: GenMessage<ListEmbedTokensRequest, {jsonType: ListEmbedTokensRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 29);
+  messageDesc(file_toshi_workspace_v1_projects, 39);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensResponse
@@ -1556,7 +2038,7 @@ export type ListEmbedTokensResponseJson = {
  * Use `create(ListEmbedTokensResponseSchema)` to create a new message.
  */
 export const ListEmbedTokensResponseSchema: GenMessage<ListEmbedTokensResponse, {jsonType: ListEmbedTokensResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 30);
+  messageDesc(file_toshi_workspace_v1_projects, 40);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenRequest
@@ -1597,7 +2079,7 @@ export type RevokeEmbedTokenRequestJson = {
  * Use `create(RevokeEmbedTokenRequestSchema)` to create a new message.
  */
 export const RevokeEmbedTokenRequestSchema: GenMessage<RevokeEmbedTokenRequest, {jsonType: RevokeEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 31);
+  messageDesc(file_toshi_workspace_v1_projects, 41);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenResponse
@@ -1624,7 +2106,7 @@ export type RevokeEmbedTokenResponseJson = {
  * Use `create(RevokeEmbedTokenResponseSchema)` to create a new message.
  */
 export const RevokeEmbedTokenResponseSchema: GenMessage<RevokeEmbedTokenResponse, {jsonType: RevokeEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 32);
+  messageDesc(file_toshi_workspace_v1_projects, 42);
 
 /**
  * EmbedTokenState is where an embed token is in its life.
@@ -1678,8 +2160,9 @@ export const EmbedTokenStateSchema: GenEnum<EmbedTokenState, EmbedTokenStateJson
 /**
  * ProjectService reads a workspace's projects and the repositories they
  * claim, creates a project, creates or deletes an environment of one, moves a
- * repository's claim and sets the branch rules that choose a CI job's
- * environment. A workspace holds projects, and a project holds environments.
+ * repository's claim, sets the branch rules that choose a CI job's
+ * environment and sets the network policies a project's workloads connect
+ * out under. A workspace holds projects, and a project holds environments.
  *
  * The caller's credential names the workspace, as for WorkloadService.
  * Nothing of another workspace is visible.
@@ -1846,6 +2329,68 @@ export const ProjectService: GenService<{
     methodKind: "unary";
     input: typeof SetBranchRulesRequestSchema;
     output: typeof SetBranchRulesResponseSchema;
+  },
+  /**
+   * GetProjectNetwork returns a project's network policy: where its
+   * workloads may connect outbound. A project that never set one allows
+   * every destination. A project the workspace does not have is NOT_FOUND.
+   * A token limited to a project reads only that project's policy, and a
+   * token limited to an environment is PERMISSION_DENIED.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.GetProjectNetwork
+   */
+  getProjectNetwork: {
+    methodKind: "unary";
+    input: typeof GetProjectNetworkRequestSchema;
+    output: typeof GetProjectNetworkResponseSchema;
+  },
+  /**
+   * SetProjectNetwork replaces a project's network policy whole: the
+   * default and the ordered rules. It has at most 100 rules, each an allow
+   * or a deny of an address, a CIDR prefix or a DNS name, with an optional
+   * port or port range and protocol. Any other policy is INVALID_ARGUMENT
+   * and changes nothing. A workload keeps the policy it was admitted with;
+   * the new one applies to workloads admitted after it. A project the
+   * workspace does not have is NOT_FOUND. A token limited to a project
+   * sets only that project's policy, and a token limited to an environment
+   * is PERMISSION_DENIED.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.SetProjectNetwork
+   */
+  setProjectNetwork: {
+    methodKind: "unary";
+    input: typeof SetProjectNetworkRequestSchema;
+    output: typeof SetProjectNetworkResponseSchema;
+  },
+  /**
+   * GetEnvironmentNetwork returns an environment's network policy, which
+   * narrows its project's: a destination is reached only when both allow
+   * it. An environment that never set one allows every destination its
+   * project allows. A project or environment the workspace does not have is
+   * NOT_FOUND. A token limited to an environment reads only that
+   * environment's policy.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.GetEnvironmentNetwork
+   */
+  getEnvironmentNetwork: {
+    methodKind: "unary";
+    input: typeof GetEnvironmentNetworkRequestSchema;
+    output: typeof GetEnvironmentNetworkResponseSchema;
+  },
+  /**
+   * SetEnvironmentNetwork replaces an environment's network policy whole,
+   * checked as SetProjectNetwork checks a project's. It can only narrow
+   * the project's policy: an allow the project denies stays denied. A
+   * workload keeps the policy it was admitted with. A project or
+   * environment the workspace does not have is NOT_FOUND. A token limited
+   * to an environment sets only that environment's policy.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.SetEnvironmentNetwork
+   */
+  setEnvironmentNetwork: {
+    methodKind: "unary";
+    input: typeof SetEnvironmentNetworkRequestSchema;
+    output: typeof SetEnvironmentNetworkResponseSchema;
   },
   /**
    * CreateEmbedToken mints an embed token for a project: a credential for

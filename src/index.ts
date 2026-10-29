@@ -11,6 +11,7 @@ export * from "./gen/toshi/workspace/v1/volumes_pb.js";
 export * from "./gen/toshi/workspace/v1/artifacts_pb.js";
 export * from "./gen/toshi/workspace/v1/audit_events_pb.js";
 export * from "./gen/toshi/workspace/v1/fillers_pb.js";
+export * from "./gen/toshi/workspace/v1/grants_pb.js";
 export * from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 export * from "./gen/toshi/workspace/v1/hosts_pb.js";
 export * from "./gen/toshi/workspace/v1/storage_providers_pb.js";

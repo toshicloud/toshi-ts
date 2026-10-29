@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/permission.proto.
  */
 export const file_toshi_permission: GenFile = /*@__PURE__*/
-  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJOkAKCnBlcm1pc3Npb24SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi4jgMgASgJUgpwZXJtaXNzaW9uOjYKBXNjb3BlEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYuY4DIAEoCVIFc2NvcGU6RAoFYXVkaXQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi6jgMgASgLMgwudG9zaGkuQXVkaXRSBWF1ZGl0OjsKCGJ5X2ZpZWxkEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYvI4DIAEoCFIHYnlGaWVsZDpKChBmaWVsZF9wZXJtaXNzaW9uEh0uZ29vZ2xlLnByb3RvYnVmLkZpZWxkT3B0aW9ucxi7jgMgASgJUg9maWVsZFBlcm1pc3Npb25CHlocZ28udG9zaGljbG91ZC5pby9hcGkvdG9zaGlwYmIGcHJvdG8z", [file_google_protobuf_descriptor]);
+  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJIrYBCgNNQ1ASFgoJcmVhZF9vbmx5GAEgASgISACIAQESGAoLZGVzdHJ1Y3RpdmUYAiABKAhIAYgBARIXCgppZGVtcG90ZW50GAMgASgISAKIAQESFwoKb3Blbl93b3JsZBgEIAEoCEgDiAEBEg8KB2V4Y2x1ZGUYBSABKAhCDAoKX3JlYWRfb25seUIOCgxfZGVzdHJ1Y3RpdmVCDQoLX2lkZW1wb3RlbnRCDQoLX29wZW5fd29ybGQ6QAoKcGVybWlzc2lvbhIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLiOAyABKAlSCnBlcm1pc3Npb246NgoFc2NvcGUSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi5jgMgASgJUgVzY29wZTpECgVhdWRpdBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLqOAyABKAsyDC50b3NoaS5BdWRpdFIFYXVkaXQ6OwoIYnlfZmllbGQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi8jgMgASgIUgdieUZpZWxkOj4KA21jcBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGL2OAyABKAsyCi50b3NoaS5NQ1BSA21jcDpKChBmaWVsZF9wZXJtaXNzaW9uEh0uZ29vZ2xlLnByb3RvYnVmLkZpZWxkT3B0aW9ucxi7jgMgASgJUg9maWVsZFBlcm1pc3Npb25CHlocZ28udG9zaGljbG91ZC5pby9hcGkvdG9zaGlwYmIGcHJvdG8z", [file_google_protobuf_descriptor]);
 
 /**
  * Audit is the audit event a call records.
@@ -86,6 +86,111 @@ export const AuditSchema: GenMessage<Audit, {jsonType: AuditJson}> = /*@__PURE__
   messageDesc(file_toshi_permission, 0);
 
 /**
+ * MCP is how a call appears as a tool of the MCP server: each hint that is
+ * set replaces the one the generator's rules give, and exclude leaves the
+ * call out of the tool list.
+ *
+ * @generated from message toshi.MCP
+ */
+export type MCP = Message<"toshi.MCP"> & {
+  /**
+   * read_only is the tool's readOnlyHint: the call changes nothing.
+   *
+   * @generated from field: optional bool read_only = 1;
+   */
+  readOnly?: boolean | undefined;
+
+  /**
+   * destructive is the tool's destructiveHint: the call may end or remove
+   * something it cannot bring back.
+   *
+   * @generated from field: optional bool destructive = 2;
+   */
+  destructive?: boolean | undefined;
+
+  /**
+   * idempotent is the tool's idempotentHint: a second call with the same
+   * input changes nothing more.
+   *
+   * @generated from field: optional bool idempotent = 3;
+   */
+  idempotent?: boolean | undefined;
+
+  /**
+   * open_world is the tool's openWorldHint: the call reaches past the
+   * workspace, such as a workload that reaches what its network policy
+   * allows.
+   *
+   * @generated from field: optional bool open_world = 4;
+   */
+  openWorld?: boolean | undefined;
+
+  /**
+   * exclude leaves the call out, for a call that makes no sense as a tool,
+   * such as one only a workload's own token may make.
+   *
+   * @generated from field: bool exclude = 5;
+   */
+  exclude: boolean;
+};
+
+/**
+ * MCP is how a call appears as a tool of the MCP server: each hint that is
+ * set replaces the one the generator's rules give, and exclude leaves the
+ * call out of the tool list.
+ *
+ * @generated from message toshi.MCP
+ */
+export type MCPJson = {
+  /**
+   * read_only is the tool's readOnlyHint: the call changes nothing.
+   *
+   * @generated from field: optional bool read_only = 1;
+   */
+  readOnly?: boolean;
+
+  /**
+   * destructive is the tool's destructiveHint: the call may end or remove
+   * something it cannot bring back.
+   *
+   * @generated from field: optional bool destructive = 2;
+   */
+  destructive?: boolean;
+
+  /**
+   * idempotent is the tool's idempotentHint: a second call with the same
+   * input changes nothing more.
+   *
+   * @generated from field: optional bool idempotent = 3;
+   */
+  idempotent?: boolean;
+
+  /**
+   * open_world is the tool's openWorldHint: the call reaches past the
+   * workspace, such as a workload that reaches what its network policy
+   * allows.
+   *
+   * @generated from field: optional bool open_world = 4;
+   */
+  openWorld?: boolean;
+
+  /**
+   * exclude leaves the call out, for a call that makes no sense as a tool,
+   * such as one only a workload's own token may make.
+   *
+   * @generated from field: bool exclude = 5;
+   */
+  exclude?: boolean;
+};
+
+/**
+ * Describes the message toshi.MCP.
+ * Use `create(MCPSchema)` to create a new message.
+ */
+export const MCPSchema: GenMessage<MCP, {jsonType: MCPJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_permission, 1);
+
+/**
  * permission names what a caller needs to make the call: an area and a
  * level. "<area>.read" sees what the area holds and "<area>.write" changes
  * it, where the area is a product, such as "sandboxes", or a part of the
@@ -149,6 +254,18 @@ export const by_field: GenExtension<MethodOptions, boolean> = /*@__PURE__*/
   extDesc(file_toshi_permission, 3);
 
 /**
+ * mcp sets how the call appears as a tool of the MCP server, where the
+ * rules its generator applies give the wrong answer. Without it a call
+ * whose permission's level is "read" is read-only and idempotent, a call
+ * whose name begins with Delete, Cancel, Revoke, Remove, Stop or Rollback
+ * is destructive, and no call reaches outside the workspace.
+ *
+ * @generated from extension: toshi.MCP mcp = 51005;
+ */
+export const mcp: GenExtension<MethodOptions, MCP> = /*@__PURE__*/
+  extDesc(file_toshi_permission, 4);
+
+/**
  * field_permission names what a caller needs to change the field through
  * the mask of an update call marked by_field: a field group of its own,
  * such as "billing.write" for a workspace's spending limits. A field
@@ -158,5 +275,5 @@ export const by_field: GenExtension<MethodOptions, boolean> = /*@__PURE__*/
  * @generated from extension: string field_permission = 51003;
  */
 export const field_permission: GenExtension<FieldOptions, string> = /*@__PURE__*/
-  extDesc(file_toshi_permission, 4);
+  extDesc(file_toshi_permission, 5);
 
