@@ -616,7 +616,7 @@ export const UnlinkIdentityResponseSchema: GenMessage<UnlinkIdentityResponse, {j
  * named here are not checked.
  *
  * An identity is added only by signing in through it while signed in, at
- * POST /auth/<name>/link (docs/contracts/operator-usage.md), never by a
+ * POST /auth/<name>/link on the control plane, never by a
  * call here and never by a matching email.
  *
  * @generated from service toshi.workspace.v1.AccountService
