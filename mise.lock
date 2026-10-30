@@ -82,12 +82,6 @@ url = "https://nodejs.org/dist/v24.22.1/node-v24.22.1-darwin-x64.tar.gz"
 checksum = "sha256:d2046d28c2c3dcd211ac5145c0bf30e2047ef9dfb306693c8c6e2eccd8b95fa5"
 url = "https://nodejs.org/dist/v24.22.1/node-v24.22.1-win-x64.zip"
 
-[[tools."npm:@bufbuild/protoc-gen-es"]]
-version = "2.16.0"
-aube = { path = ".mise/locks/npm-bufbuild-protoc-gen-es/2.16.0", digest = "sha256:6dd269a1a7d715e8fae633099025bce857e31e679c2f87563638998cb902f349" }
-backend = "npm:@bufbuild/protoc-gen-es"
-specifiers = ["2.16.0"]
-
 [[tools.pnpm]]
 version = "12.15.0"
 backend = "aqua:pnpm/pnpm"
