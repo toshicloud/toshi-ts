@@ -76,6 +76,8 @@ entry reads `TOSHI_SERVER`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE` and
 
 A call may set `timeoutMs` instead: it bounds the whole call, retries
 included, and on a watch it bounds the open. It composes with `signal`.
+`ToshiOptions` is the object the client takes, and `CallOptions` the second
+argument of each call, which carries `signal` and `timeoutMs`.
 
 ### Node options
 
@@ -195,6 +197,9 @@ for await (const project of paginate(
 fields. Every page is a call of its own, so `opts` goes to each one, and
 `timeoutMs` bounds a page and not the whole iteration. An error throws once
 and ends the iteration; leaving the loop sends no further request.
+`PageRequest` is a list request, which may name the page to read first with
+`pageToken`, and `PageResponse` a list response, which names the page after
+it with `nextPageToken`.
 
 ### Retries
 
@@ -216,6 +221,10 @@ The client waits the longer of that wait and the backoff, never more than
 caller unchanged, as do every other error the server sends, including
 `Aborted` and `InvalidArgument`, and any connection failure the client
 cannot tell apart from a server error.
+
+`RetryPolicy` says how often and how long a call is retried, `maxAttempts`
+counting the first try; `defaultRetryPolicy` is the default — five
+attempts, a 200 ms initial backoff and a 10 s cap.
 
 ### Waiting and watching
 
@@ -413,8 +422,9 @@ in `proto/toshi/workspace/v1` of the
 `proto/toshi/permission.proto`, which they import. The generated code is committed and imports
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
-`pin.env` names the toshi-api commit (or, once one exists, the release
-tag) the code is generated from. `mise.toml` pins the versions of Node,
+`pin.env` names the toshi-api commit the code is generated from:
+`97c967a669d61bcee048bf7ba90638bd7bddfefb` today, or a release tag once
+one exists. `mise.toml` pins the versions of Node,
 pnpm, `buf` and `protoc-gen-es`.
 
 To regenerate:
@@ -434,7 +444,8 @@ and fails if the result differs from what is committed
 The package's major version follows the API's: `1.x` will serve
 `toshi.workspace.v1`, and a `toshi.workspace.v2` gets a new major
 version. Until a Toshi release serves the API, the package stays at
-`0.x` and is generated from a pinned commit.
+`0.x` and is generated from a pinned commit. `VERSION` is the package
+version, the one `package.json` carries.
 
 ## Publishing
 
