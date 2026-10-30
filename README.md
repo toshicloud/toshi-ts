@@ -424,13 +424,15 @@ only `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit the code is generated from:
 `97c967a669d61bcee048bf7ba90638bd7bddfefb` today, or a release tag once
-one exists. `mise.toml` pins the versions of Node,
-pnpm, `buf` and `protoc-gen-es`.
+one exists. `mise.toml` pins the versions of Node, pnpm and `buf`;
+`package.json` pins `protoc-gen-es` at the same version as the
+`@bufbuild/protobuf` development dependency.
 
 To regenerate:
 
 ```sh
 mise install
+pnpm install --frozen-lockfile
 mise exec -- scripts/generate.sh
 ```
 

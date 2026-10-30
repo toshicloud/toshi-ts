@@ -55,12 +55,15 @@ jobs:
         with:
           persist-credentials: false
 
-      # buf and protoc-gen-es are the generator pinned in mise.toml.
+      # buf is pinned in mise.toml; protoc-gen-es is a package devDependency.
       - uses: jdx/mise-action@8418fedb1110381a0d3ba51a7a415d7c1b884550 # v5.2.2
         with:
           version: 2026.9.14
-          install_args: "--locked node pnpm buf npm:@bufbuild/protoc-gen-es"
+          install_args: "--locked node pnpm buf"
           cache: false
+
+      - name: Install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Generated code is up to date
         run: scripts/check-generated.sh

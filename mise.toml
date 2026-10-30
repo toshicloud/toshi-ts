@@ -2,4 +2,3 @@
 node = "24.22.1"
 pnpm = "12.15.0"
 buf = "1.75.0"
-"npm:@bufbuild/protoc-gen-es" = "2.16.0"
