@@ -163,7 +163,7 @@ describe("createFake", () => {
       serviceId: "svc-1",
       name: "nightly",
       schedule: { case: "cron", value: "0 3 * * *" },
-      channel: "reports",
+      endpoint: "reports",
       event: "report.due",
     });
     expect(set.alarm).toMatchObject({

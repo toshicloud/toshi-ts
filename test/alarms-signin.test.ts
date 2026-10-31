@@ -28,10 +28,10 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
   it("reaches each of the eleven unary calls with its request and hands back its answer", async () => {
     const fake = createFake();
     const schedule = { case: "cron", value: "0 3 * * *" } as const;
-    const alarm = { name: "nightly", channel: "events", event: "tick", schedule };
+    const alarm = { name: "nightly", endpoint: "events", event: "tick", schedule };
     fake
       .on(WorkloadService.method.setServiceAlarm, (req) => ({
-        alarm: { name: req.name, channel: req.channel, event: req.event, schedule },
+        alarm: { name: req.name, endpoint: req.endpoint, event: req.event, schedule },
       }))
       .on(WorkloadService.method.getServiceAlarm, (req) => ({ alarm: { ...alarm, name: req.name } }))
       .on(WorkloadService.method.listServiceAlarms, () => ({ alarms: [alarm, { ...alarm, name: "weekly" }] }))
@@ -49,7 +49,7 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
     const { services } = workload;
 
     const set = await services.setAlarm({ serviceId: "svc-1", ...alarm });
-    expect(set.alarm).toMatchObject({ name: "nightly", channel: "events", event: "tick" });
+    expect(set.alarm).toMatchObject({ name: "nightly", endpoint: "events", event: "tick" });
     expect((await services.getAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.name).toBe("nightly");
     expect((await services.listAlarms({ serviceId: "svc-1" })).alarms.map((a) => a.name)).toEqual([
       "nightly",

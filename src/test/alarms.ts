@@ -61,7 +61,7 @@ export class AlarmStore {
     const alarm = create(ServiceAlarmSchema, {
       name: request.name,
       timezone: request.timezone,
-      channel: request.channel,
+      endpoint: request.endpoint,
       event: request.event,
       data: request.data.slice(),
       misfire: request.misfire,

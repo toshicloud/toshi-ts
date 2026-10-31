@@ -6,7 +6,7 @@ import { describe, expect, it } from "vitest";
 
 import { ArtifactService, ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "../src/gen/toshi/workspace/v1/audit_events_pb.js";
-import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
+import { EndpointService } from "../src/gen/toshi/workspace/v1/endpoints_pb.js";
 import { DiscoveryService } from "../src/gen/toshi/workspace/v1/discovery_pb.js";
 import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
 import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
@@ -42,7 +42,7 @@ const services: readonly DescService[] = [
   SecretService,
   WebhookService,
   DisplayService,
-  ChannelService,
+  EndpointService,
   RecordingService,
   VolumeService,
   ArtifactService,
@@ -114,7 +114,7 @@ describe("the retry table", () => {
         expect(retryClassFor(path), `${path} follows the API's rule`).toBe(expected);
       }
     }
-    expect(paths.size).toBe(255);
+    expect(paths.size).toBe(257);
   });
 
   it("names an exception only for a method the API has", () => {

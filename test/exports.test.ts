@@ -14,12 +14,12 @@ function requireMethod(service: ServiceLike, localName: string): DescMethod {
 }
 
 const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
-  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 67],
+  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 69],
   [root.ProjectService, "toshi.workspace.v1.ProjectService", 21],
   [root.SecretService, "toshi.workspace.v1.SecretService", 11],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
-  [root.ChannelService, "toshi.workspace.v1.ChannelService", 16],
+  [root.EndpointService, "toshi.workspace.v1.EndpointService", 16],
   [root.RecordingService, "toshi.workspace.v1.RecordingService", 5],
   [root.VolumeService, "toshi.workspace.v1.VolumeService", 9],
   [root.ArtifactService, "toshi.workspace.v1.ArtifactService", 3],

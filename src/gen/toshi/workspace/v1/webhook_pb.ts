@@ -13,12 +13,12 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/webhook.proto.
  */
 export const file_toshi_workspace_v1_webhook: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvd2ViaG9vay5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItwCCg9XZWJob29rRW5kcG9pbnQSCgoCaWQYASABKAkSCwoDdXJsGAIgASgJEg4KBmV2ZW50cxgDIAMoCRIPCgdlbmFibGVkGAQgASgIEg4KBmN1cnNvchgFIAEoCRI+ChpwcmV2aW91c19zZWNyZXRfZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFgoOY3Vyc29yX2V4cGlyZWQYCSABKAgSNgoScmV0ZW50aW9uX2JvdW5kYXJ5GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdwcm9qZWN0GAsgASgJIsMCCg9XZWJob29rRGVsaXZlcnkSEAoIZXZlbnRfaWQYASABKAkSDgoGY3Vyc29yGAIgASgJEhMKC3dvcmtsb2FkX2lkGAMgASgJEjcKBXN0YXRlGAQgASgOMigudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tEZWxpdmVyeVN0YXRlEg0KBXRyaWVzGAUgASgFEi8KC25leHRfdHJ5X2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgtsYXN0X3N0YXR1cxgHIAEoBRISCgpsYXN0X2Vycm9yGAggASgJEioKBmR1ZV9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHZG9uZV9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAicwocQ3JlYXRlV2ViaG9va0VuZHBvaW50UmVxdWVzdBILCgN1cmwYASABKAkSDgoGZXZlbnRzGAIgAygJEhAKCGRpc2FibGVkGAMgASgIEhMKC3JlcXVlc3Rfa2V5GAQgASgJEg8KB3Byb2plY3QYBSABKAkiZgodQ3JlYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Eg4KBnNlY3JldBgCIAEoCSInChlHZXRXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJIlMKGkdldFdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEjUKCGVuZHBvaW50GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludCJEChtMaXN0V2ViaG9va0VuZHBvaW50c1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkibwocTGlzdFdlYmhvb2tFbmRwb2ludHNSZXNwb25zZRI2CgllbmRwb2ludHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKnAQocVXBkYXRlV2ViaG9va0VuZHBvaW50UmVxdWVzdBIKCgJpZBgBIAEoCRI1CghlbmRwb2ludBgCIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rRW5kcG9pbnQSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhMKC3JlcXVlc3Rfa2V5GAQgASgJIlYKHVVwZGF0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlEjUKCGVuZHBvaW50GAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLldlYmhvb2tFbmRwb2ludCI/ChxEZWxldGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhMKC3JlcXVlc3Rfa2V5GAIgASgJIh8KHURlbGV0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlIkUKIlJvdGF0ZVdlYmhvb2tFbmRwb2ludFNlY3JldFJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkibAojUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0UmVzcG9uc2USNQoIZW5kcG9pbnQYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0VuZHBvaW50Eg4KBnNlY3JldBgCIAEoCSJaChxMaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXF1ZXN0EhMKC2VuZHBvaW50X2lkGAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFInEKHUxpc3RXZWJob29rRGVsaXZlcmllc1Jlc3BvbnNlEjcKCmRlbGl2ZXJpZXMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0RlbGl2ZXJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJWChpSZXBsYXlXZWJob29rRXZlbnRzUmVxdWVzdBITCgtlbmRwb2ludF9pZBgBIAEoCRIOCgZjdXJzb3IYAiABKAkSEwoLcmVxdWVzdF9rZXkYAyABKAkiTQobUmVwbGF5V2ViaG9va0V2ZW50c1Jlc3BvbnNlEhAKCHJlcGxheWVkGAEgASgFEg4KBmN1cnNvchgCIAEoCRIMCgRtb3JlGAMgASgIKqkBChRXZWJob29rRGVsaXZlcnlTdGF0ZRImCiJXRUJIT09LX0RFTElWRVJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASIgoeV0VCSE9PS19ERUxJVkVSWV9TVEFURV9QRU5ESU5HEAESJAogV0VCSE9PS19ERUxJVkVSWV9TVEFURV9ERUxJVkVSRUQQAhIfChtXRUJIT09LX0RFTElWRVJZX1NUQVRFX0RFQUQQAzLJCwoOV2ViaG9va1NlcnZpY2US4gEKFUNyZWF0ZVdlYmhvb2tFbmRwb2ludBIwLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVXZWJob29rRW5kcG9pbnRSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdlYmhvb2tFbmRwb2ludFJlc3BvbnNlImTC8xgOd2ViaG9va3Mud3JpdGXK8xgJd29ya3NwYWNl0vMYQQoYd2ViaG9vay5lbmRwb2ludF9jcmVhdGVkEiV3ZWJob29rX2VuZHBvaW50OnJlc3BvbnNlLmVuZHBvaW50LmlkEoYBChJHZXRXZWJob29rRW5kcG9pbnQSLS50b3NoaS53b3Jrc3BhY2UudjEuR2V0V2ViaG9va0VuZHBvaW50UmVxdWVzdBouLnRvc2hpLndvcmtzcGFjZS52MS5HZXRXZWJob29rRW5kcG9pbnRSZXNwb25zZSIRwvMYDXdlYmhvb2tzLnJlYWQSjAEKFExpc3RXZWJob29rRW5kcG9pbnRzEi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rRW5kcG9pbnRzUmVxdWVzdBowLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0VuZHBvaW50c1Jlc3BvbnNlIhHC8xgNd2ViaG9va3MucmVhZBLDAQoVVXBkYXRlV2ViaG9va0VuZHBvaW50EjAudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2UiRcLzGA53ZWJob29rcy53cml0ZdLzGC8KGHdlYmhvb2suZW5kcG9pbnRfdXBkYXRlZBITd2ViaG9va19lbmRwb2ludDppZBLDAQoVRGVsZXRlV2ViaG9va0VuZHBvaW50EjAudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVdlYmhvb2tFbmRwb2ludFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlV2ViaG9va0VuZHBvaW50UmVzcG9uc2UiRcLzGA53ZWJob29rcy53cml0ZdLzGC8KGHdlYmhvb2suZW5kcG9pbnRfZGVsZXRlZBITd2ViaG9va19lbmRwb2ludDppZBLTAQobUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0EjYudG9zaGkud29ya3NwYWNlLnYxLlJvdGF0ZVdlYmhvb2tFbmRwb2ludFNlY3JldFJlcXVlc3QaNy50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlV2ViaG9va0VuZHBvaW50U2VjcmV0UmVzcG9uc2UiQ8LzGA53ZWJob29rcy53cml0ZdLzGC0KFndlYmhvb2suc2VjcmV0X3JvdGF0ZWQSE3dlYmhvb2tfZW5kcG9pbnQ6aWQSjwEKFUxpc3RXZWJob29rRGVsaXZlcmllcxIwLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rRGVsaXZlcmllc1Jlc3BvbnNlIhHC8xgNd2ViaG9va3MucmVhZBLFAQoTUmVwbGF5V2ViaG9va0V2ZW50cxIuLnRvc2hpLndvcmtzcGFjZS52MS5SZXBsYXlXZWJob29rRXZlbnRzUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5SZXBsYXlXZWJob29rRXZlbnRzUmVzcG9uc2UiTcLzGA53ZWJob29rcy53cml0ZdLzGDcKF3dlYmhvb2suZXZlbnRzX3JlcGxheWVkEhx3ZWJob29rX2VuZHBvaW50OmVuZHBvaW50X2lkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvd2ViaG9vay5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItQCCgdXZWJob29rEgoKAmlkGAEgASgJEgsKA3VybBgCIAEoCRIOCgZldmVudHMYAyADKAkSDwoHZW5hYmxlZBgEIAEoCBIOCgZjdXJzb3IYBSABKAkSPgoacHJldmlvdXNfc2VjcmV0X2V4cGlyZXNfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmNyZWF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhYKDmN1cnNvcl9leHBpcmVkGAkgASgIEjYKEnJldGVudGlvbl9ib3VuZGFyeRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDwoHcHJvamVjdBgLIAEoCSLDAgoPV2ViaG9va0RlbGl2ZXJ5EhAKCGV2ZW50X2lkGAEgASgJEg4KBmN1cnNvchgCIAEoCRITCgt3b3JrbG9hZF9pZBgDIAEoCRI3CgVzdGF0ZRgEIAEoDjIoLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rRGVsaXZlcnlTdGF0ZRINCgV0cmllcxgFIAEoBRIvCgtuZXh0X3RyeV9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLbGFzdF9zdGF0dXMYByABKAUSEgoKbGFzdF9lcnJvchgIIAEoCRIqCgZkdWVfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB2RvbmVfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImsKFENyZWF0ZVdlYmhvb2tSZXF1ZXN0EgsKA3VybBgBIAEoCRIOCgZldmVudHMYAiADKAkSEAoIZGlzYWJsZWQYAyABKAgSEwoLcmVxdWVzdF9rZXkYBCABKAkSDwoHcHJvamVjdBgFIAEoCSJVChVDcmVhdGVXZWJob29rUmVzcG9uc2USLAoHd2ViaG9vaxgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rEg4KBnNlY3JldBgCIAEoCSIfChFHZXRXZWJob29rUmVxdWVzdBIKCgJpZBgBIAEoCSJCChJHZXRXZWJob29rUmVzcG9uc2USLAoHd2ViaG9vaxgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5XZWJob29rIjwKE0xpc3RXZWJob29rc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiXgoUTGlzdFdlYmhvb2tzUmVzcG9uc2USLQoId2ViaG9va3MYASADKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9vaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkilgEKFFVwZGF0ZVdlYmhvb2tSZXF1ZXN0EgoKAmlkGAEgASgJEiwKB3dlYmhvb2sYAiABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9vaxIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEwoLcmVxdWVzdF9rZXkYBCABKAkiRQoVVXBkYXRlV2ViaG9va1Jlc3BvbnNlEiwKB3dlYmhvb2sYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9vayI3ChREZWxldGVXZWJob29rUmVxdWVzdBIKCgJpZBgBIAEoCRITCgtyZXF1ZXN0X2tleRgCIAEoCSIXChVEZWxldGVXZWJob29rUmVzcG9uc2UiPQoaUm90YXRlV2ViaG9va1NlY3JldFJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiWwobUm90YXRlV2ViaG9va1NlY3JldFJlc3BvbnNlEiwKB3dlYmhvb2sYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9vaxIOCgZzZWNyZXQYAiABKAkiWQocTGlzdFdlYmhvb2tEZWxpdmVyaWVzUmVxdWVzdBISCgp3ZWJob29rX2lkGAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFInEKHUxpc3RXZWJob29rRGVsaXZlcmllc1Jlc3BvbnNlEjcKCmRlbGl2ZXJpZXMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuV2ViaG9va0RlbGl2ZXJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJVChpSZXBsYXlXZWJob29rRXZlbnRzUmVxdWVzdBISCgp3ZWJob29rX2lkGAEgASgJEg4KBmN1cnNvchgCIAEoCRITCgtyZXF1ZXN0X2tleRgDIAEoCSJNChtSZXBsYXlXZWJob29rRXZlbnRzUmVzcG9uc2USEAoIcmVwbGF5ZWQYASABKAUSDgoGY3Vyc29yGAIgASgJEgwKBG1vcmUYAyABKAgqqQEKFFdlYmhvb2tEZWxpdmVyeVN0YXRlEiYKIldFQkhPT0tfREVMSVZFUllfU1RBVEVfVU5TUEVDSUZJRUQQABIiCh5XRUJIT09LX0RFTElWRVJZX1NUQVRFX1BFTkRJTkcQARIkCiBXRUJIT09LX0RFTElWRVJZX1NUQVRFX0RFTElWRVJFRBACEh8KG1dFQkhPT0tfREVMSVZFUllfU1RBVEVfREVBRBADMtcICg5XZWJob29rU2VydmljZRKFAQoNQ3JlYXRlV2ViaG9vaxIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVXZWJob29rUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVXZWJob29rUmVzcG9uc2UiH8LzGA53ZWJob29rcy53cml0ZcrzGAl3b3Jrc3BhY2USbgoKR2V0V2ViaG9vaxIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRXZWJob29rUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRXZWJob29rUmVzcG9uc2UiEcLzGA13ZWJob29rcy5yZWFkEnQKDExpc3RXZWJob29rcxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va3NSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RXZWJob29rc1Jlc3BvbnNlIhHC8xgNd2ViaG9va3MucmVhZBJ4Cg1VcGRhdGVXZWJob29rEigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVdlYmhvb2tSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVdlYmhvb2tSZXNwb25zZSISwvMYDndlYmhvb2tzLndyaXRlEngKDURlbGV0ZVdlYmhvb2sSKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlV2ViaG9va1JlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlV2ViaG9va1Jlc3BvbnNlIhLC8xgOd2ViaG9va3Mud3JpdGUSpgEKE1JvdGF0ZVdlYmhvb2tTZWNyZXQSLi50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlV2ViaG9va1NlY3JldFJlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlV2ViaG9va1NlY3JldFJlc3BvbnNlIi7C8xgOd2ViaG9va3Mud3JpdGXS8xgYChZ3ZWJob29rLnNlY3JldF9yb3RhdGVkEo8BChVMaXN0V2ViaG9va0RlbGl2ZXJpZXMSMC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFdlYmhvb2tEZWxpdmVyaWVzUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0V2ViaG9va0RlbGl2ZXJpZXNSZXNwb25zZSIRwvMYDXdlYmhvb2tzLnJlYWQSpwEKE1JlcGxheVdlYmhvb2tFdmVudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5V2ViaG9va0V2ZW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5V2ViaG9va0V2ZW50c1Jlc3BvbnNlIi/C8xgOd2ViaG9va3Mud3JpdGXS8xgZChd3ZWJob29rLmV2ZW50c19yZXBsYXllZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
- * @generated from message toshi.workspace.v1.WebhookEndpoint
+ * @generated from message toshi.workspace.v1.Webhook
  */
-export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
+export type Webhook = Message<"toshi.workspace.v1.Webhook"> & {
   /**
    * Assigned by the server; unique within the workspace.
    *
@@ -34,7 +34,7 @@ export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
   url: string;
 
   /**
-   * The event names the endpoint is owed, each a name (job.state_changed)
+   * The event names the webhook is owed, each a name (job.state_changed)
    * or a prefix ending in ".*" (job.*); at most 64. Empty keeps every
    * event but those a connection received, which only a name or prefix
    * that matches them keeps.
@@ -49,7 +49,7 @@ export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
   enabled: boolean;
 
   /**
-   * The position in the workspace's event log the endpoint has read up to,
+   * The position in the workspace's event log the webhook has read up to,
    * an Event's cursor.
    *
    * @generated from field: string cursor = 5;
@@ -75,8 +75,8 @@ export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
   updatedAt?: Timestamp | undefined;
 
   /**
-   * Set when events after the endpoint's cursor were removed by retention.
-   * The endpoint is owed nothing until its cursor is moved.
+   * Set when events after the webhook's cursor were removed by retention.
+   * The webhook is owed nothing until its cursor is moved.
    *
    * @generated from field: bool cursor_expired = 9;
    */
@@ -90,7 +90,7 @@ export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
   retentionBoundary?: Timestamp | undefined;
 
   /**
-   * The name of a project in the workspace: the endpoint is owed only that
+   * The name of a project in the workspace: the webhook is owed only that
    * project's events, those of its workloads and those its connections
    * received. Empty keeps the events of every project.
    *
@@ -100,9 +100,9 @@ export type WebhookEndpoint = Message<"toshi.workspace.v1.WebhookEndpoint"> & {
 };
 
 /**
- * @generated from message toshi.workspace.v1.WebhookEndpoint
+ * @generated from message toshi.workspace.v1.Webhook
  */
-export type WebhookEndpointJson = {
+export type WebhookJson = {
   /**
    * Assigned by the server; unique within the workspace.
    *
@@ -118,7 +118,7 @@ export type WebhookEndpointJson = {
   url?: string;
 
   /**
-   * The event names the endpoint is owed, each a name (job.state_changed)
+   * The event names the webhook is owed, each a name (job.state_changed)
    * or a prefix ending in ".*" (job.*); at most 64. Empty keeps every
    * event but those a connection received, which only a name or prefix
    * that matches them keeps.
@@ -133,7 +133,7 @@ export type WebhookEndpointJson = {
   enabled?: boolean;
 
   /**
-   * The position in the workspace's event log the endpoint has read up to,
+   * The position in the workspace's event log the webhook has read up to,
    * an Event's cursor.
    *
    * @generated from field: string cursor = 5;
@@ -159,8 +159,8 @@ export type WebhookEndpointJson = {
   updatedAt?: TimestampJson;
 
   /**
-   * Set when events after the endpoint's cursor were removed by retention.
-   * The endpoint is owed nothing until its cursor is moved.
+   * Set when events after the webhook's cursor were removed by retention.
+   * The webhook is owed nothing until its cursor is moved.
    *
    * @generated from field: bool cursor_expired = 9;
    */
@@ -174,7 +174,7 @@ export type WebhookEndpointJson = {
   retentionBoundary?: TimestampJson;
 
   /**
-   * The name of a project in the workspace: the endpoint is owed only that
+   * The name of a project in the workspace: the webhook is owed only that
    * project's events, those of its workloads and those its connections
    * received. Empty keeps the events of every project.
    *
@@ -184,14 +184,14 @@ export type WebhookEndpointJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.WebhookEndpoint.
- * Use `create(WebhookEndpointSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.Webhook.
+ * Use `create(WebhookSchema)` to create a new message.
  */
-export const WebhookEndpointSchema: GenMessage<WebhookEndpoint, {jsonType: WebhookEndpointJson}> = /*@__PURE__*/
+export const WebhookSchema: GenMessage<Webhook, {jsonType: WebhookJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 0);
 
 /**
- * WebhookDelivery is one event owed to one endpoint.
+ * WebhookDelivery is one event owed to one webhook.
  *
  * @generated from message toshi.workspace.v1.WebhookDelivery
  */
@@ -260,7 +260,7 @@ export type WebhookDelivery = Message<"toshi.workspace.v1.WebhookDelivery"> & {
 };
 
 /**
- * WebhookDelivery is one event owed to one endpoint.
+ * WebhookDelivery is one event owed to one webhook.
  *
  * @generated from message toshi.workspace.v1.WebhookDelivery
  */
@@ -336,9 +336,9 @@ export const WebhookDeliverySchema: GenMessage<WebhookDelivery, {jsonType: Webho
   messageDesc(file_toshi_workspace_v1_webhook, 1);
 
 /**
- * @generated from message toshi.workspace.v1.CreateWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.CreateWebhookRequest
  */
-export type CreateWebhookEndpointRequest = Message<"toshi.workspace.v1.CreateWebhookEndpointRequest"> & {
+export type CreateWebhookRequest = Message<"toshi.workspace.v1.CreateWebhookRequest"> & {
   /**
    * @generated from field: string url = 1;
    */
@@ -350,7 +350,7 @@ export type CreateWebhookEndpointRequest = Message<"toshi.workspace.v1.CreateWeb
   events: string[];
 
   /**
-   * Set to make the endpoint disabled.
+   * Set to make the webhook disabled.
    *
    * @generated from field: bool disabled = 3;
    */
@@ -362,7 +362,7 @@ export type CreateWebhookEndpointRequest = Message<"toshi.workspace.v1.CreateWeb
   requestKey: string;
 
   /**
-   * The name of a project in the workspace; see WebhookEndpoint.project.
+   * The name of a project in the workspace; see Webhook.project.
    *
    * @generated from field: string project = 5;
    */
@@ -370,9 +370,9 @@ export type CreateWebhookEndpointRequest = Message<"toshi.workspace.v1.CreateWeb
 };
 
 /**
- * @generated from message toshi.workspace.v1.CreateWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.CreateWebhookRequest
  */
-export type CreateWebhookEndpointRequestJson = {
+export type CreateWebhookRequestJson = {
   /**
    * @generated from field: string url = 1;
    */
@@ -384,7 +384,7 @@ export type CreateWebhookEndpointRequestJson = {
   events?: string[];
 
   /**
-   * Set to make the endpoint disabled.
+   * Set to make the webhook disabled.
    *
    * @generated from field: bool disabled = 3;
    */
@@ -396,7 +396,7 @@ export type CreateWebhookEndpointRequestJson = {
   requestKey?: string;
 
   /**
-   * The name of a project in the workspace; see WebhookEndpoint.project.
+   * The name of a project in the workspace; see Webhook.project.
    *
    * @generated from field: string project = 5;
    */
@@ -404,20 +404,20 @@ export type CreateWebhookEndpointRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.CreateWebhookEndpointRequest.
- * Use `create(CreateWebhookEndpointRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.CreateWebhookRequest.
+ * Use `create(CreateWebhookRequestSchema)` to create a new message.
  */
-export const CreateWebhookEndpointRequestSchema: GenMessage<CreateWebhookEndpointRequest, {jsonType: CreateWebhookEndpointRequestJson}> = /*@__PURE__*/
+export const CreateWebhookRequestSchema: GenMessage<CreateWebhookRequest, {jsonType: CreateWebhookRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 2);
 
 /**
- * @generated from message toshi.workspace.v1.CreateWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.CreateWebhookResponse
  */
-export type CreateWebhookEndpointResponse = Message<"toshi.workspace.v1.CreateWebhookEndpointResponse"> & {
+export type CreateWebhookResponse = Message<"toshi.workspace.v1.CreateWebhookResponse"> & {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpoint | undefined;
+  webhook?: Webhook | undefined;
 
   /**
    * whsec_ and the base64 of 32 random bytes. No other answer carries it.
@@ -428,13 +428,13 @@ export type CreateWebhookEndpointResponse = Message<"toshi.workspace.v1.CreateWe
 };
 
 /**
- * @generated from message toshi.workspace.v1.CreateWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.CreateWebhookResponse
  */
-export type CreateWebhookEndpointResponseJson = {
+export type CreateWebhookResponseJson = {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpointJson;
+  webhook?: WebhookJson;
 
   /**
    * whsec_ and the base64 of 32 random bytes. No other answer carries it.
@@ -445,16 +445,16 @@ export type CreateWebhookEndpointResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.CreateWebhookEndpointResponse.
- * Use `create(CreateWebhookEndpointResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.CreateWebhookResponse.
+ * Use `create(CreateWebhookResponseSchema)` to create a new message.
  */
-export const CreateWebhookEndpointResponseSchema: GenMessage<CreateWebhookEndpointResponse, {jsonType: CreateWebhookEndpointResponseJson}> = /*@__PURE__*/
+export const CreateWebhookResponseSchema: GenMessage<CreateWebhookResponse, {jsonType: CreateWebhookResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 3);
 
 /**
- * @generated from message toshi.workspace.v1.GetWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.GetWebhookRequest
  */
-export type GetWebhookEndpointRequest = Message<"toshi.workspace.v1.GetWebhookEndpointRequest"> & {
+export type GetWebhookRequest = Message<"toshi.workspace.v1.GetWebhookRequest"> & {
   /**
    * @generated from field: string id = 1;
    */
@@ -462,9 +462,9 @@ export type GetWebhookEndpointRequest = Message<"toshi.workspace.v1.GetWebhookEn
 };
 
 /**
- * @generated from message toshi.workspace.v1.GetWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.GetWebhookRequest
  */
-export type GetWebhookEndpointRequestJson = {
+export type GetWebhookRequestJson = {
   /**
    * @generated from field: string id = 1;
    */
@@ -472,45 +472,45 @@ export type GetWebhookEndpointRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.GetWebhookEndpointRequest.
- * Use `create(GetWebhookEndpointRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.GetWebhookRequest.
+ * Use `create(GetWebhookRequestSchema)` to create a new message.
  */
-export const GetWebhookEndpointRequestSchema: GenMessage<GetWebhookEndpointRequest, {jsonType: GetWebhookEndpointRequestJson}> = /*@__PURE__*/
+export const GetWebhookRequestSchema: GenMessage<GetWebhookRequest, {jsonType: GetWebhookRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 4);
 
 /**
- * @generated from message toshi.workspace.v1.GetWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.GetWebhookResponse
  */
-export type GetWebhookEndpointResponse = Message<"toshi.workspace.v1.GetWebhookEndpointResponse"> & {
+export type GetWebhookResponse = Message<"toshi.workspace.v1.GetWebhookResponse"> & {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpoint | undefined;
+  webhook?: Webhook | undefined;
 };
 
 /**
- * @generated from message toshi.workspace.v1.GetWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.GetWebhookResponse
  */
-export type GetWebhookEndpointResponseJson = {
+export type GetWebhookResponseJson = {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpointJson;
+  webhook?: WebhookJson;
 };
 
 /**
- * Describes the message toshi.workspace.v1.GetWebhookEndpointResponse.
- * Use `create(GetWebhookEndpointResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.GetWebhookResponse.
+ * Use `create(GetWebhookResponseSchema)` to create a new message.
  */
-export const GetWebhookEndpointResponseSchema: GenMessage<GetWebhookEndpointResponse, {jsonType: GetWebhookEndpointResponseJson}> = /*@__PURE__*/
+export const GetWebhookResponseSchema: GenMessage<GetWebhookResponse, {jsonType: GetWebhookResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 5);
 
 /**
- * @generated from message toshi.workspace.v1.ListWebhookEndpointsRequest
+ * @generated from message toshi.workspace.v1.ListWebhooksRequest
  */
-export type ListWebhookEndpointsRequest = Message<"toshi.workspace.v1.ListWebhookEndpointsRequest"> & {
+export type ListWebhooksRequest = Message<"toshi.workspace.v1.ListWebhooksRequest"> & {
   /**
-   * The most endpoints in one page; zero lets the server choose.
+   * The most webhooks in one page; zero lets the server choose.
    *
    * @generated from field: int32 page_size = 1;
    */
@@ -525,11 +525,11 @@ export type ListWebhookEndpointsRequest = Message<"toshi.workspace.v1.ListWebhoo
 };
 
 /**
- * @generated from message toshi.workspace.v1.ListWebhookEndpointsRequest
+ * @generated from message toshi.workspace.v1.ListWebhooksRequest
  */
-export type ListWebhookEndpointsRequestJson = {
+export type ListWebhooksRequestJson = {
   /**
-   * The most endpoints in one page; zero lets the server choose.
+   * The most webhooks in one page; zero lets the server choose.
    *
    * @generated from field: int32 page_size = 1;
    */
@@ -544,20 +544,20 @@ export type ListWebhookEndpointsRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.ListWebhookEndpointsRequest.
- * Use `create(ListWebhookEndpointsRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.ListWebhooksRequest.
+ * Use `create(ListWebhooksRequestSchema)` to create a new message.
  */
-export const ListWebhookEndpointsRequestSchema: GenMessage<ListWebhookEndpointsRequest, {jsonType: ListWebhookEndpointsRequestJson}> = /*@__PURE__*/
+export const ListWebhooksRequestSchema: GenMessage<ListWebhooksRequest, {jsonType: ListWebhooksRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 6);
 
 /**
- * @generated from message toshi.workspace.v1.ListWebhookEndpointsResponse
+ * @generated from message toshi.workspace.v1.ListWebhooksResponse
  */
-export type ListWebhookEndpointsResponse = Message<"toshi.workspace.v1.ListWebhookEndpointsResponse"> & {
+export type ListWebhooksResponse = Message<"toshi.workspace.v1.ListWebhooksResponse"> & {
   /**
-   * @generated from field: repeated toshi.workspace.v1.WebhookEndpoint endpoints = 1;
+   * @generated from field: repeated toshi.workspace.v1.Webhook webhooks = 1;
    */
-  endpoints: WebhookEndpoint[];
+  webhooks: Webhook[];
 
   /**
    * Empty on the last page.
@@ -568,13 +568,13 @@ export type ListWebhookEndpointsResponse = Message<"toshi.workspace.v1.ListWebho
 };
 
 /**
- * @generated from message toshi.workspace.v1.ListWebhookEndpointsResponse
+ * @generated from message toshi.workspace.v1.ListWebhooksResponse
  */
-export type ListWebhookEndpointsResponseJson = {
+export type ListWebhooksResponseJson = {
   /**
-   * @generated from field: repeated toshi.workspace.v1.WebhookEndpoint endpoints = 1;
+   * @generated from field: repeated toshi.workspace.v1.Webhook webhooks = 1;
    */
-  endpoints?: WebhookEndpointJson[];
+  webhooks?: WebhookJson[];
 
   /**
    * Empty on the last page.
@@ -585,16 +585,16 @@ export type ListWebhookEndpointsResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.ListWebhookEndpointsResponse.
- * Use `create(ListWebhookEndpointsResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.ListWebhooksResponse.
+ * Use `create(ListWebhooksResponseSchema)` to create a new message.
  */
-export const ListWebhookEndpointsResponseSchema: GenMessage<ListWebhookEndpointsResponse, {jsonType: ListWebhookEndpointsResponseJson}> = /*@__PURE__*/
+export const ListWebhooksResponseSchema: GenMessage<ListWebhooksResponse, {jsonType: ListWebhooksResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 7);
 
 /**
- * @generated from message toshi.workspace.v1.UpdateWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.UpdateWebhookRequest
  */
-export type UpdateWebhookEndpointRequest = Message<"toshi.workspace.v1.UpdateWebhookEndpointRequest"> & {
+export type UpdateWebhookRequest = Message<"toshi.workspace.v1.UpdateWebhookRequest"> & {
   /**
    * @generated from field: string id = 1;
    */
@@ -603,9 +603,9 @@ export type UpdateWebhookEndpointRequest = Message<"toshi.workspace.v1.UpdateWeb
   /**
    * Carries the new values of the fields update_mask names.
    *
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 2;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 2;
    */
-  endpoint?: WebhookEndpoint | undefined;
+  webhook?: Webhook | undefined;
 
   /**
    * One or more of url, events, project, enabled and cursor.
@@ -621,9 +621,9 @@ export type UpdateWebhookEndpointRequest = Message<"toshi.workspace.v1.UpdateWeb
 };
 
 /**
- * @generated from message toshi.workspace.v1.UpdateWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.UpdateWebhookRequest
  */
-export type UpdateWebhookEndpointRequestJson = {
+export type UpdateWebhookRequestJson = {
   /**
    * @generated from field: string id = 1;
    */
@@ -632,9 +632,9 @@ export type UpdateWebhookEndpointRequestJson = {
   /**
    * Carries the new values of the fields update_mask names.
    *
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 2;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 2;
    */
-  endpoint?: WebhookEndpointJson;
+  webhook?: WebhookJson;
 
   /**
    * One or more of url, events, project, enabled and cursor.
@@ -650,43 +650,43 @@ export type UpdateWebhookEndpointRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.UpdateWebhookEndpointRequest.
- * Use `create(UpdateWebhookEndpointRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.UpdateWebhookRequest.
+ * Use `create(UpdateWebhookRequestSchema)` to create a new message.
  */
-export const UpdateWebhookEndpointRequestSchema: GenMessage<UpdateWebhookEndpointRequest, {jsonType: UpdateWebhookEndpointRequestJson}> = /*@__PURE__*/
+export const UpdateWebhookRequestSchema: GenMessage<UpdateWebhookRequest, {jsonType: UpdateWebhookRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 8);
 
 /**
- * @generated from message toshi.workspace.v1.UpdateWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.UpdateWebhookResponse
  */
-export type UpdateWebhookEndpointResponse = Message<"toshi.workspace.v1.UpdateWebhookEndpointResponse"> & {
+export type UpdateWebhookResponse = Message<"toshi.workspace.v1.UpdateWebhookResponse"> & {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpoint | undefined;
+  webhook?: Webhook | undefined;
 };
 
 /**
- * @generated from message toshi.workspace.v1.UpdateWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.UpdateWebhookResponse
  */
-export type UpdateWebhookEndpointResponseJson = {
+export type UpdateWebhookResponseJson = {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpointJson;
+  webhook?: WebhookJson;
 };
 
 /**
- * Describes the message toshi.workspace.v1.UpdateWebhookEndpointResponse.
- * Use `create(UpdateWebhookEndpointResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.UpdateWebhookResponse.
+ * Use `create(UpdateWebhookResponseSchema)` to create a new message.
  */
-export const UpdateWebhookEndpointResponseSchema: GenMessage<UpdateWebhookEndpointResponse, {jsonType: UpdateWebhookEndpointResponseJson}> = /*@__PURE__*/
+export const UpdateWebhookResponseSchema: GenMessage<UpdateWebhookResponse, {jsonType: UpdateWebhookResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 9);
 
 /**
- * @generated from message toshi.workspace.v1.DeleteWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.DeleteWebhookRequest
  */
-export type DeleteWebhookEndpointRequest = Message<"toshi.workspace.v1.DeleteWebhookEndpointRequest"> & {
+export type DeleteWebhookRequest = Message<"toshi.workspace.v1.DeleteWebhookRequest"> & {
   /**
    * @generated from field: string id = 1;
    */
@@ -699,9 +699,9 @@ export type DeleteWebhookEndpointRequest = Message<"toshi.workspace.v1.DeleteWeb
 };
 
 /**
- * @generated from message toshi.workspace.v1.DeleteWebhookEndpointRequest
+ * @generated from message toshi.workspace.v1.DeleteWebhookRequest
  */
-export type DeleteWebhookEndpointRequestJson = {
+export type DeleteWebhookRequestJson = {
   /**
    * @generated from field: string id = 1;
    */
@@ -714,35 +714,35 @@ export type DeleteWebhookEndpointRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.DeleteWebhookEndpointRequest.
- * Use `create(DeleteWebhookEndpointRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.DeleteWebhookRequest.
+ * Use `create(DeleteWebhookRequestSchema)` to create a new message.
  */
-export const DeleteWebhookEndpointRequestSchema: GenMessage<DeleteWebhookEndpointRequest, {jsonType: DeleteWebhookEndpointRequestJson}> = /*@__PURE__*/
+export const DeleteWebhookRequestSchema: GenMessage<DeleteWebhookRequest, {jsonType: DeleteWebhookRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 10);
 
 /**
- * @generated from message toshi.workspace.v1.DeleteWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.DeleteWebhookResponse
  */
-export type DeleteWebhookEndpointResponse = Message<"toshi.workspace.v1.DeleteWebhookEndpointResponse"> & {
+export type DeleteWebhookResponse = Message<"toshi.workspace.v1.DeleteWebhookResponse"> & {
 };
 
 /**
- * @generated from message toshi.workspace.v1.DeleteWebhookEndpointResponse
+ * @generated from message toshi.workspace.v1.DeleteWebhookResponse
  */
-export type DeleteWebhookEndpointResponseJson = {
+export type DeleteWebhookResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.DeleteWebhookEndpointResponse.
- * Use `create(DeleteWebhookEndpointResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.DeleteWebhookResponse.
+ * Use `create(DeleteWebhookResponseSchema)` to create a new message.
  */
-export const DeleteWebhookEndpointResponseSchema: GenMessage<DeleteWebhookEndpointResponse, {jsonType: DeleteWebhookEndpointResponseJson}> = /*@__PURE__*/
+export const DeleteWebhookResponseSchema: GenMessage<DeleteWebhookResponse, {jsonType: DeleteWebhookResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 11);
 
 /**
- * @generated from message toshi.workspace.v1.RotateWebhookEndpointSecretRequest
+ * @generated from message toshi.workspace.v1.RotateWebhookSecretRequest
  */
-export type RotateWebhookEndpointSecretRequest = Message<"toshi.workspace.v1.RotateWebhookEndpointSecretRequest"> & {
+export type RotateWebhookSecretRequest = Message<"toshi.workspace.v1.RotateWebhookSecretRequest"> & {
   /**
    * @generated from field: string id = 1;
    */
@@ -755,9 +755,9 @@ export type RotateWebhookEndpointSecretRequest = Message<"toshi.workspace.v1.Rot
 };
 
 /**
- * @generated from message toshi.workspace.v1.RotateWebhookEndpointSecretRequest
+ * @generated from message toshi.workspace.v1.RotateWebhookSecretRequest
  */
-export type RotateWebhookEndpointSecretRequestJson = {
+export type RotateWebhookSecretRequestJson = {
   /**
    * @generated from field: string id = 1;
    */
@@ -770,23 +770,23 @@ export type RotateWebhookEndpointSecretRequestJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.RotateWebhookEndpointSecretRequest.
- * Use `create(RotateWebhookEndpointSecretRequestSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.RotateWebhookSecretRequest.
+ * Use `create(RotateWebhookSecretRequestSchema)` to create a new message.
  */
-export const RotateWebhookEndpointSecretRequestSchema: GenMessage<RotateWebhookEndpointSecretRequest, {jsonType: RotateWebhookEndpointSecretRequestJson}> = /*@__PURE__*/
+export const RotateWebhookSecretRequestSchema: GenMessage<RotateWebhookSecretRequest, {jsonType: RotateWebhookSecretRequestJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 12);
 
 /**
- * @generated from message toshi.workspace.v1.RotateWebhookEndpointSecretResponse
+ * @generated from message toshi.workspace.v1.RotateWebhookSecretResponse
  */
-export type RotateWebhookEndpointSecretResponse = Message<"toshi.workspace.v1.RotateWebhookEndpointSecretResponse"> & {
+export type RotateWebhookSecretResponse = Message<"toshi.workspace.v1.RotateWebhookSecretResponse"> & {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpoint | undefined;
+  webhook?: Webhook | undefined;
 
   /**
-   * The new secret, as CreateWebhookEndpointResponse's.
+   * The new secret, as CreateWebhookResponse's.
    *
    * @generated from field: string secret = 2;
    */
@@ -794,16 +794,16 @@ export type RotateWebhookEndpointSecretResponse = Message<"toshi.workspace.v1.Ro
 };
 
 /**
- * @generated from message toshi.workspace.v1.RotateWebhookEndpointSecretResponse
+ * @generated from message toshi.workspace.v1.RotateWebhookSecretResponse
  */
-export type RotateWebhookEndpointSecretResponseJson = {
+export type RotateWebhookSecretResponseJson = {
   /**
-   * @generated from field: toshi.workspace.v1.WebhookEndpoint endpoint = 1;
+   * @generated from field: toshi.workspace.v1.Webhook webhook = 1;
    */
-  endpoint?: WebhookEndpointJson;
+  webhook?: WebhookJson;
 
   /**
-   * The new secret, as CreateWebhookEndpointResponse's.
+   * The new secret, as CreateWebhookResponse's.
    *
    * @generated from field: string secret = 2;
    */
@@ -811,10 +811,10 @@ export type RotateWebhookEndpointSecretResponseJson = {
 };
 
 /**
- * Describes the message toshi.workspace.v1.RotateWebhookEndpointSecretResponse.
- * Use `create(RotateWebhookEndpointSecretResponseSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.RotateWebhookSecretResponse.
+ * Use `create(RotateWebhookSecretResponseSchema)` to create a new message.
  */
-export const RotateWebhookEndpointSecretResponseSchema: GenMessage<RotateWebhookEndpointSecretResponse, {jsonType: RotateWebhookEndpointSecretResponseJson}> = /*@__PURE__*/
+export const RotateWebhookSecretResponseSchema: GenMessage<RotateWebhookSecretResponse, {jsonType: RotateWebhookSecretResponseJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_webhook, 13);
 
 /**
@@ -822,9 +822,9 @@ export const RotateWebhookEndpointSecretResponseSchema: GenMessage<RotateWebhook
  */
 export type ListWebhookDeliveriesRequest = Message<"toshi.workspace.v1.ListWebhookDeliveriesRequest"> & {
   /**
-   * @generated from field: string endpoint_id = 1;
+   * @generated from field: string webhook_id = 1;
    */
-  endpointId: string;
+  webhookId: string;
 
   /**
    * From an earlier response's next_page_token, or a delivery's cursor:
@@ -848,9 +848,9 @@ export type ListWebhookDeliveriesRequest = Message<"toshi.workspace.v1.ListWebho
  */
 export type ListWebhookDeliveriesRequestJson = {
   /**
-   * @generated from field: string endpoint_id = 1;
+   * @generated from field: string webhook_id = 1;
    */
-  endpointId?: string;
+  webhookId?: string;
 
   /**
    * From an earlier response's next_page_token, or a delivery's cursor:
@@ -922,9 +922,9 @@ export const ListWebhookDeliveriesResponseSchema: GenMessage<ListWebhookDeliveri
  */
 export type ReplayWebhookEventsRequest = Message<"toshi.workspace.v1.ReplayWebhookEventsRequest"> & {
   /**
-   * @generated from field: string endpoint_id = 1;
+   * @generated from field: string webhook_id = 1;
    */
-  endpointId: string;
+  webhookId: string;
 
   /**
    * Events after this cursor; empty starts at the oldest event the log
@@ -945,9 +945,9 @@ export type ReplayWebhookEventsRequest = Message<"toshi.workspace.v1.ReplayWebho
  */
 export type ReplayWebhookEventsRequestJson = {
   /**
-   * @generated from field: string endpoint_id = 1;
+   * @generated from field: string webhook_id = 1;
    */
-  endpointId?: string;
+  webhookId?: string;
 
   /**
    * Events after this cursor; empty starts at the oldest event the log
@@ -990,7 +990,7 @@ export type ReplayWebhookEventsResponse = Message<"toshi.workspace.v1.ReplayWebh
   cursor: string;
 
   /**
-   * Set when events up to the endpoint's own cursor remain after cursor.
+   * Set when events up to the webhook's own cursor remain after cursor.
    *
    * @generated from field: bool more = 3;
    */
@@ -1017,7 +1017,7 @@ export type ReplayWebhookEventsResponseJson = {
   cursor?: string;
 
   /**
-   * Set when events up to the endpoint's own cursor remain after cursor.
+   * Set when events up to the webhook's own cursor remain after cursor.
    *
    * @generated from field: bool more = 3;
    */
@@ -1074,11 +1074,11 @@ export const WebhookDeliveryStateSchema: GenEnum<WebhookDeliveryState, WebhookDe
   enumDesc(file_toshi_workspace_v1_webhook, 0);
 
 /**
- * WebhookService manages a workspace's webhook endpoints: the URLs its
+ * WebhookService manages a workspace's webhooks: the URLs its
  * events are POSTed to, signed per Standard Webhooks. The caller's credential
- * names the workspace, as for WorkloadService. An endpoint belongs to the
+ * names the workspace, as for WorkloadService. A webhook belongs to the
  * workspace, not to an environment, and is owed the events of every
- * project unless its project names one. An endpoint of another workspace
+ * project unless its project names one. A webhook of another workspace
  * is NOT_FOUND.
  *
  * Every mutating call takes a request_key, with WorkloadService's rule: a
@@ -1086,79 +1086,79 @@ export const WebhookDeliveryStateSchema: GenEnum<WebhookDeliveryState, WebhookDe
  * call returned and changes nothing; the same key with a different payload
  * fails with FAILED_PRECONDITION; an empty key means no retry protection.
  *
- * An endpoint's signing secret is in the answer to the call that made it,
- * CreateWebhookEndpoint or RotateWebhookEndpointSecret, and in no other
+ * A webhook's signing secret is in the answer to the call that made it,
+ * CreateWebhook or RotateWebhookSecret, and in no other
  * answer. A retry of that call returns the same secret while it is the
- * endpoint's newest; once the endpoint is rotated again or deleted, the
+ * webhook's newest; once the webhook is rotated again or deleted, the
  * retry fails with FAILED_PRECONDITION and changes nothing.
  *
  * @generated from service toshi.workspace.v1.WebhookService
  */
 export const WebhookService: GenService<{
   /**
-   * CreateWebhookEndpoint makes an endpoint and its signing secret. The
-   * endpoint is owed the events written after it, from its cursor on. The
+   * CreateWebhook makes a webhook and its signing secret. The
+   * webhook is owed the events written after it, from its cursor on. The
    * control plane must hold a keyring to seal the secret; without one the
    * call fails with FAILED_PRECONDITION.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.CreateWebhookEndpoint
+   * @generated from rpc toshi.workspace.v1.WebhookService.CreateWebhook
    */
-  createWebhookEndpoint: {
+  createWebhook: {
     methodKind: "unary";
-    input: typeof CreateWebhookEndpointRequestSchema;
-    output: typeof CreateWebhookEndpointResponseSchema;
+    input: typeof CreateWebhookRequestSchema;
+    output: typeof CreateWebhookResponseSchema;
   },
   /**
-   * GetWebhookEndpoint returns one endpoint. An unknown ID fails with
+   * GetWebhook returns one webhook. An unknown ID fails with
    * NOT_FOUND.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.GetWebhookEndpoint
+   * @generated from rpc toshi.workspace.v1.WebhookService.GetWebhook
    */
-  getWebhookEndpoint: {
+  getWebhook: {
     methodKind: "unary";
-    input: typeof GetWebhookEndpointRequestSchema;
-    output: typeof GetWebhookEndpointResponseSchema;
+    input: typeof GetWebhookRequestSchema;
+    output: typeof GetWebhookResponseSchema;
   },
   /**
-   * ListWebhookEndpoints returns the workspace's endpoints in ID order.
+   * ListWebhooks returns the workspace's webhooks in ID order.
    *
-   * A page holds 100 endpoints when page_size is zero, and 1000 at most.
+   * A page holds 100 webhooks when page_size is zero, and 1000 at most.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.ListWebhookEndpoints
+   * @generated from rpc toshi.workspace.v1.WebhookService.ListWebhooks
    */
-  listWebhookEndpoints: {
+  listWebhooks: {
     methodKind: "unary";
-    input: typeof ListWebhookEndpointsRequestSchema;
-    output: typeof ListWebhookEndpointsResponseSchema;
+    input: typeof ListWebhooksRequestSchema;
+    output: typeof ListWebhooksResponseSchema;
   },
   /**
-   * UpdateWebhookEndpoint sets the fields update_mask names: url, events,
+   * UpdateWebhook sets the fields update_mask names: url, events,
    * project, enabled, cursor. A cursor must be at or after the retention boundary's
    * sequence and at or before the workspace's newest event sequence.
-   * A disabled endpoint is owed no new event and no try starts;
+   * A disabled webhook is owed no new event and no try starts;
    * the events written before the disable stay owed, enabling it again
    * owes none written while it was disabled, and a try already under way
    * finishes within its claim, which holds a delivery for one minute.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.UpdateWebhookEndpoint
+   * @generated from rpc toshi.workspace.v1.WebhookService.UpdateWebhook
    */
-  updateWebhookEndpoint: {
+  updateWebhook: {
     methodKind: "unary";
-    input: typeof UpdateWebhookEndpointRequestSchema;
-    output: typeof UpdateWebhookEndpointResponseSchema;
+    input: typeof UpdateWebhookRequestSchema;
+    output: typeof UpdateWebhookResponseSchema;
   },
   /**
-   * DeleteWebhookEndpoint deletes an endpoint and its deliveries.
+   * DeleteWebhook deletes a webhook and its deliveries.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.DeleteWebhookEndpoint
+   * @generated from rpc toshi.workspace.v1.WebhookService.DeleteWebhook
    */
-  deleteWebhookEndpoint: {
+  deleteWebhook: {
     methodKind: "unary";
-    input: typeof DeleteWebhookEndpointRequestSchema;
-    output: typeof DeleteWebhookEndpointResponseSchema;
+    input: typeof DeleteWebhookRequestSchema;
+    output: typeof DeleteWebhookResponseSchema;
   },
   /**
-   * RotateWebhookEndpointSecret makes the endpoint a new signing secret and
+   * RotateWebhookSecret makes the webhook a new signing secret and
    * returns it. For the next 24 hours each try that starts after the
    * rotation is signed with the new secret and the one it replaced, so a
    * receiver can move to the new one in that window; after it, with the
@@ -1166,15 +1166,15 @@ export const WebhookService: GenService<{
    * the replaced secret alone. A rotation while the
    * previous secret's window is still open fails with FAILED_PRECONDITION.
    *
-   * @generated from rpc toshi.workspace.v1.WebhookService.RotateWebhookEndpointSecret
+   * @generated from rpc toshi.workspace.v1.WebhookService.RotateWebhookSecret
    */
-  rotateWebhookEndpointSecret: {
+  rotateWebhookSecret: {
     methodKind: "unary";
-    input: typeof RotateWebhookEndpointSecretRequestSchema;
-    output: typeof RotateWebhookEndpointSecretResponseSchema;
+    input: typeof RotateWebhookSecretRequestSchema;
+    output: typeof RotateWebhookSecretResponseSchema;
   },
   /**
-   * ListWebhookDeliveries returns an endpoint's deliveries in event order,
+   * ListWebhookDeliveries returns a webhook's deliveries in event order,
    * a page at a time.
    *
    * A page holds 50 deliveries when page_size is zero, and 500 at most.
@@ -1187,17 +1187,17 @@ export const WebhookService: GenService<{
     output: typeof ListWebhookDeliveriesResponseSchema;
   },
   /**
-   * ReplayWebhookEvents makes the endpoint owed again the events after
+   * ReplayWebhookEvents makes the webhook owed again the events after
    * cursor that its filter keeps now, up to its own cursor, at most 500 per
    * call. That includes events delivered or given up before, events written
    * while it was disabled and events written before it was made. Each is
    * due now and tried on the retry schedule from its first try; an event
-   * still pending at the endpoint is left as it is. A workload's events stay
-   * one at a time at the endpoint: an older event sent again is not due
+   * still pending at the webhook is left as it is. A workload's events stay
+   * one at a time at the webhook: an older event sent again is not due
    * before the latest next try among the newer ones that have been tried
    * and are still pending, the end of that try under way or backoff, and
    * then goes before it; it does not wait for the newer ones to be
-   * delivered. A disabled endpoint fails with FAILED_PRECONDITION.
+   * delivered. A disabled webhook fails with FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.WebhookService.ReplayWebhookEvents
    */

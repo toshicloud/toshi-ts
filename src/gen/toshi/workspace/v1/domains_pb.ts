@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/domains.proto.
  */
 export const file_toshi_workspace_v1_domains: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZG9tYWlucy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIjkKDERvbWFpblJlY29yZBIMCgR0eXBlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFdmFsdWUYAyABKAki3wMKBkRvbWFpbhIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhIKCnNlcnZpY2VfaWQYAyABKAkSDwoHY2hhbm5lbBgEIAEoCRIuCgVzdGF0ZRgFIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW5TdGF0ZRIxCgdyZWNvcmRzGAYgAygLMiAudG9zaGkud29ya3NwYWNlLnYxLkRvbWFpblJlY29yZBIuCgpjaGVja2VkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt2ZXJpZmllZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNbGFzdF9vcmRlcl9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIcmV0cnlfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi0KCW5vdF9hZnRlchgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKbGFzdF9lcnJvchgMIAEoCRIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKDAQoTQ3JlYXRlRG9tYWluUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEhIKCnNlcnZpY2VfaWQYAyABKAkSDwoHY2hhbm5lbBgEIAEoCRIMCgRuYW1lGAUgASgJEhMKC3JlcXVlc3Rfa2V5GAYgASgJIkIKFENyZWF0ZURvbWFpblJlc3BvbnNlEioKBmRvbWFpbhgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW4iRAoQR2V0RG9tYWluUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJIj8KEUdldERvbWFpblJlc3BvbnNlEioKBmRvbWFpbhgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW4idQoSTGlzdERvbWFpbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSEgoKc2VydmljZV9pZBgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJbChNMaXN0RG9tYWluc1Jlc3BvbnNlEisKB2RvbWFpbnMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuRG9tYWluEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJcChNWZXJpZnlEb21haW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkSEwoLcmVxdWVzdF9rZXkYBCABKAkiQgoUVmVyaWZ5RG9tYWluUmVzcG9uc2USKgoGZG9tYWluGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLkRvbWFpbiJbChJJc3N1ZURvbWFpblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIKCgJpZBgDIAEoCRITCgtyZXF1ZXN0X2tleRgEIAEoCSJBChNJc3N1ZURvbWFpblJlc3BvbnNlEioKBmRvbWFpbhgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW4iRwoTRGVsZXRlRG9tYWluUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJIhYKFERlbGV0ZURvbWFpblJlc3BvbnNlKt8BCgtEb21haW5TdGF0ZRIcChhET01BSU5fU1RBVEVfVU5TUEVDSUZJRUQQABIkCiBET01BSU5fU1RBVEVfV0FJVElOR19GT1JfUkVDT1JEUxABEhkKFURPTUFJTl9TVEFURV9WRVJJRklFRBACEhgKFERPTUFJTl9TVEFURV9JU1NVSU5HEAMSFgoSRE9NQUlOX1NUQVRFX1ZBTElEEAQSHQoZRE9NQUlOX1NUQVRFX1JBVEVfTElNSVRFRBAFEiAKHERPTUFJTl9TVEFURV9SRU5FV0FMX0ZBSUxJTkcQBjLXBgoNRG9tYWluU2VydmljZRKEAQoMQ3JlYXRlRG9tYWluEicudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZURvbWFpblJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRG9tYWluUmVzcG9uc2UiIcLzGA5zZXJ2aWNlcy53cml0ZcrzGAtlbnZpcm9ubWVudBJ6CglHZXREb21haW4SJC50b3NoaS53b3Jrc3BhY2UudjEuR2V0RG9tYWluUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5HZXREb21haW5SZXNwb25zZSIgwvMYDXNlcnZpY2VzLnJlYWTK8xgLZW52aXJvbm1lbnQSgAEKC0xpc3REb21haW5zEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3REb21haW5zUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RG9tYWluc1Jlc3BvbnNlIiDC8xgNc2VydmljZXMucmVhZMrzGAtlbnZpcm9ubWVudBKYAQoMVmVyaWZ5RG9tYWluEicudG9zaGkud29ya3NwYWNlLnYxLlZlcmlmeURvbWFpblJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuVmVyaWZ5RG9tYWluUmVzcG9uc2UiNcLzGA5zZXJ2aWNlcy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGBAKDmRvbWFpbi5jaGVja2VkEp0BCgtJc3N1ZURvbWFpbhImLnRvc2hpLndvcmtzcGFjZS52MS5Jc3N1ZURvbWFpblJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuSXNzdWVEb21haW5SZXNwb25zZSI9wvMYDnNlcnZpY2VzLndyaXRlyvMYC2Vudmlyb25tZW500vMYGAoWZG9tYWluLmlzc3VlX3JlcXVlc3RlZBKEAQoMRGVsZXRlRG9tYWluEicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZURvbWFpblJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRG9tYWluUmVzcG9uc2UiIcLzGA5zZXJ2aWNlcy53cml0ZcrzGAtlbnZpcm9ubWVudEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZG9tYWlucy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIjkKDERvbWFpblJlY29yZBIMCgR0eXBlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFdmFsdWUYAyABKAki4AMKBkRvbWFpbhIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhIKCnNlcnZpY2VfaWQYAyABKAkSEAoIZW5kcG9pbnQYBCABKAkSLgoFc3RhdGUYBSABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuRG9tYWluU3RhdGUSMQoHcmVjb3JkcxgGIAMoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW5SZWNvcmQSLgoKY2hlY2tlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdmVyaWZpZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDWxhc3Rfb3JkZXJfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCHJldHJ5X2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglub3RfYWZ0ZXIYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmxhc3RfZXJyb3IYDCABKAkSLgoKY3JlYXRlZF9hdBgNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAihAEKE0NyZWF0ZURvbWFpblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRISCgpzZXJ2aWNlX2lkGAMgASgJEhAKCGVuZHBvaW50GAQgASgJEgwKBG5hbWUYBSABKAkSEwoLcmVxdWVzdF9rZXkYBiABKAkiQgoUQ3JlYXRlRG9tYWluUmVzcG9uc2USKgoGZG9tYWluGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLkRvbWFpbiJEChBHZXREb21haW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkiPwoRR2V0RG9tYWluUmVzcG9uc2USKgoGZG9tYWluGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLkRvbWFpbiJ1ChJMaXN0RG9tYWluc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRISCgpzZXJ2aWNlX2lkGAMgASgJEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJIlsKE0xpc3REb21haW5zUmVzcG9uc2USKwoHZG9tYWlucxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Eb21haW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlwKE1ZlcmlmeURvbWFpblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIKCgJpZBgDIAEoCRITCgtyZXF1ZXN0X2tleRgEIAEoCSJCChRWZXJpZnlEb21haW5SZXNwb25zZRIqCgZkb21haW4YASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuRG9tYWluIlsKEklzc3VlRG9tYWluUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJEhMKC3JlcXVlc3Rfa2V5GAQgASgJIkEKE0lzc3VlRG9tYWluUmVzcG9uc2USKgoGZG9tYWluGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLkRvbWFpbiJHChNEZWxldGVEb21haW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkiFgoURGVsZXRlRG9tYWluUmVzcG9uc2Uq3wEKC0RvbWFpblN0YXRlEhwKGERPTUFJTl9TVEFURV9VTlNQRUNJRklFRBAAEiQKIERPTUFJTl9TVEFURV9XQUlUSU5HX0ZPUl9SRUNPUkRTEAESGQoVRE9NQUlOX1NUQVRFX1ZFUklGSUVEEAISGAoURE9NQUlOX1NUQVRFX0lTU1VJTkcQAxIWChJET01BSU5fU1RBVEVfVkFMSUQQBBIdChlET01BSU5fU1RBVEVfUkFURV9MSU1JVEVEEAUSIAocRE9NQUlOX1NUQVRFX1JFTkVXQUxfRkFJTElORxAGMtcGCg1Eb21haW5TZXJ2aWNlEoQBCgxDcmVhdGVEb21haW4SJy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRG9tYWluUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVEb21haW5SZXNwb25zZSIhwvMYDnNlcnZpY2VzLndyaXRlyvMYC2Vudmlyb25tZW50EnoKCUdldERvbWFpbhIkLnRvc2hpLndvcmtzcGFjZS52MS5HZXREb21haW5SZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLkdldERvbWFpblJlc3BvbnNlIiDC8xgNc2VydmljZXMucmVhZMrzGAtlbnZpcm9ubWVudBKAAQoLTGlzdERvbWFpbnMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdERvbWFpbnNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3REb21haW5zUmVzcG9uc2UiIMLzGA1zZXJ2aWNlcy5yZWFkyvMYC2Vudmlyb25tZW50EpgBCgxWZXJpZnlEb21haW4SJy50b3NoaS53b3Jrc3BhY2UudjEuVmVyaWZ5RG9tYWluUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5WZXJpZnlEb21haW5SZXNwb25zZSI1wvMYDnNlcnZpY2VzLndyaXRlyvMYC2Vudmlyb25tZW500vMYEAoOZG9tYWluLmNoZWNrZWQSnQEKC0lzc3VlRG9tYWluEiYudG9zaGkud29ya3NwYWNlLnYxLklzc3VlRG9tYWluUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5Jc3N1ZURvbWFpblJlc3BvbnNlIj3C8xgOc2VydmljZXMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgYChZkb21haW4uaXNzdWVfcmVxdWVzdGVkEoQBCgxEZWxldGVEb21haW4SJy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRG9tYWluUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVEb21haW5SZXNwb25zZSIhwvMYDnNlcnZpY2VzLndyaXRlyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * DomainRecord is one DNS record a domain needs at its DNS provider.
@@ -22,7 +22,7 @@ export const file_toshi_workspace_v1_domains: GenFile = /*@__PURE__*/
  */
 export type DomainRecord = Message<"toshi.workspace.v1.DomainRecord"> & {
   /**
-   * CNAME or TXT.
+   * CNAME, TXT or MX. An MX value is its priority and host, such as "10 mail.example.com".
    *
    * @generated from field: string type = 1;
    */
@@ -50,7 +50,7 @@ export type DomainRecord = Message<"toshi.workspace.v1.DomainRecord"> & {
  */
 export type DomainRecordJson = {
   /**
-   * CNAME or TXT.
+   * CNAME, TXT or MX. An MX value is its priority and host, such as "10 mail.example.com".
    *
    * @generated from field: string type = 1;
    */
@@ -102,12 +102,12 @@ export type Domain = Message<"toshi.workspace.v1.Domain"> & {
   serviceId: string;
 
   /**
-   * The service's http channel the domain serves, by its name in the
-   * recipe; the front channel's when the create named none.
+   * The service's http endpoint the domain serves, by its name in the
+   * recipe; the front endpoint's when the create named none.
    *
-   * @generated from field: string channel = 4;
+   * @generated from field: string endpoint = 4;
    */
-  channel: string;
+  endpoint: string;
 
   /**
    * @generated from field: toshi.workspace.v1.DomainState state = 5;
@@ -115,9 +115,9 @@ export type Domain = Message<"toshi.workspace.v1.Domain"> & {
   state: DomainState;
 
   /**
-   * The CNAME record to the channel's provided name, then the TXT record
+   * The CNAME record to the endpoint's provided name, then the TXT record
    * with the domain's token; only the TXT record while the service's
-   * current revision gives the channel no provided name.
+   * current revision gives the endpoint no provided name.
    *
    * @generated from field: repeated toshi.workspace.v1.DomainRecord records = 6;
    */
@@ -196,12 +196,12 @@ export type DomainJson = {
   serviceId?: string;
 
   /**
-   * The service's http channel the domain serves, by its name in the
-   * recipe; the front channel's when the create named none.
+   * The service's http endpoint the domain serves, by its name in the
+   * recipe; the front endpoint's when the create named none.
    *
-   * @generated from field: string channel = 4;
+   * @generated from field: string endpoint = 4;
    */
-  channel?: string;
+  endpoint?: string;
 
   /**
    * @generated from field: toshi.workspace.v1.DomainState state = 5;
@@ -209,9 +209,9 @@ export type DomainJson = {
   state?: DomainStateJson;
 
   /**
-   * The CNAME record to the channel's provided name, then the TXT record
+   * The CNAME record to the endpoint's provided name, then the TXT record
    * with the domain's token; only the TXT record while the service's
-   * current revision gives the channel no provided name.
+   * current revision gives the endpoint no provided name.
    *
    * @generated from field: repeated toshi.workspace.v1.DomainRecord records = 6;
    */
@@ -295,12 +295,12 @@ export type CreateDomainRequest = Message<"toshi.workspace.v1.CreateDomainReques
   serviceId: string;
 
   /**
-   * The http channel the domain serves; empty is the service's front
-   * channel, the one at the service's own name.
+   * The http endpoint the domain serves; empty is the service's front
+   * endpoint, the one at the service's own name.
    *
-   * @generated from field: string channel = 4;
+   * @generated from field: string endpoint = 4;
    */
-  channel: string;
+  endpoint: string;
 
   /**
    * The domain, in its Unicode or ASCII form.
@@ -337,12 +337,12 @@ export type CreateDomainRequestJson = {
   serviceId?: string;
 
   /**
-   * The http channel the domain serves; empty is the service's front
-   * channel, the one at the service's own name.
+   * The http endpoint the domain serves; empty is the service's front
+   * endpoint, the one at the service's own name.
    *
-   * @generated from field: string channel = 4;
+   * @generated from field: string endpoint = 4;
    */
-  channel?: string;
+  endpoint?: string;
 
   /**
    * The domain, in its Unicode or ASCII form.
@@ -892,9 +892,9 @@ export const DomainStateSchema: GenEnum<DomainState, DomainStateJson> = /*@__PUR
 
 /**
  * DomainService manages customer domains: names a workspace owns at its
- * own DNS provider and points at an http channel of one of its services,
- * beside the channel's provided name. A domain serves once its two
- * records check out, a CNAME record to the channel's provided name and a
+ * own DNS provider and points at an http endpoint of one of its services,
+ * beside the endpoint's provided name. A domain serves once its two
+ * records check out, a CNAME record to the endpoint's provided name and a
  * TXT record carrying the domain's token; its certificate is ordered at
  * its first visit, or by IssueDomain, and renewed with no call. The
  * caller's credential names the workspace; a domain of another workspace
@@ -907,7 +907,7 @@ export const DomainStateSchema: GenEnum<DomainState, DomainStateJson> = /*@__PUR
  */
 export const DomainService: GenService<{
   /**
-   * CreateDomain adds a domain for an http channel of a service and
+   * CreateDomain adds a domain for an http endpoint of a service and
    * returns it with the records to set. Only a name below a registered
    * domain is taken (shop.example.com, not example.com), and no wildcard.
    * A name the workspace already has is ALREADY_EXISTS; past the plan's

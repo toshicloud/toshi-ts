@@ -5,7 +5,7 @@ export * from "./gen/toshi/workspace/v1/display_pb.js";
 export * from "./gen/toshi/workspace/v1/projects_pb.js";
 export * from "./gen/toshi/workspace/v1/secrets_pb.js";
 export * from "./gen/toshi/workspace/v1/webhook_pb.js";
-export * from "./gen/toshi/workspace/v1/channels_pb.js";
+export * from "./gen/toshi/workspace/v1/endpoints_pb.js";
 export * from "./gen/toshi/workspace/v1/recordings_pb.js";
 export * from "./gen/toshi/workspace/v1/volumes_pb.js";
 export * from "./gen/toshi/workspace/v1/artifacts_pb.js";

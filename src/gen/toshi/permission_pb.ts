@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/permission.proto.
  */
 export const file_toshi_permission: GenFile = /*@__PURE__*/
-  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJIrYBCgNNQ1ASFgoJcmVhZF9vbmx5GAEgASgISACIAQESGAoLZGVzdHJ1Y3RpdmUYAiABKAhIAYgBARIXCgppZGVtcG90ZW50GAMgASgISAKIAQESFwoKb3Blbl93b3JsZBgEIAEoCEgDiAEBEg8KB2V4Y2x1ZGUYBSABKAhCDAoKX3JlYWRfb25seUIOCgxfZGVzdHJ1Y3RpdmVCDQoLX2lkZW1wb3RlbnRCDQoLX29wZW5fd29ybGQ6QAoKcGVybWlzc2lvbhIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLiOAyABKAlSCnBlcm1pc3Npb246NgoFc2NvcGUSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi5jgMgASgJUgVzY29wZTpECgVhdWRpdBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLqOAyABKAsyDC50b3NoaS5BdWRpdFIFYXVkaXQ6OwoIYnlfZmllbGQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi8jgMgASgIUgdieUZpZWxkOj4KA21jcBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGL2OAyABKAsyCi50b3NoaS5NQ1BSA21jcDpKChBmaWVsZF9wZXJtaXNzaW9uEh0uZ29vZ2xlLnByb3RvYnVmLkZpZWxkT3B0aW9ucxi7jgMgASgJUg9maWVsZFBlcm1pc3Npb25CHlocZ28udG9zaGljbG91ZC5pby9hcGkvdG9zaGlwYmIGcHJvdG8z", [file_google_protobuf_descriptor]);
+  fileDesc("ChZ0b3NoaS9wZXJtaXNzaW9uLnByb3RvEgV0b3NoaSInCgVBdWRpdBIOCgZhY3Rpb24YASABKAkSDgoGdGFyZ2V0GAIgASgJIrYBCgNNQ1ASFgoJcmVhZF9vbmx5GAEgASgISACIAQESGAoLZGVzdHJ1Y3RpdmUYAiABKAhIAYgBARIXCgppZGVtcG90ZW50GAMgASgISAKIAQESFwoKb3Blbl93b3JsZBgEIAEoCEgDiAEBEg8KB2V4Y2x1ZGUYBSABKAhCDAoKX3JlYWRfb25seUIOCgxfZGVzdHJ1Y3RpdmVCDQoLX2lkZW1wb3RlbnRCDQoLX29wZW5fd29ybGQ6QAoKcGVybWlzc2lvbhIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLiOAyABKAlSCnBlcm1pc3Npb246NgoFc2NvcGUSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi5jgMgASgJUgVzY29wZTpECgVhdWRpdBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGLqOAyABKAsyDC50b3NoaS5BdWRpdFIFYXVkaXQ6OwoIYnlfZmllbGQSHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi8jgMgASgIUgdieUZpZWxkOj4KA21jcBIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGL2OAyABKAsyCi50b3NoaS5NQ1BSA21jcDoyCgNvd24SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxi+jgMgASgIUgNvd246SgoQZmllbGRfcGVybWlzc2lvbhIdLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE9wdGlvbnMYu44DIAEoCVIPZmllbGRQZXJtaXNzaW9uQh5aHGdvLnRvc2hpY2xvdWQuaW8vYXBpL3Rvc2hpcGJiBnByb3RvMw", [file_google_protobuf_descriptor]);
 
 /**
  * Audit is the audit event a call records.
@@ -266,6 +266,20 @@ export const mcp: GenExtension<MethodOptions, MCP> = /*@__PURE__*/
   extDesc(file_toshi_permission, 4);
 
 /**
+ * own marks a call a member may make for what is their own with
+ * membership alone. A caller who holds a role in the workspace but not the
+ * method's permission is admitted for their own resources only: the
+ * handler refuses any other resource, as the permission check would, with
+ * PERMISSION_MISSING, and a list holds only the caller's own. A caller
+ * with the permission is admitted as usual. A call that acts for no
+ * person needs the permission.
+ *
+ * @generated from extension: bool own = 51006;
+ */
+export const own: GenExtension<MethodOptions, boolean> = /*@__PURE__*/
+  extDesc(file_toshi_permission, 5);
+
+/**
  * field_permission names what a caller needs to change the field through
  * the mask of an update call marked by_field: a field group of its own,
  * such as "billing.write" for a workspace's spending limits. A field
@@ -275,5 +289,5 @@ export const mcp: GenExtension<MethodOptions, MCP> = /*@__PURE__*/
  * @generated from extension: string field_permission = 51003;
  */
 export const field_permission: GenExtension<FieldOptions, string> = /*@__PURE__*/
-  extDesc(file_toshi_permission, 5);
+  extDesc(file_toshi_permission, 6);
 

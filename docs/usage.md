@@ -135,7 +135,7 @@ picked up without a new client.
 ### The client's shape
 
 The client has one field per Workspace API service: `project`, `secret`,
-`webhook`, `display`, `channel`, `recording`, `volume`, `artifact`,
+`webhook`, `display`, `endpoint`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
 `filler`, `grant`, `storageProvider`, `product`, `discovery`, `connection`,
 `role`, `trigger`, `account`, `image` and `domain`, each holding that service's
