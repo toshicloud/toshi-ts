@@ -153,7 +153,10 @@ service). A service's alarms are `setAlarm`, `getAlarm`, `listAlarms`
 `startSignIn`, which hands back the sign-in's stream as the server sends
 it, `answerSignIn`, `cancelSignIn` and `getSignInStatus`. The calls that
 span the three types sit on `workload` itself: `listEvents`, `watchEvents`,
-`emitEvent`, `getOperation` and `waitOperation`. `run` sits at the top of the client, as
+`emitEvent`, `holdWorkload`, `releaseWorkload`, `getOperation` and
+`waitOperation`. `holdWorkload` and `releaseWorkload` are operator-only and
+need the operator's headers, which the caller adds with an interceptor
+(see Operator calls). `run` sits at the top of the client, as
 `toshi run` sits at the top of the CLI.
 
 <!-- examples/client-shape.ts -->
@@ -162,6 +165,49 @@ span the three types sit on `workload` itself: `listEvents`, `watchEvents`,
 const { jobs } = await toshi.workload.jobs.list({ pageSize: 10 });
 const { job } = await toshi.workload.jobs.get({ id: jobs[0].id });
 console.log(job?.id);
+```
+
+### Operator calls
+
+An operator's token sends its reason in `Toshi-Operator-Reason` and the
+workspace it acts on in `Toshi-Workspace` on every Workspace API call; the
+server refuses one without them. Both belong to the client rather than to a
+call, so the caller sets them with an interceptor of its own: the `transport`
+option receives the client's interceptors, and the caller adds the one that
+writes the headers. `workload.holdWorkload` places an operator's hold on a
+sandbox or service, stopping it if it runs, and `workload.releaseWorkload`
+lifts the hold and starts nothing; only an operator may make either call.
+
+<!-- examples/operator-reason.ts -->
+
+```ts
+import type { Interceptor } from "@connectrpc/connect";
+import { createConnectTransport } from "@connectrpc/connect-node";
+
+import { createToshiClient } from "@toshicloud/sdk/node";
+
+const baseUrl = "https://toshi.example.com";
+
+// An operator's token, the reason its calls carry and the workspace they
+// act on.
+declare const token: string;
+
+const operator: Interceptor = (next) => (req) => {
+  req.header.set("Toshi-Operator-Reason", "investigating a report");
+  req.header.set("Toshi-Workspace", "acme");
+  return next(req);
+};
+
+export const toshi = createToshiClient({
+  transport: (interceptors) =>
+    createConnectTransport({
+      baseUrl,
+      httpVersion: "2",
+      interceptors: [...interceptors, operator],
+    }),
+  token,
+  project: "default",
+});
 ```
 
 ### Lists
@@ -431,8 +477,9 @@ in `proto/toshi/workspace/v1` of the
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit the code is generated from:
-`2184ae8440834bb5b91991b3e4d62d14ce9dd15a` today, the commit of the
-release tag `v0.4.1`. `mise.toml` pins the versions of Node, pnpm and `buf`;
+`5474559e89f7faf4b718fd5f1d64ff7457657477` today, the commit of the
+release tag `v0.5.0`.
+`mise.toml` pins the versions of Node, pnpm and `buf`;
 `package.json` pins `protoc-gen-es` at the same version as the
 `@bufbuild/protobuf` development dependency.
 
