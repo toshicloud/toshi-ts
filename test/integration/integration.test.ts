@@ -23,6 +23,8 @@ import { Code, ConnectError } from "@connectrpc/connect";
 import { createConnectTransport } from "@connectrpc/connect-node";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 
+import { testWebhookSecret } from "../webhook-secret.js";
+
 import { createToshiClient } from "../../src/client.js";
 import type { OutputWatch, ToshiClient } from "../../src/client.js";
 import { ProductReason, StreamLostError, isProductError } from "../../src/errors.js";
@@ -379,7 +381,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       const updated = await client.connection.updateConnection({
         connection: {
           id,
-          target: { url: "https://example.com/toshi-hooks", secret: "whsec_c2RrLXRlc3Qtc2VjcmV0LTAwMDAwMDAw" },
+          target: { url: "https://example.com/toshi-hooks", secret: testWebhookSecret() },
         },
         updateMask: { paths: ["target"] },
       });
