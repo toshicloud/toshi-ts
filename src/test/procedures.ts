@@ -3,7 +3,7 @@ import type { DescMethod, DescService } from "@bufbuild/protobuf";
 import { AccountService } from "../gen/toshi/workspace/v1/account_pb.js";
 import { ArtifactService, ArtifactUploadService } from "../gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "../gen/toshi/workspace/v1/audit_events_pb.js";
-import { ChannelService } from "../gen/toshi/workspace/v1/channels_pb.js";
+import { EndpointService } from "../gen/toshi/workspace/v1/endpoints_pb.js";
 import { DisplayService } from "../gen/toshi/workspace/v1/display_pb.js";
 import { DomainService } from "../gen/toshi/workspace/v1/domains_pb.js";
 import { FillerService } from "../gen/toshi/workspace/v1/fillers_pb.js";
@@ -32,7 +32,7 @@ export const apiServices: readonly DescService[] = [
   ProjectService,
   WebhookService,
   DisplayService,
-  ChannelService,
+  EndpointService,
   RecordingService,
   VolumeService,
   ArtifactService,
@@ -96,6 +96,8 @@ export const hookOnly: readonly DescMethod[] = [
   ProductService.method.listProducts,
   ProductService.method.updateProduct,
   // WorkloadService
+  WorkloadService.method.getWorkloadUsage,
+  WorkloadService.method.listWorkloadUsages,
   WorkloadService.method.updateJob,
   WorkloadService.method.deleteJob,
   WorkloadService.method.updateSandbox,
@@ -184,12 +186,12 @@ export const hookOnly: readonly DescMethod[] = [
   ProjectService.method.setEnvironmentRetention,
   ProjectService.method.setEnvironmentVolumes,
   // WebhookService
-  WebhookService.method.createWebhookEndpoint,
-  WebhookService.method.getWebhookEndpoint,
-  WebhookService.method.listWebhookEndpoints,
-  WebhookService.method.updateWebhookEndpoint,
-  WebhookService.method.deleteWebhookEndpoint,
-  WebhookService.method.rotateWebhookEndpointSecret,
+  WebhookService.method.createWebhook,
+  WebhookService.method.getWebhook,
+  WebhookService.method.listWebhooks,
+  WebhookService.method.updateWebhook,
+  WebhookService.method.deleteWebhook,
+  WebhookService.method.rotateWebhookSecret,
   WebhookService.method.listWebhookDeliveries,
   WebhookService.method.replayWebhookEvents,
   // DisplayService
@@ -201,23 +203,23 @@ export const hookOnly: readonly DescMethod[] = [
   DisplayService.method.sendDisplayPointer,
   DisplayService.method.setDisplayClipboard,
   DisplayService.method.takeDisplayScreenshot,
-  // ChannelService
-  ChannelService.method.createChannel,
-  ChannelService.method.listChannels,
-  ChannelService.method.getChannel,
-  ChannelService.method.getChannelPolicy,
-  ChannelService.method.setChannelPolicy,
-  ChannelService.method.listChannelRequests,
-  ChannelService.method.getChannelRequest,
-  ChannelService.method.exportChannelLog,
-  ChannelService.method.createChannelConnectToken,
-  ChannelService.method.revokeChannelConnectToken,
-  ChannelService.method.deleteChannel,
-  ChannelService.method.listForwards,
-  ChannelService.method.getLink,
-  ChannelService.method.sendChannelMessage,
-  ChannelService.method.tailChannelMessages,
-  ChannelService.method.replayChannelMessage,
+  // EndpointService
+  EndpointService.method.createEndpoint,
+  EndpointService.method.listEndpoints,
+  EndpointService.method.getEndpoint,
+  EndpointService.method.getEndpointPolicy,
+  EndpointService.method.setEndpointPolicy,
+  EndpointService.method.listEndpointRequests,
+  EndpointService.method.getEndpointRequest,
+  EndpointService.method.exportEndpointLog,
+  EndpointService.method.createEndpointConnectToken,
+  EndpointService.method.revokeEndpointConnectToken,
+  EndpointService.method.deleteEndpoint,
+  EndpointService.method.listForwards,
+  EndpointService.method.getTunnel,
+  EndpointService.method.sendEndpointMessage,
+  EndpointService.method.tailEndpointMessages,
+  EndpointService.method.replayEndpointMessage,
   // RecordingService
   RecordingService.method.listRecordings,
   RecordingService.method.getRecording,

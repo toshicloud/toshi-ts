@@ -24,12 +24,12 @@ function clientWith(routes: Parameters<typeof createRouterTransport>[0]): ToshiC
 }
 
 describe("fields the API added", () => {
-  it("carries a webhook endpoint's expired cursor and retention boundary", async () => {
+  it("carries a webhook's expired cursor and retention boundary", async () => {
     const boundary = new Date("2026-10-21T00:00:00Z");
     const fake = createFake();
-    fake.on(WebhookService.method.getWebhookEndpoint, () =>
+    fake.on(WebhookService.method.getWebhook, () =>
       Promise.resolve({
-        endpoint: {
+        webhook: {
           id: "wh-1",
           url: "https://example.com/hook",
           cursorExpired: true,
@@ -37,24 +37,24 @@ describe("fields the API added", () => {
         },
       }),
     );
-    fake.on(WebhookService.method.updateWebhookEndpoint, (request) => {
+    fake.on(WebhookService.method.updateWebhook, (request) => {
       expect(request.updateMask?.paths).toEqual(["cursor"]);
-      return Promise.resolve({ endpoint: { id: "wh-1", cursor: request.endpoint?.cursor } });
+      return Promise.resolve({ webhook: { id: "wh-1", cursor: request.webhook?.cursor } });
     });
 
     const toshi = fake.client();
-    const got = await toshi.webhook.getWebhookEndpoint({ id: "wh-1" });
-    expect(got.endpoint?.cursorExpired).toBe(true);
+    const got = await toshi.webhook.getWebhook({ id: "wh-1" });
+    expect(got.webhook?.cursorExpired).toBe(true);
     expect(
-      got.endpoint?.retentionBoundary === undefined ? undefined : timestampDate(got.endpoint.retentionBoundary).toISOString(),
+      got.webhook?.retentionBoundary === undefined ? undefined : timestampDate(got.webhook.retentionBoundary).toISOString(),
     ).toBe(boundary.toISOString());
 
-    const moved = await toshi.webhook.updateWebhookEndpoint({
+    const moved = await toshi.webhook.updateWebhook({
       id: "wh-1",
-      endpoint: { cursor: "100" },
+      webhook: { cursor: "100" },
       updateMask: { paths: ["cursor"] },
     });
-    expect(moved.endpoint?.cursor).toBe("100");
+    expect(moved.webhook?.cursor).toBe("100");
   });
 
   it("carries a workspace's settings, etag and update mask", async () => {

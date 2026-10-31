@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/hosts.proto.
  */
 export const file_toshi_workspace_v1_hosts: GenFile = /*@__PURE__*/
-  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvaG9zdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKBAQoQTGlzdEhvc3RzUmVxdWVzdBItCgZzdGF0ZXMYASADKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuSG9zdFN0YXRlEhcKD2V4Y2x1ZGVfcmV2b2tlZBgCIAEoCBIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSKMAQoRTGlzdEhvc3RzUmVzcG9uc2USJwoFaG9zdHMYASADKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdBI1ChJsb25nX29mZmxpbmVfYWZ0ZXIYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIlAKFkxpc3RIb3N0U3RvcmFnZVJlcXVlc3QSDwoHaG9zdF9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJjChdMaXN0SG9zdFN0b3JhZ2VSZXNwb25zZRIvCgd2b2x1bWVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkhvc3RWb2x1bWUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIj4KFUxpc3RIb3N0QWxlcnRzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJgChZMaXN0SG9zdEFsZXJ0c1Jlc3BvbnNlEi0KBmFsZXJ0cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0QWxlcnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIk8KE1NldEhvc3RTdGF0ZVJlcXVlc3QSCgoCaWQYASABKAkSLAoFc3RhdGUYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuSG9zdFN0YXRlIj4KFFNldEhvc3RTdGF0ZVJlc3BvbnNlEiYKBGhvc3QYASABKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdCIfChFSZXRpcmVIb3N0UmVxdWVzdBIKCgJpZBgBIAEoCSIUChJSZXRpcmVIb3N0UmVzcG9uc2UihgQKFkNyZWF0ZUNsb3VkSG9zdFJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVjbG91ZBgCIAEoCRIOCgZyZWdpb24YAyABKAkSEAoIcm9sZV9hcm4YBCABKAkSDQoFaW1hZ2UYBSABKAkSEQoJc3VibmV0X2lkGAYgASgJEhoKEnNlY3VyaXR5X2dyb3VwX2lkcxgHIAMoCRJVCg5pbnN0YW5jZV90eXBlcxgIIAMoCzI9LnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDbG91ZEhvc3RSZXF1ZXN0Lkluc3RhbmNlVHlwZXNFbnRyeRIRCgltYXhfdmNwdXMYCSABKAUSDAoEc3BvdBgKIAEoCBIVCg1tYXhfaW5zdGFuY2VzGAsgASgFEiQKHG1heF9pbnN0YW5jZV9taW51dGVzX3Blcl9kYXkYDCABKAUSEgoKZWdyZXNzX2lwcxgNIAMoCRITCgtub19vdmVyZmxvdxgOIAEoCBIPCgdwcm9qZWN0GA8gASgJEgwKBHpvbmUYECABKAkSFwoPc2VydmljZV9hY2NvdW50GBEgASgJEg4KBmVncmVzcxgSIAEoCRITCgtyZXF1ZXN0X2tleRgTIAEoCRo0ChJJbnN0YW5jZVR5cGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK3AQoXQ3JlYXRlQ2xvdWRIb3N0UmVzcG9uc2USJgoEaG9zdBgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0EhMKC2V4dGVybmFsX2lkGAIgASgJEhUKDXByaW5jaXBhbF9hcm4YAyABKAkSMQoKY2xvdWRfaG9zdBgEIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5DbG91ZEhvc3QSFQoNZ2NwX3ByaW5jaXBhbBgFIAEoCSIoChVDaGVja0Nsb3VkSG9zdFJlcXVlc3QSDwoHaG9zdF9pZBgBIAEoCSJMChZDaGVja0Nsb3VkSG9zdFJlc3BvbnNlEjIKBmNoZWNrcxgBIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5DbG91ZEhvc3RDaGVjayIwChxDcmVhdGVFbnJvbGxtZW50VG9rZW5SZXF1ZXN0EhAKCG92ZXJmbG93GAEgASgIIlgKHUNyZWF0ZUVucm9sbG1lbnRUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEg0KBXZhbHVlGAIgASgJIuAHCgRIb3N0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSCgoCb3MYAyADKAkSDAoEY3B1cxgEIAEoBRISCgptZW1vcnlfbWliGAUgASgFEjQKBmxhYmVscxgGIAMoCzIkLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0LkxhYmVsc0VudHJ5EiwKBXN0YXRlGAcgASgOMh0udG9zaGkud29ya3NwYWNlLnYxLkhvc3RTdGF0ZRIwCgxsYXN0X3NlZW5fYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhcKD2ZyZWVfbWVtb3J5X21pYhgJIAEoAxI0CgxoZWxkX3JlZmlsbHMYCiADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSGVsZFJlZmlsbBIQCghzdG9wcGluZxgLIAEoCBINCgVjbG91ZBgMIAEoCRIQCghvdmVyZmxvdxgNIAEoCBIuCgZlZ3Jlc3MYDiABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuSG9zdEVncmVzcxIVCg1hZ2VudF92ZXJzaW9uGA8gASgJEkQKFGFnZW50X3ZlcnNpb25fc3RhdHVzGBAgASgOMiYudG9zaGkud29ya3NwYWNlLnYxLkFnZW50VmVyc2lvblN0YXR1cxIaChJhZ2VudF92ZXJzaW9uX3NrZXcYESABKAkSFAoMbG9uZ19vZmZsaW5lGBIgASgIEhkKEWhlYXJ0YmVhdF9yZWZ1c2FsGBMgASgJEjgKFGhlYXJ0YmVhdF9yZWZ1c2VkX2F0GBQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgR0aWVyGBUgASgJEi4KCnJldm9rZWRfYXQYFiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhgKEG1lbW9yeV9saW1pdF9taWIYFyABKAMSGwoTbWVtb3J5X2xpbWl0X3NvdXJjZRgYIAEoCRIdChVhZ2VudF92ZXJzaW9uX21pbmltdW0YGSABKAkSDwoHa2VlcF92bRgaIAEoCBIsCghrZXB0X3ZtcxgbIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5LZXB0Vk0SFwoPa2VwdF9tZW1vcnlfbWliGBwgASgDEhcKD2tlcHRfZGlza19ieXRlcxgdIAEoAxIYChBuZXR3b3JrX2VuZm9yY2VkGB4gASgIEhYKDm5ldHdvcmtfcmVhc29uGB8gASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEikQEKBktlcHRWTRITCgt3b3JrbG9hZF9pZBgBIAEoCRIMCgRraW5kGAIgASgJEgwKBGZvcm0YAyABKAkSEgoKbWVtb3J5X21pYhgEIAEoAxISCgpkaXNrX2J5dGVzGAUgASgDEi4KCnN0b3BwZWRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIioKCkhlbGRSZWZpbGwSDAoEc2l6ZRgBIAEoCRIOCgZyZWFzb24YAiABKAkiewoKSG9zdEVncmVzcxILCgNpcHMYASADKAkSMAoGc291cmNlGAIgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkVncmVzc1NvdXJjZRIuCgpjaGFuZ2VkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLdAQoKSG9zdFZvbHVtZRIRCgl2b2x1bWVfaWQYASABKAkSDwoHcHJvamVjdBgCIAEoCRISCgpwcm9qZWN0X2lkGAMgASgJEgwKBG5hbWUYBCABKAkSDAoEbW9kZRgFIAEoCRIWCg5zaXplX2NhcF9ieXRlcxgGIAEoAxIRCgl3YXJtX2NvcHkYByABKAgSEAoIY2xhaW1faWQYCCABKAkSDgoGam9iX2lkGAkgASgJEi4KCmNsYWltZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIpQCCglIb3N0QWxlcnQSDAoEa2luZBgBIAEoCRItCglyYWlzZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKBXNpbmNlGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVjb3VudBgEIAEoAxI7CgdyZWFzb25zGAUgAygLMioudG9zaGkud29ya3NwYWNlLnYxLkhvc3RBbGVydC5SZWFzb25zRW50cnkSEgoKdG9wX3JlYXNvbhgGIAEoCRIPCgdtZXNzYWdlGAcgASgJGi4KDFJlYXNvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgBIvYDCglDbG91ZEhvc3QSDwoHaG9zdF9pZBgBIAEoCRINCgVjbG91ZBgCIAEoCRIOCgZyZWdpb24YAyABKAkSEAoIcm9sZV9hcm4YBCABKAkSEwoLZXh0ZXJuYWxfaWQYBSABKAkSDQoFaW1hZ2UYBiABKAkSEQoJc3VibmV0X2lkGAcgASgJEhoKEnNlY3VyaXR5X2dyb3VwX2lkcxgIIAMoCRJICg5pbnN0YW5jZV90eXBlcxgJIAMoCzIwLnRvc2hpLndvcmtzcGFjZS52MS5DbG91ZEhvc3QuSW5zdGFuY2VUeXBlc0VudHJ5EhEKCW1heF92Y3B1cxgKIAEoBRIuCgpjcmVhdGVkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRzcG90GAwgASgIEhUKDW1heF9pbnN0YW5jZXMYDSABKAUSJAocbWF4X2luc3RhbmNlX21pbnV0ZXNfcGVyX2RheRgOIAEoBRIPCgdwcm9qZWN0GA8gASgJEgwKBHpvbmUYECABKAkSFwoPc2VydmljZV9hY2NvdW50GBEgASgJEg4KBmVncmVzcxgSIAEoCRo0ChJJbnN0YW5jZVR5cGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJoCg5DbG91ZEhvc3RDaGVjaxIMCgRuYW1lGAEgASgJEjgKBnN0YXR1cxgCIAEoDjIoLnRvc2hpLndvcmtzcGFjZS52MS5DbG91ZEhvc3RDaGVja1N0YXR1cxIOCgZkZXRhaWwYAyABKAkqbwoJSG9zdFN0YXRlEhoKFkhPU1RfU1RBVEVfVU5TUEVDSUZJRUQQABIVChFIT1NUX1NUQVRFX09OTElORRABEhcKE0hPU1RfU1RBVEVfRFJBSU5JTkcQAhIWChJIT1NUX1NUQVRFX09GRkxJTkUQAyqfAQoMRWdyZXNzU291cmNlEh0KGUVHUkVTU19TT1VSQ0VfVU5TUEVDSUZJRUQQABIcChhFR1JFU1NfU09VUkNFX0NPTkZJR1VSRUQQARIcChhFR1JFU1NfU09VUkNFX0RJU0NPVkVSRUQQAhIZChVFR1JFU1NfU09VUkNFX1VOS05PV04QAxIZChVFR1JFU1NfU09VUkNFX1BFUl9KT0IQBCrAAQoSQWdlbnRWZXJzaW9uU3RhdHVzEiQKIEFHRU5UX1ZFUlNJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASIAocQUdFTlRfVkVSU0lPTl9TVEFUVVNfVU5LTk9XThABEhsKF0FHRU5UX1ZFUlNJT05fU1RBVFVTX09LEAISHQoZQUdFTlRfVkVSU0lPTl9TVEFUVVNfU0tFVxADEiYKIkFHRU5UX1ZFUlNJT05fU1RBVFVTX0JFTE9XX01JTklNVU0QBCrIAQoUQ2xvdWRIb3N0Q2hlY2tTdGF0dXMSJwojQ0xPVURfSE9TVF9DSEVDS19TVEFUVVNfVU5TUEVDSUZJRUQQABIeChpDTE9VRF9IT1NUX0NIRUNLX1NUQVRVU19PSxABEiAKHENMT1VEX0hPU1RfQ0hFQ0tfU1RBVFVTX1dBUk4QAhIgChxDTE9VRF9IT1NUX0NIRUNLX1NUQVRVU19GQUlMEAMSIwofQ0xPVURfSE9TVF9DSEVDS19TVEFUVVNfU0tJUFBFRBAEMssICgtIb3N0U2VydmljZRJoCglMaXN0SG9zdHMSJC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RzUmVxdWVzdBolLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SG9zdHNSZXNwb25zZSIOwvMYCmhvc3RzLnJlYWQSegoPTGlzdEhvc3RTdG9yYWdlEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0U3RvcmFnZVJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RTdG9yYWdlUmVzcG9uc2UiDsLzGApob3N0cy5yZWFkEncKDkxpc3RIb3N0QWxlcnRzEikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0QWxlcnRzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SG9zdEFsZXJ0c1Jlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBKGAQoMU2V0SG9zdFN0YXRlEicudG9zaGkud29ya3NwYWNlLnYxLlNldEhvc3RTdGF0ZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuU2V0SG9zdFN0YXRlUmVzcG9uc2UiI8LzGAtob3N0cy53cml0ZdLzGBAKDmhvc3Quc3RhdGVfc2V0EmwKClJldGlyZUhvc3QSJS50b3NoaS53b3Jrc3BhY2UudjEuUmV0aXJlSG9zdFJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuUmV0aXJlSG9zdFJlc3BvbnNlIg/C8xgLaG9zdHMud3JpdGUStQEKD0NyZWF0ZUNsb3VkSG9zdBIqLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDbG91ZEhvc3RSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNsb3VkSG9zdFJlc3BvbnNlIknC8xgLaG9zdHMud3JpdGXK8xgJd29ya3NwYWNl0vMYKQoQY2xvdWRfaG9zdC5hZGRlZBIVaG9zdDpyZXNwb25zZS5ob3N0LmlkEooBCg5DaGVja0Nsb3VkSG9zdBIpLnRvc2hpLndvcmtzcGFjZS52MS5DaGVja0Nsb3VkSG9zdFJlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuQ2hlY2tDbG91ZEhvc3RSZXNwb25zZSIhwvMYC2hvc3RzLndyaXRl0vMYDhIMaG9zdDpob3N0X2lkEqABChVDcmVhdGVFbnJvbGxtZW50VG9rZW4SMC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW5yb2xsbWVudFRva2VuUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnJvbGxtZW50VG9rZW5SZXNwb25zZSIiwvMYC2hvc3RzLndyaXRl0vMYDwoNdG9rZW4uY3JlYXRlZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_tokens]);
+  fileDesc("Ch50b3NoaS93b3Jrc3BhY2UvdjEvaG9zdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKBAQoQTGlzdEhvc3RzUmVxdWVzdBItCgZzdGF0ZXMYASADKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuSG9zdFN0YXRlEhcKD2V4Y2x1ZGVfcmV2b2tlZBgCIAEoCBIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSKMAQoRTGlzdEhvc3RzUmVzcG9uc2USJwoFaG9zdHMYASADKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdBI1ChJsb25nX29mZmxpbmVfYWZ0ZXIYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIlAKFkxpc3RIb3N0U3RvcmFnZVJlcXVlc3QSDwoHaG9zdF9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJjChdMaXN0SG9zdFN0b3JhZ2VSZXNwb25zZRIvCgd2b2x1bWVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkhvc3RWb2x1bWUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIj4KFUxpc3RIb3N0QWxlcnRzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJgChZMaXN0SG9zdEFsZXJ0c1Jlc3BvbnNlEi0KBmFsZXJ0cxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0QWxlcnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIk8KE1NldEhvc3RTdGF0ZVJlcXVlc3QSCgoCaWQYASABKAkSLAoFc3RhdGUYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuSG9zdFN0YXRlIj4KFFNldEhvc3RTdGF0ZVJlc3BvbnNlEiYKBGhvc3QYASABKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdCIfChFSZXRpcmVIb3N0UmVxdWVzdBIKCgJpZBgBIAEoCSIUChJSZXRpcmVIb3N0UmVzcG9uc2UitwQKFkNyZWF0ZUNsb3VkSG9zdFJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVjbG91ZBgCIAEoCRIOCgZyZWdpb24YAyABKAkSEAoIcm9sZV9hcm4YBCABKAkSDQoFaW1hZ2UYBSABKAkSEQoJc3VibmV0X2lkGAYgASgJEhoKEnNlY3VyaXR5X2dyb3VwX2lkcxgHIAMoCRJVCg5pbnN0YW5jZV90eXBlcxgIIAMoCzI9LnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDbG91ZEhvc3RSZXF1ZXN0Lkluc3RhbmNlVHlwZXNFbnRyeRIRCgltYXhfdmNwdXMYCSABKAUSDAoEc3BvdBgKIAEoCBIVCg1tYXhfaW5zdGFuY2VzGAsgASgFEiQKHG1heF9pbnN0YW5jZV9taW51dGVzX3Blcl9kYXkYDCABKAUSEgoKZWdyZXNzX2lwcxgNIAMoCRITCgtub19vdmVyZmxvdxgOIAEoCBIPCgdwcm9qZWN0GA8gASgJEgwKBHpvbmUYECABKAkSFwoPc2VydmljZV9hY2NvdW50GBEgASgJEg4KBmVncmVzcxgSIAEoCRITCgtyZXF1ZXN0X2tleRgTIAEoCRIXCg9zdWJzY3JpcHRpb25faWQYFCABKAkSFgoOcmVzb3VyY2VfZ3JvdXAYFSABKAkaNAoSSW5zdGFuY2VUeXBlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi1QEKF0NyZWF0ZUNsb3VkSG9zdFJlc3BvbnNlEiYKBGhvc3QYASABKAsyGC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdBITCgtleHRlcm5hbF9pZBgCIAEoCRIVCg1wcmluY2lwYWxfYXJuGAMgASgJEjEKCmNsb3VkX2hvc3QYBCABKAsyHS50b3NoaS53b3Jrc3BhY2UudjEuQ2xvdWRIb3N0EhUKDWdjcF9wcmluY2lwYWwYBSABKAkSHAoUYXp1cmVfYXBwbGljYXRpb25faWQYBiABKAkiKAoVQ2hlY2tDbG91ZEhvc3RSZXF1ZXN0Eg8KB2hvc3RfaWQYASABKAkiTAoWQ2hlY2tDbG91ZEhvc3RSZXNwb25zZRIyCgZjaGVja3MYASADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2xvdWRIb3N0Q2hlY2siMAocQ3JlYXRlRW5yb2xsbWVudFRva2VuUmVxdWVzdBIQCghvdmVyZmxvdxgBIAEoCCJYCh1DcmVhdGVFbnJvbGxtZW50VG9rZW5SZXNwb25zZRIoCgV0b2tlbhgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhINCgV2YWx1ZRgCIAEoCSLgBwoESG9zdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEgoKAm9zGAMgAygJEgwKBGNwdXMYBCABKAUSEgoKbWVtb3J5X21pYhgFIAEoBRI0CgZsYWJlbHMYBiADKAsyJC50b3NoaS53b3Jrc3BhY2UudjEuSG9zdC5MYWJlbHNFbnRyeRIsCgVzdGF0ZRgHIAEoDjIdLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0U3RhdGUSMAoMbGFzdF9zZWVuX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIXCg9mcmVlX21lbW9yeV9taWIYCSABKAMSNAoMaGVsZF9yZWZpbGxzGAogAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkhlbGRSZWZpbGwSEAoIc3RvcHBpbmcYCyABKAgSDQoFY2xvdWQYDCABKAkSEAoIb3ZlcmZsb3cYDSABKAgSLgoGZWdyZXNzGA4gASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkhvc3RFZ3Jlc3MSFQoNYWdlbnRfdmVyc2lvbhgPIAEoCRJEChRhZ2VudF92ZXJzaW9uX3N0YXR1cxgQIAEoDjImLnRvc2hpLndvcmtzcGFjZS52MS5BZ2VudFZlcnNpb25TdGF0dXMSGgoSYWdlbnRfdmVyc2lvbl9za2V3GBEgASgJEhQKDGxvbmdfb2ZmbGluZRgSIAEoCBIZChFoZWFydGJlYXRfcmVmdXNhbBgTIAEoCRI4ChRoZWFydGJlYXRfcmVmdXNlZF9hdBgUIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEdGllchgVIAEoCRIuCgpyZXZva2VkX2F0GBYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYChBtZW1vcnlfbGltaXRfbWliGBcgASgDEhsKE21lbW9yeV9saW1pdF9zb3VyY2UYGCABKAkSHQoVYWdlbnRfdmVyc2lvbl9taW5pbXVtGBkgASgJEg8KB2tlZXBfdm0YGiABKAgSLAoIa2VwdF92bXMYGyADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuS2VwdFZNEhcKD2tlcHRfbWVtb3J5X21pYhgcIAEoAxIXCg9rZXB0X2Rpc2tfYnl0ZXMYHSABKAMSGAoQbmV0d29ya19lbmZvcmNlZBgeIAEoCBIWCg5uZXR3b3JrX3JlYXNvbhgfIAEoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpEBCgZLZXB0Vk0SEwoLd29ya2xvYWRfaWQYASABKAkSDAoEa2luZBgCIAEoCRIMCgRmb3JtGAMgASgJEhIKCm1lbW9yeV9taWIYBCABKAMSEgoKZGlza19ieXRlcxgFIAEoAxIuCgpzdG9wcGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIqCgpIZWxkUmVmaWxsEgwKBHNpemUYASABKAkSDgoGcmVhc29uGAIgASgJInsKCkhvc3RFZ3Jlc3MSCwoDaXBzGAEgAygJEjAKBnNvdXJjZRgCIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5FZ3Jlc3NTb3VyY2USLgoKY2hhbmdlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi3QEKCkhvc3RWb2x1bWUSEQoJdm9sdW1lX2lkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSEgoKcHJvamVjdF9pZBgDIAEoCRIMCgRuYW1lGAQgASgJEgwKBG1vZGUYBSABKAkSFgoOc2l6ZV9jYXBfYnl0ZXMYBiABKAMSEQoJd2FybV9jb3B5GAcgASgIEhAKCGNsYWltX2lkGAggASgJEg4KBmpvYl9pZBgJIAEoCRIuCgpjbGFpbWVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKUAgoJSG9zdEFsZXJ0EgwKBGtpbmQYASABKAkSLQoJcmFpc2VkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIpCgVzaW5jZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFY291bnQYBCABKAMSOwoHcmVhc29ucxgFIAMoCzIqLnRvc2hpLndvcmtzcGFjZS52MS5Ib3N0QWxlcnQuUmVhc29uc0VudHJ5EhIKCnRvcF9yZWFzb24YBiABKAkSDwoHbWVzc2FnZRgHIAEoCRouCgxSZWFzb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ASKnBAoJQ2xvdWRIb3N0Eg8KB2hvc3RfaWQYASABKAkSDQoFY2xvdWQYAiABKAkSDgoGcmVnaW9uGAMgASgJEhAKCHJvbGVfYXJuGAQgASgJEhMKC2V4dGVybmFsX2lkGAUgASgJEg0KBWltYWdlGAYgASgJEhEKCXN1Ym5ldF9pZBgHIAEoCRIaChJzZWN1cml0eV9ncm91cF9pZHMYCCADKAkSSAoOaW5zdGFuY2VfdHlwZXMYCSADKAsyMC50b3NoaS53b3Jrc3BhY2UudjEuQ2xvdWRIb3N0Lkluc3RhbmNlVHlwZXNFbnRyeRIRCgltYXhfdmNwdXMYCiABKAUSLgoKY3JlYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEc3BvdBgMIAEoCBIVCg1tYXhfaW5zdGFuY2VzGA0gASgFEiQKHG1heF9pbnN0YW5jZV9taW51dGVzX3Blcl9kYXkYDiABKAUSDwoHcHJvamVjdBgPIAEoCRIMCgR6b25lGBAgASgJEhcKD3NlcnZpY2VfYWNjb3VudBgRIAEoCRIOCgZlZ3Jlc3MYEiABKAkSFwoPc3Vic2NyaXB0aW9uX2lkGBMgASgJEhYKDnJlc291cmNlX2dyb3VwGBQgASgJGjQKEkluc3RhbmNlVHlwZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImgKDkNsb3VkSG9zdENoZWNrEgwKBG5hbWUYASABKAkSOAoGc3RhdHVzGAIgASgOMigudG9zaGkud29ya3NwYWNlLnYxLkNsb3VkSG9zdENoZWNrU3RhdHVzEg4KBmRldGFpbBgDIAEoCSpvCglIb3N0U3RhdGUSGgoWSE9TVF9TVEFURV9VTlNQRUNJRklFRBAAEhUKEUhPU1RfU1RBVEVfT05MSU5FEAESFwoTSE9TVF9TVEFURV9EUkFJTklORxACEhYKEkhPU1RfU1RBVEVfT0ZGTElORRADKp8BCgxFZ3Jlc3NTb3VyY2USHQoZRUdSRVNTX1NPVVJDRV9VTlNQRUNJRklFRBAAEhwKGEVHUkVTU19TT1VSQ0VfQ09ORklHVVJFRBABEhwKGEVHUkVTU19TT1VSQ0VfRElTQ09WRVJFRBACEhkKFUVHUkVTU19TT1VSQ0VfVU5LTk9XThADEhkKFUVHUkVTU19TT1VSQ0VfUEVSX0pPQhAEKsABChJBZ2VudFZlcnNpb25TdGF0dXMSJAogQUdFTlRfVkVSU0lPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIgChxBR0VOVF9WRVJTSU9OX1NUQVRVU19VTktOT1dOEAESGwoXQUdFTlRfVkVSU0lPTl9TVEFUVVNfT0sQAhIdChlBR0VOVF9WRVJTSU9OX1NUQVRVU19TS0VXEAMSJgoiQUdFTlRfVkVSU0lPTl9TVEFUVVNfQkVMT1dfTUlOSU1VTRAEKsgBChRDbG91ZEhvc3RDaGVja1N0YXR1cxInCiNDTE9VRF9IT1NUX0NIRUNLX1NUQVRVU19VTlNQRUNJRklFRBAAEh4KGkNMT1VEX0hPU1RfQ0hFQ0tfU1RBVFVTX09LEAESIAocQ0xPVURfSE9TVF9DSEVDS19TVEFUVVNfV0FSThACEiAKHENMT1VEX0hPU1RfQ0hFQ0tfU1RBVFVTX0ZBSUwQAxIjCh9DTE9VRF9IT1NUX0NIRUNLX1NUQVRVU19TS0lQUEVEEAQyywgKC0hvc3RTZXJ2aWNlEmgKCUxpc3RIb3N0cxIkLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SG9zdHNSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0c1Jlc3BvbnNlIg7C8xgKaG9zdHMucmVhZBJ6Cg9MaXN0SG9zdFN0b3JhZ2USKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RTdG9yYWdlUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SG9zdFN0b3JhZ2VSZXNwb25zZSIOwvMYCmhvc3RzLnJlYWQSdwoOTGlzdEhvc3RBbGVydHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEhvc3RBbGVydHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RIb3N0QWxlcnRzUmVzcG9uc2UiDsLzGApob3N0cy5yZWFkEoYBCgxTZXRIb3N0U3RhdGUSJy50b3NoaS53b3Jrc3BhY2UudjEuU2V0SG9zdFN0YXRlUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5TZXRIb3N0U3RhdGVSZXNwb25zZSIjwvMYC2hvc3RzLndyaXRl0vMYEAoOaG9zdC5zdGF0ZV9zZXQSbAoKUmV0aXJlSG9zdBIlLnRvc2hpLndvcmtzcGFjZS52MS5SZXRpcmVIb3N0UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5SZXRpcmVIb3N0UmVzcG9uc2UiD8LzGAtob3N0cy53cml0ZRK1AQoPQ3JlYXRlQ2xvdWRIb3N0EioudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNsb3VkSG9zdFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ2xvdWRIb3N0UmVzcG9uc2UiScLzGAtob3N0cy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgpChBjbG91ZF9ob3N0LmFkZGVkEhVob3N0OnJlc3BvbnNlLmhvc3QuaWQSigEKDkNoZWNrQ2xvdWRIb3N0EikudG9zaGkud29ya3NwYWNlLnYxLkNoZWNrQ2xvdWRIb3N0UmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5DaGVja0Nsb3VkSG9zdFJlc3BvbnNlIiHC8xgLaG9zdHMud3JpdGXS8xgOEgxob3N0Omhvc3RfaWQSoAEKFUNyZWF0ZUVucm9sbG1lbnRUb2tlbhIwLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnJvbGxtZW50VG9rZW5SZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVucm9sbG1lbnRUb2tlblJlc3BvbnNlIiLC8xgLaG9zdHMud3JpdGXS8xgPCg10b2tlbi5jcmVhdGVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_tokens]);
 
 /**
  * @generated from message toshi.workspace.v1.ListHostsRequest
@@ -465,14 +465,15 @@ export type CreateCloudHostRequest = Message<"toshi.workspace.v1.CreateCloudHost
   name: string;
 
   /**
-   * The cloud provider: "aws" (the default) or "gcp".
+   * The cloud provider: "aws" (the default), "gcp" or "azure".
    *
    * @generated from field: string cloud = 2;
    */
   cloud: string;
 
   /**
-   * The AWS region the instances run in (AWS).
+   * The AWS region (AWS), the zone's region (GCP) or the location (Azure)
+   * the instances run in.
    *
    * @generated from field: string region = 3;
    */
@@ -486,17 +487,19 @@ export type CreateCloudHostRequest = Message<"toshi.workspace.v1.CreateCloudHost
   roleArn: string;
 
   /**
-   * The image the instances boot: an AMI (AWS), or a GCE image or family
-   * (an image name, family/NAME, or a projects/... path).
+   * The image the instances boot: an AMI (AWS), a GCE image or family
+   * (an image name, family/NAME, or a projects/... path), or a Compute
+   * Gallery image version ID (Azure).
    *
    * @generated from field: string image = 5;
    */
   image: string;
 
   /**
-   * The subnet (AWS) or subnetwork (GCP, a name in the zone's region or
-   * regions/R/subnetworks/S) to launch into; empty means a default subnet
-   * or the default network.
+   * The subnet (AWS), subnetwork (GCP, a name in the zone's region or
+   * regions/R/subnetworks/S) or subnet resource ID (Azure) to launch into;
+   * empty means a default subnet or the default network (required on
+   * Azure).
    *
    * @generated from field: string subnet_id = 6;
    */
@@ -598,6 +601,20 @@ export type CreateCloudHostRequest = Message<"toshi.workspace.v1.CreateCloudHost
    * @generated from field: string request_key = 19;
    */
   requestKey: string;
+
+  /**
+   * The Azure subscription the instances run in (Azure).
+   *
+   * @generated from field: string subscription_id = 20;
+   */
+  subscriptionId: string;
+
+  /**
+   * The Azure resource group the instances run in (Azure).
+   *
+   * @generated from field: string resource_group = 21;
+   */
+  resourceGroup: string;
 };
 
 /**
@@ -614,14 +631,15 @@ export type CreateCloudHostRequestJson = {
   name?: string;
 
   /**
-   * The cloud provider: "aws" (the default) or "gcp".
+   * The cloud provider: "aws" (the default), "gcp" or "azure".
    *
    * @generated from field: string cloud = 2;
    */
   cloud?: string;
 
   /**
-   * The AWS region the instances run in (AWS).
+   * The AWS region (AWS), the zone's region (GCP) or the location (Azure)
+   * the instances run in.
    *
    * @generated from field: string region = 3;
    */
@@ -635,17 +653,19 @@ export type CreateCloudHostRequestJson = {
   roleArn?: string;
 
   /**
-   * The image the instances boot: an AMI (AWS), or a GCE image or family
-   * (an image name, family/NAME, or a projects/... path).
+   * The image the instances boot: an AMI (AWS), a GCE image or family
+   * (an image name, family/NAME, or a projects/... path), or a Compute
+   * Gallery image version ID (Azure).
    *
    * @generated from field: string image = 5;
    */
   image?: string;
 
   /**
-   * The subnet (AWS) or subnetwork (GCP, a name in the zone's region or
-   * regions/R/subnetworks/S) to launch into; empty means a default subnet
-   * or the default network.
+   * The subnet (AWS), subnetwork (GCP, a name in the zone's region or
+   * regions/R/subnetworks/S) or subnet resource ID (Azure) to launch into;
+   * empty means a default subnet or the default network (required on
+   * Azure).
    *
    * @generated from field: string subnet_id = 6;
    */
@@ -747,6 +767,20 @@ export type CreateCloudHostRequestJson = {
    * @generated from field: string request_key = 19;
    */
   requestKey?: string;
+
+  /**
+   * The Azure subscription the instances run in (Azure).
+   *
+   * @generated from field: string subscription_id = 20;
+   */
+  subscriptionId?: string;
+
+  /**
+   * The Azure resource group the instances run in (Azure).
+   *
+   * @generated from field: string resource_group = 21;
+   */
+  resourceGroup?: string;
 };
 
 /**
@@ -794,6 +828,14 @@ export type CreateCloudHostResponse = Message<"toshi.workspace.v1.CreateCloudHos
    * @generated from field: string gcp_principal = 5;
    */
   gcpPrincipal: string;
+
+  /**
+   * The application (client) id the workspace consents into its tenant and
+   * grants the host's role to (Azure).
+   *
+   * @generated from field: string azure_application_id = 6;
+   */
+  azureApplicationId: string;
 };
 
 /**
@@ -834,6 +876,14 @@ export type CreateCloudHostResponseJson = {
    * @generated from field: string gcp_principal = 5;
    */
   gcpPrincipal?: string;
+
+  /**
+   * The application (client) id the workspace consents into its tenant and
+   * grants the host's role to (Azure).
+   *
+   * @generated from field: string azure_application_id = 6;
+   */
+  azureApplicationId?: string;
 };
 
 /**
@@ -1054,8 +1104,8 @@ export type Host = Message<"toshi.workspace.v1.Host"> & {
   stopping: boolean;
 
   /**
-   * The cloud the host runs in when it is a cloud host ("aws"); empty
-   * otherwise.
+   * The cloud the host runs in when it is a cloud host ("aws", "gcp" or
+   * "azure"); empty otherwise.
    *
    * @generated from field: string cloud = 12;
    */
@@ -1290,8 +1340,8 @@ export type HostJson = {
   stopping?: boolean;
 
   /**
-   * The cloud the host runs in when it is a cloud host ("aws"); empty
-   * otherwise.
+   * The cloud the host runs in when it is a cloud host ("aws", "gcp" or
+   * "azure"); empty otherwise.
    *
    * @generated from field: string cloud = 12;
    */
@@ -1940,8 +1990,8 @@ export const HostAlertSchema: GenMessage<HostAlert, {jsonType: HostAlertJson}> =
   messageDesc(file_toshi_workspace_v1_hosts, 21);
 
 /**
- * CloudHost is the AWS account behind a workspace-owned host the control plane
- * drives.
+ * CloudHost is the AWS account, GCP project or Azure subscription behind a
+ * workspace-owned host the control plane drives.
  *
  * @generated from message toshi.workspace.v1.CloudHost
  */
@@ -1954,14 +2004,15 @@ export type CloudHost = Message<"toshi.workspace.v1.CloudHost"> & {
   hostId: string;
 
   /**
-   * The cloud provider: "aws" or "gcp".
+   * The cloud provider: "aws", "gcp" or "azure".
    *
    * @generated from field: string cloud = 2;
    */
   cloud: string;
 
   /**
-   * The region the instances run in; on GCP the zone's region.
+   * The region the instances run in; on GCP the zone's region, on Azure
+   * the location.
    *
    * @generated from field: string region = 3;
    */
@@ -1975,23 +2026,25 @@ export type CloudHost = Message<"toshi.workspace.v1.CloudHost"> & {
   roleArn: string;
 
   /**
-   * The external ID the role's trust policy requires (AWS), or the project
-   * metadata must name (GCP); generated by Toshi.
+   * The external ID the role's trust policy requires (AWS), the project
+   * metadata must name (GCP), or the resource group's toshi-external-id tag
+   * must name (Azure); generated by Toshi.
    *
    * @generated from field: string external_id = 5;
    */
   externalId: string;
 
   /**
-   * The image the instances boot: an AMI, or a GCE image path.
+   * The image the instances boot: an AMI (AWS), a GCE image path (GCP) or
+   * a Compute Gallery image version ID (Azure).
    *
    * @generated from field: string image = 6;
    */
   image: string;
 
   /**
-   * The subnet (AWS) or subnetwork (GCP) to launch into; empty means a
-   * default subnet or the default network.
+   * The subnet (AWS), subnetwork (GCP) or subnet resource ID (Azure) to
+   * launch into; empty means a default subnet or the default network.
    *
    * @generated from field: string subnet_id = 7;
    */
@@ -2070,11 +2123,25 @@ export type CloudHost = Message<"toshi.workspace.v1.CloudHost"> & {
    * @generated from field: string egress = 18;
    */
   egress: string;
+
+  /**
+   * The Azure subscription the instances run in (Azure).
+   *
+   * @generated from field: string subscription_id = 19;
+   */
+  subscriptionId: string;
+
+  /**
+   * The Azure resource group the instances run in (Azure).
+   *
+   * @generated from field: string resource_group = 20;
+   */
+  resourceGroup: string;
 };
 
 /**
- * CloudHost is the AWS account behind a workspace-owned host the control plane
- * drives.
+ * CloudHost is the AWS account, GCP project or Azure subscription behind a
+ * workspace-owned host the control plane drives.
  *
  * @generated from message toshi.workspace.v1.CloudHost
  */
@@ -2087,14 +2154,15 @@ export type CloudHostJson = {
   hostId?: string;
 
   /**
-   * The cloud provider: "aws" or "gcp".
+   * The cloud provider: "aws", "gcp" or "azure".
    *
    * @generated from field: string cloud = 2;
    */
   cloud?: string;
 
   /**
-   * The region the instances run in; on GCP the zone's region.
+   * The region the instances run in; on GCP the zone's region, on Azure
+   * the location.
    *
    * @generated from field: string region = 3;
    */
@@ -2108,23 +2176,25 @@ export type CloudHostJson = {
   roleArn?: string;
 
   /**
-   * The external ID the role's trust policy requires (AWS), or the project
-   * metadata must name (GCP); generated by Toshi.
+   * The external ID the role's trust policy requires (AWS), the project
+   * metadata must name (GCP), or the resource group's toshi-external-id tag
+   * must name (Azure); generated by Toshi.
    *
    * @generated from field: string external_id = 5;
    */
   externalId?: string;
 
   /**
-   * The image the instances boot: an AMI, or a GCE image path.
+   * The image the instances boot: an AMI (AWS), a GCE image path (GCP) or
+   * a Compute Gallery image version ID (Azure).
    *
    * @generated from field: string image = 6;
    */
   image?: string;
 
   /**
-   * The subnet (AWS) or subnetwork (GCP) to launch into; empty means a
-   * default subnet or the default network.
+   * The subnet (AWS), subnetwork (GCP) or subnet resource ID (Azure) to
+   * launch into; empty means a default subnet or the default network.
    *
    * @generated from field: string subnet_id = 7;
    */
@@ -2203,6 +2273,20 @@ export type CloudHostJson = {
    * @generated from field: string egress = 18;
    */
   egress?: string;
+
+  /**
+   * The Azure subscription the instances run in (Azure).
+   *
+   * @generated from field: string subscription_id = 19;
+   */
+  subscriptionId?: string;
+
+  /**
+   * The Azure resource group the instances run in (Azure).
+   *
+   * @generated from field: string resource_group = 20;
+   */
+  resourceGroup?: string;
 };
 
 /**

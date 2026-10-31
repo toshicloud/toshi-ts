@@ -1970,7 +1970,7 @@ export const InvitationStateSchema: GenEnum<InvitationState, InvitationStateJson
  * permission but billing.write, workspace.delete and workspace.signin),
  * member (reads and
  * writes of every product and of projects, secrets and tokens, and reads of
- * the rest), agent (every read, and sandboxes.write, channels.write,
+ * the rest), agent (every read, and sandboxes.write, endpoints.write,
  * artifacts.write and volumes.write) and viewer (every read). They cannot
  * be changed. A workspace adds its own from the permissions this API's
  * methods name in their toshi.permission option and those a product's

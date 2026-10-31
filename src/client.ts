@@ -7,7 +7,7 @@ import { executeCommand } from "./execute.js";
 import { AccountService } from "./gen/toshi/workspace/v1/account_pb.js";
 import { ArtifactService, ArtifactUploadService } from "./gen/toshi/workspace/v1/artifacts_pb.js";
 import { AuditEventService } from "./gen/toshi/workspace/v1/audit_events_pb.js";
-import { ChannelService } from "./gen/toshi/workspace/v1/channels_pb.js";
+import { EndpointService } from "./gen/toshi/workspace/v1/endpoints_pb.js";
 import { ConnectionService } from "./gen/toshi/workspace/v1/connections_pb.js";
 import { DiscoveryService } from "./gen/toshi/workspace/v1/discovery_pb.js";
 import { DisplayService } from "./gen/toshi/workspace/v1/display_pb.js";
@@ -211,7 +211,7 @@ export interface ToshiClient {
   readonly secret: Client<typeof SecretService>;
   readonly webhook: Client<typeof WebhookService>;
   readonly display: Client<typeof DisplayService>;
-  readonly channel: Client<typeof ChannelService>;
+  readonly endpoint: Client<typeof EndpointService>;
   readonly recording: Client<typeof RecordingService>;
   readonly volume: Client<typeof VolumeService>;
   readonly artifact: Client<typeof ArtifactService>;
@@ -381,7 +381,7 @@ export interface ServicesClient {
   ): Promise<ListServiceActivationsResponse>;
   /**
    * Creates or replaces the service's alarm with this name and returns it: at each instant of its
-   * schedule the alarm publishes its event, with its data, on one of the service's event channels.
+   * schedule the alarm publishes its event, with its data, on one of the service's event endpoints.
    */
   setAlarm(
     req: MessageInitShape<typeof SetServiceAlarmRequestSchema>,
@@ -400,7 +400,7 @@ export interface ServicesClient {
     req: MessageInitShape<typeof ListServiceAlarmsRequestSchema>,
     opts?: CallOptions,
   ): Promise<ListServiceAlarmsResponse>;
-  /** Removes an alarm and its occurrences; messages it already published stay on the channel. */
+  /** Removes an alarm and its occurrences; messages it already published stay on the endpoint. */
   deleteAlarm(
     req: MessageInitShape<typeof DeleteServiceAlarmRequestSchema>,
     opts?: CallOptions,
@@ -544,7 +544,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     secret: createClient(SecretService, transport),
     webhook: createClient(WebhookService, transport),
     display: createClient(DisplayService, transport),
-    channel: createClient(ChannelService, transport),
+    endpoint: createClient(EndpointService, transport),
     recording: createClient(RecordingService, transport),
     volume: createClient(VolumeService, transport),
     artifact: createClient(ArtifactService, transport),

@@ -6,7 +6,7 @@ import { createToshiClient } from "../src/client.js";
 import type { ToshiClient, ToshiOptions } from "../src/client.js";
 import { SecretService } from "../src/gen/toshi/workspace/v1/secrets_pb.js";
 import { ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
-import { ChannelService } from "../src/gen/toshi/workspace/v1/channels_pb.js";
+import { EndpointService } from "../src/gen/toshi/workspace/v1/endpoints_pb.js";
 import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
 import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
 import { TokenService } from "../src/gen/toshi/workspace/v1/tokens_pb.js";
@@ -332,7 +332,7 @@ describe("createToshiClient", () => {
 
   it("gives every Workspace API service its own client", async () => {
     const harness = clientWith((router) => {
-      router.service(ChannelService, { listChannels: () => ({}) });
+      router.service(EndpointService, { listEndpoints: () => ({}) });
       router.service(ArtifactUploadService, { completeUpload: () => ({}) });
       router.service(WorkspaceService, { getVersion: () => ({ version: "v0.2.1" }) });
       router.service(TokenService, { listTokens: () => ({}) });
@@ -344,7 +344,7 @@ describe("createToshiClient", () => {
       "secret",
       "webhook",
       "display",
-      "channel",
+      "endpoint",
       "recording",
       "volume",
       "artifact",
@@ -370,7 +370,7 @@ describe("createToshiClient", () => {
     // One call through a service the other cases never touch, one through the
     // upload service and one each through the services the client gained with
     // the member services, prove each field holds that service's client.
-    await expect(harness.client.channel.listChannels({})).resolves.toBeDefined();
+    await expect(harness.client.endpoint.listEndpoints({})).resolves.toBeDefined();
     await expect(harness.client.artifactUpload.completeUpload({})).resolves.toBeDefined();
     await expect(harness.client.workspace.getVersion({})).resolves.toMatchObject({ version: "v0.2.1" });
     await expect(harness.client.token.listTokens({})).resolves.toBeDefined();

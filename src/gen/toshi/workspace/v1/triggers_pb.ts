@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/triggers.proto.
  */
 export const file_toshi_workspace_v1_triggers: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvdHJpZ2dlcnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLRAwoHVHJpZ2dlchIKCgJpZBgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJEgwKBG5hbWUYBCABKAkSDgoGc291cmNlGAUgASgJEg4KBmV2ZW50cxgGIAMoCRIxCgZmaWx0ZXIYByABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlckZpbHRlchIxCgZhY3Rpb24YCCABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlckFjdGlvbhIxCgZ0YXJnZXQYCSABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlclRhcmdldBILCgNrZXkYCiABKAkSLwoMaWRsZV90aW1lb3V0GAsgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi8KBWZvcmtzGAwgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXJGb3JrcxIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8Cg1UcmlnZ2VyRmlsdGVyEhQKDHJlcG9zaXRvcmllcxgBIAMoCRIVCg1iYXNlX2JyYW5jaGVzGAIgAygJIsUBCg1UcmlnZ2VyVGFyZ2V0EjUKB3NhbmRib3gYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlclNhbmRib3hIABI1CgdwcmV2aWV3GAIgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXJQcmV2aWV3SAASPAoHc2VydmljZRgDIAEoCzIpLnRvc2hpLndvcmtzcGFjZS52MS5UcmlnZ2VyU2VydmljZUNoYW5uZWxIAEIICgZ0YXJnZXQiOQoVVHJpZ2dlclNlcnZpY2VDaGFubmVsEg8KB3NlcnZpY2UYASABKAkSDwoHY2hhbm5lbBgCIAEoCSIQCg5UcmlnZ2VyUHJldmlldyKCAgoOVHJpZ2dlclNhbmRib3gSDAoEc2l6ZRgBIAEoCRIvCgxtYXhfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLQoIYmluZGluZ3MYAyADKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQmluZGluZxIqCgVzZXR1cBgEIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Db21tYW5kEiwKB3Byb2Nlc3MYBSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ29tbWFuZBIPCgdjaGFubmVsGAYgASgJEhcKD2NvbnRhaW5lcl9pbWFnZRgHIAEoCSJ/ChRDcmVhdGVUcmlnZ2VyUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEiwKB3RyaWdnZXIYAyABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlchITCgtyZXF1ZXN0X2tleRgEIAEoCSJFChVDcmVhdGVUcmlnZ2VyUmVzcG9uc2USLAoHdHJpZ2dlchgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5UcmlnZ2VyIkUKEUdldFRyaWdnZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkiQgoSR2V0VHJpZ2dlclJlc3BvbnNlEiwKB3RyaWdnZXIYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlciJiChNMaXN0VHJpZ2dlcnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiXgoUTGlzdFRyaWdnZXJzUmVzcG9uc2USLQoIdHJpZ2dlcnMYASADKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkivAEKFFVwZGF0ZVRyaWdnZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkSLAoHdHJpZ2dlchgEIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5UcmlnZ2VyEi8KC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxITCgtyZXF1ZXN0X2tleRgGIAEoCSJFChVVcGRhdGVUcmlnZ2VyUmVzcG9uc2USLAoHdHJpZ2dlchgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5UcmlnZ2VyIl0KFERlbGV0ZVRyaWdnZXJSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSCgoCaWQYAyABKAkSEwoLcmVxdWVzdF9rZXkYBCABKAkiFwoVRGVsZXRlVHJpZ2dlclJlc3BvbnNlKoEBCg1UcmlnZ2VyQWN0aW9uEh4KGlRSSUdHRVJfQUNUSU9OX1VOU1BFQ0lGSUVEEAASGQoVVFJJR0dFUl9BQ1RJT05fQ1JFQVRFEAESGQoVVFJJR0dFUl9BQ1RJT05fREVMRVRFEAISGgoWVFJJR0dFUl9BQ1RJT05fREVMSVZFUhADKl8KDFRyaWdnZXJGb3JrcxIdChlUUklHR0VSX0ZPUktTX1VOU1BFQ0lGSUVEEAASFwoTVFJJR0dFUl9GT1JLU19MQUJFTBABEhcKE1RSSUdHRVJfRk9SS1NfTkVWRVIQAjKzBQoOVHJpZ2dlclNlcnZpY2UShwEKDUNyZWF0ZVRyaWdnZXISKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlVHJpZ2dlclJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlVHJpZ2dlclJlc3BvbnNlIiHC8xgOdHJpZ2dlcnMud3JpdGXK8xgLZW52aXJvbm1lbnQSfQoKR2V0VHJpZ2dlchIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRUcmlnZ2VyUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRUcmlnZ2VyUmVzcG9uc2UiIMLzGA10cmlnZ2Vycy5yZWFkyvMYC2Vudmlyb25tZW50EoMBCgxMaXN0VHJpZ2dlcnMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFRyaWdnZXJzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VHJpZ2dlcnNSZXNwb25zZSIgwvMYDXRyaWdnZXJzLnJlYWTK8xgLZW52aXJvbm1lbnQShwEKDVVwZGF0ZVRyaWdnZXISKC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVHJpZ2dlclJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVHJpZ2dlclJlc3BvbnNlIiHC8xgOdHJpZ2dlcnMud3JpdGXK8xgLZW52aXJvbm1lbnQShwEKDURlbGV0ZVRyaWdnZXISKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlVHJpZ2dlclJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlVHJpZ2dlclJlc3BvbnNlIiHC8xgOdHJpZ2dlcnMud3JpdGXK8xgLZW52aXJvbm1lbnRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_workspace]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvdHJpZ2dlcnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLRAwoHVHJpZ2dlchIKCgJpZBgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJEgwKBG5hbWUYBCABKAkSDgoGc291cmNlGAUgASgJEg4KBmV2ZW50cxgGIAMoCRIxCgZmaWx0ZXIYByABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlckZpbHRlchIxCgZhY3Rpb24YCCABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlckFjdGlvbhIxCgZ0YXJnZXQYCSABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlclRhcmdldBILCgNrZXkYCiABKAkSLwoMaWRsZV90aW1lb3V0GAsgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi8KBWZvcmtzGAwgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXJGb3JrcxIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8Cg1UcmlnZ2VyRmlsdGVyEhQKDHJlcG9zaXRvcmllcxgBIAMoCRIVCg1iYXNlX2JyYW5jaGVzGAIgAygJIsYBCg1UcmlnZ2VyVGFyZ2V0EjUKB3NhbmRib3gYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlclNhbmRib3hIABI1CgdwcmV2aWV3GAIgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXJQcmV2aWV3SAASPQoHc2VydmljZRgDIAEoCzIqLnRvc2hpLndvcmtzcGFjZS52MS5UcmlnZ2VyU2VydmljZUVuZHBvaW50SABCCAoGdGFyZ2V0IjsKFlRyaWdnZXJTZXJ2aWNlRW5kcG9pbnQSDwoHc2VydmljZRgBIAEoCRIQCghlbmRwb2ludBgCIAEoCSIQCg5UcmlnZ2VyUHJldmlldyKDAgoOVHJpZ2dlclNhbmRib3gSDAoEc2l6ZRgBIAEoCRIvCgxtYXhfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLQoIYmluZGluZ3MYAyADKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQmluZGluZxIqCgVzZXR1cBgEIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Db21tYW5kEiwKB3Byb2Nlc3MYBSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ29tbWFuZBIQCghlbmRwb2ludBgGIAEoCRIXCg9jb250YWluZXJfaW1hZ2UYByABKAkifwoUQ3JlYXRlVHJpZ2dlclJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIsCgd0cmlnZ2VyGAMgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXISEwoLcmVxdWVzdF9rZXkYBCABKAkiRQoVQ3JlYXRlVHJpZ2dlclJlc3BvbnNlEiwKB3RyaWdnZXIYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlciJFChFHZXRUcmlnZ2VyUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJIkIKEkdldFRyaWdnZXJSZXNwb25zZRIsCgd0cmlnZ2VyGAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXIiYgoTTGlzdFRyaWdnZXJzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJIl4KFExpc3RUcmlnZ2Vyc1Jlc3BvbnNlEi0KCHRyaWdnZXJzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLlRyaWdnZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIrwBChRVcGRhdGVUcmlnZ2VyUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJEiwKB3RyaWdnZXIYBCABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlchIvCgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEwoLcmVxdWVzdF9rZXkYBiABKAkiRQoVVXBkYXRlVHJpZ2dlclJlc3BvbnNlEiwKB3RyaWdnZXIYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuVHJpZ2dlciJdChREZWxldGVUcmlnZ2VyUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEgoKAmlkGAMgASgJEhMKC3JlcXVlc3Rfa2V5GAQgASgJIhcKFURlbGV0ZVRyaWdnZXJSZXNwb25zZSqBAQoNVHJpZ2dlckFjdGlvbhIeChpUUklHR0VSX0FDVElPTl9VTlNQRUNJRklFRBAAEhkKFVRSSUdHRVJfQUNUSU9OX0NSRUFURRABEhkKFVRSSUdHRVJfQUNUSU9OX0RFTEVURRACEhoKFlRSSUdHRVJfQUNUSU9OX0RFTElWRVIQAypfCgxUcmlnZ2VyRm9ya3MSHQoZVFJJR0dFUl9GT1JLU19VTlNQRUNJRklFRBAAEhcKE1RSSUdHRVJfRk9SS1NfTEFCRUwQARIXChNUUklHR0VSX0ZPUktTX05FVkVSEAIyswUKDlRyaWdnZXJTZXJ2aWNlEocBCg1DcmVhdGVUcmlnZ2VyEigudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVRyaWdnZXJSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVRyaWdnZXJSZXNwb25zZSIhwvMYDnRyaWdnZXJzLndyaXRlyvMYC2Vudmlyb25tZW50En0KCkdldFRyaWdnZXISJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0VHJpZ2dlclJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuR2V0VHJpZ2dlclJlc3BvbnNlIiDC8xgNdHJpZ2dlcnMucmVhZMrzGAtlbnZpcm9ubWVudBKDAQoMTGlzdFRyaWdnZXJzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RUcmlnZ2Vyc1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFRyaWdnZXJzUmVzcG9uc2UiIMLzGA10cmlnZ2Vycy5yZWFkyvMYC2Vudmlyb25tZW50EocBCg1VcGRhdGVUcmlnZ2VyEigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVRyaWdnZXJSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVRyaWdnZXJSZXNwb25zZSIhwvMYDnRyaWdnZXJzLndyaXRlyvMYC2Vudmlyb25tZW50EocBCg1EZWxldGVUcmlnZ2VyEigudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVRyaWdnZXJSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVRyaWdnZXJSZXNwb25zZSIhwvMYDnRyaWdnZXJzLndyaXRlyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_workspace]);
 
 /**
  * Trigger binds the events of one connection to an action.
@@ -333,9 +333,9 @@ export type TriggerTarget = Message<"toshi.workspace.v1.TriggerTarget"> & {
     case: "preview";
   } | {
     /**
-     * @generated from field: toshi.workspace.v1.TriggerServiceChannel service = 3;
+     * @generated from field: toshi.workspace.v1.TriggerServiceEndpoint service = 3;
      */
-    value: TriggerServiceChannel;
+    value: TriggerServiceEndpoint;
     case: "service";
   } | { case: undefined; value?: undefined };
 };
@@ -358,9 +358,9 @@ export type TriggerTargetJson = {
   preview?: TriggerPreviewJson;
 
   /**
-   * @generated from field: toshi.workspace.v1.TriggerServiceChannel service = 3;
+   * @generated from field: toshi.workspace.v1.TriggerServiceEndpoint service = 3;
    */
-  service?: TriggerServiceChannelJson;
+  service?: TriggerServiceEndpointJson;
 };
 
 /**
@@ -371,12 +371,12 @@ export const TriggerTargetSchema: GenMessage<TriggerTarget, {jsonType: TriggerTa
   messageDesc(file_toshi_workspace_v1_triggers, 2);
 
 /**
- * TriggerServiceChannel is the event channel a trigger's DELIVER puts its
+ * TriggerServiceEndpoint is the event endpoint a trigger's DELIVER puts its
  * events on.
  *
- * @generated from message toshi.workspace.v1.TriggerServiceChannel
+ * @generated from message toshi.workspace.v1.TriggerServiceEndpoint
  */
-export type TriggerServiceChannel = Message<"toshi.workspace.v1.TriggerServiceChannel"> & {
+export type TriggerServiceEndpoint = Message<"toshi.workspace.v1.TriggerServiceEndpoint"> & {
   /**
    * A service of the trigger's project and environment, by name. Required.
    *
@@ -385,20 +385,20 @@ export type TriggerServiceChannel = Message<"toshi.workspace.v1.TriggerServiceCh
   service: string;
 
   /**
-   * The name of one of the service's event channels. Required.
+   * The name of one of the service's event endpoints. Required.
    *
-   * @generated from field: string channel = 2;
+   * @generated from field: string endpoint = 2;
    */
-  channel: string;
+  endpoint: string;
 };
 
 /**
- * TriggerServiceChannel is the event channel a trigger's DELIVER puts its
+ * TriggerServiceEndpoint is the event endpoint a trigger's DELIVER puts its
  * events on.
  *
- * @generated from message toshi.workspace.v1.TriggerServiceChannel
+ * @generated from message toshi.workspace.v1.TriggerServiceEndpoint
  */
-export type TriggerServiceChannelJson = {
+export type TriggerServiceEndpointJson = {
   /**
    * A service of the trigger's project and environment, by name. Required.
    *
@@ -407,18 +407,18 @@ export type TriggerServiceChannelJson = {
   service?: string;
 
   /**
-   * The name of one of the service's event channels. Required.
+   * The name of one of the service's event endpoints. Required.
    *
-   * @generated from field: string channel = 2;
+   * @generated from field: string endpoint = 2;
    */
-  channel?: string;
+  endpoint?: string;
 };
 
 /**
- * Describes the message toshi.workspace.v1.TriggerServiceChannel.
- * Use `create(TriggerServiceChannelSchema)` to create a new message.
+ * Describes the message toshi.workspace.v1.TriggerServiceEndpoint.
+ * Use `create(TriggerServiceEndpointSchema)` to create a new message.
  */
-export const TriggerServiceChannelSchema: GenMessage<TriggerServiceChannel, {jsonType: TriggerServiceChannelJson}> = /*@__PURE__*/
+export const TriggerServiceEndpointSchema: GenMessage<TriggerServiceEndpoint, {jsonType: TriggerServiceEndpointJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_triggers, 3);
 
 /**
@@ -507,13 +507,13 @@ export type TriggerSandbox = Message<"toshi.workspace.v1.TriggerSandbox"> & {
   process?: Command | undefined;
 
   /**
-   * The http channel whose link the trigger reports. Empty reports the
+   * The http endpoint whose link the trigger reports. Empty reports the
    * first preview the sandbox serves, and a sandbox that serves none is
    * ready with no link.
    *
-   * @generated from field: string channel = 6;
+   * @generated from field: string endpoint = 6;
    */
-  channel: string;
+  endpoint: string;
 
   /**
    * The container image the sandbox runs, as a sandbox's spec names it
@@ -570,13 +570,13 @@ export type TriggerSandboxJson = {
   process?: CommandJson;
 
   /**
-   * The http channel whose link the trigger reports. Empty reports the
+   * The http endpoint whose link the trigger reports. Empty reports the
    * first preview the sandbox serves, and a sandbox that serves none is
    * ready with no link.
    *
-   * @generated from field: string channel = 6;
+   * @generated from field: string endpoint = 6;
    */
-  channel?: string;
+  endpoint?: string;
 
   /**
    * The container image the sandbox runs, as a sandbox's spec names it
@@ -1077,10 +1077,10 @@ export enum TriggerAction {
   DELETE = 2,
 
   /**
-   * Puts the event on the target service's event channel, which wakes the
+   * Puts the event on the target service's event endpoint, which wakes the
    * service if it sleeps and posts the event to it. The message's source
    * is the trigger, and the event's id makes its request key, so an event
-   * is put on the channel once.
+   * is put on the endpoint once.
    *
    * @generated from enum value: TRIGGER_ACTION_DELIVER = 3;
    */
