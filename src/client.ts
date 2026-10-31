@@ -49,13 +49,21 @@ import {
   CreateServiceRequestSchema,
   DeleteJobRequestSchema,
   DeleteSandboxRequestSchema,
+  DeleteServiceAlarmRequestSchema,
   DeleteServiceRequestSchema,
+  EmitWorkloadEventRequestSchema,
   GetJobRequestSchema,
   GetSandboxRequestSchema,
+  GetServiceAlarmRequestSchema,
   GetServiceRequestSchema,
   ListJobsRequestSchema,
   ListSandboxesRequestSchema,
+  ListServiceAlarmsRequestSchema,
   ListServicesRequestSchema,
+  PauseServiceAlarmRequestSchema,
+  ResumeServiceAlarmRequestSchema,
+  RunServiceAlarmNowRequestSchema,
+  SetServiceAlarmRequestSchema,
   UpdateJobRequestSchema,
   UpdateSandboxRequestSchema,
   UpdateServiceRequestSchema,
@@ -74,13 +82,21 @@ import type {
   CreateServiceResponse,
   DeleteJobResponse,
   DeleteSandboxResponse,
+  DeleteServiceAlarmResponse,
   DeleteServiceResponse,
+  EmitWorkloadEventResponse,
   GetJobResponse,
   GetSandboxResponse,
+  GetServiceAlarmResponse,
   GetServiceResponse,
   ListJobsResponse,
   ListSandboxesResponse,
+  ListServiceAlarmsResponse,
   ListServicesResponse,
+  PauseServiceAlarmResponse,
+  ResumeServiceAlarmResponse,
+  RunServiceAlarmNowResponse,
+  SetServiceAlarmResponse,
   UpdateJobResponse,
   UpdateSandboxResponse,
   UpdateServiceResponse,
@@ -92,9 +108,12 @@ import type {
   WatchServicesResponse,
 } from "./gen/toshi/workspace/v1/workloads_pb.js";
 import {
+  AnswerServiceSignInRequestSchema,
+  CancelServiceSignInRequestSchema,
   ExecuteStartSchema,
   GetOperationRequestSchema,
   GetServiceRevisionRequestSchema,
+  GetServiceSignInStatusRequestSchema,
   HoldServiceRequestSchema,
   ListEventsRequestSchema,
   ListServiceActivationsRequestSchema,
@@ -104,6 +123,7 @@ import {
   RollbackServiceRequestSchema,
   SetServiceModeRequestSchema,
   StartServiceRequestSchema,
+  StartServiceSignInRequestSchema,
   StopServiceRequestSchema,
   WaitOperationRequestSchema,
   WakeServiceRequestSchema,
@@ -111,9 +131,12 @@ import {
   WatchOutputRequestSchema,
 } from "./gen/toshi/workspace/v1/workspace_pb.js";
 import type {
+  AnswerServiceSignInResponse,
+  CancelServiceSignInResponse,
   Event,
   GetOperationResponse,
   GetServiceRevisionResponse,
+  GetServiceSignInStatusResponse,
   HoldServiceResponse,
   Job,
   ListEventsResponse,
@@ -129,6 +152,7 @@ import type {
   ServiceRun,
   SetServiceModeResponse,
   StartServiceResponse,
+  StartServiceSignInResponse,
   StopServiceResponse,
   WakeServiceResponse,
   WatchEventsResponse,
@@ -225,6 +249,14 @@ export interface WorkloadClient {
   /** Yields every event listEvents lists, following the page token from one page to the next. */
   allEvents(req: MessageInitShape<typeof ListEventsRequestSchema>, opts?: CallOptions): AsyncIterable<Event>;
   watchEvents(req: MessageInitShape<typeof WatchEventsRequestSchema>, opts?: CallOptions): Promise<EventWatch>;
+  /**
+   * Appends an event of type EMITTED, with the name and data given, to a job's, sandbox's or
+   * service's event log, as its guest emits one, and returns it; the workload need not be running.
+   */
+  emitEvent(
+    req: MessageInitShape<typeof EmitWorkloadEventRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<EmitWorkloadEventResponse>;
   /** Returns one operation: the id a long call hands back, asked for again. */
   getOperation(
     req: MessageInitShape<typeof GetOperationRequestSchema>,
@@ -326,6 +358,91 @@ export interface ServicesClient {
     req: MessageInitShape<typeof ListServiceActivationsRequestSchema>,
     opts?: CallOptions,
   ): Promise<ListServiceActivationsResponse>;
+  /**
+   * Creates or replaces the service's alarm with this name and returns it: at each instant of its
+   * schedule the alarm publishes its event, with its data, on one of the service's event channels.
+   */
+  setAlarm(
+    req: MessageInitShape<typeof SetServiceAlarmRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<SetServiceAlarmResponse>;
+  /** Returns one alarm and its most recent occurrences, newest first. */
+  getAlarm(
+    req: MessageInitShape<typeof GetServiceAlarmRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<GetServiceAlarmResponse>;
+  /**
+   * Returns all of a service's alarms, by name, in one answer: the call has no page token, so
+   * there is no `allAlarms`.
+   */
+  listAlarms(
+    req: MessageInitShape<typeof ListServiceAlarmsRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ListServiceAlarmsResponse>;
+  /** Removes an alarm and its occurrences; messages it already published stay on the channel. */
+  deleteAlarm(
+    req: MessageInitShape<typeof DeleteServiceAlarmRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<DeleteServiceAlarmResponse>;
+  /** Stops an alarm publishing until it is resumed; pausing a paused alarm changes nothing. */
+  pauseAlarm(
+    req: MessageInitShape<typeof PauseServiceAlarmRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<PauseServiceAlarmResponse>;
+  /**
+   * Starts a paused alarm again from the next instant of its schedule; instants that passed while
+   * it was paused are not published.
+   */
+  resumeAlarm(
+    req: MessageInitShape<typeof ResumeServiceAlarmRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ResumeServiceAlarmResponse>;
+  /**
+   * Publishes the alarm's event once, now, paused or not, and returns the occurrence; it does not
+   * move the alarm's next instant. It takes a request key, so a retried call is applied once.
+   */
+  runAlarmNow(
+    req: MessageInitShape<typeof RunServiceAlarmNowRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<RunServiceAlarmNowResponse>;
+  /**
+   * Runs one of the service's recipe's sign_in programs and hands back its stream as the server
+   * sends it. The caller reads the started message first, which names the sign-in; then the
+   * output messages, the program's standard output and standard error; answers the program with
+   * `answerSignIn` or ends it early with `cancelSignIn`; and reads the ended message last, which
+   * says how it ended. A sign-in may run for 15 minutes.
+   *
+   * The stream is not retried or resumed: a sign-in has no cursor. Its stream ending for another
+   * reason, as a client that leaves, also ends it, cancelled; the caller starts a new one.
+   */
+  startSignIn(
+    req: MessageInitShape<typeof StartServiceSignInRequestSchema>,
+    opts?: CallOptions,
+  ): AsyncIterable<StartServiceSignInResponse>;
+  /**
+   * Writes one line, of at most 4 KiB and with no newline in it, to a running sign-in's standard
+   * input; the sign-in's program reads it.
+   */
+  answerSignIn(
+    req: MessageInitShape<typeof AnswerServiceSignInRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<AnswerServiceSignInResponse>;
+  /**
+   * Ends a running sign-in: its program is cancelled and its stream ends CANCELLED. It returns
+   * once the cancel is asked for, not once the sign-in has ended.
+   */
+  cancelSignIn(
+    req: MessageInitShape<typeof CancelServiceSignInRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<CancelServiceSignInResponse>;
+  /**
+   * Runs the status commands of the service's recipe and reports, for each sign_in program,
+   * whether it is signed in and what its status command wrote.
+   */
+  getSignInStatus(
+    req: MessageInitShape<typeof GetServiceSignInStatusRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<GetServiceSignInStatusResponse>;
 }
 
 /** A live stream of a job's changes. */
@@ -466,6 +583,17 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         getRevision: (req, opts) => workloadService.getServiceRevision(req, opts),
         rollback: (req, opts) => workloadService.rollbackService(req, opts),
         listActivations: (req, opts) => workloadService.listServiceActivations(req, opts),
+        setAlarm: (req, opts) => workloadService.setServiceAlarm(req, opts),
+        getAlarm: (req, opts) => workloadService.getServiceAlarm(req, opts),
+        listAlarms: (req, opts) => workloadService.listServiceAlarms(req, opts),
+        deleteAlarm: (req, opts) => workloadService.deleteServiceAlarm(req, opts),
+        pauseAlarm: (req, opts) => workloadService.pauseServiceAlarm(req, opts),
+        resumeAlarm: (req, opts) => workloadService.resumeServiceAlarm(req, opts),
+        runAlarmNow: (req, opts) => workloadService.runServiceAlarmNow(req, opts),
+        startSignIn: (req, opts) => workloadService.startServiceSignIn(req, opts),
+        answerSignIn: (req, opts) => workloadService.answerServiceSignIn(req, opts),
+        cancelSignIn: (req, opts) => workloadService.cancelServiceSignIn(req, opts),
+        getSignInStatus: (req, opts) => workloadService.getServiceSignInStatus(req, opts),
       },
       waitOperation: (req, opts) =>
         waitOperation(workloadService, create(WaitOperationRequestSchema, req), opts),
@@ -473,6 +601,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
       allEvents: (req, opts) => paginate(req, workloadService.listEvents, (resp) => resp.events, opts),
       watchEvents: (req, opts) =>
         openEventWatch(workloadService, retry, create(WatchEventsRequestSchema, req), opts),
+      emitEvent: (req, opts) => workloadService.emitWorkloadEvent(req, opts),
       getOperation: (req, opts) => workloadService.getOperation(req, opts),
     },
     run: (req, opts) => runJob(workloadService, retry, create(CreateJobRequestSchema, req), opts),
