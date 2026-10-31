@@ -1,14 +1,15 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-const readme = readFileSync(new URL("../README.md", import.meta.url), "utf8");
+const pages = ["README.md", ...readdirSync(new URL("../docs/", import.meta.url)).filter((name) => name.endsWith(".md")).map((name) => `docs/${name}`)];
+const readme = pages.map((page) => readFileSync(new URL(`../${page}`, import.meta.url), "utf8")).join("\n\n");
 
 interface Block {
   marker: string | undefined;
   content: string;
 }
 
-/** Every fenced TypeScript block in the README, with the marker above it. */
+/** Every fenced TypeScript block in the README and the docs pages, with the marker above it. */
 function typescriptBlocks(markdown: string): Block[] {
   const lines = markdown.split("\n");
   const blocks: Block[] = [];
