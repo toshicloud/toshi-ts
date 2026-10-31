@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/projects.proto.
  */
 export const file_toshi_workspace_v1_projects: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSK+AQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSNwoJYWRtaXNzaW9uGAQgASgLMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RBZG1pc3Npb24icwoQUHJvamVjdEFkbWlzc2lvbhILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiMAoSUHJvamVjdEVudmlyb25tZW50EgwKBG5hbWUYASABKAkSDAoEa2luZBgCIAEoCSJhCgpSZXBvc2l0b3J5EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCRIuCgpjbGFpbWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8ChNMaXN0UHJvamVjdHNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJIpMBChRMaXN0UHJvamVjdHNSZXNwb25zZRItCghwcm9qZWN0cxgBIAMoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0EjMKC3Rva2VuX2xpbWl0GAIgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlRva2VuTGltaXQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIjIKClRva2VuTGltaXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSJRChdMaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKGExpc3RSZXBvc2l0b3JpZXNSZXNwb25zZRI0CgxyZXBvc2l0b3JpZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoUQ3JlYXRlUHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJFChVDcmVhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0InUKFFVwZGF0ZVByb2plY3RSZXF1ZXN0EiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRQoVVXBkYXRlUHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCI9ChZDbGFpbVJlcG9zaXRvcnlSZXF1ZXN0EhIKCnJlcG9zaXRvcnkYASABKAkSDwoHcHJvamVjdBgCIAEoCSJnChdDbGFpbVJlcG9zaXRvcnlSZXNwb25zZRIyCgpyZXBvc2l0b3J5GAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLlJlcG9zaXRvcnkSGAoQcHJldmlvdXNfcHJvamVjdBgCIAEoCSIhChFHZXRQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJIkIKEkdldFByb2plY3RSZXNwb25zZRIsCgdwcm9qZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QiOQoYQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSDAoEa2luZBgCIAEoCSJYChlDcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjsKC2Vudmlyb25tZW50GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RFbnZpcm9ubWVudCI5ChhEZWxldGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRuYW1lGAIgASgJIhsKGURlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiQQoKQnJhbmNoUnVsZRINCgVtYXRjaBgBIAEoCRIPCgdwYXR0ZXJuGAIgASgJEhMKC2Vudmlyb25tZW50GAMgASgJIlAKFkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJhChdMaXN0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJXChVTZXRCcmFuY2hSdWxlc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRItCgVydWxlcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlIkcKFlNldEJyYW5jaFJ1bGVzUmVzcG9uc2USLQoFcnVsZXMYASADKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQnJhbmNoUnVsZSJXCg1OZXR3b3JrUG9saWN5EhYKDmRlZmF1bHRfYWN0aW9uGAEgASgJEi4KBmVncmVzcxgCIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FZ3Jlc3NSdWxlIlIKCkVncmVzc1J1bGUSDgoGYWN0aW9uGAEgASgJEhMKC2Rlc3RpbmF0aW9uGAIgASgJEg0KBXBvcnRzGAMgASgJEhAKCHByb3RvY29sGAQgASgJIisKGEdldFByb2plY3ROZXR3b3JrUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJIpMBChlHZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeRISCgp1cGRhdGVkX2J5GAIgASgJEi4KCnVwZGF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIl8KGFNldFByb2plY3ROZXR3b3JrUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEjIKB25ldHdvcmsYAiABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeSJPChlTZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeSJEChxHZXRFbnZpcm9ubWVudE5ldHdvcmtSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkilwEKHUdldEVudmlyb25tZW50TmV0d29ya1Jlc3BvbnNlEjIKB25ldHdvcmsYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeRISCgp1cGRhdGVkX2J5GAIgASgJEi4KCnVwZGF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIngKHFNldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIyCgduZXR3b3JrGAMgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLk5ldHdvcmtQb2xpY3kiUwodU2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2USMgoHbmV0d29yaxgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5ItUCCgpFbWJlZFRva2VuEgoKAmlkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHb3JpZ2lucxgDIAMoCRIyCgVzdGF0ZRgEIAEoDjIjLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHdXNlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMcmVjb3JkaW5nX2lkGAggASgJEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkiagoXQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIPCgdvcmlnaW5zGAIgAygJEi0KCmV4cGlyZXNfaW4YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iXgoYQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlEjMKC2VtYmVkX3Rva2VuGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4SDQoFdG9rZW4YAiABKAkiUAoWTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImgKF0xpc3RFbWJlZFRva2Vuc1Jlc3BvbnNlEjQKDGVtYmVkX3Rva2VucxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJCChdSZXZva2VFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhYKDmVtYmVkX3Rva2VuX2lkGAIgASgJIk8KGFJldm9rZUVtYmVkVG9rZW5SZXNwb25zZRIzCgtlbWJlZF90b2tlbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuKqwBCg9FbWJlZFRva2VuU3RhdGUSIQodRU1CRURfVE9LRU5fU1RBVEVfVU5TUEVDSUZJRUQQABIcChhFTUJFRF9UT0tFTl9TVEFURV9BQ1RJVkUQARIaChZFTUJFRF9UT0tFTl9TVEFURV9VU0VEEAISHQoZRU1CRURfVE9LRU5fU1RBVEVfUkVWT0tFRBADEh0KGUVNQkVEX1RPS0VOX1NUQVRFX0VYUElSRUQQBDKuFAoOUHJvamVjdFNlcnZpY2USfwoMTGlzdFByb2plY3RzEicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RQcm9qZWN0c1JlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2plY3RzUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSeQoKR2V0UHJvamVjdBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0UmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSiwEKEExpc3RSZXBvc2l0b3JpZXMSKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0Eo0BCg1DcmVhdGVQcm9qZWN0EigudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVByb2plY3RSZXNwb25zZSInwvMYDnByb2plY3RzLndyaXRl0vMYERIPcHJvamVjdDpwcm9qZWN0EpgBCg1VcGRhdGVQcm9qZWN0EigudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2plY3RSZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVByb2plY3RSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSngEKD0NsYWltUmVwb3NpdG9yeRIqLnRvc2hpLndvcmtzcGFjZS52MS5DbGFpbVJlcG9zaXRvcnlSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoRQ3JlYXRlRW52aXJvbm1lbnQSLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChFEZWxldGVFbnZpcm9ubWVudBIsLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSiAEKD0xpc3RCcmFuY2hSdWxlcxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0QnJhbmNoUnVsZXNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EpsBCg5TZXRCcmFuY2hSdWxlcxIpLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1JlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuU2V0QnJhbmNoUnVsZXNSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSjgEKEUdldFByb2plY3ROZXR3b3JrEiwudG9zaGkud29ya3NwYWNlLnYxLkdldFByb2plY3ROZXR3b3JrUmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5HZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlIhzC8xgNcHJvamVjdHMucmVhZMrzGAdwcm9qZWN0EqQBChFTZXRQcm9qZWN0TmV0d29yaxIsLnRvc2hpLndvcmtzcGFjZS52MS5TZXRQcm9qZWN0TmV0d29ya1JlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuU2V0UHJvamVjdE5ldHdvcmtSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSngEKFUdldEVudmlyb25tZW50TmV0d29yaxIwLnRvc2hpLndvcmtzcGFjZS52MS5HZXRFbnZpcm9ubWVudE5ldHdvcmtSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkdldEVudmlyb25tZW50TmV0d29ya1Jlc3BvbnNlIiDC8xgNcHJvamVjdHMucmVhZMrzGAtlbnZpcm9ubWVudBK0AQoVU2V0RW52aXJvbm1lbnROZXR3b3JrEjAudG9zaGkud29ya3NwYWNlLnYxLlNldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuU2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2UiNsLzGA5wcm9qZWN0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGBESD3Byb2plY3Q6cHJvamVjdBKkAQoQQ3JlYXRlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbWJlZFRva2VuUmVzcG9uc2UiNcLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYFAoSZW1iZWRfdG9rZW4uaXNzdWVkEogBCg9MaXN0RW1iZWRUb2tlbnMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEVtYmVkVG9rZW5zUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0RW1iZWRUb2tlbnNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKMAQoQUmV2b2tlRW1iZWRUb2tlbhIrLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VFbWJlZFRva2VuUmVzcG9uc2UiHcLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN0QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvcHJvamVjdHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSK+AQoHUHJvamVjdBIMCgRuYW1lGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDGVudmlyb25tZW50cxgDIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSNwoJYWRtaXNzaW9uGAQgASgLMiQudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3RBZG1pc3Npb24icwoQUHJvamVjdEFkbWlzc2lvbhILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi3AEKElByb2plY3RFbnZpcm9ubWVudBIMCgRuYW1lGAEgASgJEgwKBGtpbmQYAiABKAkSDwoHdm9sdW1lcxgDIAMoCRISCgptYW5hZ2VkX2J5GAQgASgJEhcKD21hbmlmZXN0X2RpZ2VzdBgFIAEoCRIWCg5tYW5hZ2VkX2ZpZWxkcxgGIAMoCRIXCg9tYW5pZmVzdF9vcmlnaW4YByABKAkSOwoJcmV0ZW50aW9uGAggASgLMigudG9zaGkud29ya3NwYWNlLnYxLkVudmlyb25tZW50UmV0ZW50aW9uImEKClJlcG9zaXRvcnkSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEi4KCmNsYWltZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIjwKE0xpc3RQcm9qZWN0c1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkikwEKFExpc3RQcm9qZWN0c1Jlc3BvbnNlEi0KCHByb2plY3RzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QSMwoLdG9rZW5fbGltaXQYAiABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5MaW1pdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAkiMgoKVG9rZW5MaW1pdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJIlEKF0xpc3RSZXBvc2l0b3JpZXNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiaQoYTGlzdFJlcG9zaXRvcmllc1Jlc3BvbnNlEjQKDHJlcG9zaXRvcmllcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5SZXBvc2l0b3J5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI5ChRDcmVhdGVQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKC3JlcXVlc3Rfa2V5GAIgASgJIkUKFUNyZWF0ZVByb2plY3RSZXNwb25zZRIsCgdwcm9qZWN0GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLlByb2plY3QidQoUVXBkYXRlUHJvamVjdFJlcXVlc3QSLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJFChVVcGRhdGVQcm9qZWN0UmVzcG9uc2USLAoHcHJvamVjdBgBIAEoCzIbLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0Ij0KFkNsYWltUmVwb3NpdG9yeVJlcXVlc3QSEgoKcmVwb3NpdG9yeRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJImcKF0NsYWltUmVwb3NpdG9yeVJlc3BvbnNlEjIKCnJlcG9zaXRvcnkYASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuUmVwb3NpdG9yeRIYChBwcmV2aW91c19wcm9qZWN0GAIgASgJIiEKEUdldFByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQgoSR2V0UHJvamVjdFJlc3BvbnNlEiwKB3Byb2plY3QYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdCJOChhDcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIMCgRraW5kGAIgASgJEhMKC3JlcXVlc3Rfa2V5GAMgASgJIlgKGUNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IjkKGERlbGV0ZUVudmlyb25tZW50UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkiGwoZRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJBCgpCcmFuY2hSdWxlEg0KBW1hdGNoGAEgASgJEg8KB3BhdHRlcm4YAiABKAkSEwoLZW52aXJvbm1lbnQYAyABKAkiUAoWTGlzdEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImEKF0xpc3RCcmFuY2hSdWxlc1Jlc3BvbnNlEi0KBXJ1bGVzGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlcKFVNldEJyYW5jaFJ1bGVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEi0KBXJ1bGVzGAIgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkJyYW5jaFJ1bGUiRwoWU2V0QnJhbmNoUnVsZXNSZXNwb25zZRItCgVydWxlcxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5CcmFuY2hSdWxlIlcKDU5ldHdvcmtQb2xpY3kSFgoOZGVmYXVsdF9hY3Rpb24YASABKAkSLgoGZWdyZXNzGAIgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkVncmVzc1J1bGUiUgoKRWdyZXNzUnVsZRIOCgZhY3Rpb24YASABKAkSEwoLZGVzdGluYXRpb24YAiABKAkSDQoFcG9ydHMYAyABKAkSEAoIcHJvdG9jb2wYBCABKAkiKwoYR2V0UHJvamVjdE5ldHdvcmtSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkikwEKGUdldFByb2plY3ROZXR3b3JrUmVzcG9uc2USMgoHbmV0d29yaxgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5EhIKCnVwZGF0ZWRfYnkYAiABKAkSLgoKdXBkYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiXwoYU2V0UHJvamVjdE5ldHdvcmtSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSMgoHbmV0d29yaxgCIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5Ik8KGVNldFByb2plY3ROZXR3b3JrUmVzcG9uc2USMgoHbmV0d29yaxgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5IkQKHEdldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCSKXAQodR2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2USMgoHbmV0d29yaxgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5OZXR3b3JrUG9saWN5EhIKCnVwZGF0ZWRfYnkYAiABKAkSLgoKdXBkYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAieAocU2V0RW52aXJvbm1lbnROZXR3b3JrUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEjIKB25ldHdvcmsYAyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuTmV0d29ya1BvbGljeSJTCh1TZXRFbnZpcm9ubWVudE5ldHdvcmtSZXNwb25zZRIyCgduZXR3b3JrGAEgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLk5ldHdvcmtQb2xpY3kiRgoNUmV0ZW50aW9uS2VlcBIMCgRraW5kGAEgASgJEicKBGtlZXAYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24idAoURW52aXJvbm1lbnRSZXRlbnRpb24SGQoMaGlzdG9yeV9kYXlzGAEgASgFSACIAQESMAoFa2VlcHMYAiADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuUmV0ZW50aW9uS2VlcEIPCg1faGlzdG9yeV9kYXlzIkYKHkdldEVudmlyb25tZW50UmV0ZW50aW9uUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJIt8BCh9HZXRFbnZpcm9ubWVudFJldGVudGlvblJlc3BvbnNlEjsKCXJldGVudGlvbhgBIAEoCzIoLnRvc2hpLndvcmtzcGFjZS52MS5FbnZpcm9ubWVudFJldGVudGlvbhI7CgllZmZlY3RpdmUYAiABKAsyKC50b3NoaS53b3Jrc3BhY2UudjEuRW52aXJvbm1lbnRSZXRlbnRpb24SEgoKdXBkYXRlZF9ieRgDIAEoCRIuCgp1cGRhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKDAQoeU2V0RW52aXJvbm1lbnRSZXRlbnRpb25SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSOwoJcmV0ZW50aW9uGAMgASgLMigudG9zaGkud29ya3NwYWNlLnYxLkVudmlyb25tZW50UmV0ZW50aW9uIpsBCh9TZXRFbnZpcm9ubWVudFJldGVudGlvblJlc3BvbnNlEjsKCXJldGVudGlvbhgBIAEoCzIoLnRvc2hpLndvcmtzcGFjZS52MS5FbnZpcm9ubWVudFJldGVudGlvbhI7CgllZmZlY3RpdmUYAiABKAsyKC50b3NoaS53b3Jrc3BhY2UudjEuRW52aXJvbm1lbnRSZXRlbnRpb24iVQocU2V0RW52aXJvbm1lbnRWb2x1bWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg8KB3ZvbHVtZXMYAyADKAkiXAodU2V0RW52aXJvbm1lbnRWb2x1bWVzUmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IpkBChhVcGRhdGVFbnZpcm9ubWVudFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRI7CgtlbnZpcm9ubWVudBgCIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Qcm9qZWN0RW52aXJvbm1lbnQSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIlgKGVVwZGF0ZUVudmlyb25tZW50UmVzcG9uc2USOwoLZW52aXJvbm1lbnQYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUHJvamVjdEVudmlyb25tZW50IpkDCgpFbWJlZFRva2VuEgoKAmlkGAEgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHb3JpZ2lucxgDIAMoCRIyCgVzdGF0ZRgEIAEoDjIjLnRvc2hpLndvcmtzcGFjZS52MS5FbWJlZFRva2VuU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHdXNlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMcmVjb3JkaW5nX2lkGAggASgJEi4KCnJldm9rZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYCiABKAkSEwoLd29ya2xvYWRfaWQYCyABKAkSFQoNd29ya2xvYWRfa2luZBgMIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgNIAEoCSJqChdDcmVhdGVFbWJlZFRva2VuUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEg8KB29yaWdpbnMYAiADKAkSLQoKZXhwaXJlc19pbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJeChhDcmVhdGVFbWJlZFRva2VuUmVzcG9uc2USMwoLZW1iZWRfdG9rZW4YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuRW1iZWRUb2tlbhINCgV0b2tlbhgCIAEoCSJQChZMaXN0RW1iZWRUb2tlbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiaAoXTGlzdEVtYmVkVG9rZW5zUmVzcG9uc2USNAoMZW1iZWRfdG9rZW5zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkIKF1Jldm9rZUVtYmVkVG9rZW5SZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSFgoOZW1iZWRfdG9rZW5faWQYAiABKAkiTwoYUmV2b2tlRW1iZWRUb2tlblJlc3BvbnNlEjMKC2VtYmVkX3Rva2VuGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkVtYmVkVG9rZW4qrAEKD0VtYmVkVG9rZW5TdGF0ZRIhCh1FTUJFRF9UT0tFTl9TVEFURV9VTlNQRUNJRklFRBAAEhwKGEVNQkVEX1RPS0VOX1NUQVRFX0FDVElWRRABEhoKFkVNQkVEX1RPS0VOX1NUQVRFX1VTRUQQAhIdChlFTUJFRF9UT0tFTl9TVEFURV9SRVZPS0VEEAMSHQoZRU1CRURfVE9LRU5fU1RBVEVfRVhQSVJFRBAEMvQZCg5Qcm9qZWN0U2VydmljZRJ/CgxMaXN0UHJvamVjdHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFByb2plY3RzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UHJvamVjdHNSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBJ5CgpHZXRQcm9qZWN0EiUudG9zaGkud29ya3NwYWNlLnYxLkdldFByb2plY3RSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkdldFByb2plY3RSZXNwb25zZSIcwvMYDXByb2plY3RzLnJlYWTK8xgHcHJvamVjdBKLAQoQTGlzdFJlcG9zaXRvcmllcxIrLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVwb3NpdG9yaWVzUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSjQEKDUNyZWF0ZVByb2plY3QSKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUHJvamVjdFJlc3BvbnNlIifC8xgOcHJvamVjdHMud3JpdGXS8xgREg9wcm9qZWN0OnByb2plY3QSmAEKDVVwZGF0ZVByb2plY3QSKC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvamVjdFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlUHJvamVjdFJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKeAQoPQ2xhaW1SZXBvc2l0b3J5EioudG9zaGkud29ya3NwYWNlLnYxLkNsYWltUmVwb3NpdG9yeVJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ2xhaW1SZXBvc2l0b3J5UmVzcG9uc2UiMsLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN00vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChFDcmVhdGVFbnZpcm9ubWVudBIsLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVFbnZpcm9ubWVudFJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXNwb25zZSIywvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgREg9wcm9qZWN0OnByb2plY3QSpAEKEURlbGV0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKIAQoPTGlzdEJyYW5jaFJ1bGVzEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RCcmFuY2hSdWxlc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEJyYW5jaFJ1bGVzUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSmwEKDlNldEJyYW5jaFJ1bGVzEikudG9zaGkud29ya3NwYWNlLnYxLlNldEJyYW5jaFJ1bGVzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5TZXRCcmFuY2hSdWxlc1Jlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKOAQoRR2V0UHJvamVjdE5ldHdvcmsSLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0UHJvamVjdE5ldHdvcmtSZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldFByb2plY3ROZXR3b3JrUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSpAEKEVNldFByb2plY3ROZXR3b3JrEiwudG9zaGkud29ya3NwYWNlLnYxLlNldFByb2plY3ROZXR3b3JrUmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5TZXRQcm9qZWN0TmV0d29ya1Jlc3BvbnNlIjLC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBESD3Byb2plY3Q6cHJvamVjdBKeAQoVR2V0RW52aXJvbm1lbnROZXR3b3JrEjAudG9zaGkud29ya3NwYWNlLnYxLkdldEVudmlyb25tZW50TmV0d29ya1JlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuR2V0RW52aXJvbm1lbnROZXR3b3JrUmVzcG9uc2UiIMLzGA1wcm9qZWN0cy5yZWFkyvMYC2Vudmlyb25tZW50ErQBChVTZXRFbnZpcm9ubWVudE5ldHdvcmsSMC50b3NoaS53b3Jrc3BhY2UudjEuU2V0RW52aXJvbm1lbnROZXR3b3JrUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5TZXRFbnZpcm9ubWVudE5ldHdvcmtSZXNwb25zZSI2wvMYDnByb2plY3RzLndyaXRlyvMYC2Vudmlyb25tZW500vMYERIPcHJvamVjdDpwcm9qZWN0EqQBChdHZXRFbnZpcm9ubWVudFJldGVudGlvbhIyLnRvc2hpLndvcmtzcGFjZS52MS5HZXRFbnZpcm9ubWVudFJldGVudGlvblJlcXVlc3QaMy50b3NoaS53b3Jrc3BhY2UudjEuR2V0RW52aXJvbm1lbnRSZXRlbnRpb25SZXNwb25zZSIgwvMYDXByb2plY3RzLnJlYWTK8xgLZW52aXJvbm1lbnQSugEKF1NldEVudmlyb25tZW50UmV0ZW50aW9uEjIudG9zaGkud29ya3NwYWNlLnYxLlNldEVudmlyb25tZW50UmV0ZW50aW9uUmVxdWVzdBozLnRvc2hpLndvcmtzcGFjZS52MS5TZXRFbnZpcm9ubWVudFJldGVudGlvblJlc3BvbnNlIjbC8xgOcHJvamVjdHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgREg9wcm9qZWN0OnByb2plY3QStAEKFVNldEVudmlyb25tZW50Vm9sdW1lcxIwLnRvc2hpLndvcmtzcGFjZS52MS5TZXRFbnZpcm9ubWVudFZvbHVtZXNSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlNldEVudmlyb25tZW50Vm9sdW1lc1Jlc3BvbnNlIjbC8xgOcHJvamVjdHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgREg9wcm9qZWN0OnByb2plY3QSqAEKEVVwZGF0ZUVudmlyb25tZW50EiwudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUVudmlyb25tZW50UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVFbnZpcm9ubWVudFJlc3BvbnNlIjbC8xgOcHJvamVjdHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgREg9wcm9qZWN0OnByb2plY3QSpAEKEENyZWF0ZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlRW1iZWRUb2tlblJlc3BvbnNlIjXC8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdNLzGBQKEmVtYmVkX3Rva2VuLmlzc3VlZBKIAQoPTGlzdEVtYmVkVG9rZW5zEioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RFbWJlZFRva2Vuc1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEVtYmVkVG9rZW5zUmVzcG9uc2UiHMLzGA1wcm9qZWN0cy5yZWFkyvMYB3Byb2plY3QSjAEKEFJldm9rZUVtYmVkVG9rZW4SKy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlRW1iZWRUb2tlblJlc3BvbnNlIh3C8xgOcHJvamVjdHMud3JpdGXK8xgHcHJvamVjdEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Project is one of a workspace's projects.
@@ -188,6 +188,58 @@ export type ProjectEnvironment = Message<"toshi.workspace.v1.ProjectEnvironment"
    * @generated from field: string kind = 2;
    */
   kind: string;
+
+  /**
+   * The names of the project's volumes the environment's services and
+   * sandboxes may attach, sorted; empty when any of them may. Set with
+   * UpdateEnvironment or SetEnvironmentVolumes.
+   *
+   * @generated from field: repeated string volumes = 3;
+   */
+  volumes: string[];
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 4;
+   */
+  managedBy: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 5;
+   */
+  manifestDigest: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 6;
+   */
+  managedFields: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 7;
+   */
+  manifestOrigin: string;
+
+  /**
+   * The environment's retention override as stored; empty when it
+   * follows the workspace. Set with UpdateEnvironment or
+   * SetEnvironmentRetention.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 8;
+   */
+  retention?: EnvironmentRetention | undefined;
 };
 
 /**
@@ -207,6 +259,58 @@ export type ProjectEnvironmentJson = {
    * @generated from field: string kind = 2;
    */
   kind?: string;
+
+  /**
+   * The names of the project's volumes the environment's services and
+   * sandboxes may attach, sorted; empty when any of them may. Set with
+   * UpdateEnvironment or SetEnvironmentVolumes.
+   *
+   * @generated from field: repeated string volumes = 3;
+   */
+  volumes?: string[];
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 4;
+   */
+  managedBy?: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 5;
+   */
+  manifestDigest?: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 6;
+   */
+  managedFields?: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 7;
+   */
+  manifestOrigin?: string;
+
+  /**
+   * The environment's retention override as stored; empty when it
+   * follows the workspace. Set with UpdateEnvironment or
+   * SetEnvironmentRetention.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 8;
+   */
+  retention?: EnvironmentRetentionJson;
 };
 
 /**
@@ -542,6 +646,11 @@ export type CreateProjectRequest = Message<"toshi.workspace.v1.CreateProjectRequ
    * @generated from field: string name = 1;
    */
   name: string;
+
+  /**
+   * @generated from field: string request_key = 2;
+   */
+  requestKey: string;
 };
 
 /**
@@ -552,6 +661,11 @@ export type CreateProjectRequestJson = {
    * @generated from field: string name = 1;
    */
   name?: string;
+
+  /**
+   * @generated from field: string request_key = 2;
+   */
+  requestKey?: string;
 };
 
 /**
@@ -822,6 +936,11 @@ export type CreateEnvironmentRequest = Message<"toshi.workspace.v1.CreateEnviron
    * @generated from field: string kind = 2;
    */
   kind: string;
+
+  /**
+   * @generated from field: string request_key = 3;
+   */
+  requestKey: string;
 };
 
 /**
@@ -842,6 +961,11 @@ export type CreateEnvironmentRequestJson = {
    * @generated from field: string kind = 2;
    */
   kind?: string;
+
+  /**
+   * @generated from field: string request_key = 3;
+   */
+  requestKey?: string;
 };
 
 /**
@@ -1684,6 +1808,532 @@ export const SetEnvironmentNetworkResponseSchema: GenMessage<SetEnvironmentNetwo
   messageDesc(file_toshi_workspace_v1_projects, 35);
 
 /**
+ * RetentionKeep is how long one kind of artifact is kept after it
+ * completes.
+ *
+ * @generated from message toshi.workspace.v1.RetentionKeep
+ */
+export type RetentionKeep = Message<"toshi.workspace.v1.RetentionKeep"> & {
+  /**
+   * The artifact kind: recording, recording-signed-in, trace or report.
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind: string;
+
+  /**
+   * At least one hour.
+   *
+   * @generated from field: google.protobuf.Duration keep = 2;
+   */
+  keep?: Duration | undefined;
+};
+
+/**
+ * RetentionKeep is how long one kind of artifact is kept after it
+ * completes.
+ *
+ * @generated from message toshi.workspace.v1.RetentionKeep
+ */
+export type RetentionKeepJson = {
+  /**
+   * The artifact kind: recording, recording-signed-in, trace or report.
+   *
+   * @generated from field: string kind = 1;
+   */
+  kind?: string;
+
+  /**
+   * At least one hour.
+   *
+   * @generated from field: google.protobuf.Duration keep = 2;
+   */
+  keep?: DurationJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RetentionKeep.
+ * Use `create(RetentionKeepSchema)` to create a new message.
+ */
+export const RetentionKeepSchema: GenMessage<RetentionKeep, {jsonType: RetentionKeepJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 36);
+
+/**
+ * EnvironmentRetention is how long an environment keeps its finished jobs
+ * and its artifacts. As an override, what it leaves out follows the
+ * workspace, and what it sets may only shorten the workspace's.
+ *
+ * @generated from message toshi.workspace.v1.EnvironmentRetention
+ */
+export type EnvironmentRetention = Message<"toshi.workspace.v1.EnvironmentRetention"> & {
+  /**
+   * Days the environment keeps its finished jobs. In an override, unset
+   * follows the workspace and the value is at least 1 and at most the
+   * workspace's period: an override cannot keep forever. In the retention
+   * that applies, 0 keeps forever.
+   *
+   * @generated from field: optional int32 history_days = 1;
+   */
+  historyDays?: number | undefined;
+
+  /**
+   * Each kind's keep, by kind. In an override, a kind left out follows the
+   * workspace. In the retention that applies, a kind left out is kept
+   * forever.
+   *
+   * @generated from field: repeated toshi.workspace.v1.RetentionKeep keeps = 2;
+   */
+  keeps: RetentionKeep[];
+};
+
+/**
+ * EnvironmentRetention is how long an environment keeps its finished jobs
+ * and its artifacts. As an override, what it leaves out follows the
+ * workspace, and what it sets may only shorten the workspace's.
+ *
+ * @generated from message toshi.workspace.v1.EnvironmentRetention
+ */
+export type EnvironmentRetentionJson = {
+  /**
+   * Days the environment keeps its finished jobs. In an override, unset
+   * follows the workspace and the value is at least 1 and at most the
+   * workspace's period: an override cannot keep forever. In the retention
+   * that applies, 0 keeps forever.
+   *
+   * @generated from field: optional int32 history_days = 1;
+   */
+  historyDays?: number;
+
+  /**
+   * Each kind's keep, by kind. In an override, a kind left out follows the
+   * workspace. In the retention that applies, a kind left out is kept
+   * forever.
+   *
+   * @generated from field: repeated toshi.workspace.v1.RetentionKeep keeps = 2;
+   */
+  keeps?: RetentionKeepJson[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.EnvironmentRetention.
+ * Use `create(EnvironmentRetentionSchema)` to create a new message.
+ */
+export const EnvironmentRetentionSchema: GenMessage<EnvironmentRetention, {jsonType: EnvironmentRetentionJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 37);
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentRetentionRequest
+ */
+export type GetEnvironmentRetentionRequest = Message<"toshi.workspace.v1.GetEnvironmentRetentionRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentRetentionRequest
+ */
+export type GetEnvironmentRetentionRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetEnvironmentRetentionRequest.
+ * Use `create(GetEnvironmentRetentionRequestSchema)` to create a new message.
+ */
+export const GetEnvironmentRetentionRequestSchema: GenMessage<GetEnvironmentRetentionRequest, {jsonType: GetEnvironmentRetentionRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 38);
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentRetentionResponse
+ */
+export type GetEnvironmentRetentionResponse = Message<"toshi.workspace.v1.GetEnvironmentRetentionResponse"> & {
+  /**
+   * The override as stored; empty when none is set.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 1;
+   */
+  retention?: EnvironmentRetention | undefined;
+
+  /**
+   * What applies to the environment's jobs and artifacts: each value of the
+   * override that is shorter than the workspace's, else the workspace's.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention effective = 2;
+   */
+  effective?: EnvironmentRetention | undefined;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: Timestamp | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.GetEnvironmentRetentionResponse
+ */
+export type GetEnvironmentRetentionResponseJson = {
+  /**
+   * The override as stored; empty when none is set.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 1;
+   */
+  retention?: EnvironmentRetentionJson;
+
+  /**
+   * What applies to the environment's jobs and artifacts: each value of the
+   * override that is shorter than the workspace's, else the workspace's.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention effective = 2;
+   */
+  effective?: EnvironmentRetentionJson;
+
+  /**
+   * The audit actor that last set it, "<kind>:<id>"; empty when it was
+   * never set.
+   *
+   * @generated from field: string updated_by = 3;
+   */
+  updatedBy?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp updated_at = 4;
+   */
+  updatedAt?: TimestampJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.GetEnvironmentRetentionResponse.
+ * Use `create(GetEnvironmentRetentionResponseSchema)` to create a new message.
+ */
+export const GetEnvironmentRetentionResponseSchema: GenMessage<GetEnvironmentRetentionResponse, {jsonType: GetEnvironmentRetentionResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 39);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentRetentionRequest
+ */
+export type SetEnvironmentRetentionRequest = Message<"toshi.workspace.v1.SetEnvironmentRetentionRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment: string;
+
+  /**
+   * The whole override; empty clears it.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 3;
+   */
+  retention?: EnvironmentRetention | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentRetentionRequest
+ */
+export type SetEnvironmentRetentionRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment?: string;
+
+  /**
+   * The whole override; empty clears it.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 3;
+   */
+  retention?: EnvironmentRetentionJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentRetentionRequest.
+ * Use `create(SetEnvironmentRetentionRequestSchema)` to create a new message.
+ */
+export const SetEnvironmentRetentionRequestSchema: GenMessage<SetEnvironmentRetentionRequest, {jsonType: SetEnvironmentRetentionRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 40);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentRetentionResponse
+ */
+export type SetEnvironmentRetentionResponse = Message<"toshi.workspace.v1.SetEnvironmentRetentionResponse"> & {
+  /**
+   * The override as stored.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 1;
+   */
+  retention?: EnvironmentRetention | undefined;
+
+  /**
+   * What applies after it, as GetEnvironmentRetention reports it.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention effective = 2;
+   */
+  effective?: EnvironmentRetention | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentRetentionResponse
+ */
+export type SetEnvironmentRetentionResponseJson = {
+  /**
+   * The override as stored.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention retention = 1;
+   */
+  retention?: EnvironmentRetentionJson;
+
+  /**
+   * What applies after it, as GetEnvironmentRetention reports it.
+   *
+   * @generated from field: toshi.workspace.v1.EnvironmentRetention effective = 2;
+   */
+  effective?: EnvironmentRetentionJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentRetentionResponse.
+ * Use `create(SetEnvironmentRetentionResponseSchema)` to create a new message.
+ */
+export const SetEnvironmentRetentionResponseSchema: GenMessage<SetEnvironmentRetentionResponse, {jsonType: SetEnvironmentRetentionResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 41);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentVolumesRequest
+ */
+export type SetEnvironmentVolumesRequest = Message<"toshi.workspace.v1.SetEnvironmentVolumesRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment: string;
+
+  /**
+   * The whole list of volume names; empty lifts the limit.
+   *
+   * @generated from field: repeated string volumes = 3;
+   */
+  volumes: string[];
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentVolumesRequest
+ */
+export type SetEnvironmentVolumesRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * The environment's name.
+   *
+   * @generated from field: string environment = 2;
+   */
+  environment?: string;
+
+  /**
+   * The whole list of volume names; empty lifts the limit.
+   *
+   * @generated from field: repeated string volumes = 3;
+   */
+  volumes?: string[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentVolumesRequest.
+ * Use `create(SetEnvironmentVolumesRequestSchema)` to create a new message.
+ */
+export const SetEnvironmentVolumesRequestSchema: GenMessage<SetEnvironmentVolumesRequest, {jsonType: SetEnvironmentVolumesRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 42);
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentVolumesResponse
+ */
+export type SetEnvironmentVolumesResponse = Message<"toshi.workspace.v1.SetEnvironmentVolumesResponse"> & {
+  /**
+   * The environment with its list as stored.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 1;
+   */
+  environment?: ProjectEnvironment | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.SetEnvironmentVolumesResponse
+ */
+export type SetEnvironmentVolumesResponseJson = {
+  /**
+   * The environment with its list as stored.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 1;
+   */
+  environment?: ProjectEnvironmentJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SetEnvironmentVolumesResponse.
+ * Use `create(SetEnvironmentVolumesResponseSchema)` to create a new message.
+ */
+export const SetEnvironmentVolumesResponseSchema: GenMessage<SetEnvironmentVolumesResponse, {jsonType: SetEnvironmentVolumesResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 43);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateEnvironmentRequest
+ */
+export type UpdateEnvironmentRequest = Message<"toshi.workspace.v1.UpdateEnvironmentRequest"> & {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * name names the environment; the fields update_mask names carry the
+   * new values.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 2;
+   */
+  environment?: ProjectEnvironment | undefined;
+
+  /**
+   * retention, volumes, or both. The paths managed_by, manifest_digest,
+   * manifest_origin and managed_fields set the management mark and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four. An unset mask never sets the mark.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateEnvironmentRequest
+ */
+export type UpdateEnvironmentRequestJson = {
+  /**
+   * The project's name.
+   *
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * name names the environment; the fields update_mask names carry the
+   * new values.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 2;
+   */
+  environment?: ProjectEnvironmentJson;
+
+  /**
+   * retention, volumes, or both. The paths managed_by, manifest_digest,
+   * manifest_origin and managed_fields set the management mark and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four. An unset mask never sets the mark.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateEnvironmentRequest.
+ * Use `create(UpdateEnvironmentRequestSchema)` to create a new message.
+ */
+export const UpdateEnvironmentRequestSchema: GenMessage<UpdateEnvironmentRequest, {jsonType: UpdateEnvironmentRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 44);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateEnvironmentResponse
+ */
+export type UpdateEnvironmentResponse = Message<"toshi.workspace.v1.UpdateEnvironmentResponse"> & {
+  /**
+   * The environment as stored.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 1;
+   */
+  environment?: ProjectEnvironment | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateEnvironmentResponse
+ */
+export type UpdateEnvironmentResponseJson = {
+  /**
+   * The environment as stored.
+   *
+   * @generated from field: toshi.workspace.v1.ProjectEnvironment environment = 1;
+   */
+  environment?: ProjectEnvironmentJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateEnvironmentResponse.
+ * Use `create(UpdateEnvironmentResponseSchema)` to create a new message.
+ */
+export const UpdateEnvironmentResponseSchema: GenMessage<UpdateEnvironmentResponse, {jsonType: UpdateEnvironmentResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_projects, 45);
+
+/**
  * EmbedToken is one of a project's embed tokens, without the token itself.
  *
  * @generated from message toshi.workspace.v1.EmbedToken
@@ -1753,6 +2403,27 @@ export type EmbedToken = Message<"toshi.workspace.v1.EmbedToken"> & {
    * @generated from field: string created_by = 10;
    */
   createdBy: string;
+
+  /**
+   * Where the recording it was spent on lives, copied from the recording
+   * when it was spent, so they stay after the recording is deleted: its
+   * workload, as ListRecordings takes it, that workload's kind ("job",
+   * "sandbox" or "service") and its environment, as Recording names them.
+   * Empty until spent.
+   *
+   * @generated from field: string workload_id = 11;
+   */
+  workloadId: string;
+
+  /**
+   * @generated from field: string workload_kind = 12;
+   */
+  workloadKind: string;
+
+  /**
+   * @generated from field: string environment_id = 13;
+   */
+  environmentId: string;
 };
 
 /**
@@ -1825,6 +2496,27 @@ export type EmbedTokenJson = {
    * @generated from field: string created_by = 10;
    */
   createdBy?: string;
+
+  /**
+   * Where the recording it was spent on lives, copied from the recording
+   * when it was spent, so they stay after the recording is deleted: its
+   * workload, as ListRecordings takes it, that workload's kind ("job",
+   * "sandbox" or "service") and its environment, as Recording names them.
+   * Empty until spent.
+   *
+   * @generated from field: string workload_id = 11;
+   */
+  workloadId?: string;
+
+  /**
+   * @generated from field: string workload_kind = 12;
+   */
+  workloadKind?: string;
+
+  /**
+   * @generated from field: string environment_id = 13;
+   */
+  environmentId?: string;
 };
 
 /**
@@ -1832,7 +2524,7 @@ export type EmbedTokenJson = {
  * Use `create(EmbedTokenSchema)` to create a new message.
  */
 export const EmbedTokenSchema: GenMessage<EmbedToken, {jsonType: EmbedTokenJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 36);
+  messageDesc(file_toshi_workspace_v1_projects, 46);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenRequest
@@ -1855,8 +2547,9 @@ export type CreateEmbedTokenRequest = Message<"toshi.workspace.v1.CreateEmbedTok
   origins: string[];
 
   /**
-   * How long the token stays valid; unset is the server's default, and
-   * more than its maximum is INVALID_ARGUMENT.
+   * How long the token stays valid; unset is the server's default, or the
+   * workspace's plan's maximum when that is shorter, and more than the
+   * plan's maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT.
    *
    * @generated from field: google.protobuf.Duration expires_in = 3;
    */
@@ -1884,8 +2577,9 @@ export type CreateEmbedTokenRequestJson = {
   origins?: string[];
 
   /**
-   * How long the token stays valid; unset is the server's default, and
-   * more than its maximum is INVALID_ARGUMENT.
+   * How long the token stays valid; unset is the server's default, or the
+   * workspace's plan's maximum when that is shorter, and more than the
+   * plan's maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT.
    *
    * @generated from field: google.protobuf.Duration expires_in = 3;
    */
@@ -1897,7 +2591,7 @@ export type CreateEmbedTokenRequestJson = {
  * Use `create(CreateEmbedTokenRequestSchema)` to create a new message.
  */
 export const CreateEmbedTokenRequestSchema: GenMessage<CreateEmbedTokenRequest, {jsonType: CreateEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 37);
+  messageDesc(file_toshi_workspace_v1_projects, 47);
 
 /**
  * @generated from message toshi.workspace.v1.CreateEmbedTokenResponse
@@ -1938,7 +2632,7 @@ export type CreateEmbedTokenResponseJson = {
  * Use `create(CreateEmbedTokenResponseSchema)` to create a new message.
  */
 export const CreateEmbedTokenResponseSchema: GenMessage<CreateEmbedTokenResponse, {jsonType: CreateEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 38);
+  messageDesc(file_toshi_workspace_v1_projects, 48);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensRequest
@@ -1997,7 +2691,7 @@ export type ListEmbedTokensRequestJson = {
  * Use `create(ListEmbedTokensRequestSchema)` to create a new message.
  */
 export const ListEmbedTokensRequestSchema: GenMessage<ListEmbedTokensRequest, {jsonType: ListEmbedTokensRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 39);
+  messageDesc(file_toshi_workspace_v1_projects, 49);
 
 /**
  * @generated from message toshi.workspace.v1.ListEmbedTokensResponse
@@ -2038,7 +2732,7 @@ export type ListEmbedTokensResponseJson = {
  * Use `create(ListEmbedTokensResponseSchema)` to create a new message.
  */
 export const ListEmbedTokensResponseSchema: GenMessage<ListEmbedTokensResponse, {jsonType: ListEmbedTokensResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 40);
+  messageDesc(file_toshi_workspace_v1_projects, 50);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenRequest
@@ -2079,7 +2773,7 @@ export type RevokeEmbedTokenRequestJson = {
  * Use `create(RevokeEmbedTokenRequestSchema)` to create a new message.
  */
 export const RevokeEmbedTokenRequestSchema: GenMessage<RevokeEmbedTokenRequest, {jsonType: RevokeEmbedTokenRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 41);
+  messageDesc(file_toshi_workspace_v1_projects, 51);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeEmbedTokenResponse
@@ -2106,7 +2800,7 @@ export type RevokeEmbedTokenResponseJson = {
  * Use `create(RevokeEmbedTokenResponseSchema)` to create a new message.
  */
 export const RevokeEmbedTokenResponseSchema: GenMessage<RevokeEmbedTokenResponse, {jsonType: RevokeEmbedTokenResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_projects, 42);
+  messageDesc(file_toshi_workspace_v1_projects, 52);
 
 /**
  * EmbedTokenState is where an embed token is in its life.
@@ -2161,8 +2855,9 @@ export const EmbedTokenStateSchema: GenEnum<EmbedTokenState, EmbedTokenStateJson
  * ProjectService reads a workspace's projects and the repositories they
  * claim, creates a project, creates or deletes an environment of one, moves a
  * repository's claim, sets the branch rules that choose a CI job's
- * environment and sets the network policies a project's workloads connect
- * out under. A workspace holds projects, and a project holds environments.
+ * environment, sets the network policies a project's workloads connect out
+ * under and sets how long an environment keeps its jobs and artifacts. A
+ * workspace holds projects, and a project holds environments.
  *
  * The caller's credential names the workspace, as for WorkloadService.
  * Nothing of another workspace is visible.
@@ -2228,12 +2923,12 @@ export const ProjectService: GenService<{
    * UpdateProject sets the fields of project.name's project that
    * update_mask names. The one field it sets is admission, the project's
    * admission webhook: its url and secret, both required, or an empty url
-   * to remove it. An unset update_mask names the fields project carries,
-   * an empty one changes nothing, and "*" or a path of another field is
-   * INVALID_ARGUMENT. The secret is sealed under the workspace's data key
-   * and never returned; a deployment with no keyring refuses it with
-   * FAILED_PRECONDITION. A token limited to environments is
-   * PERMISSION_DENIED.
+   * to remove it. An unset update_mask names the fields project carries.
+   * An empty one, an unset one with no admission, "*" and a path of
+   * another field are INVALID_ARGUMENT. The secret is sealed under the
+   * workspace's data key and never returned; a deployment with no keyring
+   * refuses it with FAILED_PRECONDITION. A token limited to environments
+   * is PERMISSION_DENIED.
    *
    * @generated from rpc toshi.workspace.v1.ProjectService.UpdateProject
    */
@@ -2278,8 +2973,9 @@ export const ProjectService: GenService<{
    * production environment is FAILED_PRECONDITION, and so is an
    * environment that anything live still refers to, with each kind and
    * its count in the message: secret sets, API tokens that are neither
-   * revoked nor expired, unfinished jobs, workloads that are not deleted
-   * and artifacts still being uploaded. Finished jobs and complete
+   * revoked nor expired, unfinished jobs, workloads that are not deleted,
+   * artifacts still being uploaded, the project's branch rules that choose
+   * it and its triggers that are not deleted. Finished jobs and complete
    * artifacts keep the environment as history. A project or environment
    * the workspace does not have is NOT_FOUND. A token limited to a
    * project deletes only in that project, and a token limited to an
@@ -2391,6 +3087,75 @@ export const ProjectService: GenService<{
     methodKind: "unary";
     input: typeof SetEnvironmentNetworkRequestSchema;
     output: typeof SetEnvironmentNetworkResponseSchema;
+  },
+  /**
+   * GetEnvironmentRetention returns an environment's retention override,
+   * as stored, and the retention that applies to it: the override where it
+   * shortens the workspace's, else the workspace's. An environment that
+   * never set one follows its workspace. A project or environment the
+   * workspace does not have is NOT_FOUND. A token limited to an
+   * environment reads only that environment's.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.GetEnvironmentRetention
+   */
+  getEnvironmentRetention: {
+    methodKind: "unary";
+    input: typeof GetEnvironmentRetentionRequestSchema;
+    output: typeof GetEnvironmentRetentionResponseSchema;
+  },
+  /**
+   * SetEnvironmentRetention replaces an environment's retention override
+   * whole; an empty retention clears it. An override may only shorten the
+   * workspace's: history_days above the workspace's period, or a keep
+   * longer than the workspace's keep of that kind, is INVALID_ARGUMENT
+   * naming the field and the limit, and so is a recording-signed-in keep
+   * longer than the recording keep that applies after it. A project or
+   * environment the workspace does not have is NOT_FOUND. A token limited
+   * to an environment sets only that environment's.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.SetEnvironmentRetention
+   */
+  setEnvironmentRetention: {
+    methodKind: "unary";
+    input: typeof SetEnvironmentRetentionRequestSchema;
+    output: typeof SetEnvironmentRetentionResponseSchema;
+  },
+  /**
+   * SetEnvironmentVolumes replaces the list of the project's volumes an
+   * environment's services and sandboxes may attach; an empty list lets
+   * them attach any. An attach of a volume the list leaves out, by
+   * AttachVolume or at sandbox create, is FAILED_PRECONDITION naming the
+   * environment and the volume; a volume attached before stays. A name
+   * that is no volume of the project is INVALID_ARGUMENT naming it. A
+   * project or environment the workspace does not have is NOT_FOUND. A
+   * token limited to an environment sets only that environment's.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.SetEnvironmentVolumes
+   */
+  setEnvironmentVolumes: {
+    methodKind: "unary";
+    input: typeof SetEnvironmentVolumesRequestSchema;
+    output: typeof SetEnvironmentVolumesResponseSchema;
+  },
+  /**
+   * UpdateEnvironment sets the fields update_mask names on an environment:
+   * retention replaces its retention override whole, as
+   * SetEnvironmentRetention does, and volumes replaces the list of the
+   * project's volumes its services and sandboxes may attach, as
+   * SetEnvironmentVolumes does. Each is checked as that call checks it,
+   * and both are written together or not at all. An omitted mask means
+   * the fields the request sets; clearing the override or the list needs
+   * its path in the mask. "*" and a path of any other field are
+   * INVALID_ARGUMENT. A project or environment the workspace does not have
+   * is NOT_FOUND. A token limited to an environment updates only that
+   * environment.
+   *
+   * @generated from rpc toshi.workspace.v1.ProjectService.UpdateEnvironment
+   */
+  updateEnvironment: {
+    methodKind: "unary";
+    input: typeof UpdateEnvironmentRequestSchema;
+    output: typeof UpdateEnvironmentResponseSchema;
   },
   /**
    * CreateEmbedToken mints an embed token for a project: a credential for

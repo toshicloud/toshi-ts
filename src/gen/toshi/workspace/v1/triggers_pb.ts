@@ -257,8 +257,8 @@ export const TriggerSchema: GenMessage<Trigger, {jsonType: TriggerJson}> = /*@__
 /**
  * TriggerFilter limits the pull request events a trigger matches. Each
  * list, when set, must hold the event's value; an empty list holds every
- * value. An event that is not a pull request's matches only an empty
- * filter.
+ * value. An event that is not a pull request's is not filtered: it
+ * matches whatever the filter holds.
  *
  * @generated from message toshi.workspace.v1.TriggerFilter
  */
@@ -281,8 +281,8 @@ export type TriggerFilter = Message<"toshi.workspace.v1.TriggerFilter"> & {
 /**
  * TriggerFilter limits the pull request events a trigger matches. Each
  * list, when set, must hold the event's value; an empty list holds every
- * value. An event that is not a pull request's matches only an empty
- * filter.
+ * value. An event that is not a pull request's is not filtered: it
+ * matches whatever the filter holds.
  *
  * @generated from message toshi.workspace.v1.TriggerFilter
  */
@@ -477,8 +477,9 @@ export type TriggerSandbox = Message<"toshi.workspace.v1.TriggerSandbox"> & {
   size: string;
 
   /**
-   * How long it may run; unset is 24 hours. It cannot be longer than the
-   * plan's sandbox cap.
+   * How long it may run, in whole minutes; unset is 24 hours, or the plan's
+   * sandbox cap when shorter. It cannot be longer than the cap: a create or
+   * update past it is refused.
    *
    * @generated from field: google.protobuf.Duration max_duration = 2;
    */
@@ -506,7 +507,9 @@ export type TriggerSandbox = Message<"toshi.workspace.v1.TriggerSandbox"> & {
   process?: Command | undefined;
 
   /**
-   * The http channel whose link the trigger reports; empty is `preview`.
+   * The http channel whose link the trigger reports. Empty reports the
+   * first preview the sandbox serves, and a sandbox that serves none is
+   * ready with no link.
    *
    * @generated from field: string channel = 6;
    */
@@ -537,8 +540,9 @@ export type TriggerSandboxJson = {
   size?: string;
 
   /**
-   * How long it may run; unset is 24 hours. It cannot be longer than the
-   * plan's sandbox cap.
+   * How long it may run, in whole minutes; unset is 24 hours, or the plan's
+   * sandbox cap when shorter. It cannot be longer than the cap: a create or
+   * update past it is refused.
    *
    * @generated from field: google.protobuf.Duration max_duration = 2;
    */
@@ -566,7 +570,9 @@ export type TriggerSandboxJson = {
   process?: CommandJson;
 
   /**
-   * The http channel whose link the trigger reports; empty is `preview`.
+   * The http channel whose link the trigger reports. Empty reports the
+   * first preview the sandbox serves, and a sandbox that serves none is
+   * ready with no link.
    *
    * @generated from field: string channel = 6;
    */
@@ -1216,7 +1222,7 @@ export const TriggerService: GenService<{
   },
   /**
    * DeleteTrigger deletes a trigger: it acts on no further event, and the
-   * hourly check removes the workloads it made.
+   * evaluator's next pass removes the workloads it made.
    *
    * @generated from rpc toshi.workspace.v1.TriggerService.DeleteTrigger
    */

@@ -136,6 +136,22 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.watchEvents,
   WorkloadService.method.getOperation,
   WorkloadService.method.waitOperation,
+  // The fake holds no services: their alarms and sign-ins are answered by
+  // hooks.
+  WorkloadService.method.setServiceAlarm,
+  WorkloadService.method.getServiceAlarm,
+  WorkloadService.method.listServiceAlarms,
+  WorkloadService.method.deleteServiceAlarm,
+  WorkloadService.method.pauseServiceAlarm,
+  WorkloadService.method.resumeServiceAlarm,
+  WorkloadService.method.runServiceAlarmNow,
+  WorkloadService.method.startServiceSignIn,
+  WorkloadService.method.answerServiceSignIn,
+  WorkloadService.method.cancelServiceSignIn,
+  WorkloadService.method.getServiceSignInStatus,
+  // The fake keeps no event log: listEvents and watchEvents are hook-only, so
+  // an emitted event would be one no call can read back.
+  WorkloadService.method.emitWorkloadEvent,
   // SecretService
   SecretService.method.createSecretSet,
   SecretService.method.listSecretSets,
@@ -147,6 +163,8 @@ export const hookOnly: readonly DescMethod[] = [
   SecretService.method.grantSecretSet,
   SecretService.method.revokeSecretSet,
   SecretService.method.listSecretSetGrants,
+  // The fake holds no secret sets.
+  SecretService.method.updateSecretSet,
   // ProjectService
   ProjectService.method.listProjects,
   ProjectService.method.updateProject,
@@ -165,6 +183,11 @@ export const hookOnly: readonly DescMethod[] = [
   ProjectService.method.setProjectNetwork,
   ProjectService.method.getEnvironmentNetwork,
   ProjectService.method.setEnvironmentNetwork,
+  // The fake holds no projects or environments.
+  ProjectService.method.updateEnvironment,
+  ProjectService.method.getEnvironmentRetention,
+  ProjectService.method.setEnvironmentRetention,
+  ProjectService.method.setEnvironmentVolumes,
   // WebhookService
   WebhookService.method.createWebhookEndpoint,
   WebhookService.method.getWebhookEndpoint,
@@ -213,6 +236,10 @@ export const hookOnly: readonly DescMethod[] = [
   VolumeService.method.detachVolume,
   VolumeService.method.listVolumeVersions,
   VolumeService.method.restoreVolume,
+  // The fake holds no volumes.
+  VolumeService.method.createVolume,
+  VolumeService.method.updateVolume,
+  VolumeService.method.deleteVolume,
   // ArtifactService
   ArtifactService.method.listArtifacts,
   ArtifactService.method.getArtifact,
@@ -283,6 +310,9 @@ export const hookOnly: readonly DescMethod[] = [
   WorkspaceService.method.listSeats,
   WorkspaceService.method.assignSeat,
   WorkspaceService.method.removeSeat,
+  // The fake holds no workspace record: getWorkspace is hook-only too.
+  WorkspaceService.method.deleteWorkspace,
+  WorkspaceService.method.cancelWorkspaceDeletion,
   // DomainService
   DomainService.method.createDomain,
   DomainService.method.getDomain,

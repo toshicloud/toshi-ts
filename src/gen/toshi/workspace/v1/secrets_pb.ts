@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/secrets.proto.
  */
 export const file_toshi_workspace_v1_secrets: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxInEKCVNlY3JldFNldBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKWAQoGU2VjcmV0EgwKBG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoAxIMCgRzaXplGAMgASgDEi4KCnVwZGF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCCJeCg1TZWNyZXRWZXJzaW9uEg8KB3ZlcnNpb24YASABKAMSDAoEc2l6ZRgCIAEoAxIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKDAQoLU2VjcmV0R3JhbnQSMwoEa2luZBgBIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudGVlS2luZBIPCgdncmFudGVlGAIgASgJEi4KCmNyZWF0ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk4KFkNyZWF0ZVNlY3JldFNldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgiRQoXQ3JlYXRlU2VjcmV0U2V0UmVzcG9uc2USKgoDc2V0GAEgASgLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldCJPChVMaXN0U2VjcmV0U2V0c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJeChZMaXN0U2VjcmV0U2V0c1Jlc3BvbnNlEisKBHNldHMYASADKAsyHS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0U2V0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJOChZEZWxldGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIIhkKF0RlbGV0ZVNlY3JldFNldFJlc3BvbnNlInIKEFB1dFNlY3JldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSDAoEbmFtZRgEIAEoCRINCgV2YWx1ZRgFIAEoDBILCgNvd24YBiABKAgiPwoRUHV0U2VjcmV0UmVzcG9uc2USKgoGc2VjcmV0GAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldCJ1ChNEZWxldGVTZWNyZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSCwoDb3duGAUgASgIEg0KBW93bmVyGAYgASgJIhYKFERlbGV0ZVNlY3JldFJlc3BvbnNlInEKEkxpc3RTZWNyZXRzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJbChNMaXN0U2VjcmV0c1Jlc3BvbnNlEisKB3NlY3JldHMYASADKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKiAQoZTGlzdFNlY3JldFZlcnNpb25zUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIMCgRuYW1lGAQgASgJEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYgASgJEgsKA293bhgHIAEoCBINCgVvd25lchgIIAEoCSJqChpMaXN0U2VjcmV0VmVyc2lvbnNSZXNwb25zZRIzCgh2ZXJzaW9ucxgBIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRWZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKTAQoVR3JhbnRTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSJIChZHcmFudFNlY3JldFNldFJlc3BvbnNlEi4KBWdyYW50GAEgASgLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50IpQBChZSZXZva2VTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEjMKBGtpbmQYBCABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgFIAEoCSIZChdSZXZva2VTZWNyZXRTZXRSZXNwb25zZSJ5ChpMaXN0U2VjcmV0U2V0R3JhbnRzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIRCglwYWdlX3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCSJnChtMaXN0U2VjcmV0U2V0R3JhbnRzUmVzcG9uc2USLwoGZ3JhbnRzGAEgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldEdyYW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSq7AQoRU2VjcmV0R3JhbnRlZUtpbmQSIwofU0VDUkVUX0dSQU5URUVfS0lORF9VTlNQRUNJRklFRBAAEhwKGFNFQ1JFVF9HUkFOVEVFX0tJTkRfS0lORBABEh0KGVNFQ1JFVF9HUkFOVEVFX0tJTkRfSU1BR0UQAhIfChtTRUNSRVRfR1JBTlRFRV9LSU5EX1NFUlZJQ0UQAxIjCh9TRUNSRVRfR1JBTlRFRV9LSU5EX0lNQUdFX0JVSUxEEAQyzAsKDVNlY3JldFNlcnZpY2USlgEKD0NyZWF0ZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUShAEKDkxpc3RTZWNyZXRTZXRzEikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0U2V0c1Jlc3BvbnNlIhvC8xgMc2VjcmV0cy5yZWFkyvMYB3Byb2plY3QSlgEKD0RlbGV0ZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSkAEKCVB1dFNlY3JldBIkLnRvc2hpLndvcmtzcGFjZS52MS5QdXRTZWNyZXRSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLlB1dFNlY3JldFJlc3BvbnNlIjbC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGBIKCnNlY3JldC5zZXQSBG5vbmUSjQEKDERlbGV0ZVNlY3JldBInLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVTZWNyZXRSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSfwoLTGlzdFNlY3JldHMSJi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldHNSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRzUmVzcG9uc2UiH8LzGAxzZWNyZXRzLnJlYWTK8xgLZW52aXJvbm1lbnQSlAEKEkxpc3RTZWNyZXRWZXJzaW9ucxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRWZXJzaW9uc1Jlc3BvbnNlIh/C8xgMc2VjcmV0cy5yZWFkyvMYC2Vudmlyb25tZW50EpMBCg5HcmFudFNlY3JldFNldBIpLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNlY3JldFNldFJlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTZWNyZXRTZXRSZXNwb25zZSIqwvMYDXNlY3JldHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgGEgRub25lEpYBCg9SZXZva2VTZWNyZXRTZXQSKi50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlU2VjcmV0U2V0UmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VTZWNyZXRTZXRSZXNwb25zZSIqwvMYDXNlY3JldHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgGEgRub25lEpcBChNMaXN0U2VjcmV0U2V0R3JhbnRzEi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRHcmFudHNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRHcmFudHNSZXNwb25zZSIfwvMYDHNlY3JldHMucmVhZMrzGAtlbnZpcm9ubWVudEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvc2VjcmV0cy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIt0BCglTZWNyZXRTZXQSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSLgoKY3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKbWFuYWdlZF9ieRgFIAEoCRIXCg9tYW5pZmVzdF9kaWdlc3QYBiABKAkSFgoObWFuYWdlZF9maWVsZHMYByADKAkSFwoPbWFuaWZlc3Rfb3JpZ2luGAggASgJEgwKBGtleXMYCSADKAkilgEKBlNlY3JldBIMCgRuYW1lGAEgASgJEg8KB3ZlcnNpb24YAiABKAMSDAoEc2l6ZRgDIAEoAxIuCgp1cGRhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVvd25lchgFIAEoCRIMCgRtaW5lGAYgASgIEhIKCm93bmVyX2xlZnQYByABKAgiXgoNU2VjcmV0VmVyc2lvbhIPCgd2ZXJzaW9uGAEgASgDEgwKBHNpemUYAiABKAMSLgoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAigwEKC1NlY3JldEdyYW50EjMKBGtpbmQYASABKA4yJS50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnRlZUtpbmQSDwoHZ3JhbnRlZRgCIAEoCRIuCgpjcmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJjChZDcmVhdGVTZWNyZXRTZXRSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEhMKC3JlcXVlc3Rfa2V5GAQgASgJIkUKF0NyZWF0ZVNlY3JldFNldFJlc3BvbnNlEioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQiTwoVTGlzdFNlY3JldFNldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiXgoWTGlzdFNlY3JldFNldHNSZXNwb25zZRIrCgRzZXRzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFNldBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiTgoWRGVsZXRlU2VjcmV0U2V0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCCIZChdEZWxldGVTZWNyZXRTZXRSZXNwb25zZSJ1ChZVcGRhdGVTZWNyZXRTZXRSZXF1ZXN0EioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIkUKF1VwZGF0ZVNlY3JldFNldFJlc3BvbnNlEioKA3NldBgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRTZXQicgoQUHV0U2VjcmV0UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhMKC2Vudmlyb25tZW50GAIgASgJEg4KBnNoYXJlZBgDIAEoCBIMCgRuYW1lGAQgASgJEg0KBXZhbHVlGAUgASgMEgsKA293bhgGIAEoCCI/ChFQdXRTZWNyZXRSZXNwb25zZRIqCgZzZWNyZXQYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0InUKE0RlbGV0ZVNlY3JldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSDAoEbmFtZRgEIAEoCRILCgNvd24YBSABKAgSDQoFb3duZXIYBiABKAkiFgoURGVsZXRlU2VjcmV0UmVzcG9uc2UicQoSTGlzdFNlY3JldHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJIlsKE0xpc3RTZWNyZXRzUmVzcG9uc2USKwoHc2VjcmV0cxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqIBChlMaXN0U2VjcmV0VmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEgwKBG5hbWUYBCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAkSCwoDb3duGAcgASgIEg0KBW93bmVyGAggASgJImoKGkxpc3RTZWNyZXRWZXJzaW9uc1Jlc3BvbnNlEjMKCHZlcnNpb25zGAEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLlNlY3JldFZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpMBChVHcmFudFNlY3JldFNldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSMwoEa2luZBgEIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudGVlS2luZBIPCgdncmFudGVlGAUgASgJIkgKFkdyYW50U2VjcmV0U2V0UmVzcG9uc2USLgoFZ3JhbnQYASABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnQilAEKFlJldm9rZVNlY3JldFNldFJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRITCgtlbnZpcm9ubWVudBgCIAEoCRIOCgZzaGFyZWQYAyABKAgSMwoEa2luZBgEIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5TZWNyZXRHcmFudGVlS2luZBIPCgdncmFudGVlGAUgASgJIhkKF1Jldm9rZVNlY3JldFNldFJlc3BvbnNlInkKGkxpc3RTZWNyZXRTZXRHcmFudHNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkSDgoGc2hhcmVkGAMgASgIEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJImcKG0xpc3RTZWNyZXRTZXRHcmFudHNSZXNwb25zZRIvCgZncmFudHMYASADKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuU2VjcmV0R3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJKrsBChFTZWNyZXRHcmFudGVlS2luZBIjCh9TRUNSRVRfR1JBTlRFRV9LSU5EX1VOU1BFQ0lGSUVEEAASHAoYU0VDUkVUX0dSQU5URUVfS0lORF9LSU5EEAESHQoZU0VDUkVUX0dSQU5URUVfS0lORF9JTUFHRRACEh8KG1NFQ1JFVF9HUkFOVEVFX0tJTkRfU0VSVklDRRADEiMKH1NFQ1JFVF9HUkFOVEVFX0tJTkRfSU1BR0VfQlVJTEQQBDLlDAoNU2VjcmV0U2VydmljZRKWAQoPQ3JlYXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlU2VjcmV0U2V0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRKEAQoOTGlzdFNlY3JldFNldHMSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldHNSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRTZXRzUmVzcG9uc2UiG8LzGAxzZWNyZXRzLnJlYWTK8xgHcHJvamVjdBKWAQoPRGVsZXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0U2V0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRKWAQoPVXBkYXRlU2VjcmV0U2V0EioudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVNlY3JldFNldFJlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlU2VjcmV0U2V0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRKQAQoJUHV0U2VjcmV0EiQudG9zaGkud29ya3NwYWNlLnYxLlB1dFNlY3JldFJlcXVlc3QaJS50b3NoaS53b3Jrc3BhY2UudjEuUHV0U2VjcmV0UmVzcG9uc2UiNsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYEgoKc2VjcmV0LnNldBIEbm9uZRKNAQoMRGVsZXRlU2VjcmV0EicudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZVNlY3JldFJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlU2VjcmV0UmVzcG9uc2UiKsLzGA1zZWNyZXRzLndyaXRlyvMYC2Vudmlyb25tZW500vMYBhIEbm9uZRJ/CgtMaXN0U2VjcmV0cxImLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2VjcmV0c1JlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldHNSZXNwb25zZSIfwvMYDHNlY3JldHMucmVhZMrzGAtlbnZpcm9ubWVudBKUAQoSTGlzdFNlY3JldFZlcnNpb25zEi0udG9zaGkud29ya3NwYWNlLnYxLkxpc3RTZWNyZXRWZXJzaW9uc1JlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFZlcnNpb25zUmVzcG9uc2UiH8LzGAxzZWNyZXRzLnJlYWTK8xgLZW52aXJvbm1lbnQSkwEKDkdyYW50U2VjcmV0U2V0EikudG9zaGkud29ya3NwYWNlLnYxLkdyYW50U2VjcmV0U2V0UmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSlgEKD1Jldm9rZVNlY3JldFNldBIqLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VTZWNyZXRTZXRSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVNlY3JldFNldFJlc3BvbnNlIirC8xgNc2VjcmV0cy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGAYSBG5vbmUSlwEKE0xpc3RTZWNyZXRTZXRHcmFudHMSLi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1JlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlY3JldFNldEdyYW50c1Jlc3BvbnNlIh/C8xgMc2VjcmV0cy5yZWFkyvMYC2Vudmlyb25tZW50QiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * SecretSet is a project's set: an environment's, or the shared one.
@@ -42,6 +42,48 @@ export type SecretSet = Message<"toshi.workspace.v1.SecretSet"> & {
    * @generated from field: google.protobuf.Timestamp created_at = 4;
    */
   createdAt?: Timestamp | undefined;
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 5;
+   */
+  managedBy: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 6;
+   */
+  manifestDigest: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 7;
+   */
+  managedFields: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 8;
+   */
+  manifestOrigin: string;
+
+  /**
+   * The names of the set's keys, sorted; never a value. A person's own
+   * keys are not listed.
+   *
+   * @generated from field: repeated string keys = 9;
+   */
+  keys: string[];
 };
 
 /**
@@ -71,6 +113,48 @@ export type SecretSetJson = {
    * @generated from field: google.protobuf.Timestamp created_at = 4;
    */
   createdAt?: TimestampJson;
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 5;
+   */
+  managedBy?: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 6;
+   */
+  manifestDigest?: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 7;
+   */
+  managedFields?: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 8;
+   */
+  manifestOrigin?: string;
+
+  /**
+   * The names of the set's keys, sorted; never a value. A person's own
+   * keys are not listed.
+   *
+   * @generated from field: repeated string keys = 9;
+   */
+  keys?: string[];
 };
 
 /**
@@ -311,6 +395,11 @@ export type CreateSecretSetRequest = Message<"toshi.workspace.v1.CreateSecretSet
    * @generated from field: bool shared = 3;
    */
   shared: boolean;
+
+  /**
+   * @generated from field: string request_key = 4;
+   */
+  requestKey: string;
 };
 
 /**
@@ -331,6 +420,11 @@ export type CreateSecretSetRequestJson = {
    * @generated from field: bool shared = 3;
    */
   shared?: boolean;
+
+  /**
+   * @generated from field: string request_key = 4;
+   */
+  requestKey?: string;
 };
 
 /**
@@ -530,6 +624,94 @@ export const DeleteSecretSetResponseSchema: GenMessage<DeleteSecretSetResponse, 
   messageDesc(file_toshi_workspace_v1_secrets, 9);
 
 /**
+ * @generated from message toshi.workspace.v1.UpdateSecretSetRequest
+ */
+export type UpdateSecretSetRequest = Message<"toshi.workspace.v1.UpdateSecretSetRequest"> & {
+  /**
+   * project, environment and shared name the set, as in
+   * DeleteSecretSetRequest; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.SecretSet set = 1;
+   */
+  set?: SecretSet | undefined;
+
+  /**
+   * keys, or the four paths of the management mark: managed_by,
+   * manifest_digest, manifest_origin and managed_fields set it and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four. An unset mask never sets the mark.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateSecretSetRequest
+ */
+export type UpdateSecretSetRequestJson = {
+  /**
+   * project, environment and shared name the set, as in
+   * DeleteSecretSetRequest; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.SecretSet set = 1;
+   */
+  set?: SecretSetJson;
+
+  /**
+   * keys, or the four paths of the management mark: managed_by,
+   * manifest_digest, manifest_origin and managed_fields set it and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four. An unset mask never sets the mark.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateSecretSetRequest.
+ * Use `create(UpdateSecretSetRequestSchema)` to create a new message.
+ */
+export const UpdateSecretSetRequestSchema: GenMessage<UpdateSecretSetRequest, {jsonType: UpdateSecretSetRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_secrets, 10);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateSecretSetResponse
+ */
+export type UpdateSecretSetResponse = Message<"toshi.workspace.v1.UpdateSecretSetResponse"> & {
+  /**
+   * The set as stored.
+   *
+   * @generated from field: toshi.workspace.v1.SecretSet set = 1;
+   */
+  set?: SecretSet | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateSecretSetResponse
+ */
+export type UpdateSecretSetResponseJson = {
+  /**
+   * The set as stored.
+   *
+   * @generated from field: toshi.workspace.v1.SecretSet set = 1;
+   */
+  set?: SecretSetJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateSecretSetResponse.
+ * Use `create(UpdateSecretSetResponseSchema)` to create a new message.
+ */
+export const UpdateSecretSetResponseSchema: GenMessage<UpdateSecretSetResponse, {jsonType: UpdateSecretSetResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_secrets, 11);
+
+/**
  * @generated from message toshi.workspace.v1.PutSecretRequest
  */
 export type PutSecretRequest = Message<"toshi.workspace.v1.PutSecretRequest"> & {
@@ -614,7 +796,7 @@ export type PutSecretRequestJson = {
  * Use `create(PutSecretRequestSchema)` to create a new message.
  */
 export const PutSecretRequestSchema: GenMessage<PutSecretRequest, {jsonType: PutSecretRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 10);
+  messageDesc(file_toshi_workspace_v1_secrets, 12);
 
 /**
  * @generated from message toshi.workspace.v1.PutSecretResponse
@@ -641,7 +823,7 @@ export type PutSecretResponseJson = {
  * Use `create(PutSecretResponseSchema)` to create a new message.
  */
 export const PutSecretResponseSchema: GenMessage<PutSecretResponse, {jsonType: PutSecretResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 11);
+  messageDesc(file_toshi_workspace_v1_secrets, 13);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteSecretRequest
@@ -726,7 +908,7 @@ export type DeleteSecretRequestJson = {
  * Use `create(DeleteSecretRequestSchema)` to create a new message.
  */
 export const DeleteSecretRequestSchema: GenMessage<DeleteSecretRequest, {jsonType: DeleteSecretRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 12);
+  messageDesc(file_toshi_workspace_v1_secrets, 14);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteSecretResponse
@@ -745,7 +927,7 @@ export type DeleteSecretResponseJson = {
  * Use `create(DeleteSecretResponseSchema)` to create a new message.
  */
 export const DeleteSecretResponseSchema: GenMessage<DeleteSecretResponse, {jsonType: DeleteSecretResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 13);
+  messageDesc(file_toshi_workspace_v1_secrets, 15);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretsRequest
@@ -820,7 +1002,7 @@ export type ListSecretsRequestJson = {
  * Use `create(ListSecretsRequestSchema)` to create a new message.
  */
 export const ListSecretsRequestSchema: GenMessage<ListSecretsRequest, {jsonType: ListSecretsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 14);
+  messageDesc(file_toshi_workspace_v1_secrets, 16);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretsResponse
@@ -861,7 +1043,7 @@ export type ListSecretsResponseJson = {
  * Use `create(ListSecretsResponseSchema)` to create a new message.
  */
 export const ListSecretsResponseSchema: GenMessage<ListSecretsResponse, {jsonType: ListSecretsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 15);
+  messageDesc(file_toshi_workspace_v1_secrets, 17);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretVersionsRequest
@@ -974,7 +1156,7 @@ export type ListSecretVersionsRequestJson = {
  * Use `create(ListSecretVersionsRequestSchema)` to create a new message.
  */
 export const ListSecretVersionsRequestSchema: GenMessage<ListSecretVersionsRequest, {jsonType: ListSecretVersionsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 16);
+  messageDesc(file_toshi_workspace_v1_secrets, 18);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretVersionsResponse
@@ -1015,7 +1197,7 @@ export type ListSecretVersionsResponseJson = {
  * Use `create(ListSecretVersionsResponseSchema)` to create a new message.
  */
 export const ListSecretVersionsResponseSchema: GenMessage<ListSecretVersionsResponse, {jsonType: ListSecretVersionsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 17);
+  messageDesc(file_toshi_workspace_v1_secrets, 19);
 
 /**
  * @generated from message toshi.workspace.v1.GrantSecretSetRequest
@@ -1082,7 +1264,7 @@ export type GrantSecretSetRequestJson = {
  * Use `create(GrantSecretSetRequestSchema)` to create a new message.
  */
 export const GrantSecretSetRequestSchema: GenMessage<GrantSecretSetRequest, {jsonType: GrantSecretSetRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 18);
+  messageDesc(file_toshi_workspace_v1_secrets, 20);
 
 /**
  * @generated from message toshi.workspace.v1.GrantSecretSetResponse
@@ -1109,7 +1291,7 @@ export type GrantSecretSetResponseJson = {
  * Use `create(GrantSecretSetResponseSchema)` to create a new message.
  */
 export const GrantSecretSetResponseSchema: GenMessage<GrantSecretSetResponse, {jsonType: GrantSecretSetResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 19);
+  messageDesc(file_toshi_workspace_v1_secrets, 21);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeSecretSetRequest
@@ -1176,7 +1358,7 @@ export type RevokeSecretSetRequestJson = {
  * Use `create(RevokeSecretSetRequestSchema)` to create a new message.
  */
 export const RevokeSecretSetRequestSchema: GenMessage<RevokeSecretSetRequest, {jsonType: RevokeSecretSetRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 20);
+  messageDesc(file_toshi_workspace_v1_secrets, 22);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeSecretSetResponse
@@ -1195,7 +1377,7 @@ export type RevokeSecretSetResponseJson = {
  * Use `create(RevokeSecretSetResponseSchema)` to create a new message.
  */
 export const RevokeSecretSetResponseSchema: GenMessage<RevokeSecretSetResponse, {jsonType: RevokeSecretSetResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 21);
+  messageDesc(file_toshi_workspace_v1_secrets, 23);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretSetGrantsRequest
@@ -1270,7 +1452,7 @@ export type ListSecretSetGrantsRequestJson = {
  * Use `create(ListSecretSetGrantsRequestSchema)` to create a new message.
  */
 export const ListSecretSetGrantsRequestSchema: GenMessage<ListSecretSetGrantsRequest, {jsonType: ListSecretSetGrantsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 22);
+  messageDesc(file_toshi_workspace_v1_secrets, 24);
 
 /**
  * @generated from message toshi.workspace.v1.ListSecretSetGrantsResponse
@@ -1311,7 +1493,7 @@ export type ListSecretSetGrantsResponseJson = {
  * Use `create(ListSecretSetGrantsResponseSchema)` to create a new message.
  */
 export const ListSecretSetGrantsResponseSchema: GenMessage<ListSecretSetGrantsResponse, {jsonType: ListSecretSetGrantsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_secrets, 23);
+  messageDesc(file_toshi_workspace_v1_secrets, 25);
 
 /**
  * SecretGranteeKind is what a set is granted to.
@@ -1380,8 +1562,8 @@ export const SecretGranteeKindSchema: GenEnum<SecretGranteeKind, SecretGranteeKi
  * workspace does not have is NOT_FOUND.
  *
  * No call returns a value: a key is answered with its name, version, size
- * and time. The calls take no request_key: a retried PutSecret makes one
- * more version.
+ * and time. CreateSecretSet takes a request_key; the other calls take none:
+ * a retried PutSecret makes one more version.
  *
  * A key can be one person's own: only the workloads that person starts
  * receive it, beside the keys of the environment's set, while the person
@@ -1425,6 +1607,25 @@ export const SecretService: GenService<{
     methodKind: "unary";
     input: typeof DeleteSecretSetRequestSchema;
     output: typeof DeleteSecretSetResponseSchema;
+  },
+  /**
+   * UpdateSecretSet sets the fields update_mask names on a set. keys
+   * names the keys the set keeps: a key of the set the list leaves out is
+   * deleted with all its versions, in one write. The request never carries
+   * a value, so a name the set does not hold is FAILED_PRECONDITION naming
+   * it: its value is set with PutSecret first. A person's own keys are not
+   * in a set's list and are never deleted by it. An omitted mask means the
+   * fields the request sets; an empty list deletes every key of the set
+   * only when the mask names keys. "*" and a path of any other field are
+   * INVALID_ARGUMENT, and so are an empty and a repeated name. A set the
+   * project does not have is NOT_FOUND.
+   *
+   * @generated from rpc toshi.workspace.v1.SecretService.UpdateSecretSet
+   */
+  updateSecretSet: {
+    methodKind: "unary";
+    input: typeof UpdateSecretSetRequestSchema;
+    output: typeof UpdateSecretSetResponseSchema;
   },
   /**
    * PutSecret makes the key's next version, holding value, and returns the

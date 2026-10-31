@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/display.proto.
  */
 export const file_toshi_workspace_v1_display: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZGlzcGxheS5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIqAECg5EaXNwbGF5U2Vzc2lvbhIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLQoEbW9kZRgDIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5TW9kZRIWCg5hbGxvd190YWtlb3ZlchgEIAEoCBItCgppZGxlX2Nsb3NlGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjYKBXN0YXRlGAYgASgOMicudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uU3RhdGUSNAoJb3BlbmVkX2J5GAcgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlPcGVuZXISLQoJb3BlbmVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglhdHRhY2hfYnkYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2F0dGFjaGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCgljbG9zZWRfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGNsb3NlX3JlYXNvbhgMIAEoCRIRCglvcGVuZXJfaWQYDSABKAkSDgoGb3JpZ2luGA4gASgJEhcKD2F0dGFjaF90b2tlbl9pZBgPIAEoCSLZAQoZT3BlbkRpc3BsYXlTZXNzaW9uUmVxdWVzdBIQCgZqb2JfaWQYASABKAlIABIVCgt3b3JrbG9hZF9pZBgCIAEoCUgAEi0KBG1vZGUYAyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuRGlzcGxheU1vZGUSLQoKaWRsZV9jbG9zZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5hbGxvd190YWtlb3ZlchgFIAEoCBITCgtyZXF1ZXN0X2tleRgGIAEoCUIICgZ0YXJnZXQifwoaT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2USMwoHc2Vzc2lvbhgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5U2Vzc2lvbhILCgN1cmwYAiABKAkSDQoFdG9rZW4YAyABKAkSEAoIcmVwbGF5ZWQYBCABKAgiLgoYR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkiUAoZR2V0RGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uImYKGkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglvcGVuX29ubHkYAiABKAgSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkibAobTGlzdERpc3BsYXlTZXNzaW9uc1Jlc3BvbnNlEjQKCHNlc3Npb25zGAEgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIwChpDbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJIlIKG0Nsb3NlRGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uInYKFlNlbmREaXNwbGF5S2V5c1JlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIOCgR0ZXh0GAIgASgJSAASLwoEa2V5cxgDIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5S2V5c0gAQgcKBWlucHV0IhsKC0Rpc3BsYXlLZXlzEgwKBGtleXMYASADKAkiGQoXU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiaAoZU2VuZERpc3BsYXlQb2ludGVyUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEjcKBmV2ZW50cxgCIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5UG9pbnRlckV2ZW50IjwKE0Rpc3BsYXlQb2ludGVyRXZlbnQSCQoBeBgBIAEoBRIJCgF5GAIgASgFEg8KB2J1dHRvbnMYAyABKA0iHAoaU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiPgoaU2V0RGlzcGxheUNsaXBib2FyZFJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIMCgR0ZXh0GAIgASgJIh0KG1NldERpc3BsYXlDbGlwYm9hcmRSZXNwb25zZSIyChxUYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkieQodVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2USCwoDcG5nGAEgASgMEg0KBXdpZHRoGAIgASgFEg4KBmhlaWdodBgDIAEoBRIsCgh0YWtlbl9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqZAoLRGlzcGxheU1vZGUSHAoYRElTUExBWV9NT0RFX1VOU1BFQ0lGSUVEEAASGgoWRElTUExBWV9NT0RFX1ZJRVdfT05MWRABEhsKF0RJU1BMQVlfTU9ERV9XSVRIX0lOUFVUEAIqpQEKE0Rpc3BsYXlTZXNzaW9uU3RhdGUSJQohRElTUExBWV9TRVNTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodRElTUExBWV9TRVNTSU9OX1NUQVRFX1dBSVRJTkcQARIiCh5ESVNQTEFZX1NFU1NJT05fU1RBVEVfQVRUQUNIRUQQAhIgChxESVNQTEFZX1NFU1NJT05fU1RBVEVfQ0xPU0VEEAMqZgoNRGlzcGxheU9wZW5lchIeChpESVNQTEFZX09QRU5FUl9VTlNQRUNJRklFRBAAEhkKFURJU1BMQVlfT1BFTkVSX1BFUlNPThABEhoKFkRJU1BMQVlfT1BFTkVSX1BST0dSQU0QAjK3CwoORGlzcGxheVNlcnZpY2USyAEKEk9wZW5EaXNwbGF5U2Vzc2lvbhItLnRvc2hpLndvcmtzcGFjZS52MS5PcGVuRGlzcGxheVNlc3Npb25SZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLk9wZW5EaXNwbGF5U2Vzc2lvblJlc3BvbnNlIlPC8xgOZGlzcGxheXMud3JpdGXS8xg9ChZkaXNwbGF5LnNlc3Npb25fb3BlbmVkEiNkaXNwbGF5X3Nlc3Npb246cmVzcG9uc2Uuc2Vzc2lvbi5pZBKDAQoRR2V0RGlzcGxheVNlc3Npb24SLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldERpc3BsYXlTZXNzaW9uUmVzcG9uc2UiEcLzGA1kaXNwbGF5cy5yZWFkEokBChNMaXN0RGlzcGxheVNlc3Npb25zEi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3REaXNwbGF5U2Vzc2lvbnNSZXNwb25zZSIRwvMYDWRpc3BsYXlzLnJlYWQSwgEKE0Nsb3NlRGlzcGxheVNlc3Npb24SLi50b3NoaS53b3Jrc3BhY2UudjEuQ2xvc2VEaXNwbGF5U2Vzc2lvblJlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuQ2xvc2VEaXNwbGF5U2Vzc2lvblJlc3BvbnNlIkrC8xgOZGlzcGxheXMud3JpdGXS8xg0ChZkaXNwbGF5LnNlc3Npb25fY2xvc2VkEhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBKxAQoPU2VuZERpc3BsYXlLZXlzEioudG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5S2V5c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiRcLzGA5kaXNwbGF5cy53cml0ZdLzGC8KEWRpc3BsYXkua2V5c19zZW50EhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBK9AQoSU2VuZERpc3BsYXlQb2ludGVyEi0udG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5UG9pbnRlclJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiSMLzGA5kaXNwbGF5cy53cml0ZdLzGDIKFGRpc3BsYXkucG9pbnRlcl9zZW50EhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBLBAQoTU2V0RGlzcGxheUNsaXBib2FyZBIuLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVzcG9uc2UiScLzGA5kaXNwbGF5cy53cml0ZdLzGDMKFWRpc3BsYXkuY2xpcGJvYXJkX3NldBIaZGlzcGxheV9zZXNzaW9uOnNlc3Npb25faWQSygEKFVRha2VEaXNwbGF5U2NyZWVuc2hvdBIwLnRvc2hpLndvcmtzcGFjZS52MS5UYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlRha2VEaXNwbGF5U2NyZWVuc2hvdFJlc3BvbnNlIkzC8xgOZGlzcGxheXMud3JpdGXS8xg2ChhkaXNwbGF5LnNjcmVlbnNob3RfdGFrZW4SGmRpc3BsYXlfc2Vzc2lvbjpzZXNzaW9uX2lkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvZGlzcGxheS5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIpgFCg5EaXNwbGF5U2Vzc2lvbhIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLQoEbW9kZRgDIAEoDjIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5TW9kZRIWCg5hbGxvd190YWtlb3ZlchgEIAEoCBItCgppZGxlX2Nsb3NlGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjYKBXN0YXRlGAYgASgOMicudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uU3RhdGUSNAoJb3BlbmVkX2J5GAcgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlPcGVuZXISLQoJb3BlbmVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglhdHRhY2hfYnkYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2F0dGFjaGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCgljbG9zZWRfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGNsb3NlX3JlYXNvbhgMIAEoCRIRCglvcGVuZXJfaWQYDSABKAkSDgoGb3JpZ2luGA4gASgJEhcKD2F0dGFjaF90b2tlbl9pZBgPIAEoCRIQCghncmFudF9pZBgQIAEoCRJCCg9yZWNvcmRpbmdfc3RhdGUYESABKA4yKS50b3NoaS53b3Jrc3BhY2UudjEuRGlzcGxheVJlY29yZGluZ1N0YXRlEiAKGHJlY29yZGluZ19zdG9wcGVkX3JlYXNvbhgSIAEoCSLoAQoZT3BlbkRpc3BsYXlTZXNzaW9uUmVxdWVzdBIQCgZqb2JfaWQYASABKAlIABIVCgt3b3JrbG9hZF9pZBgCIAEoCUgAEi0KBG1vZGUYAyABKA4yHy50b3NoaS53b3Jrc3BhY2UudjEuRGlzcGxheU1vZGUSLQoKaWRsZV9jbG9zZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5hbGxvd190YWtlb3ZlchgFIAEoCBITCgtyZXF1ZXN0X2tleRgGIAEoCRINCgVncmFudBgHIAEoCUIICgZ0YXJnZXQifwoaT3BlbkRpc3BsYXlTZXNzaW9uUmVzcG9uc2USMwoHc2Vzc2lvbhgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5U2Vzc2lvbhILCgN1cmwYAiABKAkSDQoFdG9rZW4YAyABKAkSEAoIcmVwbGF5ZWQYBCABKAgiPQoYR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkSDQoFZ3JhbnQYAiABKAkiUAoZR2V0RGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uInUKGkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglvcGVuX29ubHkYAiABKAgSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSDQoFZ3JhbnQYBSABKAkibAobTGlzdERpc3BsYXlTZXNzaW9uc1Jlc3BvbnNlEjQKCHNlc3Npb25zGAEgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI/ChpDbG9zZURpc3BsYXlTZXNzaW9uUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEg0KBWdyYW50GAIgASgJIlIKG0Nsb3NlRGlzcGxheVNlc3Npb25SZXNwb25zZRIzCgdzZXNzaW9uGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkRpc3BsYXlTZXNzaW9uInYKFlNlbmREaXNwbGF5S2V5c1JlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIOCgR0ZXh0GAIgASgJSAASLwoEa2V5cxgDIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5S2V5c0gAQgcKBWlucHV0IhsKC0Rpc3BsYXlLZXlzEgwKBGtleXMYASADKAkiGQoXU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiaAoZU2VuZERpc3BsYXlQb2ludGVyUmVxdWVzdBISCgpzZXNzaW9uX2lkGAEgASgJEjcKBmV2ZW50cxgCIAMoCzInLnRvc2hpLndvcmtzcGFjZS52MS5EaXNwbGF5UG9pbnRlckV2ZW50IjwKE0Rpc3BsYXlQb2ludGVyRXZlbnQSCQoBeBgBIAEoBRIJCgF5GAIgASgFEg8KB2J1dHRvbnMYAyABKA0iHAoaU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiPgoaU2V0RGlzcGxheUNsaXBib2FyZFJlcXVlc3QSEgoKc2Vzc2lvbl9pZBgBIAEoCRIMCgR0ZXh0GAIgASgJIh0KG1NldERpc3BsYXlDbGlwYm9hcmRSZXNwb25zZSIyChxUYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0EhIKCnNlc3Npb25faWQYASABKAkieQodVGFrZURpc3BsYXlTY3JlZW5zaG90UmVzcG9uc2USCwoDcG5nGAEgASgMEg0KBXdpZHRoGAIgASgFEg4KBmhlaWdodBgDIAEoBRIsCgh0YWtlbl9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqZAoLRGlzcGxheU1vZGUSHAoYRElTUExBWV9NT0RFX1VOU1BFQ0lGSUVEEAASGgoWRElTUExBWV9NT0RFX1ZJRVdfT05MWRABEhsKF0RJU1BMQVlfTU9ERV9XSVRIX0lOUFVUEAIqpQEKE0Rpc3BsYXlTZXNzaW9uU3RhdGUSJQohRElTUExBWV9TRVNTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodRElTUExBWV9TRVNTSU9OX1NUQVRFX1dBSVRJTkcQARIiCh5ESVNQTEFZX1NFU1NJT05fU1RBVEVfQVRUQUNIRUQQAhIgChxESVNQTEFZX1NFU1NJT05fU1RBVEVfQ0xPU0VEEAMq2AEKFURpc3BsYXlSZWNvcmRpbmdTdGF0ZRInCiNESVNQTEFZX1JFQ09SRElOR19TVEFURV9VTlNQRUNJRklFRBAAEh8KG0RJU1BMQVlfUkVDT1JESU5HX1NUQVRFX09GRhABEikKJURJU1BMQVlfUkVDT1JESU5HX1NUQVRFX1FVT1RBX1JFQUNIRUQQAhIjCh9ESVNQTEFZX1JFQ09SRElOR19TVEFURV9QUklWQVRFEAMSJQohRElTUExBWV9SRUNPUkRJTkdfU1RBVEVfUkVDT1JESU5HEAQqZgoNRGlzcGxheU9wZW5lchIeChpESVNQTEFZX09QRU5FUl9VTlNQRUNJRklFRBAAEhkKFURJU1BMQVlfT1BFTkVSX1BFUlNPThABEhoKFkRJU1BMQVlfT1BFTkVSX1BST0dSQU0QAjK3CwoORGlzcGxheVNlcnZpY2USyAEKEk9wZW5EaXNwbGF5U2Vzc2lvbhItLnRvc2hpLndvcmtzcGFjZS52MS5PcGVuRGlzcGxheVNlc3Npb25SZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLk9wZW5EaXNwbGF5U2Vzc2lvblJlc3BvbnNlIlPC8xgOZGlzcGxheXMud3JpdGXS8xg9ChZkaXNwbGF5LnNlc3Npb25fb3BlbmVkEiNkaXNwbGF5X3Nlc3Npb246cmVzcG9uc2Uuc2Vzc2lvbi5pZBKDAQoRR2V0RGlzcGxheVNlc3Npb24SLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0RGlzcGxheVNlc3Npb25SZXF1ZXN0Gi0udG9zaGkud29ya3NwYWNlLnYxLkdldERpc3BsYXlTZXNzaW9uUmVzcG9uc2UiEcLzGA1kaXNwbGF5cy5yZWFkEokBChNMaXN0RGlzcGxheVNlc3Npb25zEi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3REaXNwbGF5U2Vzc2lvbnNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3REaXNwbGF5U2Vzc2lvbnNSZXNwb25zZSIRwvMYDWRpc3BsYXlzLnJlYWQSwgEKE0Nsb3NlRGlzcGxheVNlc3Npb24SLi50b3NoaS53b3Jrc3BhY2UudjEuQ2xvc2VEaXNwbGF5U2Vzc2lvblJlcXVlc3QaLy50b3NoaS53b3Jrc3BhY2UudjEuQ2xvc2VEaXNwbGF5U2Vzc2lvblJlc3BvbnNlIkrC8xgOZGlzcGxheXMud3JpdGXS8xg0ChZkaXNwbGF5LnNlc3Npb25fY2xvc2VkEhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBKxAQoPU2VuZERpc3BsYXlLZXlzEioudG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5S2V5c1JlcXVlc3QaKy50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlLZXlzUmVzcG9uc2UiRcLzGA5kaXNwbGF5cy53cml0ZdLzGC8KEWRpc3BsYXkua2V5c19zZW50EhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBK9AQoSU2VuZERpc3BsYXlQb2ludGVyEi0udG9zaGkud29ya3NwYWNlLnYxLlNlbmREaXNwbGF5UG9pbnRlclJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuU2VuZERpc3BsYXlQb2ludGVyUmVzcG9uc2UiSMLzGA5kaXNwbGF5cy53cml0ZdLzGDIKFGRpc3BsYXkucG9pbnRlcl9zZW50EhpkaXNwbGF5X3Nlc3Npb246c2Vzc2lvbl9pZBLBAQoTU2V0RGlzcGxheUNsaXBib2FyZBIuLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5TZXREaXNwbGF5Q2xpcGJvYXJkUmVzcG9uc2UiScLzGA5kaXNwbGF5cy53cml0ZdLzGDMKFWRpc3BsYXkuY2xpcGJvYXJkX3NldBIaZGlzcGxheV9zZXNzaW9uOnNlc3Npb25faWQSygEKFVRha2VEaXNwbGF5U2NyZWVuc2hvdBIwLnRvc2hpLndvcmtzcGFjZS52MS5UYWtlRGlzcGxheVNjcmVlbnNob3RSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlRha2VEaXNwbGF5U2NyZWVuc2hvdFJlc3BvbnNlIkzC8xgOZGlzcGxheXMud3JpdGXS8xg2ChhkaXNwbGF5LnNjcmVlbnNob3RfdGFrZW4SGmRpc3BsYXlfc2Vzc2lvbjpzZXNzaW9uX2lkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.DisplaySession
@@ -41,7 +41,9 @@ export type DisplaySession = Message<"toshi.workspace.v1.DisplaySession"> & {
 
   /**
    * For an agent's run: whether a person may take the input from the
-   * agent. Recorded; takeover itself is not served yet.
+   * agent. A person's DISPLAY_MODE_WITH_INPUT open on the job closes this
+   * session with close_reason taken_over when it is a program's session
+   * with input that allows it, and is refused when it does not.
    *
    * @generated from field: bool allow_takeover = 4;
    */
@@ -95,16 +97,18 @@ export type DisplaySession = Message<"toshi.workspace.v1.DisplaySession"> & {
    * Why it closed: closed, idle, expired, suspended, ended (its job
    * stopped running where the session was opened), protocol_error (the
    * viewer sent what the relay does not accept), unavailable (the job's
-   * host did not open the screen) or shutdown (the control plane
-   * stopped). Empty while it is open.
+   * host did not open the screen), shutdown (the control plane stopped),
+   * grant_revoked (it was opened through a grant that ended) or
+   * taken_over (a person's session with input took its input). Empty while
+   * it is open.
    *
    * @generated from field: string close_reason = 12;
    */
   closeReason: string;
 
   /**
-   * Who opened it, as the audit log names the caller: the GitHub login of
-   * the signed-in person for DISPLAY_OPENER_PERSON, the API token's id for
+   * Who opened it, as the audit log names the caller: the user ID of the
+   * signed-in person for DISPLAY_OPENER_PERSON, the API token's id for
    * DISPLAY_OPENER_PROGRAM.
    *
    * @generated from field: string opener_id = 13;
@@ -126,6 +130,31 @@ export type DisplaySession = Message<"toshi.workspace.v1.DisplaySession"> & {
    * @generated from field: string attach_token_id = 15;
    */
   attachTokenId: string;
+
+  /**
+   * The grant through which another workspace opened the session, or
+   * empty for one the job's own workspace opened.
+   *
+   * @generated from field: string grant_id = 16;
+   */
+  grantId: string;
+
+  /**
+   * Whether the screen is being recorded now, for the session's viewer to
+   * show beside it.
+   *
+   * @generated from field: toshi.workspace.v1.DisplayRecordingState recording_state = 17;
+   */
+  recordingState: DisplayRecordingState;
+
+  /**
+   * While recording_state is DISPLAY_RECORDING_STATE_QUOTA_REACHED, the
+   * cap that holds the recording back, as the sandbox's
+   * recording_stopped_reason says it; empty in every other state.
+   *
+   * @generated from field: string recording_stopped_reason = 18;
+   */
+  recordingStoppedReason: string;
 };
 
 /**
@@ -154,7 +183,9 @@ export type DisplaySessionJson = {
 
   /**
    * For an agent's run: whether a person may take the input from the
-   * agent. Recorded; takeover itself is not served yet.
+   * agent. A person's DISPLAY_MODE_WITH_INPUT open on the job closes this
+   * session with close_reason taken_over when it is a program's session
+   * with input that allows it, and is refused when it does not.
    *
    * @generated from field: bool allow_takeover = 4;
    */
@@ -208,16 +239,18 @@ export type DisplaySessionJson = {
    * Why it closed: closed, idle, expired, suspended, ended (its job
    * stopped running where the session was opened), protocol_error (the
    * viewer sent what the relay does not accept), unavailable (the job's
-   * host did not open the screen) or shutdown (the control plane
-   * stopped). Empty while it is open.
+   * host did not open the screen), shutdown (the control plane stopped),
+   * grant_revoked (it was opened through a grant that ended) or
+   * taken_over (a person's session with input took its input). Empty while
+   * it is open.
    *
    * @generated from field: string close_reason = 12;
    */
   closeReason?: string;
 
   /**
-   * Who opened it, as the audit log names the caller: the GitHub login of
-   * the signed-in person for DISPLAY_OPENER_PERSON, the API token's id for
+   * Who opened it, as the audit log names the caller: the user ID of the
+   * signed-in person for DISPLAY_OPENER_PERSON, the API token's id for
    * DISPLAY_OPENER_PROGRAM.
    *
    * @generated from field: string opener_id = 13;
@@ -239,6 +272,31 @@ export type DisplaySessionJson = {
    * @generated from field: string attach_token_id = 15;
    */
   attachTokenId?: string;
+
+  /**
+   * The grant through which another workspace opened the session, or
+   * empty for one the job's own workspace opened.
+   *
+   * @generated from field: string grant_id = 16;
+   */
+  grantId?: string;
+
+  /**
+   * Whether the screen is being recorded now, for the session's viewer to
+   * show beside it.
+   *
+   * @generated from field: toshi.workspace.v1.DisplayRecordingState recording_state = 17;
+   */
+  recordingState?: DisplayRecordingStateJson;
+
+  /**
+   * While recording_state is DISPLAY_RECORDING_STATE_QUOTA_REACHED, the
+   * cap that holds the recording back, as the sandbox's
+   * recording_stopped_reason says it; empty in every other state.
+   *
+   * @generated from field: string recording_stopped_reason = 18;
+   */
+  recordingStoppedReason?: string;
 };
 
 /**
@@ -278,7 +336,8 @@ export type OpenDisplaySessionRequest = Message<"toshi.workspace.v1.OpenDisplayS
   mode: DisplayMode;
 
   /**
-   * The idle close, at most the plan's; unset is the plan's.
+   * The idle close, at least 1 second and at most the plan's; unset is the
+   * plan's.
    *
    * @generated from field: google.protobuf.Duration idle_close = 4;
    */
@@ -293,6 +352,14 @@ export type OpenDisplaySessionRequest = Message<"toshi.workspace.v1.OpenDisplayS
    * @generated from field: string request_key = 6;
    */
   requestKey: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 7;
+   */
+  grant: string;
 };
 
 /**
@@ -315,7 +382,8 @@ export type OpenDisplaySessionRequestJson = {
   mode?: DisplayModeJson;
 
   /**
-   * The idle close, at most the plan's; unset is the plan's.
+   * The idle close, at least 1 second and at most the plan's; unset is the
+   * plan's.
    *
    * @generated from field: google.protobuf.Duration idle_close = 4;
    */
@@ -330,6 +398,14 @@ export type OpenDisplaySessionRequestJson = {
    * @generated from field: string request_key = 6;
    */
   requestKey?: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 7;
+   */
+  grant?: string;
 };
 
 /**
@@ -426,6 +502,14 @@ export type GetDisplaySessionRequest = Message<"toshi.workspace.v1.GetDisplaySes
    * @generated from field: string session_id = 1;
    */
   sessionId: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 2;
+   */
+  grant: string;
 };
 
 /**
@@ -436,6 +520,14 @@ export type GetDisplaySessionRequestJson = {
    * @generated from field: string session_id = 1;
    */
   sessionId?: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 2;
+   */
+  grant?: string;
 };
 
 /**
@@ -503,6 +595,14 @@ export type ListDisplaySessionsRequest = Message<"toshi.workspace.v1.ListDisplay
    * @generated from field: string page_token = 4;
    */
   pageToken: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant: string;
 };
 
 /**
@@ -536,6 +636,14 @@ export type ListDisplaySessionsRequestJson = {
    * @generated from field: string page_token = 4;
    */
   pageToken?: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant?: string;
 };
 
 /**
@@ -594,6 +702,14 @@ export type CloseDisplaySessionRequest = Message<"toshi.workspace.v1.CloseDispla
    * @generated from field: string session_id = 1;
    */
   sessionId: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 2;
+   */
+  grant: string;
 };
 
 /**
@@ -604,6 +720,14 @@ export type CloseDisplaySessionRequestJson = {
    * @generated from field: string session_id = 1;
    */
   sessionId?: string;
+
+  /**
+   * A grant the caller's workspace received: the call then reaches the
+   * sessions opened through that grant (docs/grants.md).
+   *
+   * @generated from field: string grant = 2;
+   */
+  grant?: string;
 };
 
 /**
@@ -1135,6 +1259,72 @@ export const DisplaySessionStateSchema: GenEnum<DisplaySessionState, DisplaySess
   enumDesc(file_toshi_workspace_v1_display, 1);
 
 /**
+ * DisplayRecordingState says whether the screen a session views is being
+ * recorded now. It describes the job or sandbox, not the viewer: every
+ * session of the same screen has the same state. The first that holds is
+ * the state, in this order.
+ *
+ * @generated from enum toshi.workspace.v1.DisplayRecordingState
+ */
+export enum DisplayRecordingState {
+  /**
+   * Never sent.
+   *
+   * @generated from enum value: DISPLAY_RECORDING_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Nothing is recorded: the recording policy is off, the workspace
+   * switched recording off, or the host boots no desktop for it.
+   *
+   * @generated from enum value: DISPLAY_RECORDING_STATE_OFF = 1;
+   */
+  OFF = 1,
+
+  /**
+   * A recording cap holds the recording back; recording_stopped_reason
+   * says which.
+   *
+   * @generated from enum value: DISPLAY_RECORDING_STATE_QUOTA_REACHED = 2;
+   */
+  QUOTA_REACHED = 2,
+
+  /**
+   * A person controls the screen and is not recorded: the workspace
+   * keeps no screenshots of a person's control, the person paused it, or
+   * the pause reached its limit and the control has not ended yet.
+   *
+   * @generated from enum value: DISPLAY_RECORDING_STATE_PRIVATE = 3;
+   */
+  PRIVATE = 3,
+
+  /**
+   * Any other time: a strip is capturing, or the next one is still to
+   * start.
+   *
+   * @generated from enum value: DISPLAY_RECORDING_STATE_RECORDING = 4;
+   */
+  RECORDING = 4,
+}
+
+/**
+ * DisplayRecordingState says whether the screen a session views is being
+ * recorded now. It describes the job or sandbox, not the viewer: every
+ * session of the same screen has the same state. The first that holds is
+ * the state, in this order.
+ *
+ * @generated from enum toshi.workspace.v1.DisplayRecordingState
+ */
+export type DisplayRecordingStateJson = "DISPLAY_RECORDING_STATE_UNSPECIFIED" | "DISPLAY_RECORDING_STATE_OFF" | "DISPLAY_RECORDING_STATE_QUOTA_REACHED" | "DISPLAY_RECORDING_STATE_PRIVATE" | "DISPLAY_RECORDING_STATE_RECORDING";
+
+/**
+ * Describes the enum toshi.workspace.v1.DisplayRecordingState.
+ */
+export const DisplayRecordingStateSchema: GenEnum<DisplayRecordingState, DisplayRecordingStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_display, 2);
+
+/**
  * DisplayOpener is how a session was opened.
  *
  * @generated from enum toshi.workspace.v1.DisplayOpener
@@ -1171,7 +1361,7 @@ export type DisplayOpenerJson = "DISPLAY_OPENER_UNSPECIFIED" | "DISPLAY_OPENER_P
  * Describes the enum toshi.workspace.v1.DisplayOpener.
  */
 export const DisplayOpenerSchema: GenEnum<DisplayOpener, DisplayOpenerJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_display, 2);
+  enumDesc(file_toshi_workspace_v1_display, 3);
 
 /**
  * DisplayService opens display sessions: one viewer's live view of the
@@ -1199,9 +1389,16 @@ export const DisplayService: GenService<{
    * viewers, or a second session with input on a job, fails with
    * FAILED_PRECONDITION. A session with input on a Windows VM whose host's
    * pool does not set display_input fails with FAILED_PRECONDITION and the
-   * reason DISPLAY_INPUT_NOT_ENABLED. A job on Windows that Toshi licenses
-   * (a cloud pool, or a pool with licence = "toshi") opens no session of
-   * either mode: FAILED_PRECONDITION with the reason TOSHI_LICENSED_WINDOWS.
+   * reason DISPLAY_INPUT_NOT_ENABLED. A job on a cloud pool's Windows opens
+   * no session of either mode: FAILED_PRECONDITION with the reason
+   * TOSHI_LICENSED_WINDOWS. On a host whose pool has licence = "toshi" only
+   * a person who holds a live desktop seat in the workspace opens one (a
+   * sign-in, or that person's own access token); anyone else fails with
+   * FAILED_PRECONDITION and the reason DESKTOP_SEAT_PERSON_REQUIRED for a
+   * caller that is not a person (a workspace token, a product token, a
+   * workload) or DESKTOP_SEAT_REQUIRED for a person without a seat. An
+   * input or screenshot call there by anyone but the session's opener is
+   * checked the same way.
    * A session ends when it is closed, when no bytes
    * of the screen's protocol go either way for its idle close, when its
    * token expires before it attaches, when its job stops running on the

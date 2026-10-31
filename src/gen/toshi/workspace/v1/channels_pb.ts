@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/channels.proto.
  */
 export const file_toshi_workspace_v1_channels: GenFile = /*@__PURE__*/
-  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvY2hhbm5lbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKgBQoHQ2hhbm5lbBIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIvCgVzaGFwZRgEIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsU2hhcGUSDAoEcG9ydBgFIAEoBRIPCgdjb21tYW5kGAYgAygJEi8KBXN0YXRlGAcgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxTdGF0ZRISCgpjcmVhdGVkX2J5GAggASgJEi4KCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgplbmRfcmVhc29uGAsgASgJEhYKCWV4aXRfY29kZRgMIAEoBUgAiAEBEg0KBW93bmVyGA0gASgJEhQKDG91dHB1dF9zdGFydBgOIAEoAxITCgtvdXRwdXRfbmV4dBgPIAEoAxIUCgxpbnB1dF9jbG9zZWQYECABKAgSFwoPcmVxdWVzdHNfb2xkZXN0GBEgASgDEhcKD3JlcXVlc3RzX25ld2VzdBgSIAEoAxIxCgZwb2xpY3kYEyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeRIyCgdjbGllbnRzGBQgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxDbGllbnQSDwoHc2VydmljZRgVIAEoCRIMCgRwYXRoGBYgASgJEjYKBmV2ZW50cxgXIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsRXZlbnRDb3VudHNCDAoKX2V4aXRfY29kZSK4AQoSQ2hhbm5lbEV2ZW50Q291bnRzEg8KB3BlbmRpbmcYASABKAMSEQoJaW5fZmxpZ2h0GAIgASgDEhEKCWRlbGl2ZXJlZBgDIAEoAxIOCgZmYWlsZWQYBCABKAMSDwoHZXhwaXJlZBgFIAEoAxI0ChBsYXN0X2RlbGl2ZXJ5X2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxsYXN0X2ZhaWx1cmUYByABKAkiMAoUQ2hhbm5lbE1lc3NhZ2VTb3VyY2USDAoEa2luZBgBIAEoCRIKCgJpZBgCIAEoCSKfAwoOQ2hhbm5lbE1lc3NhZ2USCgoCaWQYASABKAkSCwoDc2VxGAIgASgDEgwKBG5hbWUYAyABKAkSKAoEdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOAoGc291cmNlGAUgASgLMigudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNZXNzYWdlU291cmNlEgwKBGRhdGEYBiABKAwSNgoFc3RhdGUYByABKA4yJy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2VTdGF0ZRIQCghhdHRlbXB0cxgIIAEoBRIzCg9uZXh0X2F0dGVtcHRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCmxhc3RfZXJyb3IYCiABKAkSMAoMZGVsaXZlcmVkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtyZXBsYXllZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiwwIKDUNoYW5uZWxDbGllbnQSCgoCaWQYASABKAkSMwoEbW9kZRgCIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQXR0YWNoTW9kZRITCgthdHRhY2hlZF9ieRgDIAEoCRIOCgZkZXZpY2UYBCABKAkSEgoKY3JlZGVudGlhbBgFIAEoCRIyCg5hdHRhY2hlZF9zaW5jZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHc2Vlbl9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLZGV0YWNoZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDG91dHB1dF9hY2tlZBgJIAEoAxIQCghhdHRhY2hlZBgKIAEoCCLvAQoNQ2hhbm5lbFBvbGljeRIPCgd2ZXJzaW9uGAEgASgDEg4KBmF0dGFjaBgCIAEoCRIYCgttYXhfY2xpZW50cxgDIAEoBUgAiAEBEg0KBWlucHV0GAQgASgJEgwKBGtlZXAYBSABKAkSNgoHbW9kdWxlcxgGIAEoCzIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTW9kdWxlTGlzdBIUCgxhY2tfZGVhZGxpbmUYByABKAkSGAoLY29uY3VycmVuY3kYCCABKAVIAYgBAUIOCgxfbWF4X2NsaWVudHNCDgoMX2NvbmN1cnJlbmN5IkcKEUNoYW5uZWxNb2R1bGVMaXN0EjIKB21vZHVsZXMYASADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1vZHVsZSKYAgoNQ2hhbm5lbE1vZHVsZRIMCgRraW5kGAEgASgJEi8KBW1hdGNoGAIgASgLMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNYXRjaBIOCgZyYW5nZXMYAyADKAkSDQoFbGV2ZWwYBCABKAkSEAoIYm9keV9jYXAYBSABKAMSDgoGc3RhdHVzGAYgASgFEg4KBnRhcmdldBgHIAEoCRIMCgRwYXRoGAggASgJEgwKBGhvc3QYCSABKAkSCwoDa2V5GAogASgJEg0KBWNvdW50GAsgASgFEg4KBndpbmRvdxgMIAEoCRIMCgRodG1sGA0gASgJEhEKCWNhX2J1bmRsZRgOIAEoCRIOCgZncmFudHMYDyABKAgirQEKDENoYW5uZWxNYXRjaBINCgVob3N0cxgBIAMoCRINCgVwYXRocxgCIAMoCRIPCgdtZXRob2RzGAMgAygJEj4KB2hlYWRlcnMYBCADKAsyLS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1hdGNoLkhlYWRlcnNFbnRyeRouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLwBAoOQ2hhbm5lbFJlcXVlc3QSCwoDc2VxGAEgASgDEi4KCmFycml2ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBGhvc3QYAyABKAkSDgoGbWV0aG9kGAQgASgJEgwKBHBhdGgYBSABKAkSDgoGc3RhdHVzGAYgASgFEhUKDXJlcXVlc3RfYnl0ZXMYByABKAMSFgoOcmVzcG9uc2VfYnl0ZXMYCCABKAMSKwoIZHVyYXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SOAoGY2FsbGVyGAogASgLMigudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxSZXF1ZXN0Q2FsbGVyEg8KB2FkZHJlc3MYCyABKAkSEgoKcmVmdXNlZF9ieRgMIAEoCRIRCgl3ZWJzb2NrZXQYDSABKAgSDQoFbGV2ZWwYDiABKAkSDQoFcXVlcnkYDyABKAkSEQoJcXVlcnlfY3V0GBAgASgIEjoKD3JlcXVlc3RfaGVhZGVycxgRIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsSGVhZGVyEjsKEHJlc3BvbnNlX2hlYWRlcnMYEiADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEhlYWRlchI1CgxyZXF1ZXN0X2JvZHkYEyABKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbEJvZHkSNgoNcmVzcG9uc2VfYm9keRgUIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQm9keSJIChRDaGFubmVsUmVxdWVzdENhbGxlchIMCgR1c2VyGAEgASgJEg4KBmRldmljZRgCIAEoCRISCgpzaGFyZV9saW5rGAMgASgJIj0KDUNoYW5uZWxIZWFkZXISDAoEbmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCRIPCgdyZW1vdmVkGAMgASgIIj4KC0NoYW5uZWxCb2R5EhQKDGNvbnRlbnRfdHlwZRgBIAEoCRIMCgRkYXRhGAIgASgMEgsKA2N1dBgDIAEoCCJ1CgdGb3J3YXJkEg4KBnRhcmdldBgBIAEoCRIKCgJieRgCIAEoCRIOCgZkZXZpY2UYAyABKAkSDwoHY2hhbm5lbBgEIAEoCRItCglvcGVuZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIrEBCgRMaW5rEhEKCWNvbm5lY3RlZBgBIAEoCBIpCgVzaW5jZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIY29ubmVjdHMYAyABKAUSDwoHc3RyZWFtcxgEIAEoBRISCgpsYXN0X2Vycm9yGAUgASgJEg8KB3JlcGxpY2EYBiABKAkSEAoIZm9yd2FyZHMYByABKAUSEQoJam9iX3N0YXRlGAggASgJIoYBChRDcmVhdGVDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIMCgRwb3J0GAMgASgFEg8KB2NvbW1hbmQYBCADKAkSMQoGcG9saWN5GAUgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kiRQoVQ3JlYXRlQ2hhbm5lbFJlc3BvbnNlEiwKB2NoYW5uZWwYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbCJdChNMaXN0Q2hhbm5lbHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIPCgdzZXJ2aWNlGAQgASgJIl4KFExpc3RDaGFubmVsc1Jlc3BvbnNlEi0KCGNoYW5uZWxzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkIKEUdldENoYW5uZWxSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEg8KB3NlcnZpY2UYAyABKAkiQgoSR2V0Q2hhbm5lbFJlc3BvbnNlEiwKB2NoYW5uZWwYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbCJIChdHZXRDaGFubmVsUG9saWN5UmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdzZXJ2aWNlGAMgASgJIk0KGEdldENoYW5uZWxQb2xpY3lSZXNwb25zZRIxCgZwb2xpY3kYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSJqChdTZXRDaGFubmVsUG9saWN5UmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIxCgZwb2xpY3kYAyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSJNChhTZXRDaGFubmVsUG9saWN5UmVzcG9uc2USMQoGcG9saWN5GAEgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kijQIKGkxpc3RDaGFubmVsUmVxdWVzdHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJEhEKCWFmdGVyX3NlcRgFIAEoAxIpCgVzaW5jZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoFdW50aWwYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnN0YXR1cxgIIAEoCRIMCgRob3N0GAkgASgJEg4KBm1ldGhvZBgKIAEoCRITCgtwYXRoX3ByZWZpeBgLIAEoCSKUAQobTGlzdENoYW5uZWxSZXF1ZXN0c1Jlc3BvbnNlEjQKCHJlcXVlc3RzGAEgAygLMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxSZXF1ZXN0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgpvbGRlc3Rfc2VxGAMgASgDEhIKCm5ld2VzdF9zZXEYBCABKAMiRQoYR2V0Q2hhbm5lbFJlcXVlc3RSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgsKA3NlcRgDIAEoAyJQChlHZXRDaGFubmVsUmVxdWVzdFJlc3BvbnNlEjMKB3JlcXVlc3QYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFJlcXVlc3Qi7gEKF0V4cG9ydENoYW5uZWxMb2dSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEisKA2xvZxgDIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTG9nEhEKBGZyb20YBCABKANIAIgBARIPCgJ0bxgFIAEoA0gBiAEBEikKBXNpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIpCgV1bnRpbBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBwoFX2Zyb21CBQoDX3RvIm0KGEV4cG9ydENoYW5uZWxMb2dSZXNwb25zZRIMCgRkYXRhGAEgASgMEhEKCWZpbGVfbmFtZRgCIAEoCRIUCgxjb250ZW50X3R5cGUYAyABKAkSDAoEZnJvbRgEIAEoAxIMCgRuZXh0GAUgASgDIoUBCiBDcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZkZXZpY2UYAyABKAkSMwoEbW9kZRgEIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQXR0YWNoTW9kZSLDAQohQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlblJlc3BvbnNlEgoKAmlkGAEgASgJEg0KBXRva2VuGAIgASgJEgsKA3VybBgDIAEoCRIuCgpleHBpcmVzX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCgl0cmFuc3BvcnQYBSABKAkSMwoEbW9kZRgGIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQXR0YWNoTW9kZSJMCiBSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIKCgJpZBgDIAEoCSIjCiFSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVzcG9uc2UiNAoURGVsZXRlQ2hhbm5lbFJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkiFwoVRGVsZXRlQ2hhbm5lbFJlc3BvbnNlIkwKE0xpc3RGb3J3YXJkc1JlcXVlc3QSDgoGam9iX2lkGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIl4KFExpc3RGb3J3YXJkc1Jlc3BvbnNlEi0KCGZvcndhcmRzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkZvcndhcmQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiAKDkdldExpbmtSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCSI5Cg9HZXRMaW5rUmVzcG9uc2USJgoEbGluaxgBIAEoCzIYLnRvc2hpLndvcmtzcGFjZS52MS5MaW5rIm4KGVNlbmRDaGFubmVsTWVzc2FnZVJlcXVlc3QSDwoHc2VydmljZRgBIAEoCRIPCgdjaGFubmVsGAIgASgJEgwKBG5hbWUYAyABKAkSDAoEZGF0YRgEIAEoDBITCgtyZXF1ZXN0X2tleRgFIAEoCSJDChpTZW5kQ2hhbm5lbE1lc3NhZ2VSZXNwb25zZRISCgptZXNzYWdlX2lkGAEgASgJEhEKCWR1cGxpY2F0ZRgCIAEoCCKHAQoaVGFpbENoYW5uZWxNZXNzYWdlc1JlcXVlc3QSDwoHc2VydmljZRgBIAEoCRIPCgdjaGFubmVsGAIgASgJEjcKBnN0YXRlcxgDIAMoDjInLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTWVzc2FnZVN0YXRlEg4KBmN1cnNvchgEIAEoCSJnChtUYWlsQ2hhbm5lbE1lc3NhZ2VzUmVzcG9uc2USMwoHbWVzc2FnZRgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTWVzc2FnZRITCgtuZXh0X2N1cnNvchgCIAEoCSJTChtSZXBsYXlDaGFubmVsTWVzc2FnZVJlcXVlc3QSDwoHc2VydmljZRgBIAEoCRIPCgdjaGFubmVsGAIgASgJEhIKCm1lc3NhZ2VfaWQYAyABKAkiUwocUmVwbGF5Q2hhbm5lbE1lc3NhZ2VSZXNwb25zZRIzCgdtZXNzYWdlGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNZXNzYWdlKngKDENoYW5uZWxTaGFwZRIdChlDSEFOTkVMX1NIQVBFX1VOU1BFQ0lGSUVEEAASFgoSQ0hBTk5FTF9TSEFQRV9IVFRQEAESGAoUQ0hBTk5FTF9TSEFQRV9TVFJFQU0QAhIXChNDSEFOTkVMX1NIQVBFX0VWRU5UEAMqkwEKDENoYW5uZWxTdGF0ZRIdChlDSEFOTkVMX1NUQVRFX1VOU1BFQ0lGSUVEEAASFgoSQ0hBTk5FTF9TVEFURV9PUEVOEAESGAoUQ0hBTk5FTF9TVEFURV9FWElURUQQAhIZChVDSEFOTkVMX1NUQVRFX0NMT1NJTkcQAxIXChNDSEFOTkVMX1NUQVRFX0VOREVEEAQqegoRQ2hhbm5lbEF0dGFjaE1vZGUSIwofQ0hBTk5FTF9BVFRBQ0hfTU9ERV9VTlNQRUNJRklFRBAAEh0KGUNIQU5ORUxfQVRUQUNIX01PREVfSU5QVVQQARIhCh1DSEFOTkVMX0FUVEFDSF9NT0RFX1JFQURfT05MWRACKlsKCkNoYW5uZWxMb2cSGwoXQ0hBTk5FTF9MT0dfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX0xPR19PVVRQVVQQARIYChRDSEFOTkVMX0xPR19SRVFVRVNUUxACKu4BChNDaGFubmVsTWVzc2FnZVN0YXRlEiUKIUNIQU5ORUxfTUVTU0FHRV9TVEFURV9VTlNQRUNJRklFRBAAEiEKHUNIQU5ORUxfTUVTU0FHRV9TVEFURV9QRU5ESU5HEAESIwofQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX0lOX0ZMSUdIVBACEiMKH0NIQU5ORUxfTUVTU0FHRV9TVEFURV9ERUxJVkVSRUQQAxIgChxDSEFOTkVMX01FU1NBR0VfU1RBVEVfRkFJTEVEEAQSIQodQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX0VYUElSRUQQBTLLEwoOQ2hhbm5lbFNlcnZpY2USpwEKDUNyZWF0ZUNoYW5uZWwSKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ2hhbm5lbFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ2hhbm5lbFJlc3BvbnNlIkHC8xgOY2hhbm5lbHMud3JpdGXS8xgrChhob3N0X2pvYi5jaGFubmVsX2V4cG9zZWQSD2hvc3Rfam9iOmpvYl9pZBJ0CgxMaXN0Q2hhbm5lbHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENoYW5uZWxzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2hhbm5lbHNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSbgoKR2V0Q2hhbm5lbBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkEoABChBHZXRDaGFubmVsUG9saWN5EisudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxQb2xpY3lSZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxQb2xpY3lSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSswEKEFNldENoYW5uZWxQb2xpY3kSKy50b3NoaS53b3Jrc3BhY2UudjEuU2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuU2V0Q2hhbm5lbFBvbGljeVJlc3BvbnNlIkTC8xgOY2hhbm5lbHMud3JpdGXS8xguChtob3N0X2pvYi5jaGFubmVsX3BvbGljeV9zZXQSD2hvc3Rfam9iOmpvYl9pZBKJAQoTTGlzdENoYW5uZWxSZXF1ZXN0cxIuLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2hhbm5lbFJlcXVlc3RzUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2hhbm5lbFJlcXVlc3RzUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkEoMBChFHZXRDaGFubmVsUmVxdWVzdBIsLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUmVxdWVzdFJlcXVlc3QaLS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFJlcXVlc3RSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQStgEKEEV4cG9ydENoYW5uZWxMb2cSKy50b3NoaS53b3Jrc3BhY2UudjEuRXhwb3J0Q2hhbm5lbExvZ1JlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuRXhwb3J0Q2hhbm5lbExvZ1Jlc3BvbnNlIkXC8xgNY2hhbm5lbHMucmVhZNLzGDAKHWhvc3Rfam9iLmNoYW5uZWxfbG9nX2V4cG9ydGVkEg9ob3N0X2pvYjpqb2JfaWQwARLYAQoZQ3JlYXRlQ2hhbm5lbENvbm5lY3RUb2tlbhI0LnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBo1LnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuUmVzcG9uc2UiTsLzGA5jaGFubmVscy53cml0ZdLzGDgKJWhvc3Rfam9iLmNoYW5uZWxfY29ubmVjdF90b2tlbl9pc3N1ZWQSD2hvc3Rfam9iOmpvYl9pZBLZAQoZUmV2b2tlQ2hhbm5lbENvbm5lY3RUb2tlbhI0LnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVxdWVzdBo1LnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VDaGFubmVsQ29ubmVjdFRva2VuUmVzcG9uc2UiT8LzGA5jaGFubmVscy53cml0ZdLzGDkKJmhvc3Rfam9iLmNoYW5uZWxfY29ubmVjdF90b2tlbl9yZXZva2VkEg9ob3N0X2pvYjpqb2JfaWQSpwEKDURlbGV0ZUNoYW5uZWwSKC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlQ2hhbm5lbFJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlQ2hhbm5lbFJlc3BvbnNlIkHC8xgOY2hhbm5lbHMud3JpdGXS8xgrChhob3N0X2pvYi5jaGFubmVsX2RlbGV0ZWQSD2hvc3Rfam9iOmpvYl9pZBJ0CgxMaXN0Rm9yd2FyZHMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdEZvcndhcmRzUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Rm9yd2FyZHNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSZQoHR2V0TGluaxIiLnRvc2hpLndvcmtzcGFjZS52MS5HZXRMaW5rUmVxdWVzdBojLnRvc2hpLndvcmtzcGFjZS52MS5HZXRMaW5rUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkEpEBChJTZW5kQ2hhbm5lbE1lc3NhZ2USLS50b3NoaS53b3Jrc3BhY2UudjEuU2VuZENoYW5uZWxNZXNzYWdlUmVxdWVzdBouLnRvc2hpLndvcmtzcGFjZS52MS5TZW5kQ2hhbm5lbE1lc3NhZ2VSZXNwb25zZSIcwvMYDmNoYW5uZWxzLndyaXRl0vMYBgoEbm9uZRKLAQoTVGFpbENoYW5uZWxNZXNzYWdlcxIuLnRvc2hpLndvcmtzcGFjZS52MS5UYWlsQ2hhbm5lbE1lc3NhZ2VzUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5UYWlsQ2hhbm5lbE1lc3NhZ2VzUmVzcG9uc2UiEcLzGA1jaGFubmVscy5yZWFkMAESxAEKFFJlcGxheUNoYW5uZWxNZXNzYWdlEi8udG9zaGkud29ya3NwYWNlLnYxLlJlcGxheUNoYW5uZWxNZXNzYWdlUmVxdWVzdBowLnRvc2hpLndvcmtzcGFjZS52MS5SZXBsYXlDaGFubmVsTWVzc2FnZVJlc3BvbnNlIknC8xgOY2hhbm5lbHMud3JpdGXS8xgzCiBzZXJ2aWNlLmNoYW5uZWxfbWVzc2FnZV9yZXBsYXllZBIPc2VydmljZTpzZXJ2aWNlQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiF0b3NoaS93b3Jrc3BhY2UvdjEvY2hhbm5lbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLSBQoHQ2hhbm5lbBIKCgJpZBgBIAEoCRIOCgZqb2JfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIvCgVzaGFwZRgEIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsU2hhcGUSDAoEcG9ydBgFIAEoBRIPCgdjb21tYW5kGAYgAygJEi8KBXN0YXRlGAcgASgOMiAudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxTdGF0ZRISCgpjcmVhdGVkX2J5GAggASgJEi4KCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgplbmRfcmVhc29uGAsgASgJEhYKCWV4aXRfY29kZRgMIAEoBUgAiAEBEg0KBW93bmVyGA0gASgJEhQKDG91dHB1dF9zdGFydBgOIAEoAxITCgtvdXRwdXRfbmV4dBgPIAEoAxIUCgxpbnB1dF9jbG9zZWQYECABKAgSFwoPcmVxdWVzdHNfb2xkZXN0GBEgASgDEhcKD3JlcXVlc3RzX25ld2VzdBgSIAEoAxIxCgZwb2xpY3kYEyABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeRIyCgdjbGllbnRzGBQgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxDbGllbnQSDwoHc2VydmljZRgVIAEoCRIMCgRwYXRoGBYgASgJEjYKBmV2ZW50cxgXIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsRXZlbnRDb3VudHMSEAoIZ3JhbnRfaWQYGCABKAkSHgoWYXBwbGllZF9wb2xpY3lfdmVyc2lvbhgZIAEoA0IMCgpfZXhpdF9jb2RlIrgBChJDaGFubmVsRXZlbnRDb3VudHMSDwoHcGVuZGluZxgBIAEoAxIRCglpbl9mbGlnaHQYAiABKAMSEQoJZGVsaXZlcmVkGAMgASgDEg4KBmZhaWxlZBgEIAEoAxIPCgdleHBpcmVkGAUgASgDEjQKEGxhc3RfZGVsaXZlcnlfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDGxhc3RfZmFpbHVyZRgHIAEoCSIwChRDaGFubmVsTWVzc2FnZVNvdXJjZRIMCgRraW5kGAEgASgJEgoKAmlkGAIgASgJItIDCg5DaGFubmVsTWVzc2FnZRIKCgJpZBgBIAEoCRILCgNzZXEYAiABKAMSDAoEbmFtZRgDIAEoCRIoCgR0aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI4CgZzb3VyY2UYBSABKAsyKC50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2VTb3VyY2USDAoEZGF0YRgGIAEoDBI2CgVzdGF0ZRgHIAEoDjInLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTWVzc2FnZVN0YXRlEhAKCGF0dGVtcHRzGAggASgFEjMKD25leHRfYXR0ZW1wdF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKbGFzdF9lcnJvchgKIAEoCRIwCgxkZWxpdmVyZWRfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3JlcGxheWVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1zY2hlZHVsZWRfZm9yGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLDAgoNQ2hhbm5lbENsaWVudBIKCgJpZBgBIAEoCRIzCgRtb2RlGAIgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxBdHRhY2hNb2RlEhMKC2F0dGFjaGVkX2J5GAMgASgJEg4KBmRldmljZRgEIAEoCRISCgpjcmVkZW50aWFsGAUgASgJEjIKDmF0dGFjaGVkX3NpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdzZWVuX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtkZXRhY2hlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMb3V0cHV0X2Fja2VkGAkgASgDEhAKCGF0dGFjaGVkGAogASgIIu8BCg1DaGFubmVsUG9saWN5Eg8KB3ZlcnNpb24YASABKAMSDgoGYXR0YWNoGAIgASgJEhgKC21heF9jbGllbnRzGAMgASgFSACIAQESDQoFaW5wdXQYBCABKAkSDAoEa2VlcBgFIAEoCRI2Cgdtb2R1bGVzGAYgASgLMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNb2R1bGVMaXN0EhQKDGFja19kZWFkbGluZRgHIAEoCRIYCgtjb25jdXJyZW5jeRgIIAEoBUgBiAEBQg4KDF9tYXhfY2xpZW50c0IOCgxfY29uY3VycmVuY3kiRwoRQ2hhbm5lbE1vZHVsZUxpc3QSMgoHbW9kdWxlcxgBIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTW9kdWxlIpgCCg1DaGFubmVsTW9kdWxlEgwKBGtpbmQYASABKAkSLwoFbWF0Y2gYAiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1hdGNoEg4KBnJhbmdlcxgDIAMoCRINCgVsZXZlbBgEIAEoCRIQCghib2R5X2NhcBgFIAEoAxIOCgZzdGF0dXMYBiABKAUSDgoGdGFyZ2V0GAcgASgJEgwKBHBhdGgYCCABKAkSDAoEaG9zdBgJIAEoCRILCgNrZXkYCiABKAkSDQoFY291bnQYCyABKAUSDgoGd2luZG93GAwgASgJEgwKBGh0bWwYDSABKAkSEQoJY2FfYnVuZGxlGA4gASgJEg4KBmdyYW50cxgPIAEoCCKtAQoMQ2hhbm5lbE1hdGNoEg0KBWhvc3RzGAEgAygJEg0KBXBhdGhzGAIgAygJEg8KB21ldGhvZHMYAyADKAkSPgoHaGVhZGVycxgEIAMoCzItLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsTWF0Y2guSGVhZGVyc0VudHJ5Gi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIvAECg5DaGFubmVsUmVxdWVzdBILCgNzZXEYASABKAMSLgoKYXJyaXZlZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEaG9zdBgDIAEoCRIOCgZtZXRob2QYBCABKAkSDAoEcGF0aBgFIAEoCRIOCgZzdGF0dXMYBiABKAUSFQoNcmVxdWVzdF9ieXRlcxgHIAEoAxIWCg5yZXNwb25zZV9ieXRlcxgIIAEoAxIrCghkdXJhdGlvbhgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI4CgZjYWxsZXIYCiABKAsyKC50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFJlcXVlc3RDYWxsZXISDwoHYWRkcmVzcxgLIAEoCRISCgpyZWZ1c2VkX2J5GAwgASgJEhEKCXdlYnNvY2tldBgNIAEoCBINCgVsZXZlbBgOIAEoCRINCgVxdWVyeRgPIAEoCRIRCglxdWVyeV9jdXQYECABKAgSOgoPcmVxdWVzdF9oZWFkZXJzGBEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxIZWFkZXISOwoQcmVzcG9uc2VfaGVhZGVycxgSIAMoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsSGVhZGVyEjUKDHJlcXVlc3RfYm9keRgTIAEoCzIfLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsQm9keRI2Cg1yZXNwb25zZV9ib2R5GBQgASgLMh8udG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxCb2R5IkgKFENoYW5uZWxSZXF1ZXN0Q2FsbGVyEgwKBHVzZXIYASABKAkSDgoGZGV2aWNlGAIgASgJEhIKCnNoYXJlX2xpbmsYAyABKAkiPQoNQ2hhbm5lbEhlYWRlchIMCgRuYW1lGAEgASgJEg0KBXZhbHVlGAIgASgJEg8KB3JlbW92ZWQYAyABKAgiPgoLQ2hhbm5lbEJvZHkSFAoMY29udGVudF90eXBlGAEgASgJEgwKBGRhdGEYAiABKAwSCwoDY3V0GAMgASgIIocBCgdGb3J3YXJkEg4KBnRhcmdldBgBIAEoCRIKCgJieRgCIAEoCRIOCgZkZXZpY2UYAyABKAkSDwoHY2hhbm5lbBgEIAEoCRItCglvcGVuZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGdyYW50X2lkGAYgASgJIrEBCgRMaW5rEhEKCWNvbm5lY3RlZBgBIAEoCBIpCgVzaW5jZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoIY29ubmVjdHMYAyABKAUSDwoHc3RyZWFtcxgEIAEoBRISCgpsYXN0X2Vycm9yGAUgASgJEg8KB3JlcGxpY2EYBiABKAkSEAoIZm9yd2FyZHMYByABKAUSEQoJam9iX3N0YXRlGAggASgJIqoBChRDcmVhdGVDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIMCgRwb3J0GAMgASgFEg8KB2NvbW1hbmQYBCADKAkSMQoGcG9saWN5GAUgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kSDQoFZ3JhbnQYBiABKAkSEwoLcmVxdWVzdF9rZXkYByABKAkiRQoVQ3JlYXRlQ2hhbm5lbFJlc3BvbnNlEiwKB2NoYW5uZWwYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbCJsChNMaXN0Q2hhbm5lbHNSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIPCgdzZXJ2aWNlGAQgASgJEg0KBWdyYW50GAUgASgJIl4KFExpc3RDaGFubmVsc1Jlc3BvbnNlEi0KCGNoYW5uZWxzGAEgAygLMhsudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlEKEUdldENoYW5uZWxSZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEg8KB3NlcnZpY2UYAyABKAkSDQoFZ3JhbnQYBCABKAkiQgoSR2V0Q2hhbm5lbFJlc3BvbnNlEiwKB2NoYW5uZWwYASABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbCJIChdHZXRDaGFubmVsUG9saWN5UmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdzZXJ2aWNlGAMgASgJIk0KGEdldENoYW5uZWxQb2xpY3lSZXNwb25zZRIxCgZwb2xpY3kYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSKwAQoXU2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSMQoGcG9saWN5GAMgASgLMiEudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxQb2xpY3kSDwoHc2VydmljZRgEIAEoCRIzCgdzdHJlYW1zGAUgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxTdHJlYW1zIk0KGFNldENoYW5uZWxQb2xpY3lSZXNwb25zZRIxCgZwb2xpY3kYASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFBvbGljeSKNAgoaTGlzdENoYW5uZWxSZXF1ZXN0c1JlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSEQoJYWZ0ZXJfc2VxGAUgASgDEikKBXNpbmNlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIpCgV1bnRpbBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDgoGc3RhdHVzGAggASgJEgwKBGhvc3QYCSABKAkSDgoGbWV0aG9kGAogASgJEhMKC3BhdGhfcHJlZml4GAsgASgJIpQBChtMaXN0Q2hhbm5lbFJlcXVlc3RzUmVzcG9uc2USNAoIcmVxdWVzdHMYASADKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbFJlcXVlc3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCm9sZGVzdF9zZXEYAyABKAMSEgoKbmV3ZXN0X3NlcRgEIAEoAyJFChhHZXRDaGFubmVsUmVxdWVzdFJlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSCwoDc2VxGAMgASgDIlAKGUdldENoYW5uZWxSZXF1ZXN0UmVzcG9uc2USMwoHcmVxdWVzdBgBIAEoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5DaGFubmVsUmVxdWVzdCLuAQoXRXhwb3J0Q2hhbm5lbExvZ1JlcXVlc3QSDgoGam9iX2lkGAEgASgJEgwKBG5hbWUYAiABKAkSKwoDbG9nGAMgASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxMb2cSEQoEZnJvbRgEIAEoA0gAiAEBEg8KAnRvGAUgASgDSAGIAQESKQoFc2luY2UYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKBXVudGlsGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIHCgVfZnJvbUIFCgNfdG8ibQoYRXhwb3J0Q2hhbm5lbExvZ1Jlc3BvbnNlEgwKBGRhdGEYASABKAwSEQoJZmlsZV9uYW1lGAIgASgJEhQKDGNvbnRlbnRfdHlwZRgDIAEoCRIMCgRmcm9tGAQgASgDEgwKBG5leHQYBSABKAMilAEKIENyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBmRldmljZRgDIAEoCRIzCgRtb2RlGAQgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxBdHRhY2hNb2RlEg0KBWdyYW50GAUgASgJIsMBCiFDcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuUmVzcG9uc2USCgoCaWQYASABKAkSDQoFdG9rZW4YAiABKAkSCwoDdXJsGAMgASgJEi4KCmV4cGlyZXNfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhEKCXRyYW5zcG9ydBgFIAEoCRIzCgRtb2RlGAYgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxBdHRhY2hNb2RlIkwKIFJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0Eg4KBmpvYl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEgoKAmlkGAMgASgJIiMKIVJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZSJDChREZWxldGVDaGFubmVsUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVncmFudBgDIAEoCSIXChVEZWxldGVDaGFubmVsUmVzcG9uc2UiTAoTTGlzdEZvcndhcmRzUmVxdWVzdBIOCgZqb2JfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiXgoUTGlzdEZvcndhcmRzUmVzcG9uc2USLQoIZm9yd2FyZHMYASADKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuRm9yd2FyZBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiIAoOR2V0TGlua1JlcXVlc3QSDgoGam9iX2lkGAEgASgJIjkKD0dldExpbmtSZXNwb25zZRImCgRsaW5rGAEgASgLMhgudG9zaGkud29ya3NwYWNlLnYxLkxpbmsibgoZU2VuZENoYW5uZWxNZXNzYWdlUmVxdWVzdBIPCgdzZXJ2aWNlGAEgASgJEg8KB2NoYW5uZWwYAiABKAkSDAoEbmFtZRgDIAEoCRIMCgRkYXRhGAQgASgMEhMKC3JlcXVlc3Rfa2V5GAUgASgJIkMKGlNlbmRDaGFubmVsTWVzc2FnZVJlc3BvbnNlEhIKCm1lc3NhZ2VfaWQYASABKAkSEQoJZHVwbGljYXRlGAIgASgIIocBChpUYWlsQ2hhbm5lbE1lc3NhZ2VzUmVxdWVzdBIPCgdzZXJ2aWNlGAEgASgJEg8KB2NoYW5uZWwYAiABKAkSNwoGc3RhdGVzGAMgAygOMicudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNZXNzYWdlU3RhdGUSDgoGY3Vyc29yGAQgASgJImcKG1RhaWxDaGFubmVsTWVzc2FnZXNSZXNwb25zZRIzCgdtZXNzYWdlGAEgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkNoYW5uZWxNZXNzYWdlEhMKC25leHRfY3Vyc29yGAIgASgJIlMKG1JlcGxheUNoYW5uZWxNZXNzYWdlUmVxdWVzdBIPCgdzZXJ2aWNlGAEgASgJEg8KB2NoYW5uZWwYAiABKAkSEgoKbWVzc2FnZV9pZBgDIAEoCSJTChxSZXBsYXlDaGFubmVsTWVzc2FnZVJlc3BvbnNlEjMKB21lc3NhZ2UYASABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuQ2hhbm5lbE1lc3NhZ2UqeAoMQ2hhbm5lbFNoYXBlEh0KGUNIQU5ORUxfU0hBUEVfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX1NIQVBFX0hUVFAQARIYChRDSEFOTkVMX1NIQVBFX1NUUkVBTRACEhcKE0NIQU5ORUxfU0hBUEVfRVZFTlQQAyqTAQoMQ2hhbm5lbFN0YXRlEh0KGUNIQU5ORUxfU1RBVEVfVU5TUEVDSUZJRUQQABIWChJDSEFOTkVMX1NUQVRFX09QRU4QARIYChRDSEFOTkVMX1NUQVRFX0VYSVRFRBACEhkKFUNIQU5ORUxfU1RBVEVfQ0xPU0lORxADEhcKE0NIQU5ORUxfU1RBVEVfRU5ERUQQBCp6ChFDaGFubmVsQXR0YWNoTW9kZRIjCh9DSEFOTkVMX0FUVEFDSF9NT0RFX1VOU1BFQ0lGSUVEEAASHQoZQ0hBTk5FTF9BVFRBQ0hfTU9ERV9JTlBVVBABEiEKHUNIQU5ORUxfQVRUQUNIX01PREVfUkVBRF9PTkxZEAIqfwoOQ2hhbm5lbFN0cmVhbXMSHwobQ0hBTk5FTF9TVFJFQU1TX1VOU1BFQ0lGSUVEEAASGAoUQ0hBTk5FTF9TVFJFQU1TX0tFRVAQARIZChVDSEFOTkVMX1NUUkVBTVNfRFJBSU4QAhIXChNDSEFOTkVMX1NUUkVBTVNfRU5EEAMqWwoKQ2hhbm5lbExvZxIbChdDSEFOTkVMX0xPR19VTlNQRUNJRklFRBAAEhYKEkNIQU5ORUxfTE9HX09VVFBVVBABEhgKFENIQU5ORUxfTE9HX1JFUVVFU1RTEAIq7gEKE0NoYW5uZWxNZXNzYWdlU3RhdGUSJQohQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX1VOU1BFQ0lGSUVEEAASIQodQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX1BFTkRJTkcQARIjCh9DSEFOTkVMX01FU1NBR0VfU1RBVEVfSU5fRkxJR0hUEAISIwofQ0hBTk5FTF9NRVNTQUdFX1NUQVRFX0RFTElWRVJFRBADEiAKHENIQU5ORUxfTUVTU0FHRV9TVEFURV9GQUlMRUQQBBIhCh1DSEFOTkVMX01FU1NBR0VfU1RBVEVfRVhQSVJFRBAFMssTCg5DaGFubmVsU2VydmljZRKnAQoNQ3JlYXRlQ2hhbm5lbBIoLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVDaGFubmVsUmVzcG9uc2UiQcLzGA5jaGFubmVscy53cml0ZdLzGCsKGGhvc3Rfam9iLmNoYW5uZWxfZXhwb3NlZBIPaG9zdF9qb2I6am9iX2lkEnQKDExpc3RDaGFubmVscxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q2hhbm5lbHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsc1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBJuCgpHZXRDaGFubmVsEiUudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSgAEKEEdldENoYW5uZWxQb2xpY3kSKy50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFBvbGljeVJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q2hhbm5lbFBvbGljeVJlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBKzAQoQU2V0Q2hhbm5lbFBvbGljeRIrLnRvc2hpLndvcmtzcGFjZS52MS5TZXRDaGFubmVsUG9saWN5UmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5TZXRDaGFubmVsUG9saWN5UmVzcG9uc2UiRMLzGA5jaGFubmVscy53cml0ZdLzGC4KG2hvc3Rfam9iLmNoYW5uZWxfcG9saWN5X3NldBIPaG9zdF9qb2I6am9iX2lkEokBChNMaXN0Q2hhbm5lbFJlcXVlc3RzEi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsUmVxdWVzdHNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RDaGFubmVsUmVxdWVzdHNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSgwEKEUdldENoYW5uZWxSZXF1ZXN0EiwudG9zaGkud29ya3NwYWNlLnYxLkdldENoYW5uZWxSZXF1ZXN0UmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDaGFubmVsUmVxdWVzdFJlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBK2AQoQRXhwb3J0Q2hhbm5lbExvZxIrLnRvc2hpLndvcmtzcGFjZS52MS5FeHBvcnRDaGFubmVsTG9nUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5FeHBvcnRDaGFubmVsTG9nUmVzcG9uc2UiRcLzGA1jaGFubmVscy5yZWFk0vMYMAodaG9zdF9qb2IuY2hhbm5lbF9sb2dfZXhwb3J0ZWQSD2hvc3Rfam9iOmpvYl9pZDABEtgBChlDcmVhdGVDaGFubmVsQ29ubmVjdFRva2VuEjQudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0GjUudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZSJOwvMYDmNoYW5uZWxzLndyaXRl0vMYOAolaG9zdF9qb2IuY2hhbm5lbF9jb25uZWN0X3Rva2VuX2lzc3VlZBIPaG9zdF9qb2I6am9iX2lkEtkBChlSZXZva2VDaGFubmVsQ29ubmVjdFRva2VuEjQudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXF1ZXN0GjUudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUNoYW5uZWxDb25uZWN0VG9rZW5SZXNwb25zZSJPwvMYDmNoYW5uZWxzLndyaXRl0vMYOQomaG9zdF9qb2IuY2hhbm5lbF9jb25uZWN0X3Rva2VuX3Jldm9rZWQSD2hvc3Rfam9iOmpvYl9pZBKnAQoNRGVsZXRlQ2hhbm5lbBIoLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDaGFubmVsUmVxdWVzdBopLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDaGFubmVsUmVzcG9uc2UiQcLzGA5jaGFubmVscy53cml0ZdLzGCsKGGhvc3Rfam9iLmNoYW5uZWxfZGVsZXRlZBIPaG9zdF9qb2I6am9iX2lkEnQKDExpc3RGb3J3YXJkcxInLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Rm9yd2FyZHNSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkxpc3RGb3J3YXJkc1Jlc3BvbnNlIhHC8xgNY2hhbm5lbHMucmVhZBJlCgdHZXRMaW5rEiIudG9zaGkud29ya3NwYWNlLnYxLkdldExpbmtSZXF1ZXN0GiMudG9zaGkud29ya3NwYWNlLnYxLkdldExpbmtSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQSkQEKElNlbmRDaGFubmVsTWVzc2FnZRItLnRvc2hpLndvcmtzcGFjZS52MS5TZW5kQ2hhbm5lbE1lc3NhZ2VSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLlNlbmRDaGFubmVsTWVzc2FnZVJlc3BvbnNlIhzC8xgOY2hhbm5lbHMud3JpdGXS8xgGCgRub25lEosBChNUYWlsQ2hhbm5lbE1lc3NhZ2VzEi4udG9zaGkud29ya3NwYWNlLnYxLlRhaWxDaGFubmVsTWVzc2FnZXNSZXF1ZXN0Gi8udG9zaGkud29ya3NwYWNlLnYxLlRhaWxDaGFubmVsTWVzc2FnZXNSZXNwb25zZSIRwvMYDWNoYW5uZWxzLnJlYWQwARLEAQoUUmVwbGF5Q2hhbm5lbE1lc3NhZ2USLy50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5Q2hhbm5lbE1lc3NhZ2VSZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLlJlcGxheUNoYW5uZWxNZXNzYWdlUmVzcG9uc2UiScLzGA5jaGFubmVscy53cml0ZdLzGDMKIHNlcnZpY2UuY2hhbm5lbF9tZXNzYWdlX3JlcGxheWVkEg9zZXJ2aWNlOnNlcnZpY2VCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * @generated from message toshi.workspace.v1.Channel
@@ -169,6 +169,26 @@ export type Channel = Message<"toshi.workspace.v1.Channel"> & {
    * @generated from field: toshi.workspace.v1.ChannelEventCounts events = 23;
    */
   events?: ChannelEventCounts | undefined;
+
+  /**
+   * The grant through which another workspace exposed the channel, or
+   * empty for one the job's own workspace exposed.
+   *
+   * @generated from field: string grant_id = 24;
+   */
+  grantId: string;
+
+  /**
+   * The policy version the channel's process of the control plane applies.
+   * A stream channel's owner records it as it applies each version, so a
+   * value below policy.version is a change its attached clients are not
+   * yet held to; 0 until an owner applied one. An http channel's process
+   * reads the policy at each request: its value is policy.version. An
+   * event channel's is 0.
+   *
+   * @generated from field: int64 applied_policy_version = 25;
+   */
+  appliedPolicyVersion: bigint;
 };
 
 /**
@@ -325,6 +345,26 @@ export type ChannelJson = {
    * @generated from field: toshi.workspace.v1.ChannelEventCounts events = 23;
    */
   events?: ChannelEventCountsJson;
+
+  /**
+   * The grant through which another workspace exposed the channel, or
+   * empty for one the job's own workspace exposed.
+   *
+   * @generated from field: string grant_id = 24;
+   */
+  grantId?: string;
+
+  /**
+   * The policy version the channel's process of the control plane applies.
+   * A stream channel's owner records it as it applies each version, so a
+   * value below policy.version is a change its attached clients are not
+   * yet held to; 0 until an owner applied one. An http channel's process
+   * reads the policy at each request: its value is policy.version. An
+   * event channel's is 0.
+   *
+   * @generated from field: int64 applied_policy_version = 25;
+   */
+  appliedPolicyVersion?: string;
 };
 
 /**
@@ -562,6 +602,14 @@ export type ChannelMessage = Message<"toshi.workspace.v1.ChannelMessage"> & {
    * @generated from field: google.protobuf.Timestamp replayed_at = 12;
    */
   replayedAt?: Timestamp | undefined;
+
+  /**
+   * The instant an alarm published this message for; unset for other
+   * sources.
+   *
+   * @generated from field: google.protobuf.Timestamp scheduled_for = 13;
+   */
+  scheduledFor?: Timestamp | undefined;
 };
 
 /**
@@ -642,6 +690,14 @@ export type ChannelMessageJson = {
    * @generated from field: google.protobuf.Timestamp replayed_at = 12;
    */
   replayedAt?: TimestampJson;
+
+  /**
+   * The instant an alarm published this message for; unset for other
+   * sources.
+   *
+   * @generated from field: google.protobuf.Timestamp scheduled_for = 13;
+   */
+  scheduledFor?: TimestampJson;
 };
 
 /**
@@ -841,7 +897,7 @@ export type ChannelPolicy = Message<"toshi.workspace.v1.ChannelPolicy"> & {
    * newest 8 MiB, or channel, as long as the channel's record lasts. An
    * event channel's is a duration, how long a message waits to be
    * delivered before it expires: 24h unless set, and at most the
-   * workspace's plan allows.
+   * workspace's plan allows, which is never less than 24h.
    *
    * @generated from field: string keep = 5;
    */
@@ -919,7 +975,7 @@ export type ChannelPolicyJson = {
    * newest 8 MiB, or channel, as long as the channel's record lasts. An
    * event channel's is a duration, how long a message waits to be
    * delivered before it expires: 24h unless set, and at most the
-   * workspace's plan allows.
+   * workspace's plan allows, which is never less than 24h.
    *
    * @generated from field: string keep = 5;
    */
@@ -1736,7 +1792,8 @@ export const ChannelBodySchema: GenMessage<ChannelBody, {jsonType: ChannelBodyJs
  * Forward is one open Forward: what it reaches in the guest, named as the
  * audit log names it (a command by its first word only), who opened it,
  * with the device of the connect token that admitted them, and the http
- * channel whose connection carries it, if one does.
+ * channel whose connection carries it, if one does, and the grant it was
+ * opened through, if one was.
  *
  * @generated from message toshi.workspace.v1.Forward
  */
@@ -1765,13 +1822,22 @@ export type Forward = Message<"toshi.workspace.v1.Forward"> & {
    * @generated from field: google.protobuf.Timestamp opened_at = 5;
    */
   openedAt?: Timestamp | undefined;
+
+  /**
+   * The grant through which another workspace's caller opened it, or
+   * empty for one the job's own workspace opened.
+   *
+   * @generated from field: string grant_id = 6;
+   */
+  grantId: string;
 };
 
 /**
  * Forward is one open Forward: what it reaches in the guest, named as the
  * audit log names it (a command by its first word only), who opened it,
  * with the device of the connect token that admitted them, and the http
- * channel whose connection carries it, if one does.
+ * channel whose connection carries it, if one does, and the grant it was
+ * opened through, if one was.
  *
  * @generated from message toshi.workspace.v1.Forward
  */
@@ -1800,6 +1866,14 @@ export type ForwardJson = {
    * @generated from field: google.protobuf.Timestamp opened_at = 5;
    */
   openedAt?: TimestampJson;
+
+  /**
+   * The grant through which another workspace's caller opened it, or
+   * empty for one the job's own workspace opened.
+   *
+   * @generated from field: string grant_id = 6;
+   */
+  grantId?: string;
 };
 
 /**
@@ -1822,7 +1896,8 @@ export type Link = Message<"toshi.workspace.v1.Link"> & {
   connected: boolean;
 
   /**
-   * Since when it has been connected; unset while it is not.
+   * Since when it has been connected; unset while it is not, and while
+   * another process of the control plane holds the link.
    *
    * @generated from field: google.protobuf.Timestamp since = 2;
    */
@@ -1882,7 +1957,8 @@ export type LinkJson = {
   connected?: boolean;
 
   /**
-   * Since when it has been connected; unset while it is not.
+   * Since when it has been connected; unset while it is not, and while
+   * another process of the control plane holds the link.
    *
    * @generated from field: google.protobuf.Timestamp since = 2;
    */
@@ -1975,6 +2051,22 @@ export type CreateChannelRequest = Message<"toshi.workspace.v1.CreateChannelRequ
    * @generated from field: toshi.workspace.v1.ChannelPolicy policy = 5;
    */
   policy?: ChannelPolicy | undefined;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 6;
+   */
+  grant: string;
+
+  /**
+   * A key that makes the call safe to retry: a retry with the same key and
+   * the same request answers with the channel the first call made.
+   *
+   * @generated from field: string request_key = 7;
+   */
+  requestKey: string;
 };
 
 /**
@@ -2016,6 +2108,22 @@ export type CreateChannelRequestJson = {
    * @generated from field: toshi.workspace.v1.ChannelPolicy policy = 5;
    */
   policy?: ChannelPolicyJson;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 6;
+   */
+  grant?: string;
+
+  /**
+   * A key that makes the call safe to retry: a retry with the same key and
+   * the same request answers with the channel the first call made.
+   *
+   * @generated from field: string request_key = 7;
+   */
+  requestKey?: string;
 };
 
 /**
@@ -2084,6 +2192,14 @@ export type ListChannelsRequest = Message<"toshi.workspace.v1.ListChannelsReques
    * @generated from field: string service = 4;
    */
   service: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant: string;
 };
 
 /**
@@ -2118,6 +2234,14 @@ export type ListChannelsRequestJson = {
    * @generated from field: string service = 4;
    */
   service?: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant?: string;
 };
 
 /**
@@ -2188,6 +2312,14 @@ export type GetChannelRequest = Message<"toshi.workspace.v1.GetChannelRequest"> 
    * @generated from field: string service = 3;
    */
   service: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 4;
+   */
+  grant: string;
 };
 
 /**
@@ -2210,6 +2342,14 @@ export type GetChannelRequestJson = {
    * @generated from field: string service = 3;
    */
   service?: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 4;
+   */
+  grant?: string;
 };
 
 /**
@@ -2344,6 +2484,22 @@ export type SetChannelPolicyRequest = Message<"toshi.workspace.v1.SetChannelPoli
    * @generated from field: toshi.workspace.v1.ChannelPolicy policy = 3;
    */
   policy?: ChannelPolicy | undefined;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 4;
+   */
+  service: string;
+
+  /**
+   * What the change does to a stream channel's attached clients; unset
+   * keeps them. DRAIN and END on an http or an event channel are
+   * INVALID_ARGUMENT.
+   *
+   * @generated from field: toshi.workspace.v1.ChannelStreams streams = 5;
+   */
+  streams: ChannelStreams;
 };
 
 /**
@@ -2366,6 +2522,22 @@ export type SetChannelPolicyRequestJson = {
    * @generated from field: toshi.workspace.v1.ChannelPolicy policy = 3;
    */
   policy?: ChannelPolicyJson;
+
+  /**
+   * An event channel's service, by its ID, in place of job_id.
+   *
+   * @generated from field: string service = 4;
+   */
+  service?: string;
+
+  /**
+   * What the change does to a stream channel's attached clients; unset
+   * keeps them. DRAIN and END on an http or an event channel are
+   * INVALID_ARGUMENT.
+   *
+   * @generated from field: toshi.workspace.v1.ChannelStreams streams = 5;
+   */
+  streams?: ChannelStreamsJson;
 };
 
 /**
@@ -2936,6 +3108,14 @@ export type CreateChannelConnectTokenRequest = Message<"toshi.workspace.v1.Creat
    * @generated from field: toshi.workspace.v1.ChannelAttachMode mode = 4;
    */
   mode: ChannelAttachMode;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant: string;
 };
 
 /**
@@ -2966,6 +3146,14 @@ export type CreateChannelConnectTokenRequestJson = {
    * @generated from field: toshi.workspace.v1.ChannelAttachMode mode = 4;
    */
   mode?: ChannelAttachModeJson;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 5;
+   */
+  grant?: string;
 };
 
 /**
@@ -3149,6 +3337,14 @@ export type DeleteChannelRequest = Message<"toshi.workspace.v1.DeleteChannelRequ
    * @generated from field: string name = 2;
    */
   name: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 3;
+   */
+  grant: string;
 };
 
 /**
@@ -3164,6 +3360,14 @@ export type DeleteChannelRequestJson = {
    * @generated from field: string name = 2;
    */
   name?: string;
+
+  /**
+   * A grant the caller's workspace received, to act on the owner's
+   * sandbox's job through it (docs/grants.md).
+   *
+   * @generated from field: string grant = 3;
+   */
+  grant?: string;
 };
 
 /**
@@ -3359,7 +3563,8 @@ export type SendChannelMessageRequest = Message<"toshi.workspace.v1.SendChannelM
   channel: string;
 
   /**
-   * The message's name, such as order.paid: up to 200 bytes with no space.
+   * The message's name, such as order.paid: up to 200 bytes with no space
+   * or control character.
    *
    * @generated from field: string name = 3;
    */
@@ -3398,7 +3603,8 @@ export type SendChannelMessageRequestJson = {
   channel?: string;
 
   /**
-   * The message's name, such as order.paid: up to 200 bytes with no space.
+   * The message's name, such as order.paid: up to 200 bytes with no space
+   * or control character.
    *
    * @generated from field: string name = 3;
    */
@@ -3798,6 +4004,58 @@ export const ChannelAttachModeSchema: GenEnum<ChannelAttachMode, ChannelAttachMo
   enumDesc(file_toshi_workspace_v1_channels, 2);
 
 /**
+ * ChannelStreams is what a policy change does to a stream channel's
+ * clients attached under the policy it replaces.
+ *
+ * @generated from enum toshi.workspace.v1.ChannelStreams
+ */
+export enum ChannelStreams {
+  /**
+   * As KEEP.
+   *
+   * @generated from enum value: CHANNEL_STREAMS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * They stay attached; only those the new policy no longer admits, or now
+   * grants read_only while they hold input, end.
+   *
+   * @generated from enum value: CHANNEL_STREAMS_KEEP = 1;
+   */
+  KEEP = 1,
+
+  /**
+   * They stay attached for up to 30 seconds, then end with the reason
+   * "reconnect", so each client attaches again under the new policy.
+   *
+   * @generated from enum value: CHANNEL_STREAMS_DRAIN = 2;
+   */
+  DRAIN = 2,
+
+  /**
+   * They end now with the reason "policy_changed".
+   *
+   * @generated from enum value: CHANNEL_STREAMS_END = 3;
+   */
+  END = 3,
+}
+
+/**
+ * ChannelStreams is what a policy change does to a stream channel's
+ * clients attached under the policy it replaces.
+ *
+ * @generated from enum toshi.workspace.v1.ChannelStreams
+ */
+export type ChannelStreamsJson = "CHANNEL_STREAMS_UNSPECIFIED" | "CHANNEL_STREAMS_KEEP" | "CHANNEL_STREAMS_DRAIN" | "CHANNEL_STREAMS_END";
+
+/**
+ * Describes the enum toshi.workspace.v1.ChannelStreams.
+ */
+export const ChannelStreamsSchema: GenEnum<ChannelStreams, ChannelStreamsJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_channels, 3);
+
+/**
  * ChannelLog names the log of a channel an export carries.
  *
  * @generated from enum toshi.workspace.v1.ChannelLog
@@ -3834,7 +4092,7 @@ export type ChannelLogJson = "CHANNEL_LOG_UNSPECIFIED" | "CHANNEL_LOG_OUTPUT" | 
  * Describes the enum toshi.workspace.v1.ChannelLog.
  */
 export const ChannelLogSchema: GenEnum<ChannelLog, ChannelLogJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_channels, 3);
+  enumDesc(file_toshi_workspace_v1_channels, 4);
 
 /**
  * ChannelMessageState is where an event channel's message is in its
@@ -3898,7 +4156,7 @@ export type ChannelMessageStateJson = "CHANNEL_MESSAGE_STATE_UNSPECIFIED" | "CHA
  * Describes the enum toshi.workspace.v1.ChannelMessageState.
  */
 export const ChannelMessageStateSchema: GenEnum<ChannelMessageState, ChannelMessageStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_channels, 4);
+  enumDesc(file_toshi_workspace_v1_channels, 5);
 
 /**
  * ChannelService manages the channels of the workspace's jobs, lists a
@@ -3979,7 +4237,11 @@ export const ChannelService: GenService<{
    * changed since that version fails with ABORTED: read it again. A
    * malformed policy fails with INVALID_ARGUMENT, and one the channel
    * refuses, such as a list without a module that may not be removed,
-   * with FAILED_PRECONDITION.
+   * with FAILED_PRECONDITION. A service's event channel, named by service
+   * in place of job_id, takes what its recipe's policy takes, a keep the
+   * plan allows among it, and keeps the policy set until a deploy whose
+   * recipe changes the channel's policy; its set is recorded as
+   * service.channel_policy_set on the service.
    *
    * @generated from rpc toshi.workspace.v1.ChannelService.SetChannelPolicy
    */

@@ -114,7 +114,7 @@ describe("the retry table", () => {
         expect(retryClassFor(path), `${path} follows the API's rule`).toBe(expected);
       }
     }
-    expect(paths.size).toBe(230);
+    expect(paths.size).toBe(252);
   });
 
   it("names an exception only for a method the API has", () => {

@@ -69,14 +69,18 @@ export type Filler = Message<"toshi.workspace.v1.Filler"> & {
 
   /**
    * How long after a run completes or fails the next may start. Default
-   * 24 hours.
+   * 24 hours. After a run that was preempted, rejected or lost the next
+   * may start after the control plane's fillers.retry_after, 2 minutes
+   * unless set.
    *
    * @generated from field: google.protobuf.Duration every = 7;
    */
   every?: Duration | undefined;
 
   /**
-   * The longest one run may take. Default 2 hours.
+   * The longest one run may take. A filler PutFiller stores gets 1 hour
+   * when unset and may take at most 1 hour; the operator's default is 2
+   * hours.
    *
    * @generated from field: google.protobuf.Duration max_duration = 8;
    */
@@ -207,14 +211,18 @@ export type FillerJson = {
 
   /**
    * How long after a run completes or fails the next may start. Default
-   * 24 hours.
+   * 24 hours. After a run that was preempted, rejected or lost the next
+   * may start after the control plane's fillers.retry_after, 2 minutes
+   * unless set.
    *
    * @generated from field: google.protobuf.Duration every = 7;
    */
   every?: DurationJson;
 
   /**
-   * The longest one run may take. Default 2 hours.
+   * The longest one run may take. A filler PutFiller stores gets 1 hour
+   * when unset and may take at most 1 hour; the operator's default is 2
+   * hours.
    *
    * @generated from field: google.protobuf.Duration max_duration = 8;
    */

@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/recordings.proto.
  */
 export const file_toshi_workspace_v1_recordings: GenFile = /*@__PURE__*/
-  fileDesc("CiN0b3NoaS93b3Jrc3BhY2UvdjEvcmVjb3JkaW5ncy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxItQDCglSZWNvcmRpbmcSCgoCaWQYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgDIAEoCRITCgt3b3JrbG9hZF9pZBgEIAEoCRIxCgVzdGF0ZRgFIAEoDjIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTdGF0ZRIOCgZyZWFzb24YBiABKAkSEwoLYXJ0aWZhY3RfaWQYByABKAkSKwoIaW50ZXJ2YWwYCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDgoGZnJhbWVzGAkgASgFEg8KB2Ryb3BwZWQYCiABKAUSEQoJdHJ1bmNhdGVkGAsgASgIEjIKBnBhdXNlcxgMIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdQYXVzZRIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoEa2luZBgPIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdLaW5kIpQBCg5SZWNvcmRpbmdQYXVzZRISCgpzZXNzaW9uX2lkGAEgASgJEg0KBWFjdG9yGAIgASgJEgsKA3ZpYRgDIAEoCRIpCgVzdGFydBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoDZW5kGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJTChVMaXN0UmVjb3JkaW5nc1JlcXVlc3QSEwoLd29ya2xvYWRfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiZAoWTGlzdFJlY29yZGluZ3NSZXNwb25zZRIxCgpyZWNvcmRpbmdzGAEgAygLMh0udG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiQAoTR2V0UmVjb3JkaW5nUmVxdWVzdBIUCgxyZWNvcmRpbmdfaWQYASABKAkSEwoLdHRsX3NlY29uZHMYAiABKAMihQEKFEdldFJlY29yZGluZ1Jlc3BvbnNlEjAKCXJlY29yZGluZxgBIAEoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmcSCwoDdXJsGAIgASgJEi4KCmV4cGlyZXNfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIu4CChJSZWNvcmRpbmdTaGFyZUxpbmsSCgoCaWQYASABKAkSFAoMcmVjb3JkaW5nX2lkGAIgASgJEi8KBGtpbmQYAyABKA4yIS50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nS2luZBI6CgVzdGF0ZRgEIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmtTdGF0ZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCgltYXhfYnl0ZXMYByABKAMSEgoKdXNlZF9ieXRlcxgIIAEoAxIuCgpyZXZva2VkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpjcmVhdGVkX2J5GAogASgJInkKH0NyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QSFAoMcmVjb3JkaW5nX2lkGAEgASgJEi0KCmV4cGlyZXNfaW4YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEQoJbWF4X2J5dGVzGAMgASgDIn8KIENyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1Jlc3BvbnNlEjoKCnNoYXJlX2xpbmsYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nU2hhcmVMaW5rEgsKA3VybBgCIAEoCRISCgpwbGF5ZXJfdXJsGAMgASgJIl0KHkxpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVxdWVzdBIUCgxyZWNvcmRpbmdfaWQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkidwofTGlzdFJlY29yZGluZ1NoYXJlTGlua3NSZXNwb25zZRI7CgtzaGFyZV9saW5rcxgBIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjgKH1Jldm9rZVJlY29yZGluZ1NoYXJlTGlua1JlcXVlc3QSFQoNc2hhcmVfbGlua19pZBgBIAEoCSJeCiBSZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZRI6CgpzaGFyZV9saW5rGAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NoYXJlTGluayqmAQoOUmVjb3JkaW5nU3RhdGUSHwobUkVDT1JESU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASHQoZUkVDT1JESU5HX1NUQVRFX0NBUFRVUklORxABEhkKFVJFQ09SRElOR19TVEFURV9SRUFEWRACEh8KG1JFQ09SRElOR19TVEFURV9VTkFWQUlMQUJMRRADEhgKFFJFQ09SRElOR19TVEFURV9MT1NUEAQqfQoNUmVjb3JkaW5nS2luZBIeChpSRUNPUkRJTkdfS0lORF9VTlNQRUNJRklFRBAAEhgKFFJFQ09SRElOR19LSU5EX1NUUklQEAESGAoUUkVDT1JESU5HX0tJTkRfVklERU8QAhIYChRSRUNPUkRJTkdfS0lORF9UUkFDRRADKuIBChdSZWNvcmRpbmdTaGFyZUxpbmtTdGF0ZRIqCiZSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9VTlNQRUNJRklFRBAAEiUKIVJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX0FDVElWRRABEiYKIlJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX1JFVk9LRUQQAhImCiJSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9FWFBJUkVEEAMSJAogUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfRU5ERUQQBDL9BwoQUmVjb3JkaW5nU2VydmljZRKLAQoOTGlzdFJlY29yZGluZ3MSKS50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlY29yZGluZ3NSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdzUmVzcG9uc2UiIsLzGA9yZWNvcmRpbmdzLnJlYWTK8xgLZW52aXJvbm1lbnQSwwEKDEdldFJlY29yZGluZxInLnRvc2hpLndvcmtzcGFjZS52MS5HZXRSZWNvcmRpbmdSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkdldFJlY29yZGluZ1Jlc3BvbnNlImDC8xgPcmVjb3JkaW5ncy5yZWFkyvMYC2Vudmlyb25tZW500vMYOgoPYXJ0aWZhY3Qudmlld2VkEidhcnRpZmFjdDpyZXNwb25zZS5yZWNvcmRpbmcuYXJ0aWZhY3RfaWQS+AEKGENyZWF0ZVJlY29yZGluZ1NoYXJlTGluaxIzLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVJlY29yZGluZ1NoYXJlTGlua1Jlc3BvbnNlInHC8xgQcmVjb3JkaW5ncy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGEoKG3JlY29yZGluZy5zaGFyZV9saW5rX2lzc3VlZBIrcmVjb3JkaW5nX3NoYXJlX2xpbms6cmVzcG9uc2Uuc2hhcmVfbGluay5pZBKmAQoXTGlzdFJlY29yZGluZ1NoYXJlTGlua3MSMi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFJlY29yZGluZ1NoYXJlTGlua3NSZXF1ZXN0GjMudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVzcG9uc2UiIsLzGA9yZWNvcmRpbmdzLnJlYWTK8xgLZW52aXJvbm1lbnQS8AEKGFJldm9rZVJlY29yZGluZ1NoYXJlTGluaxIzLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZVJlY29yZGluZ1NoYXJlTGlua1Jlc3BvbnNlImnC8xgQcmVjb3JkaW5ncy53cml0ZcrzGAtlbnZpcm9ubWVudNLzGEIKHHJlY29yZGluZy5zaGFyZV9saW5rX3Jldm9rZWQSInJlY29yZGluZ19zaGFyZV9saW5rOnNoYXJlX2xpbmtfaWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiN0b3NoaS93b3Jrc3BhY2UvdjEvcmVjb3JkaW5ncy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIpgECglSZWNvcmRpbmcSCgoCaWQYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgDIAEoCRITCgt3b3JrbG9hZF9pZBgEIAEoCRIxCgVzdGF0ZRgFIAEoDjIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTdGF0ZRIOCgZyZWFzb24YBiABKAkSEwoLYXJ0aWZhY3RfaWQYByABKAkSKwoIaW50ZXJ2YWwYCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDgoGZnJhbWVzGAkgASgFEg8KB2Ryb3BwZWQYCiABKAUSEQoJdHJ1bmNhdGVkGAsgASgIEjIKBnBhdXNlcxgMIAMoCzIiLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdQYXVzZRIuCgpjcmVhdGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRlZF9hdBgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoEa2luZBgPIAEoDjIhLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdLaW5kEhAKCHNlcXVlbmNlGBAgASgFEjAKBXNwYW5zGBEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NwYW4i2gEKDVJlY29yZGluZ1NwYW4SMwoEa2luZBgBIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTcGFuS2luZBISCgpzZXNzaW9uX2lkGAIgASgJEg0KBWFjdG9yGAMgASgJEgsKA3ZpYRgEIAEoCRIpCgVzdGFydBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJwoDZW5kGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghjYXB0dXJlZBgHIAEoCCKUAQoOUmVjb3JkaW5nUGF1c2USEgoKc2Vzc2lvbl9pZBgBIAEoCRINCgVhY3RvchgCIAEoCRILCgN2aWEYAyABKAkSKQoFc3RhcnQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEicKA2VuZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUwoVTGlzdFJlY29yZGluZ3NSZXF1ZXN0EhMKC3dvcmtsb2FkX2lkGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImQKFkxpc3RSZWNvcmRpbmdzUmVzcG9uc2USMQoKcmVjb3JkaW5ncxgBIAMoCzIdLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkAKE0dldFJlY29yZGluZ1JlcXVlc3QSFAoMcmVjb3JkaW5nX2lkGAEgASgJEhMKC3R0bF9zZWNvbmRzGAIgASgDIoUBChRHZXRSZWNvcmRpbmdSZXNwb25zZRIwCglyZWNvcmRpbmcYASABKAsyHS50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nEgsKA3VybBgCIAEoCRIuCgpleHBpcmVzX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLuAgoSUmVjb3JkaW5nU2hhcmVMaW5rEgoKAmlkGAEgASgJEhQKDHJlY29yZGluZ19pZBgCIAEoCRIvCgRraW5kGAMgASgOMiEudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ0tpbmQSOgoFc3RhdGUYBCABKA4yKy50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nU2hhcmVMaW5rU3RhdGUSLgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEQoJbWF4X2J5dGVzGAcgASgDEhIKCnVzZWRfYnl0ZXMYCCABKAMSLgoKcmV2b2tlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgKIAEoCSJ5Ch9DcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0EhQKDHJlY29yZGluZ19pZBgBIAEoCRItCgpleHBpcmVzX2luGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhEKCW1heF9ieXRlcxgDIAEoAyJ/CiBDcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZRI6CgpzaGFyZV9saW5rGAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLlJlY29yZGluZ1NoYXJlTGluaxILCgN1cmwYAiABKAkSEgoKcGxheWVyX3VybBgDIAEoCSJdCh5MaXN0UmVjb3JkaW5nU2hhcmVMaW5rc1JlcXVlc3QSFAoMcmVjb3JkaW5nX2lkGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIncKH0xpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVzcG9uc2USOwoLc2hhcmVfbGlua3MYASADKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuUmVjb3JkaW5nU2hhcmVMaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI4Ch9SZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXF1ZXN0EhUKDXNoYXJlX2xpbmtfaWQYASABKAkiXgogUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rUmVzcG9uc2USOgoKc2hhcmVfbGluaxgBIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5SZWNvcmRpbmdTaGFyZUxpbmsqpgEKDlJlY29yZGluZ1N0YXRlEh8KG1JFQ09SRElOR19TVEFURV9VTlNQRUNJRklFRBAAEh0KGVJFQ09SRElOR19TVEFURV9DQVBUVVJJTkcQARIZChVSRUNPUkRJTkdfU1RBVEVfUkVBRFkQAhIfChtSRUNPUkRJTkdfU1RBVEVfVU5BVkFJTEFCTEUQAxIYChRSRUNPUkRJTkdfU1RBVEVfTE9TVBAEKn0KDVJlY29yZGluZ0tpbmQSHgoaUkVDT1JESU5HX0tJTkRfVU5TUEVDSUZJRUQQABIYChRSRUNPUkRJTkdfS0lORF9TVFJJUBABEhgKFFJFQ09SRElOR19LSU5EX1ZJREVPEAISGAoUUkVDT1JESU5HX0tJTkRfVFJBQ0UQAyqWAQoRUmVjb3JkaW5nU3BhbktpbmQSIwofUkVDT1JESU5HX1NQQU5fS0lORF9VTlNQRUNJRklFRBAAEh0KGVJFQ09SRElOR19TUEFOX0tJTkRfQUdFTlQQARIdChlSRUNPUkRJTkdfU1BBTl9LSU5EX0hVTUFOEAISHgoaUkVDT1JESU5HX1NQQU5fS0lORF9QQVVTRUQQAyriAQoXUmVjb3JkaW5nU2hhcmVMaW5rU3RhdGUSKgomUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfVU5TUEVDSUZJRUQQABIlCiFSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9BQ1RJVkUQARImCiJSRUNPUkRJTkdfU0hBUkVfTElOS19TVEFURV9SRVZPS0VEEAISJgoiUkVDT1JESU5HX1NIQVJFX0xJTktfU1RBVEVfRVhQSVJFRBADEiQKIFJFQ09SRElOR19TSEFSRV9MSU5LX1NUQVRFX0VOREVEEAQy/QcKEFJlY29yZGluZ1NlcnZpY2USiwEKDkxpc3RSZWNvcmRpbmdzEikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVjb3JkaW5nc1Jlc3BvbnNlIiLC8xgPcmVjb3JkaW5ncy5yZWFkyvMYC2Vudmlyb25tZW50EsMBCgxHZXRSZWNvcmRpbmcSJy50b3NoaS53b3Jrc3BhY2UudjEuR2V0UmVjb3JkaW5nUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5HZXRSZWNvcmRpbmdSZXNwb25zZSJgwvMYD3JlY29yZGluZ3MucmVhZMrzGAtlbnZpcm9ubWVudNLzGDoKD2FydGlmYWN0LnZpZXdlZBInYXJ0aWZhY3Q6cmVzcG9uc2UucmVjb3JkaW5nLmFydGlmYWN0X2lkEvgBChhDcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmsSMy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlUmVjb3JkaW5nU2hhcmVMaW5rUmVxdWVzdBo0LnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZSJxwvMYEHJlY29yZGluZ3Mud3JpdGXK8xgLZW52aXJvbm1lbnTS8xhKChtyZWNvcmRpbmcuc2hhcmVfbGlua19pc3N1ZWQSK3JlY29yZGluZ19zaGFyZV9saW5rOnJlc3BvbnNlLnNoYXJlX2xpbmsuaWQSpgEKF0xpc3RSZWNvcmRpbmdTaGFyZUxpbmtzEjIudG9zaGkud29ya3NwYWNlLnYxLkxpc3RSZWNvcmRpbmdTaGFyZUxpbmtzUmVxdWVzdBozLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0UmVjb3JkaW5nU2hhcmVMaW5rc1Jlc3BvbnNlIiLC8xgPcmVjb3JkaW5ncy5yZWFkyvMYC2Vudmlyb25tZW50EvABChhSZXZva2VSZWNvcmRpbmdTaGFyZUxpbmsSMy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlUmVjb3JkaW5nU2hhcmVMaW5rUmVxdWVzdBo0LnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VSZWNvcmRpbmdTaGFyZUxpbmtSZXNwb25zZSJpwvMYEHJlY29yZGluZ3Mud3JpdGXK8xgLZW52aXJvbm1lbnTS8xhCChxyZWNvcmRpbmcuc2hhcmVfbGlua19yZXZva2VkEiJyZWNvcmRpbmdfc2hhcmVfbGluazpzaGFyZV9saW5rX2lkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Recording is one recording of a run attempt: its screenshot strip or
@@ -93,8 +93,8 @@ export type Recording = Message<"toshi.workspace.v1.Recording"> & {
   truncated: boolean;
 
   /**
-   * The spans a strip or its host's video left out while an input session
-   * was open.
+   * The stretches a strip or its host's video left out: every human or
+   * paused span below that was not captured.
    *
    * @generated from field: repeated toshi.workspace.v1.RecordingPause pauses = 12;
    */
@@ -118,6 +118,24 @@ export type Recording = Message<"toshi.workspace.v1.Recording"> & {
    * @generated from field: toshi.workspace.v1.RecordingKind kind = 15;
    */
   kind: RecordingKind;
+
+  /**
+   * A sandbox's strips are numbered from 1 in the order they were taken:
+   * each ends at its plan's segment length and the next starts then. 0 for
+   * a job's recording, its run's only one.
+   *
+   * @generated from field: int32 sequence = 16;
+   */
+  sequence: number;
+
+  /**
+   * Who held the screen from the strip's start to its end, with no gap, in
+   * order of their starts. Empty for a recording kept before strips had
+   * spans, and for a video or trace the test framework wrote.
+   *
+   * @generated from field: repeated toshi.workspace.v1.RecordingSpan spans = 17;
+   */
+  spans: RecordingSpan[];
 };
 
 /**
@@ -198,8 +216,8 @@ export type RecordingJson = {
   truncated?: boolean;
 
   /**
-   * The spans a strip or its host's video left out while an input session
-   * was open.
+   * The stretches a strip or its host's video left out: every human or
+   * paused span below that was not captured.
    *
    * @generated from field: repeated toshi.workspace.v1.RecordingPause pauses = 12;
    */
@@ -223,6 +241,24 @@ export type RecordingJson = {
    * @generated from field: toshi.workspace.v1.RecordingKind kind = 15;
    */
   kind?: RecordingKindJson;
+
+  /**
+   * A sandbox's strips are numbered from 1 in the order they were taken:
+   * each ends at its plan's segment length and the next starts then. 0 for
+   * a job's recording, its run's only one.
+   *
+   * @generated from field: int32 sequence = 16;
+   */
+  sequence?: number;
+
+  /**
+   * Who held the screen from the strip's start to its end, with no gap, in
+   * order of their starts. Empty for a recording kept before strips had
+   * spans, and for a video or trace the test framework wrote.
+   *
+   * @generated from field: repeated toshi.workspace.v1.RecordingSpan spans = 17;
+   */
+  spans?: RecordingSpanJson[];
 };
 
 /**
@@ -231,6 +267,111 @@ export type RecordingJson = {
  */
 export const RecordingSchema: GenMessage<Recording, {jsonType: RecordingJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_recordings, 0);
+
+/**
+ * RecordingSpan is a stretch of a recording with one holder of its screen.
+ *
+ * @generated from message toshi.workspace.v1.RecordingSpan
+ */
+export type RecordingSpan = Message<"toshi.workspace.v1.RecordingSpan"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.RecordingSpanKind kind = 1;
+   */
+  kind: RecordingSpanKind;
+
+  /**
+   * A human or paused span: the display session that held input, how it
+   * was opened (person or program) and the path its input came by
+   * (websocket or api). Empty on an agent span.
+   *
+   * @generated from field: string session_id = 2;
+   */
+  sessionId: string;
+
+  /**
+   * @generated from field: string actor = 3;
+   */
+  actor: string;
+
+  /**
+   * @generated from field: string via = 4;
+   */
+  via: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp start = 5;
+   */
+  start?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp end = 6;
+   */
+  end?: Timestamp | undefined;
+
+  /**
+   * Whether its screenshots were kept: always for an agent span, never for
+   * a paused one.
+   *
+   * @generated from field: bool captured = 7;
+   */
+  captured: boolean;
+};
+
+/**
+ * RecordingSpan is a stretch of a recording with one holder of its screen.
+ *
+ * @generated from message toshi.workspace.v1.RecordingSpan
+ */
+export type RecordingSpanJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.RecordingSpanKind kind = 1;
+   */
+  kind?: RecordingSpanKindJson;
+
+  /**
+   * A human or paused span: the display session that held input, how it
+   * was opened (person or program) and the path its input came by
+   * (websocket or api). Empty on an agent span.
+   *
+   * @generated from field: string session_id = 2;
+   */
+  sessionId?: string;
+
+  /**
+   * @generated from field: string actor = 3;
+   */
+  actor?: string;
+
+  /**
+   * @generated from field: string via = 4;
+   */
+  via?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp start = 5;
+   */
+  start?: TimestampJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp end = 6;
+   */
+  end?: TimestampJson;
+
+  /**
+   * Whether its screenshots were kept: always for an agent span, never for
+   * a paused one.
+   *
+   * @generated from field: bool captured = 7;
+   */
+  captured?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.RecordingSpan.
+ * Use `create(RecordingSpanSchema)` to create a new message.
+ */
+export const RecordingSpanSchema: GenMessage<RecordingSpan, {jsonType: RecordingSpanJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_recordings, 1);
 
 /**
  * RecordingPause is a span with no screenshot, while a display session
@@ -311,7 +452,7 @@ export type RecordingPauseJson = {
  * Use `create(RecordingPauseSchema)` to create a new message.
  */
 export const RecordingPauseSchema: GenMessage<RecordingPause, {jsonType: RecordingPauseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 1);
+  messageDesc(file_toshi_workspace_v1_recordings, 2);
 
 /**
  * @generated from message toshi.workspace.v1.ListRecordingsRequest
@@ -366,7 +507,7 @@ export type ListRecordingsRequestJson = {
  * Use `create(ListRecordingsRequestSchema)` to create a new message.
  */
 export const ListRecordingsRequestSchema: GenMessage<ListRecordingsRequest, {jsonType: ListRecordingsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 2);
+  messageDesc(file_toshi_workspace_v1_recordings, 3);
 
 /**
  * @generated from message toshi.workspace.v1.ListRecordingsResponse
@@ -407,7 +548,7 @@ export type ListRecordingsResponseJson = {
  * Use `create(ListRecordingsResponseSchema)` to create a new message.
  */
 export const ListRecordingsResponseSchema: GenMessage<ListRecordingsResponse, {jsonType: ListRecordingsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 3);
+  messageDesc(file_toshi_workspace_v1_recordings, 4);
 
 /**
  * @generated from message toshi.workspace.v1.GetRecordingRequest
@@ -450,7 +591,7 @@ export type GetRecordingRequestJson = {
  * Use `create(GetRecordingRequestSchema)` to create a new message.
  */
 export const GetRecordingRequestSchema: GenMessage<GetRecordingRequest, {jsonType: GetRecordingRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 4);
+  messageDesc(file_toshi_workspace_v1_recordings, 5);
 
 /**
  * @generated from message toshi.workspace.v1.GetRecordingResponse
@@ -505,7 +646,7 @@ export type GetRecordingResponseJson = {
  * Use `create(GetRecordingResponseSchema)` to create a new message.
  */
 export const GetRecordingResponseSchema: GenMessage<GetRecordingResponse, {jsonType: GetRecordingResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 5);
+  messageDesc(file_toshi_workspace_v1_recordings, 6);
 
 /**
  * RecordingShareLink is one share link of a recording, without the link
@@ -654,7 +795,7 @@ export type RecordingShareLinkJson = {
  * Use `create(RecordingShareLinkSchema)` to create a new message.
  */
 export const RecordingShareLinkSchema: GenMessage<RecordingShareLink, {jsonType: RecordingShareLinkJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 6);
+  messageDesc(file_toshi_workspace_v1_recordings, 7);
 
 /**
  * @generated from message toshi.workspace.v1.CreateRecordingShareLinkRequest
@@ -666,17 +807,19 @@ export type CreateRecordingShareLinkRequest = Message<"toshi.workspace.v1.Create
   recordingId: string;
 
   /**
-   * How long the link stays valid; unset is the server's default, and
-   * more than its maximum is INVALID_ARGUMENT.
+   * How long the link stays valid; unset is the server's default, or the
+   * workspace's plan's maximum when that is shorter, and more than the
+   * plan's maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT.
    *
    * @generated from field: google.protobuf.Duration expires_in = 2;
    */
   expiresIn?: Duration | undefined;
 
   /**
-   * The most bytes its fetches may take; 0 is the server's default, and
-   * more than its maximum, or less than the recording's object, is
-   * INVALID_ARGUMENT.
+   * The most bytes its fetches may take; 0 is the server's default, or the
+   * workspace's plan's maximum when that is lower. More than the plan's
+   * maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT, and less than
+   * the recording's object is INVALID_ARGUMENT.
    *
    * @generated from field: int64 max_bytes = 3;
    */
@@ -693,17 +836,19 @@ export type CreateRecordingShareLinkRequestJson = {
   recordingId?: string;
 
   /**
-   * How long the link stays valid; unset is the server's default, and
-   * more than its maximum is INVALID_ARGUMENT.
+   * How long the link stays valid; unset is the server's default, or the
+   * workspace's plan's maximum when that is shorter, and more than the
+   * plan's maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT.
    *
    * @generated from field: google.protobuf.Duration expires_in = 2;
    */
   expiresIn?: DurationJson;
 
   /**
-   * The most bytes its fetches may take; 0 is the server's default, and
-   * more than its maximum, or less than the recording's object, is
-   * INVALID_ARGUMENT.
+   * The most bytes its fetches may take; 0 is the server's default, or the
+   * workspace's plan's maximum when that is lower. More than the plan's
+   * maximum is RESOURCE_EXHAUSTED with the reason PLAN_LIMIT, and less than
+   * the recording's object is INVALID_ARGUMENT.
    *
    * @generated from field: int64 max_bytes = 3;
    */
@@ -715,7 +860,7 @@ export type CreateRecordingShareLinkRequestJson = {
  * Use `create(CreateRecordingShareLinkRequestSchema)` to create a new message.
  */
 export const CreateRecordingShareLinkRequestSchema: GenMessage<CreateRecordingShareLinkRequest, {jsonType: CreateRecordingShareLinkRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 7);
+  messageDesc(file_toshi_workspace_v1_recordings, 8);
 
 /**
  * @generated from message toshi.workspace.v1.CreateRecordingShareLinkResponse
@@ -776,7 +921,7 @@ export type CreateRecordingShareLinkResponseJson = {
  * Use `create(CreateRecordingShareLinkResponseSchema)` to create a new message.
  */
 export const CreateRecordingShareLinkResponseSchema: GenMessage<CreateRecordingShareLinkResponse, {jsonType: CreateRecordingShareLinkResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 8);
+  messageDesc(file_toshi_workspace_v1_recordings, 9);
 
 /**
  * @generated from message toshi.workspace.v1.ListRecordingShareLinksRequest
@@ -831,7 +976,7 @@ export type ListRecordingShareLinksRequestJson = {
  * Use `create(ListRecordingShareLinksRequestSchema)` to create a new message.
  */
 export const ListRecordingShareLinksRequestSchema: GenMessage<ListRecordingShareLinksRequest, {jsonType: ListRecordingShareLinksRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 9);
+  messageDesc(file_toshi_workspace_v1_recordings, 10);
 
 /**
  * @generated from message toshi.workspace.v1.ListRecordingShareLinksResponse
@@ -872,7 +1017,7 @@ export type ListRecordingShareLinksResponseJson = {
  * Use `create(ListRecordingShareLinksResponseSchema)` to create a new message.
  */
 export const ListRecordingShareLinksResponseSchema: GenMessage<ListRecordingShareLinksResponse, {jsonType: ListRecordingShareLinksResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 10);
+  messageDesc(file_toshi_workspace_v1_recordings, 11);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeRecordingShareLinkRequest
@@ -899,7 +1044,7 @@ export type RevokeRecordingShareLinkRequestJson = {
  * Use `create(RevokeRecordingShareLinkRequestSchema)` to create a new message.
  */
 export const RevokeRecordingShareLinkRequestSchema: GenMessage<RevokeRecordingShareLinkRequest, {jsonType: RevokeRecordingShareLinkRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 11);
+  messageDesc(file_toshi_workspace_v1_recordings, 12);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeRecordingShareLinkResponse
@@ -926,7 +1071,7 @@ export type RevokeRecordingShareLinkResponseJson = {
  * Use `create(RevokeRecordingShareLinkResponseSchema)` to create a new message.
  */
 export const RevokeRecordingShareLinkResponseSchema: GenMessage<RevokeRecordingShareLinkResponse, {jsonType: RevokeRecordingShareLinkResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_recordings, 12);
+  messageDesc(file_toshi_workspace_v1_recordings, 13);
 
 /**
  * RecordingState is where a recording is in its life.
@@ -1035,6 +1180,53 @@ export const RecordingKindSchema: GenEnum<RecordingKind, RecordingKindJson> = /*
   enumDesc(file_toshi_workspace_v1_recordings, 1);
 
 /**
+ * RecordingSpanKind is who held a recorded screen.
+ *
+ * @generated from enum toshi.workspace.v1.RecordingSpanKind
+ */
+export enum RecordingSpanKind {
+  /**
+   * @generated from enum value: RECORDING_SPAN_KIND_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The run itself: a job's command, or a sandbox's program, its agent's
+   * input through the display API included.
+   *
+   * @generated from enum value: RECORDING_SPAN_KIND_AGENT = 1;
+   */
+  AGENT = 1,
+
+  /**
+   * A person controlling a sandbox through a viewer with input.
+   *
+   * @generated from enum value: RECORDING_SPAN_KIND_HUMAN = 2;
+   */
+  HUMAN = 2,
+
+  /**
+   * A job's capture paused while an input session was open.
+   *
+   * @generated from enum value: RECORDING_SPAN_KIND_PAUSED = 3;
+   */
+  PAUSED = 3,
+}
+
+/**
+ * RecordingSpanKind is who held a recorded screen.
+ *
+ * @generated from enum toshi.workspace.v1.RecordingSpanKind
+ */
+export type RecordingSpanKindJson = "RECORDING_SPAN_KIND_UNSPECIFIED" | "RECORDING_SPAN_KIND_AGENT" | "RECORDING_SPAN_KIND_HUMAN" | "RECORDING_SPAN_KIND_PAUSED";
+
+/**
+ * Describes the enum toshi.workspace.v1.RecordingSpanKind.
+ */
+export const RecordingSpanKindSchema: GenEnum<RecordingSpanKind, RecordingSpanKindJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_recordings, 2);
+
+/**
  * RecordingShareLinkState is where a recording's share link is in its
  * life.
  *
@@ -1083,7 +1275,7 @@ export type RecordingShareLinkStateJson = "RECORDING_SHARE_LINK_STATE_UNSPECIFIE
  * Describes the enum toshi.workspace.v1.RecordingShareLinkState.
  */
 export const RecordingShareLinkStateSchema: GenEnum<RecordingShareLinkState, RecordingShareLinkStateJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_recordings, 2);
+  enumDesc(file_toshi_workspace_v1_recordings, 3);
 
 /**
  * RecordingService lists a workload's recordings and signs a URL for a
