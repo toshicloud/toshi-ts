@@ -889,8 +889,9 @@ export type HostJob = Message<"toshi.workspace.v1.HostJob"> & {
   /**
    * Why the job was stopped: github_cancelled, max_duration, operator,
    * github_completed, runner_not_started, runner_unconfirmed, debug_ended,
-   * ran_elsewhere, or for a sandbox spend_cap, tenant_suspended or
-   * tenant_deleted. Empty if it never was.
+   * ran_elsewhere, for a sandbox spend_cap, tenant_suspended,
+   * tenant_deleted or owner, or for a service's run owner_deleted,
+   * service_restart or sleep. Empty if it never was.
    *
    * @generated from field: string stop_reason = 18;
    */
@@ -906,10 +907,12 @@ export type HostJob = Message<"toshi.workspace.v1.HostJob"> & {
 
   /**
    * Why the scheduler last held the job while it was queued:
-   * tenant_suspended, tenant_cap, tenant_vcpu, free_allowance, spend_cap,
-   * jobs_per_hour, burst_guard, plan_os, installation_suspended,
-   * overflow_wait, no_own_capacity or no_capacity. Empty when the job was
-   * never held. It is kept after the job starts.
+   * tenant_suspended, limits_unavailable, tenant_cap, tenant_vcpu,
+   * free_allowance, spend_cap, jobs_per_hour, burst_guard, plan_os,
+   * installation_suspended, overflow_wait, no_own_capacity, no_capacity,
+   * cloud_budget, reserved_for_other, volume_claimed, service_quota,
+   * no_network_enforcement, no_build_base or host_kinds. Empty when the job
+   * was never held. It is kept after the job starts.
    *
    * @generated from field: string hold_reason = 20;
    */
@@ -1118,7 +1121,11 @@ export type HostJob = Message<"toshi.workspace.v1.HostJob"> & {
   /**
    * The Workspace API workload the job runs: a sandbox's or a service's
    * id, or the id of a job workload run on a host. Empty for a
-   * CI job.
+   * CI job, which runs no workload: it has no recordings and no
+   * workload events. Its artifacts carry workload_kind "job" and this
+   * job's id as their workload_id, so ArtifactService.ListArtifacts
+   * with workload_id set to the id lists them; its display sessions
+   * are ListDisplaySessions' by job_id.
    *
    * @generated from field: string workload_id = 44;
    */
@@ -1203,12 +1210,13 @@ export type HostJob = Message<"toshi.workspace.v1.HostJob"> & {
   runAttempt: number;
 
   /**
-   * TOSHI_LICENSED_WINDOWS when the job runs on Windows that Toshi licenses
-   * (a cloud pool's host, or a host's pool with licence = "toshi"): no one
-   * sees its screen, so it opens no display session, takes no takeover and
-   * records no screen. Empty when its screen is available, and for a job
-   * without a host. A workspace's own hosts and its own cloud account show
-   * the screen.
+   * TOSHI_LICENSED_WINDOWS when the job runs on a cloud pool's Windows: no
+   * one sees its screen, so it opens no display session, takes no takeover
+   * and records no screen. DESKTOP_SEAT_REQUIRED when it runs on a host
+   * whose pool has licence = "toshi": only a person who holds a desktop seat
+   * in the workspace opens a display session on it, and it records no
+   * screen. Empty when its screen is available, and for a job without a
+   * host. A workspace's own hosts and its own cloud account show the screen.
    *
    * @generated from field: string screen_unavailable_reason = 53;
    */
@@ -1327,8 +1335,9 @@ export type HostJobJson = {
   /**
    * Why the job was stopped: github_cancelled, max_duration, operator,
    * github_completed, runner_not_started, runner_unconfirmed, debug_ended,
-   * ran_elsewhere, or for a sandbox spend_cap, tenant_suspended or
-   * tenant_deleted. Empty if it never was.
+   * ran_elsewhere, for a sandbox spend_cap, tenant_suspended,
+   * tenant_deleted or owner, or for a service's run owner_deleted,
+   * service_restart or sleep. Empty if it never was.
    *
    * @generated from field: string stop_reason = 18;
    */
@@ -1344,10 +1353,12 @@ export type HostJobJson = {
 
   /**
    * Why the scheduler last held the job while it was queued:
-   * tenant_suspended, tenant_cap, tenant_vcpu, free_allowance, spend_cap,
-   * jobs_per_hour, burst_guard, plan_os, installation_suspended,
-   * overflow_wait, no_own_capacity or no_capacity. Empty when the job was
-   * never held. It is kept after the job starts.
+   * tenant_suspended, limits_unavailable, tenant_cap, tenant_vcpu,
+   * free_allowance, spend_cap, jobs_per_hour, burst_guard, plan_os,
+   * installation_suspended, overflow_wait, no_own_capacity, no_capacity,
+   * cloud_budget, reserved_for_other, volume_claimed, service_quota,
+   * no_network_enforcement, no_build_base or host_kinds. Empty when the job
+   * was never held. It is kept after the job starts.
    *
    * @generated from field: string hold_reason = 20;
    */
@@ -1556,7 +1567,11 @@ export type HostJobJson = {
   /**
    * The Workspace API workload the job runs: a sandbox's or a service's
    * id, or the id of a job workload run on a host. Empty for a
-   * CI job.
+   * CI job, which runs no workload: it has no recordings and no
+   * workload events. Its artifacts carry workload_kind "job" and this
+   * job's id as their workload_id, so ArtifactService.ListArtifacts
+   * with workload_id set to the id lists them; its display sessions
+   * are ListDisplaySessions' by job_id.
    *
    * @generated from field: string workload_id = 44;
    */
@@ -1641,12 +1656,13 @@ export type HostJobJson = {
   runAttempt?: number;
 
   /**
-   * TOSHI_LICENSED_WINDOWS when the job runs on Windows that Toshi licenses
-   * (a cloud pool's host, or a host's pool with licence = "toshi"): no one
-   * sees its screen, so it opens no display session, takes no takeover and
-   * records no screen. Empty when its screen is available, and for a job
-   * without a host. A workspace's own hosts and its own cloud account show
-   * the screen.
+   * TOSHI_LICENSED_WINDOWS when the job runs on a cloud pool's Windows: no
+   * one sees its screen, so it opens no display session, takes no takeover
+   * and records no screen. DESKTOP_SEAT_REQUIRED when it runs on a host
+   * whose pool has licence = "toshi": only a person who holds a desktop seat
+   * in the workspace opens a display session on it, and it records no
+   * screen. Empty when its screen is available, and for a job without a
+   * host. A workspace's own hosts and its own cloud account show the screen.
    *
    * @generated from field: string screen_unavailable_reason = 53;
    */
@@ -2623,7 +2639,8 @@ export const HostJobService: GenService<{
    * host job moves to HOST_JOB_STATE_STOPPING with stop_reason debug_ended,
    * its host destroys the kept VM and the host job finishes completed with
    * its conclusion unchanged. A host job that is not debugging fails with
-   * FAILED_PRECONDITION; one already stopping is returned unchanged.
+   * FAILED_PRECONDITION, as does one stopping for another reason; one
+   * already stopping with debug_ended is returned unchanged.
    *
    * @generated from rpc toshi.workspace.v1.HostJobService.StopHostJobDebug
    */

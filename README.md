@@ -423,8 +423,8 @@ in `proto/toshi/workspace/v1` of the
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit the code is generated from:
-`97c967a669d61bcee048bf7ba90638bd7bddfefb` today, or a release tag once
-one exists. `mise.toml` pins the versions of Node, pnpm and `buf`;
+`2184ae8440834bb5b91991b3e4d62d14ce9dd15a` today, the commit of the
+release tag `v0.4.1`. `mise.toml` pins the versions of Node, pnpm and `buf`;
 `package.json` pins `protoc-gen-es` at the same version as the
 `@bufbuild/protobuf` development dependency.
 

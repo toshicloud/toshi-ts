@@ -115,7 +115,9 @@ export type Artifact = Message<"toshi.workspace.v1.Artifact"> & {
 
   /**
    * The kind of workload that uploaded it, as its token named: job or
-   * sandbox. workload_id and execution_id are that workload's.
+   * sandbox. workload_id and execution_id are that workload's. A CI
+   * job runs no workload, and its token names the kind job with the
+   * host job's own id: its artifacts' workload_id is that id.
    *
    * @generated from field: string workload_kind = 16;
    */
@@ -220,7 +222,9 @@ export type ArtifactJson = {
 
   /**
    * The kind of workload that uploaded it, as its token named: job or
-   * sandbox. workload_id and execution_id are that workload's.
+   * sandbox. workload_id and execution_id are that workload's. A CI
+   * job runs no workload, and its token names the kind job with the
+   * host job's own id: its artifacts' workload_id is that id.
    *
    * @generated from field: string workload_kind = 16;
    */
@@ -868,12 +872,14 @@ export const GetArtifactDownloadURLResponseSchema: GenMessage<GetArtifactDownloa
 /**
  * ArtifactUploadService is how a job uploads what it recorded:
  * it reserves an artifact, uploads each part to a presigned URL, and
- * completes the upload. The caller is the workload itself: every call
- * carries a workload identity token for the audience
- * "toshi:artifacts", and the workspace, project, environment, workload and
- * execution of the artifact are the token's claims, never the request's.
- * A token of another audience, a display token, an expired token, or one
- * that names no workload is refused with UNAUTHENTICATED. A workspace that
+ * completes the upload. The caller is the workload itself, with a
+ * workload identity token for the audience "toshi:artifacts", or a host
+ * storing a recording's strip, with that strip's upload token for the
+ * audience "toshi:recordings". The workspace, project, environment,
+ * workload and execution of the artifact are the token's claims, or the
+ * recording's, never the request's. Another token, a display token, an
+ * expired token, or one that names no workload is refused with
+ * UNAUTHENTICATED. A workspace that
  * is suspended or being deleted is refused with FAILED_PRECONDITION.
  *
  * The data key and the presigned URLs are the only values either call

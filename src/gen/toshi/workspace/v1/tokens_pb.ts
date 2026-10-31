@@ -15,7 +15,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/tokens.proto.
  */
 export const file_toshi_workspace_v1_tokens: GenFile = /*@__PURE__*/
-  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvdG9rZW5zLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi7QMKBVRva2VuEgoKAmlkGAEgASgJEisKBGtpbmQYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEg4KBnNvdXJjZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpyZXZva2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZhY3RpdmUYByABKAgSDAoEbmFtZRgIIAEoCRIPCgdwcm9qZWN0GAkgASgJEhMKC2Vudmlyb25tZW50GAogASgJEi4KCm5vdF9iZWZvcmUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKDWNsaWVudF9yYW5nZXMYDCABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2xpZW50UmFuZ2VzEi8KCmNyZWF0ZWRfYnkYDSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBItCglsYXN0X3VzZWQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIioKDENsaWVudFJhbmdlcxIKCgJpbhgBIAMoCRIOCgZub3RfaW4YAiADKAkiZwoRTGlzdFRva2Vuc1JlcXVlc3QSKwoEa2luZBgBIAEoDjIdLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbktpbmQSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiWAoSTGlzdFRva2Vuc1Jlc3BvbnNlEikKBnRva2VucxgBIAMoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki+AEKG0NyZWF0ZVdvcmtzcGFjZVRva2VuUmVxdWVzdBIMCgRuYW1lGAEgASgJEi4KCmV4cGlyZXNfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAkSLgoKbm90X2JlZm9yZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoNY2xpZW50X3JhbmdlcxgGIAEoCzIgLnRvc2hpLndvcmtzcGFjZS52MS5DbGllbnRSYW5nZXMSDAoEcm9sZRgHIAEoCSJXChxDcmVhdGVXb3Jrc3BhY2VUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEg0KBXZhbHVlGAIgASgJIiAKElJldm9rZVRva2VuUmVxdWVzdBIKCgJpZBgBIAEoCSJZChNSZXZva2VUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEhgKEGhvc3RzX3NpZ25lZF9vdXQYAiABKAUiJwoZUm9sbFdvcmtzcGFjZVRva2VuUmVxdWVzdBIKCgJpZBgBIAEoCSJVChpSb2xsV29ya3NwYWNlVG9rZW5SZXNwb25zZRIoCgV0b2tlbhgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhINCgV2YWx1ZRgCIAEoCSJ7ChJVcGRhdGVUb2tlblJlcXVlc3QSCgoCaWQYASABKAkSKAoFdG9rZW4YAiABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIj8KE1VwZGF0ZVRva2VuUmVzcG9uc2USKAoFdG9rZW4YASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4qXAoJVG9rZW5LaW5kEhoKFlRPS0VOX0tJTkRfVU5TUEVDSUZJRUQQABIZChVUT0tFTl9LSU5EX0VOUk9MTE1FTlQQAhIYChRUT0tFTl9LSU5EX1dPUktTUEFDRRADMqgFCgxUb2tlblNlcnZpY2USbAoKTGlzdFRva2VucxIlLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVzcG9uc2UiD8LzGAt0b2tlbnMucmVhZBKrAQoUQ3JlYXRlV29ya3NwYWNlVG9rZW4SLy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlV29ya3NwYWNlVG9rZW5SZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdvcmtzcGFjZVRva2VuUmVzcG9uc2UiMMLzGAx0b2tlbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYDwoNdG9rZW4uY3JlYXRlZBJwCgtSZXZva2VUb2tlbhImLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VUb2tlblJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlVG9rZW5SZXNwb25zZSIQwvMYDHRva2Vucy53cml0ZRKXAQoSUm9sbFdvcmtzcGFjZVRva2VuEi0udG9zaGkud29ya3NwYWNlLnYxLlJvbGxXb3Jrc3BhY2VUb2tlblJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuUm9sbFdvcmtzcGFjZVRva2VuUmVzcG9uc2UiIsLzGAx0b2tlbnMud3JpdGXS8xgOCgx0b2tlbi5yb2xsZWQScAoLVXBkYXRlVG9rZW4SJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVG9rZW5SZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVRva2VuUmVzcG9uc2UiEMLzGAx0b2tlbnMud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_roles]);
+  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvdG9rZW5zLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi4AQKBVRva2VuEgoKAmlkGAEgASgJEisKBGtpbmQYAiABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEg4KBnNvdXJjZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpleHBpcmVzX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpyZXZva2VkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZhY3RpdmUYByABKAgSDAoEbmFtZRgIIAEoCRIPCgdwcm9qZWN0GAkgASgJEhMKC2Vudmlyb25tZW50GAogASgJEi4KCm5vdF9iZWZvcmUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKDWNsaWVudF9yYW5nZXMYDCABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2xpZW50UmFuZ2VzEi8KCmNyZWF0ZWRfYnkYDSABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuU3ViamVjdBItCglsYXN0X3VzZWQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2NyZWF0b3JfbGVmdF9hdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPAoNZXhwaXJ5X3JlYXNvbhgQIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbkV4cGlyeVJlYXNvbiIqCgxDbGllbnRSYW5nZXMSCgoCaW4YASADKAkSDgoGbm90X2luGAIgAygJImcKEUxpc3RUb2tlbnNSZXF1ZXN0EisKBGtpbmQYASABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW5LaW5kEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlgKEkxpc3RUb2tlbnNSZXNwb25zZRIpCgZ0b2tlbnMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIvgBChtDcmVhdGVXb3Jrc3BhY2VUb2tlblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIuCgpleHBpcmVzX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEi4KCm5vdF9iZWZvcmUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKDWNsaWVudF9yYW5nZXMYBiABKAsyIC50b3NoaS53b3Jrc3BhY2UudjEuQ2xpZW50UmFuZ2VzEgwKBHJvbGUYByABKAkiVwocQ3JlYXRlV29ya3NwYWNlVG9rZW5SZXNwb25zZRIoCgV0b2tlbhgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhINCgV2YWx1ZRgCIAEoCSIgChJSZXZva2VUb2tlblJlcXVlc3QSCgoCaWQYASABKAkiWQoTUmV2b2tlVG9rZW5SZXNwb25zZRIoCgV0b2tlbhgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5Ub2tlbhIYChBob3N0c19zaWduZWRfb3V0GAIgASgFIicKGVJvbGxXb3Jrc3BhY2VUb2tlblJlcXVlc3QSCgoCaWQYASABKAkiVQoaUm9sbFdvcmtzcGFjZVRva2VuUmVzcG9uc2USKAoFdG9rZW4YASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuVG9rZW4SDQoFdmFsdWUYAiABKAkiewoSVXBkYXRlVG9rZW5SZXF1ZXN0EgoKAmlkGAEgASgJEigKBXRva2VuGAIgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayI/ChNVcGRhdGVUb2tlblJlc3BvbnNlEigKBXRva2VuGAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLlRva2VuKlwKCVRva2VuS2luZBIaChZUT0tFTl9LSU5EX1VOU1BFQ0lGSUVEEAASGQoVVE9LRU5fS0lORF9FTlJPTExNRU5UEAISGAoUVE9LRU5fS0lORF9XT1JLU1BBQ0UQAyp7ChFUb2tlbkV4cGlyeVJlYXNvbhIjCh9UT0tFTl9FWFBJUllfUkVBU09OX1VOU1BFQ0lGSUVEEAASGwoXVE9LRU5fRVhQSVJZX1JFQVNPTl9TRVQQARIkCiBUT0tFTl9FWFBJUllfUkVBU09OX0NSRUFUT1JfTEVGVBACMqgFCgxUb2tlblNlcnZpY2USbAoKTGlzdFRva2VucxIlLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0VG9rZW5zUmVzcG9uc2UiD8LzGAt0b2tlbnMucmVhZBKrAQoUQ3JlYXRlV29ya3NwYWNlVG9rZW4SLy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlV29ya3NwYWNlVG9rZW5SZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVdvcmtzcGFjZVRva2VuUmVzcG9uc2UiMMLzGAx0b2tlbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYDwoNdG9rZW4uY3JlYXRlZBJwCgtSZXZva2VUb2tlbhImLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VUb2tlblJlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuUmV2b2tlVG9rZW5SZXNwb25zZSIQwvMYDHRva2Vucy53cml0ZRKXAQoSUm9sbFdvcmtzcGFjZVRva2VuEi0udG9zaGkud29ya3NwYWNlLnYxLlJvbGxXb3Jrc3BhY2VUb2tlblJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuUm9sbFdvcmtzcGFjZVRva2VuUmVzcG9uc2UiIsLzGAx0b2tlbnMud3JpdGXS8xgOCgx0b2tlbi5yb2xsZWQScAoLVXBkYXRlVG9rZW4SJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVG9rZW5SZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZVRva2VuUmVzcG9uc2UiEMLzGAx0b2tlbnMud3JpdGVCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission, file_toshi_workspace_v1_roles]);
 
 /**
  * Token is one of the workspace's tokens, without its value.
@@ -48,7 +48,9 @@ export type Token = Message<"toshi.workspace.v1.Token"> & {
   createdAt?: Timestamp | undefined;
 
   /**
-   * Unset when the token does not expire.
+   * When the token stops working: the expiry it was given, or 30 days
+   * after creator_left_at when that is sooner (expiry_reason). Unset when
+   * the token does not expire.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 5;
    */
@@ -123,6 +125,22 @@ export type Token = Message<"toshi.workspace.v1.Token"> & {
    * @generated from field: google.protobuf.Timestamp last_used = 14;
    */
   lastUsed?: Timestamp | undefined;
+
+  /**
+   * When the person who made the token, or made the token that made it,
+   * stopped being a member of the workspace; unset while they are one, and
+   * once an Owner re-owns the token (UpdateToken).
+   *
+   * @generated from field: google.protobuf.Timestamp creator_left_at = 15;
+   */
+  creatorLeftAt?: Timestamp | undefined;
+
+  /**
+   * Why expires_at is what it is.
+   *
+   * @generated from field: toshi.workspace.v1.TokenExpiryReason expiry_reason = 16;
+   */
+  expiryReason: TokenExpiryReason;
 };
 
 /**
@@ -156,7 +174,9 @@ export type TokenJson = {
   createdAt?: TimestampJson;
 
   /**
-   * Unset when the token does not expire.
+   * When the token stops working: the expiry it was given, or 30 days
+   * after creator_left_at when that is sooner (expiry_reason). Unset when
+   * the token does not expire.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 5;
    */
@@ -231,6 +251,22 @@ export type TokenJson = {
    * @generated from field: google.protobuf.Timestamp last_used = 14;
    */
   lastUsed?: TimestampJson;
+
+  /**
+   * When the person who made the token, or made the token that made it,
+   * stopped being a member of the workspace; unset while they are one, and
+   * once an Owner re-owns the token (UpdateToken).
+   *
+   * @generated from field: google.protobuf.Timestamp creator_left_at = 15;
+   */
+  creatorLeftAt?: TimestampJson;
+
+  /**
+   * Why expires_at is what it is.
+   *
+   * @generated from field: toshi.workspace.v1.TokenExpiryReason expiry_reason = 16;
+   */
+  expiryReason?: TokenExpiryReasonJson;
 };
 
 /**
@@ -759,7 +795,8 @@ export type UpdateTokenRequest = Message<"toshi.workspace.v1.UpdateTokenRequest"
   token?: Token | undefined;
 
   /**
-   * One or more of name, expires_at, not_before and client_ranges.
+   * One or more of name, expires_at, not_before, client_ranges and
+   * created_by.
    *
    * @generated from field: google.protobuf.FieldMask update_mask = 3;
    */
@@ -786,7 +823,8 @@ export type UpdateTokenRequestJson = {
   token?: TokenJson;
 
   /**
-   * One or more of name, expires_at, not_before and client_ranges.
+   * One or more of name, expires_at, not_before, client_ranges and
+   * created_by.
    *
    * @generated from field: google.protobuf.FieldMask update_mask = 3;
    */
@@ -871,6 +909,48 @@ export const TokenKindSchema: GenEnum<TokenKind, TokenKindJson> = /*@__PURE__*/
   enumDesc(file_toshi_workspace_v1_tokens, 0);
 
 /**
+ * TokenExpiryReason says why a token expires when it does.
+ *
+ * @generated from enum toshi.workspace.v1.TokenExpiryReason
+ */
+export enum TokenExpiryReason {
+  /**
+   * The token does not expire.
+   *
+   * @generated from enum value: TOKEN_EXPIRY_REASON_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The token expires when it was made, rolled or updated to.
+   *
+   * @generated from enum value: TOKEN_EXPIRY_REASON_SET = 1;
+   */
+  SET = 1,
+
+  /**
+   * The token expires 30 days after its creator left the workspace, sooner
+   * than the expiry it was given.
+   *
+   * @generated from enum value: TOKEN_EXPIRY_REASON_CREATOR_LEFT = 2;
+   */
+  CREATOR_LEFT = 2,
+}
+
+/**
+ * TokenExpiryReason says why a token expires when it does.
+ *
+ * @generated from enum toshi.workspace.v1.TokenExpiryReason
+ */
+export type TokenExpiryReasonJson = "TOKEN_EXPIRY_REASON_UNSPECIFIED" | "TOKEN_EXPIRY_REASON_SET" | "TOKEN_EXPIRY_REASON_CREATOR_LEFT";
+
+/**
+ * Describes the enum toshi.workspace.v1.TokenExpiryReason.
+ */
+export const TokenExpiryReasonSchema: GenEnum<TokenExpiryReason, TokenExpiryReasonJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_tokens, 1);
+
+/**
  * TokenService manages the workspace's tokens: its API tokens, which call
  * the Workspace API as the workspace, and its enrollment tokens, with which
  * its own hosts register. No call returns a token's value except the one
@@ -950,10 +1030,19 @@ export const TokenService: GenService<{
    * UpdateToken changes an API token's name, expiry, start and client
    * address ranges: the fields update_mask names. The expiry stays within
    * the longest lifetime allowed from now. Only a signed-in session may
-   * call it, and a token someone else made needs members.write as well,
-   * as for RollWorkspaceToken. An enrollment token fails with
+   * call it, but a person's access token may make the call whose mask is
+   * created_by alone; and a token someone else made needs members.write as
+   * well, as for RollWorkspaceToken. An enrollment token fails with
    * INVALID_ARGUMENT; a token of another workspace, and an unknown ID,
    * with NOT_FOUND; a revoked token with FAILED_PRECONDITION.
+   *
+   * created_by re-owns the token: the caller becomes its creator, and the
+   * token, with the tokens it made, no longer runs out because its
+   * creator left (creator_left_at). The new creator must be the caller,
+   * or the call fails with INVALID_ARGUMENT; the caller needs the Owner
+   * role, and must hold every permission of the token's role where the
+   * token acts, or it fails with PERMISSION_DENIED; an expired token
+   * fails with FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.TokenService.UpdateToken
    */

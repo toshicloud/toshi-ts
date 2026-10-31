@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/grants.proto.
  */
 export const file_toshi_workspace_v1_grants: GenFile = /*@__PURE__*/
-  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvZ3JhbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi4gUKBUdyYW50EgoKAmlkGAEgASgJEjEKBW93bmVyGAIgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkdyYW50V29ya3NwYWNlEjMKB2dyYW50ZWUYAyABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRXb3Jrc3BhY2USQQoLZW52aXJvbm1lbnQYBCABKAsyKi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRFbnZpcm9ubWVudFRhcmdldEgAEjkKB3NhbmRib3gYBSABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTYW5kYm94VGFyZ2V0SAASOQoHcHJldmlldxgGIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFByZXZpZXdUYXJnZXRIABItCgVsZXZlbBgHIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudExldmVsEi0KBXN0YXRlGAggASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkdyYW50U3RhdGUSEgoKb2ZmZXJlZF9ieRgJIAEoCRIuCgpvZmZlcmVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglsYXBzZXNfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2FjY2VwdGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghlbmRlZF9ieRgQIAEoCUIICgZ0YXJnZXQiKgoOR3JhbnRXb3Jrc3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSI+ChZHcmFudEVudmlyb25tZW50VGFyZ2V0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkiTgoSR3JhbnRTYW5kYm94VGFyZ2V0EhIKCnNhbmRib3hfaWQYASABKAkSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCSJfChJHcmFudFByZXZpZXdUYXJnZXQSEgoKc2FuZGJveF9pZBgBIAEoCRIPCgdjaGFubmVsGAIgASgJEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAki0QIKEkNyZWF0ZUdyYW50UmVxdWVzdBIZChFncmFudGVlX3dvcmtzcGFjZRgBIAEoCRJBCgtlbnZpcm9ubWVudBgCIAEoCzIqLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudEVudmlyb25tZW50VGFyZ2V0SAASOQoHc2FuZGJveBgDIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNhbmRib3hUYXJnZXRIABI5CgdwcmV2aWV3GAQgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLkdyYW50UHJldmlld1RhcmdldEgAEi0KBWxldmVsGAUgASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkdyYW50TGV2ZWwSLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCAoGdGFyZ2V0Ij8KE0NyZWF0ZUdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQiHQoPR2V0R3JhbnRSZXF1ZXN0EgoKAmlkGAEgASgJIjwKEEdldEdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQilwEKEUxpc3RHcmFudHNSZXF1ZXN0EisKBHNpZGUYASABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTaWRlEi4KBnN0YXRlcxgCIAMoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFN0YXRlEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJIlgKEkxpc3RHcmFudHNSZXNwb25zZRIpCgZncmFudHMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiAKEkFjY2VwdEdyYW50UmVxdWVzdBIKCgJpZBgBIAEoCSI/ChNBY2NlcHRHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50IiEKE0RlY2xpbmVHcmFudFJlcXVlc3QSCgoCaWQYASABKAkiQAoURGVjbGluZUdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQibwoSVXBkYXRlR3JhbnRSZXF1ZXN0EigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayI/ChNVcGRhdGVHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50IiAKElJldm9rZUdyYW50UmVxdWVzdBIKCgJpZBgBIAEoCSI/ChNSZXZva2VHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50Ih8KEUxlYXZlR3JhbnRSZXF1ZXN0EgoKAmlkGAEgASgJIj4KEkxlYXZlR3JhbnRSZXNwb25zZRIoCgVncmFudBgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudCpxCgpHcmFudExldmVsEhsKF0dSQU5UX0xFVkVMX1VOU1BFQ0lGSUVEEAASFAoQR1JBTlRfTEVWRUxfVklFVxABEhcKE0dSQU5UX0xFVkVMX0NPTk5FQ1QQAhIXChNHUkFOVF9MRVZFTF9PUEVSQVRFEAMq1QEKCkdyYW50U3RhdGUSGwoXR1JBTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIXChNHUkFOVF9TVEFURV9PRkZFUkVEEAESFgoSR1JBTlRfU1RBVEVfQUNUSVZFEAISGAoUR1JBTlRfU1RBVEVfREVDTElORUQQAxIWChJHUkFOVF9TVEFURV9MQVBTRUQQBBIXChNHUkFOVF9TVEFURV9SRVZPS0VEEAUSFwoTR1JBTlRfU1RBVEVfRVhQSVJFRBAGEhUKEUdSQU5UX1NUQVRFX0VOREVEEAcqVgoJR3JhbnRTaWRlEhoKFkdSQU5UX1NJREVfVU5TUEVDSUZJRUQQABIUChBHUkFOVF9TSURFX0dJVkVOEAESFwoTR1JBTlRfU0lERV9SRUNFSVZFRBACMvcICgxHcmFudFNlcnZpY2USkAEKC0NyZWF0ZUdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVHcmFudFJlc3BvbnNlIjDC8xgMZ3JhbnRzLndyaXRlyvMYCXdvcmtzcGFjZdLzGA8KDWdyYW50Lm9mZmVyZWQScwoIR2V0R3JhbnQSIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0R3JhbnRSZXF1ZXN0GiQudG9zaGkud29ya3NwYWNlLnYxLkdldEdyYW50UmVzcG9uc2UiHMLzGAtncmFudHMucmVhZMrzGAl3b3Jrc3BhY2USeQoKTGlzdEdyYW50cxIlLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0R3JhbnRzUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0R3JhbnRzUmVzcG9uc2UiHMLzGAtncmFudHMucmVhZMrzGAl3b3Jrc3BhY2USkQEKC0FjY2VwdEdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLkFjY2VwdEdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5BY2NlcHRHcmFudFJlc3BvbnNlIjHC8xgMZ3JhbnRzLndyaXRlyvMYCXdvcmtzcGFjZdLzGBAKDmdyYW50LmFjY2VwdGVkEpQBCgxEZWNsaW5lR3JhbnQSJy50b3NoaS53b3Jrc3BhY2UudjEuRGVjbGluZUdyYW50UmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5EZWNsaW5lR3JhbnRSZXNwb25zZSIxwvMYDGdyYW50cy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgQCg5ncmFudC5kZWNsaW5lZBKnAQoLVXBkYXRlR3JhbnQSJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlR3JhbnRSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUdyYW50UmVzcG9uc2UiR8LzGAxncmFudHMud3JpdGXK8xgJd29ya3NwYWNl0vMYJgoUZ3JhbnQuZXhwaXJ5X2NoYW5nZWQSDmdyYW50OmdyYW50LmlkEn8KC1Jldm9rZUdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VHcmFudFJlc3BvbnNlIh/C8xgMZ3JhbnRzLndyaXRlyvMYC2Vudmlyb25tZW50Eo0BCgpMZWF2ZUdyYW50EiUudG9zaGkud29ya3NwYWNlLnYxLkxlYXZlR3JhbnRSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkxlYXZlR3JhbnRSZXNwb25zZSIwwvMYDGdyYW50cy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgPCg1ncmFudC5yZXZva2VkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Ch90b3NoaS93b3Jrc3BhY2UvdjEvZ3JhbnRzLnByb3RvEhJ0b3NoaS53b3Jrc3BhY2UudjEi4gUKBUdyYW50EgoKAmlkGAEgASgJEjEKBW93bmVyGAIgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLkdyYW50V29ya3NwYWNlEjMKB2dyYW50ZWUYAyABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRXb3Jrc3BhY2USQQoLZW52aXJvbm1lbnQYBCABKAsyKi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRFbnZpcm9ubWVudFRhcmdldEgAEjkKB3NhbmRib3gYBSABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTYW5kYm94VGFyZ2V0SAASOQoHcHJldmlldxgGIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFByZXZpZXdUYXJnZXRIABItCgVsZXZlbBgHIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudExldmVsEi0KBXN0YXRlGAggASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkdyYW50U3RhdGUSEgoKb2ZmZXJlZF9ieRgJIAEoCRIuCgpvZmZlcmVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglsYXBzZXNfYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2FjY2VwdGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxsYXN0X3VzZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZGVkX2F0GA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghlbmRlZF9ieRgQIAEoCUIICgZ0YXJnZXQitwEKDFNoYXJlZEFjY2VzcxIQCghncmFudF9pZBgBIAEoCRIzCgtncmFudF9sZXZlbBgCIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudExldmVsEi0KBWxldmVsGAMgASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkdyYW50TGV2ZWwSMQoFb3duZXIYBCABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRXb3Jrc3BhY2UiKgoOR3JhbnRXb3Jrc3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSI+ChZHcmFudEVudmlyb25tZW50VGFyZ2V0Eg8KB3Byb2plY3QYASABKAkSEwoLZW52aXJvbm1lbnQYAiABKAkiTgoSR3JhbnRTYW5kYm94VGFyZ2V0EhIKCnNhbmRib3hfaWQYASABKAkSDwoHcHJvamVjdBgCIAEoCRITCgtlbnZpcm9ubWVudBgDIAEoCSJfChJHcmFudFByZXZpZXdUYXJnZXQSEgoKc2FuZGJveF9pZBgBIAEoCRIPCgdjaGFubmVsGAIgASgJEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAki5gIKEkNyZWF0ZUdyYW50UmVxdWVzdBIZChFncmFudGVlX3dvcmtzcGFjZRgBIAEoCRJBCgtlbnZpcm9ubWVudBgCIAEoCzIqLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudEVudmlyb25tZW50VGFyZ2V0SAASOQoHc2FuZGJveBgDIAEoCzImLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFNhbmRib3hUYXJnZXRIABI5CgdwcmV2aWV3GAQgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLkdyYW50UHJldmlld1RhcmdldEgAEi0KBWxldmVsGAUgASgOMh4udG9zaGkud29ya3NwYWNlLnYxLkdyYW50TGV2ZWwSLgoKZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLcmVxdWVzdF9rZXkYByABKAlCCAoGdGFyZ2V0Ij8KE0NyZWF0ZUdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQiHQoPR2V0R3JhbnRSZXF1ZXN0EgoKAmlkGAEgASgJIjwKEEdldEdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQilwEKEUxpc3RHcmFudHNSZXF1ZXN0EisKBHNpZGUYASABKA4yHS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnRTaWRlEi4KBnN0YXRlcxgCIAMoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudFN0YXRlEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJIlgKEkxpc3RHcmFudHNSZXNwb25zZRIpCgZncmFudHMYASADKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiAKEkFjY2VwdEdyYW50UmVxdWVzdBIKCgJpZBgBIAEoCSI/ChNBY2NlcHRHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50IiEKE0RlY2xpbmVHcmFudFJlcXVlc3QSCgoCaWQYASABKAkiQAoURGVjbGluZUdyYW50UmVzcG9uc2USKAoFZ3JhbnQYASABKAsyGS50b3NoaS53b3Jrc3BhY2UudjEuR3JhbnQibwoSVXBkYXRlR3JhbnRSZXF1ZXN0EigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayI/ChNVcGRhdGVHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50IiAKElJldm9rZUdyYW50UmVxdWVzdBIKCgJpZBgBIAEoCSI/ChNSZXZva2VHcmFudFJlc3BvbnNlEigKBWdyYW50GAEgASgLMhkudG9zaGkud29ya3NwYWNlLnYxLkdyYW50Ih8KEUxlYXZlR3JhbnRSZXF1ZXN0EgoKAmlkGAEgASgJIj4KEkxlYXZlR3JhbnRSZXNwb25zZRIoCgVncmFudBgBIAEoCzIZLnRvc2hpLndvcmtzcGFjZS52MS5HcmFudCpxCgpHcmFudExldmVsEhsKF0dSQU5UX0xFVkVMX1VOU1BFQ0lGSUVEEAASFAoQR1JBTlRfTEVWRUxfVklFVxABEhcKE0dSQU5UX0xFVkVMX0NPTk5FQ1QQAhIXChNHUkFOVF9MRVZFTF9PUEVSQVRFEAMq1QEKCkdyYW50U3RhdGUSGwoXR1JBTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIXChNHUkFOVF9TVEFURV9PRkZFUkVEEAESFgoSR1JBTlRfU1RBVEVfQUNUSVZFEAISGAoUR1JBTlRfU1RBVEVfREVDTElORUQQAxIWChJHUkFOVF9TVEFURV9MQVBTRUQQBBIXChNHUkFOVF9TVEFURV9SRVZPS0VEEAUSFwoTR1JBTlRfU1RBVEVfRVhQSVJFRBAGEhUKEUdSQU5UX1NUQVRFX0VOREVEEAcqVgoJR3JhbnRTaWRlEhoKFkdSQU5UX1NJREVfVU5TUEVDSUZJRUQQABIUChBHUkFOVF9TSURFX0dJVkVOEAESFwoTR1JBTlRfU0lERV9SRUNFSVZFRBACMvcICgxHcmFudFNlcnZpY2USkAEKC0NyZWF0ZUdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVHcmFudFJlc3BvbnNlIjDC8xgMZ3JhbnRzLndyaXRlyvMYCXdvcmtzcGFjZdLzGA8KDWdyYW50Lm9mZmVyZWQScwoIR2V0R3JhbnQSIy50b3NoaS53b3Jrc3BhY2UudjEuR2V0R3JhbnRSZXF1ZXN0GiQudG9zaGkud29ya3NwYWNlLnYxLkdldEdyYW50UmVzcG9uc2UiHMLzGAtncmFudHMucmVhZMrzGAl3b3Jrc3BhY2USeQoKTGlzdEdyYW50cxIlLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0R3JhbnRzUmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0R3JhbnRzUmVzcG9uc2UiHMLzGAtncmFudHMucmVhZMrzGAl3b3Jrc3BhY2USkQEKC0FjY2VwdEdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLkFjY2VwdEdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5BY2NlcHRHcmFudFJlc3BvbnNlIjHC8xgMZ3JhbnRzLndyaXRlyvMYCXdvcmtzcGFjZdLzGBAKDmdyYW50LmFjY2VwdGVkEpQBCgxEZWNsaW5lR3JhbnQSJy50b3NoaS53b3Jrc3BhY2UudjEuRGVjbGluZUdyYW50UmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5EZWNsaW5lR3JhbnRSZXNwb25zZSIxwvMYDGdyYW50cy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgQCg5ncmFudC5kZWNsaW5lZBKnAQoLVXBkYXRlR3JhbnQSJi50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlR3JhbnRSZXF1ZXN0GicudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUdyYW50UmVzcG9uc2UiR8LzGAxncmFudHMud3JpdGXK8xgJd29ya3NwYWNl0vMYJgoUZ3JhbnQuZXhwaXJ5X2NoYW5nZWQSDmdyYW50OmdyYW50LmlkEn8KC1Jldm9rZUdyYW50EiYudG9zaGkud29ya3NwYWNlLnYxLlJldm9rZUdyYW50UmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5SZXZva2VHcmFudFJlc3BvbnNlIh/C8xgMZ3JhbnRzLndyaXRlyvMYC2Vudmlyb25tZW50Eo0BCgpMZWF2ZUdyYW50EiUudG9zaGkud29ya3NwYWNlLnYxLkxlYXZlR3JhbnRSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkxlYXZlR3JhbnRSZXNwb25zZSIwwvMYDGdyYW50cy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgPCg1ncmFudC5yZXZva2VkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Grant is one workspace's grant to another. Both sides read the same
@@ -261,6 +261,87 @@ export const GrantSchema: GenMessage<Grant, {jsonType: GrantJson}> = /*@__PURE__
   messageDesc(file_toshi_workspace_v1_grants, 0);
 
 /**
+ * SharedAccess is what a grant gives the grantee on one sandbox.
+ *
+ * @generated from message toshi.workspace.v1.SharedAccess
+ */
+export type SharedAccess = Message<"toshi.workspace.v1.SharedAccess"> & {
+  /**
+   * The grant the sandbox was read through.
+   *
+   * @generated from field: string grant_id = 1;
+   */
+  grantId: string;
+
+  /**
+   * The grant's level.
+   *
+   * @generated from field: toshi.workspace.v1.GrantLevel grant_level = 2;
+   */
+  grantLevel: GrantLevel;
+
+  /**
+   * The level on this sandbox: the grant's, or VIEW for a sandbox with
+   * bindings or a state volume, or while the owner's workspace is
+   * suspended.
+   *
+   * @generated from field: toshi.workspace.v1.GrantLevel level = 3;
+   */
+  level: GrantLevel;
+
+  /**
+   * The workspace that owns the sandbox.
+   *
+   * @generated from field: toshi.workspace.v1.GrantWorkspace owner = 4;
+   */
+  owner?: GrantWorkspace | undefined;
+};
+
+/**
+ * SharedAccess is what a grant gives the grantee on one sandbox.
+ *
+ * @generated from message toshi.workspace.v1.SharedAccess
+ */
+export type SharedAccessJson = {
+  /**
+   * The grant the sandbox was read through.
+   *
+   * @generated from field: string grant_id = 1;
+   */
+  grantId?: string;
+
+  /**
+   * The grant's level.
+   *
+   * @generated from field: toshi.workspace.v1.GrantLevel grant_level = 2;
+   */
+  grantLevel?: GrantLevelJson;
+
+  /**
+   * The level on this sandbox: the grant's, or VIEW for a sandbox with
+   * bindings or a state volume, or while the owner's workspace is
+   * suspended.
+   *
+   * @generated from field: toshi.workspace.v1.GrantLevel level = 3;
+   */
+  level?: GrantLevelJson;
+
+  /**
+   * The workspace that owns the sandbox.
+   *
+   * @generated from field: toshi.workspace.v1.GrantWorkspace owner = 4;
+   */
+  owner?: GrantWorkspaceJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SharedAccess.
+ * Use `create(SharedAccessSchema)` to create a new message.
+ */
+export const SharedAccessSchema: GenMessage<SharedAccess, {jsonType: SharedAccessJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_grants, 1);
+
+/**
  * GrantWorkspace is one side of a grant.
  *
  * @generated from message toshi.workspace.v1.GrantWorkspace
@@ -303,7 +384,7 @@ export type GrantWorkspaceJson = {
  * Use `create(GrantWorkspaceSchema)` to create a new message.
  */
 export const GrantWorkspaceSchema: GenMessage<GrantWorkspace, {jsonType: GrantWorkspaceJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 1);
+  messageDesc(file_toshi_workspace_v1_grants, 2);
 
 /**
  * GrantEnvironmentTarget covers every sandbox of one environment.
@@ -344,7 +425,7 @@ export type GrantEnvironmentTargetJson = {
  * Use `create(GrantEnvironmentTargetSchema)` to create a new message.
  */
 export const GrantEnvironmentTargetSchema: GenMessage<GrantEnvironmentTarget, {jsonType: GrantEnvironmentTargetJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 2);
+  messageDesc(file_toshi_workspace_v1_grants, 3);
 
 /**
  * GrantSandboxTarget covers one sandbox.
@@ -399,7 +480,7 @@ export type GrantSandboxTargetJson = {
  * Use `create(GrantSandboxTargetSchema)` to create a new message.
  */
 export const GrantSandboxTargetSchema: GenMessage<GrantSandboxTarget, {jsonType: GrantSandboxTargetJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 3);
+  messageDesc(file_toshi_workspace_v1_grants, 4);
 
 /**
  * GrantPreviewTarget covers one preview of one sandbox.
@@ -470,7 +551,7 @@ export type GrantPreviewTargetJson = {
  * Use `create(GrantPreviewTargetSchema)` to create a new message.
  */
 export const GrantPreviewTargetSchema: GenMessage<GrantPreviewTarget, {jsonType: GrantPreviewTargetJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 4);
+  messageDesc(file_toshi_workspace_v1_grants, 5);
 
 /**
  * @generated from message toshi.workspace.v1.CreateGrantRequest
@@ -521,6 +602,11 @@ export type CreateGrantRequest = Message<"toshi.workspace.v1.CreateGrantRequest"
    * @generated from field: google.protobuf.Timestamp expires_at = 6;
    */
   expiresAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: string request_key = 7;
+   */
+  requestKey: string;
 };
 
 /**
@@ -562,6 +648,11 @@ export type CreateGrantRequestJson = {
    * @generated from field: google.protobuf.Timestamp expires_at = 6;
    */
   expiresAt?: TimestampJson;
+
+  /**
+   * @generated from field: string request_key = 7;
+   */
+  requestKey?: string;
 };
 
 /**
@@ -569,7 +660,7 @@ export type CreateGrantRequestJson = {
  * Use `create(CreateGrantRequestSchema)` to create a new message.
  */
 export const CreateGrantRequestSchema: GenMessage<CreateGrantRequest, {jsonType: CreateGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 5);
+  messageDesc(file_toshi_workspace_v1_grants, 6);
 
 /**
  * @generated from message toshi.workspace.v1.CreateGrantResponse
@@ -596,7 +687,7 @@ export type CreateGrantResponseJson = {
  * Use `create(CreateGrantResponseSchema)` to create a new message.
  */
 export const CreateGrantResponseSchema: GenMessage<CreateGrantResponse, {jsonType: CreateGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 6);
+  messageDesc(file_toshi_workspace_v1_grants, 7);
 
 /**
  * @generated from message toshi.workspace.v1.GetGrantRequest
@@ -623,7 +714,7 @@ export type GetGrantRequestJson = {
  * Use `create(GetGrantRequestSchema)` to create a new message.
  */
 export const GetGrantRequestSchema: GenMessage<GetGrantRequest, {jsonType: GetGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 7);
+  messageDesc(file_toshi_workspace_v1_grants, 8);
 
 /**
  * @generated from message toshi.workspace.v1.GetGrantResponse
@@ -650,7 +741,7 @@ export type GetGrantResponseJson = {
  * Use `create(GetGrantResponseSchema)` to create a new message.
  */
 export const GetGrantResponseSchema: GenMessage<GetGrantResponse, {jsonType: GetGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 8);
+  messageDesc(file_toshi_workspace_v1_grants, 9);
 
 /**
  * @generated from message toshi.workspace.v1.ListGrantsRequest
@@ -719,7 +810,7 @@ export type ListGrantsRequestJson = {
  * Use `create(ListGrantsRequestSchema)` to create a new message.
  */
 export const ListGrantsRequestSchema: GenMessage<ListGrantsRequest, {jsonType: ListGrantsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 9);
+  messageDesc(file_toshi_workspace_v1_grants, 10);
 
 /**
  * @generated from message toshi.workspace.v1.ListGrantsResponse
@@ -760,7 +851,7 @@ export type ListGrantsResponseJson = {
  * Use `create(ListGrantsResponseSchema)` to create a new message.
  */
 export const ListGrantsResponseSchema: GenMessage<ListGrantsResponse, {jsonType: ListGrantsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 10);
+  messageDesc(file_toshi_workspace_v1_grants, 11);
 
 /**
  * @generated from message toshi.workspace.v1.AcceptGrantRequest
@@ -787,7 +878,7 @@ export type AcceptGrantRequestJson = {
  * Use `create(AcceptGrantRequestSchema)` to create a new message.
  */
 export const AcceptGrantRequestSchema: GenMessage<AcceptGrantRequest, {jsonType: AcceptGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 11);
+  messageDesc(file_toshi_workspace_v1_grants, 12);
 
 /**
  * @generated from message toshi.workspace.v1.AcceptGrantResponse
@@ -814,7 +905,7 @@ export type AcceptGrantResponseJson = {
  * Use `create(AcceptGrantResponseSchema)` to create a new message.
  */
 export const AcceptGrantResponseSchema: GenMessage<AcceptGrantResponse, {jsonType: AcceptGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 12);
+  messageDesc(file_toshi_workspace_v1_grants, 13);
 
 /**
  * @generated from message toshi.workspace.v1.DeclineGrantRequest
@@ -841,7 +932,7 @@ export type DeclineGrantRequestJson = {
  * Use `create(DeclineGrantRequestSchema)` to create a new message.
  */
 export const DeclineGrantRequestSchema: GenMessage<DeclineGrantRequest, {jsonType: DeclineGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 13);
+  messageDesc(file_toshi_workspace_v1_grants, 14);
 
 /**
  * @generated from message toshi.workspace.v1.DeclineGrantResponse
@@ -868,7 +959,7 @@ export type DeclineGrantResponseJson = {
  * Use `create(DeclineGrantResponseSchema)` to create a new message.
  */
 export const DeclineGrantResponseSchema: GenMessage<DeclineGrantResponse, {jsonType: DeclineGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 14);
+  messageDesc(file_toshi_workspace_v1_grants, 15);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateGrantRequest
@@ -909,7 +1000,7 @@ export type UpdateGrantRequestJson = {
  * Use `create(UpdateGrantRequestSchema)` to create a new message.
  */
 export const UpdateGrantRequestSchema: GenMessage<UpdateGrantRequest, {jsonType: UpdateGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 15);
+  messageDesc(file_toshi_workspace_v1_grants, 16);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateGrantResponse
@@ -936,7 +1027,7 @@ export type UpdateGrantResponseJson = {
  * Use `create(UpdateGrantResponseSchema)` to create a new message.
  */
 export const UpdateGrantResponseSchema: GenMessage<UpdateGrantResponse, {jsonType: UpdateGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 16);
+  messageDesc(file_toshi_workspace_v1_grants, 17);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeGrantRequest
@@ -963,7 +1054,7 @@ export type RevokeGrantRequestJson = {
  * Use `create(RevokeGrantRequestSchema)` to create a new message.
  */
 export const RevokeGrantRequestSchema: GenMessage<RevokeGrantRequest, {jsonType: RevokeGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 17);
+  messageDesc(file_toshi_workspace_v1_grants, 18);
 
 /**
  * @generated from message toshi.workspace.v1.RevokeGrantResponse
@@ -990,7 +1081,7 @@ export type RevokeGrantResponseJson = {
  * Use `create(RevokeGrantResponseSchema)` to create a new message.
  */
 export const RevokeGrantResponseSchema: GenMessage<RevokeGrantResponse, {jsonType: RevokeGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 18);
+  messageDesc(file_toshi_workspace_v1_grants, 19);
 
 /**
  * @generated from message toshi.workspace.v1.LeaveGrantRequest
@@ -1017,7 +1108,7 @@ export type LeaveGrantRequestJson = {
  * Use `create(LeaveGrantRequestSchema)` to create a new message.
  */
 export const LeaveGrantRequestSchema: GenMessage<LeaveGrantRequest, {jsonType: LeaveGrantRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 19);
+  messageDesc(file_toshi_workspace_v1_grants, 20);
 
 /**
  * @generated from message toshi.workspace.v1.LeaveGrantResponse
@@ -1044,7 +1135,7 @@ export type LeaveGrantResponseJson = {
  * Use `create(LeaveGrantResponseSchema)` to create a new message.
  */
 export const LeaveGrantResponseSchema: GenMessage<LeaveGrantResponse, {jsonType: LeaveGrantResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_grants, 20);
+  messageDesc(file_toshi_workspace_v1_grants, 21);
 
 /**
  * GrantLevel is what a grant lets the grantee do; each level includes the
@@ -1305,9 +1396,9 @@ export const GrantService: GenService<{
    * UpdateGrant sets the fields of grant.id's grant that update_mask
    * names, on a grant the workspace gave that is OFFERED or ACTIVE. The
    * one field it sets is expires_at: a time in the future, or unset for
-   * no expiry. An unset update_mask names the fields grant carries, an
-   * empty one changes nothing, and "*" or a path of another field is
-   * INVALID_ARGUMENT. A grant that has ended is FAILED_PRECONDITION.
+   * no expiry. An unset update_mask names the fields grant carries. An
+   * empty one, an unset one with no expires_at, "*" and a path of another
+   * field are INVALID_ARGUMENT. A grant that has ended is FAILED_PRECONDITION.
    *
    * @generated from rpc toshi.workspace.v1.GrantService.UpdateGrant
    */

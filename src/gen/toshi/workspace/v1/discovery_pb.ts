@@ -430,7 +430,8 @@ export type ProductFeature = Message<"toshi.workspace.v1.ProductFeature"> & {
    * entitlement is the most the workspace may have of the feature: the
    * operator's override for the workspace, else its plan's value, else the
    * value of the plan key it falls back to, else the feature's default
-   * (source). Unset when the config turns the product off.
+   * (source). Unset when the config turns the product off or the build
+   * does not include it.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue entitlement = 5;
    */
@@ -449,7 +450,8 @@ export type ProductFeature = Message<"toshi.workspace.v1.ProductFeature"> & {
   /**
    * effective is the value that applies: the setting when the feature is
    * narrowable and the entitlement contains it, else the entitlement.
-   * Unset when the config turns the product off.
+   * Unset when the config turns the product off or the build does not
+   * include it.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue effective = 7;
    */
@@ -527,7 +529,8 @@ export type ProductFeatureJson = {
    * entitlement is the most the workspace may have of the feature: the
    * operator's override for the workspace, else its plan's value, else the
    * value of the plan key it falls back to, else the feature's default
-   * (source). Unset when the config turns the product off.
+   * (source). Unset when the config turns the product off or the build
+   * does not include it.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue entitlement = 5;
    */
@@ -546,7 +549,8 @@ export type ProductFeatureJson = {
   /**
    * effective is the value that applies: the setting when the feature is
    * narrowable and the entitlement contains it, else the entitlement.
-   * Unset when the config turns the product off.
+   * Unset when the config turns the product off or the build does not
+   * include it.
    *
    * @generated from field: toshi.workspace.v1.FeatureValue effective = 7;
    */

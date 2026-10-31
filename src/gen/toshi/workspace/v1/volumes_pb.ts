@@ -4,8 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Duration, DurationJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_duration, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Duration, DurationJson, FieldMask, FieldMaskJson, Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import { file_toshi_permission } from "../../permission_pb.js";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/volumes.proto.
  */
 export const file_toshi_workspace_v1_volumes: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIrQECgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCRIWCg5sYXRlc3RfdmVyc2lvbhgJIAEoAxI3ChNsYXRlc3RfdmVyc2lvbl90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglsb3N0X3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkkKGmxhdGVzdF92ZXJzaW9uX2NvbnNpc3RlbmN5GAwgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZUNvbnNpc3RlbmN5EjQKEXNuYXBzaG90X2ludGVydmFsGA0gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhkKEWxhc3Rfc2F2ZV9mYWlsdXJlGA4gASgJEjoKFmxhc3Rfc2F2ZV9mYWlsdXJlX3RpbWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIvwBCg1Wb2x1bWVWZXJzaW9uEg4KBm51bWJlchgBIAEoAxIvCgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKc2l6ZV9ieXRlcxgDIAEoAxIOCgZzaGEyNTYYBCABKAkSFQoNcmVzdG9yZWRfZnJvbRgFIAEoAxIzCgRraW5kGAYgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZVZlcnNpb25LaW5kEjoKC2NvbnNpc3RlbmN5GAcgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZUNvbnNpc3RlbmN5IkwKEkxpc3RWb2x1bWVzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlsKE0xpc3RWb2x1bWVzUmVzcG9uc2USKwoHdm9sdW1lcxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjYKEEdldFZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkiPwoRR2V0Vm9sdW1lUmVzcG9uc2USKgoGdm9sdW1lGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZSJOChNBdHRhY2hWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEhMKC3dvcmtsb2FkX2lkGAMgASgJIkIKFEF0dGFjaFZvbHVtZVJlc3BvbnNlEioKBnZvbHVtZRgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUiOQoTRGV0YWNoVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXZvbHVtZV9pZBgCIAEoCSJCChREZXRhY2hWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lImYKGUxpc3RWb2x1bWVWZXJzaW9uc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiagoaTGlzdFZvbHVtZVZlcnNpb25zUmVzcG9uc2USMwoIdmVyc2lvbnMYASADKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lVmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiSwoUUmVzdG9yZVZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkSDwoHdmVyc2lvbhgDIAEoAyJ3ChVSZXN0b3JlVm9sdW1lUmVzcG9uc2USMgoHdmVyc2lvbhgBIAEoCzIhLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVWZXJzaW9uEioKBnZvbHVtZRgCIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUqhwEKClZvbHVtZU1vZGUSGwoXVk9MVU1FX01PREVfVU5TUEVDSUZJRUQQABIVChFWT0xVTUVfTU9ERV9DQUNIRRABEhQKEFZPTFVNRV9NT0RFX1NFRUQQAhIVChFWT0xVTUVfTU9ERV9TVEFURRADEhgKFFZPTFVNRV9NT0RFX0FSVElGQUNUEAQqeAoRVm9sdW1lVmVyc2lvbktpbmQSIwofVk9MVU1FX1ZFUlNJT05fS0lORF9VTlNQRUNJRklFRBAAEhwKGFZPTFVNRV9WRVJTSU9OX0tJTkRfU0FWRRABEiAKHFZPTFVNRV9WRVJTSU9OX0tJTkRfU05BUFNIT1QQAip5ChFWb2x1bWVDb25zaXN0ZW5jeRIiCh5WT0xVTUVfQ09OU0lTVEVOQ1lfVU5TUEVDSUZJRUQQABIcChhWT0xVTUVfQ09OU0lTVEVOQ1lfQ1JBU0gQARIiCh5WT0xVTUVfQ09OU0lTVEVOQ1lfQVBQTElDQVRJT04QAjKyBgoNVm9sdW1lU2VydmljZRJ7CgtMaXN0Vm9sdW1lcxImLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lc1JlcXVlc3QaJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFZvbHVtZXNSZXNwb25zZSIbwvMYDHZvbHVtZXMucmVhZMrzGAdwcm9qZWN0EnUKCUdldFZvbHVtZRIkLnRvc2hpLndvcmtzcGFjZS52MS5HZXRWb2x1bWVSZXF1ZXN0GiUudG9zaGkud29ya3NwYWNlLnYxLkdldFZvbHVtZVJlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSfwoMQXR0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQXR0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3QSfwoMRGV0YWNoVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuRGV0YWNoVm9sdW1lUmVzcG9uc2UiHMLzGA12b2x1bWVzLndyaXRlyvMYB3Byb2plY3QSkAEKEkxpc3RWb2x1bWVWZXJzaW9ucxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lVmVyc2lvbnNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVWZXJzaW9uc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSlwEKDVJlc3RvcmVWb2x1bWUSKC50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlc3BvbnNlIjHC8xgNdm9sdW1lcy53cml0ZcrzGAdwcm9qZWN00vMYEQoPdm9sdW1lLnJlc3RvcmVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvdm9sdW1lcy5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxIrQGCgZWb2x1bWUSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhIKCnByb2plY3RfaWQYBCABKAkSLAoEbW9kZRgFIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAYgASgDEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIcChRhdHRhY2hlZF93b3JrbG9hZF9pZBgIIAEoCRIWCg5sYXRlc3RfdmVyc2lvbhgJIAEoAxI3ChNsYXRlc3RfdmVyc2lvbl90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglsb3N0X3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkkKGmxhdGVzdF92ZXJzaW9uX2NvbnNpc3RlbmN5GAwgASgOMiUudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZUNvbnNpc3RlbmN5EjQKEXNuYXBzaG90X2ludGVydmFsGA0gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhkKEWxhc3Rfc2F2ZV9mYWlsdXJlGA4gASgJEjoKFmxhc3Rfc2F2ZV9mYWlsdXJlX3RpbWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKBmZvcm1hdBgQIAEoDjIgLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVGb3JtYXQSDwoHcHJvZmlsZRgRIAEoCBIeChZhdHRhY2hlZF93b3JrbG9hZF9raW5kGBIgASgJEhwKFGF0dGFjaGVkX2Vudmlyb25tZW50GBMgASgJEhIKCm1hbmFnZWRfYnkYFCABKAkSFwoPbWFuaWZlc3RfZGlnZXN0GBUgASgJEhYKDm1hbmFnZWRfZmllbGRzGBYgAygJEhcKD21hbmlmZXN0X29yaWdpbhgXIAEoCRIfChdsYXRlc3RfdmVyc2lvbl9vdmVyX2NhcBgYIAEoCCL8AQoNVm9sdW1lVmVyc2lvbhIOCgZudW1iZXIYASABKAMSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCnNpemVfYnl0ZXMYAyABKAMSDgoGc2hhMjU2GAQgASgJEhUKDXJlc3RvcmVkX2Zyb20YBSABKAMSMwoEa2luZBgGIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVWZXJzaW9uS2luZBI6Cgtjb25zaXN0ZW5jeRgHIAEoDjIlLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVDb25zaXN0ZW5jeSJdChJMaXN0Vm9sdW1lc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIPCgdwcm9maWxlGAQgASgIIlsKE0xpc3RWb2x1bWVzUmVzcG9uc2USKwoHdm9sdW1lcxgBIAMoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjYKEEdldFZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkiPwoRR2V0Vm9sdW1lUmVzcG9uc2USKgoGdm9sdW1lGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZSKPAQoTQ3JlYXRlVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEgwKBG5hbWUYAiABKAkSLAoEbW9kZRgDIAEoDjIeLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWVNb2RlEhYKDnNpemVfY2FwX2J5dGVzGAQgASgDEhMKC3JlcXVlc3Rfa2V5GAUgASgJIkIKFENyZWF0ZVZvbHVtZVJlc3BvbnNlEioKBnZvbHVtZRgBIAEoCzIaLnRvc2hpLndvcmtzcGFjZS52MS5Wb2x1bWUigwEKE1VwZGF0ZVZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIqCgZ2b2x1bWUYAiABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJCChRVcGRhdGVWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lIjkKE0RlbGV0ZVZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkiFgoURGVsZXRlVm9sdW1lUmVzcG9uc2UiTgoTQXR0YWNoVm9sdW1lUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXZvbHVtZV9pZBgCIAEoCRITCgt3b3JrbG9hZF9pZBgDIAEoCSJCChRBdHRhY2hWb2x1bWVSZXNwb25zZRIqCgZ2b2x1bWUYASABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lIjkKE0RldGFjaFZvbHVtZVJlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCgl2b2x1bWVfaWQYAiABKAkiQgoURGV0YWNoVm9sdW1lUmVzcG9uc2USKgoGdm9sdW1lGAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZSJmChlMaXN0Vm9sdW1lVmVyc2lvbnNSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJImoKGkxpc3RWb2x1bWVWZXJzaW9uc1Jlc3BvbnNlEjMKCHZlcnNpb25zGAEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLlZvbHVtZVZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIksKFFJlc3RvcmVWb2x1bWVSZXF1ZXN0Eg8KB3Byb2plY3QYASABKAkSEQoJdm9sdW1lX2lkGAIgASgJEg8KB3ZlcnNpb24YAyABKAMidwoVUmVzdG9yZVZvbHVtZVJlc3BvbnNlEjIKB3ZlcnNpb24YASABKAsyIS50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lVmVyc2lvbhIqCgZ2b2x1bWUYAiABKAsyGi50b3NoaS53b3Jrc3BhY2UudjEuVm9sdW1lKocBCgpWb2x1bWVNb2RlEhsKF1ZPTFVNRV9NT0RFX1VOU1BFQ0lGSUVEEAASFQoRVk9MVU1FX01PREVfQ0FDSEUQARIUChBWT0xVTUVfTU9ERV9TRUVEEAISFQoRVk9MVU1FX01PREVfU1RBVEUQAxIYChRWT0xVTUVfTU9ERV9BUlRJRkFDVBAEKmIKDFZvbHVtZUZvcm1hdBIdChlWT0xVTUVfRk9STUFUX1VOU1BFQ0lGSUVEEAASFgoSVk9MVU1FX0ZPUk1BVF9ESVNLEAESGwoXVk9MVU1FX0ZPUk1BVF9ESVJFQ1RPUlkQAip4ChFWb2x1bWVWZXJzaW9uS2luZBIjCh9WT0xVTUVfVkVSU0lPTl9LSU5EX1VOU1BFQ0lGSUVEEAASHAoYVk9MVU1FX1ZFUlNJT05fS0lORF9TQVZFEAESIAocVk9MVU1FX1ZFUlNJT05fS0lORF9TTkFQU0hPVBACKnkKEVZvbHVtZUNvbnNpc3RlbmN5EiIKHlZPTFVNRV9DT05TSVNURU5DWV9VTlNQRUNJRklFRBAAEhwKGFZPTFVNRV9DT05TSVNURU5DWV9DUkFTSBABEiIKHlZPTFVNRV9DT05TSVNURU5DWV9BUFBMSUNBVElPThACMtoJCg1Wb2x1bWVTZXJ2aWNlEnsKC0xpc3RWb2x1bWVzEiYudG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVzUmVxdWVzdBonLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSdQoJR2V0Vm9sdW1lEiQudG9zaGkud29ya3NwYWNlLnYxLkdldFZvbHVtZVJlcXVlc3QaJS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Vm9sdW1lUmVzcG9uc2UiG8LzGAx2b2x1bWVzLnJlYWTK8xgHcHJvamVjdBKAAQoMQ3JlYXRlVm9sdW1lEicudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZVZvbHVtZVJlcXVlc3QaKC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlVm9sdW1lUmVzcG9uc2UiHcLzGA5wcm9qZWN0cy53cml0ZcrzGAdwcm9qZWN0Ep8BCgxVcGRhdGVWb2x1bWUSJy50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlVm9sdW1lUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVWb2x1bWVSZXNwb25zZSI8wvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3TS8xgbEhl2b2x1bWU6cmVzcG9uc2Uudm9sdW1lLmlkEn8KDEF0dGFjaFZvbHVtZRInLnRvc2hpLndvcmtzcGFjZS52MS5BdHRhY2hWb2x1bWVSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkF0dGFjaFZvbHVtZVJlc3BvbnNlIhzC8xgNdm9sdW1lcy53cml0ZcrzGAdwcm9qZWN0En8KDERldGFjaFZvbHVtZRInLnRvc2hpLndvcmtzcGFjZS52MS5EZXRhY2hWb2x1bWVSZXF1ZXN0GigudG9zaGkud29ya3NwYWNlLnYxLkRldGFjaFZvbHVtZVJlc3BvbnNlIhzC8xgNdm9sdW1lcy53cml0ZcrzGAdwcm9qZWN0EoABCgxEZWxldGVWb2x1bWUSJy50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlVm9sdW1lUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVWb2x1bWVSZXNwb25zZSIdwvMYDnByb2plY3RzLndyaXRlyvMYB3Byb2plY3QSkAEKEkxpc3RWb2x1bWVWZXJzaW9ucxItLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Vm9sdW1lVmVyc2lvbnNSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkxpc3RWb2x1bWVWZXJzaW9uc1Jlc3BvbnNlIhvC8xgMdm9sdW1lcy5yZWFkyvMYB3Byb2plY3QSlwEKDVJlc3RvcmVWb2x1bWUSKC50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuUmVzdG9yZVZvbHVtZVJlc3BvbnNlIjHC8xgNdm9sdW1lcy53cml0ZcrzGAdwcm9qZWN00vMYEQoPdm9sdW1lLnJlc3RvcmVkQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Volume is a disk of a project.
@@ -104,10 +104,10 @@ export type Volume = Message<"toshi.workspace.v1.Volume"> & {
   latestVersionConsistency: VolumeConsistency;
 
   /**
-   * How often a service that mounts it snapshots it while the service's
-   * VM runs: its workspace's interval. Unset for a volume that is not a
-   * state volume, and when the workspace takes no snapshots or saves no
-   * versions.
+   * How often the service, sandbox or CI job that mounts it snapshots it
+   * while its VM runs: its workspace's interval. Unset for a volume that is not a
+   * state volume, for one kept as a directory, which is never snapshotted,
+   * and when the workspace takes no snapshots or saves no versions.
    *
    * @generated from field: google.protobuf.Duration snapshot_interval = 13;
    */
@@ -129,6 +129,83 @@ export type Volume = Message<"toshi.workspace.v1.Volume"> & {
    * @generated from field: google.protobuf.Timestamp last_save_failure_time = 15;
    */
   lastSaveFailureTime?: Timestamp | undefined;
+
+  /**
+   * How hosts keep a state volume, fixed by the first run that mounts it:
+   * a disk on the VM tiers, a directory on the container tier. Later runs
+   * go only to hosts that keep it the same way. Unspecified until a run
+   * mounted it, and for a volume that is not a state volume.
+   *
+   * @generated from field: toshi.workspace.v1.VolumeFormat format = 16;
+   */
+  format: VolumeFormat;
+
+  /**
+   * Set when the volume holds a browser profile: it was made as the state
+   * volume of a browser service. A volume made before this field is one
+   * when it was attached to a browser service then. Read-only; it never
+   * changes.
+   *
+   * @generated from field: bool profile = 17;
+   */
+  profile: boolean;
+
+  /**
+   * The kind of the workload it is attached to, service or sandbox, and
+   * that workload's environment, which GetService and GetSandbox take;
+   * both empty when it is attached to none.
+   *
+   * @generated from field: string attached_workload_kind = 18;
+   */
+  attachedWorkloadKind: string;
+
+  /**
+   * @generated from field: string attached_environment = 19;
+   */
+  attachedEnvironment: string;
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 20;
+   */
+  managedBy: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 21;
+   */
+  manifestDigest: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 22;
+   */
+  managedFields: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 23;
+   */
+  manifestOrigin: string;
+
+  /**
+   * Set when its newest version is larger than size_cap_bytes: a run that
+   * held it while the cap was lowered saved more. No run mounts it until
+   * the cap is raised or a version within the cap is restored.
+   *
+   * @generated from field: bool latest_version_over_cap = 24;
+   */
+  latestVersionOverCap: boolean;
 };
 
 /**
@@ -220,10 +297,10 @@ export type VolumeJson = {
   latestVersionConsistency?: VolumeConsistencyJson;
 
   /**
-   * How often a service that mounts it snapshots it while the service's
-   * VM runs: its workspace's interval. Unset for a volume that is not a
-   * state volume, and when the workspace takes no snapshots or saves no
-   * versions.
+   * How often the service, sandbox or CI job that mounts it snapshots it
+   * while its VM runs: its workspace's interval. Unset for a volume that is not a
+   * state volume, for one kept as a directory, which is never snapshotted,
+   * and when the workspace takes no snapshots or saves no versions.
    *
    * @generated from field: google.protobuf.Duration snapshot_interval = 13;
    */
@@ -245,6 +322,83 @@ export type VolumeJson = {
    * @generated from field: google.protobuf.Timestamp last_save_failure_time = 15;
    */
   lastSaveFailureTime?: TimestampJson;
+
+  /**
+   * How hosts keep a state volume, fixed by the first run that mounts it:
+   * a disk on the VM tiers, a directory on the container tier. Later runs
+   * go only to hosts that keep it the same way. Unspecified until a run
+   * mounted it, and for a volume that is not a state volume.
+   *
+   * @generated from field: toshi.workspace.v1.VolumeFormat format = 16;
+   */
+  format?: VolumeFormatJson;
+
+  /**
+   * Set when the volume holds a browser profile: it was made as the state
+   * volume of a browser service. A volume made before this field is one
+   * when it was attached to a browser service then. Read-only; it never
+   * changes.
+   *
+   * @generated from field: bool profile = 17;
+   */
+  profile?: boolean;
+
+  /**
+   * The kind of the workload it is attached to, service or sandbox, and
+   * that workload's environment, which GetService and GetSandbox take;
+   * both empty when it is attached to none.
+   *
+   * @generated from field: string attached_workload_kind = 18;
+   */
+  attachedWorkloadKind?: string;
+
+  /**
+   * @generated from field: string attached_environment = 19;
+   */
+  attachedEnvironment?: string;
+
+  /**
+   * Who manages this object: "manifest" when the project manifest declares
+   * it, empty when nothing does. A manifest apply sets managed_by,
+   * manifest_digest, manifest_origin and managed_fields together.
+   *
+   * @generated from field: string managed_by = 20;
+   */
+  managedBy?: string;
+
+  /**
+   * The SHA-256 of the manifest file that last set this object, as 64
+   * lowercase hex characters. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_digest = 21;
+   */
+  manifestDigest?: string;
+
+  /**
+   * The fields of this object the manifest declares, as update mask paths.
+   * Empty when managed_by is empty.
+   *
+   * @generated from field: repeated string managed_fields = 22;
+   */
+  managedFields?: string[];
+
+  /**
+   * How the manifest came to manage this object: "created" when a manifest
+   * apply created it, "adopted" when an apply took over an object that
+   * already existed. Empty when managed_by is empty.
+   *
+   * @generated from field: string manifest_origin = 23;
+   */
+  manifestOrigin?: string;
+
+  /**
+   * Set when its newest version is larger than size_cap_bytes: a run that
+   * held it while the cap was lowered saved more. No run mounts it until
+   * the cap is raised or a version within the cap is restored.
+   *
+   * @generated from field: bool latest_version_over_cap = 24;
+   */
+  latestVersionOverCap?: boolean;
 };
 
 /**
@@ -273,14 +427,15 @@ export type VolumeVersion = Message<"toshi.workspace.v1.VolumeVersion"> & {
   createTime?: Timestamp | undefined;
 
   /**
-   * The length of the saved disk image, in bytes.
+   * The length of the saved copy, in bytes: the disk image, or for a
+   * volume kept as a directory the compressed tar of it.
    *
    * @generated from field: int64 size_bytes = 3;
    */
   sizeBytes: bigint;
 
   /**
-   * The hex SHA-256 of the saved disk image.
+   * The hex SHA-256 of the saved copy.
    *
    * @generated from field: string sha256 = 4;
    */
@@ -328,14 +483,15 @@ export type VolumeVersionJson = {
   createTime?: TimestampJson;
 
   /**
-   * The length of the saved disk image, in bytes.
+   * The length of the saved copy, in bytes: the disk image, or for a
+   * volume kept as a directory the compressed tar of it.
    *
    * @generated from field: int64 size_bytes = 3;
    */
   sizeBytes?: string;
 
   /**
-   * The hex SHA-256 of the saved disk image.
+   * The hex SHA-256 of the saved copy.
    *
    * @generated from field: string sha256 = 4;
    */
@@ -393,6 +549,13 @@ export type ListVolumesRequest = Message<"toshi.workspace.v1.ListVolumesRequest"
    * @generated from field: string page_token = 3;
    */
   pageToken: string;
+
+  /**
+   * True lists only the volumes that hold a browser profile (profile set).
+   *
+   * @generated from field: bool profile = 4;
+   */
+  profile: boolean;
 };
 
 /**
@@ -417,6 +580,13 @@ export type ListVolumesRequestJson = {
    * @generated from field: string page_token = 3;
    */
   pageToken?: string;
+
+  /**
+   * True lists only the volumes that hold a browser profile (profile set).
+   *
+   * @generated from field: bool profile = 4;
+   */
+  profile?: boolean;
 };
 
 /**
@@ -532,6 +702,260 @@ export const GetVolumeResponseSchema: GenMessage<GetVolumeResponse, {jsonType: G
   messageDesc(file_toshi_workspace_v1_volumes, 5);
 
 /**
+ * @generated from message toshi.workspace.v1.CreateVolumeRequest
+ */
+export type CreateVolumeRequest = Message<"toshi.workspace.v1.CreateVolumeRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * Unique among the project's volumes that are not deleted.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.VolumeMode mode = 3;
+   */
+  mode: VolumeMode;
+
+  /**
+   * The most it holds, in bytes; zero is 10 GiB.
+   *
+   * @generated from field: int64 size_cap_bytes = 4;
+   */
+  sizeCapBytes: bigint;
+
+  /**
+   * Required: the same key on every retry of this create.
+   *
+   * @generated from field: string request_key = 5;
+   */
+  requestKey: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CreateVolumeRequest
+ */
+export type CreateVolumeRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * Unique among the project's volumes that are not deleted.
+   *
+   * @generated from field: string name = 2;
+   */
+  name?: string;
+
+  /**
+   * @generated from field: toshi.workspace.v1.VolumeMode mode = 3;
+   */
+  mode?: VolumeModeJson;
+
+  /**
+   * The most it holds, in bytes; zero is 10 GiB.
+   *
+   * @generated from field: int64 size_cap_bytes = 4;
+   */
+  sizeCapBytes?: string;
+
+  /**
+   * Required: the same key on every retry of this create.
+   *
+   * @generated from field: string request_key = 5;
+   */
+  requestKey?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateVolumeRequest.
+ * Use `create(CreateVolumeRequestSchema)` to create a new message.
+ */
+export const CreateVolumeRequestSchema: GenMessage<CreateVolumeRequest, {jsonType: CreateVolumeRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 6);
+
+/**
+ * @generated from message toshi.workspace.v1.CreateVolumeResponse
+ */
+export type CreateVolumeResponse = Message<"toshi.workspace.v1.CreateVolumeResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 1;
+   */
+  volume?: Volume | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CreateVolumeResponse
+ */
+export type CreateVolumeResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 1;
+   */
+  volume?: VolumeJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CreateVolumeResponse.
+ * Use `create(CreateVolumeResponseSchema)` to create a new message.
+ */
+export const CreateVolumeResponseSchema: GenMessage<CreateVolumeResponse, {jsonType: CreateVolumeResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 7);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateVolumeRequest
+ */
+export type UpdateVolumeRequest = Message<"toshi.workspace.v1.UpdateVolumeRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * id names the volume; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Volume volume = 2;
+   */
+  volume?: Volume | undefined;
+
+  /**
+   * name, size_cap_bytes, or both. The paths managed_by, manifest_digest,
+   * manifest_origin and managed_fields set the management mark and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMask | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateVolumeRequest
+ */
+export type UpdateVolumeRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * id names the volume; the fields update_mask names carry the new
+   * values.
+   *
+   * @generated from field: toshi.workspace.v1.Volume volume = 2;
+   */
+  volume?: VolumeJson;
+
+  /**
+   * name, size_cap_bytes, or both. The paths managed_by, manifest_digest,
+   * manifest_origin and managed_fields set the management mark and go
+   * together: all four or none, and on their own; managed_by "manifest"
+   * needs the digest, an origin and at least one field path, and an empty
+   * managed_by clears all four.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 3;
+   */
+  updateMask?: FieldMaskJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateVolumeRequest.
+ * Use `create(UpdateVolumeRequestSchema)` to create a new message.
+ */
+export const UpdateVolumeRequestSchema: GenMessage<UpdateVolumeRequest, {jsonType: UpdateVolumeRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 8);
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateVolumeResponse
+ */
+export type UpdateVolumeResponse = Message<"toshi.workspace.v1.UpdateVolumeResponse"> & {
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 1;
+   */
+  volume?: Volume | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.UpdateVolumeResponse
+ */
+export type UpdateVolumeResponseJson = {
+  /**
+   * @generated from field: toshi.workspace.v1.Volume volume = 1;
+   */
+  volume?: VolumeJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.UpdateVolumeResponse.
+ * Use `create(UpdateVolumeResponseSchema)` to create a new message.
+ */
+export const UpdateVolumeResponseSchema: GenMessage<UpdateVolumeResponse, {jsonType: UpdateVolumeResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 9);
+
+/**
+ * @generated from message toshi.workspace.v1.DeleteVolumeRequest
+ */
+export type DeleteVolumeRequest = Message<"toshi.workspace.v1.DeleteVolumeRequest"> & {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.DeleteVolumeRequest
+ */
+export type DeleteVolumeRequestJson = {
+  /**
+   * @generated from field: string project = 1;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: string volume_id = 2;
+   */
+  volumeId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.DeleteVolumeRequest.
+ * Use `create(DeleteVolumeRequestSchema)` to create a new message.
+ */
+export const DeleteVolumeRequestSchema: GenMessage<DeleteVolumeRequest, {jsonType: DeleteVolumeRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 10);
+
+/**
+ * @generated from message toshi.workspace.v1.DeleteVolumeResponse
+ */
+export type DeleteVolumeResponse = Message<"toshi.workspace.v1.DeleteVolumeResponse"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.DeleteVolumeResponse
+ */
+export type DeleteVolumeResponseJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.DeleteVolumeResponse.
+ * Use `create(DeleteVolumeResponseSchema)` to create a new message.
+ */
+export const DeleteVolumeResponseSchema: GenMessage<DeleteVolumeResponse, {jsonType: DeleteVolumeResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_volumes, 11);
+
+/**
  * @generated from message toshi.workspace.v1.AttachVolumeRequest
  */
 export type AttachVolumeRequest = Message<"toshi.workspace.v1.AttachVolumeRequest"> & {
@@ -580,7 +1004,7 @@ export type AttachVolumeRequestJson = {
  * Use `create(AttachVolumeRequestSchema)` to create a new message.
  */
 export const AttachVolumeRequestSchema: GenMessage<AttachVolumeRequest, {jsonType: AttachVolumeRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 6);
+  messageDesc(file_toshi_workspace_v1_volumes, 12);
 
 /**
  * @generated from message toshi.workspace.v1.AttachVolumeResponse
@@ -607,7 +1031,7 @@ export type AttachVolumeResponseJson = {
  * Use `create(AttachVolumeResponseSchema)` to create a new message.
  */
 export const AttachVolumeResponseSchema: GenMessage<AttachVolumeResponse, {jsonType: AttachVolumeResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 7);
+  messageDesc(file_toshi_workspace_v1_volumes, 13);
 
 /**
  * @generated from message toshi.workspace.v1.DetachVolumeRequest
@@ -644,7 +1068,7 @@ export type DetachVolumeRequestJson = {
  * Use `create(DetachVolumeRequestSchema)` to create a new message.
  */
 export const DetachVolumeRequestSchema: GenMessage<DetachVolumeRequest, {jsonType: DetachVolumeRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 8);
+  messageDesc(file_toshi_workspace_v1_volumes, 14);
 
 /**
  * @generated from message toshi.workspace.v1.DetachVolumeResponse
@@ -671,7 +1095,7 @@ export type DetachVolumeResponseJson = {
  * Use `create(DetachVolumeResponseSchema)` to create a new message.
  */
 export const DetachVolumeResponseSchema: GenMessage<DetachVolumeResponse, {jsonType: DetachVolumeResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 9);
+  messageDesc(file_toshi_workspace_v1_volumes, 15);
 
 /**
  * @generated from message toshi.workspace.v1.ListVolumeVersionsRequest
@@ -736,7 +1160,7 @@ export type ListVolumeVersionsRequestJson = {
  * Use `create(ListVolumeVersionsRequestSchema)` to create a new message.
  */
 export const ListVolumeVersionsRequestSchema: GenMessage<ListVolumeVersionsRequest, {jsonType: ListVolumeVersionsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 10);
+  messageDesc(file_toshi_workspace_v1_volumes, 16);
 
 /**
  * @generated from message toshi.workspace.v1.ListVolumeVersionsResponse
@@ -777,7 +1201,7 @@ export type ListVolumeVersionsResponseJson = {
  * Use `create(ListVolumeVersionsResponseSchema)` to create a new message.
  */
 export const ListVolumeVersionsResponseSchema: GenMessage<ListVolumeVersionsResponse, {jsonType: ListVolumeVersionsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 11);
+  messageDesc(file_toshi_workspace_v1_volumes, 17);
 
 /**
  * @generated from message toshi.workspace.v1.RestoreVolumeRequest
@@ -828,7 +1252,7 @@ export type RestoreVolumeRequestJson = {
  * Use `create(RestoreVolumeRequestSchema)` to create a new message.
  */
 export const RestoreVolumeRequestSchema: GenMessage<RestoreVolumeRequest, {jsonType: RestoreVolumeRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 12);
+  messageDesc(file_toshi_workspace_v1_volumes, 18);
 
 /**
  * @generated from message toshi.workspace.v1.RestoreVolumeResponse
@@ -869,7 +1293,7 @@ export type RestoreVolumeResponseJson = {
  * Use `create(RestoreVolumeResponseSchema)` to create a new message.
  */
 export const RestoreVolumeResponseSchema: GenMessage<RestoreVolumeResponse, {jsonType: RestoreVolumeResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_volumes, 13);
+  messageDesc(file_toshi_workspace_v1_volumes, 19);
 
 /**
  * VolumeMode is what a volume holds and how runs use it.
@@ -927,6 +1351,47 @@ export const VolumeModeSchema: GenEnum<VolumeMode, VolumeModeJson> = /*@__PURE__
   enumDesc(file_toshi_workspace_v1_volumes, 0);
 
 /**
+ * VolumeFormat is how hosts keep a state volume, and so what its saved
+ * versions hold.
+ *
+ * @generated from enum toshi.workspace.v1.VolumeFormat
+ */
+export enum VolumeFormat {
+  /**
+   * @generated from enum value: VOLUME_FORMAT_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * A disk image a VM attaches. A version holds the image.
+   *
+   * @generated from enum value: VOLUME_FORMAT_DISK = 1;
+   */
+  DISK = 1,
+
+  /**
+   * A directory a container mounts. A version holds a tar of it.
+   *
+   * @generated from enum value: VOLUME_FORMAT_DIRECTORY = 2;
+   */
+  DIRECTORY = 2,
+}
+
+/**
+ * VolumeFormat is how hosts keep a state volume, and so what its saved
+ * versions hold.
+ *
+ * @generated from enum toshi.workspace.v1.VolumeFormat
+ */
+export type VolumeFormatJson = "VOLUME_FORMAT_UNSPECIFIED" | "VOLUME_FORMAT_DISK" | "VOLUME_FORMAT_DIRECTORY";
+
+/**
+ * Describes the enum toshi.workspace.v1.VolumeFormat.
+ */
+export const VolumeFormatSchema: GenEnum<VolumeFormat, VolumeFormatJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_volumes, 1);
+
+/**
  * VolumeVersionKind is how a run made a volume version.
  *
  * @generated from enum toshi.workspace.v1.VolumeVersionKind
@@ -946,8 +1411,9 @@ export enum VolumeVersionKind {
   SAVE = 1,
 
   /**
-   * Taken while the run's VM ran. A run keeps only its newest snapshot,
-   * and its save replaces it.
+   * Taken while the run's VM ran. A run's complete snapshot, and its save,
+   * replace its earlier snapshots; an incremental snapshot keeps the ones
+   * it is based on.
    *
    * @generated from enum value: VOLUME_VERSION_KIND_SNAPSHOT = 2;
    */
@@ -965,7 +1431,7 @@ export type VolumeVersionKindJson = "VOLUME_VERSION_KIND_UNSPECIFIED" | "VOLUME_
  * Describes the enum toshi.workspace.v1.VolumeVersionKind.
  */
 export const VolumeVersionKindSchema: GenEnum<VolumeVersionKind, VolumeVersionKindJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_volumes, 1);
+  enumDesc(file_toshi_workspace_v1_volumes, 2);
 
 /**
  * VolumeConsistency is what a volume version's data can be trusted for.
@@ -988,8 +1454,8 @@ export enum VolumeConsistency {
 
   /**
    * The application settled it first: the service's pre_snapshot hook
-   * exited 0 before the snapshot, or the guest unmounted the volume
-   * cleanly before the save.
+   * exited 0 before the snapshot, the run's pre_save hook exited 0 before
+   * the save, or the guest unmounted the volume cleanly before the save.
    *
    * @generated from enum value: VOLUME_CONSISTENCY_APPLICATION = 2;
    */
@@ -1007,7 +1473,7 @@ export type VolumeConsistencyJson = "VOLUME_CONSISTENCY_UNSPECIFIED" | "VOLUME_C
  * Describes the enum toshi.workspace.v1.VolumeConsistency.
  */
 export const VolumeConsistencySchema: GenEnum<VolumeConsistency, VolumeConsistencyJson> = /*@__PURE__*/
-  enumDesc(file_toshi_workspace_v1_volumes, 2);
+  enumDesc(file_toshi_workspace_v1_volumes, 3);
 
 /**
  * VolumeService keeps a workspace's volumes: each belongs to one project,
@@ -1023,10 +1489,11 @@ export const VolumeConsistencySchema: GenEnum<VolumeConsistency, VolumeConsisten
  * whether the workspace has it or not, and a workload of another project
  * is NOT_FOUND.
  *
- * The calls take no request_key: attaching a volume to the workload it is
- * attached to, while no run holds it, and detaching a detached volume
- * return it as it is. RestoreVolume sent twice records two versions, each
- * a copy of the one it names.
+ * CreateVolume takes a request_key; the other calls take none: attaching a
+ * volume to the workload it is attached to, while no run holds it, and
+ * detaching a detached volume return it as it is. UpdateVolume sent twice
+ * ends with the same values. RestoreVolume sent twice records two
+ * versions, each a copy of the one it names.
  *
  * @generated from service toshi.workspace.v1.VolumeService
  */
@@ -1053,6 +1520,41 @@ export const VolumeService: GenService<{
     methodKind: "unary";
     input: typeof GetVolumeRequestSchema;
     output: typeof GetVolumeResponseSchema;
+  },
+  /**
+   * CreateVolume makes a volume in the project, in any of the four modes:
+   * empty, with no version, and attached to nothing. A name another of the
+   * project's volumes has, deleted ones aside, fails with ALREADY_EXISTS. A
+   * name a service could not take, a missing mode and a negative size cap
+   * fail with INVALID_ARGUMENT; a size cap of zero is 10 GiB.
+   *
+   * The same request sent again with its request_key returns the volume the
+   * first one made; the key with a different request fails with
+   * FAILED_PRECONDITION.
+   *
+   * @generated from rpc toshi.workspace.v1.VolumeService.CreateVolume
+   */
+  createVolume: {
+    methodKind: "unary";
+    input: typeof CreateVolumeRequestSchema;
+    output: typeof CreateVolumeResponseSchema;
+  },
+  /**
+   * UpdateVolume renames a volume or changes its size cap, the two paths
+   * update_mask may name; its mode is fixed. A name another of the
+   * project's volumes has, deleted ones aside, fails with ALREADY_EXISTS.
+   * A size cap below the newest version's size, a negative one, a mode
+   * path and any other path fail with INVALID_ARGUMENT; a size cap of zero
+   * is 10 GiB. A volume may be renamed while attached or held by a run; an
+   * environment that allows a CI job's state volume by its old name no
+   * longer matches it.
+   *
+   * @generated from rpc toshi.workspace.v1.VolumeService.UpdateVolume
+   */
+  updateVolume: {
+    methodKind: "unary";
+    input: typeof UpdateVolumeRequestSchema;
+    output: typeof UpdateVolumeResponseSchema;
   },
   /**
    * AttachVolume attaches a state volume to a service or sandbox: the
@@ -1089,10 +1591,27 @@ export const VolumeService: GenService<{
     output: typeof DetachVolumeResponseSchema;
   },
   /**
+   * DeleteVolume deletes a volume with its saved versions and their data.
+   * A volume attached to a service or sandbox, one a run holds and one a
+   * job that has not ended names fail with FAILED_PRECONDITION. Its name is
+   * free for a new volume at once, and its versions' data is removed from
+   * object storage shortly after. An environment that allows a CI job's
+   * state volume by name keeps that name, and a later volume of the name
+   * matches it.
+   *
+   * @generated from rpc toshi.workspace.v1.VolumeService.DeleteVolume
+   */
+  deleteVolume: {
+    methodKind: "unary";
+    input: typeof DeleteVolumeRequestSchema;
+    output: typeof DeleteVolumeResponseSchema;
+  },
+  /**
    * ListVolumeVersions returns a state volume's saved versions, newest
    * first. A run that releases the volume saves its data as the next
    * version when the workspace has object storage. The volume keeps its
-   * newest five versions and the one a run holding it started from; the
+   * five newest saves and any version after the oldest of them, the one a
+   * run holding it started from and any a kept version is based on; the
    * others expire and are not listed.
    *
    * A page holds 100 versions when page_size is zero, and 1000 at most.
@@ -1109,8 +1628,10 @@ export const VolumeService: GenService<{
    * version, so the next run that mounts the volume starts from that data.
    * The new version names the version it was copied from. A volume a run
    * holds fails with FAILED_PRECONDITION, as do a volume that is not a
-   * state volume and an expired version. A version the volume does not
-   * have is NOT_FOUND.
+   * state volume and an expired version, and so does a control plane that
+   * keeps no versions. A version below 1 fails with INVALID_ARGUMENT, and
+   * one the volume does not have is NOT_FOUND. A copy the storage provider
+   * cannot make fails with UNAVAILABLE.
    *
    * @generated from rpc toshi.workspace.v1.VolumeService.RestoreVolume
    */
