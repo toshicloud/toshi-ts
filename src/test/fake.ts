@@ -26,12 +26,19 @@ import type {
   CreateJobResponse,
   CreateSandboxRequest,
   CreateSandboxResponse,
+  DeleteServiceAlarmRequest,
   GetJobRequest,
   GetJobResponse,
   GetSandboxRequest,
   GetSandboxResponse,
+  GetServiceAlarmRequest,
   ListJobsResponse,
   ListSandboxesResponse,
+  ListServiceAlarmsRequest,
+  PauseServiceAlarmRequest,
+  ResumeServiceAlarmRequest,
+  RunServiceAlarmNowRequest,
+  SetServiceAlarmRequest,
   WaitJobRequest,
   WaitJobResponse,
   WaitSandboxRequest,
@@ -68,6 +75,7 @@ import type {
   WatchOutputRequest,
   WatchOutputResponse,
 } from "../gen/toshi/workspace/v1/workspace_pb.js";
+import { AlarmStore } from "./alarms.js";
 import { apiMethods, apiPackage, hookOnly as hookOnlyMethods, isApiMethod, procedurePath } from "./procedures.js";
 
 /** The token `client` sends. */
@@ -255,6 +263,34 @@ const builtinTable: readonly Builtin[] = [
       run: (requests) => fake.executeAnswer(requests),
     }),
   ],
+  [
+    workloadMethod("setServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.set(request as SetServiceAlarmRequest) }),
+  ],
+  [
+    workloadMethod("getServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.get(request as GetServiceAlarmRequest) }),
+  ],
+  [
+    workloadMethod("listServiceAlarms"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.list(request as ListServiceAlarmsRequest) }),
+  ],
+  [
+    workloadMethod("deleteServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.delete(request as DeleteServiceAlarmRequest) }),
+  ],
+  [
+    workloadMethod("pauseServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.pause(request as PauseServiceAlarmRequest) }),
+  ],
+  [
+    workloadMethod("resumeServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.resume(request as ResumeServiceAlarmRequest) }),
+  ],
+  [
+    workloadMethod("runServiceAlarmNow"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.runNow(request as RunServiceAlarmNowRequest) }),
+  ],
 ];
 
 /** The procedures the state machine answers. The coverage test holds it against the API. */
@@ -327,6 +363,9 @@ class FakeToshi implements Fake {
 
   private readonly executions = new Map<string, ExecutionRecord>();
   private nextExecution = 0;
+
+  /** The service alarms the fake holds; `builtinTable` answers from it. */
+  readonly alarms = new AlarmStore();
 
   constructor() {
     for (const [method, make] of builtinTable) {

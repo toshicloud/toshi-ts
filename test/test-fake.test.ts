@@ -14,6 +14,7 @@ import {
 } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 import {
   GetJobResponseSchema,
+  ServiceAlarmMisfire,
   WatchJobsResponseSchema,
   WorkloadService,
 } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
@@ -154,6 +155,45 @@ describe("createFake", () => {
     await process.wait();
     expect(process.executionId).toBe("exec-1");
     expect(out).toBe("ok\n");
+  });
+
+  it("answers a service's alarms from its state", async () => {
+    const services = createFake().client().workload.services;
+    const set = await services.setAlarm({
+      serviceId: "svc-1",
+      name: "nightly",
+      schedule: { case: "cron", value: "0 3 * * *" },
+      channel: "reports",
+      event: "report.due",
+    });
+    expect(set.alarm).toMatchObject({
+      name: "nightly",
+      generation: 1n,
+      paused: false,
+      misfire: ServiceAlarmMisfire.COALESCE,
+    });
+    expect(set.alarm?.startingDeadline?.seconds).toBe(600n);
+
+    const listed = await services.listAlarms({ serviceId: "svc-1" });
+    expect(listed.alarms.map((alarm) => alarm.name)).toEqual(["nightly"]);
+
+    const paused = await services.pauseAlarm({ serviceId: "svc-1", name: "nightly" });
+    expect(paused.alarm?.paused).toBe(true);
+    expect((await services.getAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.paused).toBe(true);
+
+    const run = await services.runAlarmNow({ serviceId: "svc-1", name: "nightly", requestKey: "run-1" });
+    expect(run.occurrence).toMatchObject({ generation: 1n, manual: true });
+    const replay = await services.runAlarmNow({ serviceId: "svc-1", name: "nightly", requestKey: "run-1" });
+    expect(replay.occurrence).toMatchObject({ generation: 1n, manual: true });
+
+    const got = await services.getAlarm({ serviceId: "svc-1", name: "nightly" });
+    expect(got.occurrences).toHaveLength(1);
+    expect(got.occurrences[0]).toMatchObject({ generation: 1n, manual: true });
+
+    const error = await services
+      .getAlarm({ serviceId: "svc-1", name: "missing" })
+      .catch((err: unknown) => err);
+    expect((error as ConnectError).code).toBe(Code.NotFound);
   });
 
   it("streams WatchOutput from the request's offsets", async () => {
