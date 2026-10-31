@@ -115,11 +115,13 @@ import {
   GetServiceRevisionRequestSchema,
   GetServiceSignInStatusRequestSchema,
   HoldServiceRequestSchema,
+  HoldWorkloadRequestSchema,
   ListEventsRequestSchema,
   ListServiceActivationsRequestSchema,
   ListServiceRevisionsRequestSchema,
   ListServiceRunsRequestSchema,
   ReleaseServiceRequestSchema,
+  ReleaseWorkloadRequestSchema,
   RollbackServiceRequestSchema,
   SetServiceModeRequestSchema,
   StartServiceRequestSchema,
@@ -138,6 +140,7 @@ import type {
   GetServiceRevisionResponse,
   GetServiceSignInStatusResponse,
   HoldServiceResponse,
+  HoldWorkloadResponse,
   Job,
   ListEventsResponse,
   ListServiceActivationsResponse,
@@ -146,6 +149,7 @@ import type {
   Operation,
   PreviewShareLink,
   ReleaseServiceResponse,
+  ReleaseWorkloadResponse,
   RollbackServiceResponse,
   Sandbox,
   Service,
@@ -257,6 +261,23 @@ export interface WorkloadClient {
     req: MessageInitShape<typeof EmitWorkloadEventRequestSchema>,
     opts?: CallOptions,
   ): Promise<EmitWorkloadEventResponse>;
+  /**
+   * Places an operator's hold on a sandbox or service, stopping it if it runs. Only an
+   * operator may call it; the caller sets the operator's reason in the Toshi-Operator-Reason
+   * header with an interceptor, since the client sends none itself.
+   */
+  holdWorkload(
+    req: MessageInitShape<typeof HoldWorkloadRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<HoldWorkloadResponse>;
+  /**
+   * Lifts an operator's hold and starts nothing. Only an operator may call it; the caller
+   * sets the operator's reason in the Toshi-Operator-Reason header with an interceptor.
+   */
+  releaseWorkload(
+    req: MessageInitShape<typeof ReleaseWorkloadRequestSchema>,
+    opts?: CallOptions,
+  ): Promise<ReleaseWorkloadResponse>;
   /** Returns one operation: the id a long call hands back, asked for again. */
   getOperation(
     req: MessageInitShape<typeof GetOperationRequestSchema>,
@@ -602,6 +623,8 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
       watchEvents: (req, opts) =>
         openEventWatch(workloadService, retry, create(WatchEventsRequestSchema, req), opts),
       emitEvent: (req, opts) => workloadService.emitWorkloadEvent(req, opts),
+      holdWorkload: (req, opts) => workloadService.holdWorkload(req, opts),
+      releaseWorkload: (req, opts) => workloadService.releaseWorkload(req, opts),
       getOperation: (req, opts) => workloadService.getOperation(req, opts),
     },
     run: (req, opts) => runJob(workloadService, retry, create(CreateJobRequestSchema, req), opts),

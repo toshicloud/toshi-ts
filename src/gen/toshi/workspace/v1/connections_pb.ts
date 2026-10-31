@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/connections.proto.
  */
 export const file_toshi_workspace_v1_connections: GenFile = /*@__PURE__*/
-  fileDesc("CiR0b3NoaS93b3Jrc3BhY2UvdjEvY29ubmVjdGlvbnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSLJAwoKQ29ubmVjdGlvbhIKCgJpZBgBIAEoCRIwCgRraW5kGAIgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25LaW5kEgwKBG5hbWUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIXCg9pbnN0YWxsYXRpb25faWQYBiABKAMSLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoacHJldmlvdXNfc2VjcmV0X2V4cGlyZXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKBnRhcmdldBgKIAEoCzIkLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uVGFyZ2V0EhMKC2luZ3Jlc3NfdXJsGAsgASgJEhIKCm1hbmFnZWRfYnkYDCABKAkSFwoPbWFuaWZlc3RfZGlnZXN0GA0gASgJEhYKDm1hbmFnZWRfZmllbGRzGA4gAygJEhcKD21hbmlmZXN0X29yaWdpbhgPIAEoCUoECAkQClIRdHJhbnNmb3JtX3ZlcnNpb24icwoQQ29ubmVjdGlvblRhcmdldBILCgN1cmwYASABKAkSDgoGc2VjcmV0GAIgASgJEhIKCnVwZGF0ZWRfYnkYAyABKAkSLgoKdXBkYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiPwoWTGlzdENvbm5lY3Rpb25zUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUSEgoKcGFnZV90b2tlbhgCIAEoCSJnChdMaXN0Q29ubmVjdGlvbnNSZXNwb25zZRIzCgtjb25uZWN0aW9ucxgBIAMoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIiChRHZXRDb25uZWN0aW9uUmVxdWVzdBIKCgJpZBgBIAEoCSJLChVHZXRDb25uZWN0aW9uUmVzcG9uc2USMgoKY29ubmVjdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uIpQBChdDcmVhdGVDb25uZWN0aW9uUmVxdWVzdBIwCgRraW5kGAEgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25LaW5kEgwKBG5hbWUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRITCgtlbnZpcm9ubWVudBgEIAEoCRITCgtyZXF1ZXN0X2tleRgFIAEoCSJeChhDcmVhdGVDb25uZWN0aW9uUmVzcG9uc2USMgoKY29ubmVjdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uEg4KBnNlY3JldBgCIAEoCSI6ChdEZWxldGVDb25uZWN0aW9uUmVxdWVzdBIKCgJpZBgBIAEoCRITCgtyZXF1ZXN0X2tleRgCIAEoCSIaChhEZWxldGVDb25uZWN0aW9uUmVzcG9uc2UibAodUm90YXRlQ29ubmVjdGlvblNlY3JldFJlcXVlc3QSCgoCaWQYASABKAkSKgoHb3ZlcmxhcBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhITCgtyZXF1ZXN0X2tleRgDIAEoCSJkCh5Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVzcG9uc2USMgoKY29ubmVjdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uEg4KBnNlY3JldBgCIAEoCSJ+ChdVcGRhdGVDb25uZWN0aW9uUmVxdWVzdBIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIk4KGFVwZGF0ZUNvbm5lY3Rpb25SZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24i7AMKEkNvbm5lY3Rpb25EZWxpdmVyeRIKCgJpZBgBIAEoCRIVCg1jb25uZWN0aW9uX2lkGAIgASgJEhIKCndlYmhvb2tfaWQYAyABKAkSOgoFc3RhdGUYBCABKA4yKy50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5U3RhdGUSDgoGcmVhc29uGAUgASgJEisKB3NlbnRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3JlY2VpdmVkX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxwcm9jZXNzZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGF0dGVtcHRzGAkgASgFEhQKDGNvbnRlbnRfdHlwZRgKIAEoCRITCgtib2R5X2RpZ2VzdBgLIAEoCRIzCg9ib2R5X2V4cGlyZWRfYXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB3JlcGxheXMYDiABKAUSEwoLcmVwbGF5ZWRfYnkYDyABKAkSEgoKZXZlbnRfbmFtZRgQIAEoCUoECA0QDlIRdHJhbnNmb3JtX3ZlcnNpb24inQIKFUNvbm5lY3Rpb25EZWxpdmVyeVJ1bhILCgNydW4YASABKAUSDwoHb3V0Y29tZRgEIAEoCRIQCghldmVudF9pZBgFIAEoCRINCgVlcnJvchgHIAEoCRIrCghkdXJhdGlvbhgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIvCgtmaW5pc2hlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFYWN0b3IYCiABKAkSGgoSdGFyZ2V0X2RlbGl2ZXJ5X2lkGAsgASgJSgQIAhADSgQIAxAESgQIBhAHUhF0cmFuc2Zvcm1fdmVyc2lvblIPcmVjZWlwdF92ZXJzaW9uUgZyZWFzb24imwEKH0xpc3RDb25uZWN0aW9uRGVsaXZlcmllc1JlcXVlc3QSFQoNY29ubmVjdGlvbl9pZBgBIAEoCRI6CgVzdGF0ZRgCIAEoDjIrLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJ3CiBMaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXNSZXNwb25zZRI6CgpkZWxpdmVyaWVzGAEgAygLMiYudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKgocR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVxdWVzdBIKCgJpZBgBIAEoCSKSAQodR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2USOAoIZGVsaXZlcnkYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5EjcKBHJ1bnMYAiADKAsyKS50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5UnVuIkIKH1JlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiXAogUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2USOAoIZGVsaXZlcnkYASABKAsyJi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5KmoKDkNvbm5lY3Rpb25LaW5kEh8KG0NPTk5FQ1RJT05fS0lORF9VTlNQRUNJRklFRBAAEhoKFkNPTk5FQ1RJT05fS0lORF9HSVRIVUIQARIbChdDT05ORUNUSU9OX0tJTkRfV0VCSE9PSxACKuIBChdDb25uZWN0aW9uRGVsaXZlcnlTdGF0ZRIpCiVDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX1VOU1BFQ0lGSUVEEAASJgoiQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9SRUNFSVZFRBABEicKI0NPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfUFJPQ0VTU0VEEAISJQohQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9EUk9QUEVEEAMSJAogQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9GQUlMRUQQBDKbDAoRQ29ubmVjdGlvblNlcnZpY2USjQEKD0xpc3RDb25uZWN0aW9ucxIqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q29ubmVjdGlvbnNSZXF1ZXN0GisudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uc1Jlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2UShwEKDUdldENvbm5lY3Rpb24SKC50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvblJlcXVlc3QaKS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvblJlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2USkQEKEENyZWF0ZUNvbm5lY3Rpb24SKy50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlQ29ubmVjdGlvblJlc3BvbnNlIiLC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNlEpEBChBEZWxldGVDb25uZWN0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXNwb25zZSIiwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZRLCAQoWUm90YXRlQ29ubmVjdGlvblNlY3JldBIxLnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVxdWVzdBoyLnRvc2hpLndvcmtzcGFjZS52MS5Sb3RhdGVDb25uZWN0aW9uU2VjcmV0UmVzcG9uc2UiQcLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgbChljb25uZWN0aW9uLnNlY3JldF9yb3RhdGVkEq8BChBVcGRhdGVDb25uZWN0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZUNvbm5lY3Rpb25SZXNwb25zZSJAwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZdLzGBoSGGNvbm5lY3Rpb246Y29ubmVjdGlvbi5pZBKoAQoYTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzEjMudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uRGVsaXZlcmllc1JlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzUmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRKfAQoVR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5EjAudG9zaGkud29ya3NwYWNlLnYxLkdldENvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuR2V0Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2UiIcLzGBBjb25uZWN0aW9ucy5yZWFkyvMYCXdvcmtzcGFjZRL/AQoYUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5EjMudG9zaGkud29ya3NwYWNlLnYxLlJlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QaNC50b3NoaS53b3Jrc3BhY2UudjEuUmVwbGF5Q29ubmVjdGlvbkRlbGl2ZXJ5UmVzcG9uc2UieMLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2XS8xhSCiRjb25uZWN0aW9uLmRlbGl2ZXJ5X3JlcGxheV9yZXF1ZXN0ZWQSKmNvbm5lY3Rpb246cmVzcG9uc2UuZGVsaXZlcnkuY29ubmVjdGlvbl9pZEIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiR0b3NoaS93b3Jrc3BhY2UvdjEvY29ubmVjdGlvbnMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSL7AwoKQ29ubmVjdGlvbhIKCgJpZBgBIAEoCRIwCgRraW5kGAIgASgOMiIudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25LaW5kEgwKBG5hbWUYAyABKAkSDwoHcHJvamVjdBgEIAEoCRITCgtlbnZpcm9ubWVudBgFIAEoCRIXCg9pbnN0YWxsYXRpb25faWQYBiABKAMSLgoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoacHJldmlvdXNfc2VjcmV0X2V4cGlyZXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKBnRhcmdldBgKIAEoCzIkLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uVGFyZ2V0EhMKC2luZ3Jlc3NfdXJsGAsgASgJEhIKCm1hbmFnZWRfYnkYDCABKAkSFwoPbWFuaWZlc3RfZGlnZXN0GA0gASgJEhYKDm1hbmFnZWRfZmllbGRzGA4gAygJEhcKD21hbmlmZXN0X29yaWdpbhgPIAEoCRIwCgRtYWlsGBAgASgLMiIudG9zaGkud29ya3NwYWNlLnYxLk1haWxDb25uZWN0aW9uSgQICRAKUhF0cmFuc2Zvcm1fdmVyc2lvbiJVCg5NYWlsQ29ubmVjdGlvbhIPCgdhZGRyZXNzGAEgASgJEg8KB3NlcnZpY2UYAiABKAkSDwoHY2hhbm5lbBgDIAEoCRIQCghwcm92aWRlchgEIAEoCSJzChBDb25uZWN0aW9uVGFyZ2V0EgsKA3VybBgBIAEoCRIOCgZzZWNyZXQYAiABKAkSEgoKdXBkYXRlZF9ieRgDIAEoCRIuCgp1cGRhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI/ChZMaXN0Q29ubmVjdGlvbnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJImcKF0xpc3RDb25uZWN0aW9uc1Jlc3BvbnNlEjMKC2Nvbm5lY3Rpb25zGAEgAygLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiIKFEdldENvbm5lY3Rpb25SZXF1ZXN0EgoKAmlkGAEgASgJIksKFUdldENvbm5lY3Rpb25SZXNwb25zZRIyCgpjb25uZWN0aW9uGAEgASgLMh4udG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb24ixgEKF0NyZWF0ZUNvbm5lY3Rpb25SZXF1ZXN0EjAKBGtpbmQYASABKA4yIi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbktpbmQSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEhMKC3JlcXVlc3Rfa2V5GAUgASgJEjAKBG1haWwYBiABKAsyIi50b3NoaS53b3Jrc3BhY2UudjEuTWFpbENvbm5lY3Rpb24iXgoYQ3JlYXRlQ29ubmVjdGlvblJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIOCgZzZWNyZXQYAiABKAkiOgoXRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QSCgoCaWQYASABKAkSEwoLcmVxdWVzdF9rZXkYAiABKAkiGgoYRGVsZXRlQ29ubmVjdGlvblJlc3BvbnNlImwKHVJvdGF0ZUNvbm5lY3Rpb25TZWNyZXRSZXF1ZXN0EgoKAmlkGAEgASgJEioKB292ZXJsYXAYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEwoLcmVxdWVzdF9rZXkYAyABKAkiZAoeUm90YXRlQ29ubmVjdGlvblNlY3JldFJlc3BvbnNlEjIKCmNvbm5lY3Rpb24YASABKAsyHi50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbhIOCgZzZWNyZXQYAiABKAkifgoXVXBkYXRlQ29ubmVjdGlvblJlcXVlc3QSMgoKY29ubmVjdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJOChhVcGRhdGVDb25uZWN0aW9uUmVzcG9uc2USMgoKY29ubmVjdGlvbhgBIAEoCzIeLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uIuwDChJDb25uZWN0aW9uRGVsaXZlcnkSCgoCaWQYASABKAkSFQoNY29ubmVjdGlvbl9pZBgCIAEoCRISCgp3ZWJob29rX2lkGAMgASgJEjoKBXN0YXRlGAQgASgOMisudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeVN0YXRlEg4KBnJlYXNvbhgFIAEoCRIrCgdzZW50X2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtyZWNlaXZlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMcHJvY2Vzc2VkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghhdHRlbXB0cxgJIAEoBRIUCgxjb250ZW50X3R5cGUYCiABKAkSEwoLYm9keV9kaWdlc3QYCyABKAkSMwoPYm9keV9leHBpcmVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIPCgdyZXBsYXlzGA4gASgFEhMKC3JlcGxheWVkX2J5GA8gASgJEhIKCmV2ZW50X25hbWUYECABKAlKBAgNEA5SEXRyYW5zZm9ybV92ZXJzaW9uIp0CChVDb25uZWN0aW9uRGVsaXZlcnlSdW4SCwoDcnVuGAEgASgFEg8KB291dGNvbWUYBCABKAkSEAoIZXZlbnRfaWQYBSABKAkSDQoFZXJyb3IYByABKAkSKwoIZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLwoLZmluaXNoZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg0KBWFjdG9yGAogASgJEhoKEnRhcmdldF9kZWxpdmVyeV9pZBgLIAEoCUoECAIQA0oECAMQBEoECAYQB1IRdHJhbnNmb3JtX3ZlcnNpb25SD3JlY2VpcHRfdmVyc2lvblIGcmVhc29uIpsBCh9MaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXNSZXF1ZXN0EhUKDWNvbm5lY3Rpb25faWQYASABKAkSOgoFc3RhdGUYAiABKA4yKy50b3NoaS53b3Jrc3BhY2UudjEuQ29ubmVjdGlvbkRlbGl2ZXJ5U3RhdGUSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkidwogTGlzdENvbm5lY3Rpb25EZWxpdmVyaWVzUmVzcG9uc2USOgoKZGVsaXZlcmllcxgBIAMoCzImLnRvc2hpLndvcmtzcGFjZS52MS5Db25uZWN0aW9uRGVsaXZlcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIioKHEdldENvbm5lY3Rpb25EZWxpdmVyeVJlcXVlc3QSCgoCaWQYASABKAkikgEKHUdldENvbm5lY3Rpb25EZWxpdmVyeVJlc3BvbnNlEjgKCGRlbGl2ZXJ5GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeRI3CgRydW5zGAIgAygLMikudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeVJ1biJCCh9SZXBsYXlDb25uZWN0aW9uRGVsaXZlcnlSZXF1ZXN0EgoKAmlkGAEgASgJEhMKC3JlcXVlc3Rfa2V5GAIgASgJIlwKIFJlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlc3BvbnNlEjgKCGRlbGl2ZXJ5GAEgASgLMiYudG9zaGkud29ya3NwYWNlLnYxLkNvbm5lY3Rpb25EZWxpdmVyeSqEAQoOQ29ubmVjdGlvbktpbmQSHwobQ09OTkVDVElPTl9LSU5EX1VOU1BFQ0lGSUVEEAASGgoWQ09OTkVDVElPTl9LSU5EX0dJVEhVQhABEhsKF0NPTk5FQ1RJT05fS0lORF9XRUJIT09LEAISGAoUQ09OTkVDVElPTl9LSU5EX01BSUwQAyriAQoXQ29ubmVjdGlvbkRlbGl2ZXJ5U3RhdGUSKQolQ09OTkVDVElPTl9ERUxJVkVSWV9TVEFURV9VTlNQRUNJRklFRBAAEiYKIkNPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfUkVDRUlWRUQQARInCiNDT05ORUNUSU9OX0RFTElWRVJZX1NUQVRFX1BST0NFU1NFRBACEiUKIUNPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfRFJPUFBFRBADEiQKIENPTk5FQ1RJT05fREVMSVZFUllfU1RBVEVfRkFJTEVEEAQymwwKEUNvbm5lY3Rpb25TZXJ2aWNlEo0BCg9MaXN0Q29ubmVjdGlvbnMSKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdENvbm5lY3Rpb25zUmVxdWVzdBorLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q29ubmVjdGlvbnNSZXNwb25zZSIhwvMYEGNvbm5lY3Rpb25zLnJlYWTK8xgJd29ya3NwYWNlEocBCg1HZXRDb25uZWN0aW9uEigudG9zaGkud29ya3NwYWNlLnYxLkdldENvbm5lY3Rpb25SZXF1ZXN0GikudG9zaGkud29ya3NwYWNlLnYxLkdldENvbm5lY3Rpb25SZXNwb25zZSIhwvMYEGNvbm5lY3Rpb25zLnJlYWTK8xgJd29ya3NwYWNlEpEBChBDcmVhdGVDb25uZWN0aW9uEisudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNvbm5lY3Rpb25SZXF1ZXN0GiwudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZUNvbm5lY3Rpb25SZXNwb25zZSIiwvMYEWNvbm5lY3Rpb25zLndyaXRlyvMYCXdvcmtzcGFjZRKRAQoQRGVsZXRlQ29ubmVjdGlvbhIrLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDb25uZWN0aW9uUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVDb25uZWN0aW9uUmVzcG9uc2UiIsLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2USwgEKFlJvdGF0ZUNvbm5lY3Rpb25TZWNyZXQSMS50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlQ29ubmVjdGlvblNlY3JldFJlcXVlc3QaMi50b3NoaS53b3Jrc3BhY2UudjEuUm90YXRlQ29ubmVjdGlvblNlY3JldFJlc3BvbnNlIkHC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYGwoZY29ubmVjdGlvbi5zZWNyZXRfcm90YXRlZBKvAQoQVXBkYXRlQ29ubmVjdGlvbhIrLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVDb25uZWN0aW9uUmVxdWVzdBosLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVDb25uZWN0aW9uUmVzcG9uc2UiQMLzGBFjb25uZWN0aW9ucy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgaEhhjb25uZWN0aW9uOmNvbm5lY3Rpb24uaWQSqAEKGExpc3RDb25uZWN0aW9uRGVsaXZlcmllcxIzLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0Q29ubmVjdGlvbkRlbGl2ZXJpZXNSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLkxpc3RDb25uZWN0aW9uRGVsaXZlcmllc1Jlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2USnwEKFUdldENvbm5lY3Rpb25EZWxpdmVyeRIwLnRvc2hpLndvcmtzcGFjZS52MS5HZXRDb25uZWN0aW9uRGVsaXZlcnlSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkdldENvbm5lY3Rpb25EZWxpdmVyeVJlc3BvbnNlIiHC8xgQY29ubmVjdGlvbnMucmVhZMrzGAl3b3Jrc3BhY2US/wEKGFJlcGxheUNvbm5lY3Rpb25EZWxpdmVyeRIzLnRvc2hpLndvcmtzcGFjZS52MS5SZXBsYXlDb25uZWN0aW9uRGVsaXZlcnlSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLlJlcGxheUNvbm5lY3Rpb25EZWxpdmVyeVJlc3BvbnNlInjC8xgRY29ubmVjdGlvbnMud3JpdGXK8xgJd29ya3NwYWNl0vMYUgokY29ubmVjdGlvbi5kZWxpdmVyeV9yZXBsYXlfcmVxdWVzdGVkEipjb25uZWN0aW9uOnJlc3BvbnNlLmRlbGl2ZXJ5LmNvbm5lY3Rpb25faWRCIlogZ28udG9zaGljbG91ZC5pby9hcGkvd29ya3NwYWNldjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Connection is one source of a workspace's events.
@@ -32,16 +32,16 @@ export type Connection = Message<"toshi.workspace.v1.Connection"> & {
   kind: ConnectionKind;
 
   /**
-   * Unique among the workspace's WEBHOOK connections; for GITHUB, the
-   * login of the account the App is installed on.
+   * Unique among the workspace's live connections of its kind, WEBHOOK or
+   * MAIL; for GITHUB, the login of the account the App is installed on.
    *
    * @generated from field: string name = 3;
    */
   name: string;
 
   /**
-   * The project and environment a WEBHOOK connection's events belong to;
-   * empty for GITHUB, whose events belong to their repository's project.
+   * The project and environment a WEBHOOK or MAIL connection's events belong
+   * to; empty for GITHUB, whose events belong to their repository's project.
    *
    * @generated from field: string project = 4;
    */
@@ -83,8 +83,8 @@ export type Connection = Message<"toshi.workspace.v1.Connection"> & {
   /**
    * The inbound address a WEBHOOK connection's sender POSTs to: the
    * deployment's public address and /ingress/ with the connection's
-   * address token. Empty for GITHUB, and when the deployment names no
-   * public address.
+   * address token. Empty for GITHUB and MAIL, and when the deployment names
+   * no public address.
    *
    * @generated from field: string ingress_url = 11;
    */
@@ -123,6 +123,14 @@ export type Connection = Message<"toshi.workspace.v1.Connection"> & {
    * @generated from field: string manifest_origin = 15;
    */
   manifestOrigin: string;
+
+  /**
+   * Where a MAIL connection receives mail and where it sends it; unset for
+   * the other kinds.
+   *
+   * @generated from field: toshi.workspace.v1.MailConnection mail = 16;
+   */
+  mail?: MailConnection | undefined;
 };
 
 /**
@@ -142,16 +150,16 @@ export type ConnectionJson = {
   kind?: ConnectionKindJson;
 
   /**
-   * Unique among the workspace's WEBHOOK connections; for GITHUB, the
-   * login of the account the App is installed on.
+   * Unique among the workspace's live connections of its kind, WEBHOOK or
+   * MAIL; for GITHUB, the login of the account the App is installed on.
    *
    * @generated from field: string name = 3;
    */
   name?: string;
 
   /**
-   * The project and environment a WEBHOOK connection's events belong to;
-   * empty for GITHUB, whose events belong to their repository's project.
+   * The project and environment a WEBHOOK or MAIL connection's events belong
+   * to; empty for GITHUB, whose events belong to their repository's project.
    *
    * @generated from field: string project = 4;
    */
@@ -193,8 +201,8 @@ export type ConnectionJson = {
   /**
    * The inbound address a WEBHOOK connection's sender POSTs to: the
    * deployment's public address and /ingress/ with the connection's
-   * address token. Empty for GITHUB, and when the deployment names no
-   * public address.
+   * address token. Empty for GITHUB and MAIL, and when the deployment names
+   * no public address.
    *
    * @generated from field: string ingress_url = 11;
    */
@@ -233,6 +241,14 @@ export type ConnectionJson = {
    * @generated from field: string manifest_origin = 15;
    */
   manifestOrigin?: string;
+
+  /**
+   * Where a MAIL connection receives mail and where it sends it; unset for
+   * the other kinds.
+   *
+   * @generated from field: toshi.workspace.v1.MailConnection mail = 16;
+   */
+  mail?: MailConnectionJson;
 };
 
 /**
@@ -241,6 +257,91 @@ export type ConnectionJson = {
  */
 export const ConnectionSchema: GenMessage<Connection, {jsonType: ConnectionJson}> = /*@__PURE__*/
   messageDesc(file_toshi_workspace_v1_connections, 0);
+
+/**
+ * MailConnection is where a MAIL connection receives mail and where it
+ * sends it.
+ *
+ * @generated from message toshi.workspace.v1.MailConnection
+ */
+export type MailConnection = Message<"toshi.workspace.v1.MailConnection"> & {
+  /**
+   * Output only. The address mail is received at: the connection's name,
+   * "@", the workspace's ID and the deployment's inbound mail domain, all
+   * lowercase.
+   *
+   * @generated from field: string address = 1;
+   */
+  address: string;
+
+  /**
+   * The service, by its ID, whose event channel the mail goes to.
+   *
+   * @generated from field: string service = 2;
+   */
+  service: string;
+
+  /**
+   * The name of that service's event channel.
+   *
+   * @generated from field: string channel = 3;
+   */
+  channel: string;
+
+  /**
+   * Output only. The mail provider that receives for the address, such as
+   * "ses".
+   *
+   * @generated from field: string provider = 4;
+   */
+  provider: string;
+};
+
+/**
+ * MailConnection is where a MAIL connection receives mail and where it
+ * sends it.
+ *
+ * @generated from message toshi.workspace.v1.MailConnection
+ */
+export type MailConnectionJson = {
+  /**
+   * Output only. The address mail is received at: the connection's name,
+   * "@", the workspace's ID and the deployment's inbound mail domain, all
+   * lowercase.
+   *
+   * @generated from field: string address = 1;
+   */
+  address?: string;
+
+  /**
+   * The service, by its ID, whose event channel the mail goes to.
+   *
+   * @generated from field: string service = 2;
+   */
+  service?: string;
+
+  /**
+   * The name of that service's event channel.
+   *
+   * @generated from field: string channel = 3;
+   */
+  channel?: string;
+
+  /**
+   * Output only. The mail provider that receives for the address, such as
+   * "ses".
+   *
+   * @generated from field: string provider = 4;
+   */
+  provider?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.MailConnection.
+ * Use `create(MailConnectionSchema)` to create a new message.
+ */
+export const MailConnectionSchema: GenMessage<MailConnection, {jsonType: MailConnectionJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_connections, 1);
 
 /**
  * ConnectionTarget is the URL a WEBHOOK connection's deliveries are posted
@@ -321,7 +422,7 @@ export type ConnectionTargetJson = {
  * Use `create(ConnectionTargetSchema)` to create a new message.
  */
 export const ConnectionTargetSchema: GenMessage<ConnectionTarget, {jsonType: ConnectionTargetJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 1);
+  messageDesc(file_toshi_workspace_v1_connections, 2);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionsRequest
@@ -366,7 +467,7 @@ export type ListConnectionsRequestJson = {
  * Use `create(ListConnectionsRequestSchema)` to create a new message.
  */
 export const ListConnectionsRequestSchema: GenMessage<ListConnectionsRequest, {jsonType: ListConnectionsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 2);
+  messageDesc(file_toshi_workspace_v1_connections, 3);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionsResponse
@@ -407,7 +508,7 @@ export type ListConnectionsResponseJson = {
  * Use `create(ListConnectionsResponseSchema)` to create a new message.
  */
 export const ListConnectionsResponseSchema: GenMessage<ListConnectionsResponse, {jsonType: ListConnectionsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 3);
+  messageDesc(file_toshi_workspace_v1_connections, 4);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionRequest
@@ -434,7 +535,7 @@ export type GetConnectionRequestJson = {
  * Use `create(GetConnectionRequestSchema)` to create a new message.
  */
 export const GetConnectionRequestSchema: GenMessage<GetConnectionRequest, {jsonType: GetConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 4);
+  messageDesc(file_toshi_workspace_v1_connections, 5);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionResponse
@@ -461,14 +562,15 @@ export type GetConnectionResponseJson = {
  * Use `create(GetConnectionResponseSchema)` to create a new message.
  */
 export const GetConnectionResponseSchema: GenMessage<GetConnectionResponse, {jsonType: GetConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 5);
+  messageDesc(file_toshi_workspace_v1_connections, 6);
 
 /**
  * @generated from message toshi.workspace.v1.CreateConnectionRequest
  */
 export type CreateConnectionRequest = Message<"toshi.workspace.v1.CreateConnectionRequest"> & {
   /**
-   * WEBHOOK; no other kind is created here.
+   * The kind to create: WEBHOOK or MAIL. Installing the GitHub App creates
+   * a GITHUB connection.
    *
    * @generated from field: toshi.workspace.v1.ConnectionKind kind = 1;
    */
@@ -482,6 +584,10 @@ export type CreateConnectionRequest = Message<"toshi.workspace.v1.CreateConnecti
   name: string;
 
   /**
+   * The project and environment the connection's events belong to. Both
+   * are required for WEBHOOK. For MAIL they are optional, and when set must
+   * be the service's.
+   *
    * @generated from field: string project = 3;
    */
   project: string;
@@ -495,6 +601,15 @@ export type CreateConnectionRequest = Message<"toshi.workspace.v1.CreateConnecti
    * @generated from field: string request_key = 5;
    */
   requestKey: string;
+
+  /**
+   * The mail address and where its mail goes, for a MAIL connection; unset
+   * for WEBHOOK. service and channel are required; address and provider are
+   * output only, and ignored on input.
+   *
+   * @generated from field: toshi.workspace.v1.MailConnection mail = 6;
+   */
+  mail?: MailConnection | undefined;
 };
 
 /**
@@ -502,7 +617,8 @@ export type CreateConnectionRequest = Message<"toshi.workspace.v1.CreateConnecti
  */
 export type CreateConnectionRequestJson = {
   /**
-   * WEBHOOK; no other kind is created here.
+   * The kind to create: WEBHOOK or MAIL. Installing the GitHub App creates
+   * a GITHUB connection.
    *
    * @generated from field: toshi.workspace.v1.ConnectionKind kind = 1;
    */
@@ -516,6 +632,10 @@ export type CreateConnectionRequestJson = {
   name?: string;
 
   /**
+   * The project and environment the connection's events belong to. Both
+   * are required for WEBHOOK. For MAIL they are optional, and when set must
+   * be the service's.
+   *
    * @generated from field: string project = 3;
    */
   project?: string;
@@ -529,6 +649,15 @@ export type CreateConnectionRequestJson = {
    * @generated from field: string request_key = 5;
    */
   requestKey?: string;
+
+  /**
+   * The mail address and where its mail goes, for a MAIL connection; unset
+   * for WEBHOOK. service and channel are required; address and provider are
+   * output only, and ignored on input.
+   *
+   * @generated from field: toshi.workspace.v1.MailConnection mail = 6;
+   */
+  mail?: MailConnectionJson;
 };
 
 /**
@@ -536,7 +665,7 @@ export type CreateConnectionRequestJson = {
  * Use `create(CreateConnectionRequestSchema)` to create a new message.
  */
 export const CreateConnectionRequestSchema: GenMessage<CreateConnectionRequest, {jsonType: CreateConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 6);
+  messageDesc(file_toshi_workspace_v1_connections, 7);
 
 /**
  * @generated from message toshi.workspace.v1.CreateConnectionResponse
@@ -549,7 +678,8 @@ export type CreateConnectionResponse = Message<"toshi.workspace.v1.CreateConnect
 
   /**
    * The signing secret in its whsec_ form, for the sender to sign its
-   * requests with. Shown only in this answer and an identical retry's.
+   * requests with; empty for a MAIL connection. Shown only in this answer
+   * and an identical retry's.
    *
    * @generated from field: string secret = 2;
    */
@@ -567,7 +697,8 @@ export type CreateConnectionResponseJson = {
 
   /**
    * The signing secret in its whsec_ form, for the sender to sign its
-   * requests with. Shown only in this answer and an identical retry's.
+   * requests with; empty for a MAIL connection. Shown only in this answer
+   * and an identical retry's.
    *
    * @generated from field: string secret = 2;
    */
@@ -579,7 +710,7 @@ export type CreateConnectionResponseJson = {
  * Use `create(CreateConnectionResponseSchema)` to create a new message.
  */
 export const CreateConnectionResponseSchema: GenMessage<CreateConnectionResponse, {jsonType: CreateConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 7);
+  messageDesc(file_toshi_workspace_v1_connections, 8);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteConnectionRequest
@@ -616,7 +747,7 @@ export type DeleteConnectionRequestJson = {
  * Use `create(DeleteConnectionRequestSchema)` to create a new message.
  */
 export const DeleteConnectionRequestSchema: GenMessage<DeleteConnectionRequest, {jsonType: DeleteConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 8);
+  messageDesc(file_toshi_workspace_v1_connections, 9);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteConnectionResponse
@@ -635,7 +766,7 @@ export type DeleteConnectionResponseJson = {
  * Use `create(DeleteConnectionResponseSchema)` to create a new message.
  */
 export const DeleteConnectionResponseSchema: GenMessage<DeleteConnectionResponse, {jsonType: DeleteConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 9);
+  messageDesc(file_toshi_workspace_v1_connections, 10);
 
 /**
  * @generated from message toshi.workspace.v1.RotateConnectionSecretRequest
@@ -688,7 +819,7 @@ export type RotateConnectionSecretRequestJson = {
  * Use `create(RotateConnectionSecretRequestSchema)` to create a new message.
  */
 export const RotateConnectionSecretRequestSchema: GenMessage<RotateConnectionSecretRequest, {jsonType: RotateConnectionSecretRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 10);
+  messageDesc(file_toshi_workspace_v1_connections, 11);
 
 /**
  * @generated from message toshi.workspace.v1.RotateConnectionSecretResponse
@@ -731,7 +862,7 @@ export type RotateConnectionSecretResponseJson = {
  * Use `create(RotateConnectionSecretResponseSchema)` to create a new message.
  */
 export const RotateConnectionSecretResponseSchema: GenMessage<RotateConnectionSecretResponse, {jsonType: RotateConnectionSecretResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 11);
+  messageDesc(file_toshi_workspace_v1_connections, 12);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateConnectionRequest
@@ -784,7 +915,7 @@ export type UpdateConnectionRequestJson = {
  * Use `create(UpdateConnectionRequestSchema)` to create a new message.
  */
 export const UpdateConnectionRequestSchema: GenMessage<UpdateConnectionRequest, {jsonType: UpdateConnectionRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 12);
+  messageDesc(file_toshi_workspace_v1_connections, 13);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateConnectionResponse
@@ -811,7 +942,7 @@ export type UpdateConnectionResponseJson = {
  * Use `create(UpdateConnectionResponseSchema)` to create a new message.
  */
 export const UpdateConnectionResponseSchema: GenMessage<UpdateConnectionResponse, {jsonType: UpdateConnectionResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 13);
+  messageDesc(file_toshi_workspace_v1_connections, 14);
 
 /**
  * ConnectionDelivery is one message a WEBHOOK connection's sender sent:
@@ -1036,7 +1167,7 @@ export type ConnectionDeliveryJson = {
  * Use `create(ConnectionDeliverySchema)` to create a new message.
  */
 export const ConnectionDeliverySchema: GenMessage<ConnectionDelivery, {jsonType: ConnectionDeliveryJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 14);
+  messageDesc(file_toshi_workspace_v1_connections, 15);
 
 /**
  * ConnectionDeliveryRun is one time a worker ran a delivery to its end.
@@ -1167,7 +1298,7 @@ export type ConnectionDeliveryRunJson = {
  * Use `create(ConnectionDeliveryRunSchema)` to create a new message.
  */
 export const ConnectionDeliveryRunSchema: GenMessage<ConnectionDeliveryRun, {jsonType: ConnectionDeliveryRunJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 15);
+  messageDesc(file_toshi_workspace_v1_connections, 16);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionDeliveriesRequest
@@ -1236,7 +1367,7 @@ export type ListConnectionDeliveriesRequestJson = {
  * Use `create(ListConnectionDeliveriesRequestSchema)` to create a new message.
  */
 export const ListConnectionDeliveriesRequestSchema: GenMessage<ListConnectionDeliveriesRequest, {jsonType: ListConnectionDeliveriesRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 16);
+  messageDesc(file_toshi_workspace_v1_connections, 17);
 
 /**
  * @generated from message toshi.workspace.v1.ListConnectionDeliveriesResponse
@@ -1277,7 +1408,7 @@ export type ListConnectionDeliveriesResponseJson = {
  * Use `create(ListConnectionDeliveriesResponseSchema)` to create a new message.
  */
 export const ListConnectionDeliveriesResponseSchema: GenMessage<ListConnectionDeliveriesResponse, {jsonType: ListConnectionDeliveriesResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 17);
+  messageDesc(file_toshi_workspace_v1_connections, 18);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionDeliveryRequest
@@ -1304,7 +1435,7 @@ export type GetConnectionDeliveryRequestJson = {
  * Use `create(GetConnectionDeliveryRequestSchema)` to create a new message.
  */
 export const GetConnectionDeliveryRequestSchema: GenMessage<GetConnectionDeliveryRequest, {jsonType: GetConnectionDeliveryRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 18);
+  messageDesc(file_toshi_workspace_v1_connections, 19);
 
 /**
  * @generated from message toshi.workspace.v1.GetConnectionDeliveryResponse
@@ -1341,7 +1472,7 @@ export type GetConnectionDeliveryResponseJson = {
  * Use `create(GetConnectionDeliveryResponseSchema)` to create a new message.
  */
 export const GetConnectionDeliveryResponseSchema: GenMessage<GetConnectionDeliveryResponse, {jsonType: GetConnectionDeliveryResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 19);
+  messageDesc(file_toshi_workspace_v1_connections, 20);
 
 /**
  * @generated from message toshi.workspace.v1.ReplayConnectionDeliveryRequest
@@ -1378,7 +1509,7 @@ export type ReplayConnectionDeliveryRequestJson = {
  * Use `create(ReplayConnectionDeliveryRequestSchema)` to create a new message.
  */
 export const ReplayConnectionDeliveryRequestSchema: GenMessage<ReplayConnectionDeliveryRequest, {jsonType: ReplayConnectionDeliveryRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 20);
+  messageDesc(file_toshi_workspace_v1_connections, 21);
 
 /**
  * @generated from message toshi.workspace.v1.ReplayConnectionDeliveryResponse
@@ -1409,7 +1540,7 @@ export type ReplayConnectionDeliveryResponseJson = {
  * Use `create(ReplayConnectionDeliveryResponseSchema)` to create a new message.
  */
 export const ReplayConnectionDeliveryResponseSchema: GenMessage<ReplayConnectionDeliveryResponse, {jsonType: ReplayConnectionDeliveryResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_connections, 21);
+  messageDesc(file_toshi_workspace_v1_connections, 22);
 
 /**
  * ConnectionKind is the kind of source a connection receives events from.
@@ -1435,6 +1566,15 @@ export enum ConnectionKind {
    * @generated from enum value: CONNECTION_KIND_WEBHOOK = 2;
    */
   WEBHOOK = 2,
+
+  /**
+   * An inbound mail address. The deployment's mail provider receives the
+   * messages; each is stored as a receipt before it goes to a service's
+   * event channel.
+   *
+   * @generated from enum value: CONNECTION_KIND_MAIL = 3;
+   */
+  MAIL = 3,
 }
 
 /**
@@ -1442,7 +1582,7 @@ export enum ConnectionKind {
  *
  * @generated from enum toshi.workspace.v1.ConnectionKind
  */
-export type ConnectionKindJson = "CONNECTION_KIND_UNSPECIFIED" | "CONNECTION_KIND_GITHUB" | "CONNECTION_KIND_WEBHOOK";
+export type ConnectionKindJson = "CONNECTION_KIND_UNSPECIFIED" | "CONNECTION_KIND_GITHUB" | "CONNECTION_KIND_WEBHOOK" | "CONNECTION_KIND_MAIL";
 
 /**
  * Describes the enum toshi.workspace.v1.ConnectionKind.
@@ -1510,7 +1650,10 @@ export const ConnectionDeliveryStateSchema: GenEnum<ConnectionDeliveryState, Con
  * GITHUB, which installing the App creates and removing it deletes; the
  * calls here list it and cannot create or delete it. A WEBHOOK connection
  * receives events from a sender that signs its requests as Standard
- * Webhooks does, with a secret the connection keeps.
+ * Webhooks does, with a secret the connection keeps. A MAIL connection
+ * receives mail at an address the deployment's inbound mail provider
+ * serves; each message is stored as a receipt before it goes to a
+ * service's event channel.
  *
  * The caller's credential names the workspace, as for WorkloadService.
  * CreateConnection and RotateConnectionSecret require a request_key, which
@@ -1547,11 +1690,15 @@ export const ConnectionService: GenService<{
     output: typeof GetConnectionResponseSchema;
   },
   /**
-   * CreateConnection creates a WEBHOOK connection whose events belong to a
-   * project's environment, and returns it with its signing secret. A kind
-   * other than WEBHOOK fails with INVALID_ARGUMENT, a name a live
-   * connection of the workspace has with ALREADY_EXISTS, and an
-   * environment the project does not have with NOT_FOUND.
+   * CreateConnection creates a WEBHOOK or MAIL connection. A WEBHOOK
+   * connection's events belong to a project's environment, and the call
+   * returns it with its signing secret. A MAIL connection receives mail at
+   * an address the deployment's inbound mail provider serves and sends each
+   * message to a service's event channel; it has no secret. A kind other
+   * than WEBHOOK or MAIL fails with INVALID_ARGUMENT, as does a missing
+   * required field, a name a live connection of the workspace has with
+   * ALREADY_EXISTS, and an environment the project does not have with
+   * NOT_FOUND.
    *
    * @generated from rpc toshi.workspace.v1.ConnectionService.CreateConnection
    */
@@ -1561,11 +1708,12 @@ export const ConnectionService: GenService<{
     output: typeof CreateConnectionResponseSchema;
   },
   /**
-   * DeleteConnection deletes a WEBHOOK connection: its events are no longer
-   * received. A GITHUB connection fails with FAILED_PRECONDITION, as only
-   * removing the GitHub App deletes it, as does one that live triggers match
-   * events from, naming them as project/name, and one the workspace does
-   * not have with NOT_FOUND.
+   * DeleteConnection deletes a WEBHOOK or MAIL connection: its events are no
+   * longer received, and a mail connection's address takes no more mail. A
+   * GITHUB connection fails with FAILED_PRECONDITION, as only removing the
+   * GitHub App deletes it, as does one that live triggers match events from,
+   * naming them as project/name, and one the workspace does not have with
+   * NOT_FOUND.
    *
    * @generated from rpc toshi.workspace.v1.ConnectionService.DeleteConnection
    */

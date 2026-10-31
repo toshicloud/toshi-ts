@@ -82,6 +82,10 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkloadService/StopService": "keyed",
   "/toshi.workspace.v1.WorkloadService/SetServiceMode": "keyed",
   "/toshi.workspace.v1.WorkloadService/WakeService": "keyed",
+  // Operator-only, and neither takes a request key: a lost answer is reported
+  // rather than repeated.
+  "/toshi.workspace.v1.WorkloadService/HoldWorkload": "none",
+  "/toshi.workspace.v1.WorkloadService/ReleaseWorkload": "none",
   "/toshi.workspace.v1.WorkloadService/HoldService": "keyed",
   "/toshi.workspace.v1.WorkloadService/ReleaseService": "keyed",
   "/toshi.workspace.v1.WorkloadService/ListServiceRevisions": "read",
@@ -192,6 +196,7 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkspaceService/ListWorkspaces": "read",
   "/toshi.workspace.v1.WorkspaceService/GetWorkspaceBilling": "read",
   "/toshi.workspace.v1.WorkspaceService/GetWorkspaceStatement": "read",
+  "/toshi.workspace.v1.WorkspaceService/GetWorkspaceUpcomingInvoice": "read",
   "/toshi.workspace.v1.WorkspaceService/ListEgressIPs": "read",
   "/toshi.workspace.v1.WorkspaceService/GetUsage": "read",
   "/toshi.workspace.v1.WorkspaceService/GetQueueTimes": "read",

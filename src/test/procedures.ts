@@ -125,6 +125,9 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.stopService,
   WorkloadService.method.setServiceMode,
   WorkloadService.method.wakeService,
+  // The fake holds no workloads: the operator's holds are answered by hooks.
+  WorkloadService.method.holdWorkload,
+  WorkloadService.method.releaseWorkload,
   WorkloadService.method.holdService,
   WorkloadService.method.releaseService,
   WorkloadService.method.listServiceRevisions,
@@ -291,6 +294,7 @@ export const hookOnly: readonly DescMethod[] = [
   WorkspaceService.method.listWorkspaces,
   WorkspaceService.method.getWorkspaceBilling,
   WorkspaceService.method.getWorkspaceStatement,
+  WorkspaceService.method.getWorkspaceUpcomingInvoice,
   WorkspaceService.method.listEgressIPs,
   WorkspaceService.method.getUsage,
   WorkspaceService.method.getQueueTimes,
