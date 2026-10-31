@@ -136,15 +136,7 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.watchEvents,
   WorkloadService.method.getOperation,
   WorkloadService.method.waitOperation,
-  // The fake holds no services: their alarms and sign-ins are answered by
-  // hooks.
-  WorkloadService.method.setServiceAlarm,
-  WorkloadService.method.getServiceAlarm,
-  WorkloadService.method.listServiceAlarms,
-  WorkloadService.method.deleteServiceAlarm,
-  WorkloadService.method.pauseServiceAlarm,
-  WorkloadService.method.resumeServiceAlarm,
-  WorkloadService.method.runServiceAlarmNow,
+  // The fake holds no services: their sign-ins are answered by hooks.
   WorkloadService.method.startServiceSignIn,
   WorkloadService.method.answerServiceSignIn,
   WorkloadService.method.cancelServiceSignIn,

@@ -19,8 +19,8 @@
  * # What the fake answers
  *
  * The fake holds one workspace and has no clock: every call answers at once
- * with what the test set. It knows the job and the sandbox lifecycle and
- * nothing else.
+ * with what the test set. It knows the job and the sandbox lifecycle and a
+ * service's alarms, and nothing else.
  *
  * - `job`, `sandbox` and `execute` set what the fake answers: a job's or a
  *   sandbox's state, and the standard output, the standard error and the exit
@@ -46,6 +46,16 @@
  * - Execute answers the start message with an execution id, the standard
  *   output, the standard error and the exit code the test set for the sandbox.
  *   It does not read standard input.
+ * - SetServiceAlarm, GetServiceAlarm, ListServiceAlarms, DeleteServiceAlarm,
+ *   PauseServiceAlarm, ResumeServiceAlarm and RunServiceAlarmNow keep alarms
+ *   for any service ID: the fake holds no services. A set creates an alarm at
+ *   generation 1, or replaces it at the next generation and resumes it.
+ *   RunServiceAlarmNow records a manual occurrence, which GetServiceAlarm
+ *   returns newest first; a run whose request key the fake has already
+ *   answered returns the same occurrence. With no clock an alarm publishes
+ *   nothing on its own, a cron alarm has no next instant, and the fake sets no
+ *   time of its own: an alarm set at an instant has that instant as its next
+ *   one. An unknown alarm is NOT_FOUND.
  *
  * Every other procedure is hook-only. An unhooked procedure the state machine
  * does not cover answers UNIMPLEMENTED, naming the procedure and the `on` call
