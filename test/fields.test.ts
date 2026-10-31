@@ -10,6 +10,7 @@ import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.
 import { EventType } from "../src/gen/toshi/workspace/v1/workspace_pb.js";
 import { WebhookService } from "../src/gen/toshi/workspace/v1/webhook_pb.js";
 import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
+import { testWebhookSecret } from "./webhook-secret.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import { createFake } from "../src/test/index.js";
 
@@ -101,7 +102,7 @@ describe("fields the API added", () => {
     });
 
     const updated = await client.connection.updateConnection({
-      connection: { id: "con-1", target: { url: "https://example.com/hooks", secret: "whsec_c2VjcmV0" } },
+      connection: { id: "con-1", target: { url: "https://example.com/hooks", secret: testWebhookSecret() } },
       updateMask: { paths: ["target"] },
     });
     expect(updated.connection?.target?.url).toBe("https://example.com/hooks");
