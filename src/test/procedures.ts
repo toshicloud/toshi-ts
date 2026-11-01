@@ -86,6 +86,8 @@ export const hookOnly: readonly DescMethod[] = [
   // AccountService
   AccountService.method.getAccount,
   AccountService.method.listIdentities,
+  AccountService.method.listSessions,
+  AccountService.method.endSession,
   AccountService.method.unlinkIdentity,
   // ImageService
   ImageService.method.createImage,
@@ -302,6 +304,7 @@ export const hookOnly: readonly DescMethod[] = [
   WorkspaceService.method.listEgressIPs,
   WorkspaceService.method.getUsage,
   WorkspaceService.method.getQueueTimes,
+  WorkspaceService.method.getStartWindows,
   WorkspaceService.method.getWorkflowUsage,
   WorkspaceService.method.listPlans,
   WorkspaceService.method.createCheckoutSession,
