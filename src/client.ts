@@ -17,6 +17,7 @@ import { GrantService } from "./gen/toshi/workspace/v1/grants_pb.js";
 import { ImageService } from "./gen/toshi/workspace/v1/images_pb.js";
 import { HostJobService } from "./gen/toshi/workspace/v1/hostjobs_pb.js";
 import { HostService } from "./gen/toshi/workspace/v1/hosts_pb.js";
+import { ModelCredentialService } from "./gen/toshi/workspace/v1/model_credentials_pb.js";
 import { ProductService } from "./gen/toshi/workspace/v1/products_pb.js";
 import { ProjectService } from "./gen/toshi/workspace/v1/projects_pb.js";
 import { RecordingService } from "./gen/toshi/workspace/v1/recordings_pb.js";
@@ -233,6 +234,7 @@ export interface ToshiClient {
   readonly account: Client<typeof AccountService>;
   readonly image: Client<typeof ImageService>;
   readonly domain: Client<typeof DomainService>;
+  readonly modelCredential: Client<typeof ModelCredentialService>;
   run(req: MessageInitShape<typeof CreateJobRequestSchema>, opts?: CallOptions): Promise<JobRun>;
 }
 
@@ -644,5 +646,6 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
     account: createClient(AccountService, transport),
     image: createClient(ImageService, transport),
     domain: createClient(DomainService, transport),
+    modelCredential: createClient(ModelCredentialService, transport),
   };
 }

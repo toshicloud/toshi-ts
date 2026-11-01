@@ -300,6 +300,15 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.DomainService/VerifyDomain": "keyed",
   "/toshi.workspace.v1.DomainService/IssueDomain": "keyed",
   "/toshi.workspace.v1.DomainService/DeleteDomain": "none",
+  // CreateModelCredential takes no request_key, and a repeat answers
+  // ALREADY_EXISTS ("a key that already serves a credential fails with
+  // ALREADY_EXISTS, and so does a second credential of the same name and
+  // owner"), so a retry would report failure for a call that worked.
+  "/toshi.workspace.v1.ModelCredentialService/CreateModelCredential": "none",
+  "/toshi.workspace.v1.ModelCredentialService/GetModelCredential": "read",
+  "/toshi.workspace.v1.ModelCredentialService/ListModelCredentials": "read",
+  "/toshi.workspace.v1.ModelCredentialService/UpdateModelCredential": "none",
+  "/toshi.workspace.v1.ModelCredentialService/DeleteModelCredential": "none",
 };
 
 
