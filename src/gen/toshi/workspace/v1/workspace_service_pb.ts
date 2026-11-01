@@ -1750,10 +1750,9 @@ export type CreateCheckoutSessionRequest = Message<"toshi.workspace.v1.CreateChe
   /**
    * Where the browser goes back to when checkout finishes or is cancelled.
    * The workspace id rides on it as the tenant query parameter, and billing
-   * as checkout-done or checkout-cancelled; its own query is kept. Its
-   * origin must be the control plane's public URL or a redirect URI origin
-   * of a client declared in [[oauth.clients]]. Empty returns to the
-   * control plane's dashboard.
+   * as checkout-done or checkout-cancelled; its own query is kept. return_url
+   * is required and must be on the origin of a redirect URI of a
+   * registered client, whether declared in the configuration or registered.
    *
    * @generated from field: string return_url = 2;
    */
@@ -1772,10 +1771,9 @@ export type CreateCheckoutSessionRequestJson = {
   /**
    * Where the browser goes back to when checkout finishes or is cancelled.
    * The workspace id rides on it as the tenant query parameter, and billing
-   * as checkout-done or checkout-cancelled; its own query is kept. Its
-   * origin must be the control plane's public URL or a redirect URI origin
-   * of a client declared in [[oauth.clients]]. Empty returns to the
-   * control plane's dashboard.
+   * as checkout-done or checkout-cancelled; its own query is kept. return_url
+   * is required and must be on the origin of a redirect URI of a
+   * registered client, whether declared in the configuration or registered.
    *
    * @generated from field: string return_url = 2;
    */
@@ -1826,9 +1824,9 @@ export const CreateCheckoutSessionResponseSchema: GenMessage<CreateCheckoutSessi
 export type CreateBillingPortalSessionRequest = Message<"toshi.workspace.v1.CreateBillingPortalSessionRequest"> & {
   /**
    * Where the browser goes back to from the portal, with the workspace id as
-   * the tenant query parameter; its own query is kept. The same origins as
-   * CreateCheckoutSessionRequest.return_url are allowed. Empty returns to the
-   * control plane's dashboard.
+   * the tenant query parameter; its own query is kept. return_url is required
+   * and must be on the origin of a redirect URI of a registered client,
+   * whether declared in the configuration or registered.
    *
    * @generated from field: string return_url = 1;
    */
@@ -1841,9 +1839,9 @@ export type CreateBillingPortalSessionRequest = Message<"toshi.workspace.v1.Crea
 export type CreateBillingPortalSessionRequestJson = {
   /**
    * Where the browser goes back to from the portal, with the workspace id as
-   * the tenant query parameter; its own query is kept. The same origins as
-   * CreateCheckoutSessionRequest.return_url are allowed. Empty returns to the
-   * control plane's dashboard.
+   * the tenant query parameter; its own query is kept. return_url is required
+   * and must be on the origin of a redirect URI of a registered client,
+   * whether declared in the configuration or registered.
    *
    * @generated from field: string return_url = 1;
    */
@@ -2593,7 +2591,7 @@ export type WorkspaceSettings = Message<"toshi.workspace.v1.WorkspaceSettings"> 
   /**
    * The sign-in provider the workspace requires of its people; unset when it
    * requires none. Setting it names an OpenID Connect provider entry the
-   * control plane has (GET /auth/providers lists them) and needs a person
+   * control plane has and needs a person
    * whose own session or token was signed in through it, so it is known to
    * work before it is enforced; otherwise FAILED_PRECONDITION with the
    * reason SIGNIN_UNTESTED. A name the control plane does not have fails
@@ -2727,7 +2725,7 @@ export type WorkspaceSettingsJson = {
   /**
    * The sign-in provider the workspace requires of its people; unset when it
    * requires none. Setting it names an OpenID Connect provider entry the
-   * control plane has (GET /auth/providers lists them) and needs a person
+   * control plane has and needs a person
    * whose own session or token was signed in through it, so it is known to
    * work before it is enforced; otherwise FAILED_PRECONDITION with the
    * reason SIGNIN_UNTESTED. A name the control plane does not have fails
@@ -2895,7 +2893,7 @@ export const WorkspaceSettingChangeSchema: GenMessage<WorkspaceSettingChange, {j
  */
 export type WorkspaceSignIn = Message<"toshi.workspace.v1.WorkspaceSignIn"> & {
   /**
-   * The provider entry's name, as GET /auth/providers lists it.
+   * The configured provider entry's name.
    *
    * @generated from field: string provider = 1;
    */
@@ -2903,8 +2901,7 @@ export type WorkspaceSignIn = Message<"toshi.workspace.v1.WorkspaceSignIn"> & {
 
   /**
    * The provider's issuer: the identities it signs in are keyed by it, as
-   * their Identity.provider, and GET /auth/providers lists it as the
-   * entry's identity_provider. Set by Toshi.
+   * their Identity.provider. Set by Toshi.
    *
    * @generated from field: string issuer = 2;
    */
@@ -2930,7 +2927,7 @@ export type WorkspaceSignIn = Message<"toshi.workspace.v1.WorkspaceSignIn"> & {
  */
 export type WorkspaceSignInJson = {
   /**
-   * The provider entry's name, as GET /auth/providers lists it.
+   * The configured provider entry's name.
    *
    * @generated from field: string provider = 1;
    */
@@ -2938,8 +2935,7 @@ export type WorkspaceSignInJson = {
 
   /**
    * The provider's issuer: the identities it signs in are keyed by it, as
-   * their Identity.provider, and GET /auth/providers lists it as the
-   * entry's identity_provider. Set by Toshi.
+   * their Identity.provider. Set by Toshi.
    *
    * @generated from field: string issuer = 2;
    */
@@ -6264,8 +6260,8 @@ export const WorkspaceService: GenService<{
    * CreateCheckoutSession returns a Stripe Checkout URL that subscribes the
    * workspace to plan, first creating and linking a billing customer for a
    * workspace without one. An empty plan, a plan the configuration does not
-   * define, or a return_url outside the allowed origins fails with
-   * INVALID_ARGUMENT; self-serve billing off, a plan that is not sold or
+   * define, or an empty return_url or one outside the allowed origins fails
+   * with INVALID_ARGUMENT; self-serve billing off, a plan that is not sold or
    * maps to several lookup keys, a price missing in Stripe, or a workspace
    * that already has a subscription fails with FAILED_PRECONDITION; a
    * billing provider failure fails with UNAVAILABLE.
@@ -6279,9 +6275,9 @@ export const WorkspaceService: GenService<{
   },
   /**
    * CreateBillingPortalSession returns a Stripe Customer Portal URL where
-   * the workspace manages its card and subscription. A return_url outside
-   * the allowed origins fails with INVALID_ARGUMENT; self-serve billing not
-   * configured, or a workspace with no billing customer, fails with
+   * the workspace manages its card and subscription. An empty return_url or
+   * one outside the allowed origins fails with INVALID_ARGUMENT; self-serve
+   * billing not configured, or a workspace with no billing customer, fails with
    * FAILED_PRECONDITION; a billing provider failure fails with UNAVAILABLE.
    *
    * @generated from rpc toshi.workspace.v1.WorkspaceService.CreateBillingPortalSession

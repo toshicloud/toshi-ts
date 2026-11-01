@@ -52,7 +52,9 @@ in `package.json`, followed by its tag.
 `test/integration/` runs the client against a real `toshi serve` over
 HTTPS with a test CA it mints itself. `TOSHI_INTEGRATION_BIN` names the
 `toshi` binary it runs; when `TOSHI_INTEGRATION_EXPECT_COMMIT` is set, the
-binary must report that commit:
+binary must report that commit. The `dev github` commands that stand in for
+GitHub run through the binary `TOSHI_INTEGRATION_CONTROL_BIN` names when it
+is set, and through `TOSHI_INTEGRATION_BIN` otherwise:
 
 ```sh
 TOSHI_INTEGRATION_BIN=/path/to/toshi mise exec -- pnpm vitest run test/integration
