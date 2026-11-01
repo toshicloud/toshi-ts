@@ -45,4 +45,4 @@ try {
 }
 NODE
 
-buf generate "$TOSHI_API_REPOSITORY#commit=$TOSHI_API_REF" --path proto/toshi/workspace/v1 --path proto/toshi/permission.proto
+buf generate "$TOSHI_API_REPOSITORY#commit=$TOSHI_API_REF" --path proto/toshi/workspace/v1 --path proto/toshi/github/v1 --path proto/toshi/permission.proto
