@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/model_credentials.proto.
  */
 export const file_toshi_workspace_v1_model_credentials: GenFile = /*@__PURE__*/
-  fileDesc("Cip0b3NoaS93b3Jrc3BhY2UvdjEvbW9kZWxfY3JlZGVudGlhbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKvAgoPTW9kZWxDcmVkZW50aWFsEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEAoIcHJvdmlkZXIYAyABKAkSNQoEa2luZBgEIAEoDjInLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxLaW5kEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCBIPCgdwcm9qZWN0GAggASgJEhMKC2Vudmlyb25tZW50GAkgASgJEg4KBnNoYXJlZBgKIAEoCBIOCgZzZWNyZXQYCyABKAkSLgoKY3JlYXRlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgNIAEoCSKgAQocQ3JlYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBIMCgRuYW1lGAEgASgJEhAKCHByb3ZpZGVyGAIgASgJEg8KB3Byb2plY3QYAyABKAkSEwoLZW52aXJvbm1lbnQYBCABKAkSDgoGc2hhcmVkGAUgASgIEg4KBnNlY3JldBgGIAEoCRINCgV2YWx1ZRgHIAEoDBILCgNvd24YCCABKAgiXgodQ3JlYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiJwoZR2V0TW9kZWxDcmVkZW50aWFsUmVxdWVzdBIKCgJpZBgBIAEoCSJbChpHZXRNb2RlbENyZWRlbnRpYWxSZXNwb25zZRI9ChBtb2RlbF9jcmVkZW50aWFsGAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLk1vZGVsQ3JlZGVudGlhbCJWChtMaXN0TW9kZWxDcmVkZW50aWFsc1JlcXVlc3QSEAoIcHJvdmlkZXIYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkidwocTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXNwb25zZRI+ChFtb2RlbF9jcmVkZW50aWFscxgBIAMoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIo4BChxVcGRhdGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0Ej0KEG1vZGVsX2NyZWRlbnRpYWwYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJeCh1VcGRhdGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZRI9ChBtb2RlbF9jcmVkZW50aWFsGAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLk1vZGVsQ3JlZGVudGlhbCIqChxEZWxldGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0EgoKAmlkGAEgASgJIh8KHURlbGV0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlKlsKE01vZGVsQ3JlZGVudGlhbEtpbmQSJQohTU9ERUxfQ1JFREVOVElBTF9LSU5EX1VOU1BFQ0lGSUVEEAASHQoZTU9ERUxfQ1JFREVOVElBTF9LSU5EX0tFWRABMukGChZNb2RlbENyZWRlbnRpYWxTZXJ2aWNlErIBChVDcmVhdGVNb2RlbENyZWRlbnRpYWwSMC50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSI0wvMYF21vZGVsX2NyZWRlbnRpYWxzLndyaXRlyvMYC2Vudmlyb25tZW506vMYAigB8PMYARKTAQoSR2V0TW9kZWxDcmVkZW50aWFsEi0udG9zaGkud29ya3NwYWNlLnYxLkdldE1vZGVsQ3JlZGVudGlhbFJlcXVlc3QaLi50b3NoaS53b3Jrc3BhY2UudjEuR2V0TW9kZWxDcmVkZW50aWFsUmVzcG9uc2UiHsLzGBZtb2RlbF9jcmVkZW50aWFscy5yZWFk8PMYARKZAQoUTGlzdE1vZGVsQ3JlZGVudGlhbHMSLy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXF1ZXN0GjAudG9zaGkud29ya3NwYWNlLnYxLkxpc3RNb2RlbENyZWRlbnRpYWxzUmVzcG9uc2UiHsLzGBZtb2RlbF9jcmVkZW50aWFscy5yZWFk8PMYARLHAQoVVXBkYXRlTW9kZWxDcmVkZW50aWFsEjAudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2UiScLzGBdtb2RlbF9jcmVkZW50aWFscy53cml0ZdLzGCYSJG1vZGVsX2NyZWRlbnRpYWw6bW9kZWxfY3JlZGVudGlhbC5pZPDzGAESnQEKFURlbGV0ZU1vZGVsQ3JlZGVudGlhbBIwLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIh/C8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXw8xgBQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Cip0b3NoaS93b3Jrc3BhY2UvdjEvbW9kZWxfY3JlZGVudGlhbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKvAgoPTW9kZWxDcmVkZW50aWFsEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEAoIcHJvdmlkZXIYAyABKAkSNQoEa2luZBgEIAEoDjInLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxLaW5kEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCBIPCgdwcm9qZWN0GAggASgJEhMKC2Vudmlyb25tZW50GAkgASgJEg4KBnNoYXJlZBgKIAEoCBIOCgZzZWNyZXQYCyABKAkSLgoKY3JlYXRlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgNIAEoCSJEChZNb2RlbENyZWRlbnRpYWxEZWZhdWx0EhAKCHByb3ZpZGVyGAEgASgJEhgKEG1vZGVsX2NyZWRlbnRpYWwYAiABKAkioAEKHENyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSDAoEbmFtZRgBIAEoCRIQCghwcm92aWRlchgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEg4KBnNoYXJlZBgFIAEoCBIOCgZzZWNyZXQYBiABKAkSDQoFdmFsdWUYByABKAwSCwoDb3duGAggASgIIl4KHUNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlEj0KEG1vZGVsX2NyZWRlbnRpYWwYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsIicKGUdldE1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSCgoCaWQYASABKAkiWwoaR2V0TW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiVgobTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXF1ZXN0EhAKCHByb3ZpZGVyGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIncKHExpc3RNb2RlbENyZWRlbnRpYWxzUmVzcG9uc2USPgoRbW9kZWxfY3JlZGVudGlhbHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKOAQocVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBI9ChBtb2RlbF9jcmVkZW50aWFsGAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLk1vZGVsQ3JlZGVudGlhbBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siXgodVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiKgocRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBIKCgJpZBgBIAEoCSIfCh1EZWxldGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSpbChNNb2RlbENyZWRlbnRpYWxLaW5kEiUKIU1PREVMX0NSRURFTlRJQUxfS0lORF9VTlNQRUNJRklFRBAAEh0KGU1PREVMX0NSRURFTlRJQUxfS0lORF9LRVkQATLpBgoWTW9kZWxDcmVkZW50aWFsU2VydmljZRKyAQoVQ3JlYXRlTW9kZWxDcmVkZW50aWFsEjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2UiNMLzGBdtb2RlbF9jcmVkZW50aWFscy53cml0ZcrzGAtlbnZpcm9ubWVudOrzGAIoAfDzGAESkwEKEkdldE1vZGVsQ3JlZGVudGlhbBItLnRvc2hpLndvcmtzcGFjZS52MS5HZXRNb2RlbENyZWRlbnRpYWxSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkdldE1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIh7C8xgWbW9kZWxfY3JlZGVudGlhbHMucmVhZPDzGAESmQEKFExpc3RNb2RlbENyZWRlbnRpYWxzEi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RNb2RlbENyZWRlbnRpYWxzUmVxdWVzdBowLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0TW9kZWxDcmVkZW50aWFsc1Jlc3BvbnNlIh7C8xgWbW9kZWxfY3JlZGVudGlhbHMucmVhZPDzGAESxwEKFVVwZGF0ZU1vZGVsQ3JlZGVudGlhbBIwLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIknC8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXS8xgmEiRtb2RlbF9jcmVkZW50aWFsOm1vZGVsX2NyZWRlbnRpYWwuaWTw8xgBEp0BChVEZWxldGVNb2RlbENyZWRlbnRpYWwSMC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSIfwvMYF21vZGVsX2NyZWRlbnRpYWxzLndyaXRl8PMYAUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * ModelCredential is a credential as anyone may see it: never its value.
@@ -215,6 +215,59 @@ export const ModelCredentialSchema: GenMessage<ModelCredential, {jsonType: Model
   messageDesc(file_toshi_workspace_v1_model_credentials, 0);
 
 /**
+ * ModelCredentialDefault names the workspace credential a workload gets for
+ * a provider when it binds none and its starter has no own credential for
+ * that provider.
+ *
+ * @generated from message toshi.workspace.v1.ModelCredentialDefault
+ */
+export type ModelCredentialDefault = Message<"toshi.workspace.v1.ModelCredentialDefault"> & {
+  /**
+   * "anthropic" or "openai"; one default per provider.
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider: string;
+
+  /**
+   * The credential's ID. Only a workspace credential may be a default.
+   *
+   * @generated from field: string model_credential = 2;
+   */
+  modelCredential: string;
+};
+
+/**
+ * ModelCredentialDefault names the workspace credential a workload gets for
+ * a provider when it binds none and its starter has no own credential for
+ * that provider.
+ *
+ * @generated from message toshi.workspace.v1.ModelCredentialDefault
+ */
+export type ModelCredentialDefaultJson = {
+  /**
+   * "anthropic" or "openai"; one default per provider.
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider?: string;
+
+  /**
+   * The credential's ID. Only a workspace credential may be a default.
+   *
+   * @generated from field: string model_credential = 2;
+   */
+  modelCredential?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ModelCredentialDefault.
+ * Use `create(ModelCredentialDefaultSchema)` to create a new message.
+ */
+export const ModelCredentialDefaultSchema: GenMessage<ModelCredentialDefault, {jsonType: ModelCredentialDefaultJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 1);
+
+/**
  * @generated from message toshi.workspace.v1.CreateModelCredentialRequest
  */
 export type CreateModelCredentialRequest = Message<"toshi.workspace.v1.CreateModelCredentialRequest"> & {
@@ -329,7 +382,7 @@ export type CreateModelCredentialRequestJson = {
  * Use `create(CreateModelCredentialRequestSchema)` to create a new message.
  */
 export const CreateModelCredentialRequestSchema: GenMessage<CreateModelCredentialRequest, {jsonType: CreateModelCredentialRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 1);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 2);
 
 /**
  * @generated from message toshi.workspace.v1.CreateModelCredentialResponse
@@ -356,7 +409,7 @@ export type CreateModelCredentialResponseJson = {
  * Use `create(CreateModelCredentialResponseSchema)` to create a new message.
  */
 export const CreateModelCredentialResponseSchema: GenMessage<CreateModelCredentialResponse, {jsonType: CreateModelCredentialResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 2);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 3);
 
 /**
  * @generated from message toshi.workspace.v1.GetModelCredentialRequest
@@ -383,7 +436,7 @@ export type GetModelCredentialRequestJson = {
  * Use `create(GetModelCredentialRequestSchema)` to create a new message.
  */
 export const GetModelCredentialRequestSchema: GenMessage<GetModelCredentialRequest, {jsonType: GetModelCredentialRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 3);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 4);
 
 /**
  * @generated from message toshi.workspace.v1.GetModelCredentialResponse
@@ -410,7 +463,7 @@ export type GetModelCredentialResponseJson = {
  * Use `create(GetModelCredentialResponseSchema)` to create a new message.
  */
 export const GetModelCredentialResponseSchema: GenMessage<GetModelCredentialResponse, {jsonType: GetModelCredentialResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 4);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 5);
 
 /**
  * @generated from message toshi.workspace.v1.ListModelCredentialsRequest
@@ -461,7 +514,7 @@ export type ListModelCredentialsRequestJson = {
  * Use `create(ListModelCredentialsRequestSchema)` to create a new message.
  */
 export const ListModelCredentialsRequestSchema: GenMessage<ListModelCredentialsRequest, {jsonType: ListModelCredentialsRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 5);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 6);
 
 /**
  * @generated from message toshi.workspace.v1.ListModelCredentialsResponse
@@ -498,7 +551,7 @@ export type ListModelCredentialsResponseJson = {
  * Use `create(ListModelCredentialsResponseSchema)` to create a new message.
  */
 export const ListModelCredentialsResponseSchema: GenMessage<ListModelCredentialsResponse, {jsonType: ListModelCredentialsResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 6);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 7);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateModelCredentialRequest
@@ -541,7 +594,7 @@ export type UpdateModelCredentialRequestJson = {
  * Use `create(UpdateModelCredentialRequestSchema)` to create a new message.
  */
 export const UpdateModelCredentialRequestSchema: GenMessage<UpdateModelCredentialRequest, {jsonType: UpdateModelCredentialRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 7);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 8);
 
 /**
  * @generated from message toshi.workspace.v1.UpdateModelCredentialResponse
@@ -568,7 +621,7 @@ export type UpdateModelCredentialResponseJson = {
  * Use `create(UpdateModelCredentialResponseSchema)` to create a new message.
  */
 export const UpdateModelCredentialResponseSchema: GenMessage<UpdateModelCredentialResponse, {jsonType: UpdateModelCredentialResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 8);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 9);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteModelCredentialRequest
@@ -595,7 +648,7 @@ export type DeleteModelCredentialRequestJson = {
  * Use `create(DeleteModelCredentialRequestSchema)` to create a new message.
  */
 export const DeleteModelCredentialRequestSchema: GenMessage<DeleteModelCredentialRequest, {jsonType: DeleteModelCredentialRequestJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 9);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 10);
 
 /**
  * @generated from message toshi.workspace.v1.DeleteModelCredentialResponse
@@ -614,7 +667,7 @@ export type DeleteModelCredentialResponseJson = {
  * Use `create(DeleteModelCredentialResponseSchema)` to create a new message.
  */
 export const DeleteModelCredentialResponseSchema: GenMessage<DeleteModelCredentialResponse, {jsonType: DeleteModelCredentialResponseJson}> = /*@__PURE__*/
-  messageDesc(file_toshi_workspace_v1_model_credentials, 10);
+  messageDesc(file_toshi_workspace_v1_model_credentials, 11);
 
 /**
  * ModelCredentialKind is what a model credential holds.

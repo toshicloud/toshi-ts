@@ -32,6 +32,8 @@ export type RetryClass = "read" | "keyed" | "none";
 const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.AccountService/GetAccount": "read",
   "/toshi.workspace.v1.AccountService/ListIdentities": "read",
+  "/toshi.workspace.v1.AccountService/ListSessions": "read",
+  "/toshi.workspace.v1.AccountService/EndSession": "none",
   // A repeat answers NOT_FOUND ("an identity the caller does not have fails
   // with NOT_FOUND"), so a retry would report failure for a call that worked;
   // its permission's level is read although it changes state.
@@ -202,6 +204,7 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkspaceService/ListEgressIPs": "read",
   "/toshi.workspace.v1.WorkspaceService/GetUsage": "read",
   "/toshi.workspace.v1.WorkspaceService/GetQueueTimes": "read",
+  "/toshi.workspace.v1.WorkspaceService/GetStartWindows": "read",
   "/toshi.workspace.v1.WorkspaceService/GetWorkflowUsage": "read",
   "/toshi.workspace.v1.WorkspaceService/ListPlans": "read",
   "/toshi.workspace.v1.WorkspaceService/CreateCheckoutSession": "none",

@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/account.proto.
  */
 export const file_toshi_workspace_v1_account: GenFile = /*@__PURE__*/
-  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvYWNjb3VudC5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxImcKB0FjY291bnQSDwoHdXNlcl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIqEBCghJZGVudGl0eRIQCghwcm92aWRlchgBIAEoCRIPCgdzdWJqZWN0GAIgASgJEg0KBWxvZ2luGAMgASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2xhc3Rfc2lnbl9pbl9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiEwoRR2V0QWNjb3VudFJlcXVlc3QiiAIKEkdldEFjY291bnRSZXNwb25zZRIsCgdhY2NvdW50GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkFjY291bnQSMAoKaWRlbnRpdGllcxgCIAMoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5JZGVudGl0eRISCgp3b3Jrc3BhY2VzGAMgAygJEjcKDnNpZ25lZF9pbl93aXRoGAQgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNpZ25JblByb29mEhMKC2luc3RhbGxfdXJsGAUgASgJEjAKB3BlbmRpbmcYBiADKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuSm9pblJlcXVlc3QibgoLSm9pblJlcXVlc3QSEQoJd29ya3NwYWNlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFc3RhdGUYAyABKAkSLwoLcmV0cnlfYWZ0ZXIYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInYKC1NpZ25JblByb29mEhAKCHByb3ZpZGVyGAEgASgJEg8KB3N1YmplY3QYAiABKAkSDgoGbWV0aG9kGAMgASgJEjQKEGF1dGhlbnRpY2F0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIhcKFUxpc3RJZGVudGl0aWVzUmVxdWVzdCJKChZMaXN0SWRlbnRpdGllc1Jlc3BvbnNlEjAKCmlkZW50aXRpZXMYASADKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuSWRlbnRpdHkiOgoVVW5saW5rSWRlbnRpdHlSZXF1ZXN0EhAKCHByb3ZpZGVyGAEgASgJEg8KB3N1YmplY3QYAiABKAkieAoWVW5saW5rSWRlbnRpdHlSZXNwb25zZRIuCghpZGVudGl0eRgBIAEoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5JZGVudGl0eRIWCg5zZXNzaW9uc19lbmRlZBgCIAEoBRIWCg5ncmFudHNfcmV2b2tlZBgDIAEoBTLCAwoOQWNjb3VudFNlcnZpY2USegoKR2V0QWNjb3VudBIlLnRvc2hpLndvcmtzcGFjZS52MS5HZXRBY2NvdW50UmVxdWVzdBomLnRvc2hpLndvcmtzcGFjZS52MS5HZXRBY2NvdW50UmVzcG9uc2UiHcLzGAxtZW1iZXJzLnJlYWTK8xgJd29ya3NwYWNlEoYBCg5MaXN0SWRlbnRpdGllcxIpLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SWRlbnRpdGllc1JlcXVlc3QaKi50b3NoaS53b3Jrc3BhY2UudjEuTGlzdElkZW50aXRpZXNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2USqgEKDlVubGlua0lkZW50aXR5EikudG9zaGkud29ya3NwYWNlLnYxLlVubGlua0lkZW50aXR5UmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5VbmxpbmtJZGVudGl0eVJlc3BvbnNlIkHC8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgZChFpZGVudGl0eS51bmxpbmtlZBIEbm9uZerzGAIQAUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("CiB0b3NoaS93b3Jrc3BhY2UvdjEvYWNjb3VudC5wcm90bxISdG9zaGkud29ya3NwYWNlLnYxImcKB0FjY291bnQSDwoHdXNlcl9pZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIqEBCghJZGVudGl0eRIQCghwcm92aWRlchgBIAEoCRIPCgdzdWJqZWN0GAIgASgJEg0KBWxvZ2luGAMgASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2xhc3Rfc2lnbl9pbl9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiEwoRR2V0QWNjb3VudFJlcXVlc3QiiAIKEkdldEFjY291bnRSZXNwb25zZRIsCgdhY2NvdW50GAEgASgLMhsudG9zaGkud29ya3NwYWNlLnYxLkFjY291bnQSMAoKaWRlbnRpdGllcxgCIAMoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5JZGVudGl0eRISCgp3b3Jrc3BhY2VzGAMgAygJEjcKDnNpZ25lZF9pbl93aXRoGAQgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNpZ25JblByb29mEhMKC2luc3RhbGxfdXJsGAUgASgJEjAKB3BlbmRpbmcYBiADKAsyHy50b3NoaS53b3Jrc3BhY2UudjEuSm9pblJlcXVlc3QibgoLSm9pblJlcXVlc3QSEQoJd29ya3NwYWNlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFc3RhdGUYAyABKAkSLwoLcmV0cnlfYWZ0ZXIYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInYKC1NpZ25JblByb29mEhAKCHByb3ZpZGVyGAEgASgJEg8KB3N1YmplY3QYAiABKAkSDgoGbWV0aG9kGAMgASgJEjQKEGF1dGhlbnRpY2F0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIhcKFUxpc3RJZGVudGl0aWVzUmVxdWVzdCJKChZMaXN0SWRlbnRpdGllc1Jlc3BvbnNlEjAKCmlkZW50aXRpZXMYASADKAsyHC50b3NoaS53b3Jrc3BhY2UudjEuSWRlbnRpdHkiOgoVVW5saW5rSWRlbnRpdHlSZXF1ZXN0EhAKCHByb3ZpZGVyGAEgASgJEg8KB3N1YmplY3QYAiABKAkieAoWVW5saW5rSWRlbnRpdHlSZXNwb25zZRIuCghpZGVudGl0eRgBIAEoCzIcLnRvc2hpLndvcmtzcGFjZS52MS5JZGVudGl0eRIWCg5zZXNzaW9uc19lbmRlZBgCIAEoBRIWCg5ncmFudHNfcmV2b2tlZBgDIAEoBSI8ChNMaXN0U2Vzc2lvbnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJImQKFExpc3RTZXNzaW9uc1Jlc3BvbnNlEjMKCHNlc3Npb25zGAEgAygLMiEudG9zaGkud29ya3NwYWNlLnYxLlNpZ25JblNlc3Npb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJItcBCg1TaWduSW5TZXNzaW9uEgoKAmlkGAEgASgJEi4KCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmV4cGlyZXNfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCHByb3ZpZGVyGAQgASgJEjcKDnNpZ25lZF9pbl93aXRoGAUgAygLMh8udG9zaGkud29ya3NwYWNlLnYxLlNpZ25JblByb29mEg8KB2N1cnJlbnQYBiABKAgiHwoRRW5kU2Vzc2lvblJlcXVlc3QSCgoCaWQYASABKAkiFAoSRW5kU2Vzc2lvblJlc3BvbnNlMuIFCg5BY2NvdW50U2VydmljZRJ6CgpHZXRBY2NvdW50EiUudG9zaGkud29ya3NwYWNlLnYxLkdldEFjY291bnRSZXF1ZXN0GiYudG9zaGkud29ya3NwYWNlLnYxLkdldEFjY291bnRSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2UShgEKDkxpc3RJZGVudGl0aWVzEikudG9zaGkud29ya3NwYWNlLnYxLkxpc3RJZGVudGl0aWVzUmVxdWVzdBoqLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0SWRlbnRpdGllc1Jlc3BvbnNlIh3C8xgMbWVtYmVycy5yZWFkyvMYCXdvcmtzcGFjZRKqAQoOVW5saW5rSWRlbnRpdHkSKS50b3NoaS53b3Jrc3BhY2UudjEuVW5saW5rSWRlbnRpdHlSZXF1ZXN0GioudG9zaGkud29ya3NwYWNlLnYxLlVubGlua0lkZW50aXR5UmVzcG9uc2UiQcLzGA1tZW1iZXJzLndyaXRlyvMYCXdvcmtzcGFjZdLzGBkKEWlkZW50aXR5LnVubGlua2VkEgRub25l6vMYAhABEoABCgxMaXN0U2Vzc2lvbnMSJy50b3NoaS53b3Jrc3BhY2UudjEuTGlzdFNlc3Npb25zUmVxdWVzdBooLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0U2Vzc2lvbnNSZXNwb25zZSIdwvMYDG1lbWJlcnMucmVhZMrzGAl3b3Jrc3BhY2USmgEKCkVuZFNlc3Npb24SJS50b3NoaS53b3Jrc3BhY2UudjEuRW5kU2Vzc2lvblJlcXVlc3QaJi50b3NoaS53b3Jrc3BhY2UudjEuRW5kU2Vzc2lvblJlc3BvbnNlIj3C8xgNbWVtYmVycy53cml0ZcrzGAl3b3Jrc3BhY2XS8xgVCg1zZXNzaW9uLmVuZGVkEgRub25l6vMYAhABQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * Account is a Toshi user: a person who signs in through one or more
@@ -608,6 +608,237 @@ export const UnlinkIdentityResponseSchema: GenMessage<UnlinkIdentityResponse, {j
   messageDesc(file_toshi_workspace_v1_account, 9);
 
 /**
+ * @generated from message toshi.workspace.v1.ListSessionsRequest
+ */
+export type ListSessionsRequest = Message<"toshi.workspace.v1.ListSessionsRequest"> & {
+  /**
+   * Sessions per page; the server picks a default and a maximum.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListSessionsRequest
+ */
+export type ListSessionsRequestJson = {
+  /**
+   * Sessions per page; the server picks a default and a maximum.
+   *
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize?: number;
+
+  /**
+   * @generated from field: string page_token = 2;
+   */
+  pageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListSessionsRequest.
+ * Use `create(ListSessionsRequestSchema)` to create a new message.
+ */
+export const ListSessionsRequestSchema: GenMessage<ListSessionsRequest, {jsonType: ListSessionsRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_account, 10);
+
+/**
+ * @generated from message toshi.workspace.v1.ListSessionsResponse
+ */
+export type ListSessionsResponse = Message<"toshi.workspace.v1.ListSessionsResponse"> & {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.SignInSession sessions = 1;
+   */
+  sessions: SignInSession[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListSessionsResponse
+ */
+export type ListSessionsResponseJson = {
+  /**
+   * @generated from field: repeated toshi.workspace.v1.SignInSession sessions = 1;
+   */
+  sessions?: SignInSessionJson[];
+
+  /**
+   * Empty on the last page.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListSessionsResponse.
+ * Use `create(ListSessionsResponseSchema)` to create a new message.
+ */
+export const ListSessionsResponseSchema: GenMessage<ListSessionsResponse, {jsonType: ListSessionsResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_account, 11);
+
+/**
+ * SignInSession is one dashboard sign-in session of the caller.
+ *
+ * @generated from message toshi.workspace.v1.SignInSession
+ */
+export type SignInSession = Message<"toshi.workspace.v1.SignInSession"> & {
+  /**
+   * An opaque id, stable for the session's life, that EndSession takes. It
+   * is not the cookie and cannot be used to sign in.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 2;
+   */
+  createdAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 3;
+   */
+  expiresAt?: Timestamp | undefined;
+
+  /**
+   * The identity provider the session was opened through.
+   *
+   * @generated from field: string provider = 4;
+   */
+  provider: string;
+
+  /**
+   * The sign-ins the session holds, the one that opened it first.
+   *
+   * @generated from field: repeated toshi.workspace.v1.SignInProof signed_in_with = 5;
+   */
+  signedInWith: SignInProof[];
+
+  /**
+   * True for the session making this call.
+   *
+   * @generated from field: bool current = 6;
+   */
+  current: boolean;
+};
+
+/**
+ * SignInSession is one dashboard sign-in session of the caller.
+ *
+ * @generated from message toshi.workspace.v1.SignInSession
+ */
+export type SignInSessionJson = {
+  /**
+   * An opaque id, stable for the session's life, that EndSession takes. It
+   * is not the cookie and cannot be used to sign in.
+   *
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 2;
+   */
+  createdAt?: TimestampJson;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 3;
+   */
+  expiresAt?: TimestampJson;
+
+  /**
+   * The identity provider the session was opened through.
+   *
+   * @generated from field: string provider = 4;
+   */
+  provider?: string;
+
+  /**
+   * The sign-ins the session holds, the one that opened it first.
+   *
+   * @generated from field: repeated toshi.workspace.v1.SignInProof signed_in_with = 5;
+   */
+  signedInWith?: SignInProofJson[];
+
+  /**
+   * True for the session making this call.
+   *
+   * @generated from field: bool current = 6;
+   */
+  current?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.SignInSession.
+ * Use `create(SignInSessionSchema)` to create a new message.
+ */
+export const SignInSessionSchema: GenMessage<SignInSession, {jsonType: SignInSessionJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_account, 12);
+
+/**
+ * @generated from message toshi.workspace.v1.EndSessionRequest
+ */
+export type EndSessionRequest = Message<"toshi.workspace.v1.EndSessionRequest"> & {
+  /**
+   * The session's id, as SignInSession names it.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.EndSessionRequest
+ */
+export type EndSessionRequestJson = {
+  /**
+   * The session's id, as SignInSession names it.
+   *
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.EndSessionRequest.
+ * Use `create(EndSessionRequestSchema)` to create a new message.
+ */
+export const EndSessionRequestSchema: GenMessage<EndSessionRequest, {jsonType: EndSessionRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_account, 13);
+
+/**
+ * @generated from message toshi.workspace.v1.EndSessionResponse
+ */
+export type EndSessionResponse = Message<"toshi.workspace.v1.EndSessionResponse"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.EndSessionResponse
+ */
+export type EndSessionResponseJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.EndSessionResponse.
+ * Use `create(EndSessionResponseSchema)` to create a new message.
+ */
+export const EndSessionResponseSchema: GenMessage<EndSessionResponse, {jsonType: EndSessionResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_account, 14);
+
+/**
  * AccountService reads and changes the caller's own Toshi user: who they
  * are, the identities they sign in with, and the workspaces they are a
  * member of. Its calls are a person's: a dashboard session or a person's
@@ -662,6 +893,32 @@ export const AccountService: GenService<{
     methodKind: "unary";
     input: typeof UnlinkIdentityRequestSchema;
     output: typeof UnlinkIdentityResponseSchema;
+  },
+  /**
+   * ListSessions returns the caller's own sign-in sessions that have not
+   * expired, newest first, in pages. A session opened by another person is
+   * never listed. The one making the call is marked current.
+   *
+   * @generated from rpc toshi.workspace.v1.AccountService.ListSessions
+   */
+  listSessions: {
+    methodKind: "unary";
+    input: typeof ListSessionsRequestSchema;
+    output: typeof ListSessionsResponseSchema;
+  },
+  /**
+   * EndSession ends one of the caller's own sign-in sessions, and the
+   * access tokens and grants it refreshes through, so it cannot be
+   * refreshed back. A session that is not the caller's, or does not exist,
+   * fails with NOT_FOUND. The session ended stops working at its next
+   * call, the calling one included.
+   *
+   * @generated from rpc toshi.workspace.v1.AccountService.EndSession
+   */
+  endSession: {
+    methodKind: "unary";
+    input: typeof EndSessionRequestSchema;
+    output: typeof EndSessionResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_account, 0);
