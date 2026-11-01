@@ -24,6 +24,7 @@ export * from "./gen/toshi/workspace/v1/account_pb.js";
 export * from "./gen/toshi/workspace/v1/images_pb.js";
 export * from "./gen/toshi/workspace/v1/triggers_pb.js";
 export * from "./gen/toshi/workspace/v1/domains_pb.js";
+export * from "./gen/toshi/workspace/v1/model_credentials_pb.js";
 export * from "./gen/toshi/workspace/v1/workspace_service_pb.js";
 
 export { createToshiClient } from "./client.js";

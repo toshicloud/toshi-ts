@@ -138,8 +138,8 @@ The client has one field per Workspace API service: `project`, `secret`,
 `webhook`, `display`, `endpoint`, `recording`, `volume`, `artifact`,
 `artifactUpload`, `workspace`, `hostJob`, `host`, `token`, `auditEvent`,
 `filler`, `grant`, `storageProvider`, `product`, `discovery`, `connection`,
-`role`, `trigger`, `account`, `image` and `domain`, each holding that service's
-generated client.
+`role`, `trigger`, `account`, `image`, `domain` and `modelCredential`, each
+holding that service's generated client.
 `workload` holds `WorkloadService`'s calls, grouped by the type they
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`, `wait`,

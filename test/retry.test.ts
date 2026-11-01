@@ -29,6 +29,7 @@ import { TriggerService } from "../src/gen/toshi/workspace/v1/triggers_pb.js";
 import { AccountService } from "../src/gen/toshi/workspace/v1/account_pb.js";
 import { ImageService } from "../src/gen/toshi/workspace/v1/images_pb.js";
 import { DomainService } from "../src/gen/toshi/workspace/v1/domains_pb.js";
+import { ModelCredentialService } from "../src/gen/toshi/workspace/v1/model_credentials_pb.js";
 import { retryInterceptor } from "../src/interceptors.js";
 import { permission } from "../src/gen/toshi/permission_pb.js";
 import { backoffDelay, isTransportLoss, procedurePath, retryClassFor } from "../src/retry.js";
@@ -63,6 +64,7 @@ const services: readonly DescService[] = [
   AccountService,
   ImageService,
   DomainService,
+  ModelCredentialService,
 ];
 
 function transportFor<T extends DescService>(
@@ -103,7 +105,7 @@ const retryExceptions: Readonly<Record<string, RetryClass>> = {
 };
 
 describe("the retry table", () => {
-  it("gives every method of the twenty-six services the class the API's rule gives it", () => {
+  it("gives every method of the twenty-seven services the class the API's rule gives it", () => {
     const paths = new Set<string>();
     for (const service of services) {
       for (const method of service.methods) {
@@ -114,7 +116,7 @@ describe("the retry table", () => {
         expect(retryClassFor(path), `${path} follows the API's rule`).toBe(expected);
       }
     }
-    expect(paths.size).toBe(257);
+    expect(paths.size).toBe(262);
   });
 
   it("names an exception only for a method the API has", () => {
