@@ -27,6 +27,9 @@ export * from "./gen/toshi/workspace/v1/domains_pb.js";
 export * from "./gen/toshi/workspace/v1/model_credentials_pb.js";
 export * from "./gen/toshi/workspace/v1/workspace_service_pb.js";
 
+// Generated code for the Toshi GitHub product API; see src/gen/ and pin.env.
+export * from "./gen/toshi/github/v1/github_pb.js";
+
 export { createToshiClient } from "./client.js";
 export { paginate } from "./paginate.js";
 export {

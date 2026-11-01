@@ -41,6 +41,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.ImageService, "toshi.workspace.v1.ImageService", 6],
   [root.DomainService, "toshi.workspace.v1.DomainService", 6],
   [root.ModelCredentialService, "toshi.workspace.v1.ModelCredentialService", 5],
+  [root.GitHubService, "toshi.github.v1.GitHubService", 5],
 ];
 
 describe("src/index.ts", () => {
