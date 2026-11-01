@@ -1,2 +1,2 @@
 /** The package version; test/node.test.ts keeps it equal to package.json. */
-export const VERSION = "0.6.0";
+export const VERSION = "0.7.0";
