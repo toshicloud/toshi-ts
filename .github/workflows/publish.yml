@@ -14,9 +14,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # Full history, so the tagged commit can be checked against main.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          fetch-depth: 0
           persist-credentials: false
+
+      # npm publish cannot be undone, so the tag's form and its place on main
+      # are checked before anything is installed or published.
+      - name: Check the tag
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          if ! [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Tag $tag is not vMAJOR.MINOR.PATCH."
+            exit 1
+          fi
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo "::error::Tag $tag is on a commit that main does not contain."
+            exit 1
+          fi
 
       # Installs node and pnpm at the versions pinned in mise.toml.
       - uses: jdx/mise-action@8418fedb1110381a0d3ba51a7a415d7c1b884550 # v5.2.2
@@ -68,3 +85,53 @@ jobs:
             flags+=(--provenance)
           fi
           npm publish "${flags[@]}"
+
+  # Runs only once the package is on npm, so a Release never points at a
+  # version that does not exist. If it fails, re-run this job alone.
+  release:
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Check no Release exists
+        run: |
+          set -euo pipefail
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            echo "::error::Release $GITHUB_REF_NAME already exists and is left as it is."
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+
+      # The install line, then the annotated tag's message. A lightweight tag
+      # has no message, so the commit subjects since the previous tag are used.
+      - name: Write the notes
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          {
+            echo "Install with \`npm install @toshicloud/sdk@${tag#v}\`."
+            echo
+            if [ "$(git cat-file -t "refs/tags/$tag")" = tag ]; then
+              git for-each-ref --format='%(contents)' "refs/tags/$tag"
+            else
+              prev="$(git describe --tags --abbrev=0 "$tag^")"
+              echo "What changed since ${prev#v}:"
+              echo
+              git log --no-merges --format='- %s' "$prev..$tag"
+            fi
+          } > "$RUNNER_TEMP/notes.md"
+
+      - name: Create the Release
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
