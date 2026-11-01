@@ -2,6 +2,7 @@
  * The TypeScript layer against a real `toshi serve` from the binary that
  * TOSHI_INTEGRATION_BIN names. Without it the suite skips with a notice; when
  * TOSHI_INTEGRATION_EXPECT_COMMIT is set, the binary must report that commit.
+ * The `dev` commands run through TOSHI_INTEGRATION_CONTROL_BIN when it is set.
  *
  * The flow copies integration/integration_test.go of toshi-go: a throwaway
  * CA, two free loopback ports, `dev github serve` as the fake GitHub API, an
@@ -82,6 +83,7 @@ const children: { readonly child: ChildProcess; readonly logPath: string }[] = [
 describe.skipIf(skipped)("toshi serve integration", () => {
   beforeAll(async () => {
     const bin = binaryPath();
+    const devBin = devBinaryPath();
     const dir = await mkdtemp(join(tmpdir(), "toshi-ts-integration-"));
     workDir = dir;
     const fakeLog = join(dir, "fake.log");
@@ -126,7 +128,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
       });
 
       startChild(
-        bin,
+        devBin,
         [
           "dev",
           "github",
@@ -154,7 +156,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
 
       // A workspace through the documented dev GitHub flow.
       await runTool(
-        bin,
+        devBin,
         [
           "dev",
           "github",
@@ -787,6 +789,18 @@ function binaryPath(): string {
   const bin = process.env.TOSHI_INTEGRATION_BIN;
   if (bin === undefined) {
     throw new Error("TOSHI_INTEGRATION_BIN is not set");
+  }
+  return resolve(bin);
+}
+
+/**
+ * The binary that runs the `dev` commands: TOSHI_INTEGRATION_CONTROL_BIN when
+ * it is set, otherwise the TOSHI_INTEGRATION_BIN binary.
+ */
+function devBinaryPath(): string {
+  const bin = process.env.TOSHI_INTEGRATION_CONTROL_BIN;
+  if (bin === undefined || bin === "") {
+    return binaryPath();
   }
   return resolve(bin);
 }
