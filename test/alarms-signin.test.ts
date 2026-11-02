@@ -30,14 +30,14 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
     const schedule = { case: "cron", value: "0 3 * * *" } as const;
     const alarm = { name: "nightly", endpoint: "events", event: "tick", schedule };
     fake
-      .on(WorkloadService.method.setServiceAlarm, (req) => ({
+      .on(WorkloadService.method.putServiceAlarm, (req) => ({
         alarm: { name: req.name, endpoint: req.endpoint, event: req.event, schedule },
       }))
       .on(WorkloadService.method.getServiceAlarm, (req) => ({ alarm: { ...alarm, name: req.name } }))
       .on(WorkloadService.method.listServiceAlarms, () => ({ alarms: [alarm, { ...alarm, name: "weekly" }] }))
       .on(WorkloadService.method.deleteServiceAlarm, () => ({}))
       .on(WorkloadService.method.pauseServiceAlarm, (req) => ({ alarm: { ...alarm, name: req.name, paused: true } }))
-      .on(WorkloadService.method.resumeServiceAlarm, (req) => ({ alarm: { ...alarm, name: req.name } }))
+      .on(WorkloadService.method.unpauseServiceAlarm, (req) => ({ alarm: { ...alarm, name: req.name } }))
       .on(WorkloadService.method.runServiceAlarmNow, () => ({ occurrence: { generation: 1n } }))
       .on(WorkloadService.method.answerServiceSignIn, () => ({}))
       .on(WorkloadService.method.cancelServiceSignIn, () => ({}))
@@ -48,7 +48,7 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
     const { workload } = fake.client();
     const { services } = workload;
 
-    const set = await services.setAlarm({ serviceId: "svc-1", ...alarm });
+    const set = await services.putServiceAlarm({ serviceId: "svc-1", ...alarm });
     expect(set.alarm).toMatchObject({ name: "nightly", endpoint: "events", event: "tick" });
     expect((await services.getAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.name).toBe("nightly");
     expect((await services.listAlarms({ serviceId: "svc-1" })).alarms.map((a) => a.name)).toEqual([
@@ -57,7 +57,7 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
     ]);
     await services.deleteAlarm({ serviceId: "svc-1", name: "weekly" });
     expect((await services.pauseAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.paused).toBe(true);
-    expect((await services.resumeAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.paused).toBe(false);
+    expect((await services.unpauseServiceAlarm({ serviceId: "svc-1", name: "nightly" })).alarm?.paused).toBe(false);
     expect((await services.runAlarmNow({ serviceId: "svc-1", name: "nightly" })).occurrence?.generation).toBe(1n);
     await services.answerSignIn({ serviceId: "svc-1", signInId: "si-1", text: "123456" });
     await services.cancelSignIn({ serviceId: "svc-1", signInId: "si-1" });
@@ -66,12 +66,12 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
     expect((await workload.emitEvent({ workloadId: "svc-1", name: "build.done" })).event?.name).toBe("build.done");
 
     expect(fake.calls().map((c) => c.procedure.split("/").pop())).toEqual([
-      "SetServiceAlarm",
+      "PutServiceAlarm",
       "GetServiceAlarm",
       "ListServiceAlarms",
       "DeleteServiceAlarm",
       "PauseServiceAlarm",
-      "ResumeServiceAlarm",
+      "UnpauseServiceAlarm",
       "RunServiceAlarmNow",
       "AnswerServiceSignIn",
       "CancelServiceSignIn",
@@ -103,12 +103,12 @@ describe("a service's alarms and sign-ins, and an emitted event, through client.
 });
 
 describe("retries of the new calls follow the client's table", () => {
-  it("does not retry setAlarm or emitEvent: Unavailable reaches the caller after one try", async () => {
+  it("does not retry putServiceAlarm or emitEvent: Unavailable reaches the caller after one try", async () => {
     const fake = createFake();
     let sets = 0;
     let emits = 0;
     fake
-      .on(WorkloadService.method.setServiceAlarm, () => {
+      .on(WorkloadService.method.putServiceAlarm, () => {
         sets += 1;
         throw down();
       })
@@ -117,7 +117,7 @@ describe("retries of the new calls follow the client's table", () => {
         throw down();
       });
     const { workload } = fake.client();
-    await expect(workload.services.setAlarm({ serviceId: "svc-1" })).rejects.toMatchObject({ code: Code.Unavailable });
+    await expect(workload.services.putServiceAlarm({ serviceId: "svc-1" })).rejects.toMatchObject({ code: Code.Unavailable });
     await expect(workload.emitEvent({ workloadId: "svc-1", name: "x" })).rejects.toMatchObject({
       code: Code.Unavailable,
     });

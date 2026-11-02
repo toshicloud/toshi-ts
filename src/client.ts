@@ -62,9 +62,9 @@ import {
   ListServiceAlarmsRequestSchema,
   ListServicesRequestSchema,
   PauseServiceAlarmRequestSchema,
-  ResumeServiceAlarmRequestSchema,
+  UnpauseServiceAlarmRequestSchema,
   RunServiceAlarmNowRequestSchema,
-  SetServiceAlarmRequestSchema,
+  PutServiceAlarmRequestSchema,
   UpdateJobRequestSchema,
   UpdateSandboxRequestSchema,
   UpdateServiceRequestSchema,
@@ -95,9 +95,9 @@ import type {
   ListServiceAlarmsResponse,
   ListServicesResponse,
   PauseServiceAlarmResponse,
-  ResumeServiceAlarmResponse,
+  UnpauseServiceAlarmResponse,
   RunServiceAlarmNowResponse,
-  SetServiceAlarmResponse,
+  PutServiceAlarmResponse,
   UpdateJobResponse,
   UpdateSandboxResponse,
   UpdateServiceResponse,
@@ -115,13 +115,13 @@ import {
   GetOperationRequestSchema,
   GetServiceRevisionRequestSchema,
   GetServiceSignInStatusRequestSchema,
-  HoldServiceRequestSchema,
+  KeepServiceAwakeRequestSchema,
   HoldWorkloadRequestSchema,
   ListEventsRequestSchema,
   ListServiceActivationsRequestSchema,
   ListServiceRevisionsRequestSchema,
   ListServiceRunsRequestSchema,
-  ReleaseServiceRequestSchema,
+  ReleaseServiceAwakeRequestSchema,
   ReleaseWorkloadRequestSchema,
   RollbackServiceRequestSchema,
   SetServiceModeRequestSchema,
@@ -140,7 +140,7 @@ import type {
   GetOperationResponse,
   GetServiceRevisionResponse,
   GetServiceSignInStatusResponse,
-  HoldServiceResponse,
+  KeepServiceAwakeResponse,
   HoldWorkloadResponse,
   Job,
   ListEventsResponse,
@@ -149,7 +149,7 @@ import type {
   ListServiceRunsResponse,
   Operation,
   PreviewShareLink,
-  ReleaseServiceResponse,
+  ReleaseServiceAwakeResponse,
   ReleaseWorkloadResponse,
   RollbackServiceResponse,
   Sandbox,
@@ -359,9 +359,9 @@ export interface ServicesClient {
   start(req: MessageInitShape<typeof StartServiceRequestSchema>, opts?: CallOptions): Promise<StartServiceResponse>;
   stop(req: MessageInitShape<typeof StopServiceRequestSchema>, opts?: CallOptions): Promise<StopServiceResponse>;
   setMode(req: MessageInitShape<typeof SetServiceModeRequestSchema>, opts?: CallOptions): Promise<SetServiceModeResponse>;
-  release(req: MessageInitShape<typeof ReleaseServiceRequestSchema>, opts?: CallOptions): Promise<ReleaseServiceResponse>;
+  releaseServiceAwake(req: MessageInitShape<typeof ReleaseServiceAwakeRequestSchema>, opts?: CallOptions): Promise<ReleaseServiceAwakeResponse>;
   wake(req: MessageInitShape<typeof WakeServiceRequestSchema>, opts?: CallOptions): Promise<WakeServiceResponse>;
-  hold(req: MessageInitShape<typeof HoldServiceRequestSchema>, opts?: CallOptions): Promise<HoldServiceResponse>;
+  keepServiceAwake(req: MessageInitShape<typeof KeepServiceAwakeRequestSchema>, opts?: CallOptions): Promise<KeepServiceAwakeResponse>;
   listRuns(req: MessageInitShape<typeof ListServiceRunsRequestSchema>, opts?: CallOptions): Promise<ListServiceRunsResponse>;
   /** Yields every run listRuns returns, the newest first, following the page token from one page to the next. */
   allRuns(
@@ -392,10 +392,10 @@ export interface ServicesClient {
    * Creates or replaces the service's alarm with this name and returns it: at each instant of its
    * schedule the alarm publishes its event, with its data, on one of the service's event endpoints.
    */
-  setAlarm(
-    req: MessageInitShape<typeof SetServiceAlarmRequestSchema>,
+  putServiceAlarm(
+    req: MessageInitShape<typeof PutServiceAlarmRequestSchema>,
     opts?: CallOptions,
-  ): Promise<SetServiceAlarmResponse>;
+  ): Promise<PutServiceAlarmResponse>;
   /** Returns one alarm and its most recent occurrences, newest first. */
   getAlarm(
     req: MessageInitShape<typeof GetServiceAlarmRequestSchema>,
@@ -423,10 +423,10 @@ export interface ServicesClient {
    * Starts a paused alarm again from the next instant of its schedule; instants that passed while
    * it was paused are not published.
    */
-  resumeAlarm(
-    req: MessageInitShape<typeof ResumeServiceAlarmRequestSchema>,
+  unpauseServiceAlarm(
+    req: MessageInitShape<typeof UnpauseServiceAlarmRequestSchema>,
     opts?: CallOptions,
-  ): Promise<ResumeServiceAlarmResponse>;
+  ): Promise<UnpauseServiceAlarmResponse>;
   /**
    * Publishes the alarm's event once, now, paused or not, and returns the occurrence; it does not
    * move the alarm's next instant. It takes a request key, so a retried call is applied once.
@@ -606,21 +606,21 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         start: (req, opts) => workloadService.startService(req, opts),
         stop: (req, opts) => workloadService.stopService(req, opts),
         setMode: (req, opts) => workloadService.setServiceMode(req, opts),
-        release: (req, opts) => workloadService.releaseService(req, opts),
+        releaseServiceAwake: (req, opts) => workloadService.releaseServiceAwake(req, opts),
         wake: (req, opts) => workloadService.wakeService(req, opts),
-        hold: (req, opts) => workloadService.holdService(req, opts),
+        keepServiceAwake: (req, opts) => workloadService.keepServiceAwake(req, opts),
         listRuns: (req, opts) => workloadService.listServiceRuns(req, opts),
         allRuns: (req, opts) => paginate(req, workloadService.listServiceRuns, (resp) => resp.runs, opts),
         listRevisions: (req, opts) => workloadService.listServiceRevisions(req, opts),
         getRevision: (req, opts) => workloadService.getServiceRevision(req, opts),
         rollback: (req, opts) => workloadService.rollbackService(req, opts),
         listActivations: (req, opts) => workloadService.listServiceActivations(req, opts),
-        setAlarm: (req, opts) => workloadService.setServiceAlarm(req, opts),
+        putServiceAlarm: (req, opts) => workloadService.putServiceAlarm(req, opts),
         getAlarm: (req, opts) => workloadService.getServiceAlarm(req, opts),
         listAlarms: (req, opts) => workloadService.listServiceAlarms(req, opts),
         deleteAlarm: (req, opts) => workloadService.deleteServiceAlarm(req, opts),
         pauseAlarm: (req, opts) => workloadService.pauseServiceAlarm(req, opts),
-        resumeAlarm: (req, opts) => workloadService.resumeServiceAlarm(req, opts),
+        unpauseServiceAlarm: (req, opts) => workloadService.unpauseServiceAlarm(req, opts),
         runAlarmNow: (req, opts) => workloadService.runServiceAlarmNow(req, opts),
         startSignIn: (req, opts) => workloadService.startServiceSignIn(req, opts),
         answerSignIn: (req, opts) => workloadService.answerServiceSignIn(req, opts),

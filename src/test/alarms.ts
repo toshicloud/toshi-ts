@@ -7,12 +7,12 @@ import {
   GetServiceAlarmResponseSchema,
   ListServiceAlarmsResponseSchema,
   PauseServiceAlarmResponseSchema,
-  ResumeServiceAlarmResponseSchema,
+  UnpauseServiceAlarmResponseSchema,
   RunServiceAlarmNowResponseSchema,
   ServiceAlarmMisfire,
   ServiceAlarmOccurrenceSchema,
   ServiceAlarmSchema,
-  SetServiceAlarmResponseSchema,
+  PutServiceAlarmResponseSchema,
 } from "../gen/toshi/workspace/v1/workloads_pb.js";
 import type {
   DeleteServiceAlarmRequest,
@@ -23,17 +23,17 @@ import type {
   ListServiceAlarmsResponse,
   PauseServiceAlarmRequest,
   PauseServiceAlarmResponse,
-  ResumeServiceAlarmRequest,
-  ResumeServiceAlarmResponse,
+  UnpauseServiceAlarmRequest,
+  UnpauseServiceAlarmResponse,
   RunServiceAlarmNowRequest,
   RunServiceAlarmNowResponse,
   ServiceAlarm,
   ServiceAlarmOccurrence,
-  SetServiceAlarmRequest,
-  SetServiceAlarmResponse,
+  PutServiceAlarmRequest,
+  PutServiceAlarmResponse,
 } from "../gen/toshi/workspace/v1/workloads_pb.js";
 
-/** How late a missed instant may be published when SetServiceAlarm names no deadline. */
+/** How late a missed instant may be published when PutServiceAlarm names no deadline. */
 const defaultStartingDeadline = create(DurationSchema, { seconds: 600n });
 
 /** How many occurrences GetServiceAlarm returns. */
@@ -57,7 +57,7 @@ export class AlarmStore {
   private readonly runs = new Map<string, ServiceAlarmOccurrence>();
 
   /** Creates the alarm at generation 1, or replaces it at the next generation, resumed. */
-  set(request: SetServiceAlarmRequest): SetServiceAlarmResponse {
+  set(request: PutServiceAlarmRequest): PutServiceAlarmResponse {
     const alarm = create(ServiceAlarmSchema, {
       name: request.name,
       timezone: request.timezone,
@@ -93,7 +93,7 @@ export class AlarmStore {
       alarm.generation = held.alarm.generation + 1n;
       held.alarm = alarm;
     }
-    return create(SetServiceAlarmResponseSchema, { alarm: clone(ServiceAlarmSchema, alarm) });
+    return create(PutServiceAlarmResponseSchema, { alarm: clone(ServiceAlarmSchema, alarm) });
   }
 
   /** Returns the alarm and its most recent occurrences, newest first. */
@@ -134,10 +134,10 @@ export class AlarmStore {
   }
 
   /** Resumes an alarm; resuming a running alarm changes nothing. */
-  resume(request: ResumeServiceAlarmRequest): ResumeServiceAlarmResponse {
+  resume(request: UnpauseServiceAlarmRequest): UnpauseServiceAlarmResponse {
     const record = this.alarm(request.serviceId, request.name);
     record.alarm.paused = false;
-    return create(ResumeServiceAlarmResponseSchema, { alarm: clone(ServiceAlarmSchema, record.alarm) });
+    return create(UnpauseServiceAlarmResponseSchema, { alarm: clone(ServiceAlarmSchema, record.alarm) });
   }
 
   /**

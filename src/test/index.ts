@@ -47,8 +47,8 @@
  * - Execute answers the start message with an execution id, the standard
  *   output, the standard error and the exit code the test set for the sandbox.
  *   It does not read standard input.
- * - SetServiceAlarm, GetServiceAlarm, ListServiceAlarms, DeleteServiceAlarm,
- *   PauseServiceAlarm, ResumeServiceAlarm and RunServiceAlarmNow keep alarms
+ * - PutServiceAlarm, GetServiceAlarm, ListServiceAlarms, DeleteServiceAlarm,
+ *   PauseServiceAlarm, UnpauseServiceAlarm and RunServiceAlarmNow keep alarms
  *   for any service ID: the fake holds no services. A set creates an alarm at
  *   generation 1, or replaces it at the next generation and resumes it.
  *   RunServiceAlarmNow records a manual occurrence, which GetServiceAlarm

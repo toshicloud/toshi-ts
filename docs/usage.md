@@ -153,11 +153,12 @@ holding that service's generated client.
 name: `workload.jobs`, `workload.sandboxes` and `workload.services`, one
 method for each call (`create`, `get`, `list`, `update`, `delete`, `wait`,
 `watch`, and `cancel` on a job, `execute`, `start` and `stop` on a sandbox,
-`start`, `stop`, `setMode`, `listRuns`, `wake`, `hold`, `release`,
+`start`, `stop`, `setMode`, `listRuns`, `wake`, `keepServiceAwake`,
+`releaseServiceAwake`,
 `listRevisions`, `getRevision`, `rollback` and `listActivations` on a
-service). A service's alarms are `setAlarm`, `getAlarm`, `listAlarms`
+service). A service's alarms are `putServiceAlarm`, `getAlarm`, `listAlarms`
 (every alarm in one answer, with no page token), `deleteAlarm`,
-`pauseAlarm`, `resumeAlarm` and `runAlarmNow`, and its sign-ins are
+`pauseAlarm`, `unpauseServiceAlarm` and `runAlarmNow`, and its sign-ins are
 `startSignIn`, which hands back the sign-in's stream as the server sends
 it, `answerSignIn`, `cancelSignIn` and `getSignInStatus`. The calls that
 span the three types sit on `workload` itself: `listEvents`, `watchEvents`,

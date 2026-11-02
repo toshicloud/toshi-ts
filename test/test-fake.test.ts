@@ -159,7 +159,7 @@ describe("createFake", () => {
 
   it("answers a service's alarms from its state", async () => {
     const services = createFake().client().workload.services;
-    const set = await services.setAlarm({
+    const set = await services.putServiceAlarm({
       serviceId: "svc-1",
       name: "nightly",
       schedule: { case: "cron", value: "0 3 * * *" },

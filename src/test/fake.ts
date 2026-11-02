@@ -36,9 +36,9 @@ import type {
   ListSandboxesResponse,
   ListServiceAlarmsRequest,
   PauseServiceAlarmRequest,
-  ResumeServiceAlarmRequest,
+  UnpauseServiceAlarmRequest,
   RunServiceAlarmNowRequest,
-  SetServiceAlarmRequest,
+  PutServiceAlarmRequest,
   WaitJobRequest,
   WaitJobResponse,
   WaitSandboxRequest,
@@ -264,8 +264,8 @@ const builtinTable: readonly Builtin[] = [
     }),
   ],
   [
-    workloadMethod("setServiceAlarm"),
-    (fake) => ({ kind: "unary", run: (request) => fake.alarms.set(request as SetServiceAlarmRequest) }),
+    workloadMethod("putServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.set(request as PutServiceAlarmRequest) }),
   ],
   [
     workloadMethod("getServiceAlarm"),
@@ -284,8 +284,8 @@ const builtinTable: readonly Builtin[] = [
     (fake) => ({ kind: "unary", run: (request) => fake.alarms.pause(request as PauseServiceAlarmRequest) }),
   ],
   [
-    workloadMethod("resumeServiceAlarm"),
-    (fake) => ({ kind: "unary", run: (request) => fake.alarms.resume(request as ResumeServiceAlarmRequest) }),
+    workloadMethod("unpauseServiceAlarm"),
+    (fake) => ({ kind: "unary", run: (request) => fake.alarms.resume(request as UnpauseServiceAlarmRequest) }),
   ],
   [
     workloadMethod("runServiceAlarmNow"),

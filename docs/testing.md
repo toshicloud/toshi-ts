@@ -24,8 +24,8 @@ for await (const chunk of run) {
 await run.wait();
 ```
 
-The fake also keeps a service's alarms: `setAlarm`, `getAlarm`, `listAlarms`,
-`deleteAlarm`, `pauseAlarm`, `resumeAlarm` and `runAlarmNow` answer from its
+The fake also keeps a service's alarms: `putServiceAlarm`, `getAlarm`, `listAlarms`,
+`deleteAlarm`, `pauseAlarm`, `unpauseServiceAlarm` and `runAlarmNow` answer from its
 state machine.
 
 `fake.on(method, impl)` replaces the state machine for one method with a hook
