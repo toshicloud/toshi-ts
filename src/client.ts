@@ -172,6 +172,7 @@ import {
   retryInterceptor,
   scopeInterceptor,
 } from "./interceptors.js";
+import { deprecationInterceptor } from "./deprecation.js";
 import { normalizeRetry } from "./retry.js";
 import type { RetryPolicy } from "./retry.js";
 import { withDefaultUnaryTimeout } from "./timeout.js";
@@ -197,6 +198,12 @@ export interface ToshiOptions {
   retry?: Partial<RetryPolicy> | false;
   /** Bounds each unary call except the Wait calls, which their request's timeout bounds; streams ignore it. */
   defaultTimeoutMs?: number;
+  /**
+   * Receives the warning a deprecated call gets, once per call per process:
+   * when an answer carries a `Deprecation` or `Sunset` header, it names the
+   * call, the dates and the deprecation link. `console.warn` by default.
+   */
+  warn?: (message: string) => void;
 }
 
 /** Per-call options. */
@@ -520,8 +527,9 @@ export interface JobRun extends AsyncIterable<OutputChunk> {
 }
 
 /**
- * Creates the client: one normalized retry setting, the product, scope, key,
- * retry and auth interceptors (product outermost, so a product's refusal
+ * Creates the client: one normalized retry setting, the product,
+ * deprecation, scope, key, retry and auth interceptors (product outermost, so
+ * a product's refusal
  * reaches the caller as a ProductError; auth innermost, so no interceptor sees
  * the Authorization header), one transport for every client and helper.
  *
@@ -533,6 +541,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
   const retry = normalizeRetry(options.retry);
   const interceptors: Interceptor[] = [
     refusalInterceptor(),
+    deprecationInterceptor(options.warn),
     scopeInterceptor(options.project ?? "", options.environment ?? ""),
     keyInterceptor(),
     retryInterceptor(retry),

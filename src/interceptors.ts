@@ -5,7 +5,6 @@ import type { Interceptor } from "@connectrpc/connect";
 import {
   isTransportLoss,
   newRequestKey,
-  procedurePath,
   retryClassFor,
   retryDelayMs,
   serverWaitMs,
@@ -101,7 +100,7 @@ export function keyInterceptor(): Interceptor {
       }
       return next({ ...req, message: fillStreamKey(req.message, desc) });
     }
-    if (retryClassFor(procedurePath(req.service, req.method)) === "keyed") {
+    if (retryClassFor(req.method) === "keyed") {
       fillRequestKey(req.message, desc);
     }
     return next(req);
@@ -120,7 +119,7 @@ export function retryInterceptor(retry: RetrySetting): Interceptor {
   const policy = retry;
   return (next) => async (req) => {
     // Streams are never retried here; the watches reconnect on their own (retry.go:135-141).
-    if (req.stream || retryClassFor(procedurePath(req.service, req.method)) === "none") {
+    if (req.stream || retryClassFor(req.method) === "none") {
       return next(req);
     }
     // The same request object, with its key, is sent again (retry.go:118-130).
