@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toshicloud/toshi-ts.git"
+    "url": "git+https://github.com/toshicloud/cloud-ts.git"
   },
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
