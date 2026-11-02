@@ -48,6 +48,17 @@ export {
 } from "./errors.js";
 export { defaultRetryPolicy } from "./retry.js";
 export { VERSION } from "./version.js";
+export {
+  WebhookVerifyError,
+  WebhookVerifyReason,
+  formatWebhookSecret,
+  verifyWebhook,
+  webhookIdHeader,
+  webhookSignatureHeader,
+  webhookTimestampHeader,
+  webhookToleranceSeconds,
+} from "./webhook.js";
+export type { WebhookHeaders } from "./webhook.js";
 export type { PageRequest, PageResponse } from "./paginate.js";
 export type { RetryPolicy } from "./retry.js";
 export type {
