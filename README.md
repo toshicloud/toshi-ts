@@ -50,10 +50,45 @@ console.log(projects.length);
 
 The Node entry reads `TOSHI_SERVER` and `TOSHI_TOKEN` from the environment; the [usage guide](docs/usage.md) continues from there, including the browser entry.
 
+## Verify a webhook
+
+Toshi signs every webhook it sends. A receiver checks the signature on the
+raw body before it trusts the event:
+
+<!-- examples/webhook.ts -->
+
+```ts
+import { createServer } from "node:http";
+import { verifyWebhook } from "@toshicloud/sdk";
+
+// The endpoint's secret, "whsec_" and base64, as Toshi gave it.
+const secret = process.env.TOSHI_WEBHOOK_SECRET ?? "";
+
+createServer((req, res) => {
+  const chunks: Buffer[] = [];
+  req.on("data", (chunk: Buffer) => chunks.push(chunk));
+  req.on("end", () => {
+    const body = Buffer.concat(chunks);
+    verifyWebhook(req.headers, body, secret).then(
+      () => {
+        // body is the event, exactly as Toshi sent it.
+        res.writeHead(204).end();
+      },
+      () => {
+        res.writeHead(401).end("unverified webhook");
+      },
+    );
+  });
+}).listen(8080);
+```
+
+[Webhooks](docs/webhooks.md) says what `verifyWebhook` checks and how it refuses.
+
 ## Documentation
 
 - [Usage](docs/usage.md): the client, options, retries, lists, watches, commands and jobs
 - [Errors](docs/errors.md): products that are off and refusals with a reason
+- [Webhooks](docs/webhooks.md): verifying the webhooks Toshi sends
 - [Testing with `@toshicloud/sdk/test`](docs/testing.md): the in-memory fake
 - [Development](docs/development.md): generated code, versions, publishing and the integration test
 - [The package on npm](https://www.npmjs.com/package/@toshicloud/sdk)
