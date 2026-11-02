@@ -76,7 +76,7 @@ import type {
   WatchOutputResponse,
 } from "../gen/toshi/workspace/v1/workspace_pb.js";
 import { AlarmStore } from "./alarms.js";
-import { apiMethods, apiPackage, hookOnly as hookOnlyMethods, isApiMethod, procedurePath } from "./procedures.js";
+import { apiMethods, apiPackage, isApiMethod, procedurePath } from "./procedures.js";
 
 /** The token `client` sends. */
 export const testToken = "test-token";
@@ -1192,5 +1192,12 @@ function encode(text: string): Uint8Array {
   return new TextEncoder().encode(text);
 }
 
-/** The methods the state machine does not answer, for the coverage test's comparison. */
-export const hookOnlyProcedures: readonly DescMethod[] = hookOnlyMethods;
+/**
+ * The methods the state machine does not answer: every method of the API
+ * that `builtinTable` leaves out. One answers UNIMPLEMENTED until a test
+ * hooks it with `on`, so a method a new API version adds is unanswered until
+ * a built-in answer exists.
+ */
+export const hookOnlyProcedures: readonly DescMethod[] = [...apiMethods.values()].filter(
+  (method) => !answeredProcedures.includes(method),
+);
