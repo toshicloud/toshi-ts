@@ -77,6 +77,8 @@ entry reads `TOSHI_SERVER`, `TOSHI_TOKEN`, `TOSHI_TOKEN_FILE` and
   `retry: false` turns off retries and watch reconnects.
 - `defaultTimeoutMs`: bounds each unary call except the Wait calls,
   which their request's timeout bounds; streams ignore it.
+- `warn`: receives the warning a deprecated call gets, by default
+  `console.warn`. See Deprecated calls.
 
 A call may set `timeoutMs` instead: it bounds the whole call, retries
 included, and on a watch it bounds the open. It composes with `signal`.
@@ -287,6 +289,28 @@ cannot tell apart from a server error.
 `RetryPolicy` says how often and how long a call is retried, `maxAttempts`
 counting the first try; `defaultRetryPolicy` is the default — five
 attempts, a 200 ms initial backoff and a 10 s cap.
+
+Whether a call is retried comes from the generated descriptors, so a call
+a newer API adds follows the same rule: a stream is not retried, a call
+whose request has a `request_key` field is retried with that key, a call
+whose `toshi.permission` level is `read` is retried, and no other call is.
+`DisplayService.OpenDisplaySession` takes a request key but is not
+retried: a retry returns the session the first call opened without its
+token.
+
+### Deprecated calls
+
+A call the server marks deprecated answers with a `Deprecation` header
+(RFC 9745), and with a `Sunset` header (RFC 8594) once the call has a
+removal date. The client then warns once per call per process, through
+the `warn` option or `console.warn`, naming the call, the dates and the
+page the `Link` header with `rel="deprecation"` names:
+
+```text
+toshi: /toshi.workspace.v1.SecretService/ListSecrets is deprecated since 2026-01-01 and is removed after 2026-07-01; see https://example.com/docs/deprecations
+```
+
+The call itself, and its answer or error, are unchanged.
 
 ### Waiting and watching
 

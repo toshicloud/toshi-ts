@@ -1,71 +1,26 @@
-import { getOption } from "@bufbuild/protobuf";
+import { create, createFileRegistry, getOption, setExtension } from "@bufbuild/protobuf";
 import type { DescMethod, DescService } from "@bufbuild/protobuf";
+import { FileDescriptorProtoSchema, MethodOptionsSchema } from "@bufbuild/protobuf/wkt";
 import { Code, ConnectError, createClient, createRouterTransport } from "@connectrpc/connect";
 import type { Interceptor, ServiceImpl, Transport } from "@connectrpc/connect";
 import { describe, expect, it } from "vitest";
 
-import { ArtifactService, ArtifactUploadService } from "../src/gen/toshi/workspace/v1/artifacts_pb.js";
-import { AuditEventService } from "../src/gen/toshi/workspace/v1/audit_events_pb.js";
-import { EndpointService } from "../src/gen/toshi/workspace/v1/endpoints_pb.js";
-import { DiscoveryService } from "../src/gen/toshi/workspace/v1/discovery_pb.js";
-import { ConnectionService } from "../src/gen/toshi/workspace/v1/connections_pb.js";
-import { RoleService } from "../src/gen/toshi/workspace/v1/roles_pb.js";
-import { DisplayService } from "../src/gen/toshi/workspace/v1/display_pb.js";
-import { FillerService } from "../src/gen/toshi/workspace/v1/fillers_pb.js";
-import { GrantService } from "../src/gen/toshi/workspace/v1/grants_pb.js";
-import { HostJobService } from "../src/gen/toshi/workspace/v1/hostjobs_pb.js";
-import { HostService } from "../src/gen/toshi/workspace/v1/hosts_pb.js";
-import { ProductService } from "../src/gen/toshi/workspace/v1/products_pb.js";
-import { ProjectService } from "../src/gen/toshi/workspace/v1/projects_pb.js";
-import { RecordingService } from "../src/gen/toshi/workspace/v1/recordings_pb.js";
 import { SecretService } from "../src/gen/toshi/workspace/v1/secrets_pb.js";
-import { StorageProviderService } from "../src/gen/toshi/workspace/v1/storage_providers_pb.js";
-import { TokenService } from "../src/gen/toshi/workspace/v1/tokens_pb.js";
-import { VolumeService } from "../src/gen/toshi/workspace/v1/volumes_pb.js";
-import { WebhookService } from "../src/gen/toshi/workspace/v1/webhook_pb.js";
-import { WorkspaceService } from "../src/gen/toshi/workspace/v1/workspace_service_pb.js";
+import { services } from "../src/gen/toshi/workspace/v1/services.js";
 import { WorkloadService } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
-import { TriggerService } from "../src/gen/toshi/workspace/v1/triggers_pb.js";
-import { AccountService } from "../src/gen/toshi/workspace/v1/account_pb.js";
-import { ImageService } from "../src/gen/toshi/workspace/v1/images_pb.js";
-import { DomainService } from "../src/gen/toshi/workspace/v1/domains_pb.js";
-import { ModelCredentialService } from "../src/gen/toshi/workspace/v1/model_credentials_pb.js";
-import { retryInterceptor } from "../src/interceptors.js";
 import { permission } from "../src/gen/toshi/permission_pb.js";
-import { backoffDelay, isTransportLoss, procedurePath, retryClassFor } from "../src/retry.js";
-import type { RetryClass, RetryPolicy } from "../src/retry.js";
+import { retryInterceptor } from "../src/interceptors.js";
+import {
+  backoffDelay,
+  derivedRetryClass,
+  isTransportLoss,
+  procedurePath,
+  retryClassFor,
+  retryExceptions,
+} from "../src/retry.js";
+import type { RetryPolicy } from "../src/retry.js";
 
 const fastPolicy: RetryPolicy = { maxAttempts: 3, initialBackoffMs: 5, maxBackoffMs: 20 };
-
-const services: readonly DescService[] = [
-  WorkloadService,
-  ProjectService,
-  SecretService,
-  WebhookService,
-  DisplayService,
-  EndpointService,
-  RecordingService,
-  VolumeService,
-  ArtifactService,
-  ArtifactUploadService,
-  WorkspaceService,
-  HostJobService,
-  HostService,
-  TokenService,
-  AuditEventService,
-  FillerService,
-  GrantService,
-  StorageProviderService,
-  ProductService,
-  DiscoveryService,
-  ConnectionService,
-  RoleService,
-  TriggerService,
-  AccountService,
-  ImageService,
-  DomainService,
-  ModelCredentialService,
-];
 
 function transportFor<T extends DescService>(
   service: T,
@@ -80,54 +35,101 @@ function transportFor<T extends DescService>(
   );
 }
 
-/**
- * The API's rule: a stream is not retried, a request with a request_key is
- * keyed, and a call whose permission's level is read is a read.
- */
-function derivedRetryClass(method: DescMethod): RetryClass {
-  if (method.methodKind !== "unary") {
-    return "none";
+function apiMethods(): Map<string, DescMethod> {
+  const found = new Map<string, DescMethod>();
+  for (const service of services) {
+    for (const method of service.methods) {
+      found.set(procedurePath(service, method), method);
+    }
   }
-  if (method.input.fields.some((field) => field.name === "request_key")) {
-    return "keyed";
-  }
-  return getOption(method, permission).endsWith(".read") ? "read" : "none";
+  return found;
 }
 
 /**
- * The entries that depart from the rule, each because a retry would answer
- * with an error after the first try worked; src/retry.ts says why on the entry.
+ * A service the API does not have, as a new API version could add it: its
+ * calls get a class from their descriptors alone.
  */
-const retryExceptions: Readonly<Record<string, RetryClass>> = {
-  "/toshi.workspace.v1.DisplayService/OpenDisplaySession": "none",
-  "/toshi.workspace.v1.AccountService/UnlinkIdentity": "none",
-  "/toshi.workspace.v1.RoleService/AcceptInvitation": "none",
-};
+function newService(): DescService {
+  const options = (level: string) => {
+    const opts = create(MethodOptionsSchema);
+    setExtension(opts, permission, `example.thing.${level}`);
+    return opts;
+  };
+  const file = create(FileDescriptorProtoSchema, {
+    name: "example/v1/things.proto",
+    package: "example.v1",
+    syntax: "proto3",
+    messageType: [
+      { name: "GetThingRequest", field: [{ name: "id", number: 1, type: 9, label: 1, jsonName: "id" }] },
+      {
+        name: "CreateThingRequest",
+        field: [{ name: "request_key", number: 1, type: 9, label: 1, jsonName: "requestKey" }],
+      },
+      { name: "Thing" },
+    ],
+    service: [
+      {
+        name: "ThingService",
+        method: [
+          { name: "GetThing", inputType: ".example.v1.GetThingRequest", outputType: ".example.v1.Thing", options: options("read") },
+          { name: "CreateThing", inputType: ".example.v1.CreateThingRequest", outputType: ".example.v1.Thing", options: options("write") },
+          { name: "RemoveThing", inputType: ".example.v1.GetThingRequest", outputType: ".example.v1.Thing", options: options("write") },
+          {
+            name: "WatchThings",
+            inputType: ".example.v1.GetThingRequest",
+            outputType: ".example.v1.Thing",
+            serverStreaming: true,
+            options: options("read"),
+          },
+        ],
+      },
+    ],
+  });
+  const service = createFileRegistry(file, () => undefined).getService("example.v1.ThingService");
+  if (service === undefined) {
+    throw new Error("example.v1.ThingService did not build");
+  }
+  return service;
+}
 
-describe("the retry table", () => {
-  it("gives every method of the twenty-seven services the class the API's rule gives it", () => {
-    const paths = new Set<string>();
-    for (const service of services) {
-      for (const method of service.methods) {
-        const path = procedurePath(service, method);
-        expect(paths.has(path), `${path} is listed twice`).toBe(false);
-        paths.add(path);
-        const expected = retryExceptions[path] ?? derivedRetryClass(method);
-        expect(retryClassFor(path), `${path} follows the API's rule`).toBe(expected);
-      }
+describe("the retry class", () => {
+  it("is the one the descriptors give every call of the API, except the listed ones", () => {
+    const methods = apiMethods();
+    expect(methods.size).toBeGreaterThan(0);
+    for (const [path, method] of methods) {
+      expect(retryClassFor(method), path).toBe(retryExceptions[path] ?? derivedRetryClass(method));
     }
-    expect(paths.size).toBe(272);
   });
 
-  it("names an exception only for a method the API has", () => {
-    const paths = new Set<string>();
-    for (const service of services) {
-      for (const method of service.methods) {
-        paths.add(procedurePath(service, method));
-      }
-    }
-    for (const path of Object.keys(retryExceptions)) {
-      expect(paths.has(path), `${path} is no longer a method`).toBe(true);
+  it("reads the stream kind, the request_key field and the permission's level", () => {
+    const methods = apiMethods();
+    const get = (path: string) => {
+      const method = methods.get(`/toshi.workspace.v1.${path}`);
+      expect(method, path).toBeDefined();
+      return retryClassFor(method as DescMethod);
+    };
+    expect(get("WorkloadService/GetJob")).toBe("read");
+    expect(get("WorkloadService/CreateJob")).toBe("keyed");
+    expect(get("WorkloadService/CancelJob")).toBe("none");
+    expect(get("WorkloadService/WatchJobs")).toBe("none");
+    expect(get("SecretService/PutSecret")).toBe("none");
+  });
+
+  it("gives a call a new API version adds a class, without an edit", () => {
+    const service = newService();
+    const classes = Object.fromEntries(service.methods.map((method) => [method.name, retryClassFor(method)]));
+    expect(getOption(service.method.getThing, permission)).toBe("example.thing.read");
+    expect(classes).toEqual({ GetThing: "read", CreateThing: "keyed", RemoveThing: "none", WatchThings: "none" });
+  });
+
+  it("lists an exception only for a call the API has, and only when the descriptors give it another class", () => {
+    const methods = apiMethods();
+    for (const [path, listed] of Object.entries(retryExceptions)) {
+      const method = methods.get(path);
+      expect(method, `${path} is no longer a call of the API`).toBeDefined();
+      expect(derivedRetryClass(method as DescMethod), `${path} follows the rule now; remove it from the list`).not.toBe(
+        listed,
+      );
     }
   });
 });

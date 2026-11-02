@@ -1,5 +1,9 @@
 import { Code, ConnectError } from "@connectrpc/connect";
+import { getOption } from "@bufbuild/protobuf";
+import type { DescMethod } from "@bufbuild/protobuf";
 import { BinaryReader, WireType } from "@bufbuild/protobuf/wire";
+
+import { permission } from "./gen/toshi/permission_pb.js";
 
 /** How often and how long a call is retried; maxAttempts counts the first try. */
 export interface RetryPolicy {
@@ -21,313 +25,46 @@ export type RetrySetting = Readonly<RetryPolicy> | false;
 /** What one procedure's retries are: a read, a keyed write, or nothing. */
 export type RetryClass = "read" | "keyed" | "none";
 
-// One entry per procedure of the Workspace API's services. A stream is never
-// retried here; a call whose request takes a request_key is retried with that
-// key, so the server answers a retry with the first result; a read, a call
-// whose permission's level is read, is retried too; every other call is not.
-// test/retry.test.ts derives each class from the generated descriptors and
-// fails when a regeneration moves a procedure, so an entry follows the API and
-// not a list someone remembered to update. An entry whose class needs saying
-// more about has it above the entry.
-const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
-  "/toshi.workspace.v1.AccountService/GetAccount": "read",
-  "/toshi.workspace.v1.AccountService/ListIdentities": "read",
-  "/toshi.workspace.v1.AccountService/ListSessions": "read",
-  "/toshi.workspace.v1.AccountService/EndSession": "none",
-  // A repeat answers NOT_FOUND ("an identity the caller does not have fails
-  // with NOT_FOUND"), so a retry would report failure for a call that worked;
-  // its permission's level is read although it changes state.
-  "/toshi.workspace.v1.AccountService/UnlinkIdentity": "none",
-  "/toshi.workspace.v1.WorkloadService/CreateJob": "keyed",
-  "/toshi.workspace.v1.WorkloadService/GetJob": "read",
-  "/toshi.workspace.v1.WorkloadService/ListJobs": "read",
-  "/toshi.workspace.v1.WorkloadService/GetWorkloadUsage": "read",
-  "/toshi.workspace.v1.WorkloadService/ListWorkloadUsages": "read",
-  "/toshi.workspace.v1.WorkloadService/UpdateJob": "keyed",
-  "/toshi.workspace.v1.WorkloadService/DeleteJob": "keyed",
-  "/toshi.workspace.v1.WorkloadService/CancelJob": "none",
-  "/toshi.workspace.v1.WorkloadService/WaitJob": "read",
-  "/toshi.workspace.v1.WorkloadService/WatchJobs": "none",
-  "/toshi.workspace.v1.WorkloadService/WatchOutput": "none",
-  "/toshi.workspace.v1.WorkloadService/WatchTelemetry": "none",
-  "/toshi.workspace.v1.WorkloadService/WatchGuestLog": "none",
-  "/toshi.workspace.v1.WorkloadService/Execute": "none",
-  "/toshi.workspace.v1.WorkloadService/ExecuteCommand": "none",
-  "/toshi.workspace.v1.WorkloadService/AnswerPrompt": "none",
-  "/toshi.workspace.v1.WorkloadService/CancelExecution": "keyed",
-  "/toshi.workspace.v1.WorkloadService/ExportEvents": "none",
-  "/toshi.workspace.v1.WorkloadService/GetOperation": "read",
-  "/toshi.workspace.v1.WorkloadService/WaitOperation": "read",
-  "/toshi.workspace.v1.WorkloadService/ListEvents": "read",
-  "/toshi.workspace.v1.WorkloadService/WatchEvents": "none",
-  "/toshi.workspace.v1.WorkloadService/CreatePreviewShareLink": "none",
-  "/toshi.workspace.v1.WorkloadService/ListPreviewShareLinks": "read",
-  "/toshi.workspace.v1.WorkloadService/RevokePreviewShareLink": "none",
-  "/toshi.workspace.v1.WorkloadService/CreateServiceShareLink": "none",
-  "/toshi.workspace.v1.WorkloadService/ListServiceShareLinks": "read",
-  "/toshi.workspace.v1.WorkloadService/RevokeServiceShareLink": "none",
-  "/toshi.workspace.v1.WorkloadService/CreateSandbox": "keyed",
-  "/toshi.workspace.v1.WorkloadService/GetSandbox": "read",
-  "/toshi.workspace.v1.WorkloadService/ListSandboxes": "read",
-  "/toshi.workspace.v1.WorkloadService/UpdateSandbox": "keyed",
-  "/toshi.workspace.v1.WorkloadService/DeleteSandbox": "keyed",
-  "/toshi.workspace.v1.WorkloadService/StopSandbox": "keyed",
-  "/toshi.workspace.v1.WorkloadService/StartSandbox": "keyed",
-  "/toshi.workspace.v1.WorkloadService/WaitSandbox": "read",
-  "/toshi.workspace.v1.WorkloadService/WatchSandboxes": "none",
-  "/toshi.workspace.v1.WorkloadService/CreateService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/GetService": "read",
-  "/toshi.workspace.v1.WorkloadService/ListServices": "read",
-  "/toshi.workspace.v1.WorkloadService/UpdateService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/DeleteService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/WaitService": "read",
-  "/toshi.workspace.v1.WorkloadService/WatchServices": "none",
-  "/toshi.workspace.v1.WorkloadService/StartService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/StopService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/SetServiceMode": "keyed",
-  "/toshi.workspace.v1.WorkloadService/WakeService": "keyed",
-  // Operator-only, and neither takes a request key: a lost answer is reported
-  // rather than repeated.
-  "/toshi.workspace.v1.WorkloadService/HoldWorkload": "none",
-  "/toshi.workspace.v1.WorkloadService/ReleaseWorkload": "none",
-  "/toshi.workspace.v1.WorkloadService/HoldService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/ReleaseService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/ListServiceRevisions": "read",
-  "/toshi.workspace.v1.WorkloadService/GetServiceRevision": "read",
-  "/toshi.workspace.v1.WorkloadService/RollbackService": "keyed",
-  "/toshi.workspace.v1.WorkloadService/ListServiceActivations": "read",
-  "/toshi.workspace.v1.WorkloadService/ListServiceRuns": "read",
-  "/toshi.workspace.v1.WorkloadService/EmitWorkloadEvent": "none",
-  "/toshi.workspace.v1.WorkloadService/SetServiceAlarm": "none",
-  "/toshi.workspace.v1.WorkloadService/GetServiceAlarm": "read",
-  "/toshi.workspace.v1.WorkloadService/ListServiceAlarms": "read",
-  "/toshi.workspace.v1.WorkloadService/DeleteServiceAlarm": "none",
-  "/toshi.workspace.v1.WorkloadService/PauseServiceAlarm": "none",
-  "/toshi.workspace.v1.WorkloadService/ResumeServiceAlarm": "none",
-  "/toshi.workspace.v1.WorkloadService/RunServiceAlarmNow": "keyed",
-  "/toshi.workspace.v1.WorkloadService/StartServiceSignIn": "none",
-  "/toshi.workspace.v1.WorkloadService/AnswerServiceSignIn": "none",
-  "/toshi.workspace.v1.WorkloadService/CancelServiceSignIn": "none",
-  "/toshi.workspace.v1.WorkloadService/GetServiceSignInStatus": "read",
-  "/toshi.workspace.v1.WorkloadService/SignOutService": "none",
-  "/toshi.workspace.v1.SecretService/CreateSecretSet": "keyed",
-  "/toshi.workspace.v1.SecretService/ListSecretSets": "read",
-  "/toshi.workspace.v1.SecretService/DeleteSecretSet": "none",
-  "/toshi.workspace.v1.SecretService/PutSecret": "none",
-  "/toshi.workspace.v1.SecretService/DeleteSecret": "none",
-  "/toshi.workspace.v1.SecretService/ListSecrets": "read",
-  "/toshi.workspace.v1.SecretService/ListSecretVersions": "read",
-  "/toshi.workspace.v1.SecretService/GrantSecretSet": "none",
-  "/toshi.workspace.v1.SecretService/RevokeSecretSet": "none",
-  "/toshi.workspace.v1.SecretService/ListSecretSetGrants": "read",
-  "/toshi.workspace.v1.SecretService/UpdateSecretSet": "none",
-  "/toshi.workspace.v1.ProjectService/ListProjects": "read",
-  "/toshi.workspace.v1.ProjectService/UpdateProject": "none",
-  "/toshi.workspace.v1.ProjectService/ListRepositories": "read",
-  "/toshi.workspace.v1.ProjectService/GetProject": "read",
-  "/toshi.workspace.v1.ProjectService/ListBranchRules": "read",
-  "/toshi.workspace.v1.ProjectService/CreateProject": "keyed",
-  "/toshi.workspace.v1.ProjectService/ClaimRepository": "none",
-  "/toshi.workspace.v1.ProjectService/CreateEnvironment": "keyed",
-  "/toshi.workspace.v1.ProjectService/DeleteEnvironment": "none",
-  "/toshi.workspace.v1.ProjectService/SetBranchRules": "none",
-  "/toshi.workspace.v1.ProjectService/CreateEmbedToken": "none",
-  "/toshi.workspace.v1.ProjectService/ListEmbedTokens": "read",
-  "/toshi.workspace.v1.ProjectService/RevokeEmbedToken": "none",
-  "/toshi.workspace.v1.ProjectService/GetProjectNetwork": "read",
-  "/toshi.workspace.v1.ProjectService/SetProjectNetwork": "none",
-  "/toshi.workspace.v1.ProjectService/GetEnvironmentNetwork": "read",
-  "/toshi.workspace.v1.ProjectService/SetEnvironmentNetwork": "none",
-  "/toshi.workspace.v1.ProjectService/GetEnvironmentRetention": "read",
-  "/toshi.workspace.v1.ProjectService/SetEnvironmentRetention": "none",
-  "/toshi.workspace.v1.ProjectService/SetEnvironmentVolumes": "none",
-  "/toshi.workspace.v1.ProjectService/UpdateEnvironment": "none",
-  "/toshi.workspace.v1.ProjectService/RaiseCompatibilityDate": "none",
-  "/toshi.workspace.v1.ProjectService/ListCompatibilityChanges": "read",
-  "/toshi.workspace.v1.WebhookService/CreateWebhook": "keyed",
-  "/toshi.workspace.v1.WebhookService/GetWebhook": "read",
-  "/toshi.workspace.v1.WebhookService/ListWebhooks": "read",
-  "/toshi.workspace.v1.WebhookService/UpdateWebhook": "keyed",
-  "/toshi.workspace.v1.WebhookService/DeleteWebhook": "keyed",
-  "/toshi.workspace.v1.WebhookService/RotateWebhookSecret": "keyed",
-  "/toshi.workspace.v1.WebhookService/ListWebhookDeliveries": "read",
-  "/toshi.workspace.v1.WebhookService/ReplayWebhookEvents": "keyed",
+// A call's retry class comes from the generated descriptors, so a call a new
+// API version adds has one without an edit here:
+//   - a stream is never retried here (a watch reconnects on its own);
+//   - a unary call whose request has a request_key field is "keyed": it is
+//     retried with that key, so the server answers a retry with the first
+//     result;
+//   - a unary call whose toshi.permission level is read is a "read";
+//   - every other call is "none".
+// The API has no option that marks a call whose retry would answer with an
+// error after the first try worked, so such a call is listed below.
+
+/**
+ * The calls the rule above gets wrong, each because a retry would report
+ * failure for a call that worked. test/retry.test.ts fails when the rule
+ * gives one of them its listed class, so the list only holds real exceptions.
+ */
+export const retryExceptions: Readonly<Record<string, RetryClass>> = {
   // A retry returns the session the first call opened, with replayed set and
-  // no token, and opens nothing, so it cannot give the caller a session it can
-  // use.
+  // no token, and opens nothing, so it cannot give the caller a session it
+  // can use; its request takes a request_key.
   "/toshi.workspace.v1.DisplayService/OpenDisplaySession": "none",
-  "/toshi.workspace.v1.DisplayService/GetDisplaySession": "read",
-  "/toshi.workspace.v1.DisplayService/ListDisplaySessions": "read",
-  "/toshi.workspace.v1.DisplayService/CloseDisplaySession": "none",
-  "/toshi.workspace.v1.DisplayService/SendDisplayKeys": "none",
-  "/toshi.workspace.v1.DisplayService/SendDisplayPointer": "none",
-  "/toshi.workspace.v1.DisplayService/SetDisplayClipboard": "none",
-  "/toshi.workspace.v1.DisplayService/TakeDisplayScreenshot": "none",
-  "/toshi.workspace.v1.EndpointService/CreateEndpoint": "keyed",
-  "/toshi.workspace.v1.EndpointService/ListEndpoints": "read",
-  "/toshi.workspace.v1.EndpointService/GetEndpoint": "read",
-  "/toshi.workspace.v1.EndpointService/GetEndpointPolicy": "read",
-  "/toshi.workspace.v1.EndpointService/SetEndpointPolicy": "none",
-  "/toshi.workspace.v1.EndpointService/ListEndpointRequests": "read",
-  "/toshi.workspace.v1.EndpointService/GetEndpointRequest": "read",
-  "/toshi.workspace.v1.EndpointService/ExportEndpointLog": "none",
-  "/toshi.workspace.v1.EndpointService/CreateEndpointConnectToken": "none",
-  "/toshi.workspace.v1.EndpointService/RevokeEndpointConnectToken": "none",
-  "/toshi.workspace.v1.EndpointService/DeleteEndpoint": "none",
-  "/toshi.workspace.v1.EndpointService/ListForwards": "read",
-  "/toshi.workspace.v1.EndpointService/GetTunnel": "read",
-  "/toshi.workspace.v1.EndpointService/ReplayEndpointMessage": "none",
-  "/toshi.workspace.v1.EndpointService/SendEndpointMessage": "keyed",
-  "/toshi.workspace.v1.EndpointService/TailEndpointMessages": "none",
-  "/toshi.workspace.v1.RecordingService/ListRecordings": "read",
-  "/toshi.workspace.v1.RecordingService/GetRecording": "read",
-  "/toshi.workspace.v1.RecordingService/CreateRecordingShareLink": "none",
-  "/toshi.workspace.v1.RecordingService/ListRecordingShareLinks": "read",
-  "/toshi.workspace.v1.RecordingService/RevokeRecordingShareLink": "none",
-  "/toshi.workspace.v1.VolumeService/ListVolumes": "read",
-  "/toshi.workspace.v1.VolumeService/GetVolume": "read",
-  "/toshi.workspace.v1.VolumeService/AttachVolume": "none",
-  "/toshi.workspace.v1.VolumeService/DetachVolume": "none",
-  "/toshi.workspace.v1.VolumeService/ListVolumeVersions": "read",
-  "/toshi.workspace.v1.VolumeService/RestoreVolume": "none",
-  "/toshi.workspace.v1.VolumeService/CreateVolume": "keyed",
-  "/toshi.workspace.v1.VolumeService/UpdateVolume": "none",
-  "/toshi.workspace.v1.VolumeService/DeleteVolume": "none",
-  "/toshi.workspace.v1.ArtifactService/ListArtifacts": "read",
-  "/toshi.workspace.v1.ArtifactService/GetArtifact": "read",
-  "/toshi.workspace.v1.ArtifactService/GetArtifactDownloadURL": "read",
-  "/toshi.workspace.v1.ArtifactUploadService/ReserveUpload": "none",
-  "/toshi.workspace.v1.ArtifactUploadService/CompleteUpload": "none",
-  "/toshi.workspace.v1.WorkspaceService/GetWorkspace": "read",
-  "/toshi.workspace.v1.WorkspaceService/UpdateWorkspace": "none",
-  "/toshi.workspace.v1.WorkspaceService/ListWorkspaces": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetWorkspaceBilling": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetWorkspaceStatement": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetWorkspaceUpcomingInvoice": "read",
-  "/toshi.workspace.v1.WorkspaceService/ListEgressIPs": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetUsage": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetQueueTimes": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetStartWindows": "read",
-  "/toshi.workspace.v1.WorkspaceService/GetWorkflowUsage": "read",
-  "/toshi.workspace.v1.WorkspaceService/ListPlans": "read",
-  "/toshi.workspace.v1.WorkspaceService/CreateCheckoutSession": "none",
-  "/toshi.workspace.v1.WorkspaceService/CreateBillingPortalSession": "none",
-  "/toshi.workspace.v1.WorkspaceService/GetVersion": "read",
-  "/toshi.workspace.v1.WorkspaceService/ListSeats": "read",
-  "/toshi.workspace.v1.WorkspaceService/AssignSeat": "none",
-  "/toshi.workspace.v1.WorkspaceService/RemoveSeat": "none",
-  "/toshi.workspace.v1.WorkspaceService/DeleteWorkspace": "none",
-  "/toshi.workspace.v1.WorkspaceService/CancelWorkspaceDeletion": "none",
-  "/toshi.workspace.v1.HostJobService/ListHostJobs": "read",
-  "/toshi.workspace.v1.HostJobService/GetHostJob": "read",
-  "/toshi.workspace.v1.HostJobService/CancelHostJob": "none",
-  "/toshi.workspace.v1.HostJobService/GetHostJobFailure": "read",
-  "/toshi.workspace.v1.HostJobService/GetHostJobTelemetry": "read",
-  // Not a read: it hands out a debug key and a suspended workspace is refused
-  // it; the request carries no request_key, so it is never retried.
-  "/toshi.workspace.v1.HostJobService/GetHostJobDebugAccess": "none",
-  "/toshi.workspace.v1.HostJobService/StopHostJobDebug": "none",
-  "/toshi.workspace.v1.HostService/ListHosts": "read",
-  "/toshi.workspace.v1.HostService/ListHostStorage": "read",
-  "/toshi.workspace.v1.HostService/ListHostAlerts": "read",
-  "/toshi.workspace.v1.HostService/SetHostState": "none",
-  "/toshi.workspace.v1.HostService/RetireHost": "none",
-  "/toshi.workspace.v1.HostService/CreateCloudHost": "keyed",
-  "/toshi.workspace.v1.HostService/CheckCloudHost": "none",
-  "/toshi.workspace.v1.HostService/CreateEnrollmentToken": "none",
-  "/toshi.workspace.v1.TokenService/ListTokens": "read",
-  "/toshi.workspace.v1.TokenService/CreateWorkspaceToken": "none",
-  "/toshi.workspace.v1.TokenService/RollWorkspaceToken": "none",
-  "/toshi.workspace.v1.TokenService/UpdateToken": "none",
-  "/toshi.workspace.v1.TokenService/RevokeToken": "none",
-  "/toshi.workspace.v1.AuditEventService/ListAuditEvents": "read",
-  "/toshi.workspace.v1.AuditEventService/ExportAuditEvents": "none",
-  "/toshi.workspace.v1.FillerService/ListFillers": "read",
-  "/toshi.workspace.v1.FillerService/PutFiller": "none",
-  "/toshi.workspace.v1.FillerService/DeleteFiller": "none",
-  "/toshi.workspace.v1.FillerService/SetFillerEnabled": "none",
-  "/toshi.workspace.v1.FillerService/ListFillerRuns": "read",
-  "/toshi.workspace.v1.GrantService/CreateGrant": "keyed",
-  "/toshi.workspace.v1.GrantService/GetGrant": "read",
-  "/toshi.workspace.v1.GrantService/ListGrants": "read",
-  "/toshi.workspace.v1.GrantService/AcceptGrant": "none",
-  "/toshi.workspace.v1.GrantService/DeclineGrant": "none",
-  "/toshi.workspace.v1.GrantService/UpdateGrant": "none",
-  "/toshi.workspace.v1.GrantService/RevokeGrant": "none",
-  "/toshi.workspace.v1.GrantService/LeaveGrant": "none",
-  "/toshi.workspace.v1.StorageProviderService/ListStorageProviders": "read",
-  "/toshi.workspace.v1.StorageProviderService/CreateStorageProvider": "keyed",
-  "/toshi.workspace.v1.StorageProviderService/CheckStorageProvider": "none",
-  "/toshi.workspace.v1.StorageProviderService/DeleteStorageProvider": "none",
-  "/toshi.workspace.v1.ProductService/ListProducts": "read",
-  "/toshi.workspace.v1.ProductService/UpdateProduct": "none",
-  "/toshi.workspace.v1.DiscoveryService/Discover": "read",
-  "/toshi.workspace.v1.ConnectionService/ListConnections": "read",
-  "/toshi.workspace.v1.ConnectionService/GetConnection": "read",
-  "/toshi.workspace.v1.ConnectionService/CreateConnection": "keyed",
-  "/toshi.workspace.v1.ConnectionService/DeleteConnection": "keyed",
-  "/toshi.workspace.v1.ConnectionService/RotateConnectionSecret": "keyed",
-  "/toshi.workspace.v1.ConnectionService/UpdateConnection": "none",
-  "/toshi.workspace.v1.ConnectionService/ListConnectionDeliveries": "read",
-  "/toshi.workspace.v1.ConnectionService/GetConnectionDelivery": "read",
-  "/toshi.workspace.v1.ConnectionService/ReplayConnectionDelivery": "keyed",
-  "/toshi.workspace.v1.ImageService/BuildImage": "none",
-  "/toshi.workspace.v1.ImageService/CreateImage": "keyed",
-  "/toshi.workspace.v1.ImageService/DeleteImage": "none",
-  "/toshi.workspace.v1.ImageService/GetImage": "read",
-  "/toshi.workspace.v1.ImageService/ListImages": "read",
-  "/toshi.workspace.v1.ImageService/UpdateImage": "none",
-  "/toshi.workspace.v1.RoleService/ListRoles": "read",
-  "/toshi.workspace.v1.RoleService/CreateRole": "keyed",
-  "/toshi.workspace.v1.RoleService/UpdateRole": "none",
-  "/toshi.workspace.v1.RoleService/DeleteRole": "none",
-  "/toshi.workspace.v1.RoleService/ListRoleGrants": "read",
-  "/toshi.workspace.v1.RoleService/GrantRole": "none",
-  "/toshi.workspace.v1.RoleService/RevokeRole": "none",
-  "/toshi.workspace.v1.RoleService/ListMembers": "read",
-  "/toshi.workspace.v1.RoleService/RemoveMember": "none",
-  "/toshi.workspace.v1.RoleService/CreateInvitation": "none",
-  "/toshi.workspace.v1.RoleService/ListInvitations": "read",
-  "/toshi.workspace.v1.RoleService/RevokeInvitation": "none",
-  // A repeat answers ALREADY_EXISTS ("a caller who is already a member fails
-  // with ALREADY_EXISTS"), so a retry would report failure for a call that
-  // worked; its permission's level is read although it changes state.
-  "/toshi.workspace.v1.RoleService/AcceptInvitation": "none",
-  "/toshi.workspace.v1.RoleService/ApproveMember": "none",
-  "/toshi.workspace.v1.RoleService/DeclineMember": "none",
-  "/toshi.workspace.v1.TriggerService/CreateTrigger": "keyed",
-  "/toshi.workspace.v1.TriggerService/GetTrigger": "read",
-  "/toshi.workspace.v1.TriggerService/ListTriggers": "read",
-  "/toshi.workspace.v1.TriggerService/UpdateTrigger": "keyed",
-  "/toshi.workspace.v1.TriggerService/DeleteTrigger": "keyed",
-  "/toshi.workspace.v1.DomainService/CreateDomain": "keyed",
-  "/toshi.workspace.v1.DomainService/GetDomain": "read",
-  "/toshi.workspace.v1.DomainService/ListDomains": "read",
-  "/toshi.workspace.v1.DomainService/VerifyDomain": "keyed",
-  "/toshi.workspace.v1.DomainService/IssueDomain": "keyed",
-  "/toshi.workspace.v1.DomainService/DeleteDomain": "none",
-  // CreateModelCredential takes no request_key, and a repeat answers
-  // ALREADY_EXISTS ("a key that already serves a credential fails with
-  // ALREADY_EXISTS, and so does a second credential of the same name and
-  // owner"), so a retry would report failure for a call that worked.
-  "/toshi.workspace.v1.ModelCredentialService/CreateModelCredential": "none",
-  "/toshi.workspace.v1.ModelCredentialService/GetModelCredential": "read",
-  "/toshi.workspace.v1.ModelCredentialService/ListModelCredentials": "read",
-  "/toshi.workspace.v1.ModelCredentialService/UpdateModelCredential": "none",
-  "/toshi.workspace.v1.ModelCredentialService/DeleteModelCredential": "none",
-  "/toshi.workspace.v1.ModelCredentialService/ListModelSignInProviders": "read",
-  "/toshi.workspace.v1.ModelCredentialService/StartModelSignIn": "none",
-  "/toshi.workspace.v1.ModelCredentialService/CompleteModelSignIn": "none",
-  "/toshi.workspace.v1.ModelCredentialService/CancelModelSignIn": "none",
 };
 
-
-/** The retry class of a generated procedure path; an unknown path is "none". */
-export function retryClassFor(procedure: string): RetryClass {
-  return procedureRetryClass[procedure] ?? "none";
+/** The class the descriptors give a call, before the exceptions above. */
+export function derivedRetryClass(method: DescMethod): RetryClass {
+  if (method.methodKind !== "unary") {
+    return "none";
+  }
+  if (method.input.fields.some((field) => field.name === "request_key")) {
+    return "keyed";
+  }
+  return getOption(method, permission).endsWith(".read") ? "read" : "none";
 }
 
-/** The `/<service typeName>/<method name>` path the client keys the retry table by. */
+/** The retry class of a call: an exception's, else the one the descriptors give it. */
+export function retryClassFor(method: DescMethod): RetryClass {
+  return retryExceptions[procedurePath(method.parent, method)] ?? derivedRetryClass(method);
+}
+
+/** The `/<service typeName>/<method name>` path a call is sent to. */
 export function procedurePath(service: { readonly typeName: string }, method: { readonly name: string }): string {
   return `/${service.typeName}/${method.name}`;
 }
