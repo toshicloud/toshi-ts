@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file toshi/workspace/v1/model_credentials.proto.
  */
 export const file_toshi_workspace_v1_model_credentials: GenFile = /*@__PURE__*/
-  fileDesc("Cip0b3NoaS93b3Jrc3BhY2UvdjEvbW9kZWxfY3JlZGVudGlhbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKvAgoPTW9kZWxDcmVkZW50aWFsEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEAoIcHJvdmlkZXIYAyABKAkSNQoEa2luZBgEIAEoDjInLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxLaW5kEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCBIPCgdwcm9qZWN0GAggASgJEhMKC2Vudmlyb25tZW50GAkgASgJEg4KBnNoYXJlZBgKIAEoCBIOCgZzZWNyZXQYCyABKAkSLgoKY3JlYXRlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgNIAEoCSJEChZNb2RlbENyZWRlbnRpYWxEZWZhdWx0EhAKCHByb3ZpZGVyGAEgASgJEhgKEG1vZGVsX2NyZWRlbnRpYWwYAiABKAkioAEKHENyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSDAoEbmFtZRgBIAEoCRIQCghwcm92aWRlchgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEg4KBnNoYXJlZBgFIAEoCBIOCgZzZWNyZXQYBiABKAkSDQoFdmFsdWUYByABKAwSCwoDb3duGAggASgIIl4KHUNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlEj0KEG1vZGVsX2NyZWRlbnRpYWwYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsIicKGUdldE1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSCgoCaWQYASABKAkiWwoaR2V0TW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiVgobTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXF1ZXN0EhAKCHByb3ZpZGVyGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIncKHExpc3RNb2RlbENyZWRlbnRpYWxzUmVzcG9uc2USPgoRbW9kZWxfY3JlZGVudGlhbHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKOAQocVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBI9ChBtb2RlbF9jcmVkZW50aWFsGAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLk1vZGVsQ3JlZGVudGlhbBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siXgodVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiKgocRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBIKCgJpZBgBIAEoCSIfCh1EZWxldGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSpbChNNb2RlbENyZWRlbnRpYWxLaW5kEiUKIU1PREVMX0NSRURFTlRJQUxfS0lORF9VTlNQRUNJRklFRBAAEh0KGU1PREVMX0NSRURFTlRJQUxfS0lORF9LRVkQATLpBgoWTW9kZWxDcmVkZW50aWFsU2VydmljZRKyAQoVQ3JlYXRlTW9kZWxDcmVkZW50aWFsEjAudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuQ3JlYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2UiNMLzGBdtb2RlbF9jcmVkZW50aWFscy53cml0ZcrzGAtlbnZpcm9ubWVudOrzGAIoAfDzGAESkwEKEkdldE1vZGVsQ3JlZGVudGlhbBItLnRvc2hpLndvcmtzcGFjZS52MS5HZXRNb2RlbENyZWRlbnRpYWxSZXF1ZXN0Gi4udG9zaGkud29ya3NwYWNlLnYxLkdldE1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIh7C8xgWbW9kZWxfY3JlZGVudGlhbHMucmVhZPDzGAESmQEKFExpc3RNb2RlbENyZWRlbnRpYWxzEi8udG9zaGkud29ya3NwYWNlLnYxLkxpc3RNb2RlbENyZWRlbnRpYWxzUmVxdWVzdBowLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0TW9kZWxDcmVkZW50aWFsc1Jlc3BvbnNlIh7C8xgWbW9kZWxfY3JlZGVudGlhbHMucmVhZPDzGAESxwEKFVVwZGF0ZU1vZGVsQ3JlZGVudGlhbBIwLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLlVwZGF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIknC8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXS8xgmEiRtb2RlbF9jcmVkZW50aWFsOm1vZGVsX2NyZWRlbnRpYWwuaWTw8xgBEp0BChVEZWxldGVNb2RlbENyZWRlbnRpYWwSMC50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5EZWxldGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSIfwvMYF21vZGVsX2NyZWRlbnRpYWxzLndyaXRl8PMYAUIiWiBnby50b3NoaWNsb3VkLmlvL2FwaS93b3Jrc3BhY2V2MWIGcHJvdG8z", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
+  fileDesc("Cip0b3NoaS93b3Jrc3BhY2UvdjEvbW9kZWxfY3JlZGVudGlhbHMucHJvdG8SEnRvc2hpLndvcmtzcGFjZS52MSKlBAoPTW9kZWxDcmVkZW50aWFsEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEAoIcHJvdmlkZXIYAyABKAkSNQoEa2luZBgEIAEoDjInLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxLaW5kEg0KBW93bmVyGAUgASgJEgwKBG1pbmUYBiABKAgSEgoKb3duZXJfbGVmdBgHIAEoCBIPCgdwcm9qZWN0GAggASgJEhMKC2Vudmlyb25tZW50GAkgASgJEg4KBnNoYXJlZBgKIAEoCBIOCgZzZWNyZXQYCyABKAkSLgoKY3JlYXRlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgNIAEoCRI3CgVzdGF0ZRgOIAEoDjIoLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxTdGF0ZRIUCgxzdGF0ZV9yZWFzb24YDyABKAkSLAoIc3RhdGVfYXQYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEHRva2VuX2V4cGlyZXNfYXQYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjAKDGxhc3RfdXNlZF9hdBgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDwoHYWNjb3VudBgTIAEoCSJEChZNb2RlbENyZWRlbnRpYWxEZWZhdWx0EhAKCHByb3ZpZGVyGAEgASgJEhgKEG1vZGVsX2NyZWRlbnRpYWwYAiABKAkioAEKHENyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSDAoEbmFtZRgBIAEoCRIQCghwcm92aWRlchgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEg4KBnNoYXJlZBgFIAEoCBIOCgZzZWNyZXQYBiABKAkSDQoFdmFsdWUYByABKAwSCwoDb3duGAggASgIIl4KHUNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlEj0KEG1vZGVsX2NyZWRlbnRpYWwYASABKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsIicKGUdldE1vZGVsQ3JlZGVudGlhbFJlcXVlc3QSCgoCaWQYASABKAkiWwoaR2V0TW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiVgobTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXF1ZXN0EhAKCHByb3ZpZGVyGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIncKHExpc3RNb2RlbENyZWRlbnRpYWxzUmVzcG9uc2USPgoRbW9kZWxfY3JlZGVudGlhbHMYASADKAsyIy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxDcmVkZW50aWFsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKOAQocVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBI9ChBtb2RlbF9jcmVkZW50aWFsGAEgASgLMiMudG9zaGkud29ya3NwYWNlLnYxLk1vZGVsQ3JlZGVudGlhbBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siXgodVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2USPQoQbW9kZWxfY3JlZGVudGlhbBgBIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWwiKgocRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBIKCgJpZBgBIAEoCSIfCh1EZWxldGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSIhCh9MaXN0TW9kZWxTaWduSW5Qcm92aWRlcnNSZXF1ZXN0Ik0KE01vZGVsU2lnbkluUHJvdmlkZXISEAoIcHJvdmlkZXIYASABKAkSEQoJbWVjaGFuaXNtGAIgASgJEhEKCWF2YWlsYWJsZRgDIAEoCCJeCiBMaXN0TW9kZWxTaWduSW5Qcm92aWRlcnNSZXNwb25zZRI6Cglwcm92aWRlcnMYASADKAsyJy50b3NoaS53b3Jrc3BhY2UudjEuTW9kZWxTaWduSW5Qcm92aWRlciKJAQoXU3RhcnRNb2RlbFNpZ25JblJlcXVlc3QSEAoIcHJvdmlkZXIYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJEg4KBnNoYXJlZBgFIAEoCBIQCgNvd24YBiABKAhIAIgBAUIGCgRfb3duIucBChhTdGFydE1vZGVsU2lnbkluUmVzcG9uc2USLAoGcHJvbXB0GAEgASgLMhoudG9zaGkud29ya3NwYWNlLnYxLlByb21wdEgAEjAKCHByb2dyZXNzGAIgASgLMhwudG9zaGkud29ya3NwYWNlLnYxLlByb2dyZXNzSAASMwoEZG9uZRgDIAEoCzIjLnRvc2hpLndvcmtzcGFjZS52MS5Nb2RlbENyZWRlbnRpYWxIABItCgZmYWlsZWQYBCABKAsyGy50b3NoaS53b3Jrc3BhY2UudjEuRmFpbHVyZUgAQgcKBWV2ZW50IoABCgZQcm9tcHQSEgoKc2lnbl9pbl9pZBgBIAEoCRILCgN1cmwYAiABKAkSEQoJdXNlcl9jb2RlGAMgASgJEi4KCmV4cGlyZXNfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIKCm5lZWRzX2NvZGUYBSABKAgiGgoIUHJvZ3Jlc3MSDgoGc3RhdHVzGAEgASgJIikKB0ZhaWx1cmUSDgoGcmVhc29uGAEgASgJEg4KBmRldGFpbBgCIAEoCSI+ChpDb21wbGV0ZU1vZGVsU2lnbkluUmVxdWVzdBISCgpzaWduX2luX2lkGAEgASgJEgwKBGNvZGUYAiABKAkiHQobQ29tcGxldGVNb2RlbFNpZ25JblJlc3BvbnNlIi4KGENhbmNlbE1vZGVsU2lnbkluUmVxdWVzdBISCgpzaWduX2luX2lkGAEgASgJIhsKGUNhbmNlbE1vZGVsU2lnbkluUmVzcG9uc2UqfgoTTW9kZWxDcmVkZW50aWFsS2luZBIlCiFNT0RFTF9DUkVERU5USUFMX0tJTkRfVU5TUEVDSUZJRUQQABIdChlNT0RFTF9DUkVERU5USUFMX0tJTkRfS0VZEAESIQodTU9ERUxfQ1JFREVOVElBTF9LSU5EX1NJR05fSU4QAiqOAQoUTW9kZWxDcmVkZW50aWFsU3RhdGUSJgoiTU9ERUxfQ1JFREVOVElBTF9TVEFURV9VTlNQRUNJRklFRBAAEiQKIE1PREVMX0NSRURFTlRJQUxfU1RBVEVfU0lHTkVEX0lOEAESKAokTU9ERUxfQ1JFREVOVElBTF9TVEFURV9ORUVEU19TSUdOX0lOEAIyow0KFk1vZGVsQ3JlZGVudGlhbFNlcnZpY2USsgEKFUNyZWF0ZU1vZGVsQ3JlZGVudGlhbBIwLnRvc2hpLndvcmtzcGFjZS52MS5DcmVhdGVNb2RlbENyZWRlbnRpYWxSZXF1ZXN0GjEudG9zaGkud29ya3NwYWNlLnYxLkNyZWF0ZU1vZGVsQ3JlZGVudGlhbFJlc3BvbnNlIjTC8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXK8xgLZW52aXJvbm1lbnTq8xgCKAHw8xgBEpMBChJHZXRNb2RlbENyZWRlbnRpYWwSLS50b3NoaS53b3Jrc3BhY2UudjEuR2V0TW9kZWxDcmVkZW50aWFsUmVxdWVzdBouLnRvc2hpLndvcmtzcGFjZS52MS5HZXRNb2RlbENyZWRlbnRpYWxSZXNwb25zZSIewvMYFm1vZGVsX2NyZWRlbnRpYWxzLnJlYWTw8xgBEpkBChRMaXN0TW9kZWxDcmVkZW50aWFscxIvLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0TW9kZWxDcmVkZW50aWFsc1JlcXVlc3QaMC50b3NoaS53b3Jrc3BhY2UudjEuTGlzdE1vZGVsQ3JlZGVudGlhbHNSZXNwb25zZSIewvMYFm1vZGVsX2NyZWRlbnRpYWxzLnJlYWTw8xgBEscBChVVcGRhdGVNb2RlbENyZWRlbnRpYWwSMC50b3NoaS53b3Jrc3BhY2UudjEuVXBkYXRlTW9kZWxDcmVkZW50aWFsUmVxdWVzdBoxLnRvc2hpLndvcmtzcGFjZS52MS5VcGRhdGVNb2RlbENyZWRlbnRpYWxSZXNwb25zZSJJwvMYF21vZGVsX2NyZWRlbnRpYWxzLndyaXRl0vMYJhIkbW9kZWxfY3JlZGVudGlhbDptb2RlbF9jcmVkZW50aWFsLmlk8PMYARKdAQoVRGVsZXRlTW9kZWxDcmVkZW50aWFsEjAudG9zaGkud29ya3NwYWNlLnYxLkRlbGV0ZU1vZGVsQ3JlZGVudGlhbFJlcXVlc3QaMS50b3NoaS53b3Jrc3BhY2UudjEuRGVsZXRlTW9kZWxDcmVkZW50aWFsUmVzcG9uc2UiH8LzGBdtb2RlbF9jcmVkZW50aWFscy53cml0ZfDzGAESpQEKGExpc3RNb2RlbFNpZ25JblByb3ZpZGVycxIzLnRvc2hpLndvcmtzcGFjZS52MS5MaXN0TW9kZWxTaWduSW5Qcm92aWRlcnNSZXF1ZXN0GjQudG9zaGkud29ya3NwYWNlLnYxLkxpc3RNb2RlbFNpZ25JblByb3ZpZGVyc1Jlc3BvbnNlIh7C8xgWbW9kZWxfY3JlZGVudGlhbHMucmVhZPDzGAES0QEKEFN0YXJ0TW9kZWxTaWduSW4SKy50b3NoaS53b3Jrc3BhY2UudjEuU3RhcnRNb2RlbFNpZ25JblJlcXVlc3QaLC50b3NoaS53b3Jrc3BhY2UudjEuU3RhcnRNb2RlbFNpZ25JblJlc3BvbnNlImDC8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXK8xgLZW52aXJvbm1lbnTS8xgoCiBtb2RlbF9jcmVkZW50aWFsLnNpZ25faW5fc3RhcnRlZBIEbm9uZerzGAIoAfDzGAEwARLfAQoTQ29tcGxldGVNb2RlbFNpZ25JbhIuLnRvc2hpLndvcmtzcGFjZS52MS5Db21wbGV0ZU1vZGVsU2lnbkluUmVxdWVzdBovLnRvc2hpLndvcmtzcGFjZS52MS5Db21wbGV0ZU1vZGVsU2lnbkluUmVzcG9uc2UiZ8LzGBdtb2RlbF9jcmVkZW50aWFscy53cml0ZdLzGD4KIm1vZGVsX2NyZWRlbnRpYWwuc2lnbl9pbl9jb21wbGV0ZWQSGG1vZGVsX3NpZ25faW46c2lnbl9pbl9pZOrzGAIoAfDzGAES2QEKEUNhbmNlbE1vZGVsU2lnbkluEiwudG9zaGkud29ya3NwYWNlLnYxLkNhbmNlbE1vZGVsU2lnbkluUmVxdWVzdBotLnRvc2hpLndvcmtzcGFjZS52MS5DYW5jZWxNb2RlbFNpZ25JblJlc3BvbnNlImfC8xgXbW9kZWxfY3JlZGVudGlhbHMud3JpdGXS8xg+CiJtb2RlbF9jcmVkZW50aWFsLnNpZ25faW5fY2FuY2VsbGVkEhhtb2RlbF9zaWduX2luOnNpZ25faW5faWTq8xgCKAHw8xgBQiJaIGdvLnRvc2hpY2xvdWQuaW8vYXBpL3dvcmtzcGFjZXYxYgZwcm90bzM", [file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_toshi_permission]);
 
 /**
  * ModelCredential is a credential as anyone may see it: never its value.
@@ -38,7 +38,8 @@ export type ModelCredential = Message<"toshi.workspace.v1.ModelCredential"> & {
   name: string;
 
   /**
-   * The model provider: "anthropic" or "openai".
+   * The model provider: "anthropic", "openai", "kimi", "mistral", "xai" or
+   * "gemini".
    *
    * @generated from field: string provider = 3;
    */
@@ -109,6 +110,52 @@ export type ModelCredential = Message<"toshi.workspace.v1.ModelCredential"> & {
    * @generated from field: string created_by = 13;
    */
   createdBy: string;
+
+  /**
+   * A sign-in's state; unset for a key.
+   *
+   * @generated from field: toshi.workspace.v1.ModelCredentialState state = 14;
+   */
+  state: ModelCredentialState;
+
+  /**
+   * Why a sign-in needs a new sign-in, such as "refresh_refused"; empty
+   * otherwise.
+   *
+   * @generated from field: string state_reason = 15;
+   */
+  stateReason: string;
+
+  /**
+   * When the state last changed; unset for a key.
+   *
+   * @generated from field: google.protobuf.Timestamp state_at = 16;
+   */
+  stateAt?: Timestamp | undefined;
+
+  /**
+   * When the provider's access token expires; unset when it does not, and
+   * for a key.
+   *
+   * @generated from field: google.protobuf.Timestamp token_expires_at = 17;
+   */
+  tokenExpiresAt?: Timestamp | undefined;
+
+  /**
+   * When a workload last used the credential; unset when none has, and for
+   * a key.
+   *
+   * @generated from field: google.protobuf.Timestamp last_used_at = 18;
+   */
+  lastUsedAt?: Timestamp | undefined;
+
+  /**
+   * A display label of the signed-in account, such as its address; empty
+   * for a key.
+   *
+   * @generated from field: string account = 19;
+   */
+  account: string;
 };
 
 /**
@@ -134,7 +181,8 @@ export type ModelCredentialJson = {
   name?: string;
 
   /**
-   * The model provider: "anthropic" or "openai".
+   * The model provider: "anthropic", "openai", "kimi", "mistral", "xai" or
+   * "gemini".
    *
    * @generated from field: string provider = 3;
    */
@@ -205,6 +253,52 @@ export type ModelCredentialJson = {
    * @generated from field: string created_by = 13;
    */
   createdBy?: string;
+
+  /**
+   * A sign-in's state; unset for a key.
+   *
+   * @generated from field: toshi.workspace.v1.ModelCredentialState state = 14;
+   */
+  state?: ModelCredentialStateJson;
+
+  /**
+   * Why a sign-in needs a new sign-in, such as "refresh_refused"; empty
+   * otherwise.
+   *
+   * @generated from field: string state_reason = 15;
+   */
+  stateReason?: string;
+
+  /**
+   * When the state last changed; unset for a key.
+   *
+   * @generated from field: google.protobuf.Timestamp state_at = 16;
+   */
+  stateAt?: TimestampJson;
+
+  /**
+   * When the provider's access token expires; unset when it does not, and
+   * for a key.
+   *
+   * @generated from field: google.protobuf.Timestamp token_expires_at = 17;
+   */
+  tokenExpiresAt?: TimestampJson;
+
+  /**
+   * When a workload last used the credential; unset when none has, and for
+   * a key.
+   *
+   * @generated from field: google.protobuf.Timestamp last_used_at = 18;
+   */
+  lastUsedAt?: TimestampJson;
+
+  /**
+   * A display label of the signed-in account, such as its address; empty
+   * for a key.
+   *
+   * @generated from field: string account = 19;
+   */
+  account?: string;
 };
 
 /**
@@ -223,7 +317,8 @@ export const ModelCredentialSchema: GenMessage<ModelCredential, {jsonType: Model
  */
 export type ModelCredentialDefault = Message<"toshi.workspace.v1.ModelCredentialDefault"> & {
   /**
-   * "anthropic" or "openai"; one default per provider.
+   * "anthropic", "openai", "kimi", "mistral", "xai" or "gemini"; one default
+   * per provider.
    *
    * @generated from field: string provider = 1;
    */
@@ -246,7 +341,8 @@ export type ModelCredentialDefault = Message<"toshi.workspace.v1.ModelCredential
  */
 export type ModelCredentialDefaultJson = {
   /**
-   * "anthropic" or "openai"; one default per provider.
+   * "anthropic", "openai", "kimi", "mistral", "xai" or "gemini"; one default
+   * per provider.
    *
    * @generated from field: string provider = 1;
    */
@@ -670,6 +766,597 @@ export const DeleteModelCredentialResponseSchema: GenMessage<DeleteModelCredenti
   messageDesc(file_toshi_workspace_v1_model_credentials, 11);
 
 /**
+ * @generated from message toshi.workspace.v1.ListModelSignInProvidersRequest
+ */
+export type ListModelSignInProvidersRequest = Message<"toshi.workspace.v1.ListModelSignInProvidersRequest"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListModelSignInProvidersRequest
+ */
+export type ListModelSignInProvidersRequestJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListModelSignInProvidersRequest.
+ * Use `create(ListModelSignInProvidersRequestSchema)` to create a new message.
+ */
+export const ListModelSignInProvidersRequestSchema: GenMessage<ListModelSignInProvidersRequest, {jsonType: ListModelSignInProvidersRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 12);
+
+/**
+ * ModelSignInProvider is how a deployment offers one provider's sign-in.
+ *
+ * @generated from message toshi.workspace.v1.ModelSignInProvider
+ */
+export type ModelSignInProvider = Message<"toshi.workspace.v1.ModelSignInProvider"> & {
+  /**
+   * "anthropic", "openai", "kimi", "mistral", "xai" or "gemini".
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider: string;
+
+  /**
+   * "held", "volume" or "key".
+   *
+   * @generated from field: string mechanism = 2;
+   */
+  mechanism: string;
+
+  /**
+   * The deployment offers a held sign-in for this provider.
+   *
+   * @generated from field: bool available = 3;
+   */
+  available: boolean;
+};
+
+/**
+ * ModelSignInProvider is how a deployment offers one provider's sign-in.
+ *
+ * @generated from message toshi.workspace.v1.ModelSignInProvider
+ */
+export type ModelSignInProviderJson = {
+  /**
+   * "anthropic", "openai", "kimi", "mistral", "xai" or "gemini".
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider?: string;
+
+  /**
+   * "held", "volume" or "key".
+   *
+   * @generated from field: string mechanism = 2;
+   */
+  mechanism?: string;
+
+  /**
+   * The deployment offers a held sign-in for this provider.
+   *
+   * @generated from field: bool available = 3;
+   */
+  available?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ModelSignInProvider.
+ * Use `create(ModelSignInProviderSchema)` to create a new message.
+ */
+export const ModelSignInProviderSchema: GenMessage<ModelSignInProvider, {jsonType: ModelSignInProviderJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 13);
+
+/**
+ * @generated from message toshi.workspace.v1.ListModelSignInProvidersResponse
+ */
+export type ListModelSignInProvidersResponse = Message<"toshi.workspace.v1.ListModelSignInProvidersResponse"> & {
+  /**
+   * Every provider a credential may serve, in a stable order.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ModelSignInProvider providers = 1;
+   */
+  providers: ModelSignInProvider[];
+};
+
+/**
+ * @generated from message toshi.workspace.v1.ListModelSignInProvidersResponse
+ */
+export type ListModelSignInProvidersResponseJson = {
+  /**
+   * Every provider a credential may serve, in a stable order.
+   *
+   * @generated from field: repeated toshi.workspace.v1.ModelSignInProvider providers = 1;
+   */
+  providers?: ModelSignInProviderJson[];
+};
+
+/**
+ * Describes the message toshi.workspace.v1.ListModelSignInProvidersResponse.
+ * Use `create(ListModelSignInProvidersResponseSchema)` to create a new message.
+ */
+export const ListModelSignInProvidersResponseSchema: GenMessage<ListModelSignInProvidersResponse, {jsonType: ListModelSignInProvidersResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 14);
+
+/**
+ * @generated from message toshi.workspace.v1.StartModelSignInRequest
+ */
+export type StartModelSignInRequest = Message<"toshi.workspace.v1.StartModelSignInRequest"> & {
+  /**
+   * The provider to sign in to, one of the six a credential may serve.
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider: string;
+
+  /**
+   * The credential's name. Signing in again with the name of an existing
+   * credential replaces its grant and keeps its id.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * The credential's place: the project and exactly one of environment or
+   * shared, as CreateModelCredential takes them.
+   *
+   * @generated from field: string project = 3;
+   */
+  project: string;
+
+  /**
+   * @generated from field: string environment = 4;
+   */
+  environment: string;
+
+  /**
+   * @generated from field: bool shared = 5;
+   */
+  shared: boolean;
+
+  /**
+   * The credential is the caller's own; true when unset.
+   *
+   * @generated from field: optional bool own = 6;
+   */
+  own?: boolean | undefined;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.StartModelSignInRequest
+ */
+export type StartModelSignInRequestJson = {
+  /**
+   * The provider to sign in to, one of the six a credential may serve.
+   *
+   * @generated from field: string provider = 1;
+   */
+  provider?: string;
+
+  /**
+   * The credential's name. Signing in again with the name of an existing
+   * credential replaces its grant and keeps its id.
+   *
+   * @generated from field: string name = 2;
+   */
+  name?: string;
+
+  /**
+   * The credential's place: the project and exactly one of environment or
+   * shared, as CreateModelCredential takes them.
+   *
+   * @generated from field: string project = 3;
+   */
+  project?: string;
+
+  /**
+   * @generated from field: string environment = 4;
+   */
+  environment?: string;
+
+  /**
+   * @generated from field: bool shared = 5;
+   */
+  shared?: boolean;
+
+  /**
+   * The credential is the caller's own; true when unset.
+   *
+   * @generated from field: optional bool own = 6;
+   */
+  own?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.StartModelSignInRequest.
+ * Use `create(StartModelSignInRequestSchema)` to create a new message.
+ */
+export const StartModelSignInRequestSchema: GenMessage<StartModelSignInRequest, {jsonType: StartModelSignInRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 15);
+
+/**
+ * StartModelSignInResponse is one sign-in's stream: the prompt, progress
+ * while it waits, and last either the signed-in credential or the failure.
+ *
+ * @generated from message toshi.workspace.v1.StartModelSignInResponse
+ */
+export type StartModelSignInResponse = Message<"toshi.workspace.v1.StartModelSignInResponse"> & {
+  /**
+   * @generated from oneof toshi.workspace.v1.StartModelSignInResponse.event
+   */
+  event: {
+    /**
+     * What to show the person: the page to open and, when the provider
+     * asks for one, the code to enter there.
+     *
+     * @generated from field: toshi.workspace.v1.Prompt prompt = 1;
+     */
+    value: Prompt;
+    case: "prompt";
+  } | {
+    /**
+     * The sign-in is still waiting, or the provider asked it to slow down.
+     *
+     * @generated from field: toshi.workspace.v1.Progress progress = 2;
+     */
+    value: Progress;
+    case: "progress";
+  } | {
+    /**
+     * Last, when the sign-in succeeded: the credential, signed in.
+     *
+     * @generated from field: toshi.workspace.v1.ModelCredential done = 3;
+     */
+    value: ModelCredential;
+    case: "done";
+  } | {
+    /**
+     * Last, when it failed.
+     *
+     * @generated from field: toshi.workspace.v1.Failure failed = 4;
+     */
+    value: Failure;
+    case: "failed";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * StartModelSignInResponse is one sign-in's stream: the prompt, progress
+ * while it waits, and last either the signed-in credential or the failure.
+ *
+ * @generated from message toshi.workspace.v1.StartModelSignInResponse
+ */
+export type StartModelSignInResponseJson = {
+  /**
+   * What to show the person: the page to open and, when the provider
+   * asks for one, the code to enter there.
+   *
+   * @generated from field: toshi.workspace.v1.Prompt prompt = 1;
+   */
+  prompt?: PromptJson;
+
+  /**
+   * The sign-in is still waiting, or the provider asked it to slow down.
+   *
+   * @generated from field: toshi.workspace.v1.Progress progress = 2;
+   */
+  progress?: ProgressJson;
+
+  /**
+   * Last, when the sign-in succeeded: the credential, signed in.
+   *
+   * @generated from field: toshi.workspace.v1.ModelCredential done = 3;
+   */
+  done?: ModelCredentialJson;
+
+  /**
+   * Last, when it failed.
+   *
+   * @generated from field: toshi.workspace.v1.Failure failed = 4;
+   */
+  failed?: FailureJson;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.StartModelSignInResponse.
+ * Use `create(StartModelSignInResponseSchema)` to create a new message.
+ */
+export const StartModelSignInResponseSchema: GenMessage<StartModelSignInResponse, {jsonType: StartModelSignInResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 16);
+
+/**
+ * Prompt is what a sign-in asks the person to open and enter.
+ *
+ * @generated from message toshi.workspace.v1.Prompt
+ */
+export type Prompt = Message<"toshi.workspace.v1.Prompt"> & {
+  /**
+   * The sign-in's id, for CompleteModelSignIn and CancelModelSignIn.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId: string;
+
+  /**
+   * The page to open in a browser.
+   *
+   * @generated from field: string url = 2;
+   */
+  url: string;
+
+  /**
+   * The code to enter on that page, for a provider whose sign-in shows one.
+   *
+   * @generated from field: string user_code = 3;
+   */
+  userCode: string;
+
+  /**
+   * When the prompt stops working.
+   *
+   * @generated from field: google.protobuf.Timestamp expires_at = 4;
+   */
+  expiresAt?: Timestamp | undefined;
+
+  /**
+   * The provider needs a code from that page, entered with
+   * CompleteModelSignIn.
+   *
+   * @generated from field: bool needs_code = 5;
+   */
+  needsCode: boolean;
+};
+
+/**
+ * Prompt is what a sign-in asks the person to open and enter.
+ *
+ * @generated from message toshi.workspace.v1.Prompt
+ */
+export type PromptJson = {
+  /**
+   * The sign-in's id, for CompleteModelSignIn and CancelModelSignIn.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId?: string;
+
+  /**
+   * The page to open in a browser.
+   *
+   * @generated from field: string url = 2;
+   */
+  url?: string;
+
+  /**
+   * The code to enter on that page, for a provider whose sign-in shows one.
+   *
+   * @generated from field: string user_code = 3;
+   */
+  userCode?: string;
+
+  /**
+   * When the prompt stops working.
+   *
+   * @generated from field: google.protobuf.Timestamp expires_at = 4;
+   */
+  expiresAt?: TimestampJson;
+
+  /**
+   * The provider needs a code from that page, entered with
+   * CompleteModelSignIn.
+   *
+   * @generated from field: bool needs_code = 5;
+   */
+  needsCode?: boolean;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.Prompt.
+ * Use `create(PromptSchema)` to create a new message.
+ */
+export const PromptSchema: GenMessage<Prompt, {jsonType: PromptJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 17);
+
+/**
+ * Progress reports a sign-in that is still under way.
+ *
+ * @generated from message toshi.workspace.v1.Progress
+ */
+export type Progress = Message<"toshi.workspace.v1.Progress"> & {
+  /**
+   * "waiting" or "slow_down", the provider's answer to the latest poll.
+   *
+   * @generated from field: string status = 1;
+   */
+  status: string;
+};
+
+/**
+ * Progress reports a sign-in that is still under way.
+ *
+ * @generated from message toshi.workspace.v1.Progress
+ */
+export type ProgressJson = {
+  /**
+   * "waiting" or "slow_down", the provider's answer to the latest poll.
+   *
+   * @generated from field: string status = 1;
+   */
+  status?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.Progress.
+ * Use `create(ProgressSchema)` to create a new message.
+ */
+export const ProgressSchema: GenMessage<Progress, {jsonType: ProgressJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 18);
+
+/**
+ * Failure is why a sign-in ended without a credential.
+ *
+ * @generated from message toshi.workspace.v1.Failure
+ */
+export type Failure = Message<"toshi.workspace.v1.Failure"> & {
+  /**
+   * "denied", "expired", "provider_error" or "not_offered".
+   *
+   * @generated from field: string reason = 1;
+   */
+  reason: string;
+
+  /**
+   * One line of detail from the provider; never a token.
+   *
+   * @generated from field: string detail = 2;
+   */
+  detail: string;
+};
+
+/**
+ * Failure is why a sign-in ended without a credential.
+ *
+ * @generated from message toshi.workspace.v1.Failure
+ */
+export type FailureJson = {
+  /**
+   * "denied", "expired", "provider_error" or "not_offered".
+   *
+   * @generated from field: string reason = 1;
+   */
+  reason?: string;
+
+  /**
+   * One line of detail from the provider; never a token.
+   *
+   * @generated from field: string detail = 2;
+   */
+  detail?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.Failure.
+ * Use `create(FailureSchema)` to create a new message.
+ */
+export const FailureSchema: GenMessage<Failure, {jsonType: FailureJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 19);
+
+/**
+ * @generated from message toshi.workspace.v1.CompleteModelSignInRequest
+ */
+export type CompleteModelSignInRequest = Message<"toshi.workspace.v1.CompleteModelSignInRequest"> & {
+  /**
+   * From the sign-in's prompt.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId: string;
+
+  /**
+   * The code the provider's page showed.
+   *
+   * @generated from field: string code = 2;
+   */
+  code: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CompleteModelSignInRequest
+ */
+export type CompleteModelSignInRequestJson = {
+  /**
+   * From the sign-in's prompt.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId?: string;
+
+  /**
+   * The code the provider's page showed.
+   *
+   * @generated from field: string code = 2;
+   */
+  code?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CompleteModelSignInRequest.
+ * Use `create(CompleteModelSignInRequestSchema)` to create a new message.
+ */
+export const CompleteModelSignInRequestSchema: GenMessage<CompleteModelSignInRequest, {jsonType: CompleteModelSignInRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 20);
+
+/**
+ * @generated from message toshi.workspace.v1.CompleteModelSignInResponse
+ */
+export type CompleteModelSignInResponse = Message<"toshi.workspace.v1.CompleteModelSignInResponse"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CompleteModelSignInResponse
+ */
+export type CompleteModelSignInResponseJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CompleteModelSignInResponse.
+ * Use `create(CompleteModelSignInResponseSchema)` to create a new message.
+ */
+export const CompleteModelSignInResponseSchema: GenMessage<CompleteModelSignInResponse, {jsonType: CompleteModelSignInResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 21);
+
+/**
+ * @generated from message toshi.workspace.v1.CancelModelSignInRequest
+ */
+export type CancelModelSignInRequest = Message<"toshi.workspace.v1.CancelModelSignInRequest"> & {
+  /**
+   * From the sign-in's prompt.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId: string;
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CancelModelSignInRequest
+ */
+export type CancelModelSignInRequestJson = {
+  /**
+   * From the sign-in's prompt.
+   *
+   * @generated from field: string sign_in_id = 1;
+   */
+  signInId?: string;
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CancelModelSignInRequest.
+ * Use `create(CancelModelSignInRequestSchema)` to create a new message.
+ */
+export const CancelModelSignInRequestSchema: GenMessage<CancelModelSignInRequest, {jsonType: CancelModelSignInRequestJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 22);
+
+/**
+ * @generated from message toshi.workspace.v1.CancelModelSignInResponse
+ */
+export type CancelModelSignInResponse = Message<"toshi.workspace.v1.CancelModelSignInResponse"> & {
+};
+
+/**
+ * @generated from message toshi.workspace.v1.CancelModelSignInResponse
+ */
+export type CancelModelSignInResponseJson = {
+};
+
+/**
+ * Describes the message toshi.workspace.v1.CancelModelSignInResponse.
+ * Use `create(CancelModelSignInResponseSchema)` to create a new message.
+ */
+export const CancelModelSignInResponseSchema: GenMessage<CancelModelSignInResponse, {jsonType: CancelModelSignInResponseJson}> = /*@__PURE__*/
+  messageDesc(file_toshi_workspace_v1_model_credentials, 23);
+
+/**
  * ModelCredentialKind is what a model credential holds.
  *
  * @generated from enum toshi.workspace.v1.ModelCredentialKind
@@ -686,6 +1373,13 @@ export enum ModelCredentialKind {
    * @generated from enum value: MODEL_CREDENTIAL_KIND_KEY = 1;
    */
   KEY = 1,
+
+  /**
+   * A provider subscription sign-in the control plane holds and renews.
+   *
+   * @generated from enum value: MODEL_CREDENTIAL_KIND_SIGN_IN = 2;
+   */
+  SIGN_IN = 2,
 }
 
 /**
@@ -693,7 +1387,7 @@ export enum ModelCredentialKind {
  *
  * @generated from enum toshi.workspace.v1.ModelCredentialKind
  */
-export type ModelCredentialKindJson = "MODEL_CREDENTIAL_KIND_UNSPECIFIED" | "MODEL_CREDENTIAL_KIND_KEY";
+export type ModelCredentialKindJson = "MODEL_CREDENTIAL_KIND_UNSPECIFIED" | "MODEL_CREDENTIAL_KIND_KEY" | "MODEL_CREDENTIAL_KIND_SIGN_IN";
 
 /**
  * Describes the enum toshi.workspace.v1.ModelCredentialKind.
@@ -702,17 +1396,60 @@ export const ModelCredentialKindSchema: GenEnum<ModelCredentialKind, ModelCreden
   enumDesc(file_toshi_workspace_v1_model_credentials, 0);
 
 /**
- * ModelCredentialService keeps the workspace's model credentials: the keys
- * its workloads use to reach a model provider. A key credential is a key
- * of a project's secrets, an environment's or the shared set's, marked
- * with its provider. A marked key never enters a guest: no workload
- * receives it in its environment, and no call returns its value.
+ * ModelCredentialState is where a sign-in credential stands. Unset for a key.
+ *
+ * @generated from enum toshi.workspace.v1.ModelCredentialState
+ */
+export enum ModelCredentialState {
+  /**
+   * @generated from enum value: MODEL_CREDENTIAL_STATE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The credential holds a grant the control plane can use.
+   *
+   * @generated from enum value: MODEL_CREDENTIAL_STATE_SIGNED_IN = 1;
+   */
+  SIGNED_IN = 1,
+
+  /**
+   * The provider refused the grant, or it expired: the person signs in
+   * again.
+   *
+   * @generated from enum value: MODEL_CREDENTIAL_STATE_NEEDS_SIGN_IN = 2;
+   */
+  NEEDS_SIGN_IN = 2,
+}
+
+/**
+ * ModelCredentialState is where a sign-in credential stands. Unset for a key.
+ *
+ * @generated from enum toshi.workspace.v1.ModelCredentialState
+ */
+export type ModelCredentialStateJson = "MODEL_CREDENTIAL_STATE_UNSPECIFIED" | "MODEL_CREDENTIAL_STATE_SIGNED_IN" | "MODEL_CREDENTIAL_STATE_NEEDS_SIGN_IN";
+
+/**
+ * Describes the enum toshi.workspace.v1.ModelCredentialState.
+ */
+export const ModelCredentialStateSchema: GenEnum<ModelCredentialState, ModelCredentialStateJson> = /*@__PURE__*/
+  enumDesc(file_toshi_workspace_v1_model_credentials, 1);
+
+/**
+ * ModelCredentialService keeps the workspace's model credentials: what its
+ * workloads use to reach a model provider. A credential is a key or a
+ * subscription sign-in. A key credential is a key of a project's secrets,
+ * an environment's or the shared set's, marked with its provider. A sign-in
+ * credential is a provider subscription the control plane holds and renews
+ * for a person. Neither kind's value ever enters a guest: no workload
+ * receives it in its environment, and no call returns it.
  *
  * A credential is the workspace's or one person's own. The workspace's
  * serve every workload its key's place reaches; a person's own serve only
  * the workloads that person starts, while the person holds a role in the
  * workspace, as a person's own secret does. A key credential is the
- * workspace's unless the request asks for the caller's own.
+ * workspace's unless the request asks for the caller's own; a sign-in is
+ * the caller's own unless the request asks for the workspace's.
  *
  * A member makes these calls for their own credentials with membership
  * alone. A workspace credential needs model_credentials.read to be seen
@@ -788,6 +1525,59 @@ export const ModelCredentialService: GenService<{
     methodKind: "unary";
     input: typeof DeleteModelCredentialRequestSchema;
     output: typeof DeleteModelCredentialResponseSchema;
+  },
+  /**
+   * ListModelSignInProviders returns every provider a credential may serve,
+   * in a stable order, with how the deployment offers its sign-in:
+   * "held" when the control plane keeps and renews the grant, "volume" when
+   * the person's own login stays on their volume, or "key" when only an API
+   * key is offered. available is true only for a provider whose sign-in the
+   * deployment holds.
+   *
+   * @generated from rpc toshi.workspace.v1.ModelCredentialService.ListModelSignInProviders
+   */
+  listModelSignInProviders: {
+    methodKind: "unary";
+    input: typeof ListModelSignInProvidersRequestSchema;
+    output: typeof ListModelSignInProvidersResponseSchema;
+  },
+  /**
+   * StartModelSignIn signs a person in to a provider's subscription and
+   * streams what the sign-in asks of them: the prompt to show, progress
+   * while it waits, and last either the signed-in credential or the reason
+   * it failed. The request names the credential as CreateModelCredential
+   * does; signing in with the name of an existing credential replaces its
+   * grant and keeps its id. A provider whose sign-in the deployment does
+   * not hold fails with FAILED_PRECONDITION, whatever the reason.
+   *
+   * @generated from rpc toshi.workspace.v1.ModelCredentialService.StartModelSignIn
+   */
+  startModelSignIn: {
+    methodKind: "server_streaming";
+    input: typeof StartModelSignInRequestSchema;
+    output: typeof StartModelSignInResponseSchema;
+  },
+  /**
+   * CompleteModelSignIn answers a sign-in whose prompt asks for a code, as a
+   * paste-code provider does. The id is the one the prompt carried and the
+   * code is the one the provider's page showed.
+   *
+   * @generated from rpc toshi.workspace.v1.ModelCredentialService.CompleteModelSignIn
+   */
+  completeModelSignIn: {
+    methodKind: "unary";
+    input: typeof CompleteModelSignInRequestSchema;
+    output: typeof CompleteModelSignInResponseSchema;
+  },
+  /**
+   * CancelModelSignIn ends a sign-in whose prompt it has shown.
+   *
+   * @generated from rpc toshi.workspace.v1.ModelCredentialService.CancelModelSignIn
+   */
+  cancelModelSignIn: {
+    methodKind: "unary";
+    input: typeof CancelModelSignInRequestSchema;
+    output: typeof CancelModelSignInResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_toshi_workspace_v1_model_credentials, 0);

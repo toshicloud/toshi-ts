@@ -46,3 +46,11 @@ try {
 NODE
 
 buf generate "$TOSHI_API_REPOSITORY#commit=$TOSHI_API_REF" --path proto/toshi/workspace/v1 --path proto/toshi/github/v1 --path proto/toshi/permission.proto
+
+# The contract constants are not a protoc plugin's output: the API repository
+# writes them from the protos' bound options. Copy that file at the same commit.
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
+git -C "$tmp" init -q
+git -C "$tmp" fetch -q --depth 1 "$TOSHI_API_REPOSITORY" "$TOSHI_API_REF"
+git -C "$tmp" show FETCH_HEAD:ts/gen/toshi/constants.ts >src/gen/toshi/constants.ts
