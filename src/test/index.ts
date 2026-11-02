@@ -10,9 +10,10 @@
  * const toshi = fake.client();
  * ```
  *
- * `createFake` serves every service of `toshi.workspace.v1` from one
- * in-memory transport: no server, no port, nothing to close, and no Node
- * module, so it runs wherever the client runs. `client` returns a
+ * `createFake` serves the services of `toshi.workspace.v1` that the
+ * repository's `docs/testing.md` lists, from one in-memory transport: no
+ * server, no port, nothing to close, and no Node module, so it runs wherever
+ * the client runs. `client` returns a
  * `ToshiClient` wired to it, with the token "test-token" and the scope
  * default/production.
  *

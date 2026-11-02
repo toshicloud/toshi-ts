@@ -29,6 +29,13 @@ Moving to another commit or tag is one pull request that changes
 and fails if the result differs from what is committed
 (`scripts/check-generated.sh`).
 
+Generated files take issues, not pull requests. Every file under `src/gen/`
+starts with the `@generated` header `protoc-gen-es` writes and is never
+edited by hand: a change to one is made in the protos in toshi-api or in the
+generator's pin, and reaches this repository as a new `pin.env` regenerated
+with `scripts/generate.sh`. A pull request that edits a generated file is
+closed; open an issue that says what the generated code should do instead.
+
 ## Versions
 
 The package's major version follows the API's: `1.x` will serve
