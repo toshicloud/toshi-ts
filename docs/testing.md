@@ -1,9 +1,10 @@
 # Testing with `@toshicloud/sdk/test`
 
 
-`createFake()` serves the whole Workspace API in memory: no server, no port,
-nothing to close, and no Node module, so it runs in the same runtimes as the
-client. `fake.client()` returns a `ToshiClient` wired to it, with the token
+`createFake()` serves the Workspace API in memory, the services listed under
+"The services the fake serves" below: no server, no port, nothing to close,
+and no Node module, so it runs in the same runtimes as the client.
+`fake.client()` returns a `ToshiClient` wired to it, with the token
 `test-token` and the scope `default`/`production`, which is enough to drive
 `run`, the watchers and the generated clients from a test.
 
@@ -32,3 +33,40 @@ typed by that method: one call for unary, server-stream and bidirectional
 methods alike. `fake.calls()` returns every call the fake received, oldest
 first, with the procedure, the request and the headers.
 
+## The services the fake serves
+
+<!-- fake services: begin -->
+The fake serves these services of `toshi.workspace.v1`:
+
+- `AccountService`
+- `ArtifactService`
+- `ArtifactUploadService`
+- `AuditEventService`
+- `DisplayService`
+- `DomainService`
+- `EndpointService`
+- `FillerService`
+- `GrantService`
+- `HostJobService`
+- `HostService`
+- `ImageService`
+- `ModelCredentialService`
+- `ProductService`
+- `ProjectService`
+- `RecordingService`
+- `SecretService`
+- `StorageProviderService`
+- `TokenService`
+- `VolumeService`
+- `WebhookService`
+- `WorkloadService`
+- `WorkspaceService`
+
+It does not serve these: a call to one of their methods answers
+`UNIMPLEMENTED`, and `fake.on` throws for their methods.
+
+- `ConnectionService`
+- `DiscoveryService`
+- `RoleService`
+- `TriggerService`
+<!-- fake services: end -->

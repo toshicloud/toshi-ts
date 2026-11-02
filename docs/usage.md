@@ -119,6 +119,8 @@ cause, and the call is not retried.
 <!-- examples/token-source.ts -->
 
 ```ts
+import { createToshiClient } from "@toshicloud/sdk/node";
+
 // A token a refresh loop replaces; the client asks for it on every call.
 let token = "first-token";
 
@@ -163,9 +165,15 @@ need the operator's headers, which the caller adds with an interceptor
 (see Operator calls). `run` sits at the top of the client, as
 `toshi run` sits at the top of the CLI.
 
+The examples from here on import the client as `toshi` from `./client.js`, a
+module of the program that creates it with `createToshiClient`, as the quick
+start does.
+
 <!-- examples/client-shape.ts -->
 
 ```ts
+import { toshi } from "./client.js";
+
 const { jobs } = await toshi.workload.jobs.list({ pageSize: 10 });
 const { job } = await toshi.workload.jobs.get({ id: jobs[0].id });
 console.log(job?.id);
@@ -314,6 +322,8 @@ attempts, a 200 ms initial backoff and a 10 s cap.
 <!-- examples/watch-events.ts -->
 
 ```ts
+import { toshi } from "./client.js";
+
 const id = "workload-id";
 const watch = await toshi.workload.watchEvents({ workloadId: id });
 for await (const { event } of watch) {
@@ -338,6 +348,8 @@ the command ends.
 <!-- examples/execute.ts -->
 
 ```ts
+import { toshi } from "./client.js";
+
 const id = "sandbox-id";
 const proc = await toshi.workload.sandboxes.execute({
   sandboxId: id,
@@ -374,6 +386,8 @@ resolves when the job exits 0 and rejects with `JobExitError` otherwise.
 <!-- examples/run-job.ts -->
 
 ```ts
+import { toshi } from "./client.js";
+
 const run = await toshi.run({
   spec: { command: { argv: ["./test.sh"] } },
 });

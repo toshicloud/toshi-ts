@@ -37,12 +37,13 @@ function typescriptBlocks(markdown: string): Block[] {
   return blocks;
 }
 
-/** A block and its file compare equal without indentation or import lines. */
+/**
+ * A block and its file compare equal without indentation or trailing space.
+ * The imports stay, so a block is its whole example file: it compiles as it
+ * stands, as the example does.
+ */
 function normalise(source: string): string[] {
-  const lines = source
-    .split("\n")
-    .filter((line) => !/^\s*import\b/.test(line))
-    .map((line) => line.trimEnd());
+  const lines = source.split("\n").map((line) => line.trimEnd());
   while (lines.length > 0 && lines[0].trim() === "") {
     lines.shift();
   }
