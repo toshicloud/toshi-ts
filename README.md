@@ -27,8 +27,15 @@ A TypeScript client for the Toshi Workspace API, `toshi.workspace.v1`, published
 ## Quick start
 
 ```sh
-npm install @toshicloud/sdk @bufbuild/protobuf @connectrpc/connect @connectrpc/connect-node
+npm install @toshicloud/sdk @bufbuild/protobuf @connectrpc/connect
+# For the Node entry, @toshicloud/sdk/node:
+npm install @connectrpc/connect-node
 ```
+
+The peer dependencies need `@bufbuild/protobuf` ^2.16.0 and
+`@connectrpc/connect` ^2.2.0, and the Node entry also
+`@connectrpc/connect-node` ^2.2.0. In Node the package needs Node 22 or
+later.
 
 <!-- examples/quick-start.ts -->
 
