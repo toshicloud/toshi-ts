@@ -5,11 +5,16 @@ published as ES modules with type declarations.
 
 ```sh
 npm install @toshicloud/sdk @bufbuild/protobuf @connectrpc/connect
+# For the Node entry, @toshicloud/sdk/node:
+npm install @connectrpc/connect-node
 ```
 
-The browser entry needs a transport such as `@connectrpc/connect-web`; the
-Node entry needs `@connectrpc/connect-node`. Both are peer dependencies, so
-install the ones your application uses.
+The peer dependencies need `@bufbuild/protobuf` ^2.16.0 and
+`@connectrpc/connect` ^2.2.0, and the Node entry also
+`@connectrpc/connect-node` ^2.2.0. In Node the package needs Node 22 or
+later.
+A browser program brings its own transport, such as
+`@connectrpc/connect-web`.
 
 Versions up to 0.1.2 were published as `@toshicloud/toshi-ts`.
 

@@ -10,9 +10,8 @@ in `proto/toshi/workspace/v1` of the
 `proto/toshi/permission.proto`, which they import. The generated code is committed and imports
 only `@bufbuild/protobuf`, so installing the package needs no generator.
 
-`pin.env` names the toshi-api commit the code is generated from:
-`c421cf65e6632371fc12edc9813775f3dbfcba11` today, the commit of the
-release tag `v0.6.0`.
+`pin.env` names the toshi-api commit the code is generated from, and
+the API version that commit carries.
 `mise.toml` pins the versions of Node, pnpm and `buf`;
 `package.json` pins `protoc-gen-es` at the same version as the
 `@bufbuild/protobuf` development dependency.
@@ -35,8 +34,8 @@ and fails if the result differs from what is committed
 The package's major version follows the API's: `1.x` will serve
 `toshi.workspace.v1`, and a `toshi.workspace.v2` gets a new major
 version. Until a Toshi release serves the API, the package stays at
-`0.x` and is generated from a pinned commit. `VERSION` is the package
-version, the one `package.json` carries.
+`0.x` and is generated from a pinned commit. The package version is in
+`package.json`, and `src/version.ts` exports the same value as `VERSION`.
 
 ## Publishing
 
