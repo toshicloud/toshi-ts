@@ -1026,6 +1026,8 @@ async function tenantsJson(bin: string, env: Record<string, string>): Promise<st
   }
 }
 
+// tenantIds returns the ids in the workspace list, read under "workspaces"
+// and, from an older toshi, under "tenants".
 function tenantIds(listed: string): string[] {
   let parsed: unknown;
   try {
@@ -1033,15 +1035,18 @@ function tenantIds(listed: string): string[] {
   } catch {
     return [];
   }
-  if (typeof parsed !== "object" || parsed === null || !("tenants" in parsed)) {
+  if (typeof parsed !== "object" || parsed === null) {
     return [];
   }
-  const tenants = (parsed as { tenants?: unknown }).tenants;
-  if (!Array.isArray(tenants)) {
-    return [];
+  const { workspaces, tenants } = parsed as { workspaces?: unknown; tenants?: unknown };
+  const entries: unknown[] = [];
+  for (const list of [workspaces, tenants]) {
+    if (Array.isArray(list)) {
+      entries.push(...(list as unknown[]));
+    }
   }
   const ids: string[] = [];
-  for (const entry of tenants as unknown[]) {
+  for (const entry of entries) {
     if (typeof entry !== "object" || entry === null) {
       continue;
     }
