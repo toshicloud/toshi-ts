@@ -7,8 +7,12 @@
 in `proto/toshi/workspace/v1` of the
 [toshi-api](https://github.com/toshicloud/toshi-api) repository, one
 `*_pb.ts` file per proto, and `src/gen/toshi/permission_pb.ts` from
-`proto/toshi/permission.proto`, which they import. The generated code is committed and imports
-only `@bufbuild/protobuf`, so installing the package needs no generator.
+`proto/toshi/permission.proto`, which they import.
+`src/gen/toshi/constants.ts`, exported as `contract`, holds the API's
+limits and defaults; toshi-api generates it from the protos' bound options,
+and `scripts/generate.sh` copies it from `ts/gen/toshi/constants.ts` at the
+same commit. The generated code is committed and imports at most
+`@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit the code is generated from, and
 the API version that commit carries.
@@ -30,8 +34,9 @@ and fails if the result differs from what is committed
 (`scripts/check-generated.sh`).
 
 Generated files take issues, not pull requests. Every file under `src/gen/`
-starts with the `@generated` header `protoc-gen-es` writes and is never
-edited by hand: a change to one is made in the protos in toshi-api or in the
+starts with its generator's header (`@generated` from `protoc-gen-es`,
+`Code generated ... DO NOT EDIT.` on `constants.ts`) and is never edited by
+hand: a change to one is made in the protos in toshi-api or in the
 generator's pin, and reaches this repository as a new `pin.env` regenerated
 with `scripts/generate.sh`. A pull request that edits a generated file is
 closed; open an issue that says what the generated code should do instead.

@@ -109,6 +109,7 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.WorkloadService/AnswerServiceSignIn": "none",
   "/toshi.workspace.v1.WorkloadService/CancelServiceSignIn": "none",
   "/toshi.workspace.v1.WorkloadService/GetServiceSignInStatus": "read",
+  "/toshi.workspace.v1.WorkloadService/SignOutService": "none",
   "/toshi.workspace.v1.SecretService/CreateSecretSet": "keyed",
   "/toshi.workspace.v1.SecretService/ListSecretSets": "read",
   "/toshi.workspace.v1.SecretService/DeleteSecretSet": "none",
@@ -141,6 +142,8 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.ProjectService/SetEnvironmentRetention": "none",
   "/toshi.workspace.v1.ProjectService/SetEnvironmentVolumes": "none",
   "/toshi.workspace.v1.ProjectService/UpdateEnvironment": "none",
+  "/toshi.workspace.v1.ProjectService/RaiseCompatibilityDate": "none",
+  "/toshi.workspace.v1.ProjectService/ListCompatibilityChanges": "read",
   "/toshi.workspace.v1.WebhookService/CreateWebhook": "keyed",
   "/toshi.workspace.v1.WebhookService/GetWebhook": "read",
   "/toshi.workspace.v1.WebhookService/ListWebhooks": "read",
@@ -312,6 +315,10 @@ const procedureRetryClass: Readonly<Record<string, RetryClass>> = {
   "/toshi.workspace.v1.ModelCredentialService/ListModelCredentials": "read",
   "/toshi.workspace.v1.ModelCredentialService/UpdateModelCredential": "none",
   "/toshi.workspace.v1.ModelCredentialService/DeleteModelCredential": "none",
+  "/toshi.workspace.v1.ModelCredentialService/ListModelSignInProviders": "read",
+  "/toshi.workspace.v1.ModelCredentialService/StartModelSignIn": "none",
+  "/toshi.workspace.v1.ModelCredentialService/CompleteModelSignIn": "none",
+  "/toshi.workspace.v1.ModelCredentialService/CancelModelSignIn": "none",
 };
 
 

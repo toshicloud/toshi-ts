@@ -14,8 +14,8 @@ function requireMethod(service: ServiceLike, localName: string): DescMethod {
 }
 
 const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
-  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 69],
-  [root.ProjectService, "toshi.workspace.v1.ProjectService", 21],
+  [root.WorkloadService, "toshi.workspace.v1.WorkloadService", 70],
+  [root.ProjectService, "toshi.workspace.v1.ProjectService", 23],
   [root.SecretService, "toshi.workspace.v1.SecretService", 11],
   [root.WebhookService, "toshi.workspace.v1.WebhookService", 8],
   [root.DisplayService, "toshi.workspace.v1.DisplayService", 8],
@@ -40,7 +40,7 @@ const services: ReadonlyArray<readonly [ServiceLike, string, number]> = [
   [root.AccountService, "toshi.workspace.v1.AccountService", 5],
   [root.ImageService, "toshi.workspace.v1.ImageService", 6],
   [root.DomainService, "toshi.workspace.v1.DomainService", 6],
-  [root.ModelCredentialService, "toshi.workspace.v1.ModelCredentialService", 5],
+  [root.ModelCredentialService, "toshi.workspace.v1.ModelCredentialService", 9],
   [root.GitHubService, "toshi.github.v1.GitHubService", 5],
 ];
 
@@ -68,5 +68,9 @@ describe("src/index.ts", () => {
     ]) {
       expect(requireMethod(root.WorkloadService, localName).methodKind).toBe("server_streaming");
     }
+  });
+
+  it("re-exports the API's generated limits and defaults as contract", () => {
+    expect(root.contract.workspaceTokenLifetime).toEqual({ unit: "seconds", default: 7776000, max: 7776000 });
   });
 });

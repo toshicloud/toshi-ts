@@ -150,6 +150,7 @@ export const hookOnly: readonly DescMethod[] = [
   WorkloadService.method.answerServiceSignIn,
   WorkloadService.method.cancelServiceSignIn,
   WorkloadService.method.getServiceSignInStatus,
+  WorkloadService.method.signOutService,
   // The fake keeps no event log: listEvents and watchEvents are hook-only, so
   // an emitted event would be one no call can read back.
   WorkloadService.method.emitWorkloadEvent,
@@ -189,6 +190,8 @@ export const hookOnly: readonly DescMethod[] = [
   ProjectService.method.getEnvironmentRetention,
   ProjectService.method.setEnvironmentRetention,
   ProjectService.method.setEnvironmentVolumes,
+  ProjectService.method.raiseCompatibilityDate,
+  ProjectService.method.listCompatibilityChanges,
   // WebhookService
   WebhookService.method.createWebhook,
   WebhookService.method.getWebhook,
@@ -329,4 +332,8 @@ export const hookOnly: readonly DescMethod[] = [
   ModelCredentialService.method.listModelCredentials,
   ModelCredentialService.method.updateModelCredential,
   ModelCredentialService.method.deleteModelCredential,
+  ModelCredentialService.method.listModelSignInProviders,
+  ModelCredentialService.method.startModelSignIn,
+  ModelCredentialService.method.completeModelSignIn,
+  ModelCredentialService.method.cancelModelSignIn,
 ];
