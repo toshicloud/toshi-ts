@@ -1,9 +1,9 @@
 # Testing with `@toshicloud/sdk/test`
 
 
-`createFake()` serves the Workspace API in memory, the services listed under
-"The services the fake serves" below: no server, no port, nothing to close,
-and no Node module, so it runs in the same runtimes as the client.
+`createFake()` serves every service of the Workspace API in memory, as
+"The services the fake serves" below lists: no server, no port, nothing to
+close, and no Node module, so it runs in the same runtimes as the client.
 `fake.client()` returns a `ToshiClient` wired to it, with the token
 `test-token` and the scope `default`/`production`, which is enough to drive
 `run`, the watchers and the generated clients from a test.
@@ -36,12 +36,14 @@ first, with the procedure, the request and the headers.
 ## The services the fake serves
 
 <!-- fake services: begin -->
-The fake serves these services of `toshi.workspace.v1`:
+The fake serves every service of `toshi.workspace.v1`:
 
 - `AccountService`
 - `ArtifactService`
 - `ArtifactUploadService`
 - `AuditEventService`
+- `ConnectionService`
+- `DiscoveryService`
 - `DisplayService`
 - `DomainService`
 - `EndpointService`
@@ -54,19 +56,16 @@ The fake serves these services of `toshi.workspace.v1`:
 - `ProductService`
 - `ProjectService`
 - `RecordingService`
+- `RoleService`
 - `SecretService`
 - `StorageProviderService`
 - `TokenService`
+- `TriggerService`
 - `VolumeService`
 - `WebhookService`
 - `WorkloadService`
 - `WorkspaceService`
 
-It does not serve these: a call to one of their methods answers
-`UNIMPLEMENTED`, and `fake.on` throws for their methods.
-
-- `ConnectionService`
-- `DiscoveryService`
-- `RoleService`
-- `TriggerService`
+A method the fake has no built-in answer for answers `UNIMPLEMENTED`
+until a test hooks it with `fake.on`.
 <!-- fake services: end -->

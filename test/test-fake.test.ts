@@ -1,6 +1,6 @@
 import { create } from "@bufbuild/protobuf";
 import type { DescMethodUnary } from "@bufbuild/protobuf";
-import { Code, ConnectError } from "@connectrpc/connect";
+import { Code, ConnectError, createClient } from "@connectrpc/connect";
 import { describe, expect, it } from "vitest";
 
 import { createToshiClient } from "../src/client.js";
@@ -357,17 +357,29 @@ describe("createFake", () => {
     expect(created.job?.id).toBe("job-1");
   });
 
-  it("answers or lists every method of the Workspace API", () => {
+  it("answers only methods of the Workspace API, and leaves every other one to a hook", () => {
     const answered = new Set(answeredProcedures);
-    const hooked = new Set(hookOnlyProcedures);
     const all = apiServices.flatMap((service) => service.methods);
     expect(new Set(all).size).toBe(all.length);
     expect(answered.size).toBe(answeredProcedures.length);
-    expect(hooked.size).toBe(hookOnlyProcedures.length);
-    expect({
-      uncovered: all.filter((method) => !answered.has(method) && !hooked.has(method)).map(procedurePath),
-      both: all.filter((method) => answered.has(method) && hooked.has(method)).map(procedurePath),
-      unknown: [...answered, ...hooked].filter((method) => !all.includes(method)).map(procedurePath),
-    }).toEqual({ uncovered: [], both: [], unknown: [] });
+    expect(answeredProcedures.filter((method) => !all.includes(method)).map(procedurePath)).toEqual([]);
+    expect(hookOnlyProcedures).toEqual(all.filter((method) => !answered.has(method)));
+  });
+
+  it("serves every service of the Workspace API, answering an unhooked method UNIMPLEMENTED", async () => {
+    const fake = createFake();
+    const transport = fake.transport([]);
+    for (const service of apiServices) {
+      const method = hookOnlyProcedures.find(
+        (candidate) => candidate.parent === service && candidate.methodKind === "unary",
+      );
+      if (method === undefined) {
+        continue;
+      }
+      const client = createClient(service, transport) as unknown as Record<string, (request: object) => Promise<unknown>>;
+      const error = await client[method.localName]({}).catch((err: unknown) => err);
+      expect(error, procedurePath(method)).toBeInstanceOf(ConnectError);
+      expect((error as ConnectError).code, procedurePath(method)).toBe(Code.Unimplemented);
+    }
   });
 });

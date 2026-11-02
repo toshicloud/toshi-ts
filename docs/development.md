@@ -11,7 +11,9 @@ in `proto/toshi/workspace/v1` of the
 `src/gen/toshi/constants.ts`, exported as `contract`, holds the API's
 limits and defaults; toshi-api generates it from the protos' bound options,
 and `scripts/generate.sh` copies it from `ts/gen/toshi/constants.ts` at the
-same commit. The generated code is committed and imports at most
+same commit. It also writes `src/gen/toshi/workspace/v1/services.ts`,
+the list of every service the generated files declare, which the in-memory
+fake serves. The generated code is committed and imports at most
 `@bufbuild/protobuf`, so installing the package needs no generator.
 
 `pin.env` names the toshi-api commit the code is generated from, and
@@ -46,8 +48,10 @@ closed; open an issue that says what the generated code should do instead.
 The package's major version follows the API's: `1.x` will serve
 `toshi.workspace.v1`, and a `toshi.workspace.v2` gets a new major
 version. Until a Toshi release serves the API, the package stays at
-`0.x` and is generated from a pinned commit. The package version is in
-`package.json`, and `src/version.ts` exports the same value as `VERSION`.
+`0.x` and is generated from a pinned commit. The package version is the
+API's: `scripts/generate.sh` writes `src/version.ts`, exported as `VERSION`,
+from the `VERSION` file of the commit `pin.env` names, and `package.json`
+holds the same value, which a test checks.
 
 ## Publishing
 
