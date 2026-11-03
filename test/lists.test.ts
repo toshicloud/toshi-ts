@@ -15,7 +15,9 @@ import {
 import {
   ListJobsResponseSchema,
   ListSandboxesResponseSchema,
+  ListServiceAlarmsResponseSchema,
   ListServicesResponseSchema,
+  ServiceAlarmSchema,
   WorkloadService,
 } from "../src/gen/toshi/workspace/v1/workloads_pb.js";
 import { createFake } from "../src/test/index.js";
@@ -86,6 +88,24 @@ describe("all", () => {
     );
     const events = await collect(fake.client().workload.allEvents({}));
     expect(events.map((event) => event.id)).toEqual(["event-1"]);
+  });
+
+  it("follows the page token of a service's alarms", async () => {
+    const fake = createFake();
+    const asked: string[] = [];
+    fake.on(WorkloadService.method.listServiceAlarms, (request) => {
+      asked.push(request.pageToken);
+      const second = request.pageToken !== "";
+      return Promise.resolve(
+        create(ListServiceAlarmsResponseSchema, {
+          alarms: [create(ServiceAlarmSchema, { name: second ? "nightly" : "billing" })],
+          nextPageToken: second ? "" : "page-2",
+        }),
+      );
+    });
+    const alarms = await collect(fake.client().workload.services.allAlarms({ serviceId: "svc-1" }));
+    expect(alarms.map((alarm) => alarm.name)).toEqual(["billing", "nightly"]);
+    expect(asked).toEqual(["", "page-2"]);
   });
 
   it("follows the page token of a sandbox's share links", async () => {

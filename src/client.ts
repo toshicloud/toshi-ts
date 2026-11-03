@@ -98,6 +98,7 @@ import type {
   UnpauseServiceAlarmResponse,
   RunServiceAlarmNowResponse,
   PutServiceAlarmResponse,
+  ServiceAlarm,
   UpdateJobResponse,
   UpdateSandboxResponse,
   UpdateServiceResponse,
@@ -401,14 +402,16 @@ export interface ServicesClient {
     req: MessageInitShape<typeof GetServiceAlarmRequestSchema>,
     opts?: CallOptions,
   ): Promise<GetServiceAlarmResponse>;
-  /**
-   * Returns all of a service's alarms, by name, in one answer: the call has no page token, so
-   * there is no `allAlarms`.
-   */
+  /** Returns a page of a service's alarms, by name; `allAlarms` walks every page. */
   listAlarms(
     req: MessageInitShape<typeof ListServiceAlarmsRequestSchema>,
     opts?: CallOptions,
   ): Promise<ListServiceAlarmsResponse>;
+  /** Yields every alarm listAlarms returns, by name, following the page token from one page to the next. */
+  allAlarms(
+    req: MessageInitShape<typeof ListServiceAlarmsRequestSchema>,
+    opts?: CallOptions,
+  ): AsyncIterable<ServiceAlarm>;
   /** Removes an alarm and its occurrences; messages it already published stay on the endpoint. */
   deleteAlarm(
     req: MessageInitShape<typeof DeleteServiceAlarmRequestSchema>,
@@ -618,6 +621,7 @@ export function createToshiClient(options: ToshiOptions): ToshiClient {
         putServiceAlarm: (req, opts) => workloadService.putServiceAlarm(req, opts),
         getAlarm: (req, opts) => workloadService.getServiceAlarm(req, opts),
         listAlarms: (req, opts) => workloadService.listServiceAlarms(req, opts),
+        allAlarms: (req, opts) => paginate(req, workloadService.listServiceAlarms, (resp) => resp.alarms, opts),
         deleteAlarm: (req, opts) => workloadService.deleteServiceAlarm(req, opts),
         pauseAlarm: (req, opts) => workloadService.pauseServiceAlarm(req, opts),
         unpauseServiceAlarm: (req, opts) => workloadService.unpauseServiceAlarm(req, opts),
