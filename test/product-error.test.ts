@@ -175,7 +175,7 @@ describe("ProductError", () => {
     );
     expect(isProductError(watchErr) && watchErr.reason).toBe(ProductReason.Unavailable);
 
-    const executeErr = await caught(client.workload.sandboxes.execute({ sandboxId: "sb-1" }));
+    const executeErr = await caught(client.workload.sandboxes.execute({ workloadId: "sb-1" }));
     expect(isProductError(executeErr) && executeErr.product).toBe("acme_ci");
   });
 });

@@ -131,7 +131,7 @@ describe("createToshiClient", () => {
       });
     }, { token: "tok", project: "proj", environment: "env" });
 
-    const process = await harness.client.workload.sandboxes.execute({ sandboxId: "s" });
+    const process = await harness.client.workload.sandboxes.execute({ workloadId: "s" });
     await process.wait();
 
     expect(authorization).toBe("Bearer tok");

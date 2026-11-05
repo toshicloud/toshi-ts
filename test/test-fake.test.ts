@@ -145,7 +145,7 @@ describe("createFake", () => {
     const found = await toshi.workload.sandboxes.get({ id: "sb-1" });
     expect(found.sandbox?.id).toBe("sb-1");
 
-    const process = await toshi.workload.sandboxes.execute({ sandboxId: "sb-1" });
+    const process = await toshi.workload.sandboxes.execute({ workloadId: "sb-1" });
     let out = "";
     for await (const chunk of process) {
       if (chunk.stream === "stdout") {
@@ -297,7 +297,7 @@ describe("createFake", () => {
         }
       },
     }));
-    const process = await fake.client().workload.sandboxes.execute({ sandboxId: "sb-1" });
+    const process = await fake.client().workload.sandboxes.execute({ workloadId: "sb-1" });
     await process.wait();
     expect(process.executionId).toBe("exec-hooked");
     expect(fake.calls()[0]?.procedure).toBe("/toshi.workspace.v1.WorkloadService/Execute");

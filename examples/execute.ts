@@ -2,7 +2,7 @@ import { toshi } from "./client.js";
 
 const id = "sandbox-id";
 const proc = await toshi.workload.sandboxes.execute({
-  sandboxId: id,
+  workloadId: id,
   command: { argv: ["cat"] },
 });
 await proc.write("hello\n");

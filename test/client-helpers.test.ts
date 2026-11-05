@@ -238,7 +238,7 @@ describe("ToshiClient helpers", () => {
         },
       }),
     });
-    const process = await client.workload.sandboxes.execute({ sandboxId: "s-1" });
+    const process = await client.workload.sandboxes.execute({ workloadId: "s-1" });
     await process.wait();
     expect(process.requestKey).toMatch(/^[0-9a-f]{32}$/);
     expect(seen.requestKey).toBe(process.requestKey);

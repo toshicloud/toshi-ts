@@ -699,7 +699,7 @@ class FakeToshi implements Fake {
     if (start === undefined) {
       throw new ConnectError("toshi: Execute needs a start message", Code.InvalidArgument);
     }
-    const record = this.executions.get(start.sandboxId);
+    const record = this.executions.get(start.workloadId);
     this.nextExecution += 1;
     const executionId = `exec-${this.nextExecution}`;
     yield create(ExecuteResponseSchema, {

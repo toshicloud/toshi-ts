@@ -714,7 +714,7 @@ describe.skipIf(skipped)("toshi serve integration", () => {
           throw new Error("CreateSandbox returned no sandbox");
         }
         const execution = await client.workload.sandboxes.execute({
-          sandboxId,
+          workloadId: sandboxId,
           command: { argv: ["true"] },
         });
         const chunks: Uint8Array[] = [];

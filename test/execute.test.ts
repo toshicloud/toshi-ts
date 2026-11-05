@@ -19,7 +19,7 @@ const BROWSER_MESSAGE =
   'toshi: Execute needs a Node transport over HTTP/2 (@connectrpc/connect-node with httpVersion "2"); a browser cannot open a bidirectional stream';
 
 function start(requestKey = "key-1"): ExecuteStart {
-  return create(ExecuteStartSchema, { sandboxId: "wl-1", requestKey });
+  return create(ExecuteStartSchema, { workloadId: "wl-1", requestKey });
 }
 
 /** A client whose Execute handler is the given stream. */
